@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.pyc
+data/embeddings_*.npz
+data/embeddings_random_baseline.npz
+.DS_Store
