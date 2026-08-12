@@ -2,7 +2,7 @@
 04_visualize.py — Generate visualizations for feasibility test results.
 
 Usage:
-    python 04_visualize.py
+    python3 04_visualize.py
 
 Reads:
     data/embeddings_{concept}.npz

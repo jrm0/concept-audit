@@ -2,7 +2,7 @@
 03_compute_metrics.py — Compute self-similarity, MEV, and clustering metrics.
 
 Usage:
-    python 03_compute_metrics.py
+    python3 03_compute_metrics.py
 
 Reads:
     data/embeddings_{concept}.npz files from step 02

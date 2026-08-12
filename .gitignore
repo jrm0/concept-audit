@@ -1,6 +1,16 @@
 venv/
 __pycache__/
 *.pyc
-data/embeddings_*.npz
-data/embeddings_random_baseline.npz
 .DS_Store
+.env
+
+# --- DATA: never push (public repo) ---
+# data/ contains LICENSED content (EBSCO/PsycInfo RIS exports, publisher
+# abstracts) plus multi-GB corpus files. Code and provenance docs only.
+data/
+osc_coding/data/
+
+# --- RESULTS: derived metrics OK; verbatim-text samples are licensed excerpts ---
+results/cluster_samples_*.txt
+results/lineage_samples_*.txt
+results/*.npz

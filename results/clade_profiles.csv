@@ -1,0 +1,8 @@
+concept,classification,n,self_sim_corrected,mev,best_k,silhouette,ari_stability,delta_bic_per_n,variant_max_purity,variant_nmi,variant_flagged,within_variant_class,within_variant_k,within_variant_n
+cognitive_dissonance,VAGUE,537,-0.015,0.1063,4,0.207,0.512,0.737,1.0,0.065,False,BORDERLINE,2,354
+ego_depletion,POLYSEMOUS,773,-0.0337,0.0915,2,0.262,0.803,1.472,0.953,0.115,False,POLYSEMOUS,6,540
+reaction_time,POLYSEMOUS,1500,-0.055,0.1361,2,0.2967,0.999,1.215,0.521,0.039,False,POLYSEMOUS,2,546
+self_esteem,VAGUE,1500,-0.0372,0.1255,4,0.2127,0.483,1.234,0.991,0.006,False,VAGUE,4,1454
+stereotype_threat,VAGUE,318,-0.0014,0.0963,3,0.1635,0.339,0.606,0.971,0.001,False,VAGUE,6,305
+well_being,BORDERLINE,1500,-0.0326,0.1073,2,0.1574,0.955,0.246,0.871,0.008,False,BORDERLINE,2,1247
+working_memory,BORDERLINE,1500,-0.0437,0.0894,5,0.1807,0.663,0.926,1.0,0.02,False,BORDERLINE,5,1457

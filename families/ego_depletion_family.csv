@@ -1,0 +1,13 @@
+term,role,field,note
+ego depletion,focal,,Baumeister et al. 1998; the construct under test
+ego-depletion,focal,,hyphenated variant
+self-regulatory depletion,focal,,longer form
+willpower,ancestor,,folk/theoretical predecessor; long timeline
+self-control,ancestor,32,broadest ancestor; field=Psychology to exclude economics/CS homonyms
+self-regulation,ancestor,32,cybernetic lineage (Carver & Scheier 1981); field-filtered — spans education/health/physiology otherwise
+regulatory resource,synonym,,resource-model phrasing
+strength model,synonym,32,Baumeister's theoretical label; field-filtered (engineering homonym)
+depletion effect,synonym,,meta-analytic/skeptical usage
+self-control depletion,synonym,,compound form
+executive function,control,32,adjacent construct; should NOT merge into the family if distinct
+delay of gratification,control,,adjacent construct; Mischel lineage

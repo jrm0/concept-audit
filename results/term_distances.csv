@@ -1,0 +1,12 @@
+period,term_a,term_b,cosine_distance
+1990-1994,parentterm,participants,0.0028
+1995-1999,parentterm,participants,0.003
+2000-2004,childterm,parentterm,0.0014
+2000-2004,childterm,participants,0.0027
+2000-2004,parentterm,participants,0.0024
+2005-2009,childterm,parentterm,0.0387
+2005-2009,childterm,participants,0.0148
+2005-2009,parentterm,participants,0.0208
+2010-2014,childterm,parentterm,0.0852
+2010-2014,childterm,participants,0.0474
+2010-2014,parentterm,participants,0.0229

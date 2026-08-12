@@ -2,7 +2,7 @@
 02_extract_embeddings.py — Extract SciBERT contextual embeddings for concept mentions.
 
 Usage:
-    python 02_extract_embeddings.py
+    python3 02_extract_embeddings.py
 
 Reads:
     data/corpus_{concept}.csv files from step 01

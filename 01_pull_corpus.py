@@ -2,7 +2,7 @@
 01_pull_corpus.py — Pull abstracts from Semantic Scholar for target concepts.
 
 Usage:
-    python 01_pull_corpus.py
+    python3 01_pull_corpus.py
 
 Outputs:
     data/corpus_{concept}.csv for each concept (columns: paper_id, title, abstract, sentence)

@@ -1,0 +1,660 @@
+[
+  {
+    "concept": "cognitive_dissonance",
+    "classification": "VAGUE",
+    "n": 537,
+    "self_similarity": {
+      "raw": 0.8770009279251099,
+      "corrected": -0.015047073364257812,
+      "std": 0.03868086636066437
+    },
+    "mev": {
+      "mev": 0.10631877183914185,
+      "top_3": [
+        0.10631877183914185,
+        0.08150167018175125,
+        0.06713256984949112
+      ]
+    },
+    "clustering": {
+      "best_k": 4,
+      "silhouette": 0.20698826014995575,
+      "ari_stability_mean": 0.5119799269740565,
+      "delta_bic_per_n": 0.7372298347382474,
+      "results_by_k": {
+        "2": {
+          "silhouette": 0.18561193346977234,
+          "bic": 11119.632730728013
+        },
+        "3": {
+          "silhouette": 0.2011883556842804,
+          "bic": 11051.055433037529
+        },
+        "4": {
+          "silhouette": 0.20698826014995575,
+          "bic": 11011.366999864254
+        },
+        "5": {
+          "silhouette": 0.1929771900177002,
+          "bic": 11067.56849741608
+        },
+        "6": {
+          "silhouette": 0.19600127637386322,
+          "bic": 11100.567745440927
+        }
+      }
+    },
+    "variant_diagnostic": {
+      "max_purity": 1.0,
+      "nmi": 0.065,
+      "flagged": false,
+      "table": {
+        "0": {
+          "n": 36,
+          "top_variant": "dissonance",
+          "purity": 1.0,
+          "breakdown": {
+            "dissonance": 36
+          }
+        },
+        "1": {
+          "n": 288,
+          "top_variant": "dissonance",
+          "purity": 0.729,
+          "breakdown": {
+            "dissonance": 210,
+            "cognitive dissonance": 78
+          }
+        },
+        "2": {
+          "n": 91,
+          "top_variant": "cognitive dissonance",
+          "purity": 0.582,
+          "breakdown": {
+            "cognitive dissonance": 53,
+            "dissonance": 38
+          }
+        },
+        "3": {
+          "n": 122,
+          "top_variant": "dissonance",
+          "purity": 0.574,
+          "breakdown": {
+            "dissonance": 70,
+            "cognitive dissonance": 52
+          }
+        }
+      }
+    },
+    "within_variant": {
+      "variant": "dissonance",
+      "n": 354,
+      "mev": 0.1285887360572815,
+      "best_k": 2,
+      "silhouette": 0.22982841730117798,
+      "ari": 0.8564755382281172,
+      "delta_bic_per_n": 0.4197714275432586,
+      "classification": "BORDERLINE"
+    },
+    "anisotropy_baseline": 0.8920480012893677
+  },
+  {
+    "concept": "ego_depletion",
+    "classification": "POLYSEMOUS",
+    "n": 773,
+    "self_similarity": {
+      "raw": 0.8583643436431885,
+      "corrected": -0.0336836576461792,
+      "std": 0.04603080824017525
+    },
+    "mev": {
+      "mev": 0.09151678532361984,
+      "top_3": [
+        0.09151678532361984,
+        0.07416204363107681,
+        0.05488722398877144
+      ]
+    },
+    "clustering": {
+      "best_k": 2,
+      "silhouette": 0.26201939582824707,
+      "ari_stability_mean": 0.80264785909865,
+      "delta_bic_per_n": 1.4724889324964459,
+      "results_by_k": {
+        "2": {
+          "silhouette": 0.26201939582824707,
+          "bic": 16495.696103238788
+        },
+        "3": {
+          "silhouette": 0.1953631341457367,
+          "bic": 16086.252859331513
+        },
+        "4": {
+          "silhouette": 0.23193159699440002,
+          "bic": 15804.28897600468
+        },
+        "5": {
+          "silhouette": 0.25101155042648315,
+          "bic": 15727.206480388419
+        },
+        "6": {
+          "silhouette": 0.2538560628890991,
+          "bic": 15665.696391540958
+        }
+      }
+    },
+    "variant_diagnostic": {
+      "max_purity": 0.953,
+      "nmi": 0.115,
+      "flagged": false,
+      "table": {
+        "0": {
+          "n": 235,
+          "top_variant": "depletion",
+          "purity": 0.953,
+          "breakdown": {
+            "depletion": 224,
+            "resource depletion": 6,
+            "ego depletion": 4,
+            "ego-depletion": 1
+          }
+        },
+        "1": {
+          "n": 538,
+          "top_variant": "depletion",
+          "purity": 0.587,
+          "breakdown": {
+            "depletion": 316,
+            "ego-depletion": 60,
+            "resource depletion": 31,
+            "ego depletion": 122,
+            "self-regulatory depletion": 9
+          }
+        }
+      }
+    },
+    "within_variant": {
+      "variant": "depletion",
+      "n": 540,
+      "mev": 0.11318111419677734,
+      "best_k": 6,
+      "silhouette": 0.3846522569656372,
+      "ari": 0.882596902822631,
+      "delta_bic_per_n": 4.0926545775050425,
+      "classification": "POLYSEMOUS"
+    },
+    "anisotropy_baseline": 0.8920480012893677
+  },
+  {
+    "concept": "reaction_time",
+    "classification": "POLYSEMOUS",
+    "n": 1500,
+    "self_similarity": {
+      "raw": 0.8370299339294434,
+      "corrected": -0.055018067359924316,
+      "std": 0.05216870456933975
+    },
+    "mev": {
+      "mev": 0.1360689401626587,
+      "top_3": [
+        0.1360689401626587,
+        0.06223852187395096,
+        0.05117952078580856
+      ]
+    },
+    "clustering": {
+      "best_k": 2,
+      "silhouette": 0.2966866195201874,
+      "ari_stability_mean": 0.9986819193727529,
+      "delta_bic_per_n": 1.2151255194391366,
+      "results_by_k": {
+        "2": {
+          "silhouette": 0.2966866195201874,
+          "bic": 32442.43637333408
+        },
+        "3": {
+          "silhouette": 0.18773457407951355,
+          "bic": 31952.78737792782
+        },
+        "4": {
+          "silhouette": 0.20141439139842987,
+          "bic": 31814.094345656325
+        },
+        "5": {
+          "silhouette": 0.17145732045173645,
+          "bic": 31815.36827810651
+        },
+        "6": {
+          "silhouette": 0.15922977030277252,
+          "bic": 31768.454001023005
+        }
+      }
+    },
+    "variant_diagnostic": {
+      "max_purity": 0.521,
+      "nmi": 0.039,
+      "flagged": false,
+      "table": {
+        "0": {
+          "n": 397,
+          "top_variant": "reaction time",
+          "purity": 0.521,
+          "breakdown": {
+            "reaction time": 207,
+            "response time": 101,
+            "reaction times": 85,
+            "response times": 4
+          }
+        },
+        "1": {
+          "n": 1103,
+          "top_variant": "reaction times",
+          "purity": 0.418,
+          "breakdown": {
+            "response time": 328,
+            "reaction times": 461,
+            "reaction time": 280,
+            "response times": 34
+          }
+        }
+      }
+    },
+    "within_variant": {
+      "variant": "reaction times",
+      "n": 546,
+      "mev": 0.1379229873418808,
+      "best_k": 2,
+      "silhouette": 0.3122113049030304,
+      "ari": 0.995817565621154,
+      "delta_bic_per_n": 1.1175807441157324,
+      "classification": "POLYSEMOUS"
+    },
+    "anisotropy_baseline": 0.8920480012893677
+  },
+  {
+    "concept": "self_esteem",
+    "classification": "VAGUE",
+    "n": 1500,
+    "self_similarity": {
+      "raw": 0.8548697829246521,
+      "corrected": -0.037178218364715576,
+      "std": 0.05667093023657799
+    },
+    "mev": {
+      "mev": 0.1255188286304474,
+      "top_3": [
+        0.1255188286304474,
+        0.08622608333826065,
+        0.05486556142568588
+      ]
+    },
+    "clustering": {
+      "best_k": 4,
+      "silhouette": 0.21274806559085846,
+      "ari_stability_mean": 0.48343971070719255,
+      "delta_bic_per_n": 1.2339519214765848,
+      "results_by_k": {
+        "2": {
+          "silhouette": 0.19606253504753113,
+          "bic": 32144.22909031406
+        },
+        "3": {
+          "silhouette": 0.17051517963409424,
+          "bic": 31680.10614166073
+        },
+        "4": {
+          "silhouette": 0.21274806559085846,
+          "bic": 31477.148811903884
+        },
+        "5": {
+          "silhouette": 0.18162892758846283,
+          "bic": 31330.710990508855
+        },
+        "6": {
+          "silhouette": 0.19036030769348145,
+          "bic": 31269.417212082575
+        }
+      }
+    },
+    "variant_diagnostic": {
+      "max_purity": 0.991,
+      "nmi": 0.006,
+      "flagged": false,
+      "table": {
+        "0": {
+          "n": 579,
+          "top_variant": "self-esteem",
+          "purity": 0.957,
+          "breakdown": {
+            "self-esteem": 554,
+            "selfesteem": 22,
+            "self esteem": 3
+          }
+        },
+        "1": {
+          "n": 534,
+          "top_variant": "self-esteem",
+          "purity": 0.97,
+          "breakdown": {
+            "self-esteem": 518,
+            "selfesteem": 16
+          }
+        },
+        "2": {
+          "n": 159,
+          "top_variant": "self-esteem",
+          "purity": 0.981,
+          "breakdown": {
+            "self-esteem": 156,
+            "selfesteem": 3
+          }
+        },
+        "3": {
+          "n": 228,
+          "top_variant": "self-esteem",
+          "purity": 0.991,
+          "breakdown": {
+            "self-esteem": 226,
+            "selfesteem": 2
+          }
+        }
+      }
+    },
+    "within_variant": {
+      "variant": "self-esteem",
+      "n": 1454,
+      "mev": 0.12642033398151398,
+      "best_k": 4,
+      "silhouette": 0.21348357200622559,
+      "ari": 0.5460217380747721,
+      "delta_bic_per_n": 1.2482986561101799,
+      "classification": "VAGUE"
+    },
+    "anisotropy_baseline": 0.8920480012893677
+  },
+  {
+    "concept": "stereotype_threat",
+    "classification": "VAGUE",
+    "n": 318,
+    "self_similarity": {
+      "raw": 0.8906786441802979,
+      "corrected": -0.0013693571090698242,
+      "std": 0.03733887895941734
+    },
+    "mev": {
+      "mev": 0.0962972491979599,
+      "top_3": [
+        0.0962972491979599,
+        0.07750804722309113,
+        0.07283452898263931
+      ]
+    },
+    "clustering": {
+      "best_k": 3,
+      "silhouette": 0.16348086297512054,
+      "ari_stability_mean": 0.33902404360521127,
+      "delta_bic_per_n": 0.6059425005777708,
+      "results_by_k": {
+        "2": {
+          "silhouette": 0.11804940551519394,
+          "bic": 6652.209869786028
+        },
+        "3": {
+          "silhouette": 0.16348086297512054,
+          "bic": 6689.484780336863
+        },
+        "4": {
+          "silhouette": 0.10491601377725601,
+          "bic": 6688.609735138187
+        },
+        "5": {
+          "silhouette": 0.10925497114658356,
+          "bic": 6713.180124509822
+        },
+        "6": {
+          "silhouette": 0.13757966458797455,
+          "bic": 6753.016440242542
+        }
+      }
+    },
+    "variant_diagnostic": {
+      "max_purity": 0.971,
+      "nmi": 0.001,
+      "flagged": false,
+      "table": {
+        "0": {
+          "n": 103,
+          "top_variant": "stereotype threat",
+          "purity": 0.951,
+          "breakdown": {
+            "stereotype threat": 98,
+            "stereotype-threat": 5
+          }
+        },
+        "1": {
+          "n": 112,
+          "top_variant": "stereotype threat",
+          "purity": 0.955,
+          "breakdown": {
+            "stereotype threat": 107,
+            "stereotype-threat": 5
+          }
+        },
+        "2": {
+          "n": 103,
+          "top_variant": "stereotype threat",
+          "purity": 0.971,
+          "breakdown": {
+            "stereotype threat": 100,
+            "stereotype-threat": 3
+          }
+        }
+      }
+    },
+    "within_variant": {
+      "variant": "stereotype threat",
+      "n": 305,
+      "mev": 0.0954449400305748,
+      "best_k": 6,
+      "silhouette": 0.18364140391349792,
+      "ari": 0.4074681682017288,
+      "delta_bic_per_n": 0.35182211092924265,
+      "classification": "VAGUE"
+    },
+    "anisotropy_baseline": 0.8920480012893677
+  },
+  {
+    "concept": "well_being",
+    "classification": "BORDERLINE",
+    "n": 1500,
+    "self_similarity": {
+      "raw": 0.8594528436660767,
+      "corrected": -0.032595157623291016,
+      "std": 0.04464416950941086
+    },
+    "mev": {
+      "mev": 0.10734355449676514,
+      "top_3": [
+        0.10734355449676514,
+        0.07929310947656631,
+        0.04758255183696747
+      ]
+    },
+    "clustering": {
+      "best_k": 2,
+      "silhouette": 0.1573755443096161,
+      "ari_stability_mean": 0.9548024716329643,
+      "delta_bic_per_n": 0.24644036929264984,
+      "results_by_k": {
+        "2": {
+          "silhouette": 0.1573755443096161,
+          "bic": 32190.108454327732
+        },
+        "3": {
+          "silhouette": 0.14361757040023804,
+          "bic": 32036.86998138241
+        },
+        "4": {
+          "silhouette": 0.10645608603954315,
+          "bic": 31999.551575270583
+        },
+        "5": {
+          "silhouette": 0.13842856884002686,
+          "bic": 32011.726005157292
+        },
+        "6": {
+          "silhouette": 0.13456648588180542,
+          "bic": 32041.861937119196
+        }
+      }
+    },
+    "variant_diagnostic": {
+      "max_purity": 0.871,
+      "nmi": 0.008,
+      "flagged": false,
+      "table": {
+        "0": {
+          "n": 712,
+          "top_variant": "well-being",
+          "purity": 0.871,
+          "breakdown": {
+            "well-being": 620,
+            "subjective well-being": 40,
+            "wellbeing": 50,
+            "well being": 2
+          }
+        },
+        "1": {
+          "n": 788,
+          "top_variant": "well-being",
+          "purity": 0.796,
+          "breakdown": {
+            "subjective well-being": 74,
+            "well-being": 627,
+            "wellbeing": 84,
+            "well being": 3
+          }
+        }
+      }
+    },
+    "within_variant": {
+      "variant": "well-being",
+      "n": 1247,
+      "mev": 0.10672327876091003,
+      "best_k": 2,
+      "silhouette": 0.18526801466941833,
+      "ari": 0.9843426930347705,
+      "delta_bic_per_n": 0.22587944047626046,
+      "classification": "BORDERLINE"
+    },
+    "anisotropy_baseline": 0.8920480012893677
+  },
+  {
+    "concept": "working_memory",
+    "classification": "BORDERLINE",
+    "n": 1500,
+    "self_similarity": {
+      "raw": 0.8483549356460571,
+      "corrected": -0.04369306564331055,
+      "std": 0.04877102002501488
+    },
+    "mev": {
+      "mev": 0.08935046941041946,
+      "top_3": [
+        0.08935046941041946,
+        0.07234163582324982,
+        0.051594771444797516
+      ]
+    },
+    "clustering": {
+      "best_k": 5,
+      "silhouette": 0.18067340552806854,
+      "ari_stability_mean": 0.6633282949834434,
+      "delta_bic_per_n": 0.9262903467995081,
+      "results_by_k": {
+        "2": {
+          "silhouette": 0.148097962141037,
+          "bic": 33416.01101170078
+        },
+        "3": {
+          "silhouette": 0.16326501965522766,
+          "bic": 32804.24783477597
+        },
+        "4": {
+          "silhouette": 0.1689324975013733,
+          "bic": 32701.978485670974
+        },
+        "5": {
+          "silhouette": 0.18067340552806854,
+          "bic": 32663.04646261579
+        },
+        "6": {
+          "silhouette": 0.16498899459838867,
+          "bic": 32705.481932236384
+        }
+      }
+    },
+    "variant_diagnostic": {
+      "max_purity": 1.0,
+      "nmi": 0.02,
+      "flagged": false,
+      "table": {
+        "0": {
+          "n": 216,
+          "top_variant": "working memory",
+          "purity": 1.0,
+          "breakdown": {
+            "working memory": 216
+          }
+        },
+        "1": {
+          "n": 462,
+          "top_variant": "working memory",
+          "purity": 0.931,
+          "breakdown": {
+            "working memory": 430,
+            "working-memory": 32
+          }
+        },
+        "2": {
+          "n": 268,
+          "top_variant": "working memory",
+          "purity": 0.989,
+          "breakdown": {
+            "working memory": 265,
+            "working-memory": 3
+          }
+        },
+        "3": {
+          "n": 367,
+          "top_variant": "working memory",
+          "purity": 0.997,
+          "breakdown": {
+            "working memory": 366,
+            "working-memory": 1
+          }
+        },
+        "4": {
+          "n": 187,
+          "top_variant": "working memory",
+          "purity": 0.963,
+          "breakdown": {
+            "working memory": 180,
+            "working-memory": 7
+          }
+        }
+      }
+    },
+    "within_variant": {
+      "variant": "working memory",
+      "n": 1457,
+      "mev": 0.0897860899567604,
+      "best_k": 5,
+      "silhouette": 0.18175475299358368,
+      "ari": 0.6229771692702737,
+      "delta_bic_per_n": 0.9328254544989006,
+      "classification": "BORDERLINE"
+    },
+    "anisotropy_baseline": 0.8920480012893677
+  }
+]

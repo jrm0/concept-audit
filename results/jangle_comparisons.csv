@@ -1,0 +1,11 @@
+concept,variant_a,variant_b,n_a,n_b,centroid_cosine,within_a,within_b,cross_minus_within
+cognitive_dissonance,cognitive dissonance,dissonance,183,354,0.9958,0.8769,0.877,0.1189
+ego_depletion,depletion,ego depletion,540,126,0.9908,0.8508,0.8888,0.121
+ego_depletion,depletion,ego-depletion,540,61,0.9864,0.8508,0.9011,0.1105
+ego_depletion,ego depletion,ego-depletion,126,61,0.9917,0.8888,0.9011,0.0968
+reaction_time,reaction time,reaction times,487,546,0.9916,0.8305,0.8517,0.1505
+reaction_time,reaction time,response time,487,429,0.9968,0.8305,0.8454,0.1588
+reaction_time,reaction times,response time,546,429,0.9948,0.8517,0.8454,0.1463
+well_being,subjective well-being,well-being,114,1247,0.9933,0.8608,0.8595,0.1332
+well_being,subjective well-being,wellbeing,114,134,0.9939,0.8608,0.8512,0.1379
+well_being,well-being,wellbeing,1247,134,0.9985,0.8595,0.8512,0.1432

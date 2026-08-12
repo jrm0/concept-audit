@@ -1,0 +1,8 @@
+concept_slug,canonical,retrieval_anchor,variants,expected,note
+ego_depletion,ego depletion,depletion,ego depletion|ego-depletion|self-regulatory depletion|resource depletion,polysemous,contested construct; RRR-tested
+cognitive_dissonance,cognitive dissonance,dissonance,cognitive dissonance|dissonance,polysemous,pilot study 05 showed two-construct structure
+working_memory,working memory,working memory,working memory|working-memory,stable,Tier 1 control; survived variant check in session 8
+stereotype_threat,stereotype threat,stereotype threat,stereotype threat|stereotype-threat,polysemous,replication-crisis celebrity
+self_esteem,self-esteem,self-esteem,self-esteem|self esteem|selfesteem,mixed,synonym-cluster candidate
+well_being,well-being,well-being,well-being|wellbeing|well being|subjective well-being,vague,session 8: clusters were pure spelling artifact
+reaction_time,reaction time,reaction time,reaction time|reaction times|response time|response times,stable,session 8: clusters were surface forms incl. plural

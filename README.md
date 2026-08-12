@@ -7,21 +7,21 @@ Computational pipeline for measuring the semantic stability of scientific concep
 ```bash
 # 1. Clone and set up environment
 cd code/
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate        # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
 # 2. Pull corpus data from Semantic Scholar
-python 01_pull_corpus.py
+python3 01_pull_corpus.py
 
 # 3. Extract SciBERT embeddings (this is the slow step — ~30-60 min on CPU)
-python 02_extract_embeddings.py
+python3 02_extract_embeddings.py
 
 # 4. Compute metrics (self-similarity, MEV, clustering)
-python 03_compute_metrics.py
+python3 03_compute_metrics.py
 
 # 5. Generate visualizations
-python 04_visualize.py
+python3 04_visualize.py
 ```
 
 ## Pipeline Overview
@@ -32,6 +32,12 @@ python 04_visualize.py
 | `02_extract_embeddings.py` | Extracts SciBERT contextual embeddings | Corpus CSVs | `data/embeddings_{concept}.npz` |
 | `03_compute_metrics.py` | Computes CSS, MEV, GMM clustering | Embedding arrays | `results/metrics_summary.csv`, `results/metrics_detail.json` |
 | `04_visualize.py` | Generates comparison figures | Embeddings + metrics | `results/fig_*.png` |
+| `05_pull_fulltext_s2orc.py` | Route 1: full text from S2ORC (Datasets API), filtered to Stratum 1 journals. Two phases; phase B is bandwidth-heavy (streams the whole S2ORC dataset) but resumable | `venues_config.py`; `S2_API_KEY` env var | `data/s2orc/fulltext_stratum1.jsonl` + corpusId/meta files |
+| `06_pull_fulltext_pmc.py` | Route 2: full text from PMC Open Access subset (E-utilities + BioC), per journal, resumable | `venues_config.py`; optional `NCBI_API_KEY`/`NCBI_EMAIL` env vars | `data/pmc/fulltext_pmc.jsonl` + per-journal counts |
+| `venues_config.py` | Shared Stratum 1 journal list (DRAFT — edit here, both pull scripts import it) | — | — |
+| `osc_coding/01_fetch_pilot_studies.py` | Downloads RP:P master data from OSF, draws seeded journal-stratified 10-study pilot, fetches abstracts, writes masked/unmasked texts + coding sheet | Optional `S2_API_KEY` | `data/pilot_10_studies.csv`, `data/pilot_texts/`, `data/coding_sheet_pilot.csv` |
+
+See `osc_coding/coding_protocol.md` and `osc_coding/llm_prompt.md` for the construct-coding procedure. Corpus construction rules live in `../Conceptual_Coherence_Corpus_Protocol_v1.md` (fill in its retrieval log after each pull).
 
 ## Configuration
 
