@@ -52,7 +52,9 @@ from sklearn.decomposition import PCA
 from sklearn.mixture import GaussianMixture
 
 EMB_DIR = Path("data/lineage_emb")
+DOCS_PATH = Path("data/family/lineage_docs.jsonl")
 RESULTS = Path("results")
+N_SAMPLE_TITLES = 10       # titles per cluster in the qualitative files
 MIN_N = 15                 # min docs for a period centroid
 CLUSTER_MIN_N = 60         # min docs to attempt within-period clustering
 MAX_K = 4
@@ -78,6 +80,19 @@ def load_shards():
             "V": z["vectors"], "keys": z["keys"],
             "years": z["years"], "journals": z["journals"]}
     return data
+
+
+def load_titles():
+    """doi -> title, so sample files show READABLE titles, not DOIs.
+    (17 stored doi-or-title as the key; the qualitative check needs titles.)"""
+    titles = {}
+    if DOCS_PATH.exists():
+        with open(DOCS_PATH, encoding="utf-8") as f:
+            for line in f:
+                d = json.loads(line)
+                if d.get("doi"):
+                    titles[d["doi"]] = d.get("title", "")
+    return titles
 
 
 def split_half_floor(V, reps=40):
@@ -107,12 +122,29 @@ def cluster_period(V, n_null=10):
     """
     if len(V) < CLUSTER_MIN_N:
         return None, 1, None
-    R = PCA(n_components=min(5, len(V) - 1)).fit_transform(V)
-    g1 = GaussianMixture(1, n_init=5, random_state=SEED).fit(R)
+    # float64 + rescale: duplicate documents (reprints, the same abstract in
+    # two RIS exports) give IDENTICAL vectors; a GMM component that collapses
+    # onto them has singular covariance and Cholesky fails. Rescaling makes
+    # the reg_covar ridge meaningful at the data's actual variance scale.
+    R = PCA(n_components=min(5, len(V) - 1)).fit_transform(V.astype(np.float64))
+    R /= R.std() + 1e-12
+
+    def fit_gmm(k, X, n_init):
+        try:
+            return GaussianMixture(k, n_init=n_init, reg_covar=1e-4,
+                                   random_state=SEED).fit(X)
+        except Exception:
+            return None   # component collapsed even with ridge — skip this k
+
+    g1 = fit_gmm(1, R, 5)
+    if g1 is None:
+        return None, 1, None
     bic1 = g1.bic(R)
     best = (1, None, 0.0)
     for k in range(2, MAX_K + 1):
-        g = GaussianMixture(k, n_init=25, random_state=SEED).fit(R)
+        g = fit_gmm(k, R, 25)
+        if g is None:
+            continue
         dbic = (bic1 - g.bic(R)) / len(R)
         if dbic > best[2]:
             best = (k, g.predict(R), dbic)
@@ -124,10 +156,16 @@ def cluster_period(V, n_null=10):
     for _ in range(n_null):
         S, _lab = g1.sample(len(R))
         S = S[rng.permutation(len(S))]
-        b1 = GaussianMixture(1, n_init=3, random_state=SEED).fit(S).bic(S)
+        gn1 = fit_gmm(1, S, 3)
+        if gn1 is None:
+            continue
+        b1 = gn1.bic(S)
         for k in range(2, MAX_K + 1):
-            gk = GaussianMixture(k, n_init=5, random_state=SEED).fit(S)
-            null_max = max(null_max, (b1 - gk.bic(S)) / len(S))
+            gk = fit_gmm(k, S, 5)
+            if gk is not None:
+                null_max = max(null_max, (b1 - gk.bic(S)) / len(S))
+    if null_max == -np.inf:
+        return None, 1, best[2]   # no usable null — refuse to claim clusters
     if best[2] > null_max:
         return best[1], best[0], best[2]
     return None, 1, best[2]
@@ -135,6 +173,7 @@ def cluster_period(V, n_null=10):
 
 def main():
     RESULTS.mkdir(exist_ok=True)
+    titles_by_doi = load_titles()
     data = load_shards()
     if not data:
         raise SystemExit("No shards in data/lineage_emb — run 17 first.")
@@ -202,10 +241,10 @@ def main():
     # --- B. BIRTH & DIVERGENCE (cross-term distances per period) ---
     say("\n\n=== B. CROSS-TERM DISTANCES (masked space) ===")
     dist_rows = []
-    key_pairs = [("ego depletion", "self-control"),
-                 ("ego depletion", "self-regulation"),
+    key_pairs = [("ego depletion", "self control"),
+                 ("ego depletion", "self regulation"),
                  ("ego depletion", "willpower"),
-                 ("self-control", "self-regulation"),
+                 ("self control", "self regulation"),
                  ("ego depletion", "executive function"),
                  ("ego depletion", "delay of gratification")]
     for p in periods:
@@ -240,17 +279,30 @@ def main():
             sh = data[t][p]
             labels, k, dbic = cluster_period(sh["V"])
             nodes = []
+            def readable(keys):
+                return [titles_by_doi.get(str(kk), str(kk))[:110]
+                        for kk in keys[:N_SAMPLE_TITLES]]
+
             if labels is None:
                 if len(sh["V"]) >= MIN_N:
                     nodes.append({"id": f"{p}:0", "n": len(sh["V"]),
                                   "centroid": sh["V"].mean(0),
-                                  "titles": list(sh["keys"][:5])})
+                                  "titles": readable(sh["keys"]),
+                                  "journals": list(sh["journals"][:0])})
             else:
                 for c in range(k):
                     idx = np.where(labels == c)[0]
+                    jc = defaultdict(int)
+                    for j in sh["journals"][idx]:
+                        if str(j).strip():
+                            jc[str(j).strip()] += 1
+                    top_j = sorted(jc.items(), key=lambda x: -x[1])[:4]
+                    yrs = sh["years"][idx]
                     nodes.append({"id": f"{p}:{c}", "n": int(len(idx)),
                                   "centroid": sh["V"][idx].mean(0),
-                                  "titles": list(sh["keys"][idx][:5])})
+                                  "titles": readable(sh["keys"][idx]),
+                                  "top_journals": top_j,
+                                  "median_year": int(np.median(yrs))})
             if nodes:
                 node_seq.append((p, nodes, dbic if labels is not None else 0.0))
         # descent links
@@ -298,9 +350,16 @@ def main():
             for p, nodes, db in node_seq:
                 f.write(f"===== {p} (dBIC/n={db:.2f}) =====\n")
                 for nd in nodes:
-                    f.write(f"  cluster {nd['id']} (n={nd['n']}):\n")
+                    f.write(f"  cluster {nd['id']} (n={nd['n']}"
+                            + (f", median year {nd['median_year']}"
+                               if "median_year" in nd else "") + "):\n")
+                    if nd.get("top_journals"):
+                        f.write("    journals: "
+                                + "; ".join(f"{j} ({c})"
+                                            for j, c in nd["top_journals"])
+                                + "\n")
                     for ti in nd["titles"]:
-                        f.write(f"    - {str(ti)[:100]}\n")
+                        f.write(f"    - {str(ti)[:110]}\n")
                 f.write("\n")
 
     with open(RESULTS / "lineage_tree.json", "w") as f:
