@@ -38,9 +38,9 @@ is reported as candidate structure only.
 
 Requires: pip install diptest --break-system-packages
 
-Reads:  data/lineage_emb/*.npz
-Writes: results/cluster_validity.csv
-Usage:  python3 21_cluster_validity.py
+Reads:  <emb_dir>/*.npz            (from config)
+Writes: results/<slug>/cluster_validity.csv
+Usage:  python3 21_cluster_validity.py [--config configs/<concept>.yaml]
 """
 
 import csv
@@ -51,14 +51,17 @@ import numpy as np
 from sklearn.decomposition import PCA
 from sklearn.mixture import GaussianMixture
 
+import pipeline_config as pc
+
 _spec = importlib.util.spec_from_file_location(
     "lineage", Path(__file__).parent / "18_lineage_analysis.py")
 lin = importlib.util.module_from_spec(_spec)
-_spec.loader.exec_module(lin)
+_spec.loader.exec_module(lin)          # 18 reads the same --config
 
+CFG = lin.CFG
 BOOT = 50
-SEED = 42
-RESULTS = Path("results")
+SEED = lin.SEED
+RESULTS = CFG.results
 
 
 def main():
@@ -77,7 +80,8 @@ def main():
             V = data[t][p]["V"].astype(float)
             if len(V) < cc.MIN_N:
                 continue
-            r = cc.analyze(V, n_boot=BOOT, seed=SEED)
+            r = cc.analyze(V, min_n=lin.CLUSTER_MIN_N, max_k=lin.MAX_K,
+                           n_boot=BOOT, seed=SEED)
             k = r["k"] if r["labels"] is not None else r.get("proposed_k", 0)
             f = lambda x: "-" if x is None else f"{x:.3f}"
             print(f"{t:<24}{p:<11}{len(V):>5}{k:>3}{f(r['silhouette']):>7}"
@@ -86,7 +90,6 @@ def main():
             rows.append([t, p, len(V), k, r["silhouette"], r["dip_p"],
                          r["mean_jaccard"], r["min_jaccard"], r["verdict"]])
 
-    RESULTS.mkdir(exist_ok=True)
     with open(RESULTS / "cluster_validity.csv", "w", newline="",
               encoding="utf-8") as fh:
         w = csv.writer(fh)
@@ -97,6 +100,12 @@ def main():
     print(f"\n{n_ok}/{len(rows)} period-clusterings SUPPORTED "
           f"(dip p<{cc.DIP_ALPHA} AND mean Jaccard>={cc.STABLE})")
     print(f"-> {RESULTS / 'cluster_validity.csv'}")
+    pc.write_manifest(
+        CFG, __file__,
+        params={"n_boot": BOOT, "seed": SEED, "min_n": lin.CLUSTER_MIN_N,
+                "max_k": lin.MAX_K, "dip_alpha": cc.DIP_ALPHA,
+                "stable": cc.STABLE, "cells": len(rows), "supported": n_ok},
+        outputs=[RESULTS / "cluster_validity.csv"])
     print("\nOnly branching events whose BOTH periods are SUPPORTED should "
           "be reported as branchings; the rest are candidate structure.")
 

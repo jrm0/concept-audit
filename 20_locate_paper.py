@@ -25,9 +25,10 @@ Usage (from code/):
     python3 20_locate_paper.py --text "abstract text ..." --term "ego depletion"
     python3 20_locate_paper.py --file some_abstract.txt --term "self control"
 
---doi / --title look the paper up in the corpus (data/family/lineage_docs.jsonl)
+--doi / --title look the paper up in the corpus (<docs_path> from the config)
 and, if found, reuse its stored text; otherwise supply --text or --file.
-Default term is "ego depletion"; --term picks which term's space to use.
+Default term is the config's focal concept; --term picks another term's space.
+Add --config configs/<concept>.yaml to use a different concept's landscape.
 
 NOTE: distances are reported in RAW space by default and additionally under
 control-centering (--center) when control shards exist, because raw cosines
@@ -43,17 +44,18 @@ from pathlib import Path
 import numpy as np
 from scipy.spatial.distance import cosine
 
-MODEL_NAME = "allenai/scibert_scivocab_uncased"
-MAX_LENGTH = 256
-MAX_SENT_PER_DOC = 3
-EMB_DIR = Path("data/lineage_emb")
-DOCS_PATH = Path("data/family/lineage_docs.jsonl")
+import pipeline_config as pc
+from pipeline_config import slug, term_pattern
+
+CFG, _ARGV = pc.load()
+
+MODEL_NAME = CFG["embedding"]["model"]
+MAX_LENGTH = int(CFG["embedding"]["max_length"])
+MAX_SENT_PER_DOC = int(CFG["embedding"]["max_sent_per_doc"])
+EMB_DIR = Path(CFG["emb_dir"])
+DOCS_PATH = Path(CFG["docs_path"])
 SENT_RE = re.compile(r"(?<=[.!?])\s+(?=[A-Z(])")
-CONTROL_TERMS = {"participants", "results", "significant", "measure"}
-
-
-def slug(t):
-    return re.sub(r"[^a-z0-9]+", "_", t.lower()).strip("_")
+CONTROL_TERMS = set(CFG.controls)
 
 
 def load_corpus_doc(doi=None, title=None):
@@ -76,12 +78,12 @@ def main():
     ap.add_argument("--title")
     ap.add_argument("--text")
     ap.add_argument("--file")
-    ap.add_argument("--term", default="ego depletion")
+    ap.add_argument("--term", default=CFG["concept"])
     ap.add_argument("--center", action="store_true",
                     help="also report under control-term centering")
-    args = ap.parse_args()
+    args = ap.parse_args(_ARGV)
 
-    term = args.term.lower()
+    term = pc.canon(args.term)
     label = args.doi or args.title or (args.file or "pasted text")
 
     # 1. Get the text
@@ -107,8 +109,7 @@ def main():
             "supply --text or --file with its abstract.")
 
     # 2. Find the term's mention sentences
-    _body = re.escape(term).replace(r"\ ", "[-\\s]+").replace(r"\-", "[-\\s]+")
-    pat = re.compile(r"\b" + _body + r"\b", re.I)
+    pat = term_pattern(term)
     sents = [s.strip() for s in SENT_RE.split(text)
              if 30 <= len(s.strip()) <= 1200 and pat.search(s)]
     if not sents:

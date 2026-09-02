@@ -25,8 +25,13 @@ These four views show a distribution that STRETCHES and MIGRATES.
                    dated events (1998 coinage, 2010 meta, 2014 re-analysis,
                    2016 RRR, 2021 RRR) as vertical rules.
 
-Outputs SVG (vector, editable, journal-ready) + PNG to results/figures/.
-Usage:  python3 22_make_figures.py
+Outputs SVG (vector, editable, journal-ready) + PNG to results/<slug>/figures/.
+Usage:  python3 22_make_figures.py [--config configs/<concept>.yaml]
+
+Focal term, control terms, events, venue-category regexes, which terms/pairs
+to draw, and the free-text subtitles all come from the config. The subtitles
+are ANNOTATIONS (previously hard-typed result numbers); they are not computed
+here — see figures.annotations in the YAML.
 """
 
 import csv
@@ -44,33 +49,24 @@ from matplotlib.lines import Line2D      # noqa: E402
 from scipy.spatial.distance import cosine  # noqa: E402
 from sklearn.decomposition import PCA    # noqa: E402
 
-EMB = Path("data/lineage_emb")
-DOCS = Path("data/family/lineage_docs.jsonl")
-OUT = Path("results/figures")
-FOCAL = "ego depletion"
-CONTROLS = {"participants", "results", "significant", "measure"}
-EVENTS = {1998: "coinage", 2010: "meta-analysis", 2014: "re-analysis",
-          2016: "RRR", 2021: "RRR 2"}
-CATS = [
-    # includes applied-psych journal names (JAP etc.); sensitivity vs the
-    # narrower first version: 12.0->24.8 (p=0.0001) vs 15.5->29.6 (p=0.0004)
-    ("work/organizational", r"organi[sz]ation|management|business|occupational"
-     r"|vocational|work|employ|leader|market|consumer|account|tourism"
-     r"|hospitality|industrial|labor|labour|applied psycholog|personnel"
-     r"|human resource|human performance|ergonomic"),
-    ("health/medical", r"health|medic|nurs|clinical|addict|obes|diet|patient"
-     r"|psychosomat|prevent"),
-    ("education", r"educat|school|teach|learn|student|academic|curricul"),
-    ("sport", r"sport|exercise|athlet|kinesio|physical activity"),
-    ("crime/social work", r"crimin|delinq|justice|offend|social work|deviant"
-     r"|violence"),
-]
+import pipeline_config as pc             # noqa: E402
+from pipeline_config import slug         # noqa: E402
+
+CFG, _ARGV = pc.load()
+FIG = CFG.get("figures", {}) or {}
+ANN = FIG.get("annotations", {}) or {}
+
+EMB = Path(CFG["emb_dir"])
+DOCS = Path(CFG["docs_path"])
+RESULTS = CFG.results
+OUT = RESULTS / "figures"
+FOCAL = pc.canon(CFG["concept"])
+CONTROLS = set(CFG.controls)
+EVENTS = pc.events(CFG, short=True) or pc.events(CFG)
+VENUE_CAT = pc.venue_categorizer(CFG)
+BASELINE_CAT = FIG.get("migration_baseline_category", VENUE_CAT.names[0])
 plt.rcParams.update({"font.size": 9, "axes.spines.top": False,
                      "axes.spines.right": False, "figure.dpi": 130})
-
-
-def slug(t):
-    return re.sub(r"[^a-z0-9]+", "_", t.lower()).strip("_")
 
 
 def mid_year(p):
@@ -137,12 +133,12 @@ def fig_ridgeline():
         ax.plot([np.mean(v)], [y0 + .04], "v", color="0.1", ms=5)
         ax.text(lo, y0 + .12, f"{p}  (n={len(v)})", fontsize=8, va="bottom")
     ax.set_yticks([])
-    ax.set_xlabel("position along the 'ego depletion' drift axis\n"
+    ax.set_xlabel(f"position along the '{FOCAL}' drift axis\n"
                   "(earliest usage $\\rightarrow$ latest usage; "
                   "control-term centered)")
-    ax.set_title("Usage of 'ego depletion' stretches and slides — it does not "
-                 "split\nOne mode per period (dip test p = 0.71–0.99); "
-                 "triangles mark period means", fontsize=10, loc="left")
+    sub = ANN.get("ridgeline", "triangles mark period means")
+    ax.set_title(f"Per-period usage of '{FOCAL}' along its drift axis\n{sub}",
+                 fontsize=10, loc="left")
     ax.set_xlim(lo, hi)
     save(fig, "fig1_ridgeline")
 
@@ -150,15 +146,8 @@ def fig_ridgeline():
 # ---------------------------------------------------------------- fig 2
 def fig_migration():
     docs = [json.loads(l) for l in open(DOCS, encoding="utf-8")]
-
-    def cat(j):
-        j = (j or "").lower()
-        for name, pat in CATS:
-            if re.search(pat, j):
-                return name
-        return "other / core psychology"
-
-    names = [c[0] for c in CATS] + ["other / core psychology"]
+    cat = VENUE_CAT
+    names = VENUE_CAT.names
     per, tot = defaultdict(Counter), Counter()
     base_per, base_tot = Counter(), Counter()
     for d in docs:
@@ -176,10 +165,10 @@ def fig_migration():
     colors = plt.cm.tab20(np.linspace(0, .55, len(names)))
     ax.stackplot(x, Y, labels=names, colors=colors, alpha=.9, lw=.4,
                  edgecolor="white")
-    base = [100 * base_per[(p, "work/organizational")] / base_tot[p]
+    base = [100 * base_per[(p, BASELINE_CAT)] / base_tot[p]
             for p in periods]
     ax.plot(x, base, "k--", lw=1.6,
-            label="whole corpus: work/org share (baseline)")
+            label=f"whole corpus: {BASELINE_CAT} share (baseline)")
     for yr, lab in EVENTS.items():
         if min(x) <= yr <= max(x):
             ax.axvline(yr, color="0.25", lw=.8, ls=":")
@@ -187,10 +176,9 @@ def fig_migration():
                     ha="center", color="0.25")
     ax.set_ylim(0, 100)
     ax.set_xlim(min(x), max(x))
-    ax.set_ylabel("% of 'ego depletion' documents")
-    ax.set_title("Where 'ego depletion' is published: migration into applied "
-                 "venues\nwork/org share 12.0% (2015-19) → 24.8% (2020-24), "
-                 "permutation p = 0.0001; corpus baseline flat",
+    ax.set_ylabel(f"% of '{FOCAL}' documents")
+    sub = ANN.get("migration", "share of documents by venue category")
+    ax.set_title(f"Where '{FOCAL}' is published, by venue category\n{sub}",
                  fontsize=10, loc="left")
     ax.legend(loc="center left", bbox_to_anchor=(1.01, .5), frameon=False,
               fontsize=8)
@@ -209,7 +197,7 @@ def fig_trajectory():
     # Only well-sampled terms: a centroid built from ~20 documents is mostly
     # noise and, being an outlier, would dominate the PCA and squash the
     # differences we care about (this happened with "strength model", n=21-71).
-    MIN_DOCS = 60
+    MIN_DOCS = int(FIG.get("trajectory_min_docs", 60))
     for t in sorted(set(terms)):
         sh = load_shards(t)
         c = {p: (sh[p] - ref[p]).mean(0) for p in sh
@@ -225,9 +213,8 @@ def fig_trajectory():
     pos = {k: XY[i] for i, k in enumerate(keys)}
 
     fig, ax = plt.subplots(figsize=(7.4, 6.0))
-    show = [t for t in ["ego depletion", "self control", "self regulation",
-                        "willpower", "executive function", "strength model",
-                        "delay of gratification"] if t in cents]
+    wanted = [pc.canon(t) for t in FIG.get("trajectory_terms", [])] or sorted(cents)
+    show = [t for t in wanted if t in cents]
     cols = plt.cm.tab10(np.linspace(0, .9, len(show)))
     for t, col in zip(show, cols):
         ps = sorted(cents[t])
@@ -247,33 +234,33 @@ def fig_trajectory():
                         color="0.25")
     ax.set_xlabel("PC1 of period centroids")
     ax.set_ylabel("PC2")
-    ax.set_title("Trajectories of terms through usage space, 1975–2025\n"
-                 "'ego depletion' (bold) starts beside its ancestors, moves "
-                 "away through 2015-19, then turns back", fontsize=10,
-                 loc="left")
+    y0, y1 = CFG["periods"]["year_min"], CFG["periods"]["year_max"]
+    sub = ANN.get("trajectory", f"'{FOCAL}' in bold")
+    ax.set_title(f"Trajectories of terms through usage space, {y0}–{y1}\n{sub}",
+                 fontsize=10, loc="left")
     save(fig, "fig3_trajectory")
 
 
 # ---------------------------------------------------------------- fig 4
 def fig_drift():
-    drift = Path("results/lineage_drift.csv")
-    dist = Path("results/term_distances_centered.csv")
+    drift = RESULTS / "lineage_drift.csv"
+    dist = RESULTS / "term_distances_centered.csv"
     if not drift.exists():
         print("  (skipped drift: run 18 first)")
         return
     rows = list(csv.DictReader(open(drift, encoding="utf-8")))
     fig, axes = plt.subplots(1, 2, figsize=(10.6, 4.0))
     ax = axes[0]
-    for t, col in [("strength model", "crimson"), (FOCAL, "navy"),
-                   ("self control", "0.45"), ("self regulation", "0.6"),
-                   ("willpower", "0.75")]:
+    drift_terms = [(pc.canon(t), str(c)) for t, c in
+                   FIG.get("drift_terms", [[FOCAL, "navy"]])]
+    for t, col in drift_terms:
         r = [(mid_year(x["period"]), float(x["excess_drift"]))
              for x in rows if x["term"] == t and x["excess_drift"]]
         if len(r) < 2:
             continue
         r.sort()
-        ax.plot(*zip(*r), "-o", ms=3, color=col, lw=2 if col in
-                ("crimson", "navy") else 1, label=t)
+        ax.plot(*zip(*r), "-o", ms=3, color=col,
+                lw=2 if t == FOCAL or col == "crimson" else 1, label=t)
     ax.axhline(0, color="k", lw=.8)
     ax.set_ylabel("excess drift over control terms")
     ax.set_title("A. Drift from origin (raw space)", fontsize=10, loc="left")
@@ -284,12 +271,9 @@ def fig_drift():
     ax = axes[1]
     if dist.exists():
         dr = list(csv.DictReader(open(dist, encoding="utf-8")))
-        pairs = [("ego depletion", "self control"),
-                 ("ego depletion", "willpower"),
-                 ("ego depletion", "executive function"),
-                 ("self control", "self regulation")]
-        for (a, b), col in zip(pairs, ["navy", "darkorange", "seagreen",
-                                       "crimson"]):
+        pairs = [(pc.canon(a), pc.canon(b), str(c)) for a, b, c in
+                 FIG.get("distance_pairs", [])]
+        for a, b, col in pairs:
             aa, bb = sorted([a, b])
             s = [(mid_year(x["period"]), float(x["cosine_distance"]))
                  for x in dr if x["term_a"] == aa and x["term_b"] == bb]
@@ -309,16 +293,24 @@ def fig_drift():
                 ax.text(yr, ax.get_ylim()[1], lab, rotation=90, fontsize=6.5,
                         va="top", ha="right", color="0.3")
         ax.set_xlabel("year (period midpoint)")
-    fig.suptitle("Ego depletion: drift and divergence against dated events",
-                 fontsize=11, x=.09, ha="left")
+    fig.suptitle(f"{FOCAL.capitalize()}: drift and divergence against dated "
+                 f"events", fontsize=11, x=.09, ha="left")
     save(fig, "fig4_drift_divergence")
 
 
 if __name__ == "__main__":
     print("Building figures ...")
+    done, failed = [], []
     for fn in (fig_ridgeline, fig_migration, fig_trajectory, fig_drift):
         try:
             fn()
+            done.append(fn.__name__)
         except Exception as e:            # keep going; report which failed
-            print(f"  !! {fn.__name__} failed: {type(e).__name__}: {e}")
+            failed.append(f"{fn.__name__}: {type(e).__name__}: {e}")
+            print(f"  !! {failed[-1]}")
+    pc.write_manifest(CFG, __file__,
+                      params={"figures_built": done, "failed": failed,
+                              "annotations": ANN,
+                              "venue_categories": VENUE_CAT.names},
+                      outputs=[OUT])
     print(f"\nAll figures -> {OUT}/ (SVG for editing, PNG for viewing)")

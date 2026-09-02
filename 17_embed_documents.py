@@ -21,8 +21,10 @@ Writes: data/lineage_emb/{term_slug}__{period}.npz
         checkpointed per (term, period): re-running skips finished shards.
 
 Usage:
-    caffeinate -i python3 17_embed_documents.py
+    caffeinate -i python3 17_embed_documents.py [--config configs/<concept>.yaml]
     python3 17_embed_documents.py "ego depletion" "self-control"   # subset
+
+Model, caps, seed, paths and control terms come from the config.
 """
 
 import json
@@ -34,27 +36,28 @@ from pathlib import Path
 
 import numpy as np
 
-MODEL_NAME = "allenai/scibert_scivocab_uncased"
-MAX_LENGTH = 256
-SEED = 42
-CAP_PER_TERM_PERIOD = 250      # doc cap per (term, period) — CPU budget
-MAX_SENT_PER_DOC = 3           # mention sentences averaged per document
-CONTROL_TERMS = ["participants", "results", "significant", "measure"]
-CONTROL_CAP = 120              # docs per period for the control null
+import pipeline_config as pc
+from pipeline_config import slug, term_pattern
 
-IN_PATH = Path("data/family/lineage_docs.jsonl")
-OUT_DIR = Path("data/lineage_emb")
+CFG, _ARGV = pc.load()
 
+MODEL_NAME = CFG["embedding"]["model"]
+MAX_LENGTH = int(CFG["embedding"]["max_length"])
+SEED = int(CFG["embedding"]["seed"])
+CAP_PER_TERM_PERIOD = int(CFG["embedding"]["cap_per_term_period"])
+MAX_SENT_PER_DOC = int(CFG["embedding"]["max_sent_per_doc"])
+CONTROL_TERMS = CFG.controls
+CONTROL_CAP = int(CFG["embedding"]["control_cap"])
 
-def slug(t):
-    return re.sub(r"[^a-z0-9]+", "_", t.lower()).strip("_")
+IN_PATH = Path(CFG["docs_path"])
+OUT_DIR = Path(CFG["emb_dir"])
 
 
 def main():
     import torch
     from transformers import AutoModel, AutoTokenizer
 
-    only = set(sys.argv[1:])
+    only = set(_ARGV)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     print(f"Loading {MODEL_NAME} ...")
@@ -110,10 +113,8 @@ def main():
         out_path = OUT_DIR / f"{slug(term)}__{period}.npz"
         if out_path.exists():
             return 0
-        # hyphen/space are the same separator (see canon() in 16)
-        body = re.escape(term).replace(r"\ ", "[-\\s]+").replace(r"\-",
-                                                                "[-\\s]+")
-        pat = re.compile(r"\b" + body + r"\b", re.I)
+        # hyphen/space are the same separator (see canon() in pipeline_config)
+        pat = term_pattern(term)
         if len(docs) > cap:
             random.seed(SEED)
             docs = random.sample(docs, cap)
@@ -154,6 +155,17 @@ def main():
                 print(f"  [control] {c} | {p}: {n} docs")
 
     print(f"\nDone: {total} new document vectors -> {OUT_DIR}/")
+    pc.write_manifest(
+        CFG, __file__,
+        params={"model": MODEL_NAME, "max_length": MAX_LENGTH, "seed": SEED,
+                "cap_per_term_period": CAP_PER_TERM_PERIOD,
+                "control_cap": CONTROL_CAP, "max_sent_per_doc": MAX_SENT_PER_DOC,
+                "control_terms": CONTROL_TERMS, "subset": sorted(only),
+                "n_docs_in": n_docs, "n_new_vectors": total,
+                "n_shards_total": len(list(OUT_DIR.glob("*.npz")))},
+        outputs=[OUT_DIR],
+        notes="Shards are checkpointed: existing .npz files are skipped, so "
+              "n_new_vectors=0 means nothing was recomputed this run.")
     print("Next: python3 18_lineage_analysis.py")
 
 

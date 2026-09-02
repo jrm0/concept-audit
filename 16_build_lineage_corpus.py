@@ -18,7 +18,10 @@ Design notes:
 - 5-year periods from 1975.
 
 Usage (from code/):
-    python3 16_build_lineage_corpus.py
+    python3 16_build_lineage_corpus.py [--config configs/<concept>.yaml]
+
+All paths, the family file, period bounds and control terms come from the
+config (default configs/ego_depletion.yaml). See pipeline_config.py.
 """
 
 import csv
@@ -27,30 +30,31 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
-RIS_ROOT = Path("data/ebsco exports")
-FAMILY_DIR = Path("data/family")
-OUT_PATH = FAMILY_DIR / "lineage_docs.jsonl"
-FAMILY_CSV = Path("families/ego_depletion_family.csv")
+import pipeline_config as pc
+from pipeline_config import canon, term_pattern
 
-PERIOD_YEARS = 5
-YEAR_MIN, YEAR_MAX = 1975, 2025
+CFG, _ARGV = pc.load()
 
-CONTROL_TERMS = ["participants", "results", "significant", "measure"]
+RIS_ROOT = Path(CFG["ris_root"])
+OUT_PATH = Path(CFG["docs_path"])
+FAMILY_DIR = OUT_PATH.parent
+FAMILY_CSV = Path(CFG["family_csv"])
+FAMILY_WORKS_GLOB = CFG.get("family_works_glob")   # optional OpenAlex works
+
+PERIOD_YEARS = int(CFG["periods"]["width"])
+YEAR_MIN, YEAR_MAX = int(CFG["periods"]["year_min"]), int(CFG["periods"]["year_max"])
+
+CONTROL_TERMS = CFG.controls
 
 TAG_RE = re.compile(r"^([A-Z][A-Z0-9])  - (.*)$")
 SENT_RE = re.compile(r"(?<=[.!?])\s+(?=[A-Z(])")
 
-
-def canon(term):
-    """Canonical form: hyphens and spaces are the SAME separator.
-
-    'ego-depletion' and 'ego depletion' are one term, not two. Keeping them
-    apart split the focal term's documents across two rows AND collided in
-    17, whose filename slug maps both to 'ego_depletion' — so the second
-    variant's documents were silently skipped as an existing checkpoint.
-    This is the session-8 surface-form lesson at the level of term identity.
-    """
-    return re.sub(r"[\s\-]+", " ", (term or "").strip().lower())
+# canon(): hyphens and spaces are the SAME separator. 'ego-depletion' and
+# 'ego depletion' are one term, not two. Keeping them apart split the focal
+# term's documents across two rows AND collided in 17, whose filename slug
+# maps both to 'ego_depletion' — so the second variant's documents were
+# silently skipped as an existing checkpoint. (Session-8 surface-form lesson
+# at the level of term identity.) Now lives in pipeline_config.
 
 
 def load_family_terms():
@@ -65,11 +69,7 @@ def load_family_terms():
 
 def compile_patterns(term_names):
     """Match either separator, so one canonical term captures all variants."""
-    pats = {}
-    for t in term_names:
-        body = re.escape(t).replace(r"\ ", "[-\\s]+").replace(r"\-", "[-\\s]+")
-        pats[t] = re.compile(r"\b" + body + r"\b", re.I)
-    return pats
+    return {t: term_pattern(t) for t in term_names}
 
 
 def parse_ris(path):
@@ -104,10 +104,7 @@ def year_of(rec):
 
 
 def period_of(year):
-    if year is None or year < YEAR_MIN:
-        return None
-    y0 = YEAR_MIN + ((year - YEAR_MIN) // PERIOD_YEARS) * PERIOD_YEARS
-    return f"{y0}-{min(y0 + PERIOD_YEARS - 1, YEAR_MAX)}"
+    return pc.period_of(year, CFG)
 
 
 ERRATUM_RE = re.compile(
@@ -214,7 +211,8 @@ def main():
               f"(total {len(docs)})")
 
     # 2. OpenAlex-derived family works, if present (adds field metadata later)
-    for jf in sorted(FAMILY_DIR.glob("ego_depletion*works.jsonl")):
+    works_files = sorted(Path().glob(FAMILY_WORKS_GLOB)) if FAMILY_WORKS_GLOB else []
+    for jf in works_files:
         n_before = len(docs)
         for line in open(jf, encoding="utf-8"):
             try:
@@ -240,6 +238,7 @@ def main():
                 by_title[nt] = made
         print(f"{jf.name}: +{len(docs) - n_before} docs (total {len(docs)})")
 
+    OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(OUT_PATH, "w", encoding="utf-8") as f:
         for d in docs.values():
             f.write(json.dumps(d) + "\n")
@@ -272,13 +271,22 @@ def main():
         for db, c in dbc.most_common():
             print(f"  {db}: {c}")
 
-    with open(FAMILY_DIR / "lineage_power_table.csv", "w", newline="",
-              encoding="utf-8") as f:
+    power_path = FAMILY_DIR / "lineage_power_table.csv"
+    with open(power_path, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["term"] + periods)
         for t in sorted(tp):
             w.writerow([t] + [tp[t].get(p, 0) for p in periods])
-    print(f"\nPower table -> {FAMILY_DIR / 'lineage_power_table.csv'}")
+    print(f"\nPower table -> {power_path}")
+    pc.write_manifest(
+        CFG, __file__,
+        params={"ris_root": str(RIS_ROOT), "family_csv": str(FAMILY_CSV),
+                "family_works_glob": FAMILY_WORKS_GLOB,
+                "ris_files": [str(p) for p in ris_files],
+                "periods": dict(CFG["periods"]), "control_terms": CONTROL_TERMS,
+                "n_docs": len(docs), "accounting": dict(stats),
+                "db_provenance": dict(dbc)},
+        outputs=[OUT_PATH, power_path])
     print("Next: python3 17_embed_documents.py   (local, needs torch)")
 
 

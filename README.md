@@ -39,6 +39,43 @@ python3 04_visualize.py
 
 See `osc_coding/coding_protocol.md` and `osc_coding/llm_prompt.md` for the construct-coding procedure. Corpus construction rules live in `../Conceptual_Coherence_Corpus_Protocol_v1.md` (fill in its retrieval log after each pull).
 
+## Lineage pipeline (16–23b) — one config per concept
+
+Since 2026-09-02 the lineage scripts take **no per-concept literals**. Everything that identifies a concept — family file, control terms, period bounds, event dates, term pairs, figure lists, venue-category regexes, citation anchors — lives in one YAML under `configs/`, loaded by `pipeline_config.py`.
+
+```bash
+# default config is configs/ego_depletion.yaml, so these are unchanged:
+python3 16_build_lineage_corpus.py
+python3 17_embed_documents.py            # local, torch
+python3 18_lineage_analysis.py [--center]
+python3 21_cluster_validity.py
+python3 22_make_figures.py
+python3 23_citation_semantics.py --confirm-anchors
+python3 23b_reference_portfolio.py --confirm-anchors
+python3 22b_fig_propagation.py
+
+# a second concept = a second YAML, nothing else:
+python3 18_lineage_analysis.py --config configs/ptsd.yaml
+```
+
+Outputs go to `results/<slug>/` (one directory per concept). Every script writes `results/<slug>/manifest_<script>.json` (timestamp, git commit, config hash, parameters, library versions) and appends to `results/<slug>/run_log.jsonl`. **An output without a manifest is unversioned and should not be cited** — the stale `lineage_tree.json` of Aug 13 (produced under a clustering gate the code itself later retired) is why this exists.
+
+To add a concept: copy `configs/ego_depletion.yaml`, change `concept`, `slug`, `family_csv`, `docs_path`, `emb_dir`, `results_dir`, the events/pairs/anchors, and (if the concept's habitat differs) the venue-category regexes. The `control_terms` block should stay the same across concepts so drift nulls are comparable.
+
+Requires `pyyaml` and `diptest` (in `requirements.txt`).
+
+| Script | Reads (from config) | Writes (results/<slug>/) |
+|---|---|---|
+| `16_build_lineage_corpus.py` | `ris_root`, `family_csv`, `family_works_glob`, `periods`, `control_terms` | `docs_path`, `lineage_power_table.csv` (next to it) |
+| `17_embed_documents.py` | `docs_path`, `embedding.*` | `emb_dir/*.npz` |
+| `18_lineage_analysis.py` | `emb_dir`, `analysis.*`, `events`, `key_pairs` | `lineage_drift.csv`, `term_distances.csv`, `lineage_tree.json` (with dip p / Jaccard / verdict per period), `lineage_samples_*.txt`, `lineage_report.txt` |
+| `21_cluster_validity.py` | same as 18 | `cluster_validity.csv` |
+| `20_locate_paper.py` | `emb_dir`, `docs_path`, `embedding.*`; `--term` defaults to `concept` | stdout |
+| `22_make_figures.py` | `figures.*`, `venue_categories`, `event_short_labels` | `figures/fig1–4` |
+| `23_citation_semantics.py` | `citation.anchors`, `citation.year_min`, `correction_set`, `venue_categories` | `citation_semantics.csv` (flag columns `cites_<anchor_label>`), `_report.txt` |
+| `23b_reference_portfolio.py` | `citation.anchors + anchors_extra`, `crisis_set`, `milestone_control`, `coinage`, `hub_category` | `reference_portfolio_report.txt`, `hub_references_<cat>.csv` |
+| `22b_fig_propagation.py` | outputs of 23 + 23b | `figures/fig5` |
+
 ## Configuration
 
 Each script has a configuration section at the top. Key settings:

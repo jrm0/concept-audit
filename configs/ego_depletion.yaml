@@ -1,0 +1,134 @@
+# configs/ego_depletion.yaml — everything that used to be a literal in
+# 16/17/18/20/22/23/23b, in one place. One file per concept.
+#
+# Run any lineage script against it with:  python3 18_lineage_analysis.py --config configs/ego_depletion.yaml
+# (this file is the default, so --config may be omitted for ego depletion.)
+
+concept: ego depletion          # focal term, canonical form (hyphen/space-insensitive)
+slug: ego_depletion             # used for results/<slug>/ and manifest names
+
+# --- inputs -----------------------------------------------------------------
+family_csv: families/ego_depletion_family.csv
+ris_root: "data/ebsco exports"                     # searched recursively for *.ris
+family_works_glob: "data/family/ego_depletion*works.jsonl"   # OpenAlex-derived, optional
+docs_path: data/family/lineage_docs.jsonl          # written by 16, read by 17/18/20/22/23
+emb_dir: data/lineage_emb                          # written by 17, read by 18/20/21/22/23
+citations_cache: data/citations/openalex_refs.jsonl
+
+# --- outputs ----------------------------------------------------------------
+results_dir: results/ego_depletion                 # every script writes here + a manifest
+
+# --- corpus / periods -------------------------------------------------------
+periods:
+  year_min: 1975
+  year_max: 2025
+  width: 5
+
+# Generic method words embedded from the same abstracts — the drift null
+# (Dubossarsky) and the anisotropy-centering reference. Same for every concept.
+control_terms: [participants, results, significant, measure]
+
+# --- embedding (17, 20) -----------------------------------------------------
+embedding:
+  model: allenai/scibert_scivocab_uncased
+  max_length: 256
+  max_sent_per_doc: 3
+  cap_per_term_period: 250
+  control_cap: 120
+  seed: 42
+
+# --- lineage analysis (18, 21) ---------------------------------------------
+analysis:
+  min_n: 15              # min docs for a period centroid
+  cluster_min_n: 60      # min docs to attempt within-period clustering
+  max_k: 4
+  n_sample_titles: 10
+  seed: 42
+
+# Dated events printed against the curves and drawn as vertical rules.
+events:
+  1998: "coinage (Baumeister et al. 1998)"
+  2010: "supportive meta-analysis (Hagger et al.)"
+  2014: "critical re-analysis (Carter & McCullough)"
+  2016: "Registered Replication Report (Hagger et al.)"
+  2021: "second RRR (Vohs et al.)"
+event_short_labels:      # for figure rules (22)
+  1998: coinage
+  2010: meta-analysis
+  2014: re-analysis
+  2016: RRR
+  2021: "RRR 2"
+
+# Cross-term distance series to print in the 18 report and plot in fig 4B.
+key_pairs:
+  - [ego depletion, self control]
+  - [ego depletion, self regulation]
+  - [ego depletion, willpower]
+  - [self control, self regulation]
+  - [ego depletion, executive function]
+  - [ego depletion, delay of gratification]
+
+# --- figures (22) -----------------------------------------------------------
+figures:
+  trajectory_terms: [ego depletion, self control, self regulation, willpower,
+                     executive function, strength model, delay of gratification]
+  trajectory_min_docs: 60
+  drift_terms:           # term, colour  (fig 4A)
+    - [strength model, crimson]
+    - [ego depletion, navy]
+    - [self control, "0.45"]
+    - [self regulation, "0.6"]
+    - [willpower, "0.75"]
+  distance_pairs:        # fig 4B
+    - [ego depletion, self control, navy]
+    - [ego depletion, willpower, darkorange]
+    - [ego depletion, executive function, seagreen]
+    - [self control, self regulation, crimson]
+  migration_baseline_category: work/org
+  # Free-text subtitles. These were previously hard-typed result numbers in
+  # the script; they are annotations, NOT computed here (gap analysis item 7:
+  # the migration permutation test still needs to move into code).
+  annotations:
+    ridgeline: "One mode per period (dip test p = 0.71–0.99); triangles mark period means"
+    migration: "work/org share 12.0% (2015-19) → 24.8% (2020-24), permutation p = 0.0001; corpus baseline flat"
+    trajectory: "'ego depletion' (bold) starts beside its ancestors, moves away through 2015-19, then turns back"
+    propagation: "The concept travels; the correction doesn't — applied venues cite the coinage like the home field, the critiques at a fraction of its rate"
+
+# --- venue categories (22, 23, 23b) — journal-name regexes ------------------
+# Order matters: first match wins. Anything unmatched -> core_label.
+venue_categories:
+  - name: work/org
+    pattern: "organi[sz]ation|management|business|occupational|vocational|work|employ|leader|market|consumer|account|tourism|hospitality|industrial|labor|labour|applied psycholog|personnel|human resource|human performance|ergonomic"
+  - name: health/med
+    pattern: "health|medic|nurs|clinical|addict|obes|diet|patient|psychosomat|prevent"
+  - name: education
+    pattern: "educat|school|teach|learn|student|academic|curricul"
+  - name: sport
+    pattern: "sport|exercise|athlet|kinesio|physical activity"
+  - name: crime/social
+    pattern: "crimin|delinq|justice|offend|social work|deviant|violence"
+core_label: core/other psych
+
+# --- citation layer (23, 23b) ----------------------------------------------
+citation:
+  mailto: jrmorgan3@gmail.com     # OpenAlex polite pool
+  batch: 25
+  year_min: 2017                  # propagation window start (post-correction)
+  seed: 42
+  # Anchors are SEARCH QUERIES (title + year) or "doi:..." — resolved at
+  # runtime and printed for verification; never asserted citations.
+  anchors:
+    - [coinage_1998, "Ego depletion is the active self a limited resource", 1998]
+    - [rrr_2016, "multilab preregistered replication of the ego-depletion effect", 2016]
+    - [rrr_2021, "multisite preregistered paradigmatic test of the ego depletion effect", 2021]
+    - [carter_2014, "publication bias and the limited strength model of self-control", 2014]
+  anchors_extra:                  # 23b only
+    - [hagger_2010_meta, "ego depletion and the strength model of self-control a meta-analysis", 2010]
+    - [inzlicht_2012, "what is ego depletion toward a mechanistic revision of the resource model", 2012]
+    - [friese_2019, "doi:10.1177/1088868318762183", null]
+    - [dang_2018, "doi:10.1007/s00426-017-0862-x", null]
+  coinage: coinage_1998           # the founding paper's label (23b reports its citation rate)
+  correction_set: [rrr_2016, rrr_2021]                       # "either RRR"
+  crisis_set: [rrr_2016, rrr_2021, carter_2014, inzlicht_2012, friese_2019, dang_2018]
+  milestone_control: hagger_2010_meta
+  hub_category: work/org          # venue whose non-engaged papers' references are tabulated

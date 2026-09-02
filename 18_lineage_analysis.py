@@ -16,28 +16,30 @@ The four analyses, in the order the paper needs them:
             (self-control / self-regulation); afterwards it DIVERGES.
             Also: do the ancestors converge or diverge from each other?
 
- C. LINEAGES WITHIN TERMS   For high-volume terms, GMM clustering per period
-            (dBIC-gated, document units), then descent links across
-            consecutive periods by centroid similarity. A BRANCHING event =
-            two clusters in period p+1 whose best ancestor is the same
-            cluster in p and whose mutual separation exceeds the noise floor.
+ C. LINEAGES WITHIN TERMS   For high-volume terms, within-period clustering
+            (cluster_core: k-means proposal, dip test + bootstrap Jaccard
+            gate, document units), then descent links across consecutive
+            periods by centroid similarity. A BRANCHING event = two clusters
+            in period p+1 whose best ancestor is the same cluster in p and
+            whose mutual separation exceeds the noise floor. Only periods
+            whose clustering is SUPPORTED produce >1 node.
 
- D. EVENT ALIGNMENT   Known dated events are printed against the drift and
-            divergence curves: 1998 coinage (Baumeister et al.), 2010
-            meta-analysis (Hagger et al.), 2014 re-analysis (Carter &
-            McCullough), 2016 RRR (Hagger et al.), 2021 RRR (Vohs et al.).
+ D. EVENT ALIGNMENT   Dated events from the config are printed against the
+            drift and divergence curves.
 
-Outputs (results/):
+Outputs (results/<slug>/):
   lineage_drift.csv        term, period, n, drift_from_origin, control_drift,
                            excess_drift, noise_floor
   term_distances.csv       period, term_a, term_b, cosine_distance
-  lineage_tree.json        per-term: clusters per period + descent links +
+  lineage_tree.json        per-term: clusters per period (with dip p,
+                           mean Jaccard, verdict) + descent links +
                            candidate branching events
   lineage_samples_{term}.txt   titles per cluster per period (READ THESE)
   lineage_report.txt       the human-readable summary
+  manifest_18_lineage_analysis.json   run provenance
 
 Usage:
-    python3 18_lineage_analysis.py             # raw (uncentered) space
+    python3 18_lineage_analysis.py [--config configs/<concept>.yaml]
     python3 18_lineage_analysis.py --center    # per-period mean-centering
         Anisotropy robustness (Ethayarajh 2019): contextual embeddings bunch
         into a narrow cone, and the cone can shift/tighten as corpus
@@ -71,23 +73,23 @@ from scipy.spatial.distance import cosine
 from sklearn.decomposition import PCA
 from sklearn.mixture import GaussianMixture
 
-EMB_DIR = Path("data/lineage_emb")
-DOCS_PATH = Path("data/family/lineage_docs.jsonl")
-RESULTS = Path("results")
-N_SAMPLE_TITLES = 10       # titles per cluster in the qualitative files
-CENTER = "--center" in sys.argv
+import pipeline_config as pc
+
+CFG, _ARGV = pc.load()
+
+EMB_DIR = Path(CFG["emb_dir"])
+DOCS_PATH = Path(CFG["docs_path"])
+RESULTS = CFG.results                      # results/<slug>/
+N_SAMPLE_TITLES = int(CFG["analysis"]["n_sample_titles"])
+CENTER = "--center" in _ARGV
 SUF = "_centered" if CENTER else ""
-MIN_N = 15                 # min docs for a period centroid
-CLUSTER_MIN_N = 60         # min docs to attempt within-period clustering
-MAX_K = 4
-DBIC_MIN = 1.0             # dBIC/n gate for multi-cluster (session-9 lesson)
-SEED = 42
-CONTROL_TERMS = {"participants", "results", "significant", "measure"}
-EVENTS = {1998: "coinage (Baumeister et al. 1998)",
-          2010: "supportive meta-analysis (Hagger et al.)",
-          2014: "critical re-analysis (Carter & McCullough)",
-          2016: "Registered Replication Report (Hagger et al.)",
-          2021: "second RRR (Vohs et al.)"}
+MIN_N = int(CFG["analysis"]["min_n"])
+CLUSTER_MIN_N = int(CFG["analysis"]["cluster_min_n"])
+MAX_K = int(CFG["analysis"]["max_k"])
+SEED = int(CFG["analysis"]["seed"])
+CONTROL_TERMS = set(CFG.controls)
+EVENTS = pc.events(CFG)
+KEY_PAIRS = [tuple(p) for p in CFG.get("key_pairs", [])]
 
 
 def load_shards():
@@ -145,8 +147,8 @@ def cluster_period(V, n_null=10):
     unimodality plus bootstrap cluster stability.
     """
     import cluster_core
-    r = cluster_core.analyze(V, min_n=CLUSTER_MIN_N, max_k=MAX_K)
-    return r["labels"], r["k"], (r["dip_p"] if r["dip_p"] is not None else 1.0)
+    r = cluster_core.analyze(V, min_n=CLUSTER_MIN_N, max_k=MAX_K, seed=SEED)
+    return r["labels"], r["k"], r
 
 
 def _cluster_period_bic_DEPRECATED(V, n_null=10):
@@ -212,7 +214,6 @@ def _cluster_period_bic_DEPRECATED(V, n_null=10):
 
 
 def main():
-    RESULTS.mkdir(exist_ok=True)
     titles_by_doi = load_titles()
     data = load_shards()
     if not data:
@@ -226,6 +227,8 @@ def main():
         print(s)
         report.append(s)
 
+    say(f"Concept: {CFG['concept']}   config: {CFG['_config_path']} "
+        f"({CFG['_config_sha1']})")
     say(f"Terms: {family}")
     say(f"Controls: {controls}")
     say(f"Periods: {periods}")
@@ -306,12 +309,7 @@ def main():
     # --- B. BIRTH & DIVERGENCE (cross-term distances per period) ---
     say("\n\n=== B. CROSS-TERM DISTANCES (masked space) ===")
     dist_rows = []
-    key_pairs = [("ego depletion", "self control"),
-                 ("ego depletion", "self regulation"),
-                 ("ego depletion", "willpower"),
-                 ("self control", "self regulation"),
-                 ("ego depletion", "executive function"),
-                 ("ego depletion", "delay of gratification")]
+    key_pairs = KEY_PAIRS
     for p in periods:
         for a, b in combinations(sorted(cent), 2):
             if p in cent[a] and p in cent[b]:
@@ -327,10 +325,11 @@ def main():
         series = [(p, lookup.get((p, aa, bb))) for p in periods
                   if lookup.get((p, aa, bb)) is not None]
         if not series:
+            say(f"\nd({a}, {b}): no shared periods (term missing from shards?)")
             continue
         say(f"\nd({a}, {b}):")
         for p, d in series:
-            fl = [floor[t].get(p) for t in (a, b) if floor[t].get(p)]
+            fl = [floor[t].get(p) for t in (a, b) if t in floor and floor[t].get(p)]
             nf = max(fl) if fl else None
             sig = " *" if (nf and d > 2 * nf) else ""
             say(f"  {p}: {d:.4f}{sig}")
@@ -342,11 +341,18 @@ def main():
     else:
         say("\n\n=== C. LINEAGES & CANDIDATE BRANCHING EVENTS ===")
     tree = {}
+    n_supported = n_tested = 0
     for t in (family if not CENTER else []):
-        node_seq = []   # list of (period, [ {id, centroid, n, titles} ])
+        node_seq = []   # list of (period, [ {id, centroid, n, titles} ], stats)
         for p in sorted(data[t]):
             sh = data[t][p]
-            labels, k, dbic = cluster_period(sh["V"])
+            labels, k, cr = cluster_period(sh["V"])
+            stats = {"dip_p": cr.get("dip_p"), "mean_jaccard": cr.get("mean_jaccard"),
+                     "silhouette": cr.get("silhouette"), "verdict": cr.get("verdict"),
+                     "proposed_k": cr.get("proposed_k", k)}
+            if cr.get("verdict") != "n too small":
+                n_tested += 1
+                n_supported += int(cr.get("verdict") == "SUPPORTED")
             nodes = []
             def readable(keys):
                 return [titles_by_doi.get(str(kk), str(kk))[:110]
@@ -381,7 +387,7 @@ def main():
                                                     key=lambda x: -x[1])[:4],
                                   "median_year": int(np.median(yrs))})
             if nodes:
-                node_seq.append((p, nodes, dbic if labels is not None else 0.0))
+                node_seq.append((p, nodes, stats))
         # descent links
         links, branchings = [], []
         for i in range(1, len(node_seq)):
@@ -410,11 +416,17 @@ def main():
                              "children": [k_["id"] for k_ in kids],
                              "min_separation": round(min(seps), 4),
                              "noise_floor": round(nf, 4)})
+        def _r(x):
+            return None if x is None else round(float(x), 4)
         tree[t] = {
-            "periods": [{"period": p, "dbic": round(db, 3),
+            "periods": [{"period": p,
+                         "dip_p": _r(st["dip_p"]),
+                         "mean_jaccard": _r(st["mean_jaccard"]),
+                         "silhouette": _r(st["silhouette"]),
+                         "verdict": st["verdict"],
                          "clusters": [{"id": nd["id"], "n": nd["n"]}
                                       for nd in nodes]}
-                        for p, nodes, db in node_seq],
+                        for p, nodes, st in node_seq],
             "links": links, "branchings": branchings}
         if branchings:
             say(f"\n{t}: {len(branchings)} candidate branching event(s)")
@@ -424,8 +436,12 @@ def main():
         # qualitative sample file
         with open(RESULTS / f"lineage_samples_{t.replace(' ', '_')}.txt",
                   "w", encoding="utf-8") as f:
-            for p, nodes, db in node_seq:
-                f.write(f"===== {p} (dBIC/n={db:.2f}) =====\n")
+            for p, nodes, st in node_seq:
+                dp = st["dip_p"]
+                mj = st["mean_jaccard"]
+                f.write(f"===== {p} ({st['verdict']}; dip p="
+                        f"{'-' if dp is None else f'{dp:.3f}'}, mean Jaccard="
+                        f"{'-' if mj is None else f'{mj:.2f}'}) =====\n")
                 for nd in nodes:
                     f.write(f"  cluster {nd['id']} (n={nd['n']}"
                             + (f", median year {nd['median_year']}"
@@ -445,6 +461,10 @@ def main():
                 f.write("\n")
 
     if not CENTER:
+        say(f"\nWithin-period clustering: {n_supported}/{n_tested} "
+            f"(term x period) cells SUPPORTED by cluster_core "
+            f"(dip p<0.05 AND mean Jaccard>=0.75); all other periods are "
+            f"one node.")
         with open(RESULTS / "lineage_tree.json", "w") as f:
             json.dump({t: {k: v for k, v in d.items()}
                        for t, d in tree.items()}, f, indent=2, default=str)
@@ -459,6 +479,22 @@ def main():
 
     (RESULTS / f"lineage_report{SUF}.txt").write_text("\n".join(report),
                                                       encoding="utf-8")
+    outs = [RESULTS / f"lineage_drift{SUF}.csv",
+            RESULTS / f"term_distances{SUF}.csv",
+            RESULTS / f"lineage_report{SUF}.txt"]
+    if not CENTER:
+        outs += [RESULTS / "lineage_tree.json"] + \
+                [RESULTS / f"lineage_samples_{t.replace(' ', '_')}.txt"
+                 for t in family]
+    pc.write_manifest(
+        CFG, __file__,
+        params={"center": CENTER, "min_n": MIN_N, "cluster_min_n": CLUSTER_MIN_N,
+                "max_k": MAX_K, "seed": SEED, "control_terms": sorted(CONTROL_TERMS),
+                "terms": family, "periods": periods, "key_pairs": key_pairs,
+                "clustering": "cluster_core (dip + Hennig Jaccard)",
+                "cells_tested": n_tested, "cells_supported": n_supported,
+                "n_shards": sum(len(v) for v in data.values())},
+        outputs=outs)
     print(f"\nAll outputs -> {RESULTS}/ (report: lineage_report{SUF}.txt)")
 
 

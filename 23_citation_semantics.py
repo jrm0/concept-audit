@@ -30,12 +30,15 @@ checkpointed to data/citations/openalex_refs.jsonl — resumable, safe to
 re-run. Runs LOCALLY (needs internet).
 
 Usage (from code/):
-    python3 23_citation_semantics.py                  # resolve + show anchors
-    python3 23_citation_semantics.py --confirm-anchors  # full run
+    python3 23_citation_semantics.py [--config configs/<concept>.yaml]   # resolve + show anchors
+    python3 23_citation_semantics.py --confirm-anchors                    # full run
 Outputs:
-    data/citations/openalex_refs.jsonl   raw reference lists (cache)
-    results/citation_semantics.csv       per-document flags + semantics
-    results/citation_semantics_report.txt
+    <citations_cache>                          raw reference lists (cache)
+    results/<slug>/citation_semantics.csv      per-document flags + semantics
+    results/<slug>/citation_semantics_report.txt
+
+Focal term, anchors, venue categories, the propagation window and the
+OpenAlex mailto all come from the config's `citation:` block.
 """
 
 import csv
@@ -48,59 +51,34 @@ from pathlib import Path
 
 import numpy as np
 
+import pipeline_config as pc
+from pipeline_config import slug
+
+CFG, _ARGV = pc.load()
+CIT = CFG.get("citation", {}) or {}
+
 API = "https://api.openalex.org/works"
-MAILTO = "jrmorgan3@gmail.com"
-DOCS = Path("data/family/lineage_docs.jsonl")
-EMB = Path("data/lineage_emb")
-CACHE = Path("data/citations/openalex_refs.jsonl")
-RESULTS = Path("results")
-FOCAL = "ego depletion"
-CONTROLS = {"participants", "results", "significant", "measure"}
-BATCH = 25            # DOIs per OpenAlex filter call (max 50; be polite)
-SEED = 42
+MAILTO = CIT.get("mailto", "")
+DOCS = Path(CFG["docs_path"])
+EMB = Path(CFG["emb_dir"])
+CACHE = Path(CFG.get("citations_cache", "data/citations/openalex_refs.jsonl"))
+RESULTS = CFG.results
+FOCAL = pc.canon(CFG["concept"])
+CONTROLS = set(CFG.controls)
+BATCH = int(CIT.get("batch", 25))     # DOIs per OpenAlex filter call (max 50)
+SEED = int(CIT.get("seed", 42))
+YEAR_MIN = int(CIT.get("year_min", 0))   # propagation window start
+CORRECTION = set(CIT.get("correction_set", []))   # "either RRR" flags
 
 # Anchors are (label, title-search string, publication year). Resolution is
-# printed for human verification — titles below are used as SEARCH QUERIES,
-# not asserted citations.
-ANCHORS = [
-    ("coinage_1998", "Ego depletion is the active self a limited resource",
-     1998),
-    ("rrr_2016", "multilab preregistered replication of the ego-depletion "
-     "effect", 2016),
-    ("rrr_2021", "multisite preregistered paradigmatic test of the ego "
-     "depletion effect", 2021),
-    ("carter_2014", "publication bias and the limited strength model of "
-     "self-control", 2014),
-]
+# printed for human verification — titles are used as SEARCH QUERIES, not
+# asserted citations.
+ANCHORS = [tuple(a) for a in CIT.get("anchors", [])]
+if not ANCHORS:
+    raise SystemExit("config has no citation.anchors — nothing to measure")
 
-CATS = [
-    # NOTE: includes applied-psych journal names (JAP etc.), which the first
-    # version missed. Sensitivity check on the migration result:
-    # original 12.0%->24.8% (+12.7pp, p=0.0001); this version
-    # 15.5%->29.6% (+14.1pp, p=0.0004); corpus baseline flat under both.
-    ("work/org", r"organi[sz]ation|management|business|occupational"
-     r"|vocational|work|employ|leader|market|consumer|account|tourism"
-     r"|hospitality|industrial|labor|labour|applied psycholog|personnel"
-     r"|human resource|human performance|ergonomic"),
-    ("health/med", r"health|medic|nurs|clinical|addict|obes|diet|patient"
-     r"|psychosomat|prevent"),
-    ("education", r"educat|school|teach|learn|student|academic|curricul"),
-    ("sport", r"sport|exercise|athlet|kinesio|physical activity"),
-    ("crime/social", r"crimin|delinq|justice|offend|social work|deviant"
-     r"|violence"),
-]
-
-
-def venue_cat(j):
-    j = (j or "").lower()
-    for name, pat in CATS:
-        if re.search(pat, j):
-            return name
-    return "core/other psych"
-
-
-def slug(t):
-    return re.sub(r"[^a-z0-9]+", "_", t.lower()).strip("_")
+venue_cat = pc.venue_categorizer(CFG)
+CORE = venue_cat.core
 
 
 def get(url, params, retries=6):
@@ -126,7 +104,9 @@ def resolve_anchors():
     print("Resolving anchor papers on OpenAlex (VERIFY these lines):")
     out = {}
     for label, q, year in ANCHORS:
-        js = get(API, {"filter": f"title.search:{q},publication_year:{year}",
+        flt = (q if str(q).startswith("doi:")
+               else f"title.search:{q},publication_year:{year}")
+        js = get(API, {"filter": flt,
                        "per-page": 3,
                        "select": "id,doi,title,publication_year,"
                                  "authorships,cited_by_count"})
@@ -237,19 +217,21 @@ def perm_test(a, b, n=20000, seed=SEED):
 
 
 def main():
-    confirm = "--confirm-anchors" in sys.argv
+    confirm = "--confirm-anchors" in _ARGV
     anchors = resolve_anchors()
     if not confirm:
-        print("\nIf the four lines above are the right papers, re-run with "
-              "--confirm-anchors to do the full fetch + analysis.")
+        print(f"\nIf the {len(ANCHORS)} lines above are the right papers, "
+              "re-run with --confirm-anchors to do the full fetch + analysis.")
         return
     if len(anchors) < len(ANCHORS):
         raise SystemExit("Not all anchors resolved — fix before running.")
+    labels = [a[0] for a in ANCHORS]
+    corr_idx = [6 + labels.index(l) for l in CORRECTION if l in labels]
 
     docs = load_focal_docs()
-    post = [d for d in docs if d["year"] >= 2017]
-    print(f"\n{len(docs)} ego-depletion docs with DOI; "
-          f"{len(post)} from 2017+ (the propagation window)")
+    post = [d for d in docs if d["year"] >= YEAR_MIN]
+    print(f"\n{len(docs)} '{FOCAL}' docs with DOI; "
+          f"{len(post)} from {YEAR_MIN}+ (the propagation window)")
     refs = fetch_references(sorted({d["doi"] for d in post}))
     pos = drift_axis_positions()
 
@@ -272,32 +254,30 @@ def main():
             stats[key][lab] += int(v)
         pp = pos.get(d["doi"], (None, None))
         rows.append([d["doi"], d["year"], d["period"], cat, d["journal"][:60],
-                     len(r), *[int(flags[l]) for l, _a, _y in
-                               [(x[0], 0, 0) for x in ANCHORS]],
+                     len(r), *[int(flags[l]) for l in labels],
                      pp[1] if pp[1] is not None else ""])
 
-    say("=== CORRECTION PROPAGATION (2017+ ego-depletion papers) ===")
-    say(f"{'venue':<18}{'period':<11}{'n':>4}{'cites 1998':>12}"
-        f"{'cites RRR16':>13}{'cites RRR21':>13}{'either RRR':>12}")
+    say(f"=== CORRECTION PROPAGATION ({YEAR_MIN}+ '{FOCAL}' papers) ===")
+    say(f"{'venue':<18}{'period':<11}{'n':>4}"
+        + "".join(f"{l[:12]:>14}" for l in labels))
     for (cat, p), c in sorted(stats.items()):
         n = c["n"]
-        either = "-"        # per-doc 'either' needs the row level:
-        say(f"{cat:<18}{p:<11}{n:>4}{c['coinage_1998']:>9} "
-            f"({100*c['coinage_1998']//max(n,1):>2}%)"
-            f"{c['rrr_2016']:>9} ({100*c['rrr_2016']//max(n,1):>2}%)"
-            f"{c['rrr_2021']:>9} ({100*c['rrr_2021']//max(n,1):>2}%)")
+        say(f"{cat:<18}{p:<11}{n:>4}"
+            + "".join(f"{c[l]:>8} ({100*c[l]//max(n,1):>2}%)" for l in labels))
 
-    # aggregate: applied vs core, either RRR
+    # aggregate: applied vs core, any correction-set anchor
     def either_rrr(row):
-        # columns: ... flags start at index 6 in ANCHORS order
-        return row[7] or row[8]
-    applied = [r for r in rows if r[3] != "core/other psych"]
-    core = [r for r in rows if r[3] == "core/other psych"]
+        # flags start at column 6, in ANCHORS order
+        return any(row[i] for i in corr_idx)
+    applied = [r for r in rows if r[3] != CORE]
+    core = [r for r in rows if r[3] == CORE]
     say("")
-    for name, grp in [("core/other psych", core), ("applied venues", applied)]:
+    say(f"correction set = {sorted(CORRECTION)}")
+    for name, grp in [(CORE, core), ("applied venues", applied)]:
         if grp:
             k = sum(either_rrr(r) for r in grp)
-            say(f"{name}: {k}/{len(grp)} ({100*k/len(grp):.0f}%) cite an RRR")
+            say(f"{name}: {k}/{len(grp)} ({100*k/len(grp):.0f}%) cite a "
+                f"correction-set paper")
 
     # semantic annotation: RRR-citers vs non-citers on the drift axis,
     # within-period to control for time
@@ -319,16 +299,25 @@ def main():
         "drift axis (more 'recent-style' usage); near-zero = acknowledging "
         "the correction does not distinguish how the term is used.")
 
-    RESULTS.mkdir(exist_ok=True)
     with open(RESULTS / "citation_semantics.csv", "w", newline="",
               encoding="utf-8") as f:
         w = csv.writer(f)
+        # NOTE: flag columns are now named cites_<anchor_label> (previously
+        # cites_1998 / cites_rrr2016 / cites_rrr2021 / cites_carter2014).
         w.writerow(["doi", "year", "period", "venue_cat", "journal", "n_refs",
-                    "cites_1998", "cites_rrr2016", "cites_rrr2021",
-                    "cites_carter2014", "drift_axis_pos"])
+                    *[f"cites_{l}" for l in labels], "drift_axis_pos"])
         w.writerows(rows)
     (RESULTS / "citation_semantics_report.txt").write_text(
         "\n".join(report), encoding="utf-8")
+    pc.write_manifest(
+        CFG, __file__,
+        params={"year_min": YEAR_MIN, "anchors": ANCHORS,
+                "resolved_anchor_ids": anchors, "correction_set": sorted(CORRECTION),
+                "venue_categories": venue_cat.names, "batch": BATCH,
+                "seed": SEED, "n_docs_with_doi": len(docs),
+                "n_in_window": len(post), "n_rows": len(rows)},
+        outputs=[RESULTS / "citation_semantics.csv",
+                 RESULTS / "citation_semantics_report.txt", CACHE])
     print(f"\n-> {RESULTS / 'citation_semantics.csv'} and _report.txt")
 
 

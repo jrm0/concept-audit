@@ -14,3 +14,7 @@ osc_coding/data/
 results/cluster_samples_*.txt
 results/lineage_samples_*.txt
 results/*.npz
+# per-concept results dirs (results/<slug>/) — same rules
+results/**/cluster_samples_*.txt
+results/**/lineage_samples_*.txt
+results/**/*.npz
