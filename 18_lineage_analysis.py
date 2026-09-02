@@ -37,11 +37,31 @@ Outputs (results/):
   lineage_report.txt       the human-readable summary
 
 Usage:
-    python3 18_lineage_analysis.py
+    python3 18_lineage_analysis.py             # raw (uncentered) space
+    python3 18_lineage_analysis.py --center    # per-period mean-centering
+        Anisotropy robustness (Ethayarajh 2019): contextual embeddings bunch
+        into a narrow cone, and the cone can shift/tighten as corpus
+        composition changes over time. Centering subtracts each period's
+        reference centroid before A and B, removing the shared component.
+
+        The reference is the CONTROL terms only ("participants", "results",
+        "significant", "measure") — the same four terms with a similar
+        document count in every period. A family-pool reference would be
+        composition-dependent: 1975-79 contains only self-control /
+        self-regulation, 2015-19 contains eleven terms, so the reference
+        itself would move for reasons that have nothing to do with the cone,
+        contaminating exactly the cross-period drift we want to measure.
+        Periods with no control shard are dropped rather than centered
+        against a different reference.
+        If the curves keep their shape after centering, they're clean.
+        C is skipped under --center: PCA is translation-invariant, so the
+        clustering is identical to the uncentered run by construction.
+        Outputs get a _centered suffix.
 """
 
 import json
 import re
+import sys
 from collections import defaultdict
 from itertools import combinations
 from pathlib import Path
@@ -55,6 +75,8 @@ EMB_DIR = Path("data/lineage_emb")
 DOCS_PATH = Path("data/family/lineage_docs.jsonl")
 RESULTS = Path("results")
 N_SAMPLE_TITLES = 10       # titles per cluster in the qualitative files
+CENTER = "--center" in sys.argv
+SUF = "_centered" if CENTER else ""
 MIN_N = 15                 # min docs for a period centroid
 CLUSTER_MIN_N = 60         # min docs to attempt within-period clustering
 MAX_K = 4
@@ -78,7 +100,8 @@ def load_shards():
         z = np.load(f, allow_pickle=True)
         data[term][m.group(2)] = {
             "V": z["vectors"], "keys": z["keys"],
-            "years": z["years"], "journals": z["journals"]}
+            "years": z["years"], "journals": z["journals"],
+            "dbs": z["dbs"] if "dbs" in z.files else None}
     return data
 
 
@@ -110,6 +133,23 @@ def split_half_floor(V, reps=40):
 
 
 def cluster_period(V, n_null=10):
+    """Propose a partition and TEST it (see cluster_core).
+
+    SUPERSEDED IMPLEMENTATION BELOW (kept for the record, unused): a
+    full-covariance GMM gated on BIC gain over a single-Gaussian parametric
+    bootstrap. Synthetic checks showed it failed in both directions — it
+    missed genuinely separated clusters (BIC charges ~0.46/document per extra
+    component in 5 dims, so real moderate separation is penalised away) and
+    it accepted single skewed/heavy-tailed clouds (any non-Gaussianity beats
+    a Gaussian null). Clustering decisions now come from a dip test of
+    unimodality plus bootstrap cluster stability.
+    """
+    import cluster_core
+    r = cluster_core.analyze(V, min_n=CLUSTER_MIN_N, max_k=MAX_K)
+    return r["labels"], r["k"], (r["dip_p"] if r["dip_p"] is not None else 1.0)
+
+
+def _cluster_period_bic_DEPRECATED(V, n_null=10):
     """GMM on document vectors, gated by a PARAMETRIC BOOTSTRAP null.
 
     A fixed dBIC threshold does not transfer across dimensionality/spread
@@ -188,16 +228,35 @@ def main():
 
     say(f"Terms: {family}")
     say(f"Controls: {controls}")
-    say(f"Periods: {periods}\n")
+    say(f"Periods: {periods}")
+    say(f"MODE: {'PER-PERIOD MEAN-CENTERED (anisotropy robustness)' if CENTER else 'raw (uncentered)'}\n")
+
+    # Per-period reference centroid from CONTROL TERMS ONLY (see docstring:
+    # a family-pool reference would move with term composition)
+    grand = {}
+    if CENTER:
+        sums, counts = {}, defaultdict(int)
+        for t in controls:
+            for p, sh in data[t].items():
+                sums[p] = sums.get(p, 0) + sh["V"].astype(np.float64).sum(0)
+                counts[p] += len(sh["V"])
+        grand = {p: sums[p] / counts[p] for p in counts}
+        missing = [p for p in periods if p not in grand]
+        say(f"Control-reference centroid available for {len(grand)} periods "
+            f"(from {len(controls)} control terms)"
+            + (f"; DROPPED (no control shard): {missing}" if missing else ""))
 
     # Centroids + noise floors
     cent, floor, ns = defaultdict(dict), defaultdict(dict), defaultdict(dict)
     for t in data:
         for p, sh in data[t].items():
+            if CENTER and p not in grand:
+                continue          # no composition-stable reference: skip
             if len(sh["V"]) >= MIN_N:
-                cent[t][p] = sh["V"].mean(0)
-                floor[t][p] = split_half_floor(sh["V"])
-                ns[t][p] = len(sh["V"])
+                V = sh["V"] - grand[p] if CENTER else sh["V"]
+                cent[t][p] = V.mean(0)
+                floor[t][p] = split_half_floor(V)
+                ns[t][p] = len(V)
 
     # --- A. DRIFT with control null ---
     ctrl_drift = {}
@@ -211,6 +270,12 @@ def main():
 
     drift_rows = []
     say("=== A. DRIFT FROM ORIGIN (excess over control terms) ===")
+    if CENTER:
+        say("CAUTION: under --center the control terms DEFINE the reference, "
+            "so their residual drift is deflated by construction and 'excess' "
+            "is optimistic here. Read centered results for B (cross-term "
+            "distances, common reference, unaffected); read A primarily in "
+            "the raw run, using centering only as a shape check.")
     for t in family:
         ps = sorted(cent[t])
         if len(ps) < 2:
@@ -232,7 +297,7 @@ def main():
                                round(cd, 4) if cd is not None else "",
                                round(excess, 4) if excess is not None else "",
                                round(nf, 4) if nf is not None else ""])
-    with open(RESULTS / "lineage_drift.csv", "w", encoding="utf-8") as f:
+    with open(RESULTS / f"lineage_drift{SUF}.csv", "w", encoding="utf-8") as f:
         f.write("term,period,n,drift_from_origin,control_drift,"
                 "excess_drift,noise_floor\n")
         for r in drift_rows:
@@ -252,7 +317,7 @@ def main():
             if p in cent[a] and p in cent[b]:
                 dist_rows.append([p, a, b,
                                   round(float(cosine(cent[a][p], cent[b][p])), 4)])
-    with open(RESULTS / "term_distances.csv", "w", encoding="utf-8") as f:
+    with open(RESULTS / f"term_distances{SUF}.csv", "w", encoding="utf-8") as f:
         f.write("period,term_a,term_b,cosine_distance\n")
         for r in dist_rows:
             f.write(",".join(str(x) for x in r) + "\n")
@@ -271,9 +336,13 @@ def main():
             say(f"  {p}: {d:.4f}{sig}")
 
     # --- C. WITHIN-TERM LINEAGES + branching detection ---
-    say("\n\n=== C. LINEAGES & CANDIDATE BRANCHING EVENTS ===")
+    if CENTER:
+        say("\n\n=== C. SKIPPED under --center: PCA is translation-invariant, "
+            "so clustering is identical to the uncentered run. ===")
+    else:
+        say("\n\n=== C. LINEAGES & CANDIDATE BRANCHING EVENTS ===")
     tree = {}
-    for t in family:
+    for t in (family if not CENTER else []):
         node_seq = []   # list of (period, [ {id, centroid, n, titles} ])
         for p in sorted(data[t]):
             sh = data[t][p]
@@ -297,11 +366,19 @@ def main():
                         if str(j).strip():
                             jc[str(j).strip()] += 1
                     top_j = sorted(jc.items(), key=lambda x: -x[1])[:4]
+                    dbc = defaultdict(int)
+                    if sh["dbs"] is not None:
+                        for ds in sh["dbs"][idx]:
+                            for db in str(ds).split("|"):
+                                if db:
+                                    dbc[db] += 1
                     yrs = sh["years"][idx]
                     nodes.append({"id": f"{p}:{c}", "n": int(len(idx)),
                                   "centroid": sh["V"][idx].mean(0),
                                   "titles": readable(sh["keys"][idx]),
                                   "top_journals": top_j,
+                                  "top_dbs": sorted(dbc.items(),
+                                                    key=lambda x: -x[1])[:4],
                                   "median_year": int(np.median(yrs))})
             if nodes:
                 node_seq.append((p, nodes, dbic if labels is not None else 0.0))
@@ -358,13 +435,19 @@ def main():
                                 + "; ".join(f"{j} ({c})"
                                             for j, c in nd["top_journals"])
                                 + "\n")
+                    if nd.get("top_dbs"):
+                        f.write("    databases: "
+                                + "; ".join(f"{j} ({c})"
+                                            for j, c in nd["top_dbs"])
+                                + "\n")
                     for ti in nd["titles"]:
                         f.write(f"    - {str(ti)[:110]}\n")
                 f.write("\n")
 
-    with open(RESULTS / "lineage_tree.json", "w") as f:
-        json.dump({t: {k: v for k, v in d.items()}
-                   for t, d in tree.items()}, f, indent=2, default=str)
+    if not CENTER:
+        with open(RESULTS / "lineage_tree.json", "w") as f:
+            json.dump({t: {k: v for k, v in d.items()}
+                       for t, d in tree.items()}, f, indent=2, default=str)
 
     # --- D. EVENTS ---
     say("\n\n=== D. DATED EVENTS (read curves against these) ===")
@@ -374,9 +457,9 @@ def main():
         "clusters must make sense as usage communities (every prior artifact "
         "was caught by reading, not by metrics).")
 
-    (RESULTS / "lineage_report.txt").write_text("\n".join(report),
-                                                encoding="utf-8")
-    print(f"\nAll outputs -> {RESULTS}/ (report: lineage_report.txt)")
+    (RESULTS / f"lineage_report{SUF}.txt").write_text("\n".join(report),
+                                                      encoding="utf-8")
+    print(f"\nAll outputs -> {RESULTS}/ (report: lineage_report{SUF}.txt)")
 
 
 if __name__ == "__main__":

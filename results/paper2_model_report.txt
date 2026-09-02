@@ -1,0 +1,24 @@
+sentence-count bias check: Spearman(n_sentences, pos_post_pct) = -0.562 (p=0.000) — ADD n_sentences AS COVARIATE
+usable (DV + pos_post_pct): 66; clean subsample: 45
+
+=== 1. LOGISTIC MODEL (LR test of pos_post_pct over power_r + surprising_o + discipline + n_sentences) ===
+  (n_sentences is in BOTH models: the sentence-count diagnostic fired, so the LR isolates pos_post_pct beyond it)
+  all usable (n=63, 23 replicated): std beta(pos_post_pct) = -0.364, LR = 1.02, p = 0.3114
+  CLEAN subsample (n=44, 15 replicated): std beta(pos_post_pct) = -0.507, LR = 1.62, p = 0.2037
+
+=== 2. CONTINUOUS DV (Spearman, permutation p) ===
+  all usable, es_decline (es_o - es_r): rho = -0.064, p = 0.6232 (n=62)
+  all usable, es_r: rho = +0.121, p = 0.3505 (n=62)
+  CLEAN subsample, es_decline (es_o - es_r): rho = -0.076, p = 0.6282 (n=43)
+  CLEAN subsample, es_r: rho = +0.120, p = 0.4380 (n=43)
+
+=== 4. SPLIT-HALF RELIABILITY of pos_post_pct ===
+  n=59 studies with >=2 sentences: split-half rho = 0.572 (p=0.0000); Spearman-Brown full-length reliability = 0.728
+  READ: low reliability means the null is UNINFORMATIVE about the hypothesis — the upgrade is full-text usage, not a different model.
+
+=== SECONDARY (declared): set-level mismatch = MAX pos_post_pct over the construct set ===
+  studies with set positions: 90 (63 with >=2 constructs)
+  set_max_pos_post_pct vs replicated: rho = -0.024, p = 0.8504 (n=66)
+  logistic LR (covariate-adjusted): std beta = -0.100, LR = 0.10, p = 0.7553 (n=63)
+
+DECISION RULE (stated in advance): covariate-adjusted clean estimate ~0 AND reliability adequate -> the null is a finding. Reliability low -> 'abstracts insufficient', full text is the upgrade path.

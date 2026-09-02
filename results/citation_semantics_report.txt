@@ -1,0 +1,29 @@
+=== CORRECTION PROPAGATION (2017+ ego-depletion papers) ===
+venue             period        n  cites 1998  cites RRR16  cites RRR21  either RRR
+core/other psych  2015-2019    91       68 (74%)       58 (63%)        0 ( 0%)
+core/other psych  2020-2024   118       79 (66%)       44 (37%)       10 ( 8%)
+core/other psych  2025-2025    43       28 (65%)       14 (32%)        4 ( 9%)
+crime/social      2015-2019     1        1 (100%)        1 (100%)        0 ( 0%)
+crime/social      2025-2025     1        1 (100%)        1 (100%)        1 (100%)
+education         2015-2019     2        2 (100%)        1 (50%)        0 ( 0%)
+education         2020-2024     6        2 (33%)        1 (16%)        0 ( 0%)
+education         2025-2025     3        2 (66%)        1 (33%)        0 ( 0%)
+health/med        2015-2019     4        2 (50%)        1 (25%)        0 ( 0%)
+health/med        2020-2024     3        0 ( 0%)        0 ( 0%)        0 ( 0%)
+health/med        2025-2025     6        3 (50%)        0 ( 0%)        1 (16%)
+sport             2015-2019     4        4 (100%)        3 (75%)        0 ( 0%)
+sport             2020-2024     7        4 (57%)        5 (71%)        2 (28%)
+sport             2025-2025     1        0 ( 0%)        1 (100%)        0 ( 0%)
+work/org          2015-2019    20       13 (65%)        3 (15%)        0 ( 0%)
+work/org          2020-2024    58       35 (60%)        4 ( 6%)        1 ( 1%)
+work/org          2025-2025    27       13 (48%)        0 ( 0%)        1 ( 3%)
+
+core/other psych: 117/252 (46%) cite an RRR
+applied venues: 25/143 (17%) cite an RRR
+
+=== SEMANTIC POSITION: RRR-citers vs non-citers (drift axis) ===
+  2015-2019: citers n=65 non n=52  mean diff (citer - non) = -0.878  perm p = 0.0000
+  2020-2024: citers n=56 non n=136  mean diff (citer - non) = -1.002  perm p = 0.0000
+  2025-2025: citers n=19 non n=62  mean diff (citer - non) = -0.583  perm p = 0.0031
+
+Reading: a positive diff = RRR-citers sit FURTHER along the drift axis (more 'recent-style' usage); near-zero = acknowledging the correction does not distinguish how the term is used.

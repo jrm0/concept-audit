@@ -1,0 +1,46 @@
+=== 1. PROPAGATION, broader anchor set (2017+ papers) ===
+venue                   n   1998  2010meta  anyRRR  crisisANY
+core/other psych      252    69%       59%     46%        59%
+crime/social            2   100%      100%    100%       100%
+education              11    55%       55%     27%        45%
+health/med             13    38%       46%     15%        23%
+sport                  12    67%       75%     75%        75%
+work/org              105    58%       30%      9%        26%
+
+READ: '2010meta' is the supportive-milestone control. If a venue cites the 2010 meta but not the critiques, the gap is correction-specific.
+
+=== 2. HUB REFERENCES in work/org ego-depletion papers ===
+work/org papers with refs: 105 (crisis-engaged 27, non-engaged 78)
+
+Top references of the NON-ENGAGED work/org papers (the import channel):
+   40x  Ego depletion: Is the active self a limited resource? (1998)
+   18x  Self-regulation and depletion of limited resources: Does self-control  (2000)
+   18x  Ego depletion and the strength model of self-control: A meta-analysis. (2010)
+   16x  The Strength Model of Self-Control (2007)
+   15x  The good and bad of being fair: Effects of procedural and interpersona (2014)
+   15x  Examining the Effects of Sleep Deprivation on Workplace Deviance: A Se (2011)
+   15x  Common method biases in behavioral research: A critical review of the  (2003)
+   14x  Conservation of resources: A new attempt at conceptualizing stress. (1989)
+   13x  Out of control: A self-control perspective on the link between surface (2015)
+   12x  High Self‐Control Predicts Good Adjustment, Less Pathology, Better Gra (2004)
+   11x  Too drained to help: A resource depletion perspective on daily interpe (2014)
+   11x  A suggestion to improve a day keeps your depletion away: Examining pro (2015)
+   10x  When ethical leader behavior breaks bad: How ethical leader behavior c (2016)
+   10x  Unable to resist temptation: How self-control depletion promotes uneth (2011)
+   10x  Sources of Method Bias in Social Science Research and Recommendations  (2011)
+    9x  Beginning the workday yet already depleted? Consequences of late-night (2014)
+    9x  “You Wouldn’t Like Me When I’m Sleepy”: Leaders’ Sleep, Daily Abusive  (2014)
+    9x  Self‐Regulation, Ego Depletion, and Motivation (2007)
+    9x  Conservation of Resources in the Organizational Context: The Reality o (2017)
+    9x  Restoring the self: Positive affect helps improve self-regulation foll (2007)
+    9x  You Abuse and I Criticize: An Ego Depletion and Leader–Member Exchange (2018)
+    8x  Introduction to Mediation, Moderation, and Conditional Process Analysi (2013)
+    8x  Intellectual performance and ego depletion: Role of the self in logica (2003)
+    7x  Self-control as a limited resource: Regulatory depletion patterns. (1998)
+    7x  Ego depletion and its paradoxical effects on ethical decision making (2014)
+
+=== 3. DRIFT-AXIS: crisis-engaged vs non, WITHIN venue ===
+  core/other psych: engaged n=146 non n=102  diff=-0.870  perm p=0.0000
+  work/org: engaged n=27 non n=77  diff=+0.023  perm p=0.8637
+
+(A difference that survives WITHIN venues is a real usage difference; one that vanishes was the migration confound.)

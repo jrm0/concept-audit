@@ -110,12 +110,14 @@ def main():
         out_path = OUT_DIR / f"{slug(term)}__{period}.npz"
         if out_path.exists():
             return 0
-        pat = re.compile(r"\b" + re.escape(term).replace(r"\ ", r"\s+") + r"\b",
-                         re.I)
+        # hyphen/space are the same separator (see canon() in 16)
+        body = re.escape(term).replace(r"\ ", "[-\\s]+").replace(r"\-",
+                                                                "[-\\s]+")
+        pat = re.compile(r"\b" + body + r"\b", re.I)
         if len(docs) > cap:
             random.seed(SEED)
             docs = random.sample(docs, cap)
-        vecs, keys, years, journals = [], [], [], []
+        vecs, keys, years, journals, dbs = [], [], [], [], []
         for d in docs:
             sents = d["mention_sentences"].get(term, [])[:MAX_SENT_PER_DOC]
             sv = [v for v in (masked_vector(s, pat) for s in sents)
@@ -126,11 +128,13 @@ def main():
             keys.append(d["doi"] or d["title"][:60])
             years.append(d["year"])
             journals.append(d["journal"])
+            dbs.append("|".join(d.get("dbs", [])))
         if vecs:
             np.savez_compressed(out_path, vectors=np.array(vecs),
                                 keys=np.array(keys, dtype=object),
                                 years=np.array(years),
-                                journals=np.array(journals, dtype=object))
+                                journals=np.array(journals, dtype=object),
+                                dbs=np.array(dbs, dtype=object))
         return len(vecs)
 
     total = 0
