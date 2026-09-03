@@ -1,0 +1,279 @@
+# configs/ptsd_trauma.yaml — Paper 1 comparator: a FAMILY with two focal members
+# predicted to move differently.
+#
+#   PTSD / posttraumatic stress disorder  -> predicted CONVERGENT (DSM-III 1980
+#       institutionalization; Young 1995 "made real"). Test: breadth flat or
+#       shrinking after 1980; unimodal periods; low excess drift.
+#   trauma                                -> predicted DIVERGENT by horizontal
+#       creep + niche migration (Haslam & McGrath 2020: somatic->psychic,
+#       extraordinary->ordinary, direct->indirect, individual->collective;
+#       Baes et al. 2023: rising breadth, falling severity in 871k psych
+#       abstracts). Test: breadth up, intensity down, habitat shares shifting
+#       toward nursing / education / social work; possible supported clades
+#       (physical-injury vs psychological; individual vs collective).
+#   backflow question (Jonathan 2026-09-02): after trauma's migration, does
+#       core-psych usage move toward the applied/ordinary sense? Build the
+#       applied-vs-core usage axis in the migration period, project earlier and
+#       later core-psych documents onto it.
+#
+# STATUS: PLANNED. No exports exist. `corpus.sources` is the retrieval plan;
+# fill n_records + files after each export. Every citation-like item below is
+# a LEAD to verify before it appears in text (see project rule).
+#
+# PRE-REGISTER the predicted cells above BEFORE running 18.
+
+concept: posttraumatic stress disorder
+slug: ptsd_trauma
+
+family_csv: families/ptsd_trauma_family.csv
+ris_root: "data/ebsco exports/ptsd_trauma"       # keep this concept's exports in their own folder
+family_works_glob: null
+docs_path: data/ptsd_trauma/lineage_docs.jsonl
+emb_dir: data/ptsd_trauma/lineage_emb
+citations_cache: data/citations/openalex_refs_ptsd_trauma.jsonl
+results_dir: results/ptsd_trauma
+
+corpus:
+  platform: EBSCOhost (BU ezproxy)
+  exported: null
+  # DECISION (match ego depletion for comparability, or tighten?): ego depletion
+  # ran with all three expanders ON; 16 then required a family term in
+  # title+abstract, which removed 16,818 records (48-69% of the two
+  # PsycArticles-heavy pulls). Recommendation: expanders OFF here, TI/AB
+  # fields only — the operative bound is the same either way, and it saves
+  # quota. Record whichever is chosen.
+  expanders: []
+  fields: [TI, AB]
+  limiters: [peer reviewed]
+  language_filter: none
+  document_type_filter: none
+  queries:
+    focal_ptsd: >-
+      "posttraumatic stress disorder" OR "post-traumatic stress disorder" OR "PTSD"
+      OR "complex PTSD" OR "complex posttraumatic stress disorder"
+    focal_trauma: >-
+      "trauma" OR "traumatic stress" OR "psychological trauma"
+      OR "vicarious trauma" OR "secondary traumatic stress"
+      OR "collective trauma" OR "intergenerational trauma"
+      OR "trauma-informed" OR "trauma informed" OR "moral injury"
+    ancestors: >-
+      "shell shock" OR "war neurosis" OR "combat neurosis" OR "traumatic neurosis"
+      OR "battle fatigue" OR "combat fatigue" OR "gross stress reaction"
+      OR "post-Vietnam syndrome" OR "rape trauma syndrome"
+    controls: >-
+      "acute stress disorder" OR "adjustment disorder" OR "bereavement"
+    # family = the union; run per database group like ego depletion.
+    family: (focal_ptsd) OR (focal_trauma) OR (ancestors) OR (controls)
+  exclusions:
+    - {term: "physical trauma / trauma surgery", why: "NOT excluded on purpose — the somatic sense is the origin of the creep story; expect a physical-injury clade in CINAHL/medicine and read it as a jingle finding, not noise. Revisit if it swamps the health source (>60% of kept docs)."}
+    - {habitat: "MEDLINE / trauma surgery journals", why: "origin habitat for the somatic sense; decide whether to sample it as a labeled source or leave the health DB (CINAHL) as its proxy"}
+    - {habitat: "Historical Abstracts / humanities (memory studies, literary trauma theory)", why: "collective-trauma lineage (Caruth 1996; Alexander 2004) — leads to verify; not in the 13-DB budget; decide"}
+  strata:
+    journal: [JOUR, ABST, CONF, CASE, GEN]
+    thesis: [THES]
+    book: [CHAP, BOOK, EBOOK, EDBOOK]
+    popular: [NEWS, MGZN, BLOG]
+  sources:
+    # --- home field: PsycInfo/PsycArticles in date slices (principle 2/5) ---
+    - id: psyc_1975_1989
+      files: ["data/ebsco exports/ptsd_trauma/Psyc_family_1975-1989.ris"]
+      databases: [APA PsycInfo, APA PsycArticles]
+      query: family
+      dates: 1975-1989
+      role: ancestor
+      question: "parent population around the 1980 coinage — pre- and immediately post-DSM-III"
+      n_records: null
+    - id: psyc_1990_2004
+      files: ["data/ebsco exports/ptsd_trauma/Psyc_family_1990-2004.ris"]
+      databases: [APA PsycInfo, APA PsycArticles]
+      query: family
+      dates: 1990-2004
+      role: family
+      question: "DSM-IV era; Criterion A broadening; complex PTSD coinage"
+      n_records: null
+    - id: psyc_2005_2014
+      files: ["data/ebsco exports/ptsd_trauma/Psyc_family_2005-2014.ris"]
+      databases: [APA PsycInfo, APA PsycArticles]
+      query: family
+      dates: 2005-2014
+      role: family
+      question: "pre-DSM-5; Iraq/Afghanistan veteran literature; trauma-informed care emerges"
+      n_records: null
+    - id: psyc_2015_2025
+      files: ["data/ebsco exports/ptsd_trauma/Psyc_family_2015-2025.ris"]
+      databases: [APA PsycInfo, APA PsycArticles]
+      query: family
+      dates: 2015-2025
+      role: family
+      question: "DSM-5 era; ICD-11 complex PTSD; peak creep period per Haslam"
+      n_records: null
+    # --- habitats by hypothesis (Haslam & McGrath's four directions) ---
+    - id: health
+      files: ["data/ebsco exports/ptsd_trauma/health_family.ris"]
+      databases: [CINAHL, "Dentistry & Oral Sciences Source"]
+      query: family
+      dates: 1975-2025
+      role: habitat
+      hypothesis: "direct->indirect (vicarious/secondary trauma in nursing) AND the somatic homonym (physical trauma) — two clades expected"
+      n_records: null
+    - id: crime_socialwork
+      files: ["data/ebsco exports/ptsd_trauma/crime-socialwork_family.ris"]
+      databases: [SocINDEX with Full Text, Criminal Justice Abstracts, Social Work Abstracts]
+      query: family
+      dates: 1975-2025
+      role: habitat
+      hypothesis: "individual->collective (sociology); trauma-informed practice (social work); victim/forensic use (criminal justice)"
+      n_records: null
+    - id: education
+      files: ["data/ebsco exports/ptsd_trauma/education_family.ris"]
+      databases: ["Education Full Text (H.W. Wilson)"]
+      query: family
+      dates: 1975-2025
+      role: habitat
+      hypothesis: "extraordinary->ordinary: trauma-informed schools; ACEs discourse"
+      n_records: null
+    - id: business
+      files: ["data/ebsco exports/ptsd_trauma/Business_family.ris"]
+      databases: [Business Source Complete, "Business Abstracts with Full Text (H.W. Wilson)"]
+      query: family
+      dates: 1975-2025
+      role: habitat
+      hypothesis: "extraordinary->ordinary: workplace trauma, trauma-informed leadership; also the SURPRISE BUDGET — same DB as ego depletion's migration niche, for comparability"
+      n_records: null
+    - id: econ
+      files: ["data/ebsco exports/ptsd_trauma/econ_family.ris"]
+      databases: [EconLit]
+      query: family
+      dates: 1975-2025
+      role: habitat
+      hypothesis: "surprise budget only (economics of veterans' disability, conflict) — expected small"
+      n_records: null
+    # --- popular stratum (principle 7: separate register; planned from the start) ---
+    - id: popular_news
+      files: ["data/ptsd_trauma/popular/news_*.jsonl"]
+      databases: ["TBD: ProQuest TDM Studio newspapers (BU access noted Session 6) or NYT API"]
+      query: focal_ptsd OR focal_trauma
+      dates: 1975-2025
+      role: popular
+      stratum: popular
+      hypothesis: "horizontal creep into lay usage — invisible in academic abstracts; Haslam 2016 used Google Books frequency; a 2025 NYT-corpus study reported severity for depression (lead — verify)"
+      n_records: null
+      note: "different register and embedding behaviour; NEVER pooled with journal stratum; analysed as its own lineage with the same controls"
+    - id: popular_books_ngram
+      files: ["data/ptsd_trauma/popular/ngram_*.csv"]
+      databases: ["Google Books Ngram (frequency only; no contexts)"]
+      query: "trauma; PTSD; posttraumatic stress disorder; shell shock"
+      dates: 1900-2019
+      role: popular
+      stratum: popular
+      hypothesis: "salience curve only — the lead/lag test (salience -> breadth, Vylomova & Haslam) needs it"
+      n_records: null
+  ignore: []
+  audit:
+    min_abstract_share: 0.85
+    warn_if_dedupe_share_above: 0.45
+
+periods:
+  year_min: 1975
+  year_max: 2025
+  width: 5
+
+control_terms: [participants, results, significant, measure]   # keep identical across concepts
+
+embedding:
+  model: allenai/scibert_scivocab_uncased
+  max_length: 256
+  max_sent_per_doc: 3
+  cap_per_term_period: 250
+  control_cap: 120
+  seed: 42
+
+analysis:
+  min_n: 15
+  cluster_min_n: 60
+  max_k: 4
+  n_sample_titles: 10
+  seed: 42
+
+# Institutional events (dates are well known but VERIFY against APA/WHO records before print)
+events:
+  1980: "DSM-III: PTSD enters the nosology"
+  1987: "DSM-III-R revision"
+  1994: "DSM-IV: Criterion A broadened (indirect exposure); acute stress disorder added"
+  2013: "DSM-5: moved to trauma- and stressor-related disorders; Criterion A revised"
+  2018: "ICD-11: complex PTSD recognized"
+event_short_labels:
+  1980: DSM-III
+  1987: DSM-III-R
+  1994: DSM-IV
+  2013: DSM-5
+  2018: ICD-11
+
+key_pairs:
+  - [posttraumatic stress disorder, trauma]
+  - [posttraumatic stress disorder, ptsd]
+  - [posttraumatic stress disorder, traumatic stress]
+  - [posttraumatic stress disorder, acute stress disorder]
+  - [trauma, traumatic stress]
+  - [trauma, vicarious trauma]
+  - [trauma, collective trauma]
+  - [trauma, trauma informed]
+  - [posttraumatic stress disorder, shell shock]
+  - [posttraumatic stress disorder, complex ptsd]
+
+figures:
+  trajectory_terms: [posttraumatic stress disorder, ptsd, trauma, traumatic stress,
+                     complex ptsd, vicarious trauma, trauma informed, acute stress disorder]
+  trajectory_min_docs: 60
+  drift_terms:
+    - [trauma, crimson]
+    - [posttraumatic stress disorder, navy]
+    - [ptsd, "0.45"]
+    - [traumatic stress, "0.6"]
+  distance_pairs:
+    - [posttraumatic stress disorder, trauma, navy]
+    - [trauma, vicarious trauma, darkorange]
+    - [trauma, trauma informed, seagreen]
+    - [posttraumatic stress disorder, acute stress disorder, crimson]
+  migration_baseline_category: nursing/health
+  annotations: {}      # filled AFTER results exist; never before
+
+venue_categories:
+  - name: military/veterans
+    pattern: "military|veteran|armed forces|combat|defense|defence"
+  - name: nursing/health
+    pattern: "nurs|health|medic|clinical|patient|hospital|emergency|surg|injur|rehabil"
+  - name: psychiatry
+    pattern: "psychiatr|mental health|psychopatholog"
+  - name: law/forensic
+    pattern: "law|legal|forensic|justice|crimin|victim|police"
+  - name: social work
+    pattern: "social work|social service|child welfare|family"
+  - name: education
+    pattern: "educat|school|teach|learn|student|academic|curricul"
+  - name: work/org
+    pattern: "organi[sz]ation|management|business|occupational|vocational|employ|leader|personnel|human resource"
+  - name: sociology/humanities
+    pattern: "sociolog|histor|cultur|memory studies|literar|anthropolog"
+core_label: core/other psych
+
+citation:
+  mailto: jrmorgan3@gmail.com
+  batch: 25
+  year_min: 2014          # post-DSM-5 window (placeholder — decide what the "correction" is here)
+  seed: 42
+  # The ego-depletion citation layer measured propagation of a CORRECTION
+  # (the RRRs). PTSD has no single correction event; candidates for an
+  # analogous "critique" anchor set — ALL LEADS, verify before use:
+  #   Rosen & Lilienfeld 2008 (Clin Psych Rev) "empirical evaluation of core assumptions"
+  #   McNally 2003 (Annu Rev Psychol) "Progress and controversy in the study of PTSD"
+  #   Haslam 2016 (Psych Inquiry) concept creep
+  #   Haslam & McGrath 2020 (Social Research) creeping concept of trauma
+  # Leave empty until decided; 23 refuses to run without anchors.
+  anchors: []
+  anchors_extra: []
+  coinage: null
+  correction_set: []
+  crisis_set: []
+  milestone_control: null
+  hub_category: nursing/health

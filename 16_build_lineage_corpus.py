@@ -19,9 +19,22 @@ Design notes:
 
 Usage (from code/):
     python3 16_build_lineage_corpus.py [--config configs/<concept>.yaml]
+                                        [--allow-unlisted]
 
 All paths, the family file, period bounds and control terms come from the
 config (default configs/ego_depletion.yaml). See pipeline_config.py.
+
+CORPUS SPEC (2026-09-02). The config's `corpus:` block is the retrieval log
+made machine-readable (principle 10: the log is the methods section). Every
+RIS export under ris_root must match a `corpus.sources[].files` glob or a
+`corpus.ignore[].files` glob; anything else is an ERROR (principle 6:
+provenance separate at retrieval, merged in code — an export nobody wrote
+down is an export nobody can defend). Each document carries `sources` (ids,
+unioned on merge) and `stratum` (register by RIS TY tag: journal / thesis /
+book / other; principle 7: registers are strata, not ingredients). A
+coverage audit per source (abstract %, DOI %, type mix, kept/merged) is
+printed and written to the manifest (principle 8: no analysis before the
+audit).
 """
 
 import csv
@@ -45,8 +58,43 @@ PERIOD_YEARS = int(CFG["periods"]["width"])
 YEAR_MIN, YEAR_MAX = int(CFG["periods"]["year_min"]), int(CFG["periods"]["year_max"])
 
 CONTROL_TERMS = CFG.controls
+CORPUS = CFG.get("corpus", {}) or {}
+ALLOW_UNLISTED = "--allow-unlisted" in _ARGV
 
 TAG_RE = re.compile(r"^([A-Z][A-Z0-9])  - (.*)$")
+
+
+def _match_any(path, globs):
+    """Path matches any glob (relative to code/, POSIX separators)."""
+    from fnmatch import fnmatch
+    p = Path(path).as_posix()
+    for g in globs:
+        g = str(g)
+        # '**' should match across directories; fnmatch's '*' already does
+        if fnmatch(p, g.replace("**", "*")):
+            return True
+    return False
+
+
+def source_of(path):
+    """(source_id, entry) for an export, or ('IGNORED', why) / (None, None)."""
+    for s in CORPUS.get("sources", []) or []:
+        if _match_any(path, s.get("files", [])):
+            return s["id"], s
+    for ig in CORPUS.get("ignore", []) or []:
+        g = ig.get("files")
+        if g and _match_any(path, [g] if isinstance(g, str) else g):
+            return "IGNORED", ig.get("why", "")
+    return None, None
+
+
+def stratum_of(ty):
+    """Register stratum from the RIS TY tag (config corpus.strata)."""
+    strata = CORPUS.get("strata") or {}
+    for name, tys in strata.items():
+        if ty in tys:
+            return name
+    return "journal" if not strata else "other"
 SENT_RE = re.compile(r"(?<=[.!?])\s+(?=[A-Z(])")
 
 # canon(): hyphens and spaces are the SAME separator. 'ego-depletion' and
@@ -135,17 +183,27 @@ def main():
     by_title = {}      # normalized title -> canonical key
     stats = Counter()
 
-    def merge(key, dbs):
+    audit = defaultdict(Counter)   # source_id -> counters (principle 8)
+
+    def merge(key, dbs, source=None):
         """Same document from another database: keep one record, UNION the
-        provenance tags (a doc indexed in 3 databases carries all 3)."""
+        provenance tags (a doc indexed in 3 databases carries all 3) and the
+        source ids."""
         if dbs:
             docs[key]["dbs"] = sorted(set(docs[key].get("dbs", [])) | set(dbs))
+        if source:
+            docs[key]["sources"] = sorted(set(docs[key].get("sources", []))
+                                          | {source})
+            audit[source]["merged_into_existing"] += 1
         stats["merged_duplicates"] += 1
 
-    def add_doc(key, year, journal, title, abstract, index_terms, dbs):
+    def add_doc(key, year, journal, title, abstract, index_terms, dbs,
+                source=None, stratum="journal"):
         period = period_of(year)
         if period is None or not abstract:
             stats["skipped_no_abstract_or_year"] += 1
+            if source:
+                audit[source]["skipped_no_abstract_or_year"] += 1
             return None
         text = f"{title}. {abstract}"
         sentences = [s.strip() for s in SENT_RE.split(text)
@@ -158,14 +216,21 @@ def main():
         fam_terms = [t for t in mentions if t in family]
         if not fam_terms:
             stats["skipped_no_family_term"] += 1
+            if source:
+                audit[source]["skipped_no_family_term"] += 1
             return None  # no family term actually present
         stats["kept"] += 1
+        if source:
+            audit[source]["kept"] += 1
+            audit[source][f"stratum:{stratum}"] += 1
         docs[key] = {
             "doi": key if not key.startswith("AN:") else "",
             "year": year, "period": period,
             "journal": journal, "title": title,
             "index_terms": index_terms,
             "dbs": sorted(set(dbs)),   # source database(s) — migration tracking
+            "sources": [source] if source else [],   # corpus-spec source ids
+            "stratum": stratum,                      # register (RIS TY)
             "terms": sorted(fam_terms),
             "roles": sorted({family[t] for t in fam_terms}),
             "mention_sentences": {t: v[:6] for t, v in mentions.items()},
@@ -175,11 +240,51 @@ def main():
     # 1. All RIS files, recursively.
     #    DB tags are ground truth for provenance; the file a record came in
     #    is only a convenience. Dedupe order: DOI, then normalized title.
-    ris_files = sorted(RIS_ROOT.rglob("*.ris"))
-    for f in ris_files:
+    all_ris = sorted(RIS_ROOT.rglob("*.ris"))
+    ris_files, unlisted, ignored = [], [], []
+    for f in all_ris:
+        sid, entry = source_of(f)
+        if sid == "IGNORED":
+            ignored.append((f, entry))
+        elif sid is None:
+            unlisted.append(f)
+        else:
+            ris_files.append((f, sid, entry))
+    if ignored:
+        print(f"Ignoring {len(ignored)} export(s) listed under corpus.ignore:")
+        for f, why in ignored[:5]:
+            print(f"   {f}  — {why}")
+        if len(ignored) > 5:
+            print(f"   ... and {len(ignored) - 5} more")
+    if unlisted:
+        msg = (f"{len(unlisted)} RIS export(s) under {RIS_ROOT} match no "
+               f"corpus.sources or corpus.ignore entry:\n   "
+               + "\n   ".join(str(u) for u in unlisted[:10]))
+        if not ALLOW_UNLISTED:
+            raise SystemExit(msg + "\nAdd them to the config's corpus block "
+                             "(with query, dates, role, question) or to "
+                             "corpus.ignore. Override with --allow-unlisted "
+                             "(they will be ingested with source=UNLISTED).")
+        print("WARNING: " + msg + "\n   ingesting as source=UNLISTED")
+        ris_files += [(u, "UNLISTED", {}) for u in unlisted]
+    listed_missing = [s["id"] for s in CORPUS.get("sources", []) or []
+                      if not any(sid == s["id"] for _, sid, _ in ris_files)]
+    if listed_missing:
+        print(f"WARNING: corpus.sources with no export on disk: {listed_missing}")
+
+    for f, sid, entry in ris_files:
         recs = parse_ris(f)
         n_before, merged_before = len(docs), stats["merged_duplicates"]
         for r in recs:
+            audit[sid]["records"] += 1
+            if (r.get("AB", [""])[0] or "").strip():
+                audit[sid]["with_abstract"] += 1
+            if (r.get("DO", [""])[0] or "").strip():
+                audit[sid]["with_doi"] += 1
+            ty = (r.get("TY", [""])[0] or "").strip()
+            audit[sid][f"TY:{ty or '?'}"] += 1
+            stratum = stratum_of(ty)
+
             doi = (r.get("DO", [""])[0] or "").lower().strip()
             doi = doi.replace("https://doi.org/", "").rstrip(".")
             title = r.get("TI", [""])[0]
@@ -187,26 +292,26 @@ def main():
             dbs = [v.strip() for v in r.get("DB", []) if v.strip()]
 
             if doi and doi in docs:               # same DOI
-                merge(doi, dbs)
+                merge(doi, dbs, sid)
                 continue
             if nt and nt in by_title:             # same title, other database
-                merge(by_title[nt], dbs)
+                merge(by_title[nt], dbs, sid)
                 continue
 
             an = (r.get("AN", [""])[0] or "").strip()
             key = doi or (f"AN:{an}" if an else f"T:{nt or title[:80].lower()}")
             if key in docs:
-                merge(key, dbs)
+                merge(key, dbs, sid)
                 continue
             made = add_doc(key, year_of(r),
                            (r.get("JO", [""])[0] or r.get("T2", [""])[0]
                             or "").strip(),
                            title, (r.get("AB", [""])[0] or ""),
                            [k.strip() for k in r.get("KW", []) if k.strip()],
-                           dbs)
+                           dbs, source=sid, stratum=stratum)
             if made and nt:
                 by_title[nt] = made
-        print(f"{f.name}: +{len(docs) - n_before} docs, "
+        print(f"{f.name} [{sid}]: +{len(docs) - n_before} docs, "
               f"{stats['merged_duplicates'] - merged_before} merged "
               f"(total {len(docs)})")
 
@@ -223,21 +328,25 @@ def main():
                 "https://doi.org/", "").rstrip(".")
             nt = norm_title(w.get("title", ""))
             if doi and doi in docs:
-                merge(doi, ["OpenAlex"])
+                merge(doi, ["OpenAlex"], "openalex_works")
                 continue
             if nt and nt in by_title:
-                merge(by_title[nt], ["OpenAlex"])
+                merge(by_title[nt], ["OpenAlex"], "openalex_works")
                 continue
             key = doi or (f"T:{nt}" if nt else None)
             if not key or key in docs:
                 continue
             made = add_doc(key, w.get("year"), w.get("journal", ""),
                            w.get("title", ""), w.get("abstract", ""),
-                           w.get("index_terms", []), ["OpenAlex"])
+                           w.get("index_terms", []), ["OpenAlex"],
+                           source="openalex_works", stratum="journal")
             if made and nt:
                 by_title[nt] = made
         print(f"{jf.name}: +{len(docs) - n_before} docs (total {len(docs)})")
 
+    if not docs:
+        raise SystemExit("No documents ingested (no exports on disk for this "
+                         "corpus spec?) — nothing written.")
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(OUT_PATH, "w", encoding="utf-8") as f:
         for d in docs.values():
@@ -271,6 +380,33 @@ def main():
         for db, c in dbc.most_common():
             print(f"  {db}: {c}")
 
+    # --- Coverage audit per source (principle 8) ---
+    thr = CORPUS.get("audit", {}) or {}
+    min_ab = float(thr.get("min_abstract_share", 0.0))
+    print("\nCOVERAGE AUDIT (per corpus source):")
+    print(f"{'source':<24}{'records':>8}{'AB%':>6}{'DOI%':>6}{'kept':>7}"
+          f"{'merged':>8}{'noTerm':>8}  strata / types")
+    audit_rows = {}
+    for sid in sorted(audit):
+        a = audit[sid]
+        n = a["records"] or 1
+        strata = {k.split(":", 1)[1]: v for k, v in a.items()
+                  if k.startswith("stratum:")}
+        types = {k.split(":", 1)[1]: v for k, v in a.items()
+                 if k.startswith("TY:")}
+        flag = (" <-- abstracts below threshold"
+                if a["records"] and a["with_abstract"] / n < min_ab else "")
+        if a["records"] and a["skipped_no_family_term"] / n > 0.4:
+            flag += (" <-- >40% of records lack a family term in title/abstract"
+                     " (full-text expander?)")
+        print(f"{sid:<24}{a['records']:>8}{100*a['with_abstract']//n:>5}%"
+              f"{100*a['with_doi']//n:>5}%{a['kept']:>7}"
+              f"{a['merged_into_existing']:>8}{a['skipped_no_family_term']:>8}  "
+              f"{strata} {dict(sorted(types.items(), key=lambda x: -x[1])[:4])}{flag}")
+        audit_rows[sid] = {**{k: v for k, v in a.items()}, "strata": strata}
+    strat_tot = Counter(d.get("stratum", "?") for d in docs.values())
+    print(f"\nDocuments by register stratum: {dict(strat_tot)}")
+
     power_path = FAMILY_DIR / "lineage_power_table.csv"
     with open(power_path, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
@@ -282,10 +418,18 @@ def main():
         CFG, __file__,
         params={"ris_root": str(RIS_ROOT), "family_csv": str(FAMILY_CSV),
                 "family_works_glob": FAMILY_WORKS_GLOB,
-                "ris_files": [str(p) for p in ris_files],
+                "ris_files": [[str(p), sid] for p, sid, _ in ris_files],
+                "ignored_exports": [str(p) for p, _ in ignored],
+                "allow_unlisted": ALLOW_UNLISTED,
                 "periods": dict(CFG["periods"]), "control_terms": CONTROL_TERMS,
                 "n_docs": len(docs), "accounting": dict(stats),
-                "db_provenance": dict(dbc)},
+                "db_provenance": dict(dbc),
+                "strata": dict(strat_tot),
+                "corpus_spec": {k: v for k, v in CORPUS.items()
+                                if k != "sources"},
+                "corpus_sources": [{k: v for k, v in s.items()}
+                                   for s in CORPUS.get("sources", []) or []],
+                "coverage_audit": audit_rows},
         outputs=[OUT_PATH, power_path])
     print("Next: python3 17_embed_documents.py   (local, needs torch)")
 

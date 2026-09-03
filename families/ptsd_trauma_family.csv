@@ -1,0 +1,26 @@
+term,role,field,note
+posttraumatic stress disorder,focal,,DSM-III 1980 coinage; hyphen/space variants (post-traumatic) covered by canon(); predicted CONVERGENT / stable-under-institutionalization
+ptsd,focal,,acronym; matched as a whole word
+trauma,focal,,the creeping concept (Haslam & McGrath 2020 four directions); HOMONYM with physical trauma — kept visible on purpose: the somatic->psychic clade is part of the story (principle 4). Expect a physical-injury cluster in CINAHL/medicine.
+traumatic stress,synonym,,bridge term (ISTSS; Journal of Traumatic Stress 1988-)
+psychological trauma,synonym,,explicit psychic sense
+complex ptsd,descendant,,Herman 1992; ICD-11 2018 — a daughter lineage with its own coinage event
+complex posttraumatic stress disorder,descendant,,long form of the above
+vicarious trauma,descendant,,direct->indirect creep; nursing/social work habitat
+secondary traumatic stress,descendant,,direct->indirect creep (Figley)
+collective trauma,descendant,,individual->collective creep; sociology/history habitat
+intergenerational trauma,descendant,,individual->collective creep
+moral injury,descendant,,military/veterans lineage (Litz et al. 2009) — adjacent coinage
+trauma informed,descendant,,extraordinary->ordinary creep; education/social work/business habitat ("trauma-informed care/schools/leadership")
+shell shock,ancestor,,WWI ancestor
+war neurosis,ancestor,,WWI/WWII ancestor
+combat neurosis,ancestor,,WWII ancestor
+traumatic neurosis,ancestor,,19th-c. / psychoanalytic ancestor (Oppenheim; Kardiner)
+battle fatigue,ancestor,,WWII ancestor
+combat fatigue,ancestor,,WWII ancestor
+gross stress reaction,ancestor,,DSM-I 1952 category
+post vietnam syndrome,ancestor,,immediate pre-coinage term (Shatan 1972)
+rape trauma syndrome,ancestor,,Burgess & Holmstrom 1974 — the non-combat parent lineage
+acute stress disorder,control,,adjacent DSM category (1994); should NOT merge with PTSD if distinct
+adjustment disorder,control,,adjacent stressor-related category
+bereavement,control,,adjacent non-pathological stress response

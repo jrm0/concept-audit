@@ -119,6 +119,7 @@ def main():
             random.seed(SEED)
             docs = random.sample(docs, cap)
         vecs, keys, years, journals, dbs = [], [], [], [], []
+        sources, strata = [], []
         for d in docs:
             sents = d["mention_sentences"].get(term, [])[:MAX_SENT_PER_DOC]
             sv = [v for v in (masked_vector(s, pat) for s in sents)
@@ -130,12 +131,16 @@ def main():
             years.append(d["year"])
             journals.append(d["journal"])
             dbs.append("|".join(d.get("dbs", [])))
+            sources.append("|".join(d.get("sources", [])))   # corpus-spec ids
+            strata.append(d.get("stratum", ""))              # register
         if vecs:
             np.savez_compressed(out_path, vectors=np.array(vecs),
                                 keys=np.array(keys, dtype=object),
                                 years=np.array(years),
                                 journals=np.array(journals, dtype=object),
-                                dbs=np.array(dbs, dtype=object))
+                                dbs=np.array(dbs, dtype=object),
+                                sources=np.array(sources, dtype=object),
+                                strata=np.array(strata, dtype=object))
         return len(vecs)
 
     total = 0

@@ -18,6 +18,137 @@ citations_cache: data/citations/openalex_refs.jsonl
 # --- outputs ----------------------------------------------------------------
 results_dir: results/ego_depletion                 # every script writes here + a manifest
 
+# --- corpus specification ---------------------------------------------------
+# Principle 10: the log is the methods section. Every export 16 ingests must
+# match a `sources` entry (by filename glob); unlisted exports are refused.
+# Reconstructed 2026-09-02 from myEBSCO saved searches + RIS DB tags.
+corpus:
+  platform: EBSCOhost (BU ezproxy)
+  exported: 2026-08-11 to 2026-08-13
+  # Retrieval was BROADER than title/abstract: all three EBSCO expanders were
+  # on. 16 then keeps only documents whose title+abstract actually contains a
+  # family term — that filter is the operative bound, and it is applied
+  # uniformly across sources. Report both.
+  expanders: [apply related words, also search within full text, apply equivalent subjects]
+  limiters: [peer reviewed]
+  language_filter: none
+  document_type_filter: none      # dissertations/chapters/books pass; labeled as strata below
+  queries:
+    focal: >-
+      "ego depletion" OR "ego-depletion" OR "self-regulatory depletion" OR
+      "self-control depletion" OR "depletion effect" OR "strength model of self-control"
+    family: >-
+      ("ego depletion" OR "ego-depletion" OR "self-regulatory depletion" OR
+      "self-control depletion" OR "depletion effect" OR "strength model of self-control"
+      OR "willpower" OR "self-control" OR "self-regulation")
+      AND NOT ("emotion regulation" OR "self-regulated learning")
+  # exclusions are limits on what the map can show (principle 3)
+  exclusions:
+    - {term: "emotion regulation", why: "largest non-family sense (affect science); would dominate ancestors"}
+    - {term: "self-regulated learning", why: "Zimmerman SRL, education; metacognitive not resource-based"}
+    - {habitat: "Philosopher's Index", why: "planned (akrasia lineage) but not pulled"}
+    - {habitat: "PsycTests / PsycBooks", why: "planned (operationalization evidence) but not pulled"}
+    - {habitat: "popular usage (news, Google Books)", why: "not sampled; horizontal creep into lay usage is invisible here"}
+  # Register strata by RIS TY tag (principle 7). Analyses pool only within a stratum
+  # unless explicitly stated; 16 labels every document with its stratum.
+  strata:
+    journal: [JOUR, ABST, CONF, CASE, GEN]
+    thesis: [THES]
+    book: [CHAP, BOOK, EBOOK, EDBOOK]
+  sources:
+    - id: psyc_focal
+      files: ["data/ebsco exports/cedd0a9a-*.ris"]
+      databases: [APA PsycArticles, APA PsycInfo]
+      query: focal
+      dates: all
+      role: focal
+      question: "the daughter lineage — every peer-reviewed use of the coined terms"
+      n_records: 2200
+      n_saved_search: 2296
+    - id: psyc_family_all
+      files: ["data/ebsco exports/ea388b9b-*.ris"]
+      databases: [APA PsycArticles, APA PsycInfo]
+      query: family
+      dates: all
+      role: family
+      question: "first full-family pull (superseded by the date-sliced psyc_family_* below; kept, dedupes against them)"
+      n_records: 8009
+      n_saved_search: 8230
+    - id: psyc_family_1975_1999
+      files: ["data/ebsco exports/Psyc_SC-SR-WP/SC-SR-WP_1975-1999.ris"]
+      databases: [APA PsycInfo, APA PsycArticles]
+      query: family
+      dates: 1975-1999
+      role: ancestor
+      question: "parent population BEFORE the 1998 coinage (principle 2) — no birth is visible without it"
+      n_records: 5219
+    - id: psyc_family_2000_2015
+      files: ["data/ebsco exports/Psyc_SC-SR-WP/SC-SR-WP_2000-2015.ris"]
+      databases: [APA PsycInfo, APA PsycArticles]
+      query: family
+      dates: 2000-2015
+      role: ancestor
+      question: "parent lineage after the split — divergence needs both lineages measured"
+      n_records: 12598
+    - id: psyc_family_2015_2025
+      files: ["data/ebsco exports/Psyc_SC-SR-WP/SC-SR-WP_2015-2025.ris"]
+      databases: [APA PsycInfo, APA PsycArticles]
+      query: family
+      dates: 2015-2025
+      role: ancestor
+      question: "parent lineage through the correction era"
+      n_records: 14615
+    - id: business
+      files: ["data/ebsco exports/Business_SC-SR-WP.ris"]
+      databases: [Business Source Complete, "Business Abstracts with Full Text (H.W. Wilson)", Business Source Alumni Edition, "Applied Science & Business Periodicals Retrospective: 1913-1983 (H.W. Wilson)"]
+      query: family
+      dates: all
+      role: habitat
+      hypothesis: "work/organizational — the venue category where the migration finding lives"
+      question: "did the concept move into applied management/OB literatures, and did the correction follow?"
+      n_records: 8671
+    - id: education
+      files: ["data/ebsco exports/education_SC-SR-WP.ris"]
+      databases: ["Education Full Text (H.W. Wilson)"]
+      query: family
+      dates: all
+      role: habitat
+      hypothesis: "self-regulation → self-regulated learning (Zimmerman); metacognitive, not resource-based"
+      n_records: 11445
+    - id: health
+      files: ["data/ebsco exports/health_SC-SR-WP.ris"]
+      databases: [CINAHL, "Dentistry & Oral Sciences Source"]
+      query: family
+      dates: all
+      role: habitat
+      hypothesis: "health behavior change — applied/clinical sense of self-regulation"
+      n_records: 9147
+    - id: crime_socialwork
+      files: ["data/ebsco exports/crime-socialwork_SC-SR-WP.ris"]
+      databases: [SocINDEX with Full Text, Criminal Justice Abstracts, Social Work Abstracts]
+      query: family
+      dates: all
+      role: habitat
+      hypothesis: "Gottfredson & Hirschi trait self-control (crime) — the sharpest cross-field contrast"
+      n_records: 8752
+    - id: econ
+      files: ["data/ebsco exports/econ_SC-SR-WP.ris"]
+      databases: [EconLit]
+      query: family
+      dates: all
+      role: habitat
+      hypothesis: "intertemporal choice / present bias — formalized operationalization"
+      n_records: 1851
+      note: "DOI coverage 23% — dedupe relies on normalized title here"
+  # Exports under ris_root that are NOT part of this corpus. 16 skips them
+  # (and says so); any other unlisted export is an error.
+  ignore:
+    - {files: "data/ebsco exports/constructs/**", why: "Paper-2 OSC-99 construct exports (osc_coding pipeline), not the ego-depletion family"}
+  # Audit thresholds (principle 8): 16 warns if a source falls below these.
+  audit:
+    min_abstract_share: 0.85
+    warn_if_dedupe_share_above: 0.45
+
 # --- corpus / periods -------------------------------------------------------
 periods:
   year_min: 1975

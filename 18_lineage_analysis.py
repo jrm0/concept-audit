@@ -41,6 +41,19 @@ Outputs (results/<slug>/):
 Usage:
     python3 18_lineage_analysis.py [--config configs/<concept>.yaml]
     python3 18_lineage_analysis.py --center    # per-period mean-centering
+    python3 18_lineage_analysis.py --sources psyc_family_2000_2015,business
+    python3 18_lineage_analysis.py --dbs "PsycInfo,PsycArticles"
+    python3 18_lineage_analysis.py --strata journal
+
+SUBSET RE-RUNS (corpus principle 9: corpus dependence is a result). The
+filters keep only document vectors whose provenance matches, then run the
+identical analysis; outputs get a suffix (_src-<...>, _dbs-<...>,
+_strata-<...>) so subset runs never overwrite the full run. --dbs matches
+substrings of the RIS DB tags stored per vector by 17 (works on any shard);
+--sources / --strata need shards embedded after 2026-09-02 (17 now stores
+corpus-spec source ids and register stratum per vector) and fail clearly on
+older shards. Control-term shards are filtered the same way so the drift
+null stays comparable.
         Anisotropy robustness (Ethayarajh 2019): contextual embeddings bunch
         into a narrow cone, and the cone can shift/tighten as corpus
         composition changes over time. Centering subtracts each period's
@@ -82,7 +95,23 @@ DOCS_PATH = Path(CFG["docs_path"])
 RESULTS = CFG.results                      # results/<slug>/
 N_SAMPLE_TITLES = int(CFG["analysis"]["n_sample_titles"])
 CENTER = "--center" in _ARGV
-SUF = "_centered" if CENTER else ""
+
+
+def _opt(name):
+    """Value of --name X or --name=X in the remaining argv, else None."""
+    for i, a in enumerate(_ARGV):
+        if a == name and i + 1 < len(_ARGV):
+            return _ARGV[i + 1]
+        if a.startswith(name + "="):
+            return a.split("=", 1)[1]
+    return None
+
+
+FILTER = {k: [x.strip() for x in (_opt(f"--{k}") or "").split(",") if x.strip()]
+          for k in ("sources", "dbs", "strata")}
+_fsuf = "".join(f"_{k[:3]}-{'+'.join(v)}" for k, v in FILTER.items() if v)
+_fsuf = re.sub(r"[^A-Za-z0-9_+\-]", "", _fsuf)
+SUF = ("_centered" if CENTER else "") + _fsuf
 MIN_N = int(CFG["analysis"]["min_n"])
 CLUSTER_MIN_N = int(CFG["analysis"]["cluster_min_n"])
 MAX_K = int(CFG["analysis"]["max_k"])
@@ -92,18 +121,58 @@ EVENTS = pc.events(CFG)
 KEY_PAIRS = [tuple(p) for p in CFG.get("key_pairs", [])]
 
 
+def _subset_mask(z, n):
+    """Boolean mask over a shard's vectors for the --sources/--dbs/--strata
+    filters; None if no filter is active."""
+    if not any(FILTER.values()):
+        return None
+    mask = np.ones(n, dtype=bool)
+    if FILTER["dbs"]:
+        if "dbs" not in z.files:
+            raise SystemExit("--dbs: shards carry no DB tags (re-run 17).")
+        tags = [str(x) for x in z["dbs"]]
+        mask &= np.array([any(w.lower() in t.lower() for w in FILTER["dbs"])
+                          for t in tags])
+    if FILTER["sources"]:
+        if "sources" not in z.files:
+            raise SystemExit("--sources needs shards embedded by 17 after "
+                             "2026-09-02 (they store corpus-spec source ids); "
+                             "use --dbs on older shards.")
+        ids = [set(str(x).split("|")) for x in z["sources"]]
+        mask &= np.array([bool(s & set(FILTER["sources"])) for s in ids])
+    if FILTER["strata"]:
+        if "strata" not in z.files:
+            raise SystemExit("--strata needs shards embedded by 17 after "
+                             "2026-09-02 (they store the register stratum).")
+        mask &= np.isin([str(x) for x in z["strata"]], FILTER["strata"])
+    return mask
+
+
 def load_shards():
     data = defaultdict(dict)   # term -> period -> dict(vectors, keys, ...)
+    kept = total = 0
     for f in sorted(EMB_DIR.glob("*.npz")):
         m = re.match(r"(.+)__(\d{4}-\d{4})$", f.stem)
         if not m:
             continue
         term = m.group(1).replace("_", " ")
         z = np.load(f, allow_pickle=True)
+        n = len(z["vectors"])
+        mask = _subset_mask(z, n)
+        total += n
+        if mask is not None:
+            kept += int(mask.sum())
+            if mask.sum() == 0:
+                continue
+        else:
+            kept += n
+        sel = (lambda a: a[mask]) if mask is not None else (lambda a: a)
         data[term][m.group(2)] = {
-            "V": z["vectors"], "keys": z["keys"],
-            "years": z["years"], "journals": z["journals"],
-            "dbs": z["dbs"] if "dbs" in z.files else None}
+            "V": sel(z["vectors"]), "keys": sel(z["keys"]),
+            "years": sel(z["years"]), "journals": sel(z["journals"]),
+            "dbs": sel(z["dbs"]) if "dbs" in z.files else None}
+    if any(FILTER.values()):
+        print(f"SUBSET FILTER {FILTER}: kept {kept}/{total} document vectors")
     return data
 
 
@@ -232,7 +301,10 @@ def main():
     say(f"Terms: {family}")
     say(f"Controls: {controls}")
     say(f"Periods: {periods}")
-    say(f"MODE: {'PER-PERIOD MEAN-CENTERED (anisotropy robustness)' if CENTER else 'raw (uncentered)'}\n")
+    say(f"MODE: {'PER-PERIOD MEAN-CENTERED (anisotropy robustness)' if CENTER else 'raw (uncentered)'}")
+    if any(FILTER.values()):
+        say(f"SUBSET: {FILTER}  (outputs suffixed '{_fsuf}')")
+    say("")
 
     # Per-period reference centroid from CONTROL TERMS ONLY (see docstring:
     # a family-pool reference would move with term composition)
@@ -434,7 +506,7 @@ def main():
                 say(f"   {b['parent']} -> {b['children']} at {b['period']} "
                     f"(sep {b['min_separation']} vs floor {b['noise_floor']})")
         # qualitative sample file
-        with open(RESULTS / f"lineage_samples_{t.replace(' ', '_')}.txt",
+        with open(RESULTS / f"lineage_samples_{t.replace(' ', '_')}{_fsuf}.txt",
                   "w", encoding="utf-8") as f:
             for p, nodes, st in node_seq:
                 dp = st["dip_p"]
@@ -465,7 +537,7 @@ def main():
             f"(term x period) cells SUPPORTED by cluster_core "
             f"(dip p<0.05 AND mean Jaccard>=0.75); all other periods are "
             f"one node.")
-        with open(RESULTS / "lineage_tree.json", "w") as f:
+        with open(RESULTS / f"lineage_tree{_fsuf}.json", "w") as f:
             json.dump({t: {k: v for k, v in d.items()}
                        for t, d in tree.items()}, f, indent=2, default=str)
 
@@ -483,12 +555,13 @@ def main():
             RESULTS / f"term_distances{SUF}.csv",
             RESULTS / f"lineage_report{SUF}.txt"]
     if not CENTER:
-        outs += [RESULTS / "lineage_tree.json"] + \
-                [RESULTS / f"lineage_samples_{t.replace(' ', '_')}.txt"
+        outs += [RESULTS / f"lineage_tree{_fsuf}.json"] + \
+                [RESULTS / f"lineage_samples_{t.replace(' ', '_')}{_fsuf}.txt"
                  for t in family]
     pc.write_manifest(
         CFG, __file__,
-        params={"center": CENTER, "min_n": MIN_N, "cluster_min_n": CLUSTER_MIN_N,
+        params={"center": CENTER, "subset_filter": FILTER, "suffix": SUF,
+                "min_n": MIN_N, "cluster_min_n": CLUSTER_MIN_N,
                 "max_k": MAX_K, "seed": SEED, "control_terms": sorted(CONTROL_TERMS),
                 "terms": family, "periods": periods, "key_pairs": key_pairs,
                 "clustering": "cluster_core (dip + Hennig Jaccard)",
