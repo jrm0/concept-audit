@@ -15,6 +15,26 @@ Two artifact lessons are baked in:
 Control terms are embedded the same way from the same abstracts — the drift
 null (all embeddings move as corpus composition changes; Dubossarsky).
 
+NO CAP BY DEFAULT (2026-09-02). Until now each (term, period) was capped at
+250 documents, sampled from the pooled corpus. That equalized sample size
+across periods — which matters for CROSS-period comparisons (a centroid from
+50 documents wobbles more than one from 5,000; a split test with 5,000
+documents can see what it never could with 60) — but it did so by throwing
+information away, and it made minority sub-senses invisible (8% of usage
+under a 250 cap = 20 documents). Equalization now happens at ANALYSIS time in
+18 (repeated matched-n subsampling for drift and distances); within-period
+description (sense discovery, sizing, citation join) uses every document.
+Set embedding.cap_per_term_period to a number to restore a cap (e.g. for a
+sensitivity check). Control terms keep a cap (embedding.control_cap): they
+only need a stable reference centroid, and they occur in nearly every
+abstract.
+
+Each shard records n_pool (documents available for that term-period before
+any cap) and cap, so prevalence is reconstructible and a capped shard is
+recognisable. Re-running with a different cap into the same emb_dir would
+silently keep the old shards (checkpointing) — use a NEW emb_dir per cap
+setting; the config's emb_dir names the run.
+
 Reads:  data/family/lineage_docs.jsonl   (from 16)
 Writes: data/lineage_emb/{term_slug}__{period}.npz
             vectors (n,768), keys (doi), years, journals
@@ -44,10 +64,11 @@ CFG, _ARGV = pc.load()
 MODEL_NAME = CFG["embedding"]["model"]
 MAX_LENGTH = int(CFG["embedding"]["max_length"])
 SEED = int(CFG["embedding"]["seed"])
-CAP_PER_TERM_PERIOD = int(CFG["embedding"]["cap_per_term_period"])
+_cap = CFG["embedding"].get("cap_per_term_period")
+CAP_PER_TERM_PERIOD = int(_cap) if _cap not in (None, "", "none", "null") else None
 MAX_SENT_PER_DOC = int(CFG["embedding"]["max_sent_per_doc"])
 CONTROL_TERMS = CFG.controls
-CONTROL_CAP = int(CFG["embedding"]["control_cap"])
+CONTROL_CAP = int(CFG["embedding"].get("control_cap") or 300)
 
 IN_PATH = Path(CFG["docs_path"])
 OUT_DIR = Path(CFG["emb_dir"])
@@ -82,7 +103,11 @@ def main():
                 if t in CONTROL_TERMS:
                     continue   # controls sampled separately below
                 groups[(t, d["period"])].append(d)
-    print(f"{n_docs} documents; {len(groups)} (term, period) shards to embed")
+    n_to_embed = sum(len(v) if CAP_PER_TERM_PERIOD is None
+                     else min(len(v), CAP_PER_TERM_PERIOD) for v in groups.values())
+    print(f"{n_docs} documents; {len(groups)} (term, period) shards; "
+          f"cap={'none (embed all)' if CAP_PER_TERM_PERIOD is None else CAP_PER_TERM_PERIOD}; "
+          f"~{n_to_embed} document vectors to compute (skips existing shards)")
 
     # Control shards: sample docs per period regardless of family term
     ctrl = defaultdict(list)     # period -> [doc]
@@ -115,7 +140,8 @@ def main():
             return 0
         # hyphen/space are the same separator (see canon() in pipeline_config)
         pat = term_pattern(term)
-        if len(docs) > cap:
+        n_pool = len(docs)
+        if cap is not None and len(docs) > cap:
             random.seed(SEED)
             docs = random.sample(docs, cap)
         vecs, keys, years, journals, dbs = [], [], [], [], []
@@ -140,7 +166,9 @@ def main():
                                 journals=np.array(journals, dtype=object),
                                 dbs=np.array(dbs, dtype=object),
                                 sources=np.array(sources, dtype=object),
-                                strata=np.array(strata, dtype=object))
+                                strata=np.array(strata, dtype=object),
+                                n_pool=np.array(n_pool),
+                                cap=np.array(-1 if cap is None else cap))
         return len(vecs)
 
     total = 0
@@ -163,7 +191,8 @@ def main():
     pc.write_manifest(
         CFG, __file__,
         params={"model": MODEL_NAME, "max_length": MAX_LENGTH, "seed": SEED,
-                "cap_per_term_period": CAP_PER_TERM_PERIOD,
+                "cap_per_term_period": CAP_PER_TERM_PERIOD,   # None = all
+                "emb_dir": str(OUT_DIR),
                 "control_cap": CONTROL_CAP, "max_sent_per_doc": MAX_SENT_PER_DOC,
                 "control_terms": CONTROL_TERMS, "subset": sorted(only),
                 "n_docs_in": n_docs, "n_new_vectors": total,

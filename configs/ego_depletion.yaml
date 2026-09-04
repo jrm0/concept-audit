@@ -12,7 +12,12 @@ family_csv: families/ego_depletion_family.csv
 ris_root: "data/ebsco exports"                     # searched recursively for *.ris
 family_works_glob: "data/family/ego_depletion*works.jsonl"   # OpenAlex-derived, optional
 docs_path: data/family/lineage_docs.jsonl          # written by 16, read by 17/18/20/22/23
-emb_dir: data/lineage_emb                          # written by 17, read by 18/20/21/22/23
+# emb_dir names the EMBEDDING RUN. data/lineage_emb = the Aug-13 run, capped
+# at 250 docs per (term, period). data/lineage_emb_full = uncapped (every
+# document), the default from 2026-09-02. Keep both: the two-cap sensitivity
+# check in the methods paper compares them. Point emb_dir at the old folder
+# (and set embedding.cap_per_term_period: 250) to reproduce the capped run.
+emb_dir: data/lineage_emb_full                     # written by 17, read by 18/20/21/22/23
 citations_cache: data/citations/openalex_refs.jsonl
 
 # --- outputs ----------------------------------------------------------------
@@ -164,17 +169,24 @@ embedding:
   model: allenai/scibert_scivocab_uncased
   max_length: 256
   max_sent_per_doc: 3
-  cap_per_term_period: 250
-  control_cap: 120
+  cap_per_term_period: null   # null = embed EVERY document (2026-09-02); a number restores a cap
+  control_cap: 300            # control terms only need a stable reference centroid
   seed: 42
 
 # --- lineage analysis (18, 21) ---------------------------------------------
 analysis:
   min_n: 15              # min docs for a period centroid
-  cluster_min_n: 60      # min docs to attempt within-period clustering
+  cluster_min_n: 60      # min docs to attempt within-period clustering (a floor, not a ceiling)
   max_k: 4
   n_sample_titles: 10
   seed: 42
+  # Matched-n resampling for CROSS-period statistics (drift, cross-term
+  # distances, their noise floors): each comparison is made at
+  # n_eq = min(n_a, n_b, equalize_n), repeated equalize_reps times; mean ± sd
+  # reported with the full-data estimate. Within-period description uses all
+  # documents.
+  equalize_n: 250
+  equalize_reps: 100
 
 # Dated events printed against the curves and drawn as vertical rules.
 events:

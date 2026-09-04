@@ -66,7 +66,7 @@ corpus:
     family: (focal_ptsd) OR (focal_trauma) OR (ancestors) OR (controls)
   exclusions:
     - {term: "physical trauma / trauma surgery", why: "NOT excluded on purpose — the somatic sense is the origin of the creep story; expect a physical-injury clade in CINAHL/medicine and read it as a jingle finding, not noise. Revisit if it swamps the health source (>60% of kept docs)."}
-    - {habitat: "MEDLINE / trauma surgery journals", why: "origin habitat for the somatic sense; decide whether to sample it as a labeled source or leave the health DB (CINAHL) as its proxy"}
+    - {habitat: "MEDLINE / trauma surgery journals", why: "DECIDED 2026-09-02: not sampled. The somatic->psychic creep predates the 1975 window; a general MEDLINE pull would flood the 'trauma' shards with the injury homonym (17's per-period cap samples from the pooled corpus). CINAHL carries the health habitat and keeps the homonym visible as a labeled probe. Revisit as a MeSH-scoped, labeled source only if a medicine-backflow question is asked."}
     - {habitat: "Historical Abstracts / humanities (memory studies, literary trauma theory)", why: "collective-trauma lineage (Caruth 1996; Alexander 2004) — leads to verify; not in the 13-DB budget; decide"}
   strata:
     journal: [JOUR, ABST, CONF, CASE, GEN]
@@ -184,8 +184,8 @@ embedding:
   model: allenai/scibert_scivocab_uncased
   max_length: 256
   max_sent_per_doc: 3
-  cap_per_term_period: 250
-  control_cap: 120
+  cap_per_term_period: null   # embed every document; equalize at analysis time
+  control_cap: 300
   seed: 42
 
 analysis:
@@ -194,6 +194,8 @@ analysis:
   max_k: 4
   n_sample_titles: 10
   seed: 42
+  equalize_n: 250
+  equalize_reps: 100
 
 # Institutional events (dates are well known but VERIFY against APA/WHO records before print)
 events:
@@ -262,14 +264,21 @@ citation:
   batch: 25
   year_min: 2014          # post-DSM-5 window (placeholder — decide what the "correction" is here)
   seed: 42
-  # The ego-depletion citation layer measured propagation of a CORRECTION
-  # (the RRRs). PTSD has no single correction event; candidates for an
-  # analogous "critique" anchor set — ALL LEADS, verify before use:
-  #   Rosen & Lilienfeld 2008 (Clin Psych Rev) "empirical evaluation of core assumptions"
-  #   McNally 2003 (Annu Rev Psychol) "Progress and controversy in the study of PTSD"
-  #   Haslam 2016 (Psych Inquiry) concept creep
-  #   Haslam & McGrath 2020 (Social Research) creeping concept of trauma
-  # Leave empty until decided; 23 refuses to run without anchors.
+  # DECIDED 2026-09-02: the anchor/"correction" module (23/23b) is OPTIONAL
+  # and case-specific — it was the right question for ego depletion (did the
+  # RRR correction travel with the concept?), not the layer's purpose. The
+  # default citation analyses for any concept are graph-level and
+  # exploratory: (1) citation communities among corpus docs as structural
+  # niches; (2) semantic alignment within vs between communities per
+  # period; (3) inter-community flow matrix over time paired with
+  # citing->cited semantic distance (readings to look for, not impose:
+  # insulation / cross-pollination / backflow / absorption). Those need
+  # reference lists for ALL DOI'd docs — start collecting early (quota).
+  # If a message-tracking question does arise for trauma, candidate
+  # critique anchors — ALL LEADS, verify before use: Haslam 2016 (Psych
+  # Inquiry); Haslam & McGrath 2020 (Social Research); McNally 2003 (Annu
+  # Rev Psychol) "bracket creep"; Rosen & Lilienfeld 2008 (Clin Psych Rev).
+  # Left empty; 23 refuses to run without anchors.
   anchors: []
   anchors_extra: []
   coinage: null

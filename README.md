@@ -64,6 +64,10 @@ To add a concept: copy `configs/ego_depletion.yaml`, change `concept`, `slug`, `
 
 Requires `pyyaml` and `diptest` (in `requirements.txt`).
 
+**Corpus spec.** The config's `corpus:` block is the retrieval log made machine-readable: every export under `ris_root` must match a `sources[].files` or `ignore[].files` glob or 16 refuses to run. Each document carries `sources` and a register `stratum` (journal / thesis / book); 16 prints a per-source coverage audit and writes it to the manifest. Guiding principles for building a corpus are in `../TLoN-lab_notebook.md` (Track A → Corpus construction).
+
+**No embedding cap; matched-n at analysis time (2026-09-02).** 17 embeds every document by default (`embedding.cap_per_term_period: null`); each shard records `n_pool` and `cap`. 18 makes every cross-period comparison (drift, cross-term distances, their noise floors) at equal sample size — `n_eq = min(n_a, n_b, analysis.equalize_n)`, repeated `analysis.equalize_reps` times, mean ± sd, full-data estimate alongside — while within-period clustering uses all documents. Use a new `emb_dir` per cap setting (shards are checkpointed); `data/lineage_emb` is the Aug-13 250-cap run, `data/lineage_emb_full` the uncapped one. Subset re-runs: `18 --dbs`, `--sources`, `--strata` (outputs suffixed).
+
 | Script | Reads (from config) | Writes (results/<slug>/) |
 |---|---|---|
 | `16_build_lineage_corpus.py` | `ris_root`, `family_csv`, `family_works_glob`, `periods`, `control_terms` | `docs_path`, `lineage_power_table.csv` (next to it) |

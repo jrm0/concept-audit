@@ -9,10 +9,16 @@ The four analyses, in the order the paper needs them:
             ("participants", "results"...) — excess drift above what corpus
             change alone produces (Dubossarsky control). Split-half centroid
             reliability gives a noise floor per period.
+            MATCHED-n (2026-09-02): every cross-period distance is computed
+            at equal sample size (n_eq = min(n_a, n_b, analysis.equalize_n)),
+            repeated analysis.equalize_reps times, reported as mean ± sd, with
+            the full-data distance alongside. A small period's wobble is
+            therefore never read as movement. Control drift and noise floors
+            are evaluated at the same n_eq.
 
  B. BIRTH & DIVERGENCE   Cross-term distances per period (masked space is
-            commensurable across terms). The speciation prediction: at birth
-            (1995-2004) "ego depletion" sits close to its ancestors
+            commensurable across terms), matched-n as in A. The speciation
+            prediction: at birth "ego depletion" sits close to its ancestors
             (self-control / self-regulation); afterwards it DIVERGES.
             Also: do the ancestors converge or diverge from each other?
 
@@ -22,7 +28,10 @@ The four analyses, in the order the paper needs them:
             periods by centroid similarity. A BRANCHING event = two clusters
             in period p+1 whose best ancestor is the same cluster in p and
             whose mutual separation exceeds the noise floor. Only periods
-            whose clustering is SUPPORTED produce >1 node.
+            whose clustering is SUPPORTED produce >1 node. Uses EVERY
+            document in the period (no cap): minority senses are only
+            findable with the full data, and this is where lineages are
+            traced.
 
  D. EVENT ALIGNMENT   Dated events from the config are printed against the
             drift and divergence curves.
@@ -321,30 +330,86 @@ def main():
             f"(from {len(controls)} control terms)"
             + (f"; DROPPED (no control shard): {missing}" if missing else ""))
 
-    # Centroids + noise floors
-    cent, floor, ns = defaultdict(dict), defaultdict(dict), defaultdict(dict)
+    # Full-data centroids (used for C, for descriptive output, and as the
+    # "full" point estimate); vectors kept for matched-n resampling.
+    cent, floor, ns, vecs = (defaultdict(dict), defaultdict(dict),
+                             defaultdict(dict), defaultdict(dict))
     for t in data:
         for p, sh in data[t].items():
             if CENTER and p not in grand:
                 continue          # no composition-stable reference: skip
             if len(sh["V"]) >= MIN_N:
-                V = sh["V"] - grand[p] if CENTER else sh["V"]
+                V = (sh["V"] - grand[p] if CENTER else sh["V"]).astype(np.float64)
+                vecs[t][p] = V
                 cent[t][p] = V.mean(0)
                 floor[t][p] = split_half_floor(V)
                 ns[t][p] = len(V)
 
+    # ---------------------------------------------------------------------
+    # MATCHED-n RESAMPLING (2026-09-02). Cross-period comparisons are made at
+    # equal sample size so that the wobble of a small period is not read as
+    # movement: for each pair of document sets (A, B) draw n_eq = min(|A|,
+    # |B|, equalize_n) documents from each, compute the centroid distance,
+    # repeat EQ_REPS times, report mean and sd. The full-data distance is
+    # reported alongside. Within-period description (section C) uses every
+    # document — that is the point of removing the embedding cap.
+    # Note: when n_eq equals a set's size there is nothing to resample and
+    # the sd reads 0.0; the matched noise floor carries the uncertainty then.
+    # ---------------------------------------------------------------------
+    EQ_N = int(CFG["analysis"].get("equalize_n") or 250)
+    EQ_REPS = int(CFG["analysis"].get("equalize_reps") or 100)
+    rng_eq = np.random.RandomState(SEED)
+
+    def matched_distance(A, B):
+        """(full_d, eq_mean, eq_sd, n_eq) for centroid cosine distance."""
+        full = float(cosine(A.mean(0), B.mean(0)))
+        n_eq = min(len(A), len(B), EQ_N)
+        if n_eq < MIN_N:
+            return full, None, None, n_eq
+        ds = []
+        for _ in range(EQ_REPS):
+            ia = rng_eq.choice(len(A), n_eq, replace=False)
+            ib = rng_eq.choice(len(B), n_eq, replace=False)
+            ds.append(cosine(A[ia].mean(0), B[ib].mean(0)))
+        return full, float(np.mean(ds)), float(np.std(ds)), n_eq
+
+    def matched_floor(V, n_eq):
+        """Split-half noise floor evaluated on samples of size n_eq (so the
+        floor is on the same footing as the matched distance)."""
+        if n_eq is None or n_eq < 10:
+            return None
+        ds = []
+        for _ in range(max(10, EQ_REPS // 4)):
+            idx = rng_eq.choice(len(V), min(len(V), n_eq), replace=False)
+            h = len(idx) // 2
+            ds.append(cosine(V[idx[:h]].mean(0), V[idx[h:2 * h]].mean(0)))
+        return float(np.mean(ds))
+
+    say(f"Matched-n resampling: n_eq = min(n_a, n_b, {EQ_N}); {EQ_REPS} draws; "
+        f"full-data estimate reported alongside.")
+
     # --- A. DRIFT with control null ---
-    ctrl_drift = {}
-    for p in periods:
+    # control drift per period, matched to the SAME n_eq used for the term
+    # (controls are large; sub-sampling them to n_eq keeps the null honest)
+    def ctrl_drift_at(p, n_eq):
         vals = []
         for c in controls:
-            ps = sorted(cent[c])
-            if p in cent[c] and ps and ps[0] != p and ps[0] in cent[c]:
-                vals.append(cosine(cent[c][ps[0]], cent[c][p]))
-        ctrl_drift[p] = float(np.mean(vals)) if vals else None
+            ps = sorted(vecs[c])
+            if p in vecs[c] and ps and ps[0] != p:
+                A, B = vecs[c][ps[0]], vecs[c][p]
+                k = min(len(A), len(B), n_eq)
+                if k < MIN_N:
+                    continue
+                ds = []
+                for _ in range(max(10, EQ_REPS // 4)):
+                    ia = rng_eq.choice(len(A), k, replace=False)
+                    ib = rng_eq.choice(len(B), k, replace=False)
+                    ds.append(cosine(A[ia].mean(0), B[ib].mean(0)))
+                vals.append(float(np.mean(ds)))
+        return float(np.mean(vals)) if vals else None
 
     drift_rows = []
-    say("=== A. DRIFT FROM ORIGIN (excess over control terms) ===")
+    say("\n=== A. DRIFT FROM ORIGIN (matched-n; excess over control terms) ===")
     if CENTER:
         say("CAUTION: under --center the control terms DEFINE the reference, "
             "so their residual drift is deflated by construction and 'excess' "
@@ -352,46 +417,61 @@ def main():
             "distances, common reference, unaffected); read A primarily in "
             "the raw run, using centering only as a shape check.")
     for t in family:
-        ps = sorted(cent[t])
+        ps = sorted(vecs[t])
         if len(ps) < 2:
             continue
         origin = ps[0]
-        say(f"\n{t}  (origin {origin})")
+        say(f"\n{t}  (origin {origin}, n={ns[t][origin]})")
         for p in ps:
-            d = float(cosine(cent[t][origin], cent[t][p])) if p != origin else 0.0
-            cd = ctrl_drift.get(p)
-            excess = d - cd if cd is not None else None
-            nf = floor[t][p]
-            flag = ""
-            if excess is not None and nf is not None:
-                flag = " *" if excess > 2 * nf else ""
-            say(f"  {p}: n={ns[t][p]:>4} drift={d:.4f} "
-                f"control={cd if cd is not None else '-'} "
-                f"excess={excess if excess is not None else '-'}{flag}")
-            drift_rows.append([t, p, ns[t][p], round(d, 4),
-                               round(cd, 4) if cd is not None else "",
-                               round(excess, 4) if excess is not None else "",
-                               round(nf, 4) if nf is not None else ""])
+            if p == origin:
+                full, d, sd, n_eq = 0.0, 0.0, 0.0, min(ns[t][p], EQ_N)
+            else:
+                full, d, sd, n_eq = matched_distance(vecs[t][origin], vecs[t][p])
+            cd = ctrl_drift_at(p, n_eq) if d is not None else None
+            excess = (d - cd) if (d is not None and cd is not None) else None
+            nf = matched_floor(vecs[t][p], n_eq)
+            flag = " *" if (excess is not None and nf is not None
+                            and excess > 2 * nf) else ""
+            say(f"  {p}: n={ns[t][p]:>5} n_eq={n_eq:>4} "
+                f"drift={'-' if d is None else f'{d:.4f}'}"
+                f"±{'-' if sd is None else f'{sd:.4f}'} (full {full:.4f}) "
+                f"control={'-' if cd is None else f'{cd:.4f}'} "
+                f"excess={'-' if excess is None else f'{excess:.4f}'}{flag}")
+            drift_rows.append([t, p, ns[t][p], n_eq,
+                               "" if d is None else round(d, 4),
+                               "" if sd is None else round(sd, 4),
+                               round(full, 4),
+                               "" if cd is None else round(cd, 4),
+                               "" if excess is None else round(excess, 4),
+                               "" if nf is None else round(nf, 4)])
     with open(RESULTS / f"lineage_drift{SUF}.csv", "w", encoding="utf-8") as f:
-        f.write("term,period,n,drift_from_origin,control_drift,"
-                "excess_drift,noise_floor\n")
+        # drift_from_origin / control_drift / excess_drift are the MATCHED-n
+        # estimates (primary); drift_full is the all-documents estimate.
+        f.write("term,period,n,n_eq,drift_from_origin,drift_eq_sd,drift_full,"
+                "control_drift,excess_drift,noise_floor\n")
         for r in drift_rows:
             f.write(",".join(str(x) for x in r) + "\n")
 
     # --- B. BIRTH & DIVERGENCE (cross-term distances per period) ---
-    say("\n\n=== B. CROSS-TERM DISTANCES (masked space) ===")
+    say("\n\n=== B. CROSS-TERM DISTANCES (masked space; matched-n) ===")
     dist_rows = []
     key_pairs = KEY_PAIRS
     for p in periods:
-        for a, b in combinations(sorted(cent), 2):
-            if p in cent[a] and p in cent[b]:
+        for a, b in combinations(sorted(vecs), 2):
+            if p in vecs[a] and p in vecs[b]:
+                full, d, sd, n_eq = matched_distance(vecs[a][p], vecs[b][p])
                 dist_rows.append([p, a, b,
-                                  round(float(cosine(cent[a][p], cent[b][p])), 4)])
+                                  round(full, 4) if d is None else round(d, 4),
+                                  "" if sd is None else round(sd, 4),
+                                  round(full, 4), n_eq])
     with open(RESULTS / f"term_distances{SUF}.csv", "w", encoding="utf-8") as f:
-        f.write("period,term_a,term_b,cosine_distance\n")
+        # cosine_distance = matched-n estimate (falls back to full when a
+        # side is below MIN_N); distance_full = all documents.
+        f.write("period,term_a,term_b,cosine_distance,distance_eq_sd,"
+                "distance_full,n_eq\n")
         for r in dist_rows:
             f.write(",".join(str(x) for x in r) + "\n")
-    lookup = {(p, a, b): d for p, a, b, d in dist_rows}
+    lookup = {(p, a, b): (d, sd, n_eq) for p, a, b, d, sd, _f, n_eq in dist_rows}
     for a, b in key_pairs:
         aa, bb = sorted([a, b])
         series = [(p, lookup.get((p, aa, bb))) for p in periods
@@ -400,11 +480,14 @@ def main():
             say(f"\nd({a}, {b}): no shared periods (term missing from shards?)")
             continue
         say(f"\nd({a}, {b}):")
-        for p, d in series:
-            fl = [floor[t].get(p) for t in (a, b) if t in floor and floor[t].get(p)]
+        for p, (d, sd, n_eq) in series:
+            fl = [matched_floor(vecs[t][p], n_eq) for t in (a, b)
+                  if t in vecs and p in vecs[t]]
+            fl = [x for x in fl if x]
             nf = max(fl) if fl else None
             sig = " *" if (nf and d > 2 * nf) else ""
-            say(f"  {p}: {d:.4f}{sig}")
+            say(f"  {p}: {d:.4f}±{'-' if sd in (None, '') else f'{sd:.4f}'} "
+                f"(n_eq={n_eq}){sig}")
 
     # --- C. WITHIN-TERM LINEAGES + branching detection ---
     if CENTER:
@@ -561,6 +644,7 @@ def main():
     pc.write_manifest(
         CFG, __file__,
         params={"center": CENTER, "subset_filter": FILTER, "suffix": SUF,
+                "equalize_n": EQ_N, "equalize_reps": EQ_REPS,
                 "min_n": MIN_N, "cluster_min_n": CLUSTER_MIN_N,
                 "max_k": MAX_K, "seed": SEED, "control_terms": sorted(CONTROL_TERMS),
                 "terms": family, "periods": periods, "key_pairs": key_pairs,
