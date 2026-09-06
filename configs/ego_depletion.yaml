@@ -21,7 +21,9 @@ emb_dir: data/lineage_emb_full                     # written by 17, read by 18/2
 citations_cache: data/citations/openalex_refs.jsonl
 
 # --- outputs ----------------------------------------------------------------
-results_dir: results/ego_depletion                 # every script writes here + a manifest
+# results dir is named by embedding run: results/ego_depletion = the Aug-13
+# 250-cap shards (data/lineage_emb); results/ego_depletion_full = uncapped.
+results_dir: results/ego_depletion_full            # every script writes here + a manifest
 
 # --- corpus specification ---------------------------------------------------
 # Principle 10: the log is the methods section. Every export 16 ingests must

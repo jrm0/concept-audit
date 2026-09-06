@@ -1,0 +1,30 @@
+{
+  "script": "21_cluster_validity",
+  "concept": "ego depletion",
+  "config": "configs/ego_depletion.yaml",
+  "config_sha1": "fa78c211f362",
+  "timestamp": "2026-09-06T06:57:21-04:00",
+  "git_commit": "80522cf",
+  "git_dirty": true,
+  "argv": [],
+  "params": {
+    "n_boot": 50,
+    "seed": 42,
+    "min_n": 60,
+    "max_k": 4,
+    "dip_alpha": 0.05,
+    "stable": 0.75,
+    "cells": 42,
+    "supported": 10
+  },
+  "outputs": [
+    "results/ego_depletion_full/cluster_validity.csv"
+  ],
+  "versions": {
+    "python": "3.10.12",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "sklearn": "1.7.2",
+    "diptest": "0.11.0"
+  }
+}

@@ -1,0 +1,1300 @@
+{
+  "delay of gratification": {
+    "periods": [
+      {
+        "period": "1995-1999",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "clusters": [
+          {
+            "id": "1995-1999:0",
+            "n": 17
+          }
+        ]
+      },
+      {
+        "period": "2000-2004",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "clusters": [
+          {
+            "id": "2000-2004:0",
+            "n": 21
+          }
+        ]
+      },
+      {
+        "period": "2005-2009",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "clusters": [
+          {
+            "id": "2005-2009:0",
+            "n": 29
+          }
+        ]
+      },
+      {
+        "period": "2010-2014",
+        "dip_p": 0.8697,
+        "mean_jaccard": 0.7363,
+        "silhouette": 0.3247,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 66
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": 0.9459,
+        "mean_jaccard": 0.9392,
+        "silhouette": 0.3166,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 79
+          }
+        ]
+      },
+      {
+        "period": "2020-2024",
+        "dip_p": 0.5984,
+        "mean_jaccard": 0.9664,
+        "silhouette": 0.3217,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2020-2024:0",
+            "n": 66
+          }
+        ]
+      },
+      {
+        "period": "2025-2025",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "clusters": [
+          {
+            "id": "2025-2025:0",
+            "n": 16
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "2000-2004:0",
+        "parent": "1995-1999:0",
+        "cos": "0.9896"
+      },
+      {
+        "child": "2005-2009:0",
+        "parent": "2000-2004:0",
+        "cos": "0.9923"
+      },
+      {
+        "child": "2010-2014:0",
+        "parent": "2005-2009:0",
+        "cos": "0.9937"
+      },
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": "0.9979"
+      },
+      {
+        "child": "2020-2024:0",
+        "parent": "2015-2019:0",
+        "cos": "0.9963"
+      },
+      {
+        "child": "2025-2025:0",
+        "parent": "2020-2024:0",
+        "cos": "0.9905"
+      }
+    ],
+    "branchings": []
+  },
+  "depletion effect": {
+    "periods": [
+      {
+        "period": "2010-2014",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 25
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": 0.0002,
+        "mean_jaccard": 0.9713,
+        "silhouette": 0.4387,
+        "verdict": "SUPPORTED",
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 25
+          },
+          {
+            "id": "2015-2019:1",
+            "n": 19
+          },
+          {
+            "id": "2015-2019:2",
+            "n": 22
+          }
+        ]
+      },
+      {
+        "period": "2020-2024",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "clusters": [
+          {
+            "id": "2020-2024:0",
+            "n": 24
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": "0.961"
+      },
+      {
+        "child": "2015-2019:1",
+        "parent": "2010-2014:0",
+        "cos": "0.9688"
+      },
+      {
+        "child": "2015-2019:2",
+        "parent": "2010-2014:0",
+        "cos": "0.9625"
+      },
+      {
+        "child": "2020-2024:0",
+        "parent": "2015-2019:0",
+        "cos": "0.9835"
+      }
+    ],
+    "branchings": [
+      {
+        "parent": "2010-2014:0",
+        "period": "2015-2019",
+        "children": [
+          "2015-2019:0",
+          "2015-2019:1",
+          "2015-2019:2"
+        ],
+        "min_separation": "0.0561",
+        "noise_floor": 0.006
+      }
+    ]
+  },
+  "ego depletion": {
+    "periods": [
+      {
+        "period": "2005-2009",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "clusters": [
+          {
+            "id": "2005-2009:0",
+            "n": 43
+          }
+        ]
+      },
+      {
+        "period": "2010-2014",
+        "dip_p": 0.713,
+        "mean_jaccard": 0.7987,
+        "silhouette": 0.326,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 121
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": 0.6759,
+        "mean_jaccard": 0.9374,
+        "silhouette": 0.4107,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 258
+          }
+        ]
+      },
+      {
+        "period": "2020-2024",
+        "dip_p": 0.991,
+        "mean_jaccard": 0.9438,
+        "silhouette": 0.4327,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2020-2024:0",
+            "n": 206
+          }
+        ]
+      },
+      {
+        "period": "2025-2025",
+        "dip_p": 0.9905,
+        "mean_jaccard": 0.871,
+        "silhouette": 0.4492,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2025-2025:0",
+            "n": 85
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "2010-2014:0",
+        "parent": "2005-2009:0",
+        "cos": "0.9945"
+      },
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": "0.9981"
+      },
+      {
+        "child": "2020-2024:0",
+        "parent": "2015-2019:0",
+        "cos": "0.9948"
+      },
+      {
+        "child": "2025-2025:0",
+        "parent": "2020-2024:0",
+        "cos": "0.9987"
+      }
+    ],
+    "branchings": []
+  },
+  "executive function": {
+    "periods": [
+      {
+        "period": "2000-2004",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "clusters": [
+          {
+            "id": "2000-2004:0",
+            "n": 26
+          }
+        ]
+      },
+      {
+        "period": "2005-2009",
+        "dip_p": 0.9672,
+        "mean_jaccard": 0.718,
+        "silhouette": 0.4138,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2005-2009:0",
+            "n": 62
+          }
+        ]
+      },
+      {
+        "period": "2010-2014",
+        "dip_p": 0.9911,
+        "mean_jaccard": 0.5975,
+        "silhouette": 0.2423,
+        "verdict": "NOT SUPPORTED",
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 158
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": 0.9243,
+        "mean_jaccard": 0.8918,
+        "silhouette": 0.352,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 258
+          }
+        ]
+      },
+      {
+        "period": "2020-2024",
+        "dip_p": 0.9744,
+        "mean_jaccard": 0.6691,
+        "silhouette": 0.3869,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2020-2024:0",
+            "n": 293
+          }
+        ]
+      },
+      {
+        "period": "2025-2025",
+        "dip_p": 0.981,
+        "mean_jaccard": 0.6542,
+        "silhouette": 0.2846,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2025-2025:0",
+            "n": 105
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "2005-2009:0",
+        "parent": "2000-2004:0",
+        "cos": "0.995"
+      },
+      {
+        "child": "2010-2014:0",
+        "parent": "2005-2009:0",
+        "cos": "0.9965"
+      },
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": "0.9981"
+      },
+      {
+        "child": "2020-2024:0",
+        "parent": "2015-2019:0",
+        "cos": "0.9991"
+      },
+      {
+        "child": "2025-2025:0",
+        "parent": "2020-2024:0",
+        "cos": "0.9986"
+      }
+    ],
+    "branchings": []
+  },
+  "regulatory resource": {
+    "periods": [],
+    "links": [],
+    "branchings": []
+  },
+  "self control": {
+    "periods": [
+      {
+        "period": "1975-1979",
+        "dip_p": 0.9901,
+        "mean_jaccard": 0.8472,
+        "silhouette": 0.313,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "1975-1979:0",
+            "n": 496
+          }
+        ]
+      },
+      {
+        "period": "1980-1984",
+        "dip_p": 0.0007,
+        "mean_jaccard": 0.9824,
+        "silhouette": 0.3333,
+        "verdict": "SUPPORTED",
+        "clusters": [
+          {
+            "id": "1980-1984:0",
+            "n": 241
+          },
+          {
+            "id": "1980-1984:1",
+            "n": 386
+          }
+        ]
+      },
+      {
+        "period": "1985-1989",
+        "dip_p": 0.0124,
+        "mean_jaccard": 0.9882,
+        "silhouette": 0.3176,
+        "verdict": "SUPPORTED",
+        "clusters": [
+          {
+            "id": "1985-1989:0",
+            "n": 201
+          },
+          {
+            "id": "1985-1989:1",
+            "n": 397
+          }
+        ]
+      },
+      {
+        "period": "1990-1994",
+        "dip_p": 0.402,
+        "mean_jaccard": 0.9732,
+        "silhouette": 0.307,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "1990-1994:0",
+            "n": 667
+          }
+        ]
+      },
+      {
+        "period": "1995-1999",
+        "dip_p": 0.7565,
+        "mean_jaccard": 0.9293,
+        "silhouette": 0.2483,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "1995-1999:0",
+            "n": 943
+          }
+        ]
+      },
+      {
+        "period": "2000-2004",
+        "dip_p": 0.8236,
+        "mean_jaccard": 0.9434,
+        "silhouette": 0.2553,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2000-2004:0",
+            "n": 1121
+          }
+        ]
+      },
+      {
+        "period": "2005-2009",
+        "dip_p": 0.9928,
+        "mean_jaccard": 0.9145,
+        "silhouette": 0.2385,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2005-2009:0",
+            "n": 2037
+          }
+        ]
+      },
+      {
+        "period": "2010-2014",
+        "dip_p": 0.8453,
+        "mean_jaccard": 0.9377,
+        "silhouette": 0.2449,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 2901
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": 0.9978,
+        "mean_jaccard": 0.9507,
+        "silhouette": 0.2538,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 3683
+          }
+        ]
+      },
+      {
+        "period": "2020-2024",
+        "dip_p": 0.8901,
+        "mean_jaccard": 0.9379,
+        "silhouette": 0.2373,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2020-2024:0",
+            "n": 3910
+          }
+        ]
+      },
+      {
+        "period": "2025-2025",
+        "dip_p": 0.9795,
+        "mean_jaccard": 0.897,
+        "silhouette": 0.2414,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2025-2025:0",
+            "n": 1118
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "1980-1984:0",
+        "parent": "1975-1979:0",
+        "cos": "0.9733"
+      },
+      {
+        "child": "1980-1984:1",
+        "parent": "1975-1979:0",
+        "cos": "0.9912"
+      },
+      {
+        "child": "1985-1989:0",
+        "parent": "1980-1984:0",
+        "cos": "0.997"
+      },
+      {
+        "child": "1985-1989:1",
+        "parent": "1980-1984:1",
+        "cos": "0.999"
+      },
+      {
+        "child": "1990-1994:0",
+        "parent": "1985-1989:1",
+        "cos": "0.996"
+      },
+      {
+        "child": "1995-1999:0",
+        "parent": "1990-1994:0",
+        "cos": "0.999"
+      },
+      {
+        "child": "2000-2004:0",
+        "parent": "1995-1999:0",
+        "cos": "0.9995"
+      },
+      {
+        "child": "2005-2009:0",
+        "parent": "2000-2004:0",
+        "cos": "0.9994"
+      },
+      {
+        "child": "2010-2014:0",
+        "parent": "2005-2009:0",
+        "cos": "0.9997"
+      },
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": "0.9997"
+      },
+      {
+        "child": "2020-2024:0",
+        "parent": "2015-2019:0",
+        "cos": "0.9995"
+      },
+      {
+        "child": "2025-2025:0",
+        "parent": "2020-2024:0",
+        "cos": "0.9994"
+      }
+    ],
+    "branchings": [
+      {
+        "parent": "1975-1979:0",
+        "period": "1980-1984",
+        "children": [
+          "1980-1984:0",
+          "1980-1984:1"
+        ],
+        "min_separation": "0.0622",
+        "noise_floor": 0.0009
+      }
+    ]
+  },
+  "self control depletion": {
+    "periods": [
+      {
+        "period": "2010-2014",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 28
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 32
+          }
+        ]
+      },
+      {
+        "period": "2020-2024",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "clusters": [
+          {
+            "id": "2020-2024:0",
+            "n": 22
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": "0.9905"
+      },
+      {
+        "child": "2020-2024:0",
+        "parent": "2015-2019:0",
+        "cos": "0.9863"
+      }
+    ],
+    "branchings": []
+  },
+  "self regulation": {
+    "periods": [
+      {
+        "period": "1975-1979",
+        "dip_p": 0.6493,
+        "mean_jaccard": 0.939,
+        "silhouette": 0.3005,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "1975-1979:0",
+            "n": 166
+          }
+        ]
+      },
+      {
+        "period": "1980-1984",
+        "dip_p": 0.7938,
+        "mean_jaccard": 0.8801,
+        "silhouette": 0.2962,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "1980-1984:0",
+            "n": 317
+          }
+        ]
+      },
+      {
+        "period": "1985-1989",
+        "dip_p": 0.793,
+        "mean_jaccard": 0.968,
+        "silhouette": 0.3202,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "1985-1989:0",
+            "n": 464
+          }
+        ]
+      },
+      {
+        "period": "1990-1994",
+        "dip_p": 0.0049,
+        "mean_jaccard": 0.9278,
+        "silhouette": 0.2149,
+        "verdict": "SUPPORTED",
+        "clusters": [
+          {
+            "id": "1990-1994:0",
+            "n": 460
+          },
+          {
+            "id": "1990-1994:1",
+            "n": 291
+          }
+        ]
+      },
+      {
+        "period": "1995-1999",
+        "dip_p": 0.0,
+        "mean_jaccard": 0.9655,
+        "silhouette": 0.2327,
+        "verdict": "SUPPORTED",
+        "clusters": [
+          {
+            "id": "1995-1999:0",
+            "n": 862
+          },
+          {
+            "id": "1995-1999:1",
+            "n": 613
+          }
+        ]
+      },
+      {
+        "period": "2000-2004",
+        "dip_p": 0.0,
+        "mean_jaccard": 0.9787,
+        "silhouette": 0.2219,
+        "verdict": "SUPPORTED",
+        "clusters": [
+          {
+            "id": "2000-2004:0",
+            "n": 799
+          },
+          {
+            "id": "2000-2004:1",
+            "n": 1297
+          }
+        ]
+      },
+      {
+        "period": "2005-2009",
+        "dip_p": 0.9506,
+        "mean_jaccard": 0.8876,
+        "silhouette": 0.2752,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2005-2009:0",
+            "n": 3297
+          }
+        ]
+      },
+      {
+        "period": "2010-2014",
+        "dip_p": 0.7951,
+        "mean_jaccard": 0.8786,
+        "silhouette": 0.2672,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 4900
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": 0.02,
+        "mean_jaccard": 0.8102,
+        "silhouette": 0.2403,
+        "verdict": "SUPPORTED",
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 1270
+          },
+          {
+            "id": "2015-2019:1",
+            "n": 4774
+          }
+        ]
+      },
+      {
+        "period": "2020-2024",
+        "dip_p": 0.8311,
+        "mean_jaccard": 0.955,
+        "silhouette": 0.2642,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2020-2024:0",
+            "n": 6827
+          }
+        ]
+      },
+      {
+        "period": "2025-2025",
+        "dip_p": 0.0084,
+        "mean_jaccard": 0.9786,
+        "silhouette": 0.2829,
+        "verdict": "SUPPORTED",
+        "clusters": [
+          {
+            "id": "2025-2025:0",
+            "n": 658
+          },
+          {
+            "id": "2025-2025:1",
+            "n": 2085
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "1980-1984:0",
+        "parent": "1975-1979:0",
+        "cos": "0.9972"
+      },
+      {
+        "child": "1985-1989:0",
+        "parent": "1980-1984:0",
+        "cos": "0.9986"
+      },
+      {
+        "child": "1990-1994:0",
+        "parent": "1985-1989:0",
+        "cos": "0.9961"
+      },
+      {
+        "child": "1990-1994:1",
+        "parent": "1985-1989:0",
+        "cos": "0.9818"
+      },
+      {
+        "child": "1995-1999:0",
+        "parent": "1990-1994:0",
+        "cos": "0.9986"
+      },
+      {
+        "child": "1995-1999:1",
+        "parent": "1990-1994:1",
+        "cos": "0.9987"
+      },
+      {
+        "child": "2000-2004:0",
+        "parent": "1995-1999:1",
+        "cos": "0.9993"
+      },
+      {
+        "child": "2000-2004:1",
+        "parent": "1995-1999:0",
+        "cos": "0.9996"
+      },
+      {
+        "child": "2005-2009:0",
+        "parent": "2000-2004:1",
+        "cos": "0.9967"
+      },
+      {
+        "child": "2010-2014:0",
+        "parent": "2005-2009:0",
+        "cos": "0.9993"
+      },
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": "0.9725"
+      },
+      {
+        "child": "2015-2019:1",
+        "parent": "2010-2014:0",
+        "cos": "0.9982"
+      },
+      {
+        "child": "2020-2024:0",
+        "parent": "2015-2019:1",
+        "cos": "0.9971"
+      },
+      {
+        "child": "2025-2025:0",
+        "parent": "2020-2024:0",
+        "cos": "0.9718"
+      },
+      {
+        "child": "2025-2025:1",
+        "parent": "2020-2024:0",
+        "cos": "0.9965"
+      }
+    ],
+    "branchings": [
+      {
+        "parent": "1985-1989:0",
+        "period": "1990-1994",
+        "children": [
+          "1990-1994:0",
+          "1990-1994:1"
+        ],
+        "min_separation": "0.0338",
+        "noise_floor": 0.0008
+      },
+      {
+        "parent": "2010-2014:0",
+        "period": "2015-2019",
+        "children": [
+          "2015-2019:0",
+          "2015-2019:1"
+        ],
+        "min_separation": "0.0406",
+        "noise_floor": 0.0001
+      },
+      {
+        "parent": "2020-2024:0",
+        "period": "2025-2025",
+        "children": [
+          "2025-2025:0",
+          "2025-2025:1"
+        ],
+        "min_separation": "0.048",
+        "noise_floor": 0.0002
+      }
+    ]
+  },
+  "self regulatory depletion": {
+    "periods": [
+      {
+        "period": "2010-2014",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 22
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 18
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": "0.9882"
+      }
+    ],
+    "branchings": []
+  },
+  "strength model": {
+    "periods": [
+      {
+        "period": "2005-2009",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "clusters": [
+          {
+            "id": "2005-2009:0",
+            "n": 21
+          }
+        ]
+      },
+      {
+        "period": "2010-2014",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 43
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": 0.0095,
+        "mean_jaccard": 0.9654,
+        "silhouette": 0.43,
+        "verdict": "SUPPORTED",
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 50
+          },
+          {
+            "id": "2015-2019:1",
+            "n": 21
+          }
+        ]
+      },
+      {
+        "period": "2020-2024",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "clusters": [
+          {
+            "id": "2020-2024:0",
+            "n": 40
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "2010-2014:0",
+        "parent": "2005-2009:0",
+        "cos": "0.9868"
+      },
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": "0.9751"
+      },
+      {
+        "child": "2015-2019:1",
+        "parent": "2010-2014:0",
+        "cos": "0.9685"
+      },
+      {
+        "child": "2020-2024:0",
+        "parent": "2015-2019:0",
+        "cos": "0.9857"
+      }
+    ],
+    "branchings": [
+      {
+        "parent": "2010-2014:0",
+        "period": "2015-2019",
+        "children": [
+          "2015-2019:0",
+          "2015-2019:1"
+        ],
+        "min_separation": "0.0864",
+        "noise_floor": 0.0059
+      }
+    ]
+  },
+  "willpower": {
+    "periods": [
+      {
+        "period": "1985-1989",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "clusters": [
+          {
+            "id": "1985-1989:0",
+            "n": 20
+          }
+        ]
+      },
+      {
+        "period": "1990-1994",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "clusters": [
+          {
+            "id": "1990-1994:0",
+            "n": 43
+          }
+        ]
+      },
+      {
+        "period": "1995-1999",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "clusters": [
+          {
+            "id": "1995-1999:0",
+            "n": 57
+          }
+        ]
+      },
+      {
+        "period": "2000-2004",
+        "dip_p": 0.9794,
+        "mean_jaccard": 0.7303,
+        "silhouette": 0.2641,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2000-2004:0",
+            "n": 93
+          }
+        ]
+      },
+      {
+        "period": "2005-2009",
+        "dip_p": 0.5959,
+        "mean_jaccard": 0.8643,
+        "silhouette": 0.2565,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2005-2009:0",
+            "n": 158
+          }
+        ]
+      },
+      {
+        "period": "2010-2014",
+        "dip_p": 0.993,
+        "mean_jaccard": 0.8728,
+        "silhouette": 0.2746,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 267
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": 0.9638,
+        "mean_jaccard": 0.6978,
+        "silhouette": 0.269,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 296
+          }
+        ]
+      },
+      {
+        "period": "2020-2024",
+        "dip_p": 0.0489,
+        "mean_jaccard": 0.8123,
+        "silhouette": 0.2183,
+        "verdict": "SUPPORTED",
+        "clusters": [
+          {
+            "id": "2020-2024:0",
+            "n": 140
+          },
+          {
+            "id": "2020-2024:1",
+            "n": 164
+          }
+        ]
+      },
+      {
+        "period": "2025-2025",
+        "dip_p": 0.9536,
+        "mean_jaccard": 0.7343,
+        "silhouette": 0.2696,
+        "verdict": "candidate only",
+        "clusters": [
+          {
+            "id": "2025-2025:0",
+            "n": 109
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "1990-1994:0",
+        "parent": "1985-1989:0",
+        "cos": "0.9895"
+      },
+      {
+        "child": "1995-1999:0",
+        "parent": "1990-1994:0",
+        "cos": "0.9895"
+      },
+      {
+        "child": "2000-2004:0",
+        "parent": "1995-1999:0",
+        "cos": "0.9963"
+      },
+      {
+        "child": "2005-2009:0",
+        "parent": "2000-2004:0",
+        "cos": "0.9974"
+      },
+      {
+        "child": "2010-2014:0",
+        "parent": "2005-2009:0",
+        "cos": "0.9978"
+      },
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": "0.9986"
+      },
+      {
+        "child": "2020-2024:0",
+        "parent": "2015-2019:0",
+        "cos": "0.9861"
+      },
+      {
+        "child": "2020-2024:1",
+        "parent": "2015-2019:0",
+        "cos": "0.994"
+      },
+      {
+        "child": "2025-2025:0",
+        "parent": "2020-2024:1",
+        "cos": "0.9935"
+      }
+    ],
+    "branchings": [
+      {
+        "parent": "2015-2019:0",
+        "period": "2020-2024",
+        "children": [
+          "2020-2024:0",
+          "2020-2024:1"
+        ],
+        "min_separation": "0.0333",
+        "noise_floor": 0.0016
+      }
+    ]
+  }
+}
