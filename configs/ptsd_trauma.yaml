@@ -62,10 +62,35 @@ corpus:
       OR "post-Vietnam syndrome" OR "rape trauma syndrome"
     controls: >-
       "acute stress disorder" OR "adjustment disorder" OR "bereavement"
-    # family = the union; run per database group like ego depletion.
-    family: (focal_ptsd) OR (focal_trauma) OR (ancestors) OR (controls)
+    # family = the union, TI/AB, run per database group like ego depletion.
+    # VERBATIM as run 2026-09-02 (searchMode=any):
+    family: >-
+      TI ("posttraumatic stress disorder" OR "post-traumatic stress disorder" OR "PTSD" OR "complex PTSD"
+      OR "trauma" OR "traumatic stress" OR "psychological trauma" OR "vicarious trauma"
+      OR "secondary traumatic stress" OR "collective trauma" OR "intergenerational trauma"
+      OR "trauma-informed" OR "trauma informed" OR "moral injury" OR "shell shock" OR "war neurosis"
+      OR "combat neurosis" OR "traumatic neurosis" OR "battle fatigue" OR "combat fatigue"
+      OR "gross stress reaction" OR "post-Vietnam syndrome" OR "rape trauma syndrome"
+      OR "acute stress disorder" OR "adjustment disorder" OR "bereavement")
+      OR AB (<same 26 terms>)
+    # Health only: bare "trauma" admitted by TITLE and only with psychological
+    # vocabulary co-occurring (searchMode=bool). Everything else as in family.
+    family_health: >-
+      (TI (<25 terms, no bare "trauma">) OR AB (<25 terms, no bare "trauma">))
+      OR (TI ("trauma") AND (TI (psycholog* OR "mental health" OR emotional OR stress OR "nurses" OR "nursing")
+      OR AB (psycholog* OR "mental health" OR emotional OR stress OR "nurses" OR "nursing")))
+  # Scoping counts 2026-09-02 (peer reviewed, TI/AB, 1975-2025 unless noted):
+  #   Psyc: family full union 110,040; bare "trauma" TI/AB 69,680, TI-only 22,992;
+  #         PTSD 48,542; specific phrases 26,672; ancestors 538 (all dates)
+  #   Health: bare "trauma" 97,028; family title-only variant 69,813; psych-scoped 38,795
+  #   Crime/SW: 45,435 (title-only variant 30,916); Education 13,369; Business 2,996; Econ 182
+  # Fielded (TI/AB) queries are unaffected by EBSCO expanders (identical counts on/off).
+  db_codes: {psyc: "pdh,psyh", health: "cin20", crime_socialwork: "sih,cja,swh",
+             education: "eft", business: "bth,bft", econ: "ecn"}
+  export_limits: {per_export: 25000, per_day: 100000}
   exclusions:
     - {term: "physical trauma / trauma surgery", why: "NOT excluded on purpose — the somatic sense is the origin of the creep story; expect a physical-injury clade in CINAHL/medicine and read it as a jingle finding, not noise. Revisit if it swamps the health source (>60% of kept docs)."}
+    - {term: "bare 'trauma' in CINAHL, abstract-only or without psychological vocabulary", why: "DECIDED 2026-09-02: bare 'trauma' TI/AB in CINAHL = 97,028, overwhelmingly the injury sense (trauma center, trauma patients). Health samples bare 'trauma' by title only where psycholog*/mental health/emotional/stress/nurs* co-occur (38,795). The physical sense still enters via the specific phrases and is read as a labeled probe. Psyc keeps the FULL union (110,040) because abstract-only mentions of bare 'trauma' are the extraordinary->ordinary signal."}
     - {habitat: "MEDLINE / trauma surgery journals", why: "DECIDED 2026-09-02: not sampled. The somatic->psychic creep predates the 1975 window; a general MEDLINE pull would flood the 'trauma' shards with the injury homonym (17's per-period cap samples from the pooled corpus). CINAHL carries the health habitat and keeps the homonym visible as a labeled probe. Revisit as a MeSH-scoped, labeled source only if a medicine-backflow question is asked."}
     - {habitat: "Historical Abstracts / humanities (memory studies, literary trauma theory)", why: "collective-trauma lineage (Caruth 1996; Alexander 2004) — leads to verify; not in the 13-DB budget; decide"}
   strata:
@@ -75,54 +100,88 @@ corpus:
     popular: [NEWS, MGZN, BLOG]
   sources:
     # --- home field: PsycInfo/PsycArticles in date slices (principle 2/5) ---
-    - id: psyc_1975_1989
-      files: ["data/ebsco exports/ptsd_trauma/Psyc_family_1975-1989.ris"]
+    # Slices sized to the 25k-per-export limit; counts = scoping 2026-09-02.
+    - id: psyc_1965_1994
+      files: ["data/ebsco exports/ptsd_trauma/Psyc_family_1965-1994.ris"]
       databases: [APA PsycInfo, APA PsycArticles]
       query: family
-      dates: 1975-1989
+      dates: 1965-1994
       role: ancestor
-      question: "parent population around the 1980 coinage — pre- and immediately post-DSM-III"
+      question: "parent population before and around the 1980 coinage (three pre-coinage periods)"
+      n_expected: 6192
       n_records: null
-    - id: psyc_1990_2004
-      files: ["data/ebsco exports/ptsd_trauma/Psyc_family_1990-2004.ris"]
+    - id: psyc_1995_2004
+      files: ["data/ebsco exports/ptsd_trauma/Psyc_family_1995-2004.ris"]
       databases: [APA PsycInfo, APA PsycArticles]
       query: family
-      dates: 1990-2004
+      dates: 1995-2004
       role: family
       question: "DSM-IV era; Criterion A broadening; complex PTSD coinage"
+      n_expected: 12504
       n_records: null
-    - id: psyc_2005_2014
-      files: ["data/ebsco exports/ptsd_trauma/Psyc_family_2005-2014.ris"]
+    - id: psyc_2005_2009
+      files: ["data/ebsco exports/ptsd_trauma/Psyc_family_2005-2009.ris"]
       databases: [APA PsycInfo, APA PsycArticles]
       query: family
-      dates: 2005-2014
+      dates: 2005-2009
       role: family
-      question: "pre-DSM-5; Iraq/Afghanistan veteran literature; trauma-informed care emerges"
+      question: "Iraq/Afghanistan veteran literature; trauma-informed care emerges"
+      n_expected: 12777
       n_records: null
-    - id: psyc_2015_2025
-      files: ["data/ebsco exports/ptsd_trauma/Psyc_family_2015-2025.ris"]
+    - id: psyc_2010_2014
+      files: ["data/ebsco exports/ptsd_trauma/Psyc_family_2010-2014.ris"]
       databases: [APA PsycInfo, APA PsycArticles]
       query: family
-      dates: 2015-2025
+      dates: 2010-2014
+      role: family
+      question: "pre-/at DSM-5"
+      n_expected: 18531
+      n_records: null
+    - id: psyc_2015_2019
+      files: ["data/ebsco exports/ptsd_trauma/Psyc_family_2015-2019.ris"]
+      databases: [APA PsycInfo, APA PsycArticles]
+      query: family
+      dates: 2015-2019
       role: family
       question: "DSM-5 era; ICD-11 complex PTSD; peak creep period per Haslam"
+      n_expected: 22985
+      n_records: null
+    - id: psyc_2020_2022
+      files: ["data/ebsco exports/ptsd_trauma/Psyc_family_2020-2022.ris"]
+      databases: [APA PsycInfo, APA PsycArticles]
+      query: family
+      dates: 2020-2022
+      role: family
+      question: "pandemic era"
+      n_expected: 18367
+      n_records: null
+    - id: psyc_2023_2025
+      files: ["data/ebsco exports/ptsd_trauma/Psyc_family_2023-2025.ris"]
+      databases: [APA PsycInfo, APA PsycArticles]
+      query: family
+      dates: 2023-2025
+      role: family
+      question: "most recent usage"
+      n_expected: 19057
       n_records: null
     # --- habitats by hypothesis (Haslam & McGrath's four directions) ---
     - id: health
-      files: ["data/ebsco exports/ptsd_trauma/health_family.ris"]
-      databases: [CINAHL, "Dentistry & Oral Sciences Source"]
-      query: family
-      dates: 1975-2025
+      files: ["data/ebsco exports/ptsd_trauma/health_family_*.ris"]
+      databases: [CINAHL]
+      query: family_health
+      dates: "1975-2014 (12,648) / 2015-2019 (9,487) / 2020-2025 (16,660)"
       role: habitat
-      hypothesis: "direct->indirect (vicarious/secondary trauma in nursing) AND the somatic homonym (physical trauma) — two clades expected"
+      hypothesis: "direct->indirect (vicarious/secondary trauma in nursing); the somatic homonym enters only via specific phrases — see exclusions"
+      n_expected: 38795
       n_records: null
     - id: crime_socialwork
-      files: ["data/ebsco exports/ptsd_trauma/crime-socialwork_family.ris"]
+      files: ["data/ebsco exports/ptsd_trauma/crime-socialwork_family_*.ris"]
       databases: [SocINDEX with Full Text, Criminal Justice Abstracts, Social Work Abstracts]
       query: family
-      dates: 1975-2025
+      dates: "1975-2014 (22,483) / 2015-2025 (22,952)"
       role: habitat
       hypothesis: "individual->collective (sociology); trauma-informed practice (social work); victim/forensic use (criminal justice)"
+      n_expected: 45435
       n_records: null
     - id: education
       files: ["data/ebsco exports/ptsd_trauma/education_family.ris"]
@@ -131,6 +190,7 @@ corpus:
       dates: 1975-2025
       role: habitat
       hypothesis: "extraordinary->ordinary: trauma-informed schools; ACEs discourse"
+      n_expected: 13369
       n_records: null
     - id: business
       files: ["data/ebsco exports/ptsd_trauma/Business_family.ris"]
@@ -139,6 +199,7 @@ corpus:
       dates: 1975-2025
       role: habitat
       hypothesis: "extraordinary->ordinary: workplace trauma, trauma-informed leadership; also the SURPRISE BUDGET — same DB as ego depletion's migration niche, for comparability"
+      n_expected: 2996
       n_records: null
     - id: econ
       files: ["data/ebsco exports/ptsd_trauma/econ_family.ris"]
@@ -147,6 +208,7 @@ corpus:
       dates: 1975-2025
       role: habitat
       hypothesis: "surprise budget only (economics of veterans' disability, conflict) — expected small"
+      n_expected: 182
       n_records: null
     # --- popular stratum (principle 7: separate register; planned from the start) ---
     - id: popular_news
@@ -174,7 +236,7 @@ corpus:
     warn_if_dedupe_share_above: 0.45
 
 periods:
-  year_min: 1975
+  year_min: 1965          # three pre-coinage periods for PTSD (DSM-III 1980)
   year_max: 2025
   width: 5
 
