@@ -151,6 +151,7 @@ corpus:
   # (and says so); any other unlisted export is an error.
   ignore:
     - {files: "data/ebsco exports/constructs/**", why: "Paper-2 OSC-99 construct exports (osc_coding pipeline), not the ego-depletion family"}
+    - {files: "data/ebsco exports/ptsd_trauma/**", why: "Paper-1 comparator corpus (configs/ptsd_trauma.yaml), not the ego-depletion family"}
   # Audit thresholds (principle 8): 16 warns if a source falls below these.
   audit:
     min_abstract_share: 0.85

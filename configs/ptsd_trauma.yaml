@@ -19,9 +19,8 @@
 # STATUS (2026-09-11): RETRIEVAL IN PROGRESS. Every academic slice has been
 # requested at least once; delivered files sit in ris_root under their config
 # names, partials in partial/, byte-identical re-downloads in duplicates/.
-# `n_records` is null where delivery is still pending. Do NOT run 16 until all
-# n_records are filled (16 refuses unlisted files but does not know about
-# missing ones — the coverage audit is the check). Every citation-like item below is
+# All academic slices delivered as of 2026-09-11; Crime/SocialWork at 87-88%
+# (flagged on the source; re-request pending). 16 can run. Every citation-like item below is
 # a LEAD to verify before it appears in text (see project rule).
 #
 # PRE-REGISTER the predicted cells above BEFORE running 18.
@@ -181,8 +180,8 @@ corpus:
       role: family
       question: "most recent usage"
       n_expected: 19057          # single-year page counts: 6,742 / 6,014 / 6,301
-      n_records: 12278           # 2024: 5,994, 2025: 6,284 in place; 2023 delivered PARTIAL (842/6,742 -> partial/); 2023 RE-REQUESTED 2026-09-11
-      exported: 2026-09-09
+      n_records: 19004           # 2023: 6,726 (re-request 09-11, 99.8%), 2024: 5,994, 2025: 6,284; first 2023 delivery (842) in partial/
+      exported: 2026-09-11
     # --- habitats by hypothesis (Haslam & McGrath's four directions) ---
     - id: health
       files: ["data/ebsco exports/ptsd_trauma/health_family_*.ris"]
@@ -192,8 +191,8 @@ corpus:
       role: habitat
       hypothesis: "direct->indirect (vicarious/secondary trauma in nursing); the somatic homonym enters only via specific phrases — see exclusions"
       n_expected: 38795
-      n_records: 22135           # 1975-2014: 12,648 (100%), 2015-2019: 9,487 (100%); 2020-2025 delivered PARTIAL (8,812/16,660 -> partial/); RE-REQUESTED 2026-09-11 as 2020-2022 (8,401) + 2023-2025 (8,260)
-      exported: 2026-09-09
+      n_records: 38796           # 1975-2014: 12,648; 2015-2019: 9,487; 2020-2022: 8,401; 2023-2025: 8,260 (all 100%); first 2020-2025 delivery (8,812) in partial/
+      exported: 2026-09-11
     - id: crime_socialwork
       files: ["data/ebsco exports/ptsd_trauma/crime-socialwork_family_*.ris"]
       databases: [SocINDEX with Full Text, Criminal Justice Abstracts, Social Work Abstracts]
@@ -201,9 +200,10 @@ corpus:
       dates: "1975-2014 (22,483) / 2015-2025 (22,952)"
       role: habitat
       hypothesis: "individual->collective (sociology); trauma-informed practice (social work); victim/forensic use (criminal justice)"
-      n_expected: 45435          # page counts 2026-09-11: 22,483 + 22,952
-      n_records: null
-      requested: 2026-09-11
+      n_expected: 45435          # page counts 2026-09-11: 22,483 + 22,952 (= sum of per-DB counts: sih 15,702 + cja 5,491 + swh 1,290 for 1975-2014; exports do NOT dedupe across DBs)
+      n_records: 39856           # 19,611 (87.2%) + 20,245 (88.2%) — SHORT by ~12% in both slices, SocINDEX shortest (84%). Not the truncated-head signature (12-53%, one DB dominant); cause unknown. KEPT for the audit; RE-REQUEST both next window and compare (16 dedupes across files, so a union is safe).
+      exported: 2026-09-11
+      delivery_flag: "87-88% of page count; see note; re-request pending"
     - id: education
       files: ["data/ebsco exports/ptsd_trauma/education_family.ris"]
       databases: ["Education Full Text (H.W. Wilson)"]
@@ -212,8 +212,8 @@ corpus:
       role: habitat
       hypothesis: "extraordinary->ordinary: trauma-informed schools; ACEs discourse"
       n_expected: 19663          # full union on the results page 2026-09-11 (13,369 was the title-only scoping count)
-      n_records: null
-      requested: 2026-09-11
+      n_records: 19663           # 100%
+      exported: 2026-09-11
     - id: business
       files: ["data/ebsco exports/ptsd_trauma/Business_family.ris"]
       databases: [Business Source Complete, "Business Abstracts with Full Text (H.W. Wilson)"]
@@ -222,8 +222,8 @@ corpus:
       role: habitat
       hypothesis: "extraordinary->ordinary: workplace trauma, trauma-informed leadership; also the SURPRISE BUDGET — same DB as ego depletion's migration niche, for comparability"
       n_expected: 5124           # full union on the results page 2026-09-11 (2,996 was the title-only scoping count)
-      n_records: null
-      requested: 2026-09-11
+      n_records: 5087            # 99.3%
+      exported: 2026-09-11
     - id: econ
       files: ["data/ebsco exports/ptsd_trauma/econ_family.ris"]
       databases: [EconLit]
@@ -232,8 +232,8 @@ corpus:
       role: habitat
       hypothesis: "surprise budget only (economics of veterans' disability, conflict) — expected small"
       n_expected: 335            # full union on the results page (182 was the title-only scoping count)
-      n_records: null
-      requested: 2026-09-11
+      n_records: 335             # 100%; earliest record 1987
+      exported: 2026-09-11
     # --- popular stratum (principle 7: separate register; planned from the start) ---
     - id: popular_news
       files: ["data/ptsd_trauma/popular/news_*.jsonl"]
