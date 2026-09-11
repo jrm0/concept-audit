@@ -1,7 +1,7 @@
 """
 pipeline_config.py — One config file per concept; every lineage script reads it.
 
-Why this exists (2026-09-02, protocol refactor). Before this, the concept
+Why this exists (2026-09-08, protocol refactor). Before this, the concept
 name, family file, control terms, period floor, event dates, term pairs,
 venue-category regexes, citation anchors and even result numbers in figure
 titles were literals spread across 16/17/18/20/22/23/23b. Running a second

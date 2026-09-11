@@ -9,7 +9,7 @@ The four analyses, in the order the paper needs them:
             ("participants", "results"...) — excess drift above what corpus
             change alone produces (Dubossarsky control). Split-half centroid
             reliability gives a noise floor per period.
-            MATCHED-n (2026-09-02): every cross-period distance is computed
+            MATCHED-n (2026-09-08): every cross-period distance is computed
             at equal sample size (n_eq = min(n_a, n_b, analysis.equalize_n)),
             repeated analysis.equalize_reps times, reported as mean ± sd, with
             the full-data distance alongside. A small period's wobble is
@@ -59,7 +59,7 @@ filters keep only document vectors whose provenance matches, then run the
 identical analysis; outputs get a suffix (_src-<...>, _dbs-<...>,
 _strata-<...>) so subset runs never overwrite the full run. --dbs matches
 substrings of the RIS DB tags stored per vector by 17 (works on any shard);
---sources / --strata need shards embedded after 2026-09-02 (17 now stores
+--sources / --strata need shards embedded after 2026-09-08 (17 now stores
 corpus-spec source ids and register stratum per vector) and fail clearly on
 older shards. Control-term shards are filtered the same way so the drift
 null stays comparable.
@@ -145,14 +145,14 @@ def _subset_mask(z, n):
     if FILTER["sources"]:
         if "sources" not in z.files:
             raise SystemExit("--sources needs shards embedded by 17 after "
-                             "2026-09-02 (they store corpus-spec source ids); "
+                             "2026-09-08 (they store corpus-spec source ids); "
                              "use --dbs on older shards.")
         ids = [set(str(x).split("|")) for x in z["sources"]]
         mask &= np.array([bool(s & set(FILTER["sources"])) for s in ids])
     if FILTER["strata"]:
         if "strata" not in z.files:
             raise SystemExit("--strata needs shards embedded by 17 after "
-                             "2026-09-02 (they store the register stratum).")
+                             "2026-09-08 (they store the register stratum).")
         mask &= np.isin([str(x) for x in z["strata"]], FILTER["strata"])
     return mask
 
@@ -346,7 +346,7 @@ def main():
                 ns[t][p] = len(V)
 
     # ---------------------------------------------------------------------
-    # MATCHED-n RESAMPLING (2026-09-02). Cross-period comparisons are made at
+    # MATCHED-n RESAMPLING (2026-09-08). Cross-period comparisons are made at
     # equal sample size so that the wobble of a small period is not read as
     # movement: for each pair of document sets (A, B) draw n_eq = min(|A|,
     # |B|, equalize_n) documents from each, compute the centroid distance,

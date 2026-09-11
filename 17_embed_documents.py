@@ -15,7 +15,7 @@ Two artifact lessons are baked in:
 Control terms are embedded the same way from the same abstracts — the drift
 null (all embeddings move as corpus composition changes; Dubossarsky).
 
-NO CAP BY DEFAULT (2026-09-02). Until now each (term, period) was capped at
+NO CAP BY DEFAULT (2026-09-08). Until now each (term, period) was capped at
 250 documents, sampled from the pooled corpus. That equalized sample size
 across periods — which matters for CROSS-period comparisons (a centroid from
 50 documents wobbles more than one from 5,000; a split test with 5,000

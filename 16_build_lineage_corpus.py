@@ -24,7 +24,7 @@ Usage (from code/):
 All paths, the family file, period bounds and control terms come from the
 config (default configs/ego_depletion.yaml). See pipeline_config.py.
 
-CORPUS SPEC (2026-09-02). The config's `corpus:` block is the retrieval log
+CORPUS SPEC (2026-09-08). The config's `corpus:` block is the retrieval log
 made machine-readable (principle 10: the log is the methods section). Every
 RIS export under ris_root must match a `corpus.sources[].files` glob or a
 `corpus.ignore[].files` glob; anything else is an ERROR (principle 6:
