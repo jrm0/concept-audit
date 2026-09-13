@@ -2,10 +2,10 @@
   "script": "18_lineage_analysis",
   "concept": "ego depletion",
   "config": "configs/ego_depletion.yaml",
-  "config_sha1": "fa78c211f362",
-  "timestamp": "2026-09-06T06:56:18-04:00",
-  "git_commit": "80522cf",
-  "git_dirty": true,
+  "config_sha1": "a32bd54ac365",
+  "timestamp": "2026-09-12T19:13:23-04:00",
+  "git_commit": "73074c1",
+  "git_dirty": false,
   "argv": [],
   "params": {
     "center": false,
@@ -102,10 +102,12 @@
     "results/ego_depletion_full/lineage_samples_willpower.txt"
   ],
   "versions": {
-    "python": "3.10.12",
-    "numpy": "2.2.6",
-    "scipy": "1.15.3",
-    "sklearn": "1.7.2",
-    "diptest": "0.11.0"
+    "python": "3.13.7",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "diptest": "0.11.0",
+    "torch": "2.12.0",
+    "transformers": "5.13.0"
   }
 }

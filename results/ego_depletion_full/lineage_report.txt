@@ -1,4 +1,4 @@
-Concept: ego depletion   config: configs/ego_depletion.yaml (fa78c211f362)
+Concept: ego depletion   config: configs/ego_depletion.yaml (a32bd54ac365)
 Terms: ['delay of gratification', 'depletion effect', 'ego depletion', 'executive function', 'regulatory resource', 'self control', 'self control depletion', 'self regulation', 'self regulatory depletion', 'strength model', 'willpower']
 Controls: ['measure', 'participants', 'results', 'significant']
 Periods: ['1975-1979', '1980-1984', '1985-1989', '1990-1994', '1995-1999', '2000-2004', '2005-2009', '2010-2014', '2015-2019', '2020-2024', '2025-2025']
