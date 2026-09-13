@@ -1,6 +1,7 @@
 term,role,field,note
-posttraumatic stress disorder,focal,,DSM-III 1980 coinage; hyphen/space variants (post-traumatic) covered by canon(); predicted CONVERGENT / stable-under-institutionalization
-ptsd,focal,,acronym; matched as a whole word
+posttraumatic stress disorder,focal,,DSM-III 1980 coinage; hyphen/space variants (post-traumatic / post traumatic) covered by canon() + term_pattern() since 2026-09-13 (before that the hyphenated spelling was NOT matched); predicted CONVERGENT / stable-under-institutionalization
+ptsd,focal,,acronym; matched as a whole word; parenthetical-only "(PTSD)" is not a mention (Session 29)
+posttraumatic stress,synonym,,sub-diagnostic form ("post-traumatic stress symptoms/reactions"; PTSS). ADDED 2026-09-13 after the hyphen fix: documents that never say "disorder" had no family term at all; nested inside the full diagnosis so it counts only when "disorder" is absent
 trauma,focal,,the creeping concept (Haslam & McGrath 2020 four directions); HOMONYM with physical trauma — kept visible on purpose: the somatic->psychic clade is part of the story (principle 4). Expect a physical-injury cluster in CINAHL/medicine.
 traumatic stress,synonym,,bridge term (ISTSS; Journal of Traumatic Stress 1988-)
 psychological trauma,synonym,,explicit psychic sense

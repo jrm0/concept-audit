@@ -32,9 +32,13 @@ family_csv: families/ptsd_trauma_family.csv
 ris_root: "data/ebsco exports/ptsd_trauma"       # keep this concept's exports in their own folder
 family_works_glob: null
 docs_path: data/ptsd_trauma/lineage_docs.jsonl
-emb_dir: data/ptsd_trauma/lineage_emb
+# emb_dir names the EMBEDDING RUN. lineage_emb = 2026-09-12 run under the
+# pre-Session-29 mention rules (nested compounds and "(PTSD)" counted; kept as
+# the sensitivity run). lineage_emb_v2 = same corpus re-embedded under the
+# rules below. results_dir follows the embedding run.
+emb_dir: data/ptsd_trauma/lineage_emb_v2
 citations_cache: data/citations/openalex_refs_ptsd_trauma.jsonl
-results_dir: results/ptsd_trauma
+results_dir: results/ptsd_trauma_v2
 
 corpus:
   platform: EBSCOhost (BU ezproxy)
@@ -268,6 +272,13 @@ periods:
 
 control_terms: [participants, results, significant, measure]   # keep identical across concepts
 
+# Which occurrences count as mentions (pipeline_config.valid_spans; Session 29).
+# Both false = pre-Session-29 behaviour (the lineage_emb run).
+mentions:
+  exclude_nested: true                 # "trauma" inside "trauma-informed" counts for the compound only
+  strip_acronym_parentheticals: true   # "posttraumatic stress disorder (PTSD)" -> "(PTSD)" removed from the context
+  exclude_hyphen_prefixed: true        # "post-traumatic stress symptoms" is not a mention of "traumatic stress"
+
 embedding:
   model: allenai/scibert_scivocab_uncased
   max_length: 256
@@ -277,6 +288,7 @@ embedding:
   seed: 42
 
 analysis:
+  syntax_flag_diff: 0.5      # 18's syntax guard: flag a supported split whose clusters differ by more than this on any syntax-feature rate
   min_n: 15
   cluster_min_n: 60
   max_k: 4

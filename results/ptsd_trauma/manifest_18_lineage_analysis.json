@@ -1,0 +1,162 @@
+{
+  "script": "18_lineage_analysis",
+  "concept": "posttraumatic stress disorder",
+  "config": "configs/ptsd_trauma.yaml",
+  "config_sha1": "e68af980d0f6",
+  "timestamp": "2026-09-13T06:57:44-04:00",
+  "git_commit": "174e533",
+  "git_dirty": false,
+  "argv": [
+    "--config",
+    "configs/ptsd_trauma.yaml"
+  ],
+  "params": {
+    "center": false,
+    "subset_filter": {
+      "sources": [],
+      "dbs": [],
+      "strata": []
+    },
+    "suffix": "",
+    "equalize_n": 250,
+    "equalize_reps": 100,
+    "min_n": 15,
+    "cluster_min_n": 60,
+    "max_k": 4,
+    "seed": 42,
+    "control_terms": [
+      "measure",
+      "participants",
+      "results",
+      "significant"
+    ],
+    "terms": [
+      "acute stress disorder",
+      "adjustment disorder",
+      "battle fatigue",
+      "bereavement",
+      "collective trauma",
+      "combat fatigue",
+      "combat neurosis",
+      "complex posttraumatic stress disorder",
+      "complex ptsd",
+      "gross stress reaction",
+      "intergenerational trauma",
+      "moral injury",
+      "post vietnam syndrome",
+      "posttraumatic stress disorder",
+      "psychological trauma",
+      "ptsd",
+      "rape trauma syndrome",
+      "secondary traumatic stress",
+      "shell shock",
+      "trauma",
+      "trauma informed",
+      "traumatic neurosis",
+      "traumatic stress",
+      "vicarious trauma",
+      "war neurosis"
+    ],
+    "periods": [
+      "1965-1969",
+      "1970-1974",
+      "1975-1979",
+      "1980-1984",
+      "1985-1989",
+      "1990-1994",
+      "1995-1999",
+      "2000-2004",
+      "2005-2009",
+      "2010-2014",
+      "2015-2019",
+      "2020-2024",
+      "2025-2025"
+    ],
+    "key_pairs": [
+      [
+        "posttraumatic stress disorder",
+        "trauma"
+      ],
+      [
+        "posttraumatic stress disorder",
+        "ptsd"
+      ],
+      [
+        "posttraumatic stress disorder",
+        "traumatic stress"
+      ],
+      [
+        "posttraumatic stress disorder",
+        "acute stress disorder"
+      ],
+      [
+        "trauma",
+        "traumatic stress"
+      ],
+      [
+        "trauma",
+        "vicarious trauma"
+      ],
+      [
+        "trauma",
+        "collective trauma"
+      ],
+      [
+        "trauma",
+        "trauma informed"
+      ],
+      [
+        "posttraumatic stress disorder",
+        "shell shock"
+      ],
+      [
+        "posttraumatic stress disorder",
+        "complex ptsd"
+      ]
+    ],
+    "clustering": "cluster_core (dip + Hennig Jaccard)",
+    "cells_tested": 104,
+    "cells_supported": 49,
+    "n_shards": 288
+  },
+  "outputs": [
+    "results/ptsd_trauma/lineage_drift.csv",
+    "results/ptsd_trauma/term_distances.csv",
+    "results/ptsd_trauma/lineage_report.txt",
+    "results/ptsd_trauma/lineage_tree.json",
+    "results/ptsd_trauma/lineage_samples_acute_stress_disorder.txt",
+    "results/ptsd_trauma/lineage_samples_adjustment_disorder.txt",
+    "results/ptsd_trauma/lineage_samples_battle_fatigue.txt",
+    "results/ptsd_trauma/lineage_samples_bereavement.txt",
+    "results/ptsd_trauma/lineage_samples_collective_trauma.txt",
+    "results/ptsd_trauma/lineage_samples_combat_fatigue.txt",
+    "results/ptsd_trauma/lineage_samples_combat_neurosis.txt",
+    "results/ptsd_trauma/lineage_samples_complex_posttraumatic_stress_disorder.txt",
+    "results/ptsd_trauma/lineage_samples_complex_ptsd.txt",
+    "results/ptsd_trauma/lineage_samples_gross_stress_reaction.txt",
+    "results/ptsd_trauma/lineage_samples_intergenerational_trauma.txt",
+    "results/ptsd_trauma/lineage_samples_moral_injury.txt",
+    "results/ptsd_trauma/lineage_samples_post_vietnam_syndrome.txt",
+    "results/ptsd_trauma/lineage_samples_posttraumatic_stress_disorder.txt",
+    "results/ptsd_trauma/lineage_samples_psychological_trauma.txt",
+    "results/ptsd_trauma/lineage_samples_ptsd.txt",
+    "results/ptsd_trauma/lineage_samples_rape_trauma_syndrome.txt",
+    "results/ptsd_trauma/lineage_samples_secondary_traumatic_stress.txt",
+    "results/ptsd_trauma/lineage_samples_shell_shock.txt",
+    "results/ptsd_trauma/lineage_samples_trauma.txt",
+    "results/ptsd_trauma/lineage_samples_trauma_informed.txt",
+    "results/ptsd_trauma/lineage_samples_traumatic_neurosis.txt",
+    "results/ptsd_trauma/lineage_samples_traumatic_stress.txt",
+    "results/ptsd_trauma/lineage_samples_vicarious_trauma.txt",
+    "results/ptsd_trauma/lineage_samples_war_neurosis.txt"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "diptest": "0.11.0",
+    "torch": "2.12.0",
+    "transformers": "5.13.0"
+  }
+}

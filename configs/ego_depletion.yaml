@@ -17,13 +17,16 @@ docs_path: data/family/lineage_docs.jsonl          # written by 16, read by 17/1
 # document), the default from 2026-09-08. Keep both: the two-cap sensitivity
 # check in the methods paper compares them. Point emb_dir at the old folder
 # (and set embedding.cap_per_term_period: 250) to reproduce the capped run.
-emb_dir: data/lineage_emb_full                     # written by 17, read by 18/20/21/22/23
+# lineage_emb_full_v2 (Session 29) = uncapped, re-embedded under the mention
+# rules below ("self-control" inside "self-control depletion" no longer counts
+# for self-control). lineage_emb_full = uncapped, old rules (sensitivity).
+emb_dir: data/lineage_emb_full_v2                  # written by 17, read by 18/20/21/22/23
 citations_cache: data/citations/openalex_refs.jsonl
 
 # --- outputs ----------------------------------------------------------------
 # results dir is named by embedding run: results/ego_depletion = the Aug-13
 # 250-cap shards (data/lineage_emb); results/ego_depletion_full = uncapped.
-results_dir: results/ego_depletion_full            # every script writes here + a manifest
+results_dir: results/ego_depletion_full_v2         # every script writes here + a manifest
 
 # --- corpus specification ---------------------------------------------------
 # Principle 10: the log is the methods section. Every export 16 ingests must
@@ -167,6 +170,12 @@ periods:
 # (Dubossarsky) and the anisotropy-centering reference. Same for every concept.
 control_terms: [participants, results, significant, measure]
 
+# Which occurrences count as mentions (pipeline_config.valid_spans; Session 29).
+mentions:
+  exclude_nested: true
+  strip_acronym_parentheticals: true
+  exclude_hyphen_prefixed: true        # "post-traumatic stress symptoms" is not a mention of "traumatic stress"
+
 # --- embedding (17, 20) -----------------------------------------------------
 embedding:
   model: allenai/scibert_scivocab_uncased
@@ -178,6 +187,7 @@ embedding:
 
 # --- lineage analysis (18, 21) ---------------------------------------------
 analysis:
+  syntax_flag_diff: 0.5      # 18's syntax guard (Session 29)
   min_n: 15              # min docs for a period centroid
   cluster_min_n: 60      # min docs to attempt within-period clustering (a floor, not a ceiling)
   max_k: 4

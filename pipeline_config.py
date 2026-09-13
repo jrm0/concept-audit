@@ -101,16 +101,195 @@ def slug(t):
     return re.sub(r"[^a-z0-9]+", "_", t.lower()).strip("_")
 
 
+# Prefixes that English writes solid, hyphenated or spaced with no change of
+# meaning: "posttraumatic" = "post-traumatic" = "post traumatic". canon() joins
+# them; term_pattern() matches all three. Found 2026-09-13: the family note
+# claimed canon() covered "post-traumatic", it did not — 15,879 PTSD documents
+# in the hyphenated spelling were invisible to the PTSD pattern and their
+# mentions leaked into "traumatic stress".
+_PREFIXES = ("post", "pre", "non", "anti", "inter", "intra", "multi", "sub",
+             "counter", "semi", "over", "under", "meta", "hyper", "hypo",
+             "psycho", "neuro", "socio", "bio")   # no 2-letter prefixes: "co" splits "control"
+_PREFIX_JOIN = re.compile(r"\b(" + "|".join(_PREFIXES) + r")[\s\-]+(?=[a-z]{3,})", re.I)
+_PREFIX_WORD = re.compile(r"^(" + "|".join(_PREFIXES) + r")([a-z]{3,})$", re.I)
+
+
 def canon(term):
-    """Hyphens and spaces are the SAME separator (see 16's docstring)."""
-    return re.sub(r"[\s\-]+", " ", (term or "").strip().lower())
+    """Hyphens and spaces are the SAME separator (see 16's docstring), and a
+    prefix + separator + word is the solid word ("post-traumatic" ->
+    "posttraumatic")."""
+    t = (term or "").strip().lower()
+    t = _PREFIX_JOIN.sub(r"\1", t)
+    return re.sub(r"[\s\-]+", " ", t)
 
 
 def term_pattern(term):
-    """Regex matching either separator, so one canonical term captures all
-    surface variants."""
-    body = re.escape(term).replace(r"\ ", "[-\\s]+").replace(r"\-", "[-\\s]+")
+    """Regex matching either separator between words, and an optional
+    separator after a recognised prefix inside a word, so one canonical term
+    captures all surface variants."""
+    words = []
+    for w in canon(term).split(" "):
+        m = _PREFIX_WORD.match(w)
+        if m:
+            words.append(re.escape(m.group(1)) + "[-\\s]?" + re.escape(m.group(2)))
+        else:
+            words.append(re.escape(w))
+    body = "[-\\s]+".join(words)
     return re.compile(r"\b" + body + r"\b", re.I)
+
+
+# ------------------------------------------------------- mention extraction
+#
+# 2026-09-13 (Session 29). The first PTSD/trauma run produced 49 "supported"
+# within-period splits, and reading showed the four focal terms' splits were
+# SYNTAX, not sense:
+#   * "ptsd": documents where PTSD occurs only inside "(PTSD)" after the long
+#     form vs documents that use it as a word (Jaccard 1.00, silhouette .52).
+#   * "traumatic stress": 89% of one cluster was "post-traumatic stress
+#     disorder" — the hyphen is a word boundary, so the hyphenated PTSD
+#     spelling leaked into the shorter term.
+#   * "posttraumatic stress disorder": definitional sentence
+#     ("... disorder (PTSD) is ...") vs use.
+#   * "trauma": the trauma-informed literature, matched INSIDE "trauma-informed".
+# Stability metrics endorse any consistent partition, and in masked-context
+# embeddings the most consistent partitions are syntactic. Three rules, all
+# config-switchable under `mentions:` so the old behaviour is a sensitivity run:
+#   exclude_nested (default True): a match of term T that lies inside a match
+#     of a LONGER family term does not count as a mention of T. The parent's
+#     shard becomes bare uses only; compounds count for the compound.
+#   strip_acronym_parentheticals (default True): "(PTSD)" immediately after a
+#     family-term match is removed from the context sentence; a parenthetical-
+#     only occurrence "(PTSD)" is never a mention of "ptsd".
+# The syntax guard in 18 reports what is left (title-sentence, definitional,
+# parenthetical, attributive rates per cluster) and flags splits that differ
+# by more than 0.5 on any of them.
+
+#   exclude_hyphen_prefixed (default True): a match that is the TAIL of a
+#     hyphenated word ("post-traumatic stress symptoms", "non-trauma",
+#     "re-trauma") is a different lexeme. The solid spelling never matched
+#     ("posttraumatic" has no boundary), so without this rule the hyphenated
+#     spelling alone leaked — 42% of "traumatic stress" sentences after the
+#     nesting rule were still "post-traumatic stress ...".
+DEFAULT_MENTION_RULES = {"exclude_nested": True,
+                         "strip_acronym_parentheticals": True,
+                         "exclude_hyphen_prefixed": True}
+
+
+def mention_rules(cfg):
+    r = dict(DEFAULT_MENTION_RULES)
+    r.update(cfg.get("mentions") or {})
+    return r
+
+
+def family_patterns(cfg):
+    """{canonical family term: compiled pattern} from the config's family CSV."""
+    import csv
+    pats = {}
+    with open(cfg["family_csv"], encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            t = canon(row.get("term"))
+            if t and t not in pats:
+                pats[t] = term_pattern(t)
+    return pats
+
+
+_PAREN_AFTER = re.compile(r"\s*\(\s*([A-Za-z][A-Za-z\-]{0,11})\s*\)")
+
+
+def strip_acronym_parentheticals(sentence, fam_pats):
+    """'posttraumatic stress disorder (PTSD) is' -> 'posttraumatic stress disorder is'.
+    Removes a short parenthetical that immediately follows a family-term match
+    when it is an acronym (all caps), a family term, or a short mixed-case
+    token. The parenthetical is a definitional device, not a use of either
+    term — and it was the strongest 'cluster' in the first PTSD run."""
+    cuts = []
+    for pat in fam_pats.values():
+        for m in pat.finditer(sentence):
+            pm = _PAREN_AFTER.match(sentence, m.end())
+            if not pm:
+                continue
+            inner = pm.group(1)
+            if (inner.isupper() or canon(inner) in fam_pats
+                    or (len(inner) <= 6 and any(c.isupper() for c in inner))):
+                cuts.append((pm.start(), pm.end()))
+    if not cuts:
+        return sentence, 0
+    cuts.sort()
+    out, pos, n = [], 0, 0
+    for a, b in cuts:
+        if a < pos:
+            continue
+        out.append(sentence[pos:a])
+        pos = b
+        n += 1
+    out.append(sentence[pos:])
+    return "".join(out), n
+
+
+def all_spans(sentence, pats):
+    """{term: [(start, end), ...]} for every pattern that matches."""
+    out = {}
+    for t, pat in pats.items():
+        sp = [(m.start(), m.end()) for m in pat.finditer(sentence)]
+        if sp:
+            out[t] = sp
+    return out
+
+
+def _parenthetical(sentence, span):
+    a, b = span
+    i = a - 1
+    while i >= 0 and sentence[i] == " ":
+        i -= 1
+    j = b
+    while j < len(sentence) and sentence[j] == " ":
+        j += 1
+    return i >= 0 and sentence[i] == "(" and j < len(sentence) and sentence[j] == ")"
+
+
+def valid_spans(term, spans_by_term, sentence, rules):
+    """Spans of `term` that count as mentions under the rules (see above).
+    `spans_by_term` is all_spans(sentence, patterns) for the same sentence."""
+    spans = list(spans_by_term.get(term, []))
+    if not spans:
+        return []
+    if rules.get("exclude_nested", True):
+        containers = [c for t2, sp in spans_by_term.items()
+                      if t2 != term and len(t2) > len(term) for c in sp]
+        spans = [s for s in spans
+                 if not any(c[0] <= s[0] and s[1] <= c[1] and c != s
+                            for c in containers)]
+    if rules.get("exclude_hyphen_prefixed", True):
+        spans = [s for s in spans
+                 if not (s[0] >= 2 and sentence[s[0] - 1] == "-"
+                         and sentence[s[0] - 2].isalnum())]
+    spans = [s for s in spans if not _parenthetical(sentence, s)]
+    return spans
+
+
+# Syntax-guard features of one mention (computed on the cleaned sentence).
+_DEFN_AFTER = re.compile(r"^[\s,]*(is|are|was|were|refers?|denotes?|describes?|"
+                         r"can be|has been|have been|is defined|are defined)\b", re.I)
+_DEFN_BEFORE = re.compile(r"(defined as|referred to as|known as|termed|called|"
+                          r"the term|the concept of|the construct of)\s*$", re.I)
+
+
+def syntax_features(sentence, span, title=None):
+    """[is_title_sentence, definitional, parenthetical, attributive] as 0/1."""
+    a, b = span
+    is_title = 0
+    if title:
+        t = title.strip().rstrip(".").lower()[:60]
+        is_title = int(sentence.strip().rstrip(".").lower()[:60] == t)
+    defn = int(bool(_DEFN_AFTER.match(sentence[b:b + 40]))
+               or bool(_DEFN_BEFORE.search(sentence[max(0, a - 30):a])))
+    paren = int(_parenthetical(sentence, span))
+    attributive = int(b < len(sentence) and sentence[b] == "-"
+                      and b + 1 < len(sentence) and sentence[b + 1].isalpha())
+    return [is_title, defn, paren, attributive]
+
+
+SYNTAX_FEATURE_NAMES = ["title", "defn", "paren", "attributive"]
 
 
 def period_of(year, cfg):

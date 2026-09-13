@@ -126,6 +126,7 @@ CLUSTER_MIN_N = int(CFG["analysis"]["cluster_min_n"])
 MAX_K = int(CFG["analysis"]["max_k"])
 SEED = int(CFG["analysis"]["seed"])
 CONTROL_TERMS = set(CFG.controls)
+SYNTAX_FLAG = float(CFG["analysis"].get("syntax_flag_diff", 0.5))   # Session 29 guard
 EVENTS = pc.events(CFG)
 KEY_PAIRS = [tuple(p) for p in CFG.get("key_pairs", [])]
 
@@ -179,7 +180,9 @@ def load_shards():
         data[term][m.group(2)] = {
             "V": sel(z["vectors"]), "keys": sel(z["keys"]),
             "years": sel(z["years"]), "journals": sel(z["journals"]),
-            "dbs": sel(z["dbs"]) if "dbs" in z.files else None}
+            "dbs": sel(z["dbs"]) if "dbs" in z.files else None,
+            # (n,4) per-doc syntax rates from 17 (Session 29); None on old shards
+            "syntax": sel(z["syntax"]) if "syntax" in z.files else None}
     if any(FILTER.values()):
         print(f"SUBSET FILTER {FILTER}: kept {kept}/{total} document vectors")
     return data
@@ -497,6 +500,8 @@ def main():
         say("\n\n=== C. LINEAGES & CANDIDATE BRANCHING EVENTS ===")
     tree = {}
     n_supported = n_tested = 0
+    syntax_flags = []          # (term, period, feature, diff)
+    n_guard_checked = n_guard_missing = 0
     for t in (family if not CENTER else []):
         node_seq = []   # list of (period, [ {id, centroid, n, titles} ], stats)
         for p in sorted(data[t]):
@@ -508,6 +513,33 @@ def main():
             if cr.get("verdict") != "n too small":
                 n_tested += 1
                 n_supported += int(cr.get("verdict") == "SUPPORTED")
+            # SYNTAX GUARD (Session 29): a supported split whose clusters differ
+            # by > SYNTAX_FLAG on any syntax-feature rate is a register split
+            # (title vs abstract sentence, definition vs use, parenthetical,
+            # attributive), not a sense split — flagged, never silently passed.
+            stats["syntax_guard"] = None
+            if cr.get("verdict") == "SUPPORTED" and labels is not None:
+                if sh["syntax"] is None:
+                    n_guard_missing += 1
+                    stats["syntax_guard"] = "no syntax array (shard predates Session 29)"
+                else:
+                    n_guard_checked += 1
+                    rates = {c: sh["syntax"][labels == c].mean(0)
+                             for c in range(k)}
+                    worst = (None, 0.0)
+                    for fi, fname in enumerate(pc.SYNTAX_FEATURE_NAMES):
+                        vals = [float(rates[c][fi]) for c in range(k)]
+                        diff = max(vals) - min(vals)
+                        if diff > worst[1]:
+                            worst = (fname, diff)
+                    flagged = worst[1] > SYNTAX_FLAG
+                    stats["syntax_guard"] = {
+                        "rates": {f"{p}:{c}": [round(float(x), 3) for x in rates[c]]
+                                  for c in range(k)},
+                        "worst_feature": worst[0], "max_diff": round(worst[1], 3),
+                        "flagged": bool(flagged)}
+                    if flagged:
+                        syntax_flags.append((t, p, worst[0], worst[1]))
             nodes = []
             def readable(keys):
                 return [titles_by_doi.get(str(kk), str(kk))[:110]
@@ -579,6 +611,7 @@ def main():
                          "mean_jaccard": _r(st["mean_jaccard"]),
                          "silhouette": _r(st["silhouette"]),
                          "verdict": st["verdict"],
+                         "syntax_guard": st.get("syntax_guard"),
                          "clusters": [{"id": nd["id"], "n": nd["n"]}
                                       for nd in nodes]}
                         for p, nodes, st in node_seq],
@@ -594,13 +627,23 @@ def main():
             for p, nodes, st in node_seq:
                 dp = st["dip_p"]
                 mj = st["mean_jaccard"]
+                sg = st.get("syntax_guard")
+                flag_txt = ""
+                if isinstance(sg, dict):
+                    flag_txt = (f"; SYNTAX-FLAGGED: {sg['worst_feature']} differs by "
+                                f"{sg['max_diff']:.2f}" if sg["flagged"]
+                                else f"; syntax guard ok (max diff {sg['max_diff']:.2f})")
                 f.write(f"===== {p} ({st['verdict']}; dip p="
                         f"{'-' if dp is None else f'{dp:.3f}'}, mean Jaccard="
-                        f"{'-' if mj is None else f'{mj:.2f}'}) =====\n")
+                        f"{'-' if mj is None else f'{mj:.2f}'}{flag_txt}) =====\n")
                 for nd in nodes:
                     f.write(f"  cluster {nd['id']} (n={nd['n']}"
                             + (f", median year {nd['median_year']}"
                                if "median_year" in nd else "") + "):\n")
+                    if isinstance(sg, dict) and nd["id"] in sg["rates"]:
+                        f.write("    syntax rates (title/defn/paren/attributive): "
+                                + "/".join(f"{x:.2f}" for x in sg["rates"][nd["id"]])
+                                + "\n")
                     if nd.get("top_journals"):
                         f.write("    journals: "
                                 + "; ".join(f"{j} ({c})"
@@ -620,6 +663,19 @@ def main():
             f"(term x period) cells SUPPORTED by cluster_core "
             f"(dip p<0.05 AND mean Jaccard>=0.75); all other periods are "
             f"one node.")
+        say(f"\nSYNTAX GUARD (threshold {SYNTAX_FLAG} on any of "
+            f"{'/'.join(pc.SYNTAX_FEATURE_NAMES)}): "
+            f"{len(syntax_flags)} of {n_guard_checked} supported splits FLAGGED "
+            f"as register splits"
+            + (f"; {n_guard_missing} supported splits could not be checked "
+               f"(shards predate the syntax array — re-run 17)"
+               if n_guard_missing else "") + ".")
+        for t, p, fname, diff in syntax_flags:
+            say(f"   FLAG {t} | {p}: {fname} rate differs by {diff:.2f} between clusters")
+        if syntax_flags:
+            say("   A flagged split is a difference in HOW the term is mentioned "
+                "(title vs abstract, definition vs use, parenthetical, attributive), "
+                "not in what it means. Do not count it as a sense split.")
         with open(RESULTS / f"lineage_tree{_fsuf}.json", "w") as f:
             json.dump({t: {k: v for k, v in d.items()}
                        for t, d in tree.items()}, f, indent=2, default=str)
@@ -650,6 +706,11 @@ def main():
                 "terms": family, "periods": periods, "key_pairs": key_pairs,
                 "clustering": "cluster_core (dip + Hennig Jaccard)",
                 "cells_tested": n_tested, "cells_supported": n_supported,
+                "syntax_guard": {"threshold": SYNTAX_FLAG,
+                                 "checked": n_guard_checked,
+                                 "unchecked_old_shards": n_guard_missing,
+                                 "flagged": [[t, p, f, round(d, 3)]
+                                             for t, p, f, d in syntax_flags]},
                 "n_shards": sum(len(v) for v in data.values())},
         outputs=outs)
     print(f"\nAll outputs -> {RESULTS}/ (report: lineage_report{SUF}.txt)")

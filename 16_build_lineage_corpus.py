@@ -35,6 +35,18 @@ book / other; principle 7: registers are strata, not ingredients). A
 coverage audit per source (abstract %, DOI %, type mix, kept/merged) is
 printed and written to the manifest (principle 8: no analysis before the
 audit).
+
+MENTION RULES (2026-09-13, Session 29). Which occurrences count as a mention
+is decided in pipeline_config (mention_rules / valid_spans) and shared with
+17, so the sentence 16 keeps and the occurrence 17 masks are the same one.
+Defaults: a match nested inside a LONGER family term does not count
+("trauma" inside "trauma-informed"; "traumatic stress" inside
+"post-traumatic stress disorder"), and "(PTSD)" after a long form is
+stripped from the context. Config `mentions: {exclude_nested: false,
+strip_acronym_parentheticals: false}` reproduces the pre-Session-29
+behaviour as a sensitivity run. Consequence to keep in mind: a document whose
+only "trauma" is inside "vicarious trauma" is no longer a "trauma" document —
+the parent's shard is bare uses, the compound's shard is the compound.
 """
 
 import csv
@@ -60,6 +72,7 @@ YEAR_MIN, YEAR_MAX = int(CFG["periods"]["year_min"]), int(CFG["periods"]["year_m
 CONTROL_TERMS = CFG.controls
 CORPUS = CFG.get("corpus", {}) or {}
 ALLOW_UNLISTED = "--allow-unlisted" in _ARGV
+RULES = pc.mention_rules(CFG)      # see pipeline_config: mention extraction
 
 TAG_RE = re.compile(r"^([A-Z][A-Z0-9])  - (.*)$")
 
@@ -179,9 +192,11 @@ def norm_title(title):
 def main():
     family = load_family_terms()
     pats = compile_patterns(list(family) + CONTROL_TERMS)
+    fam_pats = {t: pats[t] for t in family}
     docs = {}
     by_title = {}      # normalized title -> canonical key
     stats = Counter()
+    excluded_by_term = Counter()   # family mentions dropped by the rules
 
     audit = defaultdict(Counter)   # source_id -> counters (principle 8)
 
@@ -209,10 +224,22 @@ def main():
         sentences = [s.strip() for s in SENT_RE.split(text)
                      if 30 <= len(s.strip()) <= 1200]
         mentions = defaultdict(list)
-        for t, pat in pats.items():
-            for s in sentences:
-                if pat.search(s):
+        for s in sentences:
+            # (1) strip "(ACRONYM)" after a family term — definitional device
+            if RULES.get("strip_acronym_parentheticals", True):
+                s, n_cut = pc.strip_acronym_parentheticals(s, fam_pats)
+                stats["parentheticals_stripped"] += n_cut
+            # (2) a match nested inside a longer family term does not count;
+            #     a parenthetical-only occurrence does not count
+            spans = pc.all_spans(s, pats)
+            for t in spans:
+                ok = pc.valid_spans(t, spans, s, RULES)
+                if ok:
                     mentions[t].append(s)
+                else:
+                    stats["mentions_excluded_nested_or_paren"] += 1
+                    if t in family:
+                        excluded_by_term[t] += 1
         fam_terms = [t for t in mentions if t in family]
         if not fam_terms:
             stats["skipped_no_family_term"] += 1
@@ -356,6 +383,13 @@ def main():
           f"merged duplicates {stats['merged_duplicates']}, "
           f"no family term {stats['skipped_no_family_term']}, "
           f"no abstract/year {stats['skipped_no_abstract_or_year']}")
+    print(f"MENTION RULES {RULES}: parentheticals stripped "
+          f"{stats['parentheticals_stripped']}; sentence-mentions excluded "
+          f"(nested in a longer family term, or parenthetical-only) "
+          f"{stats['mentions_excluded_nested_or_paren']}")
+    if excluded_by_term:
+        print("  excluded by term: " + "; ".join(
+            f"{t} {n}" for t, n in excluded_by_term.most_common(12)))
 
     # Report: term x period document counts (the power table for the analysis)
     tp = defaultdict(Counter)
@@ -423,6 +457,8 @@ def main():
                 "allow_unlisted": ALLOW_UNLISTED,
                 "periods": dict(CFG["periods"]), "control_terms": CONTROL_TERMS,
                 "n_docs": len(docs), "accounting": dict(stats),
+                "mention_rules": RULES,
+                "mentions_excluded_by_term": dict(excluded_by_term),
                 "db_provenance": dict(dbc),
                 "strata": dict(strat_tot),
                 "corpus_spec": {k: v for k, v in CORPUS.items()

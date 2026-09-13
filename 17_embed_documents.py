@@ -31,7 +31,19 @@ abstract.
 
 Each shard records n_pool (documents available for that term-period before
 any cap) and cap, so prevalence is reconstructible and a capped shard is
-recognisable. Re-running with a different cap into the same emb_dir would
+recognisable.
+
+MENTION RULES + SYNTAX FEATURES (2026-09-13, Session 29). The occurrence
+masked is the first VALID one under pipeline_config.valid_spans (not nested
+inside a longer family term, not parenthetical-only) — the same rule 16 used
+to keep the sentence. Before this, the mask could land on "post-[MASK]
+disorder" for "traumatic stress", or on "([MASK])" for "ptsd", and those
+syntactic contexts formed perfectly stable clusters. Each shard now also
+stores `syntax` (n x 4): per-document rates of title-sentence, definitional,
+parenthetical and attributive ("trauma-focused") mentions, which 18's syntax
+guard compares across clusters. Shards from before this change have no
+`syntax` array; 18 says so and skips the guard for them. Re-embed into a NEW
+emb_dir after changing the rules — checkpointing would keep old shards. Re-running with a different cap into the same emb_dir would
 silently keep the old shards (checkpointing) — use a NEW emb_dir per cap
 setting; the config's emb_dir names the run.
 
@@ -72,6 +84,13 @@ CONTROL_CAP = int(CFG["embedding"].get("control_cap") or 300)
 
 IN_PATH = Path(CFG["docs_path"])
 OUT_DIR = Path(CFG["emb_dir"])
+
+# Mention rules shared with 16 (pipeline_config): the occurrence masked here
+# is the one 16 counted. Family patterns are the nesting containers; control
+# terms are matched plainly.
+RULES = pc.mention_rules(CFG)
+ALL_PATS = pc.family_patterns(CFG)
+ALL_PATS.update({c: term_pattern(c) for c in CONTROL_TERMS if c not in ALL_PATS})
 
 
 def main():
@@ -117,11 +136,16 @@ def main():
             if any(c in d["mention_sentences"] for c in CONTROL_TERMS):
                 ctrl[d["period"]].append(d)
 
-    def masked_vector(sentence, pattern):
-        m = pattern.search(sentence)
-        if not m:
-            return None
-        text = sentence[:m.start()] + mask_tok + sentence[m.end():]
+    def masked_vector(sentence, term, title=None):
+        """Mask the first VALID occurrence (pipeline_config.valid_spans: not
+        nested in a longer family term, not parenthetical-only) — the same
+        rule 16 used to keep the sentence. Returns (vector, syntax_features)."""
+        spans = pc.valid_spans(term, pc.all_spans(sentence, ALL_PATS), sentence, RULES)
+        if not spans:
+            return None, None
+        a, b = spans[0]
+        feats = pc.syntax_features(sentence, (a, b), title)
+        text = sentence[:a] + mask_tok + sentence[b:]
         enc = tokenizer(text, return_tensors="pt", truncation=True,
                         max_length=MAX_LENGTH)
         with torch.no_grad():
@@ -131,28 +155,28 @@ def main():
         try:
             pos = ids.index(tokenizer.mask_token_id)
         except ValueError:
-            return None      # mask truncated away
-        return layer[0, pos, :].numpy()
+            return None, None      # mask truncated away
+        return layer[0, pos, :].numpy(), feats
 
     def embed_shard(term, period, docs, cap):
         out_path = OUT_DIR / f"{slug(term)}__{period}.npz"
         if out_path.exists():
             return 0
-        # hyphen/space are the same separator (see canon() in pipeline_config)
-        pat = term_pattern(term)
         n_pool = len(docs)
         if cap is not None and len(docs) > cap:
             random.seed(SEED)
             docs = random.sample(docs, cap)
         vecs, keys, years, journals, dbs = [], [], [], [], []
-        sources, strata = [], []
+        sources, strata, syntax = [], [], []
         for d in docs:
             sents = d["mention_sentences"].get(term, [])[:MAX_SENT_PER_DOC]
-            sv = [v for v in (masked_vector(s, pat) for s in sents)
-                  if v is not None]
+            pairs = [masked_vector(s, term, d.get("title")) for s in sents]
+            sv = [v for v, _ in pairs if v is not None]
+            sf = [f for v, f in pairs if v is not None]
             if not sv:
                 continue
             vecs.append(np.mean(sv, axis=0))
+            syntax.append(np.mean(sf, axis=0))   # per-doc rate of each feature
             keys.append(d["doi"] or d["title"][:60])
             years.append(d["year"])
             journals.append(d["journal"])
@@ -167,6 +191,7 @@ def main():
                                 dbs=np.array(dbs, dtype=object),
                                 sources=np.array(sources, dtype=object),
                                 strata=np.array(strata, dtype=object),
+                                syntax=np.array(syntax, dtype=float),   # (n,4): title, defn, paren, attributive
                                 n_pool=np.array(n_pool),
                                 cap=np.array(-1 if cap is None else cap))
         return len(vecs)
@@ -192,6 +217,8 @@ def main():
         CFG, __file__,
         params={"model": MODEL_NAME, "max_length": MAX_LENGTH, "seed": SEED,
                 "cap_per_term_period": CAP_PER_TERM_PERIOD,   # None = all
+                "mention_rules": RULES,
+                "syntax_features": pc.SYNTAX_FEATURE_NAMES,
                 "emb_dir": str(OUT_DIR),
                 "control_cap": CONTROL_CAP, "max_sent_per_doc": MAX_SENT_PER_DOC,
                 "control_terms": CONTROL_TERMS, "subset": sorted(only),

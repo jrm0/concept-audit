@@ -1,0 +1,718 @@
+{
+  "script": "16_build_lineage_corpus",
+  "concept": "posttraumatic stress disorder",
+  "config": "configs/ptsd_trauma.yaml",
+  "config_sha1": "a76e6b8c7b68",
+  "timestamp": "2026-09-13T07:19:53-04:00",
+  "git_commit": "174e533",
+  "git_dirty": true,
+  "argv": [
+    "--config",
+    "configs/ptsd_trauma.yaml"
+  ],
+  "params": {
+    "ris_root": "data/ebsco exports/ptsd_trauma",
+    "family_csv": "families/ptsd_trauma_family.csv",
+    "family_works_glob": null,
+    "ris_files": [
+      [
+        "data/ebsco exports/ptsd_trauma/Business_family.ris",
+        "business"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/Psyc_family_1965-1994.ris",
+        "psyc_1965_1994"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/Psyc_family_1995-2004.ris",
+        "psyc_1995_2004"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/Psyc_family_2005-2009.ris",
+        "psyc_2005_2009"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/Psyc_family_2010-2014.ris",
+        "psyc_2010_2014"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/Psyc_family_2015.ris",
+        "psyc_2015_2019"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/Psyc_family_2016.ris",
+        "psyc_2015_2019"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/Psyc_family_2017.ris",
+        "psyc_2015_2019"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/Psyc_family_2018.ris",
+        "psyc_2015_2019"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/Psyc_family_2019.ris",
+        "psyc_2015_2019"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/Psyc_family_2020.ris",
+        "psyc_2020_2022"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/Psyc_family_2021.ris",
+        "psyc_2020_2022"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/Psyc_family_2022.ris",
+        "psyc_2020_2022"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/Psyc_family_2023.ris",
+        "psyc_2023_2025"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/Psyc_family_2024.ris",
+        "psyc_2023_2025"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/Psyc_family_2025.ris",
+        "psyc_2023_2025"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/crime-socialwork_family_1975-2014.ris",
+        "crime_socialwork"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/crime-socialwork_family_2015-2025.ris",
+        "crime_socialwork"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/econ_family.ris",
+        "econ"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/education_family.ris",
+        "education"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/health_family_1975-2014.ris",
+        "health"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/health_family_2015-2019.ris",
+        "health"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/health_family_2020-2022.ris",
+        "health"
+      ],
+      [
+        "data/ebsco exports/ptsd_trauma/health_family_2023-2025.ris",
+        "health"
+      ]
+    ],
+    "ignored_exports": [
+      "data/ebsco exports/ptsd_trauma/duplicates/DUPLICATE_of_Psyc_family_1965-1994.ris",
+      "data/ebsco exports/ptsd_trauma/duplicates/DUPLICATE_of_partial_2015-2019_2452.ris",
+      "data/ebsco exports/ptsd_trauma/partial/Psyc_family_1965-1994_PARTIAL-1800of6192_2026-09-08.ris",
+      "data/ebsco exports/ptsd_trauma/partial/Psyc_family_2015-2019_PARTIAL-10802of22985_2026-09-08.ris",
+      "data/ebsco exports/ptsd_trauma/partial/Psyc_family_2015-2019_PARTIAL-2452of22985_2026-09-09.ris",
+      "data/ebsco exports/ptsd_trauma/partial/Psyc_family_2020-2022_PARTIAL-2489of18367_2026-09-08.ris",
+      "data/ebsco exports/ptsd_trauma/partial/Psyc_family_2023_PARTIAL-842of6742_2026-09-09.ris",
+      "data/ebsco exports/ptsd_trauma/partial/health_family_2020-2025_PARTIAL-8812of16660_2026-09-09.ris"
+    ],
+    "allow_unlisted": false,
+    "periods": {
+      "year_min": 1965,
+      "year_max": 2025,
+      "width": 5
+    },
+    "control_terms": [
+      "participants",
+      "results",
+      "significant",
+      "measure"
+    ],
+    "n_docs": 130019,
+    "accounting": {
+      "parentheticals_stripped": 33174,
+      "kept": 130019,
+      "mentions_excluded_nested_or_paren": 106416,
+      "skipped_no_abstract_or_year": 4384,
+      "skipped_no_family_term": 1178,
+      "merged_duplicates": 78123
+    },
+    "mention_rules": {
+      "exclude_nested": true,
+      "strip_acronym_parentheticals": true,
+      "exclude_hyphen_prefixed": true
+    },
+    "mentions_excluded_by_term": {
+      "traumatic stress": 28609,
+      "trauma": 15209,
+      "posttraumatic stress": 58050,
+      "ptsd": 3133,
+      "posttraumatic stress disorder": 788,
+      "complex ptsd": 22,
+      "bereavement": 289,
+      "shell shock": 1,
+      "acute stress disorder": 1,
+      "traumatic neurosis": 4,
+      "adjustment disorder": 3,
+      "complex posttraumatic stress disorder": 2,
+      "psychological trauma": 3,
+      "secondary traumatic stress": 5,
+      "moral injury": 2,
+      "trauma informed": 5,
+      "vicarious trauma": 1
+    },
+    "db_provenance": {
+      "APA PsycInfo": 100587,
+      "Business Abstracts with Full Text (H.W. Wilson)": 204,
+      "EconLit": 327,
+      "Education Full Text (H.W. Wilson)": 18611,
+      "CINAHL": 35227,
+      "Business Source Complete": 4637,
+      "SocINDEX with Full Text": 24300,
+      "Criminal Justice Abstracts": 12374,
+      "APA PsycArticles": 6975,
+      "Social Work Abstracts": 1949
+    },
+    "strata": {
+      "journal": 129999,
+      "thesis": 16,
+      "popular": 2,
+      "book": 2
+    },
+    "corpus_spec": {
+      "platform": "EBSCOhost (BU ezproxy)",
+      "exported": null,
+      "expanders": [],
+      "fields": [
+        "TI",
+        "AB"
+      ],
+      "limiters": [
+        "peer reviewed"
+      ],
+      "language_filter": "none",
+      "document_type_filter": "none",
+      "queries": {
+        "focal_ptsd": "\"posttraumatic stress disorder\" OR \"post-traumatic stress disorder\" OR \"PTSD\" OR \"complex PTSD\" OR \"complex posttraumatic stress disorder\"",
+        "focal_trauma": "\"trauma\" OR \"traumatic stress\" OR \"psychological trauma\" OR \"vicarious trauma\" OR \"secondary traumatic stress\" OR \"collective trauma\" OR \"intergenerational trauma\" OR \"trauma-informed\" OR \"trauma informed\" OR \"moral injury\"",
+        "ancestors": "\"shell shock\" OR \"war neurosis\" OR \"combat neurosis\" OR \"traumatic neurosis\" OR \"battle fatigue\" OR \"combat fatigue\" OR \"gross stress reaction\" OR \"post-Vietnam syndrome\" OR \"rape trauma syndrome\"",
+        "controls": "\"acute stress disorder\" OR \"adjustment disorder\" OR \"bereavement\"",
+        "family": "TI (\"posttraumatic stress disorder\" OR \"post-traumatic stress disorder\" OR \"PTSD\" OR \"complex PTSD\" OR \"trauma\" OR \"traumatic stress\" OR \"psychological trauma\" OR \"vicarious trauma\" OR \"secondary traumatic stress\" OR \"collective trauma\" OR \"intergenerational trauma\" OR \"trauma-informed\" OR \"trauma informed\" OR \"moral injury\" OR \"shell shock\" OR \"war neurosis\" OR \"combat neurosis\" OR \"traumatic neurosis\" OR \"battle fatigue\" OR \"combat fatigue\" OR \"gross stress reaction\" OR \"post-Vietnam syndrome\" OR \"rape trauma syndrome\" OR \"acute stress disorder\" OR \"adjustment disorder\" OR \"bereavement\") OR AB (<same 26 terms>)",
+        "family_health": "(TI (<25 terms, no bare \"trauma\">) OR AB (<25 terms, no bare \"trauma\">)) OR (TI (\"trauma\") AND (TI (psycholog* OR \"mental health\" OR emotional OR stress OR \"nurses\" OR \"nursing\") OR AB (psycholog* OR \"mental health\" OR emotional OR stress OR \"nurses\" OR \"nursing\")))"
+      },
+      "db_codes": {
+        "psyc": "pdh,psyh",
+        "health": "cin20",
+        "crime_socialwork": "sih,cja,swh",
+        "education": "eft",
+        "business": "bth,bft",
+        "econ": "ecn"
+      },
+      "export_limits": {
+        "per_export": 25000,
+        "per_day": 100000
+      },
+      "exclusions": [
+        {
+          "term": "physical trauma / trauma surgery",
+          "why": "NOT excluded on purpose \u2014 the somatic sense is the origin of the creep story; expect a physical-injury clade in CINAHL/medicine and read it as a jingle finding, not noise. Revisit if it swamps the health source (>60% of kept docs)."
+        },
+        {
+          "term": "bare 'trauma' in CINAHL, abstract-only or without psychological vocabulary",
+          "why": "DECIDED 2026-09-08: bare 'trauma' TI/AB in CINAHL = 97,028, overwhelmingly the injury sense (trauma center, trauma patients). Health samples bare 'trauma' by title only where psycholog*/mental health/emotional/stress/nurs* co-occur (38,795). The physical sense still enters via the specific phrases and is read as a labeled probe. Psyc keeps the FULL union (110,040) because abstract-only mentions of bare 'trauma' are the extraordinary->ordinary signal."
+        },
+        {
+          "habitat": "MEDLINE / trauma surgery journals",
+          "why": "DECIDED 2026-09-08: not sampled. The somatic->psychic creep predates the 1975 window; a general MEDLINE pull would flood the 'trauma' shards with the injury homonym (17's per-period cap samples from the pooled corpus). CINAHL carries the health habitat and keeps the homonym visible as a labeled probe. Revisit as a MeSH-scoped, labeled source only if a medicine-backflow question is asked."
+        },
+        {
+          "habitat": "Historical Abstracts / humanities (memory studies, literary trauma theory)",
+          "why": "collective-trauma lineage (Caruth 1996; Alexander 2004) \u2014 leads to verify; not in the 13-DB budget; decide"
+        }
+      ],
+      "strata": {
+        "journal": [
+          "JOUR",
+          "ABST",
+          "CONF",
+          "CASE",
+          "GEN"
+        ],
+        "thesis": [
+          "THES"
+        ],
+        "book": [
+          "CHAP",
+          "BOOK",
+          "EBOOK",
+          "EDBOOK"
+        ],
+        "popular": [
+          "NEWS",
+          "MGZN",
+          "BLOG"
+        ]
+      },
+      "ignore": [
+        {
+          "files": "data/ebsco exports/ptsd_trauma/partial/**",
+          "why": "PARTIAL deliveries from the EBSCO email export, kept for the record, never ingested. 09-08: 1965-94 1,800/6,192; 2015-19 10,802/22,985; 2020-22 2,489/18,367. 09-09 re-request of 2015-19: 2,452 (83% overlapping the first fragment -> truncated heads of the relevance-ranked list, NOT random samples; biased toward high-mention records; first fragment also had ~13% within-file duplicates). 09-09 PM batch: Psyc 2023 842/6,742 and Health 2020-25 8,812/16,660 partial. Mitigation: single-year slices, requests spaced a few minutes apart, every delivery checked against expected n before renaming."
+        },
+        {
+          "files": "data/ebsco exports/ptsd_trauma/duplicates/**",
+          "why": "byte-identical re-downloads of files already in place (md5-checked 2026-09-09); safe to delete"
+        }
+      ],
+      "audit": {
+        "min_abstract_share": 0.85,
+        "warn_if_dedupe_share_above": 0.45
+      }
+    },
+    "corpus_sources": [
+      {
+        "id": "psyc_1965_1994",
+        "files": [
+          "data/ebsco exports/ptsd_trauma/Psyc_family_1965-1994.ris"
+        ],
+        "databases": [
+          "APA PsycInfo",
+          "APA PsycArticles"
+        ],
+        "query": "family",
+        "dates": "1965-1994",
+        "role": "ancestor",
+        "question": "parent population before and around the 1980 coinage (three pre-coinage periods)",
+        "n_expected": 6192,
+        "n_records": 6150,
+        "exported": "2026-09-09",
+        "note": "first delivery (09-08) was partial (1,800); complete on re-request"
+      },
+      {
+        "id": "psyc_1995_2004",
+        "files": [
+          "data/ebsco exports/ptsd_trauma/Psyc_family_1995-2004.ris"
+        ],
+        "databases": [
+          "APA PsycInfo",
+          "APA PsycArticles"
+        ],
+        "query": "family",
+        "dates": "1995-2004",
+        "role": "family",
+        "question": "DSM-IV era; Criterion A broadening; complex PTSD coinage",
+        "n_expected": 12504,
+        "n_records": 12489,
+        "exported": "2026-09-08"
+      },
+      {
+        "id": "psyc_2005_2009",
+        "files": [
+          "data/ebsco exports/ptsd_trauma/Psyc_family_2005-2009.ris"
+        ],
+        "databases": [
+          "APA PsycInfo",
+          "APA PsycArticles"
+        ],
+        "query": "family",
+        "dates": "2005-2009",
+        "role": "family",
+        "question": "Iraq/Afghanistan veteran literature; trauma-informed care emerges",
+        "n_expected": 12777,
+        "n_records": 12691,
+        "exported": "2026-09-08"
+      },
+      {
+        "id": "psyc_2010_2014",
+        "files": [
+          "data/ebsco exports/ptsd_trauma/Psyc_family_2010-2014.ris"
+        ],
+        "databases": [
+          "APA PsycInfo",
+          "APA PsycArticles"
+        ],
+        "query": "family",
+        "dates": "2010-2014",
+        "role": "family",
+        "question": "pre-/at DSM-5",
+        "n_expected": 18531,
+        "n_records": 18462,
+        "exported": "2026-09-08"
+      },
+      {
+        "id": "psyc_2015_2019",
+        "files": [
+          "data/ebsco exports/ptsd_trauma/Psyc_family_2015-2019.ris",
+          "data/ebsco exports/ptsd_trauma/Psyc_family_201[5-9].ris"
+        ],
+        "databases": [
+          "APA PsycInfo",
+          "APA PsycArticles"
+        ],
+        "query": "family",
+        "dates": "2015-2019",
+        "role": "family",
+        "question": "DSM-5 era; ICD-11 complex PTSD; peak creep period per Haslam",
+        "n_expected": 22985,
+        "n_records": 22849,
+        "exported": "2026-09-09"
+      },
+      {
+        "id": "psyc_2020_2022",
+        "files": [
+          "data/ebsco exports/ptsd_trauma/Psyc_family_2020-2022.ris",
+          "data/ebsco exports/ptsd_trauma/Psyc_family_202[0-2].ris"
+        ],
+        "databases": [
+          "APA PsycInfo",
+          "APA PsycArticles"
+        ],
+        "query": "family",
+        "dates": "2020-2022",
+        "role": "family",
+        "question": "pandemic era",
+        "n_expected": 18367,
+        "n_records": 18322,
+        "exported": "2026-09-09"
+      },
+      {
+        "id": "psyc_2023_2025",
+        "files": [
+          "data/ebsco exports/ptsd_trauma/Psyc_family_2023-2025.ris",
+          "data/ebsco exports/ptsd_trauma/Psyc_family_202[3-5].ris"
+        ],
+        "databases": [
+          "APA PsycInfo",
+          "APA PsycArticles"
+        ],
+        "query": "family",
+        "dates": "2023-2025",
+        "role": "family",
+        "question": "most recent usage",
+        "n_expected": 19057,
+        "n_records": 19004,
+        "exported": "2026-09-11"
+      },
+      {
+        "id": "health",
+        "files": [
+          "data/ebsco exports/ptsd_trauma/health_family_*.ris"
+        ],
+        "databases": [
+          "CINAHL"
+        ],
+        "query": "family_health",
+        "dates": "1975-2014 (12,648) / 2015-2019 (9,487) / 2020-2022 (8,401) / 2023-2025 (8,260)",
+        "role": "habitat",
+        "hypothesis": "direct->indirect (vicarious/secondary trauma in nursing); the somatic homonym enters only via specific phrases \u2014 see exclusions",
+        "n_expected": 38795,
+        "n_records": 38796,
+        "exported": "2026-09-11"
+      },
+      {
+        "id": "crime_socialwork",
+        "files": [
+          "data/ebsco exports/ptsd_trauma/crime-socialwork_family_*.ris"
+        ],
+        "databases": [
+          "SocINDEX with Full Text",
+          "Criminal Justice Abstracts",
+          "Social Work Abstracts"
+        ],
+        "query": "family",
+        "dates": "1975-2014 (22,483) / 2015-2025 (22,952)",
+        "role": "habitat",
+        "hypothesis": "individual->collective (sociology); trauma-informed practice (social work); victim/forensic use (criminal justice)",
+        "n_expected": 45435,
+        "n_records": 39856,
+        "exported": "2026-09-11",
+        "delivery_flag": "87-88% of page count; see note; re-request pending"
+      },
+      {
+        "id": "education",
+        "files": [
+          "data/ebsco exports/ptsd_trauma/education_family.ris"
+        ],
+        "databases": [
+          "Education Full Text (H.W. Wilson)"
+        ],
+        "query": "family",
+        "dates": "1975-2025",
+        "role": "habitat",
+        "hypothesis": "extraordinary->ordinary: trauma-informed schools; ACEs discourse",
+        "n_expected": 19663,
+        "n_records": 19663,
+        "exported": "2026-09-11"
+      },
+      {
+        "id": "business",
+        "files": [
+          "data/ebsco exports/ptsd_trauma/Business_family.ris"
+        ],
+        "databases": [
+          "Business Source Complete",
+          "Business Abstracts with Full Text (H.W. Wilson)"
+        ],
+        "query": "family",
+        "dates": "1975-2025",
+        "role": "habitat",
+        "hypothesis": "extraordinary->ordinary: workplace trauma, trauma-informed leadership; also the SURPRISE BUDGET \u2014 same DB as ego depletion's migration niche, for comparability",
+        "n_expected": 5124,
+        "n_records": 5087,
+        "exported": "2026-09-11"
+      },
+      {
+        "id": "econ",
+        "files": [
+          "data/ebsco exports/ptsd_trauma/econ_family.ris"
+        ],
+        "databases": [
+          "EconLit"
+        ],
+        "query": "family",
+        "dates": "1975-2025",
+        "role": "habitat",
+        "hypothesis": "surprise budget only (economics of veterans' disability, conflict) \u2014 expected small",
+        "n_expected": 335,
+        "n_records": 335,
+        "exported": "2026-09-11"
+      },
+      {
+        "id": "popular_news",
+        "files": [
+          "data/ptsd_trauma/popular/news_*.jsonl"
+        ],
+        "databases": [
+          "TBD: ProQuest TDM Studio newspapers (BU access noted Session 6) or NYT API"
+        ],
+        "query": "focal_ptsd OR focal_trauma",
+        "dates": "1975-2025",
+        "role": "popular",
+        "stratum": "popular",
+        "hypothesis": "horizontal creep into lay usage \u2014 invisible in academic abstracts; Haslam 2016 used Google Books frequency; a 2025 NYT-corpus study reported severity for depression (lead \u2014 verify)",
+        "n_records": null,
+        "note": "different register and embedding behaviour; NEVER pooled with journal stratum; analysed as its own lineage with the same controls"
+      },
+      {
+        "id": "popular_books_ngram",
+        "files": [
+          "data/ptsd_trauma/popular/ngram_*.csv"
+        ],
+        "databases": [
+          "Google Books Ngram (frequency only; no contexts)"
+        ],
+        "query": "trauma; PTSD; posttraumatic stress disorder; shell shock",
+        "dates": "1900-2019",
+        "role": "popular",
+        "stratum": "popular",
+        "hypothesis": "salience curve only \u2014 the lead/lag test (salience -> breadth, Vylomova & Haslam) needs it",
+        "n_records": null
+      }
+    ],
+    "coverage_audit": {
+      "business": {
+        "records": 5087,
+        "with_abstract": 4971,
+        "with_doi": 4388,
+        "TY:JOUR": 5040,
+        "kept": 4749,
+        "stratum:journal": 4749,
+        "skipped_no_abstract_or_year": 93,
+        "TY:CASE": 29,
+        "skipped_no_family_term": 50,
+        "merged_into_existing": 195,
+        "TY:GEN": 18,
+        "strata": {
+          "journal": 4749
+        }
+      },
+      "crime_socialwork": {
+        "records": 39856,
+        "with_abstract": 38819,
+        "with_doi": 35489,
+        "TY:JOUR": 39610,
+        "merged_into_existing": 27298,
+        "kept": 11678,
+        "stratum:journal": 11660,
+        "skipped_no_family_term": 154,
+        "TY:CASE": 148,
+        "TY:GEN": 79,
+        "skipped_no_abstract_or_year": 726,
+        "TY:THES": 17,
+        "stratum:thesis": 16,
+        "TY:NEWS": 1,
+        "stratum:popular": 1,
+        "TY:CHAP": 1,
+        "stratum:book": 1,
+        "strata": {
+          "journal": 11660,
+          "thesis": 16,
+          "popular": 1,
+          "book": 1
+        }
+      },
+      "econ": {
+        "records": 335,
+        "with_abstract": 331,
+        "TY:JOUR": 335,
+        "merged_into_existing": 258,
+        "with_doi": 118,
+        "kept": 72,
+        "stratum:journal": 72,
+        "skipped_no_family_term": 4,
+        "skipped_no_abstract_or_year": 1,
+        "strata": {
+          "journal": 72
+        }
+      },
+      "education": {
+        "records": 19663,
+        "with_abstract": 18642,
+        "with_doi": 17553,
+        "TY:JOUR": 19500,
+        "kept": 4920,
+        "stratum:journal": 4918,
+        "merged_into_existing": 14145,
+        "TY:CASE": 96,
+        "skipped_no_abstract_or_year": 524,
+        "TY:GEN": 64,
+        "skipped_no_family_term": 74,
+        "TY:CHAP": 1,
+        "stratum:book": 1,
+        "TY:NEWS": 2,
+        "stratum:popular": 1,
+        "strata": {
+          "journal": 4918,
+          "book": 1,
+          "popular": 1
+        }
+      },
+      "health": {
+        "records": 38796,
+        "with_abstract": 32677,
+        "with_doi": 35290,
+        "TY:JOUR": 38715,
+        "kept": 10026,
+        "stratum:journal": 10026,
+        "merged_into_existing": 25632,
+        "skipped_no_abstract_or_year": 3033,
+        "TY:CASE": 71,
+        "skipped_no_family_term": 105,
+        "TY:GEN": 10,
+        "strata": {
+          "journal": 10026
+        }
+      },
+      "psyc_1965_1994": {
+        "records": 6150,
+        "with_abstract": 6148,
+        "with_doi": 4344,
+        "TY:JOUR": 6150,
+        "kept": 5511,
+        "stratum:journal": 5511,
+        "merged_into_existing": 577,
+        "skipped_no_family_term": 60,
+        "skipped_no_abstract_or_year": 2,
+        "strata": {
+          "journal": 5511
+        }
+      },
+      "psyc_1995_2004": {
+        "records": 12489,
+        "with_abstract": 12489,
+        "with_doi": 9969,
+        "TY:JOUR": 12489,
+        "kept": 11164,
+        "stratum:journal": 11164,
+        "merged_into_existing": 1251,
+        "skipped_no_family_term": 74,
+        "strata": {
+          "journal": 11164
+        }
+      },
+      "psyc_2005_2009": {
+        "records": 12691,
+        "with_abstract": 12690,
+        "with_doi": 10788,
+        "TY:JOUR": 12691,
+        "kept": 11437,
+        "stratum:journal": 11437,
+        "merged_into_existing": 1186,
+        "skipped_no_family_term": 67,
+        "skipped_no_abstract_or_year": 1,
+        "strata": {
+          "journal": 11437
+        }
+      },
+      "psyc_2010_2014": {
+        "records": 18462,
+        "with_abstract": 18462,
+        "with_doi": 16459,
+        "TY:JOUR": 18462,
+        "kept": 16489,
+        "stratum:journal": 16489,
+        "merged_into_existing": 1852,
+        "skipped_no_family_term": 121,
+        "strata": {
+          "journal": 16489
+        }
+      },
+      "psyc_2015_2019": {
+        "records": 22849,
+        "with_abstract": 22845,
+        "with_doi": 21442,
+        "TY:JOUR": 22849,
+        "kept": 20660,
+        "stratum:journal": 20660,
+        "merged_into_existing": 2026,
+        "skipped_no_family_term": 159,
+        "skipped_no_abstract_or_year": 4,
+        "strata": {
+          "journal": 20660
+        }
+      },
+      "psyc_2020_2022": {
+        "records": 18322,
+        "with_abstract": 18322,
+        "with_doi": 17806,
+        "TY:JOUR": 18322,
+        "merged_into_existing": 1557,
+        "kept": 16637,
+        "stratum:journal": 16637,
+        "skipped_no_family_term": 128,
+        "strata": {
+          "journal": 16637
+        }
+      },
+      "psyc_2023_2025": {
+        "records": 19004,
+        "with_abstract": 19004,
+        "with_doi": 18451,
+        "TY:JOUR": 19004,
+        "kept": 16676,
+        "stratum:journal": 16676,
+        "merged_into_existing": 2146,
+        "skipped_no_family_term": 182,
+        "strata": {
+          "journal": 16676
+        }
+      }
+    }
+  },
+  "outputs": [
+    "data/ptsd_trauma/lineage_docs.jsonl",
+    "data/ptsd_trauma/lineage_power_table.csv"
+  ],
+  "versions": {
+    "python": "3.10.12",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "sklearn": "1.7.2",
+    "diptest": "0.11.0"
+  }
+}
