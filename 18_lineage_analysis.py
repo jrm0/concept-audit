@@ -214,6 +214,11 @@ def frame_residualize(data):
             raise SystemExit(f"--frame-control needs the syntax array on every shard; "
                              f"{t} lacks it for {missing} — re-run 17 (--refresh-changed).")
         ps = sorted(per)
+        widths = {p: per[p]["syntax"].shape[1] for p in ps}
+        if len(set(widths.values())) > 1 or set(widths.values()) != {len(pc.SYNTAX_FEATURE_NAMES)}:
+            raise SystemExit(f"--frame-control needs every shard to carry all "
+                             f"{len(pc.SYNTAX_FEATURE_NAMES)} syntax features; {t} has widths "
+                             f"{widths} — run 17 --refresh-changed (it re-embeds narrow shards).")
         V = np.vstack([per[p]["V"] for p in ps])
         S = np.vstack([per[p]["syntax"] for p in ps]).astype(float)
         if len(V) < 3 * S.shape[1] + 5:          # too few docs to fit 8 parameters sensibly

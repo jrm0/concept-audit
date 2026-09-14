@@ -1,0 +1,1420 @@
+{
+  "delay of gratification": {
+    "periods": [
+      {
+        "period": "1995-1999",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "1995-1999:0",
+            "n": 16
+          }
+        ]
+      },
+      {
+        "period": "2000-2004",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2000-2004:0",
+            "n": 21
+          }
+        ]
+      },
+      {
+        "period": "2005-2009",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2005-2009:0",
+            "n": 29
+          }
+        ]
+      },
+      {
+        "period": "2010-2014",
+        "dip_p": 0.9493,
+        "mean_jaccard": 0.5875,
+        "silhouette": 0.2029,
+        "verdict": "NOT SUPPORTED",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 66
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": 0.9352,
+        "mean_jaccard": 0.5253,
+        "silhouette": 0.2059,
+        "verdict": "NOT SUPPORTED",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 79
+          }
+        ]
+      },
+      {
+        "period": "2020-2024",
+        "dip_p": 0.9738,
+        "mean_jaccard": 0.4913,
+        "silhouette": 0.2015,
+        "verdict": "NOT SUPPORTED",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2020-2024:0",
+            "n": 67
+          }
+        ]
+      },
+      {
+        "period": "2025-2025",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2025-2025:0",
+            "n": 16
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "2000-2004:0",
+        "parent": "1995-1999:0",
+        "cos": 0.9923
+      },
+      {
+        "child": "2005-2009:0",
+        "parent": "2000-2004:0",
+        "cos": 0.9934
+      },
+      {
+        "child": "2010-2014:0",
+        "parent": "2005-2009:0",
+        "cos": 0.9937
+      },
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": 0.9977
+      },
+      {
+        "child": "2020-2024:0",
+        "parent": "2015-2019:0",
+        "cos": 0.9971
+      },
+      {
+        "child": "2025-2025:0",
+        "parent": "2020-2024:0",
+        "cos": 0.9925
+      }
+    ],
+    "branchings": []
+  },
+  "depletion effect": {
+    "periods": [
+      {
+        "period": "2010-2014",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 17
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 44
+          }
+        ]
+      },
+      {
+        "period": "2020-2024",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2020-2024:0",
+            "n": 18
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": 0.9934
+      },
+      {
+        "child": "2020-2024:0",
+        "parent": "2015-2019:0",
+        "cos": 0.9904
+      }
+    ],
+    "branchings": []
+  },
+  "ego depletion": {
+    "periods": [
+      {
+        "period": "2005-2009",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2005-2009:0",
+            "n": 43
+          }
+        ]
+      },
+      {
+        "period": "2010-2014",
+        "dip_p": 0.9797,
+        "mean_jaccard": 0.6526,
+        "silhouette": 0.2733,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 120
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": 0.9092,
+        "mean_jaccard": 0.8997,
+        "silhouette": 0.3225,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 263
+          }
+        ]
+      },
+      {
+        "period": "2020-2024",
+        "dip_p": 0.9832,
+        "mean_jaccard": 0.9143,
+        "silhouette": 0.2663,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2020-2024:0",
+            "n": 208
+          }
+        ]
+      },
+      {
+        "period": "2025-2025",
+        "dip_p": 0.8824,
+        "mean_jaccard": 0.8358,
+        "silhouette": 0.3144,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2025-2025:0",
+            "n": 86
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "2010-2014:0",
+        "parent": "2005-2009:0",
+        "cos": 0.9961
+      },
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": 0.9984
+      },
+      {
+        "child": "2020-2024:0",
+        "parent": "2015-2019:0",
+        "cos": 0.9967
+      },
+      {
+        "child": "2025-2025:0",
+        "parent": "2020-2024:0",
+        "cos": 0.9989
+      }
+    ],
+    "branchings": []
+  },
+  "executive function": {
+    "periods": [
+      {
+        "period": "2000-2004",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2000-2004:0",
+            "n": 26
+          }
+        ]
+      },
+      {
+        "period": "2005-2009",
+        "dip_p": 0.9181,
+        "mean_jaccard": 0.7389,
+        "silhouette": 0.4127,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2005-2009:0",
+            "n": 62
+          }
+        ]
+      },
+      {
+        "period": "2010-2014",
+        "dip_p": 0.9516,
+        "mean_jaccard": 0.6298,
+        "silhouette": 0.1924,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 158
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": 0.9164,
+        "mean_jaccard": 0.6484,
+        "silhouette": 0.342,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 257
+          }
+        ]
+      },
+      {
+        "period": "2020-2024",
+        "dip_p": 0.5643,
+        "mean_jaccard": 0.7961,
+        "silhouette": 0.4293,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2020-2024:0",
+            "n": 292
+          }
+        ]
+      },
+      {
+        "period": "2025-2025",
+        "dip_p": 0.9281,
+        "mean_jaccard": 0.6272,
+        "silhouette": 0.2243,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2025-2025:0",
+            "n": 105
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "2005-2009:0",
+        "parent": "2000-2004:0",
+        "cos": 0.9958
+      },
+      {
+        "child": "2010-2014:0",
+        "parent": "2005-2009:0",
+        "cos": 0.9977
+      },
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": 0.9988
+      },
+      {
+        "child": "2020-2024:0",
+        "parent": "2015-2019:0",
+        "cos": 0.9992
+      },
+      {
+        "child": "2025-2025:0",
+        "parent": "2020-2024:0",
+        "cos": 0.9989
+      }
+    ],
+    "branchings": []
+  },
+  "regulatory resource": {
+    "periods": [],
+    "links": [],
+    "branchings": []
+  },
+  "self control": {
+    "periods": [
+      {
+        "period": "1975-1979",
+        "dip_p": 0.9909,
+        "mean_jaccard": 0.7293,
+        "silhouette": 0.2651,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "1975-1979:0",
+            "n": 493
+          }
+        ]
+      },
+      {
+        "period": "1980-1984",
+        "dip_p": 0.9918,
+        "mean_jaccard": 0.6531,
+        "silhouette": 0.2318,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "1980-1984:0",
+            "n": 627
+          }
+        ]
+      },
+      {
+        "period": "1985-1989",
+        "dip_p": 0.9849,
+        "mean_jaccard": 0.8879,
+        "silhouette": 0.193,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "1985-1989:0",
+            "n": 596
+          }
+        ]
+      },
+      {
+        "period": "1990-1994",
+        "dip_p": 0.8805,
+        "mean_jaccard": 0.8079,
+        "silhouette": 0.1858,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "1990-1994:0",
+            "n": 665
+          }
+        ]
+      },
+      {
+        "period": "1995-1999",
+        "dip_p": 0.9946,
+        "mean_jaccard": 0.8247,
+        "silhouette": 0.1879,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "1995-1999:0",
+            "n": 941
+          }
+        ]
+      },
+      {
+        "period": "2000-2004",
+        "dip_p": 0.9913,
+        "mean_jaccard": 0.8659,
+        "silhouette": 0.1745,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2000-2004:0",
+            "n": 1116
+          }
+        ]
+      },
+      {
+        "period": "2005-2009",
+        "dip_p": 0.9935,
+        "mean_jaccard": 0.8834,
+        "silhouette": 0.1837,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2005-2009:0",
+            "n": 2033
+          }
+        ]
+      },
+      {
+        "period": "2010-2014",
+        "dip_p": 0.9926,
+        "mean_jaccard": 0.772,
+        "silhouette": 0.172,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 2912
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": 0.9906,
+        "mean_jaccard": 0.8198,
+        "silhouette": 0.1745,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 3768
+          }
+        ]
+      },
+      {
+        "period": "2020-2024",
+        "dip_p": 0.8936,
+        "mean_jaccard": 0.9655,
+        "silhouette": 0.1874,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2020-2024:0",
+            "n": 4154
+          }
+        ]
+      },
+      {
+        "period": "2025-2025",
+        "dip_p": 0.7758,
+        "mean_jaccard": 0.9351,
+        "silhouette": 0.193,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2025-2025:0",
+            "n": 1195
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "1980-1984:0",
+        "parent": "1975-1979:0",
+        "cos": 0.9994
+      },
+      {
+        "child": "1985-1989:0",
+        "parent": "1980-1984:0",
+        "cos": 0.9991
+      },
+      {
+        "child": "1990-1994:0",
+        "parent": "1985-1989:0",
+        "cos": 0.9991
+      },
+      {
+        "child": "1995-1999:0",
+        "parent": "1990-1994:0",
+        "cos": 0.9994
+      },
+      {
+        "child": "2000-2004:0",
+        "parent": "1995-1999:0",
+        "cos": 0.9996
+      },
+      {
+        "child": "2005-2009:0",
+        "parent": "2000-2004:0",
+        "cos": 0.9995
+      },
+      {
+        "child": "2010-2014:0",
+        "parent": "2005-2009:0",
+        "cos": 0.9997
+      },
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": 0.9997
+      },
+      {
+        "child": "2020-2024:0",
+        "parent": "2015-2019:0",
+        "cos": 0.9997
+      },
+      {
+        "child": "2025-2025:0",
+        "parent": "2020-2024:0",
+        "cos": 0.9997
+      }
+    ],
+    "branchings": []
+  },
+  "self control depletion": {
+    "periods": [
+      {
+        "period": "2010-2014",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 29
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 35
+          }
+        ]
+      },
+      {
+        "period": "2020-2024",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2020-2024:0",
+            "n": 22
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": 0.991
+      },
+      {
+        "child": "2020-2024:0",
+        "parent": "2015-2019:0",
+        "cos": 0.9917
+      }
+    ],
+    "branchings": []
+  },
+  "self regulation": {
+    "periods": [
+      {
+        "period": "1975-1979",
+        "dip_p": 0.0318,
+        "mean_jaccard": 0.8434,
+        "silhouette": 0.2407,
+        "verdict": "SUPPORTED",
+        "syntax_guard": {
+          "features": [
+            "title",
+            "defn",
+            "paren",
+            "attributive",
+            "modifier",
+            "premodified",
+            "coordinated"
+          ],
+          "rates": {
+            "1975-1979:0": [
+              0.198,
+              0.053,
+              0.0,
+              0.0,
+              0.196,
+              0.307,
+              0.455
+            ],
+            "1975-1979:1": [
+              0.117,
+              0.017,
+              0.0,
+              0.0,
+              0.258,
+              0.206,
+              0.294
+            ],
+            "1975-1979:2": [
+              0.36,
+              0.047,
+              0.0,
+              0.0,
+              0.019,
+              0.101,
+              0.205
+            ]
+          },
+          "worst_feature": "coordinated",
+          "max_diff": 0.25,
+          "flagged": false,
+          "kind": null
+        },
+        "clusters": [
+          {
+            "id": "1975-1979:0",
+            "n": 63
+          },
+          {
+            "id": "1975-1979:1",
+            "n": 60
+          },
+          {
+            "id": "1975-1979:2",
+            "n": 43
+          }
+        ]
+      },
+      {
+        "period": "1980-1984",
+        "dip_p": 0.0088,
+        "mean_jaccard": 0.8652,
+        "silhouette": 0.2132,
+        "verdict": "SUPPORTED",
+        "syntax_guard": {
+          "features": [
+            "title",
+            "defn",
+            "paren",
+            "attributive",
+            "modifier",
+            "premodified",
+            "coordinated"
+          ],
+          "rates": {
+            "1980-1984:0": [
+              0.145,
+              0.071,
+              0.0,
+              0.0,
+              0.219,
+              0.222,
+              0.385
+            ],
+            "1980-1984:1": [
+              0.169,
+              0.045,
+              0.0,
+              0.002,
+              0.129,
+              0.215,
+              0.351
+            ]
+          },
+          "worst_feature": "modifier",
+          "max_diff": 0.09,
+          "flagged": false,
+          "kind": null
+        },
+        "clusters": [
+          {
+            "id": "1980-1984:0",
+            "n": 183
+          },
+          {
+            "id": "1980-1984:1",
+            "n": 134
+          }
+        ]
+      },
+      {
+        "period": "1985-1989",
+        "dip_p": 0.0896,
+        "mean_jaccard": 0.9886,
+        "silhouette": 0.3555,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "1985-1989:0",
+            "n": 463
+          }
+        ]
+      },
+      {
+        "period": "1990-1994",
+        "dip_p": 0.0334,
+        "mean_jaccard": 0.9751,
+        "silhouette": 0.2423,
+        "verdict": "SUPPORTED",
+        "syntax_guard": {
+          "features": [
+            "title",
+            "defn",
+            "paren",
+            "attributive",
+            "modifier",
+            "premodified",
+            "coordinated"
+          ],
+          "rates": {
+            "1990-1994:0": [
+              0.222,
+              0.029,
+              0.0,
+              0.002,
+              0.195,
+              0.227,
+              0.407
+            ],
+            "1990-1994:1": [
+              0.128,
+              0.063,
+              0.0,
+              0.0,
+              0.099,
+              0.22,
+              0.378
+            ]
+          },
+          "worst_feature": "modifier",
+          "max_diff": 0.096,
+          "flagged": false,
+          "kind": null
+        },
+        "clusters": [
+          {
+            "id": "1990-1994:0",
+            "n": 465
+          },
+          {
+            "id": "1990-1994:1",
+            "n": 283
+          }
+        ]
+      },
+      {
+        "period": "1995-1999",
+        "dip_p": 0.0,
+        "mean_jaccard": 0.9881,
+        "silhouette": 0.2529,
+        "verdict": "SUPPORTED",
+        "syntax_guard": {
+          "features": [
+            "title",
+            "defn",
+            "paren",
+            "attributive",
+            "modifier",
+            "premodified",
+            "coordinated"
+          ],
+          "rates": {
+            "1995-1999:0": [
+              0.152,
+              0.038,
+              0.0,
+              0.002,
+              0.122,
+              0.288,
+              0.329
+            ],
+            "1995-1999:1": [
+              0.175,
+              0.054,
+              0.0,
+              0.001,
+              0.232,
+              0.221,
+              0.418
+            ]
+          },
+          "worst_feature": "modifier",
+          "max_diff": 0.11,
+          "flagged": false,
+          "kind": null
+        },
+        "clusters": [
+          {
+            "id": "1995-1999:0",
+            "n": 612
+          },
+          {
+            "id": "1995-1999:1",
+            "n": 861
+          }
+        ]
+      },
+      {
+        "period": "2000-2004",
+        "dip_p": 0.0,
+        "mean_jaccard": 0.9866,
+        "silhouette": 0.2498,
+        "verdict": "SUPPORTED",
+        "syntax_guard": {
+          "features": [
+            "title",
+            "defn",
+            "paren",
+            "attributive",
+            "modifier",
+            "premodified",
+            "coordinated"
+          ],
+          "rates": {
+            "2000-2004:0": [
+              0.149,
+              0.05,
+              0.0,
+              0.001,
+              0.199,
+              0.232,
+              0.435
+            ],
+            "2000-2004:1": [
+              0.127,
+              0.046,
+              0.0,
+              0.0,
+              0.152,
+              0.299,
+              0.356
+            ]
+          },
+          "worst_feature": "coordinated",
+          "max_diff": 0.079,
+          "flagged": false,
+          "kind": null
+        },
+        "clusters": [
+          {
+            "id": "2000-2004:0",
+            "n": 1337
+          },
+          {
+            "id": "2000-2004:1",
+            "n": 757
+          }
+        ]
+      },
+      {
+        "period": "2005-2009",
+        "dip_p": 0.1235,
+        "mean_jaccard": 0.9788,
+        "silhouette": 0.251,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2005-2009:0",
+            "n": 3288
+          }
+        ]
+      },
+      {
+        "period": "2010-2014",
+        "dip_p": 0.9625,
+        "mean_jaccard": 0.9305,
+        "silhouette": 0.2171,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 4933
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": 0.9951,
+        "mean_jaccard": 0.904,
+        "silhouette": 0.1845,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 6251
+          }
+        ]
+      },
+      {
+        "period": "2020-2024",
+        "dip_p": 0.9919,
+        "mean_jaccard": 0.9341,
+        "silhouette": 0.1765,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2020-2024:0",
+            "n": 7312
+          }
+        ]
+      },
+      {
+        "period": "2025-2025",
+        "dip_p": 0.9993,
+        "mean_jaccard": 0.7567,
+        "silhouette": 0.1696,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2025-2025:0",
+            "n": 3001
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "1980-1984:0",
+        "parent": "1975-1979:0",
+        "cos": 0.995
+      },
+      {
+        "child": "1980-1984:1",
+        "parent": "1975-1979:1",
+        "cos": 0.9953
+      },
+      {
+        "child": "1985-1989:0",
+        "parent": "1980-1984:0",
+        "cos": 0.9961
+      },
+      {
+        "child": "1990-1994:0",
+        "parent": "1985-1989:0",
+        "cos": 0.9967
+      },
+      {
+        "child": "1990-1994:1",
+        "parent": "1985-1989:0",
+        "cos": 0.982
+      },
+      {
+        "child": "1995-1999:0",
+        "parent": "1990-1994:1",
+        "cos": 0.999
+      },
+      {
+        "child": "1995-1999:1",
+        "parent": "1990-1994:0",
+        "cos": 0.9988
+      },
+      {
+        "child": "2000-2004:0",
+        "parent": "1995-1999:1",
+        "cos": 0.9996
+      },
+      {
+        "child": "2000-2004:1",
+        "parent": "1995-1999:0",
+        "cos": 0.9993
+      },
+      {
+        "child": "2005-2009:0",
+        "parent": "2000-2004:0",
+        "cos": 0.9972
+      },
+      {
+        "child": "2010-2014:0",
+        "parent": "2005-2009:0",
+        "cos": 0.9994
+      },
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": 0.9997
+      },
+      {
+        "child": "2020-2024:0",
+        "parent": "2015-2019:0",
+        "cos": 0.9997
+      },
+      {
+        "child": "2025-2025:0",
+        "parent": "2020-2024:0",
+        "cos": 0.9997
+      }
+    ],
+    "branchings": [
+      {
+        "parent": "1985-1989:0",
+        "period": "1990-1994",
+        "children": [
+          "1990-1994:0",
+          "1990-1994:1"
+        ],
+        "min_separation": 0.0319,
+        "noise_floor": 0.0008
+      }
+    ]
+  },
+  "self regulatory depletion": {
+    "periods": [
+      {
+        "period": "2010-2014",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 22
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 19
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": 0.991
+      }
+    ],
+    "branchings": []
+  },
+  "strength model": {
+    "periods": [
+      {
+        "period": "2005-2009",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2005-2009:0",
+            "n": 20
+          }
+        ]
+      },
+      {
+        "period": "2010-2014",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 42
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": 0.9546,
+        "mean_jaccard": 0.6385,
+        "silhouette": 0.3871,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 70
+          }
+        ]
+      },
+      {
+        "period": "2020-2024",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2020-2024:0",
+            "n": 38
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "2010-2014:0",
+        "parent": "2005-2009:0",
+        "cos": 0.9931
+      },
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": 0.9958
+      },
+      {
+        "child": "2020-2024:0",
+        "parent": "2015-2019:0",
+        "cos": 0.9938
+      }
+    ],
+    "branchings": []
+  },
+  "willpower": {
+    "periods": [
+      {
+        "period": "1985-1989",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "1985-1989:0",
+            "n": 20
+          }
+        ]
+      },
+      {
+        "period": "1990-1994",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "1990-1994:0",
+            "n": 43
+          }
+        ]
+      },
+      {
+        "period": "1995-1999",
+        "dip_p": null,
+        "mean_jaccard": null,
+        "silhouette": null,
+        "verdict": "n too small",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "1995-1999:0",
+            "n": 57
+          }
+        ]
+      },
+      {
+        "period": "2000-2004",
+        "dip_p": 0.9139,
+        "mean_jaccard": 0.8254,
+        "silhouette": 0.2546,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2000-2004:0",
+            "n": 93
+          }
+        ]
+      },
+      {
+        "period": "2005-2009",
+        "dip_p": 0.8509,
+        "mean_jaccard": 0.7458,
+        "silhouette": 0.3915,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2005-2009:0",
+            "n": 156
+          }
+        ]
+      },
+      {
+        "period": "2010-2014",
+        "dip_p": 0.9959,
+        "mean_jaccard": 0.7677,
+        "silhouette": 0.2326,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2010-2014:0",
+            "n": 267
+          }
+        ]
+      },
+      {
+        "period": "2015-2019",
+        "dip_p": 0.9868,
+        "mean_jaccard": 0.8716,
+        "silhouette": 0.2626,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2015-2019:0",
+            "n": 295
+          }
+        ]
+      },
+      {
+        "period": "2020-2024",
+        "dip_p": 0.9637,
+        "mean_jaccard": 0.8392,
+        "silhouette": 0.244,
+        "verdict": "candidate only",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2020-2024:0",
+            "n": 304
+          }
+        ]
+      },
+      {
+        "period": "2025-2025",
+        "dip_p": 0.9931,
+        "mean_jaccard": 0.505,
+        "silhouette": 0.2023,
+        "verdict": "NOT SUPPORTED",
+        "syntax_guard": null,
+        "clusters": [
+          {
+            "id": "2025-2025:0",
+            "n": 107
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "child": "1990-1994:0",
+        "parent": "1985-1989:0",
+        "cos": 0.9899
+      },
+      {
+        "child": "1995-1999:0",
+        "parent": "1990-1994:0",
+        "cos": 0.9912
+      },
+      {
+        "child": "2000-2004:0",
+        "parent": "1995-1999:0",
+        "cos": 0.9968
+      },
+      {
+        "child": "2005-2009:0",
+        "parent": "2000-2004:0",
+        "cos": 0.9976
+      },
+      {
+        "child": "2010-2014:0",
+        "parent": "2005-2009:0",
+        "cos": 0.998
+      },
+      {
+        "child": "2015-2019:0",
+        "parent": "2010-2014:0",
+        "cos": 0.9986
+      },
+      {
+        "child": "2020-2024:0",
+        "parent": "2015-2019:0",
+        "cos": 0.999
+      },
+      {
+        "child": "2025-2025:0",
+        "parent": "2020-2024:0",
+        "cos": 0.9979
+      }
+    ],
+    "branchings": []
+  }
+}

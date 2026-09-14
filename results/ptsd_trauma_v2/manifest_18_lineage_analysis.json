@@ -3,8 +3,8 @@
   "concept": "posttraumatic stress disorder",
   "config": "configs/ptsd_trauma.yaml",
   "config_sha1": "a76e6b8c7b68",
-  "timestamp": "2026-09-13T11:30:17-04:00",
-  "git_commit": "4718838",
+  "timestamp": "2026-09-14T09:24:05-04:00",
+  "git_commit": "281319a",
   "git_dirty": false,
   "argv": [
     "--config",
@@ -18,6 +18,8 @@
       "strata": []
     },
     "suffix": "",
+    "frame_control": false,
+    "frame_r2": null,
     "equalize_n": 250,
     "equalize_reps": 100,
     "min_n": 15,
@@ -117,17 +119,151 @@
     ],
     "clustering": "cluster_core (dip + Hennig Jaccard)",
     "cells_tested": 113,
-    "cells_supported": 43,
+    "cells_supported": 40,
     "syntax_guard": {
       "threshold": 0.5,
-      "checked": 43,
+      "checked": 40,
       "unchecked_old_shards": 0,
       "flagged": [
         [
+          "adjustment disorder",
+          "2015-2019",
+          "coordinated",
+          0.61,
+          "frame"
+        ],
+        [
+          "adjustment disorder",
+          "2020-2024",
+          "coordinated",
+          0.618,
+          "frame"
+        ],
+        [
+          "bereavement",
+          "2015-2019",
+          "modifier",
+          0.786,
+          "frame"
+        ],
+        [
+          "posttraumatic stress",
+          "2005-2009",
+          "modifier",
+          0.818,
+          "frame"
+        ],
+        [
+          "posttraumatic stress",
+          "2010-2014",
+          "modifier",
+          0.842,
+          "frame"
+        ],
+        [
+          "posttraumatic stress",
+          "2015-2019",
+          "modifier",
+          0.845,
+          "frame"
+        ],
+        [
+          "posttraumatic stress",
+          "2020-2024",
+          "modifier",
+          0.855,
+          "frame"
+        ],
+        [
+          "posttraumatic stress",
+          "2025-2025",
+          "modifier",
+          0.836,
+          "frame"
+        ],
+        [
+          "posttraumatic stress disorder",
+          "2005-2009",
+          "coordinated",
+          0.559,
+          "frame"
+        ],
+        [
+          "posttraumatic stress disorder",
+          "2010-2014",
+          "coordinated",
+          0.512,
+          "frame"
+        ],
+        [
+          "posttraumatic stress disorder",
+          "2015-2019",
+          "modifier",
+          0.847,
+          "frame"
+        ],
+        [
+          "posttraumatic stress disorder",
+          "2020-2024",
+          "modifier",
+          0.823,
+          "frame"
+        ],
+        [
+          "posttraumatic stress disorder",
+          "2025-2025",
+          "modifier",
+          0.809,
+          "frame"
+        ],
+        [
+          "trauma",
+          "1995-1999",
+          "modifier",
+          0.698,
+          "frame"
+        ],
+        [
+          "trauma",
+          "2000-2004",
+          "modifier",
+          0.649,
+          "frame"
+        ],
+        [
+          "trauma",
+          "2005-2009",
+          "modifier",
+          0.625,
+          "frame"
+        ],
+        [
+          "trauma",
+          "2010-2014",
+          "modifier",
+          0.578,
+          "frame"
+        ],
+        [
           "trauma",
           "2020-2024",
-          "attributive",
-          0.665
+          "premodified",
+          0.783,
+          "frame"
+        ],
+        [
+          "traumatic stress",
+          "2000-2004",
+          "modifier",
+          0.856,
+          "frame"
+        ],
+        [
+          "traumatic stress",
+          "2015-2019",
+          "modifier",
+          0.837,
+          "frame"
         ]
       ]
     },

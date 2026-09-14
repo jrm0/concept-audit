@@ -1,0 +1,481 @@
+period,term_a,term_b,cosine_distance,distance_eq_sd,distance_full,n_eq
+1975-1979,measure,results,0.1804,0.015,0.1783,28
+1975-1979,measure,self control,0.1115,0.0057,0.1068,28
+1975-1979,measure,self regulation,0.1033,0.0051,0.0993,28
+1975-1979,measure,significant,0.1666,0.0066,0.1628,28
+1975-1979,results,self control,0.1363,0.002,0.1358,143
+1975-1979,results,self regulation,0.1306,0.0007,0.1305,143
+1975-1979,results,significant,0.1816,0.0049,0.18,84
+1975-1979,self control,self regulation,0.0105,0.0009,0.0101,166
+1975-1979,self control,significant,0.1336,0.0031,0.1327,84
+1975-1979,self regulation,significant,0.1455,0.002,0.1446,84
+1980-1984,measure,results,0.2099,0.0121,0.2075,29
+1980-1984,measure,self control,0.1237,0.0055,0.119,29
+1980-1984,measure,self regulation,0.1213,0.0055,0.1167,29
+1980-1984,measure,significant,0.1641,0.0071,0.1616,29
+1980-1984,results,self control,0.1593,0.0015,0.1589,231
+1980-1984,results,self regulation,0.1483,0.0009,0.1481,231
+1980-1984,results,significant,0.1911,0.0045,0.1904,117
+1980-1984,self control,self regulation,0.0094,0.0008,0.0089,250
+1980-1984,self control,significant,0.1271,0.0027,0.1267,117
+1980-1984,self regulation,significant,0.1363,0.0023,0.1354,117
+1985-1989,measure,results,0.1832,0.0119,0.1806,39
+1985-1989,measure,self control,0.1037,0.0045,0.1004,39
+1985-1989,measure,self regulation,0.0964,0.0049,0.0933,39
+1985-1989,measure,significant,0.1538,0.0055,0.1524,39
+1985-1989,measure,willpower,0.137,0.0072,0.133,20
+1985-1989,results,self control,0.1469,0.0016,0.147,210
+1985-1989,results,self regulation,0.1367,0.0013,0.1363,210
+1985-1989,results,significant,0.1829,0.0055,0.1809,81
+1985-1989,results,willpower,0.1742,0.0183,0.1721,20
+1985-1989,self control,self regulation,0.0108,0.0011,0.0102,250
+1985-1989,self control,significant,0.1303,0.0035,0.1285,81
+1985-1989,self control,willpower,0.0302,0.005,0.0238,20
+1985-1989,self regulation,significant,0.1343,0.003,0.1328,81
+1985-1989,self regulation,willpower,0.0378,0.0049,0.0307,20
+1985-1989,significant,willpower,0.1613,0.0107,0.1539,20
+1990-1994,measure,participants,0.162,0.0061,0.1593,26
+1990-1994,measure,results,0.1529,0.0097,0.1491,45
+1990-1994,measure,self control,0.1238,0.0051,0.1216,45
+1990-1994,measure,self regulation,0.1158,0.0048,0.1131,45
+1990-1994,measure,significant,0.1524,0.0053,0.1504,45
+1990-1994,measure,willpower,0.1363,0.0016,0.1361,43
+1990-1994,participants,results,0.1111,0.0096,0.1053,26
+1990-1994,participants,self control,0.1089,0.0053,0.1053,26
+1990-1994,participants,self regulation,0.0991,0.0049,0.0937,26
+1990-1994,participants,significant,0.1641,0.0105,0.1618,26
+1990-1994,participants,willpower,0.114,0.0053,0.1114,26
+1990-1994,results,self control,0.1245,0.0019,0.1242,184
+1990-1994,results,self regulation,0.1079,0.0018,0.1071,184
+1990-1994,results,significant,0.1549,0.0029,0.1545,111
+1990-1994,results,willpower,0.1362,0.0088,0.1342,43
+1990-1994,self control,self regulation,0.012,0.0011,0.0114,250
+1990-1994,self control,significant,0.132,0.0028,0.1308,111
+1990-1994,self control,willpower,0.0266,0.0029,0.0237,43
+1990-1994,self regulation,significant,0.1306,0.0025,0.1299,111
+1990-1994,self regulation,willpower,0.0309,0.0025,0.0273,43
+1990-1994,significant,willpower,0.1498,0.0062,0.1488,43
+1995-1999,delay of gratification,measure,0.13,0.0113,0.1223,16
+1995-1999,delay of gratification,participants,0.1199,0.0108,0.1122,16
+1995-1999,delay of gratification,results,0.1481,0.0122,0.139,16
+1995-1999,delay of gratification,self control,0.0279,0.0056,0.0201,16
+1995-1999,delay of gratification,self regulation,0.0319,0.0056,0.0225,16
+1995-1999,delay of gratification,significant,0.1543,0.0113,0.1452,16
+1995-1999,delay of gratification,willpower,0.0481,0.0052,0.0433,16
+1995-1999,measure,participants,0.1427,0.001,0.1426,129
+1995-1999,measure,results,0.1553,0.0041,0.1544,129
+1995-1999,measure,self control,0.1236,0.003,0.1228,129
+1995-1999,measure,self regulation,0.1107,0.0028,0.1097,129
+1995-1999,measure,significant,0.1543,0.0026,0.1542,129
+1995-1999,measure,willpower,0.1488,0.0049,0.1471,57
+1995-1999,participants,results,0.0891,0.0025,0.0889,143
+1995-1999,participants,self control,0.1132,0.0026,0.1124,143
+1995-1999,participants,self regulation,0.0961,0.0021,0.0954,143
+1995-1999,participants,significant,0.1638,0.0028,0.1629,143
+1995-1999,participants,willpower,0.1211,0.0046,0.1201,57
+1995-1999,results,self control,0.1371,0.0025,0.1367,250
+1995-1999,results,self regulation,0.1175,0.0022,0.1171,250
+1995-1999,results,significant,0.1613,0.0013,0.1612,250
+1995-1999,results,willpower,0.1441,0.0075,0.1429,57
+1995-1999,self control,self regulation,0.0112,0.0012,0.0103,250
+1995-1999,self control,significant,0.1377,0.0022,0.1375,250
+1995-1999,self control,willpower,0.0139,0.0018,0.0116,57
+1995-1999,self regulation,significant,0.1326,0.002,0.1323,250
+1995-1999,self regulation,willpower,0.0217,0.0027,0.0192,57
+1995-1999,significant,willpower,0.1568,0.0074,0.1548,57
+2000-2004,delay of gratification,executive function,0.0162,0.0012,0.0151,21
+2000-2004,delay of gratification,measure,0.1352,0.0126,0.1295,21
+2000-2004,delay of gratification,participants,0.1118,0.007,0.108,21
+2000-2004,delay of gratification,results,0.1315,0.0117,0.1274,21
+2000-2004,delay of gratification,self control,0.0209,0.0038,0.0153,21
+2000-2004,delay of gratification,self regulation,0.0228,0.0045,0.0161,21
+2000-2004,delay of gratification,significant,0.1474,0.0115,0.1396,21
+2000-2004,delay of gratification,willpower,0.0375,0.0045,0.0335,21
+2000-2004,executive function,measure,0.1272,0.0093,0.1229,26
+2000-2004,executive function,participants,0.1181,0.0071,0.1148,26
+2000-2004,executive function,results,0.1407,0.0105,0.1381,26
+2000-2004,executive function,self control,0.0256,0.0037,0.0211,26
+2000-2004,executive function,self regulation,0.028,0.0051,0.023,26
+2000-2004,executive function,significant,0.1458,0.0101,0.1397,26
+2000-2004,executive function,willpower,0.0443,0.0041,0.0409,26
+2000-2004,measure,participants,0.1521,0.0015,0.152,172
+2000-2004,measure,results,0.1553,0.0029,0.1551,172
+2000-2004,measure,self control,0.1282,0.0024,0.1274,172
+2000-2004,measure,self regulation,0.1121,0.0027,0.1114,172
+2000-2004,measure,significant,0.1503,0.0021,0.1497,172
+2000-2004,measure,willpower,0.1426,0.0038,0.1416,93
+2000-2004,participants,results,0.0949,0.0012,0.0949,250
+2000-2004,participants,self control,0.1163,0.002,0.116,250
+2000-2004,participants,self regulation,0.1023,0.0019,0.1023,250
+2000-2004,participants,significant,0.1643,0.0018,0.164,250
+2000-2004,participants,willpower,0.1208,0.0037,0.1201,93
+2000-2004,results,self control,0.1347,0.0021,0.1338,250
+2000-2004,results,self regulation,0.1166,0.0022,0.116,250
+2000-2004,results,significant,0.1586,0.0015,0.1588,250
+2000-2004,results,willpower,0.1371,0.0058,0.1361,93
+2000-2004,self control,self regulation,0.0091,0.0011,0.0082,250
+2000-2004,self control,significant,0.1326,0.0023,0.1326,250
+2000-2004,self control,willpower,0.0115,0.0012,0.0103,93
+2000-2004,self regulation,significant,0.1272,0.0021,0.1265,250
+2000-2004,self regulation,willpower,0.0178,0.0015,0.0163,93
+2000-2004,significant,willpower,0.1443,0.0043,0.1437,93
+2005-2009,delay of gratification,ego depletion,0.0212,0.0014,0.02,29
+2005-2009,delay of gratification,executive function,0.0154,0.0014,0.0133,29
+2005-2009,delay of gratification,measure,0.1221,0.0092,0.1166,29
+2005-2009,delay of gratification,participants,0.1261,0.0063,0.1225,29
+2005-2009,delay of gratification,results,0.1318,0.0095,0.1285,29
+2005-2009,delay of gratification,self control,0.0165,0.002,0.0123,29
+2005-2009,delay of gratification,self regulation,0.0204,0.0032,0.0151,29
+2005-2009,delay of gratification,significant,0.1517,0.0082,0.1483,29
+2005-2009,delay of gratification,strength model,0.1178,0.0026,0.1164,20
+2005-2009,delay of gratification,willpower,0.0384,0.0045,0.0345,29
+2005-2009,ego depletion,executive function,0.0211,0.0013,0.0202,43
+2005-2009,ego depletion,measure,0.128,0.0075,0.1246,43
+2005-2009,ego depletion,participants,0.1158,0.0051,0.1137,43
+2005-2009,ego depletion,results,0.1171,0.0075,0.1148,43
+2005-2009,ego depletion,self control,0.0162,0.0024,0.0134,43
+2005-2009,ego depletion,self regulation,0.018,0.0024,0.0147,43
+2005-2009,ego depletion,significant,0.145,0.0078,0.1431,43
+2005-2009,ego depletion,strength model,0.1107,0.0042,0.1091,20
+2005-2009,ego depletion,willpower,0.0296,0.0038,0.027,43
+2005-2009,executive function,measure,0.1136,0.0056,0.1119,62
+2005-2009,executive function,participants,0.1106,0.0035,0.1101,62
+2005-2009,executive function,results,0.1245,0.0059,0.1232,62
+2005-2009,executive function,self control,0.0149,0.0015,0.0129,62
+2005-2009,executive function,self regulation,0.0176,0.0024,0.0154,62
+2005-2009,executive function,significant,0.148,0.006,0.146,62
+2005-2009,executive function,strength model,0.1158,0.0078,0.1125,20
+2005-2009,executive function,willpower,0.0368,0.0028,0.0354,62
+2005-2009,measure,participants,0.1419,0.0014,0.1418,250
+2005-2009,measure,results,0.1337,0.0016,0.1337,250
+2005-2009,measure,self control,0.115,0.0022,0.1146,250
+2005-2009,measure,self regulation,0.1,0.002,0.0995,250
+2005-2009,measure,significant,0.1466,0.0017,0.1462,250
+2005-2009,measure,strength model,0.0837,0.0098,0.0755,20
+2005-2009,measure,willpower,0.1322,0.0028,0.1316,156
+2005-2009,participants,results,0.0942,0.0011,0.0941,250
+2005-2009,participants,self control,0.1151,0.0017,0.1145,250
+2005-2009,participants,self regulation,0.1041,0.0018,0.1039,250
+2005-2009,participants,significant,0.1691,0.0015,0.1692,250
+2005-2009,participants,strength model,0.1597,0.0086,0.155,20
+2005-2009,participants,willpower,0.1217,0.002,0.1212,156
+2005-2009,results,self control,0.1213,0.0021,0.1211,250
+2005-2009,results,self regulation,0.1069,0.002,0.1064,250
+2005-2009,results,significant,0.1516,0.0016,0.1516,250
+2005-2009,results,strength model,0.1283,0.01,0.1222,20
+2005-2009,results,willpower,0.1287,0.0036,0.1282,156
+2005-2009,self control,self regulation,0.0076,0.0011,0.0066,250
+2005-2009,self control,significant,0.1405,0.0025,0.1399,250
+2005-2009,self control,strength model,0.1177,0.0069,0.1123,20
+2005-2009,self control,willpower,0.0151,0.0011,0.0142,156
+2005-2009,self regulation,significant,0.1348,0.0025,0.1341,250
+2005-2009,self regulation,strength model,0.1008,0.0066,0.0942,20
+2005-2009,self regulation,willpower,0.0211,0.0011,0.0204,156
+2005-2009,significant,strength model,0.1819,0.0094,0.1756,20
+2005-2009,significant,willpower,0.1551,0.0029,0.1546,156
+2005-2009,strength model,willpower,0.122,0.0058,0.1174,20
+2010-2014,delay of gratification,depletion effect,0.0866,0.0048,0.0826,17
+2010-2014,delay of gratification,ego depletion,0.0169,0.0011,0.0163,66
+2010-2014,delay of gratification,executive function,0.0094,0.001,0.0083,66
+2010-2014,delay of gratification,measure,0.1152,0.0053,0.1134,66
+2010-2014,delay of gratification,participants,0.1144,0.0036,0.113,66
+2010-2014,delay of gratification,results,0.1213,0.0055,0.1197,66
+2010-2014,delay of gratification,self control,0.0141,0.0017,0.0125,66
+2010-2014,delay of gratification,self control depletion,0.0288,0.0031,0.0265,29
+2010-2014,delay of gratification,self regulation,0.0165,0.0019,0.0146,66
+2010-2014,delay of gratification,self regulatory depletion,0.031,0.0035,0.0281,22
+2010-2014,delay of gratification,significant,0.1471,0.0054,0.1456,66
+2010-2014,delay of gratification,strength model,0.1216,0.0021,0.1209,42
+2010-2014,delay of gratification,willpower,0.0329,0.0026,0.0316,66
+2010-2014,depletion effect,ego depletion,0.073,0.0044,0.0683,17
+2010-2014,depletion effect,executive function,0.0923,0.0078,0.0876,17
+2010-2014,depletion effect,measure,0.1246,0.0117,0.1144,17
+2010-2014,depletion effect,participants,0.1582,0.0076,0.1531,17
+2010-2014,depletion effect,results,0.1285,0.0123,0.1216,17
+2010-2014,depletion effect,self control,0.0876,0.0062,0.0812,17
+2010-2014,depletion effect,self control depletion,0.0762,0.0024,0.0736,17
+2010-2014,depletion effect,self regulation,0.0844,0.0055,0.0768,17
+2010-2014,depletion effect,self regulatory depletion,0.0789,0.0027,0.0774,17
+2010-2014,depletion effect,significant,0.1595,0.01,0.1523,17
+2010-2014,depletion effect,strength model,0.0868,0.0099,0.0819,17
+2010-2014,depletion effect,willpower,0.0935,0.0065,0.086,17
+2010-2014,ego depletion,executive function,0.0231,0.0009,0.0228,120
+2010-2014,ego depletion,measure,0.1219,0.0036,0.1216,120
+2010-2014,ego depletion,participants,0.1112,0.0021,0.1108,120
+2010-2014,ego depletion,results,0.1113,0.0028,0.111,120
+2010-2014,ego depletion,self control,0.017,0.0015,0.0163,120
+2010-2014,ego depletion,self control depletion,0.0129,0.0028,0.0104,29
+2010-2014,ego depletion,self regulation,0.0195,0.0017,0.0185,120
+2010-2014,ego depletion,self regulatory depletion,0.017,0.0039,0.0127,22
+2010-2014,ego depletion,significant,0.135,0.0034,0.1344,120
+2010-2014,ego depletion,strength model,0.1135,0.0027,0.1116,42
+2010-2014,ego depletion,willpower,0.0284,0.0018,0.0278,120
+2010-2014,executive function,measure,0.1118,0.0022,0.1115,158
+2010-2014,executive function,participants,0.1156,0.0018,0.1151,158
+2010-2014,executive function,results,0.126,0.0026,0.1258,158
+2010-2014,executive function,self control,0.0132,0.001,0.0123,158
+2010-2014,executive function,self control depletion,0.0371,0.0039,0.0335,29
+2010-2014,executive function,self regulation,0.0135,0.0014,0.0124,158
+2010-2014,executive function,self regulatory depletion,0.0378,0.0048,0.0334,22
+2010-2014,executive function,significant,0.1469,0.0028,0.1469,158
+2010-2014,executive function,strength model,0.1206,0.0053,0.1192,42
+2010-2014,executive function,willpower,0.0312,0.0011,0.0309,158
+2010-2014,measure,participants,0.1485,0.0014,0.1481,250
+2010-2014,measure,results,0.1419,0.0019,0.1417,250
+2010-2014,measure,self control,0.117,0.0025,0.1163,250
+2010-2014,measure,self control depletion,0.1365,0.0089,0.1305,29
+2010-2014,measure,self regulation,0.1016,0.0024,0.1011,250
+2010-2014,measure,self regulatory depletion,0.1369,0.0119,0.1285,22
+2010-2014,measure,significant,0.1519,0.0015,0.1519,250
+2010-2014,measure,strength model,0.0864,0.0062,0.0828,42
+2010-2014,measure,willpower,0.1277,0.0013,0.1275,250
+2010-2014,participants,results,0.0975,0.001,0.0974,250
+2010-2014,participants,self control,0.1162,0.002,0.1159,250
+2010-2014,participants,self control depletion,0.1089,0.0055,0.1055,29
+2010-2014,participants,self regulation,0.1105,0.0019,0.1098,250
+2010-2014,participants,self regulatory depletion,0.113,0.0076,0.1084,22
+2010-2014,participants,significant,0.1786,0.0014,0.1783,250
+2010-2014,participants,strength model,0.178,0.005,0.177,42
+2010-2014,participants,willpower,0.1203,0.001,0.1202,250
+2010-2014,results,self control,0.1231,0.0024,0.1229,250
+2010-2014,results,self control depletion,0.1174,0.0079,0.1154,29
+2010-2014,results,self regulation,0.1125,0.0021,0.1116,250
+2010-2014,results,self regulatory depletion,0.121,0.0074,0.1151,22
+2010-2014,results,significant,0.1535,0.0014,0.1533,250
+2010-2014,results,strength model,0.1279,0.0069,0.125,42
+2010-2014,results,willpower,0.1267,0.0016,0.1264,250
+2010-2014,self control,self control depletion,0.0308,0.0039,0.0264,29
+2010-2014,self control,self regulation,0.0061,0.0008,0.005,250
+2010-2014,self control,self regulatory depletion,0.0285,0.0043,0.0236,22
+2010-2014,self control,significant,0.1425,0.0029,0.1419,250
+2010-2014,self control,strength model,0.1212,0.0045,0.1189,42
+2010-2014,self control,willpower,0.0096,0.0008,0.009,250
+2010-2014,self control depletion,self regulation,0.0338,0.0043,0.029,29
+2010-2014,self control depletion,self regulatory depletion,0.012,0.0012,0.0109,22
+2010-2014,self control depletion,significant,0.1445,0.0084,0.1392,29
+2010-2014,self control depletion,strength model,0.1358,0.0051,0.1333,29
+2010-2014,self control depletion,willpower,0.0412,0.0045,0.0376,29
+2010-2014,self regulation,self regulatory depletion,0.0328,0.0043,0.0262,22
+2010-2014,self regulation,significant,0.1371,0.0025,0.137,250
+2010-2014,self regulation,strength model,0.1057,0.0046,0.1035,42
+2010-2014,self regulation,willpower,0.0153,0.0008,0.0146,250
+2010-2014,self regulatory depletion,significant,0.1498,0.009,0.1435,22
+2010-2014,self regulatory depletion,strength model,0.1311,0.0061,0.1288,22
+2010-2014,self regulatory depletion,willpower,0.0387,0.0056,0.033,22
+2010-2014,significant,strength model,0.1924,0.0062,0.1891,42
+2010-2014,significant,willpower,0.1548,0.0015,0.1548,250
+2010-2014,strength model,willpower,0.1214,0.0043,0.1189,42
+2015-2019,delay of gratification,depletion effect,0.0908,0.0026,0.0901,44
+2015-2019,delay of gratification,ego depletion,0.0193,0.0015,0.0182,79
+2015-2019,delay of gratification,executive function,0.0115,0.001,0.0104,79
+2015-2019,delay of gratification,measure,0.1142,0.0049,0.1119,79
+2015-2019,delay of gratification,participants,0.1153,0.0032,0.1145,79
+2015-2019,delay of gratification,results,0.1272,0.0046,0.1259,79
+2015-2019,delay of gratification,self control,0.0134,0.0014,0.0119,79
+2015-2019,delay of gratification,self control depletion,0.024,0.0024,0.0228,35
+2015-2019,delay of gratification,self regulation,0.0155,0.0015,0.0138,79
+2015-2019,delay of gratification,self regulatory depletion,0.0294,0.0038,0.0247,19
+2015-2019,delay of gratification,significant,0.147,0.0046,0.1467,79
+2015-2019,delay of gratification,strength model,0.1245,0.0011,0.1242,70
+2015-2019,delay of gratification,willpower,0.031,0.0025,0.0296,79
+2015-2019,depletion effect,ego depletion,0.0793,0.0019,0.0777,44
+2015-2019,depletion effect,executive function,0.1016,0.0039,0.1,44
+2015-2019,depletion effect,measure,0.1122,0.0071,0.1084,44
+2015-2019,depletion effect,participants,0.152,0.0048,0.1504,44
+2015-2019,depletion effect,results,0.1338,0.0067,0.1313,44
+2015-2019,depletion effect,self control,0.0905,0.0033,0.0883,44
+2015-2019,depletion effect,self control depletion,0.0895,0.0031,0.0892,35
+2015-2019,depletion effect,self regulation,0.0871,0.0035,0.0839,44
+2015-2019,depletion effect,self regulatory depletion,0.088,0.0078,0.0853,19
+2015-2019,depletion effect,significant,0.1624,0.0066,0.1595,44
+2015-2019,depletion effect,strength model,0.0921,0.0049,0.0912,44
+2015-2019,depletion effect,willpower,0.0952,0.0046,0.0928,44
+2015-2019,ego depletion,executive function,0.0284,0.0004,0.0284,250
+2015-2019,ego depletion,measure,0.1174,0.0013,0.1174,250
+2015-2019,ego depletion,participants,0.1077,0.0008,0.1076,250
+2015-2019,ego depletion,results,0.1161,0.0011,0.116,250
+2015-2019,ego depletion,self control,0.0201,0.0013,0.0197,250
+2015-2019,ego depletion,self control depletion,0.012,0.0026,0.0098,35
+2015-2019,ego depletion,self regulation,0.0233,0.0012,0.0227,250
+2015-2019,ego depletion,self regulatory depletion,0.0163,0.0039,0.0116,19
+2015-2019,ego depletion,significant,0.1352,0.0013,0.1349,250
+2015-2019,ego depletion,strength model,0.1148,0.0021,0.1136,70
+2015-2019,ego depletion,willpower,0.0341,0.0008,0.0338,250
+2015-2019,executive function,measure,0.1144,0.0012,0.1142,250
+2015-2019,executive function,participants,0.12,0.0009,0.1199,250
+2015-2019,executive function,results,0.1352,0.0013,0.1351,250
+2015-2019,executive function,self control,0.0131,0.0008,0.0126,250
+2015-2019,executive function,self control depletion,0.0343,0.0037,0.0314,35
+2015-2019,executive function,self regulation,0.0116,0.0008,0.0112,250
+2015-2019,executive function,self regulatory depletion,0.0378,0.0046,0.0327,19
+2015-2019,executive function,significant,0.1509,0.0014,0.1507,250
+2015-2019,executive function,strength model,0.1291,0.0026,0.128,70
+2015-2019,executive function,willpower,0.0315,0.0006,0.0315,250
+2015-2019,measure,participants,0.1403,0.0015,0.1401,250
+2015-2019,measure,results,0.1402,0.0017,0.1401,250
+2015-2019,measure,self control,0.1152,0.0017,0.1145,250
+2015-2019,measure,self control depletion,0.1285,0.0069,0.124,35
+2015-2019,measure,self regulation,0.102,0.0021,0.1015,250
+2015-2019,measure,self regulatory depletion,0.1302,0.0102,0.1216,19
+2015-2019,measure,significant,0.1487,0.0014,0.1486,250
+2015-2019,measure,strength model,0.0957,0.0044,0.094,70
+2015-2019,measure,willpower,0.1257,0.0016,0.1254,250
+2015-2019,participants,results,0.1,0.0013,0.0998,250
+2015-2019,participants,self control,0.116,0.0021,0.1158,250
+2015-2019,participants,self control depletion,0.1046,0.0047,0.1021,35
+2015-2019,participants,self regulation,0.1117,0.002,0.1112,250
+2015-2019,participants,self regulatory depletion,0.1103,0.0064,0.1064,19
+2015-2019,participants,significant,0.1794,0.0014,0.179,250
+2015-2019,participants,strength model,0.1752,0.0043,0.1745,70
+2015-2019,participants,willpower,0.1215,0.0013,0.1213,250
+2015-2019,results,self control,0.128,0.0019,0.1278,250
+2015-2019,results,self control depletion,0.1207,0.0072,0.1182,35
+2015-2019,results,self regulation,0.1194,0.0022,0.1187,250
+2015-2019,results,self regulatory depletion,0.1266,0.0102,0.1213,19
+2015-2019,results,significant,0.1598,0.0013,0.1595,250
+2015-2019,results,strength model,0.1344,0.0047,0.1333,70
+2015-2019,results,willpower,0.1343,0.0016,0.1342,250
+2015-2019,self control,self control depletion,0.0258,0.0038,0.0228,35
+2015-2019,self control,self regulation,0.0058,0.0007,0.0049,250
+2015-2019,self control,self regulatory depletion,0.0299,0.0049,0.024,19
+2015-2019,self control,significant,0.1459,0.0024,0.1457,250
+2015-2019,self control,strength model,0.1227,0.003,0.1212,70
+2015-2019,self control,willpower,0.0097,0.0008,0.0092,250
+2015-2019,self control depletion,self regulation,0.0297,0.0039,0.027,35
+2015-2019,self control depletion,self regulatory depletion,0.0112,0.001,0.0089,19
+2015-2019,self control depletion,significant,0.1545,0.0081,0.1504,35
+2015-2019,self control depletion,strength model,0.1339,0.0072,0.1316,35
+2015-2019,self control depletion,willpower,0.042,0.0053,0.0375,35
+2015-2019,self regulation,self regulatory depletion,0.0356,0.0054,0.0284,19
+2015-2019,self regulation,significant,0.1416,0.0024,0.1411,250
+2015-2019,self regulation,strength model,0.1087,0.0039,0.1067,70
+2015-2019,self regulation,willpower,0.0159,0.0009,0.0153,250
+2015-2019,self regulatory depletion,significant,0.1502,0.01,0.143,19
+2015-2019,self regulatory depletion,strength model,0.1339,0.0124,0.1302,19
+2015-2019,self regulatory depletion,willpower,0.0442,0.0071,0.0374,19
+2015-2019,significant,strength model,0.1974,0.0048,0.1961,70
+2015-2019,significant,willpower,0.1595,0.0016,0.1593,250
+2015-2019,strength model,willpower,0.1221,0.0033,0.1205,70
+2020-2024,delay of gratification,depletion effect,0.1159,0.0067,0.1117,18
+2020-2024,delay of gratification,ego depletion,0.0226,0.0014,0.0218,67
+2020-2024,delay of gratification,executive function,0.0161,0.0014,0.0147,67
+2020-2024,delay of gratification,measure,0.1103,0.0053,0.1093,67
+2020-2024,delay of gratification,participants,0.1165,0.0032,0.1149,67
+2020-2024,delay of gratification,results,0.1303,0.0049,0.1288,67
+2020-2024,delay of gratification,self control,0.0223,0.0023,0.0208,67
+2020-2024,delay of gratification,self control depletion,0.0273,0.0057,0.0243,22
+2020-2024,delay of gratification,self regulation,0.0233,0.002,0.0211,67
+2020-2024,delay of gratification,significant,0.1467,0.0048,0.1444,67
+2020-2024,delay of gratification,strength model,0.1361,0.0031,0.1349,38
+2020-2024,delay of gratification,willpower,0.0458,0.0032,0.0444,67
+2020-2024,depletion effect,ego depletion,0.1014,0.0043,0.0972,18
+2020-2024,depletion effect,executive function,0.1179,0.0077,0.1131,18
+2020-2024,depletion effect,measure,0.1142,0.012,0.1061,18
+2020-2024,depletion effect,participants,0.1742,0.0074,0.1692,18
+2020-2024,depletion effect,results,0.1643,0.0104,0.158,18
+2020-2024,depletion effect,self control,0.1125,0.0063,0.1058,18
+2020-2024,depletion effect,self control depletion,0.1075,0.0023,0.1065,18
+2020-2024,depletion effect,self regulation,0.1062,0.0065,0.0995,18
+2020-2024,depletion effect,significant,0.1755,0.0089,0.1678,18
+2020-2024,depletion effect,strength model,0.1071,0.0104,0.1048,18
+2020-2024,depletion effect,willpower,0.1207,0.0071,0.1156,18
+2020-2024,ego depletion,executive function,0.0245,0.0009,0.0244,208
+2020-2024,ego depletion,measure,0.1154,0.0019,0.1153,208
+2020-2024,ego depletion,participants,0.1119,0.0013,0.1119,208
+2020-2024,ego depletion,results,0.1187,0.0017,0.119,208
+2020-2024,ego depletion,self control,0.0168,0.0012,0.016,208
+2020-2024,ego depletion,self control depletion,0.0145,0.0044,0.0106,22
+2020-2024,ego depletion,self regulation,0.0201,0.0015,0.0194,208
+2020-2024,ego depletion,significant,0.1396,0.0021,0.1393,208
+2020-2024,ego depletion,strength model,0.1167,0.0031,0.1148,38
+2020-2024,ego depletion,willpower,0.0334,0.0011,0.033,208
+2020-2024,executive function,measure,0.1093,0.0013,0.1091,250
+2020-2024,executive function,participants,0.1159,0.0013,0.1157,250
+2020-2024,executive function,results,0.1361,0.0013,0.136,250
+2020-2024,executive function,self control,0.013,0.001,0.0126,250
+2020-2024,executive function,self control depletion,0.0285,0.0045,0.0233,22
+2020-2024,executive function,self regulation,0.0106,0.0009,0.0098,250
+2020-2024,executive function,significant,0.149,0.0016,0.1489,250
+2020-2024,executive function,strength model,0.1337,0.0048,0.1318,38
+2020-2024,executive function,willpower,0.0319,0.0009,0.0317,250
+2020-2024,measure,participants,0.1368,0.0013,0.1366,250
+2020-2024,measure,results,0.14,0.0017,0.1398,250
+2020-2024,measure,self control,0.1145,0.0025,0.114,250
+2020-2024,measure,self control depletion,0.1313,0.0109,0.1248,22
+2020-2024,measure,self regulation,0.1016,0.0024,0.1011,250
+2020-2024,measure,significant,0.1488,0.0015,0.1487,250
+2020-2024,measure,strength model,0.1078,0.0073,0.1038,38
+2020-2024,measure,willpower,0.1292,0.0016,0.1289,250
+2020-2024,participants,results,0.1032,0.0012,0.103,250
+2020-2024,participants,self control,0.1171,0.0023,0.1166,250
+2020-2024,participants,self control depletion,0.1223,0.0073,0.1183,22
+2020-2024,participants,self regulation,0.1133,0.0022,0.1127,250
+2020-2024,participants,significant,0.1819,0.0015,0.1819,250
+2020-2024,participants,strength model,0.1877,0.0059,0.1861,38
+2020-2024,participants,willpower,0.1287,0.0014,0.1283,250
+2020-2024,results,self control,0.132,0.0022,0.1316,250
+2020-2024,results,self control depletion,0.1357,0.0094,0.1317,22
+2020-2024,results,self regulation,0.1245,0.0022,0.1241,250
+2020-2024,results,significant,0.1618,0.0015,0.1613,250
+2020-2024,results,strength model,0.1495,0.0072,0.1459,38
+2020-2024,results,willpower,0.1438,0.0014,0.1437,250
+2020-2024,self control,self control depletion,0.0203,0.0038,0.0145,22
+2020-2024,self control,self regulation,0.0066,0.0008,0.0057,250
+2020-2024,self control,significant,0.1481,0.0025,0.1477,250
+2020-2024,self control,strength model,0.1304,0.0045,0.1279,38
+2020-2024,self control,willpower,0.0108,0.0009,0.0101,250
+2020-2024,self control depletion,self regulation,0.0262,0.004,0.0197,22
+2020-2024,self control depletion,significant,0.1644,0.0091,0.1581,22
+2020-2024,self control depletion,strength model,0.1435,0.0091,0.14,22
+2020-2024,self control depletion,willpower,0.0404,0.0068,0.0349,22
+2020-2024,self regulation,significant,0.1414,0.0023,0.1407,250
+2020-2024,self regulation,strength model,0.1193,0.0062,0.1154,38
+2020-2024,self regulation,willpower,0.0172,0.0011,0.0167,250
+2020-2024,significant,strength model,0.2079,0.0069,0.2042,38
+2020-2024,significant,willpower,0.1619,0.0013,0.1618,250
+2020-2024,strength model,willpower,0.1325,0.0056,0.1299,38
+2025-2025,delay of gratification,ego depletion,0.0304,0.0048,0.0261,16
+2025-2025,delay of gratification,executive function,0.021,0.0026,0.0155,16
+2025-2025,delay of gratification,measure,0.1329,0.0138,0.1206,16
+2025-2025,delay of gratification,participants,0.1276,0.0076,0.1218,16
+2025-2025,delay of gratification,results,0.1424,0.0084,0.1362,16
+2025-2025,delay of gratification,self control,0.026,0.0032,0.0196,16
+2025-2025,delay of gratification,self regulation,0.0248,0.0036,0.0171,16
+2025-2025,delay of gratification,significant,0.1561,0.0114,0.1455,16
+2025-2025,delay of gratification,willpower,0.0394,0.0045,0.0327,16
+2025-2025,ego depletion,executive function,0.0244,0.0008,0.0241,86
+2025-2025,ego depletion,measure,0.1259,0.004,0.1247,86
+2025-2025,ego depletion,participants,0.1149,0.003,0.1138,86
+2025-2025,ego depletion,results,0.1245,0.003,0.1232,86
+2025-2025,ego depletion,self control,0.0154,0.0017,0.0146,86
+2025-2025,ego depletion,self regulation,0.0211,0.0022,0.0196,86
+2025-2025,ego depletion,significant,0.1426,0.0046,0.1408,86
+2025-2025,ego depletion,willpower,0.0289,0.001,0.0286,86
+2025-2025,executive function,measure,0.1181,0.0033,0.1173,105
+2025-2025,executive function,participants,0.1237,0.0025,0.1231,105
+2025-2025,executive function,results,0.1414,0.003,0.141,105
+2025-2025,executive function,self control,0.0168,0.0015,0.0159,105
+2025-2025,executive function,self regulation,0.0133,0.0014,0.0116,105
+2025-2025,executive function,significant,0.145,0.0041,0.1438,105
+2025-2025,executive function,willpower,0.0295,0.0003,0.0295,105
+2025-2025,measure,participants,0.1432,0.001,0.1431,225
+2025-2025,measure,results,0.1485,0.0012,0.1483,225
+2025-2025,measure,self control,0.1274,0.0019,0.127,225
+2025-2025,measure,self regulation,0.1146,0.0019,0.1139,225
+2025-2025,measure,significant,0.1532,0.0013,0.153,225
+2025-2025,measure,willpower,0.1342,0.0033,0.1326,107
+2025-2025,participants,results,0.0974,0.0012,0.0974,250
+2025-2025,participants,self control,0.1229,0.0022,0.1221,250
+2025-2025,participants,self regulation,0.1201,0.0027,0.1193,250
+2025-2025,participants,significant,0.1776,0.0014,0.1773,250
+2025-2025,participants,willpower,0.1261,0.0029,0.1257,107
+2025-2025,results,self control,0.1366,0.0018,0.1364,250
+2025-2025,results,self regulation,0.1307,0.0021,0.1299,250
+2025-2025,results,significant,0.157,0.0015,0.1569,250
+2025-2025,results,willpower,0.1432,0.0032,0.1422,107
+2025-2025,self control,self regulation,0.0081,0.001,0.0073,250
+2025-2025,self control,significant,0.1513,0.0025,0.1506,250
+2025-2025,self control,willpower,0.0105,0.0011,0.0096,107
+2025-2025,self regulation,significant,0.1424,0.0022,0.142,250
+2025-2025,self regulation,willpower,0.0138,0.0012,0.0127,107
+2025-2025,significant,willpower,0.1588,0.0043,0.158,107

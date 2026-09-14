@@ -174,6 +174,10 @@ def main():
         1% + 5 documents joined it (documents whose mask was truncated away
         are legitimately absent from a fresh shard, hence the tolerance)."""
         z = np.load(out_path, allow_pickle=True)
+        # a shard whose syntax array is missing or narrower than the current
+        # feature set is stale too (18 --frame-control needs one width)
+        if "syntax" not in z.files or z["syntax"].shape[1] != len(pc.SYNTAX_FEATURE_NAMES):
+            return True
         if "mention_hash" in z.files:
             return str(z["mention_hash"]) != mention_hash(term, docs)
         stored = set(str(k) for k in z["keys"])

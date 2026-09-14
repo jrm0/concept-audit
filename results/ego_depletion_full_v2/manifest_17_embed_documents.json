@@ -1,0 +1,58 @@
+{
+  "script": "17_embed_documents",
+  "concept": "ego depletion",
+  "config": "configs/ego_depletion.yaml",
+  "config_sha1": "6160ea176fc5",
+  "timestamp": "2026-09-14T10:07:54-04:00",
+  "git_commit": "281319a",
+  "git_dirty": false,
+  "argv": [],
+  "params": {
+    "model": "allenai/scibert_scivocab_uncased",
+    "max_length": 256,
+    "seed": 42,
+    "cap_per_term_period": null,
+    "mention_rules": {
+      "exclude_nested": true,
+      "strip_acronym_parentheticals": true,
+      "exclude_hyphen_prefixed": true
+    },
+    "syntax_features": [
+      "title",
+      "defn",
+      "paren",
+      "attributive",
+      "modifier",
+      "premodified",
+      "coordinated"
+    ],
+    "emb_dir": "data/lineage_emb_full_v2",
+    "control_cap": 300,
+    "max_sent_per_doc": 3,
+    "control_terms": [
+      "participants",
+      "results",
+      "significant",
+      "measure"
+    ],
+    "subset": [],
+    "refresh_changed": false,
+    "refreshed_shards": [],
+    "n_docs_in": 48908,
+    "n_new_vectors": 61526,
+    "n_shards_total": 134
+  },
+  "outputs": [
+    "data/lineage_emb_full_v2"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "diptest": "0.11.0",
+    "torch": "2.12.0",
+    "transformers": "5.13.0"
+  },
+  "notes": "Shards are checkpointed: existing .npz files are skipped, so n_new_vectors=0 means nothing was recomputed this run."
+}
