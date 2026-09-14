@@ -214,6 +214,9 @@ def main():
 
     def add_doc(key, year, journal, title, abstract, index_terms, dbs,
                 source=None, stratum="journal"):
+        # Unicode dashes -> "-" before anything is matched (Session 30: U+2010
+        # in "post‐traumatic" defeated every separator class and hyphen rule).
+        title, abstract = pc.normalize_text(title), pc.normalize_text(abstract)
         period = period_of(year)
         if period is None or not abstract:
             stats["skipped_no_abstract_or_year"] += 1

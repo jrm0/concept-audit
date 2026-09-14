@@ -1,0 +1,56 @@
+{
+  "script": "17_embed_documents",
+  "concept": "posttraumatic stress disorder",
+  "config": "configs/ptsd_trauma.yaml",
+  "config_sha1": "a76e6b8c7b68",
+  "timestamp": "2026-09-13T10:20:27-04:00",
+  "git_commit": "4718838",
+  "git_dirty": false,
+  "argv": [
+    "--config",
+    "configs/ptsd_trauma.yaml"
+  ],
+  "params": {
+    "model": "allenai/scibert_scivocab_uncased",
+    "max_length": 256,
+    "seed": 42,
+    "cap_per_term_period": null,
+    "mention_rules": {
+      "exclude_nested": true,
+      "strip_acronym_parentheticals": true,
+      "exclude_hyphen_prefixed": true
+    },
+    "syntax_features": [
+      "title",
+      "defn",
+      "paren",
+      "attributive"
+    ],
+    "emb_dir": "data/ptsd_trauma/lineage_emb_v2",
+    "control_cap": 300,
+    "max_sent_per_doc": 3,
+    "control_terms": [
+      "participants",
+      "results",
+      "significant",
+      "measure"
+    ],
+    "subset": [],
+    "n_docs_in": 130019,
+    "n_new_vectors": 205184,
+    "n_shards_total": 298
+  },
+  "outputs": [
+    "data/ptsd_trauma/lineage_emb_v2"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "diptest": "0.11.0",
+    "torch": "2.12.0",
+    "transformers": "5.13.0"
+  },
+  "notes": "Shards are checkpointed: existing .npz files are skipped, so n_new_vectors=0 means nothing was recomputed this run."
+}

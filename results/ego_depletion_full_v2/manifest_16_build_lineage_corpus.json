@@ -3,8 +3,8 @@
   "concept": "ego depletion",
   "config": "configs/ego_depletion.yaml",
   "config_sha1": "6160ea176fc5",
-  "timestamp": "2026-09-13T07:20:41-04:00",
-  "git_commit": "174e533",
+  "timestamp": "2026-09-14T06:37:27-04:00",
+  "git_commit": "4718838",
   "git_dirty": true,
   "argv": [],
   "params": {
@@ -186,14 +186,14 @@
       "significant",
       "measure"
     ],
-    "n_docs": 47569,
+    "n_docs": 48908,
     "accounting": {
-      "parentheticals_stripped": 814,
-      "kept": 47569,
-      "mentions_excluded_nested_or_paren": 745,
-      "skipped_no_family_term": 16967,
-      "merged_duplicates": 27763,
-      "skipped_no_abstract_or_year": 2006
+      "parentheticals_stripped": 852,
+      "kept": 48908,
+      "mentions_excluded_nested_or_paren": 862,
+      "skipped_no_family_term": 14137,
+      "merged_duplicates": 29308,
+      "skipped_no_abstract_or_year": 1952
     },
     "mention_rules": {
       "exclude_nested": true,
@@ -201,37 +201,37 @@
       "exclude_hyphen_prefixed": true
     },
     "mentions_excluded_by_term": {
-      "willpower": 12,
-      "depletion effect": 79,
-      "regulatory resource": 56,
-      "self control": 291,
-      "self regulation": 113,
+      "willpower": 13,
+      "self control": 342,
+      "depletion effect": 80,
+      "regulatory resource": 57,
+      "self regulation": 147,
       "strength model": 10,
-      "ego depletion": 21,
-      "self control depletion": 2,
-      "executive function": 6,
-      "delay of gratification": 4
+      "ego depletion": 23,
+      "delay of gratification": 5,
+      "self control depletion": 3,
+      "executive function": 9
     },
     "db_provenance": {
-      "Business Source Complete": 6556,
-      "SocINDEX with Full Text": 5011,
-      "Education Full Text (H.W. Wilson)": 10404,
-      "APA PsycInfo": 30156,
-      "OpenAlex": 3383,
+      "Business Source Complete": 6753,
+      "SocINDEX with Full Text": 5166,
+      "Education Full Text (H.W. Wilson)": 10789,
+      "APA PsycInfo": 31465,
+      "OpenAlex": 3529,
       "EconLit": 1599,
-      "APA PsycArticles": 1894,
-      "Business Abstracts with Full Text (H.W. Wilson)": 989,
-      "CINAHL": 7919,
-      "Criminal Justice Abstracts": 2969,
-      "Business Source Alumni Edition": 289,
-      "Social Work Abstracts": 170,
+      "Criminal Justice Abstracts": 3037,
+      "CINAHL": 8395,
+      "APA PsycArticles": 1892,
+      "Business Abstracts with Full Text (H.W. Wilson)": 1016,
+      "Business Source Alumni Edition": 290,
+      "Social Work Abstracts": 172,
       "Applied Science & Business Periodicals Retrospective: 1913-1983 (H.W. Wilson)": 1,
-      "Dentistry & Oral Sciences Source": 130
+      "Dentistry & Oral Sciences Source": 144
     },
     "strata": {
-      "journal": 40477,
+      "journal": 41814,
       "other": 25,
-      "book": 3275,
+      "book": 3277,
       "thesis": 3792
     },
     "corpus_spec": {
@@ -469,12 +469,12 @@
         "with_abstract": 8258,
         "with_doi": 4774,
         "TY:JOUR": 8100,
-        "kept": 7732,
-        "stratum:journal": 7712,
-        "skipped_no_family_term": 319,
+        "kept": 7957,
+        "stratum:journal": 7937,
+        "skipped_no_family_term": 90,
         "TY:ABST": 372,
         "TY:CASE": 21,
-        "merged_into_existing": 146,
+        "merged_into_existing": 150,
         "skipped_no_abstract_or_year": 474,
         "TY:RPRT": 6,
         "stratum:other": 16,
@@ -485,7 +485,7 @@
         "stratum:book": 4,
         "TY:NEWS": 7,
         "strata": {
-          "journal": 7712,
+          "journal": 7937,
           "other": 16,
           "book": 4
         }
@@ -495,13 +495,13 @@
         "with_abstract": 8641,
         "with_doi": 7361,
         "TY:JOUR": 8629,
-        "merged_into_existing": 5427,
-        "kept": 2805,
-        "stratum:journal": 2756,
-        "skipped_no_family_term": 284,
+        "merged_into_existing": 5702,
+        "kept": 2758,
+        "stratum:journal": 2709,
         "TY:RPRT": 6,
         "TY:ABST": 29,
-        "skipped_no_abstract_or_year": 236,
+        "skipped_no_family_term": 58,
+        "skipped_no_abstract_or_year": 234,
         "TY:CASE": 14,
         "TY:CHAP": 39,
         "stratum:book": 38,
@@ -512,7 +512,7 @@
         "TY:CONF": 4,
         "TY:NEWS": 1,
         "strata": {
-          "journal": 2756,
+          "journal": 2709,
           "book": 38,
           "other": 4,
           "thesis": 7
@@ -523,9 +523,9 @@
         "with_abstract": 1697,
         "with_doi": 421,
         "TY:JOUR": 1349,
-        "merged_into_existing": 914,
-        "kept": 812,
-        "stratum:journal": 731,
+        "merged_into_existing": 957,
+        "kept": 769,
+        "stratum:journal": 688,
         "TY:GEN": 320,
         "skipped_no_family_term": 19,
         "TY:CHAP": 89,
@@ -533,7 +533,7 @@
         "stratum:book": 81,
         "skipped_no_abstract_or_year": 106,
         "strata": {
-          "journal": 731,
+          "journal": 688,
           "book": 81
         }
       },
@@ -542,10 +542,10 @@
         "with_abstract": 11051,
         "with_doi": 9321,
         "TY:JOUR": 11341,
-        "kept": 4984,
-        "stratum:journal": 4977,
-        "merged_into_existing": 5676,
-        "skipped_no_family_term": 477,
+        "kept": 5021,
+        "stratum:journal": 5014,
+        "merged_into_existing": 6031,
+        "skipped_no_family_term": 85,
         "TY:ABST": 37,
         "TY:THES": 1,
         "stratum:thesis": 1,
@@ -559,7 +559,7 @@
         "stratum:book": 5,
         "TY:CONF": 2,
         "strata": {
-          "journal": 4977,
+          "journal": 5014,
           "thesis": 1,
           "other": 1,
           "book": 5
@@ -570,14 +570,14 @@
         "with_abstract": 8153,
         "with_doi": 8006,
         "TY:JOUR": 8882,
-        "kept": 2633,
-        "stratum:journal": 2532,
-        "skipped_no_family_term": 486,
-        "merged_into_existing": 5466,
-        "skipped_no_abstract_or_year": 562,
+        "kept": 2619,
+        "stratum:journal": 2518,
+        "merged_into_existing": 5971,
+        "skipped_no_abstract_or_year": 510,
         "TY:CASE": 6,
         "TY:RPRT": 7,
         "TY:ABST": 30,
+        "skipped_no_family_term": 47,
         "TY:CONF": 5,
         "stratum:other": 4,
         "TY:GEN": 50,
@@ -585,14 +585,14 @@
         "stratum:thesis": 97,
         "TY:CHAP": 1,
         "strata": {
-          "journal": 2532,
+          "journal": 2518,
           "other": 4,
           "thesis": 97
         }
       },
       "openalex_works": {
-        "merged_into_existing": 4518,
-        "skipped_no_family_term": 7278,
+        "merged_into_existing": 4678,
+        "skipped_no_family_term": 7118,
         "skipped_no_abstract_or_year": 2,
         "strata": {}
       },
@@ -600,21 +600,21 @@
         "records": 5219,
         "with_abstract": 4895,
         "TY:CHAP": 528,
-        "kept": 4372,
+        "kept": 4369,
         "stratum:book": 537,
         "with_doi": 2879,
         "TY:JOUR": 3979,
         "merged_into_existing": 422,
-        "stratum:journal": 3543,
+        "stratum:journal": 3540,
         "TY:BOOK": 84,
         "TY:THES": 619,
         "stratum:thesis": 292,
-        "skipped_no_family_term": 110,
+        "skipped_no_family_term": 113,
         "TY:CONF": 9,
         "skipped_no_abstract_or_year": 315,
         "strata": {
           "book": 537,
-          "journal": 3543,
+          "journal": 3540,
           "thesis": 292
         }
       },
@@ -623,20 +623,20 @@
         "with_abstract": 12597,
         "with_doi": 8731,
         "TY:JOUR": 9303,
-        "merged_into_existing": 1640,
+        "merged_into_existing": 1647,
         "TY:CHAP": 1502,
-        "kept": 10682,
-        "stratum:book": 1682,
-        "stratum:journal": 7472,
+        "kept": 10869,
+        "stratum:book": 1681,
+        "stratum:journal": 7660,
         "TY:THES": 1558,
         "stratum:thesis": 1528,
         "TY:BOOK": 234,
-        "skipped_no_family_term": 275,
+        "skipped_no_family_term": 81,
         "TY:CONF": 1,
         "skipped_no_abstract_or_year": 1,
         "strata": {
-          "book": 1682,
-          "journal": 7472,
+          "book": 1681,
+          "journal": 7660,
           "thesis": 1528
         }
       },
@@ -645,20 +645,20 @@
         "with_abstract": 14614,
         "with_doi": 11828,
         "TY:JOUR": 11766,
-        "kept": 11959,
-        "stratum:journal": 9164,
-        "merged_into_existing": 1521,
-        "skipped_no_family_term": 1134,
+        "kept": 12861,
+        "stratum:journal": 10063,
+        "merged_into_existing": 1651,
         "TY:THES": 1886,
         "stratum:thesis": 1867,
         "TY:CHAP": 865,
-        "stratum:book": 928,
+        "stratum:book": 931,
         "TY:BOOK": 98,
+        "skipped_no_family_term": 102,
         "skipped_no_abstract_or_year": 1,
         "strata": {
-          "journal": 9164,
+          "journal": 10063,
           "thesis": 1867,
-          "book": 928
+          "book": 931
         }
       },
       "psyc_family_all": {
@@ -666,12 +666,12 @@
         "with_abstract": 8009,
         "with_doi": 7779,
         "TY:JOUR": 8009,
-        "kept": 1263,
-        "stratum:journal": 1263,
-        "merged_into_existing": 1211,
-        "skipped_no_family_term": 5535,
+        "kept": 1355,
+        "stratum:journal": 1355,
+        "merged_into_existing": 1264,
+        "skipped_no_family_term": 5390,
         "strata": {
-          "journal": 1263
+          "journal": 1355
         }
       },
       "psyc_focal": {
@@ -679,13 +679,13 @@
         "with_abstract": 2200,
         "with_doi": 2160,
         "TY:JOUR": 2200,
-        "kept": 327,
-        "stratum:journal": 327,
-        "merged_into_existing": 822,
-        "skipped_no_family_term": 1050,
+        "kept": 330,
+        "stratum:journal": 330,
+        "merged_into_existing": 835,
+        "skipped_no_family_term": 1034,
         "skipped_no_abstract_or_year": 1,
         "strata": {
-          "journal": 327
+          "journal": 330
         }
       }
     }

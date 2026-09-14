@@ -113,12 +113,31 @@ _PREFIXES = ("post", "pre", "non", "anti", "inter", "intra", "multi", "sub",
 _PREFIX_JOIN = re.compile(r"\b(" + "|".join(_PREFIXES) + r")[\s\-]+(?=[a-z]{3,})", re.I)
 _PREFIX_WORD = re.compile(r"^(" + "|".join(_PREFIXES) + r")([a-z]{3,})$", re.I)
 
+# Unicode dashes. Publisher-derived abstracts (Wiley especially) write
+# "post‐traumatic" with U+2010 HYPHEN, not U+002D. Found 2026-09-14: 1,484 of
+# the "traumatic stress" leak sentences had U+2010, 86 had ASCII "-". A
+# non-ASCII dash is a non-word character, so "\btraumatic" matched right
+# after it while no separator class or hyphen rule recognised it. All text is
+# normalised at ingest (16) and every separator class also accepts them.
+_DASHES = "‐‑‒–—⁃−­﹣－"
+_DASH_RE = re.compile("[" + _DASHES + "]")
+_SEP = "[-\\s" + _DASHES + "]"          # one separator: hyphen (any), space
+
+
+def normalize_text(s):
+    """ASCII hyphen for every dash variant; ordinary space for NBSP/thin
+    spaces. Applied to titles and abstracts in 16 before anything is matched."""
+    if not s:
+        return s
+    s = _DASH_RE.sub("-", s)
+    return re.sub("[     ]", " ", s)
+
 
 def canon(term):
     """Hyphens and spaces are the SAME separator (see 16's docstring), and a
     prefix + separator + word is the solid word ("post-traumatic" ->
     "posttraumatic")."""
-    t = (term or "").strip().lower()
+    t = normalize_text((term or "").strip().lower())
     t = _PREFIX_JOIN.sub(r"\1", t)
     return re.sub(r"[\s\-]+", " ", t)
 
@@ -131,10 +150,10 @@ def term_pattern(term):
     for w in canon(term).split(" "):
         m = _PREFIX_WORD.match(w)
         if m:
-            words.append(re.escape(m.group(1)) + "[-\\s]?" + re.escape(m.group(2)))
+            words.append(re.escape(m.group(1)) + _SEP + "?" + re.escape(m.group(2)))
         else:
             words.append(re.escape(w))
-    body = "[-\\s]+".join(words)
+    body = (_SEP + "+").join(words)
     return re.compile(r"\b" + body + r"\b", re.I)
 
 
@@ -261,7 +280,7 @@ def valid_spans(term, spans_by_term, sentence, rules):
                             for c in containers)]
     if rules.get("exclude_hyphen_prefixed", True):
         spans = [s for s in spans
-                 if not (s[0] >= 2 and sentence[s[0] - 1] == "-"
+                 if not (s[0] >= 2 and sentence[s[0] - 1] in "-" + _DASHES
                          and sentence[s[0] - 2].isalnum())]
     spans = [s for s in spans if not _parenthetical(sentence, s)]
     return spans
@@ -274,8 +293,36 @@ _DEFN_BEFORE = re.compile(r"(defined as|referred to as|known as|termed|called|"
                           r"the term|the concept of|the construct of)\s*$", re.I)
 
 
+# Grammatical FRAME of the mention (Session 30). With the lexical artifacts
+# removed, the clean splits that remained followed the term's syntactic role:
+# "posttraumatic stress SYMPTOMS" (modifier) vs "... and posttraumatic stress
+# in ..." (head); "depression AND PTSD AND ..." (coordinated list) vs "of/with
+# PTSD" (head with preposition); "CHILDHOOD trauma" (premodified head) vs
+# "trauma EXPOSURE" (modifier). Masked-token BERT vectors carry syntactic role
+# strongly. These three features let the guard NAME a frame split.
+_FUNCTION_WORDS = set("""a an the this that these those of in on at to for with by from as into
+onto over under about among between within without during after before since until
+and or nor but yet so is are was were be been being has have had do does did not no
+can could may might must shall should will would than then there their its it he she
+they we you i who whom which what when where how if because while although though
+such very more most less least many much some any each every all both either neither
+one two three several few own same other another per via versus vs against toward
+towards including regarding following related associated based due""".split())
+_NEXT_TOKEN = re.compile(r"^[\s]*([A-Za-z][A-Za-z\-]*)")
+_PREV_TOKEN = re.compile(r"([A-Za-z][A-Za-z\-]*)[\s]*$")
+_COORD_NEXT = re.compile(r"^\s*(,|;|/|\band\b|\bor\b|&)", re.I)
+_COORD_PREV = re.compile(r"(,|;|/|\band\b|\bor\b|&)\s*$", re.I)
+
+
 def syntax_features(sentence, span, title=None):
-    """[is_title_sentence, definitional, parenthetical, attributive] as 0/1."""
+    """Per-mention 0/1 features, in SYNTAX_FEATURE_NAMES order:
+    title       — the mention sentence is the title
+    defn        — definitional frame ("X is a ...", "defined as X")
+    paren       — the term sits inside parentheses
+    attributive — hyphenated attributive ("trauma-focused")
+    modifier    — followed directly by a content word ("PTSD symptoms")
+    premodified — preceded directly by a content word ("childhood trauma")
+    coordinated — adjacent to a list coordinator ("depression and PTSD, ...")"""
     a, b = span
     is_title = 0
     if title:
@@ -284,12 +331,28 @@ def syntax_features(sentence, span, title=None):
     defn = int(bool(_DEFN_AFTER.match(sentence[b:b + 40]))
                or bool(_DEFN_BEFORE.search(sentence[max(0, a - 30):a])))
     paren = int(_parenthetical(sentence, span))
-    attributive = int(b < len(sentence) and sentence[b] == "-"
-                      and b + 1 < len(sentence) and sentence[b + 1].isalpha())
-    return [is_title, defn, paren, attributive]
+    after, before = sentence[b:], sentence[:a]
+    attributive = int(after[:1] == "-" and after[1:2].isalpha())
+    # Crude POS: a following/preceding word ending in -ed is (almost always) a
+    # verb, not the noun that would make this a modifier/premodified frame
+    # ("PTSD showed", "assessed PTSD"); -ing/-ly on the left are verb/adverb.
+    mn = _NEXT_TOKEN.match(after)
+    nxt = mn.group(1).lower() if mn else ""
+    modifier = int(bool(mn) and not attributive
+                   and nxt not in _FUNCTION_WORDS and not nxt.endswith("ed")
+                   and after[:len(mn.group(0))].strip() == mn.group(1))   # no punctuation between
+    mp = _PREV_TOKEN.search(before)
+    prv = mp.group(1).lower() if mp else ""
+    premodified = int(bool(mp) and prv not in _FUNCTION_WORDS
+                      and not prv.endswith(("ed", "ing", "ly"))
+                      and not before.rstrip().endswith("-"))
+    coordinated = int(bool(_COORD_NEXT.match(after)) or bool(_COORD_PREV.search(before)))
+    return [is_title, defn, paren, attributive, modifier, premodified, coordinated]
 
 
-SYNTAX_FEATURE_NAMES = ["title", "defn", "paren", "attributive"]
+SYNTAX_FEATURE_NAMES = ["title", "defn", "paren", "attributive",
+                        "modifier", "premodified", "coordinated"]
+FRAME_FEATURES = ["attributive", "modifier", "premodified", "coordinated"]
 
 
 def period_of(year, cfg):

@@ -3,8 +3,8 @@
   "concept": "posttraumatic stress disorder",
   "config": "configs/ptsd_trauma.yaml",
   "config_sha1": "a76e6b8c7b68",
-  "timestamp": "2026-09-13T07:19:53-04:00",
-  "git_commit": "174e533",
+  "timestamp": "2026-09-14T06:36:05-04:00",
+  "git_commit": "4718838",
   "git_dirty": true,
   "argv": [
     "--config",
@@ -134,14 +134,14 @@
       "significant",
       "measure"
     ],
-    "n_docs": 130019,
+    "n_docs": 129977,
     "accounting": {
-      "parentheticals_stripped": 33174,
-      "kept": 130019,
-      "mentions_excluded_nested_or_paren": 106416,
+      "parentheticals_stripped": 33701,
+      "mentions_excluded_nested_or_paren": 109952,
+      "kept": 129977,
       "skipped_no_abstract_or_year": 4384,
-      "skipped_no_family_term": 1178,
-      "merged_duplicates": 78123
+      "skipped_no_family_term": 1236,
+      "merged_duplicates": 78107
     },
     "mention_rules": {
       "exclude_nested": true,
@@ -149,38 +149,39 @@
       "exclude_hyphen_prefixed": true
     },
     "mentions_excluded_by_term": {
-      "traumatic stress": 28609,
-      "trauma": 15209,
-      "posttraumatic stress": 58050,
-      "ptsd": 3133,
-      "posttraumatic stress disorder": 788,
+      "trauma": 16139,
+      "traumatic stress": 30190,
+      "posttraumatic stress": 59207,
+      "ptsd": 2846,
+      "posttraumatic stress disorder": 855,
       "complex ptsd": 22,
-      "bereavement": 289,
+      "bereavement": 318,
       "shell shock": 1,
+      "postvietnam syndrome": 1,
       "acute stress disorder": 1,
       "traumatic neurosis": 4,
       "adjustment disorder": 3,
-      "complex posttraumatic stress disorder": 2,
+      "complex posttraumatic stress disorder": 3,
       "psychological trauma": 3,
-      "secondary traumatic stress": 5,
-      "moral injury": 2,
-      "trauma informed": 5,
+      "secondary traumatic stress": 6,
+      "trauma informed": 7,
+      "moral injury": 3,
       "vicarious trauma": 1
     },
     "db_provenance": {
-      "APA PsycInfo": 100587,
+      "APA PsycInfo": 100551,
       "Business Abstracts with Full Text (H.W. Wilson)": 204,
       "EconLit": 327,
-      "Education Full Text (H.W. Wilson)": 18611,
-      "CINAHL": 35227,
+      "Education Full Text (H.W. Wilson)": 18607,
+      "CINAHL": 35215,
       "Business Source Complete": 4637,
-      "SocINDEX with Full Text": 24300,
-      "Criminal Justice Abstracts": 12374,
+      "SocINDEX with Full Text": 24295,
+      "Criminal Justice Abstracts": 12373,
       "APA PsycArticles": 6975,
       "Social Work Abstracts": 1949
     },
     "strata": {
-      "journal": 129999,
+      "journal": 129957,
       "thesis": 16,
       "popular": 2,
       "book": 2
@@ -536,10 +537,10 @@
         "with_abstract": 38819,
         "with_doi": 35489,
         "TY:JOUR": 39610,
-        "merged_into_existing": 27298,
-        "kept": 11678,
-        "stratum:journal": 11660,
-        "skipped_no_family_term": 154,
+        "merged_into_existing": 27293,
+        "kept": 11677,
+        "stratum:journal": 11659,
+        "skipped_no_family_term": 160,
         "TY:CASE": 148,
         "TY:GEN": 79,
         "skipped_no_abstract_or_year": 726,
@@ -550,7 +551,7 @@
         "TY:CHAP": 1,
         "stratum:book": 1,
         "strata": {
-          "journal": 11660,
+          "journal": 11659,
           "thesis": 16,
           "popular": 1,
           "book": 1
@@ -575,19 +576,19 @@
         "with_abstract": 18642,
         "with_doi": 17553,
         "TY:JOUR": 19500,
-        "kept": 4920,
-        "stratum:journal": 4918,
-        "merged_into_existing": 14145,
+        "kept": 4918,
+        "stratum:journal": 4916,
+        "merged_into_existing": 14143,
         "TY:CASE": 96,
         "skipped_no_abstract_or_year": 524,
         "TY:GEN": 64,
-        "skipped_no_family_term": 74,
+        "skipped_no_family_term": 78,
         "TY:CHAP": 1,
         "stratum:book": 1,
         "TY:NEWS": 2,
         "stratum:popular": 1,
         "strata": {
-          "journal": 4918,
+          "journal": 4916,
           "book": 1,
           "popular": 1
         }
@@ -597,15 +598,15 @@
         "with_abstract": 32677,
         "with_doi": 35290,
         "TY:JOUR": 38715,
-        "kept": 10026,
-        "stratum:journal": 10026,
-        "merged_into_existing": 25632,
+        "kept": 10023,
+        "stratum:journal": 10023,
+        "merged_into_existing": 25623,
         "skipped_no_abstract_or_year": 3033,
         "TY:CASE": 71,
-        "skipped_no_family_term": 105,
+        "skipped_no_family_term": 117,
         "TY:GEN": 10,
         "strata": {
-          "journal": 10026
+          "journal": 10023
         }
       },
       "psyc_1965_1994": {
@@ -613,13 +614,13 @@
         "with_abstract": 6148,
         "with_doi": 4344,
         "TY:JOUR": 6150,
-        "kept": 5511,
-        "stratum:journal": 5511,
+        "kept": 5510,
+        "stratum:journal": 5510,
         "merged_into_existing": 577,
-        "skipped_no_family_term": 60,
+        "skipped_no_family_term": 61,
         "skipped_no_abstract_or_year": 2,
         "strata": {
-          "journal": 5511
+          "journal": 5510
         }
       },
       "psyc_1995_2004": {
@@ -627,12 +628,12 @@
         "with_abstract": 12489,
         "with_doi": 9969,
         "TY:JOUR": 12489,
-        "kept": 11164,
-        "stratum:journal": 11164,
+        "kept": 11162,
+        "stratum:journal": 11162,
         "merged_into_existing": 1251,
-        "skipped_no_family_term": 74,
+        "skipped_no_family_term": 76,
         "strata": {
-          "journal": 11164
+          "journal": 11162
         }
       },
       "psyc_2005_2009": {
@@ -640,13 +641,13 @@
         "with_abstract": 12690,
         "with_doi": 10788,
         "TY:JOUR": 12691,
-        "kept": 11437,
-        "stratum:journal": 11437,
+        "kept": 11436,
+        "stratum:journal": 11436,
         "merged_into_existing": 1186,
-        "skipped_no_family_term": 67,
+        "skipped_no_family_term": 68,
         "skipped_no_abstract_or_year": 1,
         "strata": {
-          "journal": 11437
+          "journal": 11436
         }
       },
       "psyc_2010_2014": {
@@ -654,12 +655,12 @@
         "with_abstract": 18462,
         "with_doi": 16459,
         "TY:JOUR": 18462,
-        "kept": 16489,
-        "stratum:journal": 16489,
+        "kept": 16481,
+        "stratum:journal": 16481,
         "merged_into_existing": 1852,
-        "skipped_no_family_term": 121,
+        "skipped_no_family_term": 129,
         "strata": {
-          "journal": 16489
+          "journal": 16481
         }
       },
       "psyc_2015_2019": {
@@ -667,13 +668,13 @@
         "with_abstract": 22845,
         "with_doi": 21442,
         "TY:JOUR": 22849,
-        "kept": 20660,
-        "stratum:journal": 20660,
+        "kept": 20651,
+        "stratum:journal": 20651,
         "merged_into_existing": 2026,
-        "skipped_no_family_term": 159,
+        "skipped_no_family_term": 168,
         "skipped_no_abstract_or_year": 4,
         "strata": {
-          "journal": 20660
+          "journal": 20651
         }
       },
       "psyc_2020_2022": {
@@ -682,11 +683,11 @@
         "with_doi": 17806,
         "TY:JOUR": 18322,
         "merged_into_existing": 1557,
-        "kept": 16637,
-        "stratum:journal": 16637,
-        "skipped_no_family_term": 128,
+        "kept": 16631,
+        "stratum:journal": 16631,
+        "skipped_no_family_term": 134,
         "strata": {
-          "journal": 16637
+          "journal": 16631
         }
       },
       "psyc_2023_2025": {
@@ -694,12 +695,12 @@
         "with_abstract": 19004,
         "with_doi": 18451,
         "TY:JOUR": 19004,
-        "kept": 16676,
-        "stratum:journal": 16676,
+        "kept": 16667,
+        "stratum:journal": 16667,
         "merged_into_existing": 2146,
-        "skipped_no_family_term": 182,
+        "skipped_no_family_term": 191,
         "strata": {
-          "journal": 16676
+          "journal": 16667
         }
       }
     }

@@ -53,6 +53,9 @@ Usage:
     python3 18_lineage_analysis.py --sources psyc_family_2000_2015,business
     python3 18_lineage_analysis.py --dbs "PsycInfo,PsycArticles"
     python3 18_lineage_analysis.py --strata journal
+    python3 18_lineage_analysis.py --frame-control   # EXPLORATORY (Session 30):
+        partial the grammatical frame (syntax-feature rates) out of every
+        vector first; outputs suffixed _framectl. Read with the raw run.
 
 SUBSET RE-RUNS (corpus principle 9: corpus dependence is a result). The
 filters keep only document vectors whose provenance matches, then run the
@@ -120,7 +123,18 @@ FILTER = {k: [x.strip() for x in (_opt(f"--{k}") or "").split(",") if x.strip()]
           for k in ("sources", "dbs", "strata")}
 _fsuf = "".join(f"_{k[:3]}-{'+'.join(v)}" for k, v in FILTER.items() if v)
 _fsuf = re.sub(r"[^A-Za-z0-9_+\-]", "", _fsuf)
-SUF = ("_centered" if CENTER else "") + _fsuf
+# --frame-control (Session 30, EXPLORATORY — not in the Session-28
+# pre-registration): partial the grammatical frame out of every vector before
+# any analysis. Per term, pooled over periods, OLS of the vectors on the 7
+# syntax-feature rates; the residual (plus the term's grand mean) replaces
+# the vector. Removes the part of the geometry that follows the term's
+# syntactic role (modifier / premodified / attributive / coordinated / title /
+# definitional / parenthetical). Caveat stated in the report: frame and sense
+# are correlated ("trauma exposure" = event sense, "trauma symptoms" =
+# condition sense), so this also removes real sense variance that happens to
+# ride on frame. Read raw and frame-controlled together.
+FRAME_CONTROL = "--frame-control" in _ARGV
+SUF = ("_centered" if CENTER else "") + ("_framectl" if FRAME_CONTROL else "") + _fsuf
 MIN_N = int(CFG["analysis"]["min_n"])
 CLUSTER_MIN_N = int(CFG["analysis"]["cluster_min_n"])
 MAX_K = int(CFG["analysis"]["max_k"])
@@ -186,6 +200,37 @@ def load_shards():
     if any(FILTER.values()):
         print(f"SUBSET FILTER {FILTER}: kept {kept}/{total} document vectors")
     return data
+
+
+def frame_residualize(data):
+    """--frame-control: replace V by V - (S - S̄) @ B per term, B from OLS of
+    the pooled (all periods) vectors on the syntax-feature rates S. Returns
+    {term: {"r2": variance explained by frame, "n": pooled n}}. Refuses shards
+    without a syntax array (re-run 17)."""
+    report = {}
+    for t, per in data.items():
+        missing = [p for p, sh in per.items() if sh.get("syntax") is None]
+        if missing:
+            raise SystemExit(f"--frame-control needs the syntax array on every shard; "
+                             f"{t} lacks it for {missing} — re-run 17 (--refresh-changed).")
+        ps = sorted(per)
+        V = np.vstack([per[p]["V"] for p in ps])
+        S = np.vstack([per[p]["syntax"] for p in ps]).astype(float)
+        if len(V) < 3 * S.shape[1] + 5:          # too few docs to fit 8 parameters sensibly
+            report[t] = {"r2": None, "n": int(len(V))}
+            continue
+        Sc = S - S.mean(0)
+        B, *_ = np.linalg.lstsq(Sc, V - V.mean(0), rcond=None)
+        fitted = Sc @ B
+        ss_tot = float(((V - V.mean(0)) ** 2).sum())
+        r2 = float((fitted ** 2).sum() / ss_tot) if ss_tot > 0 else 0.0
+        i = 0
+        for p in ps:
+            n = len(per[p]["V"])
+            per[p]["V"] = per[p]["V"] - fitted[i:i + n]
+            i += n
+        report[t] = {"r2": round(r2, 4), "n": int(len(V))}
+    return report
 
 
 def load_titles():
@@ -299,6 +344,7 @@ def main():
     data = load_shards()
     if not data:
         raise SystemExit("No shards in data/lineage_emb — run 17 first.")
+    frame_r2 = frame_residualize(data) if FRAME_CONTROL else None
     family = sorted(t for t in data if t not in CONTROL_TERMS)
     controls = sorted(t for t in data if t in CONTROL_TERMS)
     periods = sorted({p for t in data for p in data[t]})
@@ -313,9 +359,21 @@ def main():
     say(f"Terms: {family}")
     say(f"Controls: {controls}")
     say(f"Periods: {periods}")
-    say(f"MODE: {'PER-PERIOD MEAN-CENTERED (anisotropy robustness)' if CENTER else 'raw (uncentered)'}")
+    say(f"MODE: {'PER-PERIOD MEAN-CENTERED (anisotropy robustness)' if CENTER else 'raw (uncentered)'}"
+        + ("  + FRAME-CONTROLLED (EXPLORATORY, outside the pre-registration)" if FRAME_CONTROL else ""))
     if any(FILTER.values()):
-        say(f"SUBSET: {FILTER}  (outputs suffixed '{_fsuf}')")
+        say(f"SUBSET: {FILTER}  (outputs suffixed '{SUF}')")
+    if FRAME_CONTROL:
+        say("\nFRAME CONTROL: per term, pooled over periods, vectors regressed on the 7 "
+            "syntax-feature rates (" + "/".join(pc.SYNTAX_FEATURE_NAMES) + "); residuals "
+            "replace vectors in every section below. R2 = share of vector variance the "
+            "frame explains. Caveat: frame and sense are correlated (\"trauma exposure\" "
+            "= event, \"trauma symptoms\" = condition), so real sense variance that rides "
+            "on frame is removed too. Read together with the raw run.")
+        for t in sorted(frame_r2, key=lambda x: -(frame_r2[x]["r2"] or 0)):
+            r = frame_r2[t]
+            r2_txt = "-" if r["r2"] is None else f"{r['r2']:.3f}"
+            say(f"  {t:36s} n={r['n']:6d}  frame R2={r2_txt}")
     say("")
 
     # Per-period reference centroid from CONTROL TERMS ONLY (see docstring:
@@ -526,20 +584,24 @@ def main():
                     n_guard_checked += 1
                     rates = {c: sh["syntax"][labels == c].mean(0)
                              for c in range(k)}
+                    n_feat = sh["syntax"].shape[1]        # 4 (Session 29) or 7 (Session 30)
+                    fnames = pc.SYNTAX_FEATURE_NAMES[:n_feat]
                     worst = (None, 0.0)
-                    for fi, fname in enumerate(pc.SYNTAX_FEATURE_NAMES):
+                    for fi, fname in enumerate(fnames):
                         vals = [float(rates[c][fi]) for c in range(k)]
                         diff = max(vals) - min(vals)
                         if diff > worst[1]:
                             worst = (fname, diff)
                     flagged = worst[1] > SYNTAX_FLAG
+                    kind = ("frame" if worst[0] in pc.FRAME_FEATURES else "register") if flagged else None
                     stats["syntax_guard"] = {
+                        "features": fnames,
                         "rates": {f"{p}:{c}": [round(float(x), 3) for x in rates[c]]
                                   for c in range(k)},
                         "worst_feature": worst[0], "max_diff": round(worst[1], 3),
-                        "flagged": bool(flagged)}
+                        "flagged": bool(flagged), "kind": kind}
                     if flagged:
-                        syntax_flags.append((t, p, worst[0], worst[1]))
+                        syntax_flags.append((t, p, worst[0], worst[1], kind))
             nodes = []
             def readable(keys):
                 return [titles_by_doi.get(str(kk), str(kk))[:110]
@@ -622,7 +684,7 @@ def main():
                 say(f"   {b['parent']} -> {b['children']} at {b['period']} "
                     f"(sep {b['min_separation']} vs floor {b['noise_floor']})")
         # qualitative sample file
-        with open(RESULTS / f"lineage_samples_{t.replace(' ', '_')}{_fsuf}.txt",
+        with open(RESULTS / f"lineage_samples_{t.replace(' ', '_')}{SUF}.txt",
                   "w", encoding="utf-8") as f:
             for p, nodes, st in node_seq:
                 dp = st["dip_p"]
@@ -630,9 +692,10 @@ def main():
                 sg = st.get("syntax_guard")
                 flag_txt = ""
                 if isinstance(sg, dict):
-                    flag_txt = (f"; SYNTAX-FLAGGED: {sg['worst_feature']} differs by "
-                                f"{sg['max_diff']:.2f}" if sg["flagged"]
-                                else f"; syntax guard ok (max diff {sg['max_diff']:.2f})")
+                    flag_txt = (f"; {sg.get('kind', 'syntax').upper()} SPLIT: "
+                                f"{sg['worst_feature']} differs by {sg['max_diff']:.2f}"
+                                if sg["flagged"]
+                                else f"; syntax guard ok (max diff {sg['max_diff']:.2f} on {sg['worst_feature']})")
                 f.write(f"===== {p} ({st['verdict']}; dip p="
                         f"{'-' if dp is None else f'{dp:.3f}'}, mean Jaccard="
                         f"{'-' if mj is None else f'{mj:.2f}'}{flag_txt}) =====\n")
@@ -641,7 +704,9 @@ def main():
                             + (f", median year {nd['median_year']}"
                                if "median_year" in nd else "") + "):\n")
                     if isinstance(sg, dict) and nd["id"] in sg["rates"]:
-                        f.write("    syntax rates (title/defn/paren/attributive): "
+                        f.write("    syntax rates ("
+                                + "/".join(sg.get("features", pc.SYNTAX_FEATURE_NAMES))
+                                + "): "
                                 + "/".join(f"{x:.2f}" for x in sg["rates"][nd["id"]])
                                 + "\n")
                     if nd.get("top_journals"):
@@ -670,13 +735,17 @@ def main():
             + (f"; {n_guard_missing} supported splits could not be checked "
                f"(shards predate the syntax array — re-run 17)"
                if n_guard_missing else "") + ".")
-        for t, p, fname, diff in syntax_flags:
-            say(f"   FLAG {t} | {p}: {fname} rate differs by {diff:.2f} between clusters")
+        for t, p, fname, diff, kind in syntax_flags:
+            say(f"   {kind.upper():8s} {t} | {p}: {fname} rate differs by {diff:.2f} between clusters")
         if syntax_flags:
-            say("   A flagged split is a difference in HOW the term is mentioned "
-                "(title vs abstract, definition vs use, parenthetical, attributive), "
-                "not in what it means. Do not count it as a sense split.")
-        with open(RESULTS / f"lineage_tree{_fsuf}.json", "w") as f:
+            say("   REGISTER = how the term is presented (title vs abstract sentence, "
+                "definition vs use, parenthetical): not a sense split.\n"
+                "   FRAME    = the term's grammatical role (modifier 'PTSD symptoms', "
+                "premodified 'childhood trauma', attributive 'trauma-focused', "
+                "coordinated list). Frame productivity is itself a form of creep — "
+                "report it as such, not as a sense split; test sense structure with "
+                "--frame-control.")
+        with open(RESULTS / f"lineage_tree{SUF}.json", "w") as f:
             json.dump({t: {k: v for k, v in d.items()}
                        for t, d in tree.items()}, f, indent=2, default=str)
 
@@ -694,12 +763,13 @@ def main():
             RESULTS / f"term_distances{SUF}.csv",
             RESULTS / f"lineage_report{SUF}.txt"]
     if not CENTER:
-        outs += [RESULTS / f"lineage_tree{_fsuf}.json"] + \
-                [RESULTS / f"lineage_samples_{t.replace(' ', '_')}{_fsuf}.txt"
+        outs += [RESULTS / f"lineage_tree{SUF}.json"] + \
+                [RESULTS / f"lineage_samples_{t.replace(' ', '_')}{SUF}.txt"
                  for t in family]
     pc.write_manifest(
         CFG, __file__,
         params={"center": CENTER, "subset_filter": FILTER, "suffix": SUF,
+                "frame_control": FRAME_CONTROL, "frame_r2": frame_r2,
                 "equalize_n": EQ_N, "equalize_reps": EQ_REPS,
                 "min_n": MIN_N, "cluster_min_n": CLUSTER_MIN_N,
                 "max_k": MAX_K, "seed": SEED, "control_terms": sorted(CONTROL_TERMS),
@@ -709,8 +779,8 @@ def main():
                 "syntax_guard": {"threshold": SYNTAX_FLAG,
                                  "checked": n_guard_checked,
                                  "unchecked_old_shards": n_guard_missing,
-                                 "flagged": [[t, p, f, round(d, 3)]
-                                             for t, p, f, d in syntax_flags]},
+                                 "flagged": [[t, p, f, round(d, 3), kind]
+                                             for t, p, f, d, kind in syntax_flags]},
                 "n_shards": sum(len(v) for v in data.values())},
         outputs=outs)
     print(f"\nAll outputs -> {RESULTS}/ (report: lineage_report{SUF}.txt)")

@@ -31,21 +31,23 @@ abstract.
 
 Each shard records n_pool (documents available for that term-period before
 any cap) and cap, so prevalence is reconstructible and a capped shard is
-recognisable.
-
-MENTION RULES + SYNTAX FEATURES (2026-09-13, Session 29). The occurrence
-masked is the first VALID one under pipeline_config.valid_spans (not nested
-inside a longer family term, not parenthetical-only) — the same rule 16 used
-to keep the sentence. Before this, the mask could land on "post-[MASK]
-disorder" for "traumatic stress", or on "([MASK])" for "ptsd", and those
-syntactic contexts formed perfectly stable clusters. Each shard now also
-stores `syntax` (n x 4): per-document rates of title-sentence, definitional,
-parenthetical and attributive ("trauma-focused") mentions, which 18's syntax
-guard compares across clusters. Shards from before this change have no
-`syntax` array; 18 says so and skips the guard for them. Re-embed into a NEW
-emb_dir after changing the rules — checkpointing would keep old shards. Re-running with a different cap into the same emb_dir would
+recognisable. Re-running with a different cap into the same emb_dir would
 silently keep the old shards (checkpointing) — use a NEW emb_dir per cap
 setting; the config's emb_dir names the run.
+
+MENTION RULES + SYNTAX FEATURES (Sessions 29-30). The occurrence masked is
+the first VALID one under pipeline_config.valid_spans (not nested inside a
+longer family term, not parenthetical-only, not the tail of a hyphenated
+word) — the same rule 16 used to keep the sentence. Before this, the mask
+could land on "post-[MASK] disorder" for "traumatic stress", or on "([MASK])"
+for "ptsd", and those syntactic contexts formed perfectly stable clusters.
+Each shard also stores `syntax` (n x 7; pc.SYNTAX_FEATURE_NAMES): per-
+document rates of title-sentence, definitional, parenthetical, attributive,
+modifier, premodified and coordinated mentions, which 18's syntax guard
+compares across clusters and which --frame-control partials out. Shards
+from before Session 29 have no `syntax` array; 18 says so and skips the
+guard for them. After changing the rules either re-embed into a NEW emb_dir
+or use --refresh-changed (below).
 
 Reads:  data/family/lineage_docs.jsonl   (from 16)
 Writes: data/lineage_emb/{term_slug}__{period}.npz
@@ -55,10 +57,14 @@ Writes: data/lineage_emb/{term_slug}__{period}.npz
 Usage:
     caffeinate -i python3 17_embed_documents.py [--config configs/<concept>.yaml]
     python3 17_embed_documents.py "ego depletion" "self-control"   # subset
+    python3 17_embed_documents.py --refresh-changed   # after re-running 16:
+        re-embed only the shards whose documents or mention sentences changed
+        (exact via the stored mention_hash; key-set comparison on older shards)
 
 Model, caps, seed, paths and control terms come from the config.
 """
 
+import hashlib
 import json
 import random
 import re
@@ -89,6 +95,8 @@ OUT_DIR = Path(CFG["emb_dir"])
 # is the one 16 counted. Family patterns are the nesting containers; control
 # terms are matched plainly.
 RULES = pc.mention_rules(CFG)
+REFRESH_CHANGED = "--refresh-changed" in _ARGV   # re-embed shards whose docs changed (after a 16 re-run)
+refreshed = []
 ALL_PATS = pc.family_patterns(CFG)
 ALL_PATS.update({c: term_pattern(c) for c in CONTROL_TERMS if c not in ALL_PATS})
 
@@ -97,7 +105,7 @@ def main():
     import torch
     from transformers import AutoModel, AutoTokenizer
 
-    only = set(_ARGV)
+    only = set(a for a in _ARGV if not a.startswith("--"))
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     print(f"Loading {MODEL_NAME} ...")
@@ -158,10 +166,40 @@ def main():
             return None, None      # mask truncated away
         return layer[0, pos, :].numpy(), feats
 
+    def shard_stale(out_path, term, docs):
+        """--refresh-changed: does the existing shard still describe these
+        documents? Exact when the shard stores `mention_hash` (Session 30+):
+        compare a hash of every (key, sentences) pair. Older shards: compare
+        key sets — stale if any stored document left the pool, or more than
+        1% + 5 documents joined it (documents whose mask was truncated away
+        are legitimately absent from a fresh shard, hence the tolerance)."""
+        z = np.load(out_path, allow_pickle=True)
+        if "mention_hash" in z.files:
+            return str(z["mention_hash"]) != mention_hash(term, docs)
+        stored = set(str(k) for k in z["keys"])
+        pool = set((d["doi"] or d["title"][:60]) for d in docs)
+        left = stored - pool
+        joined = pool - stored
+        return bool(left) or len(joined) > 0.01 * len(pool) + 5
+
+    def mention_hash(term, docs):
+        h = hashlib.sha1()
+        for d in sorted(docs, key=lambda d: d["doi"] or d["title"][:60]):
+            h.update((d["doi"] or d["title"][:60]).encode("utf-8"))
+            for s in d["mention_sentences"].get(term, [])[:MAX_SENT_PER_DOC]:
+                h.update(b"\x1f" + s.encode("utf-8"))
+            h.update(b"\x1e")
+        return h.hexdigest()
+
     def embed_shard(term, period, docs, cap):
         out_path = OUT_DIR / f"{slug(term)}__{period}.npz"
         if out_path.exists():
-            return 0
+            if REFRESH_CHANGED and shard_stale(out_path, term, docs):
+                print(f"  [refresh] {term} | {period}: membership/text changed -> re-embedding")
+                out_path.unlink()
+                refreshed.append(f"{term}|{period}")
+            else:
+                return 0
         n_pool = len(docs)
         if cap is not None and len(docs) > cap:
             random.seed(SEED)
@@ -191,7 +229,8 @@ def main():
                                 dbs=np.array(dbs, dtype=object),
                                 sources=np.array(sources, dtype=object),
                                 strata=np.array(strata, dtype=object),
-                                syntax=np.array(syntax, dtype=float),   # (n,4): title, defn, paren, attributive
+                                syntax=np.array(syntax, dtype=float),   # (n,7): see pc.SYNTAX_FEATURE_NAMES
+                                mention_hash=np.array(mention_hash(term, docs)),
                                 n_pool=np.array(n_pool),
                                 cap=np.array(-1 if cap is None else cap))
         return len(vecs)
@@ -222,6 +261,7 @@ def main():
                 "emb_dir": str(OUT_DIR),
                 "control_cap": CONTROL_CAP, "max_sent_per_doc": MAX_SENT_PER_DOC,
                 "control_terms": CONTROL_TERMS, "subset": sorted(only),
+                "refresh_changed": REFRESH_CHANGED, "refreshed_shards": refreshed,
                 "n_docs_in": n_docs, "n_new_vectors": total,
                 "n_shards_total": len(list(OUT_DIR.glob("*.npz")))},
         outputs=[OUT_DIR],
