@@ -161,37 +161,60 @@ def guardian_window(term, y0, y1, key, budget):
 
 
 def nyt_window(term, d0, d1, key, budget):
-    """NYT Article Search: 10 per page, page <= 100 (so <= 1,010 per window).
-    Windows with more hits are split by month by the caller."""
+    """NYT Article Search: 10 per page, page <= 100. The API (2026) returns
+    NO hit count (meta.hits is null) and a `fq` filter silently zeroes the
+    results (Session 33 probe), so: no fq (document_type is checked client-
+    side), paginate until a short page, and when the 100-page cap is reached
+    with a full page, CONTINUE FROM THE LAST DATE SEEN (sort=oldest) — a
+    date cursor instead of a month split, no refetching. Returns
+    (docs, None, calls, complete)."""
     base = "https://api.nytimes.com/svc/search/v2/articlesearch.json"
-    docs, calls, page, hits = [], 0, 0, None
-    while page <= 100 and calls < budget:
-        q = {"q": f'"{term}"', "begin_date": d0.strftime("%Y%m%d"), "end_date": d1.strftime("%Y%m%d"),
-             "page": page, "sort": "oldest", "fq": 'document_type:("article")', "api-key": key}
-        data, ok = get_json(base + "?" + urllib.parse.urlencode(q), OUTLETS["nyt"]["sleep"])
-        calls += 1
-        if not ok:
-            return docs, hits, calls, False
-        resp = data.get("response", {})
-        if hits is None:
-            hits = (resp.get("meta") or {}).get("hits", 0)
-        got = resp.get("docs", []) or []
-        for r in got:
-            date = (r.get("pub_date") or "")[:10]
-            head = ((r.get("headline") or {}).get("main")) or ""
-            text = " ".join(x for x in [r.get("abstract") or "", r.get("lead_paragraph") or "",
-                                        r.get("snippet") or ""] if x).strip()
-            docs.append({"id": r.get("web_url") or r.get("_id"), "url": r.get("web_url"), "doi": "",
-                         "year": int(date[:4]) if date[:4].isdigit() else None, "date": date,
-                         "outlet": OUTLETS["nyt"]["name"],
-                         "section": r.get("section_name") or r.get("news_desk") or "",
-                         "title": head, "text": text, "dbs": [OUTLETS["nyt"]["db"]], "ty": "NEWS",
-                         "index_terms": [k.get("value") for k in (r.get("keywords") or []) if k.get("value")],
-                         "retrieved_by": [term]})
-        if len(got) < 10 or (page + 1) * 10 >= hits:
-            return docs, hits, calls, True
-        page += 1
-    return docs, hits, calls, page > 100
+    docs, calls = [], 0
+    cursor = d0
+    while calls < budget:
+        page, last_date, full_last_page = 0, None, False
+        while page <= 100 and calls < budget:
+            q = {"q": f'"{term}"', "begin_date": cursor.strftime("%Y%m%d"),
+                 "end_date": d1.strftime("%Y%m%d"), "page": page, "sort": "oldest",
+                 "api-key": key}
+            data, ok = get_json(base + "?" + urllib.parse.urlencode(q), OUTLETS["nyt"]["sleep"])
+            calls += 1
+            if not ok:
+                return docs, None, calls, False
+            got = (data.get("response") or {}).get("docs") or []
+            for r in got:
+                if (r.get("document_type") or "article") != "article":
+                    continue
+                date = (r.get("pub_date") or "")[:10]
+                last_date = date or last_date
+                head = ((r.get("headline") or {}).get("main")) or ""
+                text = " ".join(x for x in [r.get("abstract") or "", r.get("lead_paragraph") or "",
+                                            r.get("snippet") or ""] if x).strip()
+                docs.append({"id": r.get("web_url") or r.get("_id"), "url": r.get("web_url"), "doi": "",
+                             "year": int(date[:4]) if date[:4].isdigit() else None, "date": date,
+                             "outlet": OUTLETS["nyt"]["name"],
+                             "section": r.get("section_name") or r.get("news_desk") or "",
+                             "title": head, "text": text, "dbs": [OUTLETS["nyt"]["db"]], "ty": "NEWS",
+                             "index_terms": [k.get("value") for k in (r.get("keywords") or []) if k.get("value")],
+                             "retrieved_by": [term]})
+            if len(got) < 10:
+                return docs, None, calls, True          # short page: window exhausted
+            full_last_page = True
+            page += 1
+        # page cap reached with full pages: move the cursor to the last date seen
+        if not full_last_page or not last_date:
+            return docs, None, calls, True
+        try:
+            nxt = dt.date.fromisoformat(last_date)
+        except ValueError:
+            return docs, None, calls, True
+        if nxt <= cursor:                                # > 1,010 hits on a single day: accept the loss
+            print(f"    NYT: more than 1,010 hits on {cursor} — beyond the API's reach; continuing next day")
+            nxt = cursor + dt.timedelta(days=1)
+        cursor = nxt
+        if cursor > d1:
+            return docs, None, calls, True
+    return docs, None, calls, False                       # budget exhausted mid-window
 
 
 def month_windows(year):
@@ -264,7 +287,48 @@ def log_window(rec):
 
 # --------------------------------------------------------------------- main
 
+def probe_nyt(key):
+    """--probe: one call per query variant, raw response summarised. Session 33
+    diagnosis: 450 windows returned HTTP 200 with hits=0."""
+    base = "https://api.nytimes.com/svc/search/v2/articlesearch.json"
+    variants = {
+        "A quoted q + fq document_type": {"q": '"trauma"', "fq": 'document_type:("article")'},
+        "B plain q, no fq":               {"q": "trauma"},
+        "C plain q + fq document_type":   {"q": "trauma", "fq": 'document_type:("article")'},
+        "D plain q + begin/end 2004":     {"q": "trauma", "begin_date": "20040101", "end_date": "20041231"},
+        "E quoted q + begin/end 2004":    {"q": '"trauma"', "begin_date": "20040101", "end_date": "20041231", "sort": "oldest"},
+    }
+    for name, q in variants.items():
+        q = dict(q, **{"api-key": key})
+        url = base + "?" + urllib.parse.urlencode(q)
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "research corpus builder"})
+            with urllib.request.urlopen(req, timeout=60) as r:
+                body = r.read().decode("utf-8", errors="replace")
+            status = "200"
+        except urllib.error.HTTPError as e:
+            body = e.read().decode("utf-8", errors="replace")
+            status = str(e.code)
+        try:
+            data = json.loads(body)
+            resp = data.get("response") or {}
+            meta = resp.get("meta") or {}
+            docs = resp.get("docs") or []
+            first = docs[0] if docs else {}
+            summ = (f"status={data.get('status')} hits={meta.get('hits')} docs={len(docs)}"
+                    + (f" first={((first.get('headline') or {}).get('main') or '')[:60]!r} "
+                       f"date={str(first.get('pub_date'))[:10]} type={first.get('document_type')}" if first else "")
+                    + ("" if "response" in data else f" RAW={body[:300]}"))
+        except json.JSONDecodeError:
+            summ = f"non-JSON: {body[:300]}"
+        print(f"  [{name}] HTTP {status}: {summ}")
+        time.sleep(OUTLETS["nyt"]["sleep"])
+
+
 def main():
+    if "--probe" in _ARGV:
+        probe_nyt(load_keys()["nyt"])
+        return
     terms = terms_to_search()
     y_lo, y_hi = year_range()
     outlets = ["guardian", "nyt"] if SOURCE == "all" else [SOURCE]
@@ -302,18 +366,7 @@ def main():
                 if outlet == "guardian":
                     docs, hits, calls, complete = guardian_window(term, year, year, key, calls_left)
                 else:
-                    # NYT: try the year; if > 1,000 hits, do it by month
                     docs, hits, calls, complete = nyt_window(term, dt.date(year, 1, 1), dt.date(year, 12, 31), key, calls_left)
-                    if hits and hits > 1000 and calls_left - calls > 12:
-                        docs, complete, extra = [], True, 0
-                        for d0, d1 in month_windows(year):
-                            md, mh, mc, mok = nyt_window(term, d0, d1, key, calls_left - calls - extra)
-                            extra += mc
-                            docs += md
-                            if not mok:
-                                complete = False
-                                break
-                        calls += extra
                 calls_left -= calls
                 n = sum(yf.write(d) for d in docs)
                 summary[f"{outlet}:docs"] += n
@@ -340,11 +393,12 @@ def main():
         params={"source": SOURCE, "terms": terms, "years": [y_lo, y_hi], "max_calls": MAX_CALLS,
                 "summary": dict(summary), "retrieval_log": str(LOG_PATH),
                 "apis": {"guardian": "content.guardianapis.com/search (type=article, q=\"term\", full bodyText)",
-                         "nyt": "api.nytimes.com/svc/search/v2/articlesearch (document_type=article, "
-                                "headline+abstract+lead_paragraph+snippet only)"}},
+                         "nyt": "api.nytimes.com/svc/search/v2/articlesearch (q=\"term\", sort=oldest, no fq — "
+                                "a fq filter zeroes results; document_type checked client-side; "
+                                "headline+abstract+lead_paragraph+snippet only; no hit counts returned)"}},
         outputs=[OUT_DIR],
-        notes="Windows are logged only when complete; re-run to resume. NYT hits > 1,000 "
-              "per year are fetched by month.")
+        notes="Windows are logged only when complete; re-run to resume. NYT windows past "
+              "the 100-page cap continue from the last date seen (date cursor).")
     print("Next: python3 16_build_lineage_corpus.py --config configs/ptsd_trauma_popular.yaml")
 
 

@@ -1,0 +1,60 @@
+{
+  "script": "25_popular_news",
+  "concept": "posttraumatic stress disorder",
+  "config": "configs/ptsd_trauma_popular.yaml",
+  "config_sha1": "0b45de2f1973",
+  "timestamp": "2026-09-15T14:10:28-04:00",
+  "git_commit": "5a1ec32",
+  "git_dirty": false,
+  "argv": [
+    "--config",
+    "configs/ptsd_trauma_popular.yaml",
+    "--source",
+    "nyt",
+    "--max-calls",
+    "450"
+  ],
+  "params": {
+    "source": "nyt",
+    "terms": [
+      "trauma",
+      "PTSD",
+      "posttraumatic stress disorder",
+      "post-traumatic stress",
+      "shell shock",
+      "trauma-informed",
+      "traumatic stress",
+      "moral injury",
+      "collective trauma",
+      "intergenerational trauma",
+      "vicarious trauma"
+    ],
+    "years": [
+      1965,
+      2025
+    ],
+    "max_calls": 450,
+    "summary": {
+      "nyt:docs": 0,
+      "nyt:calls": 450
+    },
+    "retrieval_log": "data/ptsd_trauma_popular/retrieval_log.jsonl",
+    "apis": {
+      "guardian": "content.guardianapis.com/search (type=article, q=\"term\", full bodyText)",
+      "nyt": "api.nytimes.com/svc/search/v2/articlesearch (document_type=article, headline+abstract+lead_paragraph+snippet only)"
+    }
+  },
+  "outputs": [
+    "data/ptsd_trauma_popular"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "diptest": "0.11.0",
+    "torch": "2.12.0",
+    "transformers": "5.13.0"
+  },
+  "notes": "Windows are logged only when complete; re-run to resume. NYT hits > 1,000 per year are fetched by month."
+}
