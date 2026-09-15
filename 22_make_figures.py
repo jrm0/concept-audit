@@ -244,7 +244,10 @@ def fig_trajectory():
 # ---------------------------------------------------------------- fig 4
 def fig_drift():
     drift = RESULTS / "lineage_drift.csv"
-    dist = RESULTS / "term_distances_centered.csv"
+    dist = RESULTS / "term_distances_centered.csv"      # preferred (18 --center)
+    if not dist.exists():                                # fall back to the raw run
+        dist = RESULTS / "term_distances.csv"
+        print("  (panel B: no centered distances found, using raw term_distances.csv)")
     if not drift.exists():
         print("  (skipped drift: run 18 first)")
         return

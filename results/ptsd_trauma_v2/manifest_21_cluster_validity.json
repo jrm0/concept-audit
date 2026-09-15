@@ -1,0 +1,35 @@
+{
+  "script": "21_cluster_validity",
+  "concept": "posttraumatic stress disorder",
+  "config": "configs/ptsd_trauma.yaml",
+  "config_sha1": "a76e6b8c7b68",
+  "timestamp": "2026-09-14T15:35:03-04:00",
+  "git_commit": "a7563b5",
+  "git_dirty": false,
+  "argv": [
+    "--config",
+    "configs/ptsd_trauma.yaml"
+  ],
+  "params": {
+    "n_boot": 50,
+    "seed": 42,
+    "min_n": 60,
+    "max_k": 4,
+    "dip_alpha": 0.05,
+    "stable": 0.75,
+    "cells": 113,
+    "supported": 40
+  },
+  "outputs": [
+    "results/ptsd_trauma_v2/cluster_validity.csv"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "diptest": "0.11.0",
+    "torch": "2.12.0",
+    "transformers": "5.13.0"
+  }
+}

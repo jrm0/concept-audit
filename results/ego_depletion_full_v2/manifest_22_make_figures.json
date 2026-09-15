@@ -1,0 +1,45 @@
+{
+  "script": "22_make_figures",
+  "concept": "ego depletion",
+  "config": "configs/ego_depletion.yaml",
+  "config_sha1": "6160ea176fc5",
+  "timestamp": "2026-09-14T15:36:26-04:00",
+  "git_commit": "a7563b5",
+  "git_dirty": false,
+  "argv": [],
+  "params": {
+    "figures_built": [
+      "fig_ridgeline",
+      "fig_migration",
+      "fig_trajectory",
+      "fig_drift"
+    ],
+    "failed": [],
+    "annotations": {
+      "ridgeline": "One mode per period (dip test p = 0.71\u20130.99); triangles mark period means",
+      "migration": "work/org share 12.0% (2015-19) \u2192 24.8% (2020-24), permutation p = 0.0001; corpus baseline flat",
+      "trajectory": "'ego depletion' (bold) starts beside its ancestors, moves away through 2015-19, then turns back",
+      "propagation": "The concept travels; the correction doesn't \u2014 applied venues cite the coinage like the home field, the critiques at a fraction of its rate"
+    },
+    "venue_categories": [
+      "work/org",
+      "health/med",
+      "education",
+      "sport",
+      "crime/social",
+      "core/other psych"
+    ]
+  },
+  "outputs": [
+    "results/ego_depletion_full_v2/figures"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "diptest": "0.11.0",
+    "torch": "2.12.0",
+    "transformers": "5.13.0"
+  }
+}
