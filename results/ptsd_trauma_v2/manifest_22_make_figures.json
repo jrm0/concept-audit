@@ -3,8 +3,8 @@
   "concept": "posttraumatic stress disorder",
   "config": "configs/ptsd_trauma.yaml",
   "config_sha1": "a76e6b8c7b68",
-  "timestamp": "2026-09-14T15:35:12-04:00",
-  "git_commit": "a7563b5",
+  "timestamp": "2026-09-15T06:33:58-04:00",
+  "git_commit": "f06572b",
   "git_dirty": false,
   "argv": [
     "--config",

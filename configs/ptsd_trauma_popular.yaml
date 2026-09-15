@@ -1,0 +1,150 @@
+# configs/ptsd_trauma_popular.yaml — the POPULAR STRATUM of the PTSD/trauma
+# family (Session 33, 2026-09-15). News contexts, analysed as its own lineage.
+#
+# Why a separate config rather than a stratum inside ptsd_trauma.yaml:
+# corpus principle 7 — registers are strata, never ingredients. A news
+# sentence and an abstract sentence embed differently for reasons that have
+# nothing to do with the concept; the control terms that make sense in
+# abstracts ("participants", "results") barely occur in news; and 17 samples
+# control documents per period regardless of stratum. Keeping the popular
+# stratum in its own config makes pooling impossible by construction and
+# reuses every script unchanged. Cross-stratum comparison is done on the
+# OUTPUTS (drift curves, births, habitat shares), not on pooled vectors.
+#
+# What this stratum is for: the academic corpus cannot see the bare word's
+# ordinary-usage creep (Session 32: no venue migration, no sense splits after
+# frame control; the habitats live in the compounds). Haslam's
+# extraordinary->ordinary direction is a claim about lay usage. This is where
+# it has to show up if it is real.
+#
+# Retrieval: 24_popular_ngrams.py (salience only) and 25_popular_news.py
+# (Guardian full text 1999-; NYT headline+abstract+lead paragraph 1851-),
+# both writing under data/ptsd_trauma_popular/. Keys in .secrets/api_keys.yaml.
+
+concept: posttraumatic stress disorder
+slug: ptsd_trauma_popular
+
+family_csv: families/ptsd_trauma_family.csv
+ris_root: null                                   # no RIS here; sources are jsonl
+family_works_glob: null
+docs_path: data/ptsd_trauma_popular/lineage_docs.jsonl
+emb_dir: data/ptsd_trauma_popular/lineage_emb
+citations_cache: null
+results_dir: results/ptsd_trauma_popular
+
+corpus:
+  platform: "Guardian Open Platform API; NYT Article Search API (+ Google Books Ngram salience)"
+  exported: null
+  expanders: []
+  fields: [headline, abstract/lead paragraph, body text (Guardian only)]
+  limiters: []
+  language_filter: english
+  document_type_filter: "articles (NYT document_type=article; Guardian type=article)"
+  queries:
+    # One query per family term worth searching in lay text (24/25 iterate this list).
+    # Ancestors with near-zero lay currency are skipped; "trauma" alone dominates.
+    popular_terms: ["trauma", "PTSD", "posttraumatic stress disorder", "post-traumatic stress",
+                    "shell shock", "trauma-informed", "traumatic stress", "moral injury",
+                    "collective trauma", "intergenerational trauma", "vicarious trauma"]
+  exclusions:
+    - {term: "physical trauma (trauma centre, trauma surgeon, blunt trauma)", why: "NOT excluded — in lay text the somatic sense is the majority sense for decades; its share by period is the somatic->psychic curve. Read the split, do not filter it."}
+    - {habitat: "UK vs US register", why: "Guardian (UK) and NYT (US) are kept as separate sources/DB tags and compared, never pooled without saying so."}
+    - {habitat: "social media, broadcast, fiction", why: "not sampled; news is the only lay register with dated, retrievable full text at this scale"}
+  strata:
+    popular: [NEWS]
+    journal: [JOUR]
+  sources:
+    - id: guardian
+      files: ["data/ptsd_trauma_popular/news_guardian_*.jsonl"]
+      databases: [Guardian]
+      query: popular_terms
+      dates: 1999-2025
+      role: popular
+      question: "UK broadsheet lay usage with FULL body text — the richest contexts; extraordinary->ordinary in ordinary prose"
+      n_records: null
+    - id: nyt
+      files: ["data/ptsd_trauma_popular/news_nyt_*.jsonl"]
+      databases: [NYT]
+      query: popular_terms
+      dates: 1965-2025
+      role: popular
+      question: "US record of lay usage back to the pre-coinage era (headline + abstract + lead paragraph only — short contexts)"
+      n_records: null
+  ignore: []
+  audit:
+    min_abstract_share: 0.95
+    warn_if_dedupe_share_above: 0.30
+
+periods:
+  year_min: 1965
+  year_max: 2025
+  width: 5
+
+# Control terms for NEWS: common content nouns whose sense should not move,
+# present in almost every article. ("participants"/"results" are abstract-
+# register words and would leave most periods without a control shard.)
+control_terms: [people, year, city, family]
+
+mentions:
+  exclude_nested: true
+  strip_acronym_parentheticals: true
+  exclude_hyphen_prefixed: true
+  min_sentence_chars: 12        # headlines are short; abstracts use the default 30
+
+embedding:
+  model: allenai/scibert_scivocab_uncased    # SAME model as the journal stratum so drift is commensurable; note SciBERT is trained on papers — a general-domain model is a sensitivity run
+  max_length: 256
+  max_sent_per_doc: 3
+  cap_per_term_period: null
+  control_cap: 300
+  seed: 42
+
+analysis:
+  syntax_flag_diff: 0.5
+  min_n: 15
+  cluster_min_n: 60
+  max_k: 4
+  n_sample_titles: 10
+  seed: 42
+  equalize_n: 250
+  equalize_reps: 100
+
+events:
+  1980: "DSM-III: PTSD enters the nosology"
+  1994: "DSM-IV"
+  2001: "9/11"
+  2013: "DSM-5"
+event_short_labels: {1980: DSM-III, 1994: DSM-IV, 2001: "9/11", 2013: DSM-5}
+
+key_pairs:
+  - [trauma, posttraumatic stress disorder]
+  - [trauma, ptsd]
+  - [trauma, trauma informed]
+  - [posttraumatic stress disorder, shell shock]
+
+figures:
+  trajectory_terms: [trauma, ptsd, posttraumatic stress disorder, trauma informed]
+  trajectory_min_docs: 60
+  drift_terms:
+    - [trauma, crimson]
+    - [ptsd, navy]
+  distance_pairs:
+    - [trauma, ptsd, navy]
+
+# Venue categories = news SECTIONS. 16 stores the section in the `journal`
+# field for news documents (the outlet is the DB tag: Guardian / NYT), so the
+# same habitat-share machinery (22 fig2) works unchanged.
+venue_categories:
+  - name: world/politics
+    pattern: "world|politics|us news|uk news|international|foreign|washington"
+  - name: health/science
+    pattern: "health|science|well|medicine|wellness"
+  - name: culture/arts
+    pattern: "culture|arts|books|film|music|television|theatre|theater|movies|review"
+  - name: sport
+    pattern: "sport|football|soccer|baseball|basketball|olympic"
+  - name: business/money
+    pattern: "business|money|economy|finance|technology|jobs"
+  - name: lifestyle/opinion
+    pattern: "lifestyle|opinion|comment|society|education|family|life|style|magazine|fashion|food|travel"
+core_label: news/other

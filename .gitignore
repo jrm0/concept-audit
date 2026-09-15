@@ -18,3 +18,6 @@ results/*.npz
 results/**/cluster_samples_*.txt
 results/**/lineage_samples_*.txt
 results/**/*.npz
+
+# API keys (popular-stratum retrieval)
+.secrets/

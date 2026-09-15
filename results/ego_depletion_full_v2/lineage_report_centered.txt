@@ -1,0 +1,156 @@
+Concept: ego depletion   config: configs/ego_depletion.yaml (6160ea176fc5)
+Terms: ['delay of gratification', 'depletion effect', 'ego depletion', 'executive function', 'regulatory resource', 'self control', 'self control depletion', 'self regulation', 'self regulatory depletion', 'strength model', 'willpower']
+Controls: ['measure', 'participants', 'results', 'significant']
+Periods: ['1975-1979', '1980-1984', '1985-1989', '1990-1994', '1995-1999', '2000-2004', '2005-2009', '2010-2014', '2015-2019', '2020-2024', '2025-2025']
+MODE: PER-PERIOD MEAN-CENTERED (anisotropy robustness)
+
+Control-reference centroid available for 11 periods (from 4 control terms)
+Matched-n resampling: n_eq = min(n_a, n_b, 250); 100 draws; full-data estimate reported alongside.
+
+=== A. DRIFT FROM ORIGIN (matched-n; excess over control terms) ===
+CAUTION: under --center the control terms DEFINE the reference, so their residual drift is deflated by construction and 'excess' is optimistic here. Read centered results for B (cross-term distances, common reference, unaffected); read A primarily in the raw run, using centering only as a shape check.
+
+delay of gratification  (origin 1995-1999, n=16)
+  1995-1999: n=   16 n_eq=  16 drift=0.0000±0.0000 (full 0.0000) control=0.1975 excess=-0.1975
+  2000-2004: n=   21 n_eq=  16 drift=0.0846±0.0082 (full 0.0775) control=0.2212 excess=-0.1365
+  2005-2009: n=   29 n_eq=  16 drift=0.0972±0.0139 (full 0.0799) control=0.2499 excess=-0.1527
+  2010-2014: n=   66 n_eq=  16 drift=0.1065±0.0162 (full 0.0768) control=0.2614 excess=-0.1549
+  2015-2019: n=   79 n_eq=  16 drift=0.1063±0.0149 (full 0.0756) control=0.2540 excess=-0.1477
+  2020-2024: n=   67 n_eq=  16 drift=0.1166±0.0145 (full 0.0876) control=0.2652 excess=-0.1486
+  2025-2025: n=   16 n_eq=  16 drift=0.1309±0.0000 (full 0.1309) control=0.2712 excess=-0.1403
+
+depletion effect  (origin 2010-2014, n=17)
+  2010-2014: n=   17 n_eq=  17 drift=0.0000±0.0000 (full 0.0000) control=0.2356 excess=-0.2356
+  2015-2019: n=   44 n_eq=  17 drift=0.1028±0.0269 (full 0.0849) control=0.2578 excess=-0.1550
+  2020-2024: n=   18 n_eq=  17 drift=0.2114±0.0065 (full 0.2094) control=0.2617 excess=-0.0503
+
+ego depletion  (origin 2005-2009, n=43)
+  2005-2009: n=   43 n_eq=  43 drift=0.0000±0.0000 (full 0.0000) control=0.1945 excess=-0.1945
+  2010-2014: n=  120 n_eq=  43 drift=0.0535±0.0106 (full 0.0414) control=0.1950 excess=-0.1415
+  2015-2019: n=  263 n_eq=  43 drift=0.0773±0.0156 (full 0.0635) control=0.1871 excess=-0.1097
+  2020-2024: n=  208 n_eq=  43 drift=0.0907±0.0134 (full 0.0812) control=0.2102 excess=-0.1195
+  2025-2025: n=   86 n_eq=  43 drift=0.0918±0.0090 (full 0.0863) control=0.2157 excess=-0.1239
+
+executive function  (origin 2000-2004, n=26)
+  2000-2004: n=   26 n_eq=  26 drift=0.0000±0.0000 (full 0.0000) control=0.1661 excess=-0.1661
+  2005-2009: n=   62 n_eq=  26 drift=0.0610±0.0088 (full 0.0441) control=0.2036 excess=-0.1426
+  2010-2014: n=  158 n_eq=  26 drift=0.0661±0.0105 (full 0.0428) control=0.2103 excess=-0.1442
+  2015-2019: n=  257 n_eq=  26 drift=0.0709±0.0098 (full 0.0477) control=0.2096 excess=-0.1387
+  2020-2024: n=  292 n_eq=  26 drift=0.0826±0.0101 (full 0.0583) control=0.2264 excess=-0.1438
+  2025-2025: n=  105 n_eq=  26 drift=0.0827±0.0105 (full 0.0646) control=0.2332 excess=-0.1505
+
+self control  (origin 1975-1979, n=493)
+  1975-1979: n=  493 n_eq= 250 drift=0.0000±0.0000 (full 0.0000) control=- excess=-
+  1980-1984: n=  627 n_eq= 250 drift=0.0175±0.0018 (full 0.0137) control=0.0361 excess=-0.0185
+  1985-1989: n=  596 n_eq= 250 drift=0.0271±0.0024 (full 0.0237) control=0.0327 excess=-0.0056
+  1990-1994: n=  665 n_eq= 250 drift=0.0489±0.0042 (full 0.0453) control=0.0461 excess=0.0029
+  1995-1999: n=  941 n_eq= 250 drift=0.0849±0.0062 (full 0.0815) control=0.0981 excess=-0.0132
+  2000-2004: n= 1116 n_eq= 250 drift=0.1243±0.0076 (full 0.1197) control=0.1381 excess=-0.0138
+  2005-2009: n= 2033 n_eq= 250 drift=0.1666±0.0075 (full 0.1622) control=0.1650 excess=0.0016
+  2010-2014: n= 2912 n_eq= 250 drift=0.1597±0.0081 (full 0.1562) control=0.1799 excess=-0.0201
+  2015-2019: n= 3768 n_eq= 250 drift=0.1678±0.0084 (full 0.1635) control=0.1804 excess=-0.0126
+  2020-2024: n= 4154 n_eq= 250 drift=0.1863±0.0084 (full 0.1818) control=0.1983 excess=-0.0121
+  2025-2025: n= 1195 n_eq= 250 drift=0.1837±0.0085 (full 0.1811) control=0.1889 excess=-0.0053
+
+self control depletion  (origin 2010-2014, n=29)
+  2010-2014: n=   29 n_eq=  29 drift=0.0000±0.0000 (full 0.0000) control=0.2092 excess=-0.2092
+  2015-2019: n=   35 n_eq=  29 drift=0.0737±0.0042 (full 0.0709) control=0.2120 excess=-0.1384
+  2020-2024: n=   22 n_eq=  22 drift=0.1325±0.0113 (full 0.1250) control=0.2397 excess=-0.1072
+
+self regulation  (origin 1975-1979, n=166)
+  1975-1979: n=  166 n_eq= 166 drift=0.0000±0.0000 (full 0.0000) control=- excess=-
+  1980-1984: n=  317 n_eq= 166 drift=0.0289±0.0019 (full 0.0266) control=0.0356 excess=-0.0066
+  1985-1989: n=  463 n_eq= 166 drift=0.0321±0.0031 (full 0.0287) control=0.0319 excess=0.0002
+  1990-1994: n=  748 n_eq= 166 drift=0.0538±0.0049 (full 0.0501) control=0.0467 excess=0.0071
+  1995-1999: n= 1473 n_eq= 166 drift=0.0837±0.0049 (full 0.0771) control=0.0969 excess=-0.0132
+  2000-2004: n= 2094 n_eq= 166 drift=0.1144±0.0058 (full 0.1091) control=0.1340 excess=-0.0196
+  2005-2009: n= 3288 n_eq= 166 drift=0.1614±0.0076 (full 0.1572) control=0.1665 excess=-0.0051
+  2010-2014: n= 4933 n_eq= 166 drift=0.1670±0.0074 (full 0.1606) control=0.1807 excess=-0.0137
+  2015-2019: n= 6251 n_eq= 166 drift=0.1865±0.0083 (full 0.1799) control=0.1761 excess=0.0105
+  2020-2024: n= 7312 n_eq= 166 drift=0.2114±0.0083 (full 0.2068) control=0.1965 excess=0.0149
+  2025-2025: n= 3001 n_eq= 166 drift=0.2061±0.0070 (full 0.2016) control=0.1892 excess=0.0169
+
+self regulatory depletion  (origin 2010-2014, n=22)
+  2010-2014: n=   22 n_eq=  22 drift=0.0000±0.0000 (full 0.0000) control=0.2301 excess=-0.2301
+  2015-2019: n=   19 n_eq=  19 drift=0.0835±0.0050 (full 0.0783) control=0.2376 excess=-0.1541
+
+strength model  (origin 2005-2009, n=20)
+  2005-2009: n=   20 n_eq=  20 drift=0.0000±0.0000 (full 0.0000) control=0.2205 excess=-0.2205
+  2010-2014: n=   42 n_eq=  20 drift=0.0906±0.0178 (full 0.0747) control=0.2408 excess=-0.1502
+  2015-2019: n=   70 n_eq=  20 drift=0.1539±0.0258 (full 0.1383) control=0.2393 excess=-0.0854
+  2020-2024: n=   38 n_eq=  20 drift=0.1564±0.0208 (full 0.1512) control=0.2467 excess=-0.0903
+
+willpower  (origin 1985-1989, n=20)
+  1985-1989: n=   20 n_eq=  20 drift=0.0000±0.0000 (full 0.0000) control=0.1267 excess=-0.1267
+  1990-1994: n=   43 n_eq=  20 drift=0.0877±0.0127 (full 0.0648) control=0.1477 excess=-0.0601
+  1995-1999: n=   57 n_eq=  20 drift=0.1148±0.0115 (full 0.0943) control=0.1666 excess=-0.0518
+  2000-2004: n=   93 n_eq=  20 drift=0.1278±0.0098 (full 0.1028) control=0.1969 excess=-0.0691
+  2005-2009: n=  156 n_eq=  20 drift=0.1604±0.0125 (full 0.1288) control=0.2266 excess=-0.0662
+  2010-2014: n=  267 n_eq=  20 drift=0.1567±0.0123 (full 0.1244) control=0.2283 excess=-0.0716
+  2015-2019: n=  295 n_eq=  20 drift=0.1516±0.0107 (full 0.1176) control=0.2357 excess=-0.0841
+  2020-2024: n=  304 n_eq=  20 drift=0.1546±0.0108 (full 0.1261) control=0.2448 excess=-0.0902
+  2025-2025: n=  107 n_eq=  20 drift=0.1605±0.0110 (full 0.1331) control=0.2482 excess=-0.0877
+
+
+=== B. CROSS-TERM DISTANCES (masked space; matched-n) ===
+
+d(ego depletion, self control):
+  2005-2009: 0.1133±0.0161 (n_eq=43)
+  2010-2014: 0.1258±0.0100 (n_eq=120) *
+  2015-2019: 0.1466±0.0079 (n_eq=250) *
+  2020-2024: 0.1196±0.0074 (n_eq=208) *
+  2025-2025: 0.1003±0.0096 (n_eq=86) *
+
+d(ego depletion, self regulation):
+  2005-2009: 0.1329±0.0186 (n_eq=43)
+  2010-2014: 0.1544±0.0138 (n_eq=120) *
+  2015-2019: 0.1823±0.0089 (n_eq=250) *
+  2020-2024: 0.1531±0.0106 (n_eq=208) *
+  2025-2025: 0.1469±0.0140 (n_eq=86) *
+
+d(ego depletion, willpower):
+  2005-2009: 0.1919±0.0215 (n_eq=43) *
+  2010-2014: 0.1972±0.0105 (n_eq=120) *
+  2015-2019: 0.2333±0.0049 (n_eq=250) *
+  2020-2024: 0.2148±0.0056 (n_eq=208) *
+  2025-2025: 0.1824±0.0055 (n_eq=86) *
+
+d(self control, self regulation):
+  1975-1979: 0.0655±0.0052 (n_eq=166) *
+  1980-1984: 0.0501±0.0041 (n_eq=250) *
+  1985-1989: 0.0622±0.0058 (n_eq=250) *
+  1990-1994: 0.0804±0.0076 (n_eq=250) *
+  1995-1999: 0.0738±0.0075 (n_eq=250) *
+  2000-2004: 0.0622±0.0072 (n_eq=250) *
+  2005-2009: 0.0546±0.0073 (n_eq=250) *
+  2010-2014: 0.0438±0.0054 (n_eq=250) *
+  2015-2019: 0.0411±0.0050 (n_eq=250) *
+  2020-2024: 0.0458±0.0057 (n_eq=250) *
+  2025-2025: 0.0516±0.0066 (n_eq=250) *
+
+d(ego depletion, executive function):
+  2005-2009: 0.1478±0.0089 (n_eq=43) *
+  2010-2014: 0.1716±0.0058 (n_eq=120) *
+  2015-2019: 0.2005±0.0024 (n_eq=250) *
+  2020-2024: 0.1758±0.0060 (n_eq=208) *
+  2025-2025: 0.1637±0.0054 (n_eq=86) *
+
+d(ego depletion, delay of gratification):
+  2005-2009: 0.1417±0.0095 (n_eq=29)
+  2010-2014: 0.1249±0.0083 (n_eq=66) *
+  2015-2019: 0.1406±0.0105 (n_eq=79) *
+  2020-2024: 0.1642±0.0092 (n_eq=67) *
+  2025-2025: 0.2006±0.0272 (n_eq=16)
+
+
+=== C. SKIPPED under --center: PCA is translation-invariant, so clustering is identical to the uncentered run. ===
+
+
+=== D. DATED EVENTS (read curves against these) ===
+  1998: coinage (Baumeister et al. 1998)
+  2010: supportive meta-analysis (Hagger et al.)
+  2014: critical re-analysis (Carter & McCullough)
+  2016: Registered Replication Report (Hagger et al.)
+  2021: second RRR (Vohs et al.)
+
+READ lineage_samples_*.txt before interpreting any branching — clusters must make sense as usage communities (every prior artifact was caught by reading, not by metrics).

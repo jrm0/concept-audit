@@ -3,83 +3,22 @@
   "concept": "ego depletion",
   "config": "configs/ego_depletion.yaml",
   "config_sha1": "6160ea176fc5",
-  "timestamp": "2026-09-14T10:10:35-04:00",
-  "git_commit": "281319a",
+  "timestamp": "2026-09-15T06:34:10-04:00",
+  "git_commit": "f06572b",
   "git_dirty": false,
   "argv": [
-    "--frame-control"
+    "--center"
   ],
   "params": {
-    "center": false,
+    "center": true,
     "subset_filter": {
       "sources": [],
       "dbs": [],
       "strata": []
     },
-    "suffix": "_framectl",
-    "frame_control": true,
-    "frame_r2": {
-      "delay of gratification": {
-        "r2": 0.2003,
-        "n": 330
-      },
-      "depletion effect": {
-        "r2": 0.2672,
-        "n": 92
-      },
-      "ego depletion": {
-        "r2": 0.1568,
-        "n": 732
-      },
-      "executive function": {
-        "r2": 0.1468,
-        "n": 911
-      },
-      "measure": {
-        "r2": 0.1459,
-        "n": 1867
-      },
-      "participants": {
-        "r2": 0.0871,
-        "n": 1994
-      },
-      "regulatory resource": {
-        "r2": null,
-        "n": 19
-      },
-      "results": {
-        "r2": 0.1513,
-        "n": 2868
-      },
-      "self control": {
-        "r2": 0.1073,
-        "n": 18500
-      },
-      "self control depletion": {
-        "r2": 0.1468,
-        "n": 105
-      },
-      "self regulation": {
-        "r2": 0.1048,
-        "n": 30046
-      },
-      "self regulatory depletion": {
-        "r2": 0.1585,
-        "n": 56
-      },
-      "significant": {
-        "r2": 0.0518,
-        "n": 2462
-      },
-      "strength model": {
-        "r2": 0.2232,
-        "n": 179
-      },
-      "willpower": {
-        "r2": 0.0717,
-        "n": 1365
-      }
-    },
+    "suffix": "_centered",
+    "frame_control": false,
+    "frame_r2": null,
     "equalize_n": 250,
     "equalize_reps": 100,
     "min_n": 15,
@@ -145,32 +84,20 @@
       ]
     ],
     "clustering": "cluster_core (dip + Hennig Jaccard)",
-    "cells_tested": 41,
-    "cells_supported": 5,
+    "cells_tested": 0,
+    "cells_supported": 0,
     "syntax_guard": {
       "threshold": 0.5,
-      "checked": 5,
+      "checked": 0,
       "unchecked_old_shards": 0,
       "flagged": []
     },
     "n_shards": 134
   },
   "outputs": [
-    "results/ego_depletion_full_v2/lineage_drift_framectl.csv",
-    "results/ego_depletion_full_v2/term_distances_framectl.csv",
-    "results/ego_depletion_full_v2/lineage_report_framectl.txt",
-    "results/ego_depletion_full_v2/lineage_tree_framectl.json",
-    "results/ego_depletion_full_v2/lineage_samples_delay_of_gratification_framectl.txt",
-    "results/ego_depletion_full_v2/lineage_samples_depletion_effect_framectl.txt",
-    "results/ego_depletion_full_v2/lineage_samples_ego_depletion_framectl.txt",
-    "results/ego_depletion_full_v2/lineage_samples_executive_function_framectl.txt",
-    "results/ego_depletion_full_v2/lineage_samples_regulatory_resource_framectl.txt",
-    "results/ego_depletion_full_v2/lineage_samples_self_control_framectl.txt",
-    "results/ego_depletion_full_v2/lineage_samples_self_control_depletion_framectl.txt",
-    "results/ego_depletion_full_v2/lineage_samples_self_regulation_framectl.txt",
-    "results/ego_depletion_full_v2/lineage_samples_self_regulatory_depletion_framectl.txt",
-    "results/ego_depletion_full_v2/lineage_samples_strength_model_framectl.txt",
-    "results/ego_depletion_full_v2/lineage_samples_willpower_framectl.txt"
+    "results/ego_depletion_full_v2/lineage_drift_centered.csv",
+    "results/ego_depletion_full_v2/term_distances_centered.csv",
+    "results/ego_depletion_full_v2/lineage_report_centered.txt"
   ],
   "versions": {
     "python": "3.13.7",

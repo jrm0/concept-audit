@@ -1,0 +1,1699 @@
+period,term_a,term_b,cosine_distance,distance_eq_sd,distance_full,n_eq
+1965-1969,bereavement,results,1.0926,0.0148,1.0935,24
+1965-1969,bereavement,significant,0.9293,0.0126,0.9278,17
+1965-1969,bereavement,trauma,0.1793,0.0261,0.1454,24
+1965-1969,results,significant,1.8856,0.0267,1.9804,17
+1965-1969,results,trauma,1.0934,0.0172,1.0975,27
+1965-1969,significant,trauma,0.9302,0.0213,0.9305,17
+1970-1974,bereavement,results,1.1833,0.0086,1.1848,27
+1970-1974,bereavement,significant,0.8761,0.0156,0.8723,19
+1970-1974,bereavement,trauma,0.1643,0.0187,0.1445,32
+1970-1974,results,significant,1.921,0.018,1.9604,19
+1970-1974,results,trauma,1.2016,0.0197,1.2058,27
+1970-1974,significant,trauma,0.8837,0.0178,0.8793,19
+1975-1979,bereavement,results,1.2062,0.0138,1.2091,45
+1975-1979,bereavement,significant,0.8791,0.0172,0.8757,30
+1975-1979,bereavement,trauma,0.1743,0.0129,0.1677,91
+1975-1979,results,significant,1.9328,0.0091,1.9612,30
+1975-1979,results,trauma,1.2231,0.0144,1.2298,45
+1975-1979,significant,trauma,0.8769,0.0173,0.8716,30
+1980-1984,adjustment disorder,bereavement,0.3422,0.0311,0.3143,15
+1980-1984,adjustment disorder,measure,0.8744,0.0109,0.8732,15
+1980-1984,adjustment disorder,posttraumatic stress,0.4675,0.0273,0.4692,15
+1980-1984,adjustment disorder,posttraumatic stress disorder,0.2551,0.0292,0.2414,15
+1980-1984,adjustment disorder,psychological trauma,0.5016,0.0315,0.4887,15
+1980-1984,adjustment disorder,ptsd,0.3162,0.0166,0.3057,15
+1980-1984,adjustment disorder,results,1.1764,0.061,1.1957,15
+1980-1984,adjustment disorder,significant,0.8976,0.0541,0.8774,15
+1980-1984,adjustment disorder,trauma,0.4211,0.043,0.3825,15
+1980-1984,adjustment disorder,traumatic neurosis,0.296,0.0112,0.2899,15
+1980-1984,bereavement,measure,0.8343,0.0207,0.825,17
+1980-1984,bereavement,posttraumatic stress,0.403,0.0227,0.3912,32
+1980-1984,bereavement,posttraumatic stress disorder,0.1204,0.0068,0.117,100
+1980-1984,bereavement,psychological trauma,0.2373,0.013,0.2192,27
+1980-1984,bereavement,ptsd,0.1729,0.0176,0.1625,37
+1980-1984,bereavement,results,1.2063,0.0086,1.2065,111
+1980-1984,bereavement,significant,0.8949,0.0092,0.893,89
+1980-1984,bereavement,trauma,0.1471,0.0101,0.1445,190
+1980-1984,bereavement,traumatic neurosis,0.1313,0.0219,0.0958,18
+1980-1984,measure,posttraumatic stress,0.8479,0.0062,0.8457,17
+1980-1984,measure,posttraumatic stress disorder,0.8627,0.0213,0.8563,17
+1980-1984,measure,psychological trauma,0.773,0.0243,0.7656,17
+1980-1984,measure,ptsd,0.8694,0.0091,0.8676,17
+1980-1984,measure,results,1.3166,0.0655,1.3463,17
+1980-1984,measure,significant,0.9292,0.034,0.9215,17
+1980-1984,measure,trauma,0.7543,0.0309,0.7395,17
+1980-1984,measure,traumatic neurosis,0.8274,0.0069,0.828,17
+1980-1984,posttraumatic stress,posttraumatic stress disorder,0.3812,0.011,0.3733,32
+1980-1984,posttraumatic stress,psychological trauma,0.5107,0.0173,0.51,27
+1980-1984,posttraumatic stress,ptsd,0.3832,0.0103,0.3804,32
+1980-1984,posttraumatic stress,results,1.2915,0.0279,1.3112,32
+1980-1984,posttraumatic stress,significant,0.7517,0.046,0.7442,32
+1980-1984,posttraumatic stress,trauma,0.501,0.023,0.4827,32
+1980-1984,posttraumatic stress,traumatic neurosis,0.4193,0.0384,0.415,18
+1980-1984,posttraumatic stress disorder,psychological trauma,0.2884,0.0164,0.28,27
+1980-1984,posttraumatic stress disorder,ptsd,0.0567,0.0073,0.0481,37
+1980-1984,posttraumatic stress disorder,results,1.1503,0.0087,1.1509,100
+1980-1984,posttraumatic stress disorder,significant,0.9441,0.0037,0.9438,89
+1980-1984,posttraumatic stress disorder,trauma,0.231,0.0167,0.2219,100
+1980-1984,posttraumatic stress disorder,traumatic neurosis,0.104,0.0125,0.0842,18
+1980-1984,psychological trauma,ptsd,0.3574,0.0086,0.3555,27
+1980-1984,psychological trauma,results,1.1671,0.0675,1.1795,27
+1980-1984,psychological trauma,significant,0.9233,0.0402,0.9228,27
+1980-1984,psychological trauma,trauma,0.1784,0.028,0.1474,27
+1980-1984,psychological trauma,traumatic neurosis,0.2282,0.0285,0.2159,18
+1980-1984,ptsd,results,1.1421,0.0371,1.1451,37
+1980-1984,ptsd,significant,0.9471,0.0405,0.9472,37
+1980-1984,ptsd,trauma,0.3223,0.0318,0.2995,37
+1980-1984,ptsd,traumatic neurosis,0.1578,0.0088,0.1475,18
+1980-1984,results,significant,1.9524,0.0051,1.9556,89
+1980-1984,results,trauma,1.2085,0.0096,1.2098,111
+1980-1984,results,traumatic neurosis,1.1292,0.0751,1.1432,18
+1980-1984,significant,trauma,0.909,0.0108,0.9082,89
+1980-1984,significant,traumatic neurosis,0.9565,0.0629,0.9545,18
+1980-1984,trauma,traumatic neurosis,0.2172,0.0375,0.1704,18
+1985-1989,adjustment disorder,bereavement,0.3218,0.0116,0.3158,80
+1985-1989,adjustment disorder,measure,0.7461,0.0155,0.7462,33
+1985-1989,adjustment disorder,participants,0.6285,0.0249,0.6198,17
+1985-1989,adjustment disorder,posttraumatic stress,0.3669,0.0065,0.3668,71
+1985-1989,adjustment disorder,posttraumatic stress disorder,0.2291,0.0112,0.2229,80
+1985-1989,adjustment disorder,psychological trauma,0.3646,0.0168,0.3598,35
+1985-1989,adjustment disorder,ptsd,0.2479,0.0081,0.244,80
+1985-1989,adjustment disorder,rape trauma syndrome,0.3749,0.0406,0.3584,15
+1985-1989,adjustment disorder,results,1.2288,0.0306,1.2401,80
+1985-1989,adjustment disorder,significant,0.8394,0.0235,0.8373,80
+1985-1989,adjustment disorder,trauma,0.3432,0.0163,0.3346,80
+1985-1989,adjustment disorder,traumatic neurosis,0.3008,0.039,0.292,17
+1985-1989,adjustment disorder,traumatic stress,0.3849,0.0265,0.3809,31
+1985-1989,bereavement,measure,0.7114,0.0169,0.705,33
+1985-1989,bereavement,participants,0.6226,0.0269,0.6021,17
+1985-1989,bereavement,posttraumatic stress,0.2613,0.0134,0.254,71
+1985-1989,bereavement,posttraumatic stress disorder,0.1328,0.0048,0.13,250
+1985-1989,bereavement,psychological trauma,0.1698,0.0194,0.15,35
+1985-1989,bereavement,ptsd,0.1565,0.0049,0.1552,250
+1985-1989,bereavement,rape trauma syndrome,0.2313,0.0234,0.1901,15
+1985-1989,bereavement,results,1.254,0.0105,1.2535,250
+1985-1989,bereavement,significant,0.8343,0.007,0.8335,215
+1985-1989,bereavement,trauma,0.1287,0.0099,0.1242,250
+1985-1989,bereavement,traumatic neurosis,0.1902,0.0278,0.154,17
+1985-1989,bereavement,traumatic stress,0.1468,0.0179,0.1288,31
+1985-1989,measure,participants,0.8513,0.0231,0.85,17
+1985-1989,measure,posttraumatic stress,0.7786,0.0088,0.7756,33
+1985-1989,measure,posttraumatic stress disorder,0.7662,0.0181,0.7634,33
+1985-1989,measure,psychological trauma,0.7337,0.0053,0.734,33
+1985-1989,measure,ptsd,0.742,0.0167,0.735,33
+1985-1989,measure,rape trauma syndrome,0.7412,0.0289,0.7295,15
+1985-1989,measure,results,1.3238,0.0593,1.3503,33
+1985-1989,measure,significant,0.8633,0.0301,0.8549,33
+1985-1989,measure,trauma,0.6594,0.0206,0.6516,33
+1985-1989,measure,traumatic neurosis,0.711,0.0242,0.7042,17
+1985-1989,measure,traumatic stress,0.736,0.0072,0.7369,31
+1985-1989,participants,posttraumatic stress,0.7841,0.0275,0.7748,17
+1985-1989,participants,posttraumatic stress disorder,0.6167,0.0242,0.6081,17
+1985-1989,participants,psychological trauma,0.6336,0.0191,0.6209,17
+1985-1989,participants,ptsd,0.6195,0.0228,0.6075,17
+1985-1989,participants,rape trauma syndrome,0.6513,0.0186,0.6494,15
+1985-1989,participants,results,0.9848,0.0711,0.9903,17
+1985-1989,participants,significant,1.1267,0.0464,1.1352,17
+1985-1989,participants,trauma,0.62,0.0257,0.6013,17
+1985-1989,participants,traumatic neurosis,0.7014,0.0,0.7014,17
+1985-1989,participants,traumatic stress,0.6729,0.015,0.6666,17
+1985-1989,posttraumatic stress,posttraumatic stress disorder,0.2353,0.0105,0.2304,71
+1985-1989,posttraumatic stress,psychological trauma,0.3739,0.0306,0.3719,35
+1985-1989,posttraumatic stress,ptsd,0.2209,0.0109,0.2172,71
+1985-1989,posttraumatic stress,rape trauma syndrome,0.3483,0.0459,0.3331,15
+1985-1989,posttraumatic stress,results,1.3354,0.0243,1.3448,71
+1985-1989,posttraumatic stress,significant,0.7169,0.0304,0.7073,71
+1985-1989,posttraumatic stress,trauma,0.3337,0.0168,0.3282,71
+1985-1989,posttraumatic stress,traumatic neurosis,0.3063,0.0505,0.2938,17
+1985-1989,posttraumatic stress,traumatic stress,0.1941,0.0247,0.1819,31
+1985-1989,posttraumatic stress disorder,psychological trauma,0.1963,0.0139,0.1821,35
+1985-1989,posttraumatic stress disorder,ptsd,0.0412,0.0033,0.0394,250
+1985-1989,posttraumatic stress disorder,rape trauma syndrome,0.2062,0.022,0.1778,15
+1985-1989,posttraumatic stress disorder,results,1.196,0.0116,1.1969,250
+1985-1989,posttraumatic stress disorder,significant,0.8808,0.0059,0.88,215
+1985-1989,posttraumatic stress disorder,trauma,0.1958,0.0099,0.1905,250
+1985-1989,posttraumatic stress disorder,traumatic neurosis,0.1409,0.0168,0.1152,17
+1985-1989,posttraumatic stress disorder,traumatic stress,0.1456,0.0116,0.1299,31
+1985-1989,psychological trauma,ptsd,0.2406,0.0188,0.2299,35
+1985-1989,psychological trauma,rape trauma syndrome,0.2584,0.0301,0.2312,15
+1985-1989,psychological trauma,results,1.1607,0.0777,1.1917,35
+1985-1989,psychological trauma,significant,0.8886,0.0447,0.8903,35
+1985-1989,psychological trauma,trauma,0.1288,0.0242,0.1013,35
+1985-1989,psychological trauma,traumatic neurosis,0.1955,0.0213,0.176,17
+1985-1989,psychological trauma,traumatic stress,0.2531,0.0114,0.2509,31
+1985-1989,ptsd,rape trauma syndrome,0.2224,0.0199,0.1898,15
+1985-1989,ptsd,results,1.254,0.0091,1.255,250
+1985-1989,ptsd,significant,0.8253,0.0056,0.8252,215
+1985-1989,ptsd,trauma,0.2248,0.0107,0.2234,250
+1985-1989,ptsd,traumatic neurosis,0.1685,0.0173,0.1429,17
+1985-1989,ptsd,traumatic stress,0.1481,0.0113,0.1322,31
+1985-1989,rape trauma syndrome,results,1.1419,0.0968,1.1583,15
+1985-1989,rape trauma syndrome,significant,0.9325,0.0799,0.9235,15
+1985-1989,rape trauma syndrome,trauma,0.2987,0.0406,0.2485,15
+1985-1989,rape trauma syndrome,traumatic neurosis,0.154,0.0065,0.1514,15
+1985-1989,rape trauma syndrome,traumatic stress,0.2436,0.0219,0.2184,15
+1985-1989,results,significant,1.9706,0.0035,1.9735,215
+1985-1989,results,trauma,1.2577,0.0139,1.2569,250
+1985-1989,results,traumatic neurosis,1.1897,0.0941,1.2185,17
+1985-1989,results,traumatic stress,1.24,0.0549,1.2634,31
+1985-1989,significant,trauma,0.8404,0.007,0.8411,215
+1985-1989,significant,traumatic neurosis,0.872,0.06,0.8609,17
+1985-1989,significant,traumatic stress,0.8071,0.0548,0.8105,31
+1985-1989,trauma,traumatic neurosis,0.2378,0.042,0.2034,17
+1985-1989,trauma,traumatic stress,0.254,0.0299,0.223,31
+1985-1989,traumatic neurosis,traumatic stress,0.2211,0.0252,0.2026,17
+1990-1994,adjustment disorder,bereavement,0.2861,0.0127,0.2808,104
+1990-1994,adjustment disorder,measure,0.8553,0.0039,0.8552,95
+1990-1994,adjustment disorder,participants,0.68,0.0091,0.6777,63
+1990-1994,adjustment disorder,posttraumatic stress,0.3109,0.0072,0.3106,104
+1990-1994,adjustment disorder,posttraumatic stress disorder,0.1391,0.0087,0.1355,104
+1990-1994,adjustment disorder,psychological trauma,0.2856,0.0115,0.2832,72
+1990-1994,adjustment disorder,ptsd,0.1706,0.0085,0.1668,104
+1990-1994,adjustment disorder,results,1.1216,0.0226,1.1249,104
+1990-1994,adjustment disorder,significant,1.016,0.0241,1.0213,104
+1990-1994,adjustment disorder,trauma,0.2882,0.0125,0.2792,104
+1990-1994,adjustment disorder,traumatic stress,0.3255,0.0108,0.3238,74
+1990-1994,bereavement,measure,0.8544,0.009,0.8536,95
+1990-1994,bereavement,participants,0.6539,0.0127,0.6492,63
+1990-1994,bereavement,posttraumatic stress,0.1976,0.01,0.1927,118
+1990-1994,bereavement,posttraumatic stress disorder,0.1462,0.0079,0.1433,250
+1990-1994,bereavement,psychological trauma,0.1106,0.0141,0.1012,72
+1990-1994,bereavement,ptsd,0.1664,0.007,0.1639,250
+1990-1994,bereavement,results,1.1026,0.01,1.1046,250
+1990-1994,bereavement,significant,1.0473,0.0106,1.0489,250
+1990-1994,bereavement,trauma,0.1158,0.0108,0.1093,250
+1990-1994,bereavement,traumatic stress,0.1171,0.011,0.1069,74
+1990-1994,measure,participants,0.9607,0.0097,0.961,63
+1990-1994,measure,posttraumatic stress,0.8738,0.0033,0.8735,95
+1990-1994,measure,posttraumatic stress disorder,0.9118,0.0078,0.9112,95
+1990-1994,measure,psychological trauma,0.8561,0.0105,0.8545,72
+1990-1994,measure,ptsd,0.8995,0.0095,0.901,95
+1990-1994,measure,results,1.3105,0.0185,1.315,95
+1990-1994,measure,significant,1.1295,0.0168,1.136,95
+1990-1994,measure,trauma,0.8044,0.013,0.8016,95
+1990-1994,measure,traumatic stress,0.8834,0.0088,0.8846,74
+1990-1994,participants,posttraumatic stress,0.7945,0.0141,0.7937,63
+1990-1994,participants,posttraumatic stress disorder,0.6723,0.0117,0.6697,63
+1990-1994,participants,psychological trauma,0.6969,0.0047,0.696,63
+1990-1994,participants,ptsd,0.6548,0.0132,0.6504,63
+1990-1994,participants,results,0.871,0.036,0.8736,63
+1990-1994,participants,significant,1.3777,0.0262,1.3886,63
+1990-1994,participants,trauma,0.6512,0.0165,0.6451,63
+1990-1994,participants,traumatic stress,0.6609,0.0067,0.6597,63
+1990-1994,posttraumatic stress,posttraumatic stress disorder,0.1803,0.0103,0.1745,118
+1990-1994,posttraumatic stress,psychological trauma,0.2649,0.0192,0.2633,72
+1990-1994,posttraumatic stress,ptsd,0.1833,0.0113,0.178,118
+1990-1994,posttraumatic stress,results,1.2023,0.0139,1.2014,118
+1990-1994,posttraumatic stress,significant,0.9091,0.0283,0.9101,118
+1990-1994,posttraumatic stress,trauma,0.2654,0.018,0.2596,118
+1990-1994,posttraumatic stress,traumatic stress,0.1114,0.0095,0.105,74
+1990-1994,posttraumatic stress disorder,psychological trauma,0.1375,0.01,0.1309,72
+1990-1994,posttraumatic stress disorder,ptsd,0.0263,0.0037,0.0224,250
+1990-1994,posttraumatic stress disorder,results,1.0614,0.0093,1.0638,250
+1990-1994,posttraumatic stress disorder,significant,1.0579,0.0103,1.0586,250
+1990-1994,posttraumatic stress disorder,trauma,0.1831,0.012,0.1763,250
+1990-1994,posttraumatic stress disorder,traumatic stress,0.1401,0.01,0.1336,74
+1990-1994,psychological trauma,ptsd,0.1728,0.01,0.1661,72
+1990-1994,psychological trauma,results,1.0313,0.0344,1.0316,72
+1990-1994,psychological trauma,significant,1.1002,0.0323,1.1078,72
+1990-1994,psychological trauma,trauma,0.1175,0.0173,0.1016,72
+1990-1994,psychological trauma,traumatic stress,0.1527,0.0034,0.1526,72
+1990-1994,ptsd,results,1.0845,0.0094,1.0839,250
+1990-1994,ptsd,significant,1.0467,0.0117,1.0482,250
+1990-1994,ptsd,trauma,0.1962,0.0119,0.193,250
+1990-1994,ptsd,traumatic stress,0.1428,0.0088,0.136,74
+1990-1994,results,significant,1.8653,0.0057,1.868,250
+1990-1994,results,trauma,1.1159,0.0114,1.1149,250
+1990-1994,results,traumatic stress,1.112,0.0301,1.1169,74
+1990-1994,significant,trauma,1.0613,0.0116,1.0624,250
+1990-1994,significant,traumatic stress,1.0195,0.0361,1.0208,74
+1990-1994,trauma,traumatic stress,0.1687,0.0237,0.1528,74
+1995-1999,acute stress disorder,adjustment disorder,0.1892,0.0218,0.1834,43
+1995-1999,acute stress disorder,bereavement,0.2361,0.024,0.2151,43
+1995-1999,acute stress disorder,measure,1.0068,0.021,1.0088,43
+1995-1999,acute stress disorder,participants,0.8219,0.0264,0.8162,43
+1995-1999,acute stress disorder,posttraumatic stress,0.206,0.0275,0.1928,43
+1995-1999,acute stress disorder,posttraumatic stress disorder,0.0459,0.0059,0.0301,43
+1995-1999,acute stress disorder,psychological trauma,0.12,0.0128,0.1091,43
+1995-1999,acute stress disorder,ptsd,0.0828,0.0178,0.0668,43
+1995-1999,acute stress disorder,results,1.0963,0.028,1.1019,43
+1995-1999,acute stress disorder,significant,1.0383,0.0338,1.0403,43
+1995-1999,acute stress disorder,trauma,0.2323,0.0275,0.2082,43
+1995-1999,acute stress disorder,traumatic stress,0.157,0.0183,0.14,43
+1995-1999,adjustment disorder,bereavement,0.3693,0.0153,0.3684,125
+1995-1999,adjustment disorder,measure,0.9844,0.0079,0.9844,125
+1995-1999,adjustment disorder,participants,0.8084,0.0121,0.8069,125
+1995-1999,adjustment disorder,posttraumatic stress,0.3352,0.0145,0.3335,125
+1995-1999,adjustment disorder,posttraumatic stress disorder,0.1701,0.0114,0.1642,125
+1995-1999,adjustment disorder,psychological trauma,0.2967,0.0067,0.2948,104
+1995-1999,adjustment disorder,ptsd,0.2155,0.0128,0.2127,125
+1995-1999,adjustment disorder,results,1.1735,0.0118,1.1742,125
+1995-1999,adjustment disorder,significant,1.0008,0.0143,1.0013,125
+1995-1999,adjustment disorder,trauma,0.3423,0.0124,0.3354,125
+1995-1999,adjustment disorder,traumatic stress,0.3529,0.0027,0.353,125
+1995-1999,bereavement,measure,0.9543,0.0058,0.9542,203
+1995-1999,bereavement,participants,0.886,0.006,0.8857,246
+1995-1999,bereavement,posttraumatic stress,0.2025,0.0068,0.1996,250
+1995-1999,bereavement,posttraumatic stress disorder,0.1714,0.009,0.167,250
+1995-1999,bereavement,psychological trauma,0.0963,0.0096,0.093,104
+1995-1999,bereavement,ptsd,0.2214,0.0091,0.218,250
+1995-1999,bereavement,results,1.1713,0.0084,1.1716,250
+1995-1999,bereavement,significant,0.9667,0.0112,0.9672,250
+1995-1999,bereavement,trauma,0.0947,0.0087,0.0878,250
+1995-1999,bereavement,traumatic stress,0.096,0.0068,0.0908,129
+1995-1999,measure,participants,1.2929,0.0037,1.2935,203
+1995-1999,measure,posttraumatic stress,0.9639,0.0028,0.964,203
+1995-1999,measure,posttraumatic stress disorder,1.0222,0.0057,1.0216,203
+1995-1999,measure,psychological trauma,0.9847,0.0114,0.9838,104
+1995-1999,measure,ptsd,1.0032,0.0064,1.0027,203
+1995-1999,measure,results,1.417,0.0056,1.4174,203
+1995-1999,measure,significant,1.1508,0.0053,1.1512,203
+1995-1999,measure,trauma,0.91,0.0091,0.9093,203
+1995-1999,measure,traumatic stress,0.9661,0.0078,0.9654,129
+1995-1999,participants,posttraumatic stress,0.9788,0.0017,0.9783,246
+1995-1999,participants,posttraumatic stress disorder,0.8198,0.008,0.8195,246
+1995-1999,participants,psychological trauma,0.8594,0.0189,0.8578,104
+1995-1999,participants,ptsd,0.8299,0.008,0.8291,246
+1995-1999,participants,results,1.0107,0.004,1.0117,246
+1995-1999,participants,significant,1.5173,0.0031,1.5181,246
+1995-1999,participants,trauma,0.8746,0.0093,0.8754,246
+1995-1999,participants,traumatic stress,0.8916,0.0134,0.8884,129
+1995-1999,posttraumatic stress,posttraumatic stress disorder,0.1549,0.009,0.1538,250
+1995-1999,posttraumatic stress,psychological trauma,0.2138,0.0196,0.2114,104
+1995-1999,posttraumatic stress,ptsd,0.1514,0.0101,0.1482,250
+1995-1999,posttraumatic stress,results,1.2352,0.0044,1.2357,250
+1995-1999,posttraumatic stress,significant,0.8347,0.0076,0.8342,250
+1995-1999,posttraumatic stress,trauma,0.2229,0.0127,0.219,250
+1995-1999,posttraumatic stress,traumatic stress,0.1286,0.0093,0.1263,129
+1995-1999,posttraumatic stress disorder,psychological trauma,0.082,0.0069,0.0762,104
+1995-1999,posttraumatic stress disorder,ptsd,0.0653,0.0077,0.0601,250
+1995-1999,posttraumatic stress disorder,results,1.1251,0.0081,1.125,250
+1995-1999,posttraumatic stress disorder,significant,1.0095,0.0104,1.008,250
+1995-1999,posttraumatic stress disorder,trauma,0.1679,0.0116,0.1596,250
+1995-1999,posttraumatic stress disorder,traumatic stress,0.1164,0.0072,0.1129,129
+1995-1999,psychological trauma,ptsd,0.1506,0.0134,0.1446,104
+1995-1999,psychological trauma,results,1.095,0.0215,1.0952,104
+1995-1999,psychological trauma,significant,1.034,0.0219,1.0337,104
+1995-1999,psychological trauma,trauma,0.0948,0.0155,0.0826,104
+1995-1999,psychological trauma,traumatic stress,0.0861,0.006,0.085,104
+1995-1999,ptsd,results,1.1766,0.0097,1.1761,250
+1995-1999,ptsd,significant,0.9707,0.0103,0.9696,250
+1995-1999,ptsd,trauma,0.2008,0.0126,0.1959,250
+1995-1999,ptsd,traumatic stress,0.1467,0.0084,0.1424,129
+1995-1999,results,significant,1.5659,0.0051,1.5675,250
+1995-1999,results,trauma,1.1888,0.0102,1.1908,250
+1995-1999,results,traumatic stress,1.1527,0.0156,1.1552,129
+1995-1999,significant,trauma,0.9908,0.0119,0.9911,250
+1995-1999,significant,traumatic stress,0.9732,0.0189,0.9714,129
+1995-1999,trauma,traumatic stress,0.1125,0.0138,0.1025,129
+2000-2004,acute stress disorder,adjustment disorder,0.1145,0.0019,0.1143,115
+2000-2004,acute stress disorder,bereavement,0.2382,0.0134,0.2346,120
+2000-2004,acute stress disorder,collective trauma,0.4371,0.0161,0.4221,20
+2000-2004,acute stress disorder,complex ptsd,0.091,0.0114,0.07,19
+2000-2004,acute stress disorder,measure,1.0485,0.0137,1.0491,120
+2000-2004,acute stress disorder,participants,0.8479,0.0128,0.8454,120
+2000-2004,acute stress disorder,posttraumatic stress,0.1825,0.0159,0.1797,120
+2000-2004,acute stress disorder,posttraumatic stress disorder,0.0392,0.005,0.0336,120
+2000-2004,acute stress disorder,psychological trauma,0.1286,0.0065,0.1263,120
+2000-2004,acute stress disorder,ptsd,0.0584,0.0065,0.0536,120
+2000-2004,acute stress disorder,results,1.0928,0.0137,1.0937,120
+2000-2004,acute stress disorder,secondary traumatic stress,0.1246,0.0093,0.1196,43
+2000-2004,acute stress disorder,shell shock,0.2105,0.0178,0.1917,19
+2000-2004,acute stress disorder,significant,1.0085,0.0186,1.0073,120
+2000-2004,acute stress disorder,trauma,0.2096,0.0142,0.2033,120
+2000-2004,acute stress disorder,trauma informed,0.6485,0.0224,0.6416,19
+2000-2004,acute stress disorder,traumatic neurosis,0.2294,0.0172,0.2121,20
+2000-2004,acute stress disorder,traumatic stress,0.1725,0.0179,0.1664,120
+2000-2004,acute stress disorder,vicarious trauma,0.1752,0.0174,0.1588,22
+2000-2004,adjustment disorder,bereavement,0.3468,0.0153,0.342,115
+2000-2004,adjustment disorder,collective trauma,0.4956,0.0263,0.4836,20
+2000-2004,adjustment disorder,complex ptsd,0.1883,0.0332,0.1686,19
+2000-2004,adjustment disorder,measure,1.0437,0.011,1.0432,115
+2000-2004,adjustment disorder,participants,0.8318,0.0133,0.8336,115
+2000-2004,adjustment disorder,posttraumatic stress,0.2937,0.0155,0.2908,115
+2000-2004,adjustment disorder,posttraumatic stress disorder,0.1359,0.0107,0.1305,115
+2000-2004,adjustment disorder,psychological trauma,0.2638,0.0067,0.2634,115
+2000-2004,adjustment disorder,ptsd,0.171,0.0115,0.1644,115
+2000-2004,adjustment disorder,results,1.1544,0.0121,1.1553,115
+2000-2004,adjustment disorder,secondary traumatic stress,0.2816,0.0181,0.2748,43
+2000-2004,adjustment disorder,shell shock,0.284,0.0295,0.2656,19
+2000-2004,adjustment disorder,significant,0.9713,0.0172,0.9688,115
+2000-2004,adjustment disorder,trauma,0.3104,0.0113,0.3025,115
+2000-2004,adjustment disorder,trauma informed,0.7216,0.0226,0.7123,19
+2000-2004,adjustment disorder,traumatic neurosis,0.3284,0.0311,0.3116,20
+2000-2004,adjustment disorder,traumatic stress,0.3246,0.0165,0.3179,115
+2000-2004,adjustment disorder,vicarious trauma,0.3339,0.0295,0.325,22
+2000-2004,bereavement,collective trauma,0.2633,0.0255,0.2281,20
+2000-2004,bereavement,complex ptsd,0.2497,0.042,0.2076,19
+2000-2004,bereavement,measure,1.02,0.0057,1.0191,250
+2000-2004,bereavement,participants,0.9069,0.0094,0.9052,250
+2000-2004,bereavement,posttraumatic stress,0.2305,0.0119,0.2285,250
+2000-2004,bereavement,posttraumatic stress disorder,0.1853,0.0098,0.181,250
+2000-2004,bereavement,psychological trauma,0.1042,0.009,0.1014,190
+2000-2004,bereavement,ptsd,0.2149,0.0083,0.2118,250
+2000-2004,bereavement,results,1.1242,0.0083,1.1245,250
+2000-2004,bereavement,secondary traumatic stress,0.1591,0.0151,0.1426,43
+2000-2004,bereavement,shell shock,0.2309,0.0297,0.1929,19
+2000-2004,bereavement,significant,0.955,0.0108,0.9555,250
+2000-2004,bereavement,trauma,0.0781,0.0089,0.0714,250
+2000-2004,bereavement,trauma informed,0.4194,0.0576,0.3945,19
+2000-2004,bereavement,traumatic neurosis,0.2266,0.0291,0.1947,20
+2000-2004,bereavement,traumatic stress,0.0996,0.0057,0.097,250
+2000-2004,bereavement,vicarious trauma,0.1736,0.0254,0.136,22
+2000-2004,collective trauma,complex ptsd,0.3407,0.0128,0.3371,19
+2000-2004,collective trauma,measure,0.8995,0.0433,0.8953,20
+2000-2004,collective trauma,participants,1.0308,0.0494,1.0298,20
+2000-2004,collective trauma,posttraumatic stress,0.4835,0.0485,0.4606,20
+2000-2004,collective trauma,posttraumatic stress disorder,0.3876,0.0237,0.3657,20
+2000-2004,collective trauma,psychological trauma,0.2707,0.0215,0.2433,20
+2000-2004,collective trauma,ptsd,0.4412,0.03,0.4186,20
+2000-2004,collective trauma,results,1.1122,0.0387,1.1218,20
+2000-2004,collective trauma,secondary traumatic stress,0.3213,0.0195,0.3104,20
+2000-2004,collective trauma,shell shock,0.2627,0.0128,0.2606,19
+2000-2004,collective trauma,significant,0.9697,0.0512,0.9658,20
+2000-2004,collective trauma,trauma,0.2516,0.031,0.2088,20
+2000-2004,collective trauma,trauma informed,0.5291,0.0072,0.5272,19
+2000-2004,collective trauma,traumatic neurosis,0.197,0.0,0.197,20
+2000-2004,collective trauma,traumatic stress,0.3465,0.0365,0.31,20
+2000-2004,collective trauma,vicarious trauma,0.2835,0.0063,0.2809,20
+2000-2004,complex ptsd,measure,1.0661,0.0412,1.0747,19
+2000-2004,complex ptsd,participants,0.8355,0.0456,0.8216,19
+2000-2004,complex ptsd,posttraumatic stress,0.2432,0.0402,0.218,19
+2000-2004,complex ptsd,posttraumatic stress disorder,0.0914,0.0132,0.0606,19
+2000-2004,complex ptsd,psychological trauma,0.1386,0.0218,0.1036,19
+2000-2004,complex ptsd,ptsd,0.1154,0.0215,0.0859,19
+2000-2004,complex ptsd,results,1.081,0.0445,1.0914,19
+2000-2004,complex ptsd,secondary traumatic stress,0.1222,0.0142,0.1073,19
+2000-2004,complex ptsd,shell shock,0.1558,0.0,0.1558,19
+2000-2004,complex ptsd,significant,1.0026,0.0508,1.006,19
+2000-2004,complex ptsd,trauma,0.2349,0.0428,0.1937,19
+2000-2004,complex ptsd,trauma informed,0.5809,0.0,0.5809,19
+2000-2004,complex ptsd,traumatic neurosis,0.1641,0.0074,0.1624,19
+2000-2004,complex ptsd,traumatic stress,0.2097,0.0473,0.1637,19
+2000-2004,complex ptsd,vicarious trauma,0.127,0.0094,0.1218,19
+2000-2004,measure,participants,1.4087,0.0047,1.4092,250
+2000-2004,measure,posttraumatic stress,1.0024,0.0053,1.0027,250
+2000-2004,measure,posttraumatic stress disorder,1.0773,0.0077,1.0784,250
+2000-2004,measure,psychological trauma,1.0619,0.0075,1.0614,190
+2000-2004,measure,ptsd,1.0646,0.0078,1.0648,250
+2000-2004,measure,results,1.4653,0.0051,1.4658,250
+2000-2004,measure,secondary traumatic stress,1.03,0.023,1.033,43
+2000-2004,measure,shell shock,1.0811,0.0472,1.0951,19
+2000-2004,measure,significant,1.1802,0.0048,1.1809,250
+2000-2004,measure,trauma,0.9797,0.0094,0.9797,250
+2000-2004,measure,trauma informed,0.9501,0.0306,0.9468,19
+2000-2004,measure,traumatic neurosis,0.9888,0.0363,0.9953,20
+2000-2004,measure,traumatic stress,1.0368,0.005,1.0369,250
+2000-2004,measure,vicarious trauma,1.0696,0.0346,1.0812,22
+2000-2004,participants,posttraumatic stress,0.9909,0.0085,0.9913,250
+2000-2004,participants,posttraumatic stress disorder,0.8218,0.0109,0.8202,250
+2000-2004,participants,psychological trauma,0.8686,0.0106,0.8669,190
+2000-2004,participants,ptsd,0.8263,0.0112,0.8266,250
+2000-2004,participants,results,1.0048,0.008,1.004,250
+2000-2004,participants,secondary traumatic stress,0.939,0.0334,0.9383,43
+2000-2004,participants,shell shock,0.82,0.0423,0.8042,19
+2000-2004,participants,significant,1.4917,0.0042,1.4936,250
+2000-2004,participants,trauma,0.9039,0.0118,0.9024,250
+2000-2004,participants,trauma informed,1.1198,0.0336,1.1287,19
+2000-2004,participants,traumatic neurosis,0.9128,0.0477,0.9135,20
+2000-2004,participants,traumatic stress,0.9108,0.007,0.9121,250
+2000-2004,participants,vicarious trauma,0.8989,0.0464,0.8988,22
+2000-2004,posttraumatic stress,posttraumatic stress disorder,0.1613,0.0128,0.1583,250
+2000-2004,posttraumatic stress,psychological trauma,0.2033,0.0136,0.2,190
+2000-2004,posttraumatic stress,ptsd,0.1355,0.0134,0.1314,250
+2000-2004,posttraumatic stress,results,1.2076,0.0059,1.2076,250
+2000-2004,posttraumatic stress,secondary traumatic stress,0.1451,0.0236,0.1263,43
+2000-2004,posttraumatic stress,shell shock,0.32,0.0462,0.2869,19
+2000-2004,posttraumatic stress,significant,0.8197,0.0113,0.8211,250
+2000-2004,posttraumatic stress,trauma,0.2177,0.0127,0.2115,250
+2000-2004,posttraumatic stress,trauma informed,0.484,0.0247,0.4631,19
+2000-2004,posttraumatic stress,traumatic neurosis,0.3515,0.051,0.3269,20
+2000-2004,posttraumatic stress,traumatic stress,0.1128,0.0082,0.11,250
+2000-2004,posttraumatic stress,vicarious trauma,0.2508,0.0488,0.2185,22
+2000-2004,posttraumatic stress disorder,psychological trauma,0.0789,0.0063,0.0756,190
+2000-2004,posttraumatic stress disorder,ptsd,0.0309,0.0048,0.0269,250
+2000-2004,posttraumatic stress disorder,results,1.0993,0.0078,1.0999,250
+2000-2004,posttraumatic stress disorder,secondary traumatic stress,0.1212,0.0151,0.1082,43
+2000-2004,posttraumatic stress disorder,shell shock,0.1809,0.0161,0.1525,19
+2000-2004,posttraumatic stress disorder,significant,0.9966,0.0101,0.9961,250
+2000-2004,posttraumatic stress disorder,trauma,0.1623,0.0108,0.1553,250
+2000-2004,posttraumatic stress disorder,trauma informed,0.6269,0.0309,0.6136,19
+2000-2004,posttraumatic stress disorder,traumatic neurosis,0.2262,0.0209,0.197,20
+2000-2004,posttraumatic stress disorder,traumatic stress,0.1236,0.0093,0.121,250
+2000-2004,posttraumatic stress disorder,vicarious trauma,0.1705,0.0251,0.1439,22
+2000-2004,psychological trauma,ptsd,0.1133,0.0078,0.1103,190
+2000-2004,psychological trauma,results,1.065,0.0082,1.0666,190
+2000-2004,psychological trauma,secondary traumatic stress,0.0956,0.0098,0.083,43
+2000-2004,psychological trauma,shell shock,0.1833,0.0204,0.1519,19
+2000-2004,psychological trauma,significant,0.998,0.0133,1.0005,190
+2000-2004,psychological trauma,trauma,0.0876,0.0085,0.0812,190
+2000-2004,psychological trauma,trauma informed,0.5858,0.0262,0.572,19
+2000-2004,psychological trauma,traumatic neurosis,0.1845,0.022,0.1525,20
+2000-2004,psychological trauma,traumatic stress,0.0942,0.0094,0.092,190
+2000-2004,psychological trauma,vicarious trauma,0.1166,0.019,0.0859,22
+2000-2004,ptsd,results,1.1387,0.0086,1.1393,250
+2000-2004,ptsd,secondary traumatic stress,0.1392,0.0127,0.1253,43
+2000-2004,ptsd,shell shock,0.2241,0.0242,0.197,19
+2000-2004,ptsd,significant,0.9705,0.0111,0.9685,250
+2000-2004,ptsd,trauma,0.1765,0.0098,0.1706,250
+2000-2004,ptsd,trauma informed,0.6101,0.0329,0.5948,19
+2000-2004,ptsd,traumatic neurosis,0.2595,0.0296,0.2313,20
+2000-2004,ptsd,traumatic stress,0.1249,0.0077,0.1227,250
+2000-2004,ptsd,vicarious trauma,0.2028,0.0235,0.1793,22
+2000-2004,results,secondary traumatic stress,1.0829,0.0264,1.0868,43
+2000-2004,results,shell shock,1.0477,0.0392,1.0515,19
+2000-2004,results,significant,1.4367,0.0053,1.4372,250
+2000-2004,results,trauma,1.1491,0.0089,1.1502,250
+2000-2004,results,trauma informed,1.1921,0.0266,1.2028,19
+2000-2004,results,traumatic neurosis,1.0445,0.043,1.0486,20
+2000-2004,results,traumatic stress,1.1323,0.0065,1.1329,250
+2000-2004,results,vicarious trauma,1.03,0.0434,1.0336,22
+2000-2004,secondary traumatic stress,shell shock,0.2015,0.0132,0.1867,19
+2000-2004,secondary traumatic stress,significant,0.9493,0.0416,0.9463,43
+2000-2004,secondary traumatic stress,trauma,0.1867,0.0264,0.1579,43
+2000-2004,secondary traumatic stress,trauma informed,0.5061,0.0248,0.4974,19
+2000-2004,secondary traumatic stress,traumatic neurosis,0.1858,0.0184,0.1732,20
+2000-2004,secondary traumatic stress,traumatic stress,0.1172,0.022,0.0973,43
+2000-2004,secondary traumatic stress,vicarious trauma,0.069,0.0132,0.0542,22
+2000-2004,shell shock,significant,1.0313,0.0582,1.0373,19
+2000-2004,shell shock,trauma,0.2204,0.0288,0.1681,19
+2000-2004,shell shock,trauma informed,0.5881,0.0,0.5881,19
+2000-2004,shell shock,traumatic neurosis,0.1191,0.0047,0.1175,19
+2000-2004,shell shock,traumatic stress,0.2247,0.0403,0.1844,19
+2000-2004,shell shock,vicarious trauma,0.1768,0.0069,0.1732,19
+2000-2004,significant,trauma,0.9724,0.0109,0.9731,250
+2000-2004,significant,trauma informed,0.7739,0.0508,0.7567,19
+2000-2004,significant,traumatic neurosis,1.032,0.0494,1.0384,20
+2000-2004,significant,traumatic stress,0.9239,0.0095,0.9249,250
+2000-2004,significant,vicarious trauma,0.9882,0.0499,0.9825,22
+2000-2004,trauma,trauma informed,0.5132,0.0478,0.482,19
+2000-2004,trauma,traumatic neurosis,0.2175,0.0329,0.1776,20
+2000-2004,trauma,traumatic stress,0.1001,0.0086,0.0945,250
+2000-2004,trauma,vicarious trauma,0.2145,0.0383,0.1718,22
+2000-2004,trauma informed,traumatic neurosis,0.5717,0.0046,0.5716,19
+2000-2004,trauma informed,traumatic stress,0.4319,0.0439,0.3985,19
+2000-2004,trauma informed,vicarious trauma,0.4675,0.0193,0.4671,19
+2000-2004,traumatic neurosis,traumatic stress,0.247,0.0362,0.2048,20
+2000-2004,traumatic neurosis,vicarious trauma,0.148,0.0042,0.1445,20
+2000-2004,traumatic stress,vicarious trauma,0.1636,0.0377,0.119,22
+2005-2009,acute stress disorder,adjustment disorder,0.1299,0.0005,0.1298,179
+2005-2009,acute stress disorder,bereavement,0.226,0.0096,0.2214,180
+2005-2009,acute stress disorder,collective trauma,0.2915,0.0152,0.2835,39
+2005-2009,acute stress disorder,complex posttraumatic stress disorder,0.0793,0.0143,0.0665,35
+2005-2009,acute stress disorder,complex ptsd,0.0795,0.0116,0.0708,47
+2005-2009,acute stress disorder,intergenerational trauma,0.2577,0.0269,0.2301,16
+2005-2009,acute stress disorder,measure,1.042,0.0107,1.0411,180
+2005-2009,acute stress disorder,participants,0.8562,0.0111,0.8567,180
+2005-2009,acute stress disorder,posttraumatic stress,0.158,0.0126,0.1537,180
+2005-2009,acute stress disorder,posttraumatic stress disorder,0.0371,0.0041,0.0331,180
+2005-2009,acute stress disorder,psychological trauma,0.1258,0.0046,0.1236,180
+2005-2009,acute stress disorder,ptsd,0.053,0.0054,0.0499,180
+2005-2009,acute stress disorder,results,1.1211,0.007,1.1227,180
+2005-2009,acute stress disorder,secondary traumatic stress,0.1314,0.009,0.1263,63
+2005-2009,acute stress disorder,shell shock,0.1933,0.0136,0.184,31
+2005-2009,acute stress disorder,significant,0.9721,0.0119,0.9734,180
+2005-2009,acute stress disorder,trauma,0.1993,0.012,0.1925,180
+2005-2009,acute stress disorder,trauma informed,0.5831,0.0114,0.5816,66
+2005-2009,acute stress disorder,traumatic neurosis,0.246,0.0249,0.2165,15
+2005-2009,acute stress disorder,traumatic stress,0.1419,0.0102,0.138,180
+2005-2009,acute stress disorder,vicarious trauma,0.1825,0.0148,0.1697,30
+2005-2009,adjustment disorder,bereavement,0.3158,0.0107,0.3135,179
+2005-2009,adjustment disorder,collective trauma,0.3947,0.0222,0.3853,39
+2005-2009,adjustment disorder,complex posttraumatic stress disorder,0.1687,0.0223,0.1553,35
+2005-2009,adjustment disorder,complex ptsd,0.1538,0.0189,0.1422,47
+2005-2009,adjustment disorder,intergenerational trauma,0.3914,0.0404,0.3676,16
+2005-2009,adjustment disorder,measure,1.0405,0.0088,1.0418,179
+2005-2009,adjustment disorder,participants,0.8322,0.0103,0.8317,179
+2005-2009,adjustment disorder,posttraumatic stress,0.2706,0.014,0.2653,179
+2005-2009,adjustment disorder,posttraumatic stress disorder,0.1122,0.0088,0.1091,179
+2005-2009,adjustment disorder,psychological trauma,0.2371,0.0042,0.2355,179
+2005-2009,adjustment disorder,ptsd,0.1471,0.0073,0.1436,179
+2005-2009,adjustment disorder,results,1.1462,0.007,1.1464,179
+2005-2009,adjustment disorder,secondary traumatic stress,0.2866,0.0151,0.2806,63
+2005-2009,adjustment disorder,shell shock,0.2622,0.0246,0.2497,31
+2005-2009,adjustment disorder,significant,0.9725,0.0096,0.9725,179
+2005-2009,adjustment disorder,trauma,0.2825,0.0105,0.2763,179
+2005-2009,adjustment disorder,trauma informed,0.6715,0.0095,0.6704,66
+2005-2009,adjustment disorder,traumatic neurosis,0.2755,0.0369,0.2451,15
+2005-2009,adjustment disorder,traumatic stress,0.2813,0.0108,0.2786,179
+2005-2009,adjustment disorder,vicarious trauma,0.3001,0.0255,0.289,30
+2005-2009,bereavement,collective trauma,0.155,0.0209,0.1383,39
+2005-2009,bereavement,complex posttraumatic stress disorder,0.2165,0.0243,0.1963,35
+2005-2009,bereavement,complex ptsd,0.2303,0.0211,0.2165,47
+2005-2009,bereavement,intergenerational trauma,0.175,0.0329,0.1218,16
+2005-2009,bereavement,measure,1.0153,0.0077,1.015,250
+2005-2009,bereavement,participants,0.9144,0.0111,0.913,250
+2005-2009,bereavement,posttraumatic stress,0.2336,0.0129,0.2285,250
+2005-2009,bereavement,posttraumatic stress disorder,0.1936,0.0099,0.1872,250
+2005-2009,bereavement,psychological trauma,0.0994,0.0083,0.0953,250
+2005-2009,bereavement,ptsd,0.2114,0.0096,0.2069,250
+2005-2009,bereavement,results,1.1549,0.008,1.1545,250
+2005-2009,bereavement,secondary traumatic stress,0.1508,0.0131,0.1379,63
+2005-2009,bereavement,shell shock,0.2005,0.0206,0.1812,31
+2005-2009,bereavement,significant,0.9181,0.011,0.9183,250
+2005-2009,bereavement,trauma,0.0848,0.0074,0.0767,250
+2005-2009,bereavement,trauma informed,0.3836,0.0321,0.3729,66
+2005-2009,bereavement,traumatic neurosis,0.2559,0.0421,0.2142,15
+2005-2009,bereavement,traumatic stress,0.1046,0.0073,0.1,250
+2005-2009,bereavement,vicarious trauma,0.1861,0.0299,0.1574,30
+2005-2009,collective trauma,complex posttraumatic stress disorder,0.2051,0.0075,0.2042,35
+2005-2009,collective trauma,complex ptsd,0.2195,0.0062,0.2172,39
+2005-2009,collective trauma,intergenerational trauma,0.1218,0.0226,0.0975,16
+2005-2009,collective trauma,measure,1.0004,0.0313,1.0053,39
+2005-2009,collective trauma,participants,0.8981,0.0422,0.8939,39
+2005-2009,collective trauma,posttraumatic stress,0.3781,0.0366,0.3724,39
+2005-2009,collective trauma,posttraumatic stress disorder,0.2576,0.0227,0.2468,39
+2005-2009,collective trauma,psychological trauma,0.1064,0.0104,0.0924,39
+2005-2009,collective trauma,ptsd,0.2893,0.0216,0.2811,39
+2005-2009,collective trauma,results,1.0855,0.0294,1.0939,39
+2005-2009,collective trauma,secondary traumatic stress,0.1832,0.0119,0.1776,39
+2005-2009,collective trauma,shell shock,0.1584,0.0094,0.1532,31
+2005-2009,collective trauma,significant,0.9994,0.04,1.0007,39
+2005-2009,collective trauma,trauma,0.1593,0.0293,0.1335,39
+2005-2009,collective trauma,trauma informed,0.5695,0.011,0.566,39
+2005-2009,collective trauma,traumatic neurosis,0.1796,0.0212,0.151,15
+2005-2009,collective trauma,traumatic stress,0.2147,0.0284,0.1888,39
+2005-2009,collective trauma,vicarious trauma,0.1758,0.0121,0.1717,30
+2005-2009,complex posttraumatic stress disorder,complex ptsd,0.0314,0.0023,0.0267,35
+2005-2009,complex posttraumatic stress disorder,intergenerational trauma,0.1886,0.0159,0.1735,16
+2005-2009,complex posttraumatic stress disorder,measure,1.0654,0.0341,1.0698,35
+2005-2009,complex posttraumatic stress disorder,participants,0.8129,0.0366,0.8137,35
+2005-2009,complex posttraumatic stress disorder,posttraumatic stress,0.2313,0.0423,0.2123,35
+2005-2009,complex posttraumatic stress disorder,posttraumatic stress disorder,0.0629,0.0093,0.0455,35
+2005-2009,complex posttraumatic stress disorder,psychological trauma,0.1152,0.0158,0.0962,35
+2005-2009,complex posttraumatic stress disorder,ptsd,0.0934,0.0163,0.076,35
+2005-2009,complex posttraumatic stress disorder,results,1.0881,0.0271,1.0912,35
+2005-2009,complex posttraumatic stress disorder,secondary traumatic stress,0.1209,0.01,0.1144,35
+2005-2009,complex posttraumatic stress disorder,shell shock,0.1402,0.0044,0.1384,31
+2005-2009,complex posttraumatic stress disorder,significant,1.014,0.0378,1.0141,35
+2005-2009,complex posttraumatic stress disorder,trauma,0.2158,0.0242,0.185,35
+2005-2009,complex posttraumatic stress disorder,trauma informed,0.5815,0.0154,0.5769,35
+2005-2009,complex posttraumatic stress disorder,traumatic neurosis,0.1552,0.0183,0.133,15
+2005-2009,complex posttraumatic stress disorder,traumatic stress,0.168,0.0337,0.1426,35
+2005-2009,complex posttraumatic stress disorder,vicarious trauma,0.1472,0.0079,0.1441,30
+2005-2009,complex ptsd,intergenerational trauma,0.2075,0.022,0.1841,16
+2005-2009,complex ptsd,measure,1.0889,0.0301,1.0915,47
+2005-2009,complex ptsd,participants,0.7859,0.028,0.7817,47
+2005-2009,complex ptsd,posttraumatic stress,0.2314,0.0306,0.2227,47
+2005-2009,complex ptsd,posttraumatic stress disorder,0.0563,0.0087,0.043,47
+2005-2009,complex ptsd,psychological trauma,0.1161,0.0129,0.1033,47
+2005-2009,complex ptsd,ptsd,0.0717,0.0129,0.0619,47
+2005-2009,complex ptsd,results,1.0875,0.0233,1.0888,47
+2005-2009,complex ptsd,secondary traumatic stress,0.1349,0.0062,0.1332,47
+2005-2009,complex ptsd,shell shock,0.1485,0.0081,0.1421,31
+2005-2009,complex ptsd,significant,1.0245,0.0283,1.0244,47
+2005-2009,complex ptsd,trauma,0.2146,0.0232,0.1967,47
+2005-2009,complex ptsd,trauma informed,0.578,0.0104,0.5761,47
+2005-2009,complex ptsd,traumatic neurosis,0.1584,0.0171,0.133,15
+2005-2009,complex ptsd,traumatic stress,0.1641,0.0238,0.1477,47
+2005-2009,complex ptsd,vicarious trauma,0.1697,0.0104,0.1635,30
+2005-2009,intergenerational trauma,measure,1.0816,0.0546,1.0968,16
+2005-2009,intergenerational trauma,participants,0.8703,0.052,0.8525,16
+2005-2009,intergenerational trauma,posttraumatic stress,0.3704,0.0614,0.3422,16
+2005-2009,intergenerational trauma,posttraumatic stress disorder,0.2373,0.0282,0.2036,16
+2005-2009,intergenerational trauma,psychological trauma,0.1364,0.0222,0.0979,16
+2005-2009,intergenerational trauma,ptsd,0.273,0.0387,0.2474,16
+2005-2009,intergenerational trauma,results,1.0333,0.0443,1.041,16
+2005-2009,intergenerational trauma,secondary traumatic stress,0.1532,0.0232,0.126,16
+2005-2009,intergenerational trauma,shell shock,0.1687,0.0195,0.1509,16
+2005-2009,intergenerational trauma,significant,0.9995,0.0573,1.0018,16
+2005-2009,intergenerational trauma,trauma,0.2261,0.0416,0.1713,16
+2005-2009,intergenerational trauma,trauma informed,0.5117,0.0249,0.4986,16
+2005-2009,intergenerational trauma,traumatic neurosis,0.183,0.0054,0.1813,15
+2005-2009,intergenerational trauma,traumatic stress,0.2303,0.0429,0.1728,16
+2005-2009,intergenerational trauma,vicarious trauma,0.1379,0.0135,0.1253,16
+2005-2009,measure,participants,1.3581,0.0062,1.3594,250
+2005-2009,measure,posttraumatic stress,1.0078,0.0064,1.0074,250
+2005-2009,measure,posttraumatic stress disorder,1.0755,0.0071,1.0747,250
+2005-2009,measure,psychological trauma,1.053,0.0059,1.0517,250
+2005-2009,measure,ptsd,1.0661,0.0073,1.0646,250
+2005-2009,measure,results,1.4731,0.0045,1.4748,250
+2005-2009,measure,secondary traumatic stress,1.0457,0.0274,1.0452,63
+2005-2009,measure,shell shock,1.1081,0.0386,1.1132,31
+2005-2009,measure,significant,1.165,0.0057,1.1653,250
+2005-2009,measure,trauma,0.9685,0.0107,0.9652,250
+2005-2009,measure,trauma informed,0.9554,0.0219,0.9554,66
+2005-2009,measure,traumatic neurosis,1.08,0.0566,1.0869,15
+2005-2009,measure,traumatic stress,1.0125,0.007,1.0108,250
+2005-2009,measure,vicarious trauma,1.0496,0.0377,1.0551,30
+2005-2009,participants,posttraumatic stress,0.9941,0.0093,0.9929,250
+2005-2009,participants,posttraumatic stress disorder,0.8338,0.0118,0.8328,250
+2005-2009,participants,psychological trauma,0.8693,0.0075,0.8684,250
+2005-2009,participants,ptsd,0.8386,0.0111,0.8384,250
+2005-2009,participants,results,1.0582,0.0103,1.0587,250
+2005-2009,participants,secondary traumatic stress,0.9076,0.0226,0.9092,63
+2005-2009,participants,shell shock,0.859,0.0419,0.8495,31
+2005-2009,participants,significant,1.4912,0.0065,1.4921,250
+2005-2009,participants,trauma,0.9183,0.0102,0.9182,250
+2005-2009,participants,trauma informed,1.0822,0.0216,1.0845,66
+2005-2009,participants,traumatic neurosis,0.8784,0.0599,0.8638,15
+2005-2009,participants,traumatic stress,0.9223,0.008,0.9241,250
+2005-2009,participants,vicarious trauma,0.949,0.0394,0.9479,30
+2005-2009,posttraumatic stress,posttraumatic stress disorder,0.1426,0.014,0.1392,250
+2005-2009,posttraumatic stress,psychological trauma,0.223,0.0142,0.2224,250
+2005-2009,posttraumatic stress,ptsd,0.1106,0.0117,0.1083,250
+2005-2009,posttraumatic stress,results,1.2058,0.0065,1.2062,250
+2005-2009,posttraumatic stress,secondary traumatic stress,0.1769,0.0263,0.1672,63
+2005-2009,posttraumatic stress,shell shock,0.2989,0.0396,0.2824,31
+2005-2009,posttraumatic stress,significant,0.8095,0.0109,0.8067,250
+2005-2009,posttraumatic stress,trauma,0.2188,0.0136,0.2113,250
+2005-2009,posttraumatic stress,trauma informed,0.4876,0.0126,0.4802,66
+2005-2009,posttraumatic stress,traumatic neurosis,0.3622,0.0532,0.3339,15
+2005-2009,posttraumatic stress,traumatic stress,0.1052,0.0108,0.1006,250
+2005-2009,posttraumatic stress,vicarious trauma,0.2802,0.0445,0.2682,30
+2005-2009,posttraumatic stress disorder,psychological trauma,0.0863,0.0054,0.0828,250
+2005-2009,posttraumatic stress disorder,ptsd,0.0263,0.0052,0.0212,250
+2005-2009,posttraumatic stress disorder,results,1.1211,0.0085,1.1191,250
+2005-2009,posttraumatic stress disorder,secondary traumatic stress,0.1304,0.012,0.1214,63
+2005-2009,posttraumatic stress disorder,shell shock,0.1741,0.0169,0.1572,31
+2005-2009,posttraumatic stress disorder,significant,0.9666,0.0102,0.9666,250
+2005-2009,posttraumatic stress disorder,trauma,0.1645,0.0095,0.1597,250
+2005-2009,posttraumatic stress disorder,trauma informed,0.5929,0.0168,0.5876,66
+2005-2009,posttraumatic stress disorder,traumatic neurosis,0.2144,0.0224,0.1816,15
+2005-2009,posttraumatic stress disorder,traumatic stress,0.1116,0.0096,0.1076,250
+2005-2009,posttraumatic stress disorder,vicarious trauma,0.1932,0.0201,0.1736,30
+2005-2009,psychological trauma,ptsd,0.1159,0.0079,0.1137,250
+2005-2009,psychological trauma,results,1.0916,0.0056,1.0929,250
+2005-2009,psychological trauma,secondary traumatic stress,0.1159,0.0117,0.1074,63
+2005-2009,psychological trauma,shell shock,0.137,0.0142,0.1158,31
+2005-2009,psychological trauma,significant,0.9809,0.0071,0.9811,250
+2005-2009,psychological trauma,trauma,0.0724,0.0076,0.0682,250
+2005-2009,psychological trauma,trauma informed,0.5474,0.0184,0.541,66
+2005-2009,psychological trauma,traumatic neurosis,0.1851,0.0255,0.1441,15
+2005-2009,psychological trauma,traumatic stress,0.0812,0.008,0.0793,250
+2005-2009,psychological trauma,vicarious trauma,0.1511,0.0171,0.1311,30
+2005-2009,ptsd,results,1.1529,0.0073,1.1541,250
+2005-2009,ptsd,secondary traumatic stress,0.1497,0.0117,0.1411,63
+2005-2009,ptsd,shell shock,0.2085,0.0199,0.1933,31
+2005-2009,ptsd,significant,0.936,0.0113,0.9383,250
+2005-2009,ptsd,trauma,0.1716,0.0103,0.1671,250
+2005-2009,ptsd,trauma informed,0.557,0.0169,0.5532,66
+2005-2009,ptsd,traumatic neurosis,0.2501,0.0289,0.2203,15
+2005-2009,ptsd,traumatic stress,0.1022,0.0078,0.0993,250
+2005-2009,ptsd,vicarious trauma,0.2351,0.0212,0.2201,30
+2005-2009,results,secondary traumatic stress,1.0658,0.0209,1.0697,63
+2005-2009,results,shell shock,1.0285,0.0281,1.0333,31
+2005-2009,results,significant,1.4424,0.0048,1.4434,250
+2005-2009,results,trauma,1.1774,0.0072,1.1794,250
+2005-2009,results,trauma informed,1.2469,0.0116,1.2509,66
+2005-2009,results,traumatic neurosis,1.0325,0.0498,1.0488,15
+2005-2009,results,traumatic stress,1.1706,0.0072,1.1725,250
+2005-2009,results,vicarious trauma,1.0357,0.0286,1.0353,30
+2005-2009,secondary traumatic stress,shell shock,0.1651,0.011,0.1574,31
+2005-2009,secondary traumatic stress,significant,0.9753,0.0286,0.9729,63
+2005-2009,secondary traumatic stress,trauma,0.1844,0.0213,0.1703,63
+2005-2009,secondary traumatic stress,trauma informed,0.4904,0.0036,0.4902,63
+2005-2009,secondary traumatic stress,traumatic neurosis,0.2247,0.0214,0.1975,15
+2005-2009,secondary traumatic stress,traumatic stress,0.1201,0.0167,0.1062,63
+2005-2009,secondary traumatic stress,vicarious trauma,0.0722,0.0125,0.0615,30
+2005-2009,shell shock,significant,0.997,0.0419,0.9964,31
+2005-2009,shell shock,trauma,0.1982,0.0249,0.1653,31
+2005-2009,shell shock,trauma informed,0.551,0.0183,0.543,31
+2005-2009,shell shock,traumatic neurosis,0.0974,0.0144,0.0754,15
+2005-2009,shell shock,traumatic stress,0.2032,0.026,0.1743,31
+2005-2009,shell shock,vicarious trauma,0.1609,0.0025,0.1603,30
+2005-2009,significant,trauma,0.9357,0.012,0.9365,250
+2005-2009,significant,trauma informed,0.7405,0.0274,0.7325,66
+2005-2009,significant,traumatic neurosis,0.997,0.0504,0.9938,15
+2005-2009,significant,traumatic stress,0.8975,0.0122,0.8956,250
+2005-2009,significant,vicarious trauma,0.9627,0.0394,0.9618,30
+2005-2009,trauma,trauma informed,0.4871,0.0281,0.4805,66
+2005-2009,trauma,traumatic neurosis,0.2724,0.0469,0.2074,15
+2005-2009,trauma,traumatic stress,0.0849,0.008,0.0783,250
+2005-2009,trauma,vicarious trauma,0.2471,0.0337,0.2077,30
+2005-2009,trauma informed,traumatic neurosis,0.6057,0.0326,0.5936,15
+2005-2009,trauma informed,traumatic stress,0.4252,0.0224,0.4156,66
+2005-2009,trauma informed,vicarious trauma,0.5342,0.0187,0.5284,30
+2005-2009,traumatic neurosis,traumatic stress,0.2727,0.0514,0.2202,15
+2005-2009,traumatic neurosis,vicarious trauma,0.1944,0.0152,0.1807,15
+2005-2009,traumatic stress,vicarious trauma,0.2266,0.032,0.1911,30
+2010-2014,acute stress disorder,adjustment disorder,0.0783,0.0043,0.0769,134
+2010-2014,acute stress disorder,bereavement,0.2245,0.0116,0.2188,134
+2010-2014,acute stress disorder,collective trauma,0.3056,0.0121,0.3009,63
+2010-2014,acute stress disorder,complex posttraumatic stress disorder,0.0552,0.0059,0.0494,56
+2010-2014,acute stress disorder,complex ptsd,0.0431,0.0043,0.0384,66
+2010-2014,acute stress disorder,intergenerational trauma,0.2684,0.0148,0.2636,43
+2010-2014,acute stress disorder,measure,1.0551,0.0127,1.0563,134
+2010-2014,acute stress disorder,moral injury,0.1746,0.0153,0.1625,32
+2010-2014,acute stress disorder,participants,0.8629,0.0122,0.8626,134
+2010-2014,acute stress disorder,posttraumatic stress,0.1425,0.0142,0.14,134
+2010-2014,acute stress disorder,posttraumatic stress disorder,0.0299,0.0038,0.0256,134
+2010-2014,acute stress disorder,psychological trauma,0.1337,0.0069,0.1306,134
+2010-2014,acute stress disorder,ptsd,0.0437,0.0053,0.0397,134
+2010-2014,acute stress disorder,results,1.0938,0.0125,1.092,134
+2010-2014,acute stress disorder,secondary traumatic stress,0.1178,0.0047,0.1168,103
+2010-2014,acute stress disorder,shell shock,0.2502,0.0205,0.2213,15
+2010-2014,acute stress disorder,significant,0.9936,0.0165,0.994,134
+2010-2014,acute stress disorder,trauma,0.2162,0.0141,0.2089,134
+2010-2014,acute stress disorder,trauma informed,0.5818,0.007,0.5796,134
+2010-2014,acute stress disorder,traumatic stress,0.1291,0.0109,0.1234,134
+2010-2014,acute stress disorder,vicarious trauma,0.1522,0.0081,0.1467,67
+2010-2014,adjustment disorder,bereavement,0.2836,0.0108,0.2807,194
+2010-2014,adjustment disorder,collective trauma,0.3591,0.0152,0.3558,63
+2010-2014,adjustment disorder,complex posttraumatic stress disorder,0.1125,0.0138,0.105,56
+2010-2014,adjustment disorder,complex ptsd,0.0858,0.0082,0.0809,66
+2010-2014,adjustment disorder,intergenerational trauma,0.3432,0.0219,0.3384,43
+2010-2014,adjustment disorder,measure,1.0631,0.0075,1.0636,194
+2010-2014,adjustment disorder,moral injury,0.25,0.0239,0.2378,32
+2010-2014,adjustment disorder,participants,0.8477,0.0081,0.8484,194
+2010-2014,adjustment disorder,posttraumatic stress,0.2377,0.0127,0.237,194
+2010-2014,adjustment disorder,posttraumatic stress disorder,0.0858,0.0066,0.0821,194
+2010-2014,adjustment disorder,psychological trauma,0.199,0.0049,0.1968,194
+2010-2014,adjustment disorder,ptsd,0.1235,0.0082,0.1216,194
+2010-2014,adjustment disorder,results,1.1093,0.0074,1.1101,194
+2010-2014,adjustment disorder,secondary traumatic stress,0.2115,0.0093,0.2093,103
+2010-2014,adjustment disorder,shell shock,0.2983,0.0303,0.2676,15
+2010-2014,adjustment disorder,significant,0.9836,0.0091,0.9842,194
+2010-2014,adjustment disorder,trauma,0.2729,0.0117,0.2699,194
+2010-2014,adjustment disorder,trauma informed,0.6613,0.0039,0.6601,194
+2010-2014,adjustment disorder,traumatic stress,0.2305,0.01,0.2293,194
+2010-2014,adjustment disorder,vicarious trauma,0.2383,0.016,0.2329,67
+2010-2014,bereavement,collective trauma,0.1239,0.0134,0.1111,63
+2010-2014,bereavement,complex posttraumatic stress disorder,0.2068,0.0176,0.1945,56
+2010-2014,bereavement,complex ptsd,0.22,0.0153,0.2079,66
+2010-2014,bereavement,intergenerational trauma,0.1523,0.0202,0.1297,43
+2010-2014,bereavement,measure,1.0208,0.0072,1.0201,250
+2010-2014,bereavement,moral injury,0.1456,0.028,0.1184,32
+2010-2014,bereavement,participants,0.9203,0.0098,0.9213,250
+2010-2014,bereavement,posttraumatic stress,0.2536,0.0129,0.2493,250
+2010-2014,bereavement,posttraumatic stress disorder,0.1903,0.009,0.1851,250
+2010-2014,bereavement,psychological trauma,0.1063,0.0085,0.102,250
+2010-2014,bereavement,ptsd,0.2056,0.0099,0.2005,250
+2010-2014,bereavement,results,1.1158,0.01,1.1164,250
+2010-2014,bereavement,secondary traumatic stress,0.152,0.0126,0.1439,103
+2010-2014,bereavement,shell shock,0.238,0.0337,0.1874,15
+2010-2014,bereavement,significant,0.9475,0.0128,0.9512,250
+2010-2014,bereavement,trauma,0.0853,0.0082,0.0785,250
+2010-2014,bereavement,trauma informed,0.3592,0.0157,0.3589,232
+2010-2014,bereavement,traumatic stress,0.0964,0.0057,0.0905,250
+2010-2014,bereavement,vicarious trauma,0.132,0.0166,0.1199,67
+2010-2014,collective trauma,complex posttraumatic stress disorder,0.225,0.0054,0.2247,56
+2010-2014,collective trauma,complex ptsd,0.2774,0.0034,0.2769,63
+2010-2014,collective trauma,intergenerational trauma,0.0692,0.0073,0.0622,43
+2010-2014,collective trauma,measure,1.0199,0.0214,1.0178,63
+2010-2014,collective trauma,moral injury,0.1065,0.0117,0.0944,32
+2010-2014,collective trauma,participants,0.9202,0.0216,0.9191,63
+2010-2014,collective trauma,posttraumatic stress,0.3996,0.0273,0.3936,63
+2010-2014,collective trauma,posttraumatic stress disorder,0.2797,0.015,0.2697,63
+2010-2014,collective trauma,psychological trauma,0.117,0.0091,0.1061,63
+2010-2014,collective trauma,ptsd,0.3142,0.017,0.3086,63
+2010-2014,collective trauma,results,1.0392,0.0215,1.0415,63
+2010-2014,collective trauma,secondary traumatic stress,0.1867,0.0065,0.1842,63
+2010-2014,collective trauma,shell shock,0.1991,0.0267,0.163,15
+2010-2014,collective trauma,significant,1.0233,0.0263,1.0221,63
+2010-2014,collective trauma,trauma,0.1599,0.0243,0.1426,63
+2010-2014,collective trauma,trauma informed,0.5248,0.0149,0.5204,63
+2010-2014,collective trauma,traumatic stress,0.1838,0.0175,0.1719,63
+2010-2014,collective trauma,vicarious trauma,0.1387,0.0023,0.1378,63
+2010-2014,complex posttraumatic stress disorder,complex ptsd,0.0375,0.0028,0.0362,56
+2010-2014,complex posttraumatic stress disorder,intergenerational trauma,0.2013,0.0066,0.1984,43
+2010-2014,complex posttraumatic stress disorder,measure,1.0952,0.0223,1.0989,56
+2010-2014,complex posttraumatic stress disorder,moral injury,0.1224,0.0095,0.1131,32
+2010-2014,complex posttraumatic stress disorder,participants,0.8034,0.0266,0.8022,56
+2010-2014,complex posttraumatic stress disorder,posttraumatic stress,0.2088,0.0268,0.1999,56
+2010-2014,complex posttraumatic stress disorder,posttraumatic stress disorder,0.0577,0.0069,0.0468,56
+2010-2014,complex posttraumatic stress disorder,psychological trauma,0.11,0.0127,0.0981,56
+2010-2014,complex posttraumatic stress disorder,ptsd,0.082,0.0116,0.0738,56
+2010-2014,complex posttraumatic stress disorder,results,1.0494,0.0237,1.0565,56
+2010-2014,complex posttraumatic stress disorder,secondary traumatic stress,0.1253,0.0075,0.1216,56
+2010-2014,complex posttraumatic stress disorder,shell shock,0.2057,0.0209,0.1764,15
+2010-2014,complex posttraumatic stress disorder,significant,1.0447,0.0303,1.0422,56
+2010-2014,complex posttraumatic stress disorder,trauma,0.2179,0.0217,0.2006,56
+2010-2014,complex posttraumatic stress disorder,trauma informed,0.5715,0.0152,0.567,56
+2010-2014,complex posttraumatic stress disorder,traumatic stress,0.1428,0.0201,0.122,56
+2010-2014,complex posttraumatic stress disorder,vicarious trauma,0.1292,0.0044,0.127,56
+2010-2014,complex ptsd,intergenerational trauma,0.2533,0.0113,0.2501,43
+2010-2014,complex ptsd,measure,1.0742,0.0222,1.0787,66
+2010-2014,complex ptsd,moral injury,0.1737,0.0136,0.1633,32
+2010-2014,complex ptsd,participants,0.839,0.0203,0.8362,66
+2010-2014,complex ptsd,posttraumatic stress,0.1855,0.0208,0.1785,66
+2010-2014,complex ptsd,posttraumatic stress disorder,0.0515,0.0051,0.0424,66
+2010-2014,complex ptsd,psychological trauma,0.1461,0.013,0.1364,66
+2010-2014,complex ptsd,ptsd,0.0646,0.0096,0.0554,66
+2010-2014,complex ptsd,results,1.1127,0.0215,1.1141,66
+2010-2014,complex ptsd,secondary traumatic stress,0.1443,0.0058,0.1433,66
+2010-2014,complex ptsd,shell shock,0.2244,0.0233,0.2019,15
+2010-2014,complex ptsd,significant,0.9749,0.0282,0.978,66
+2010-2014,complex ptsd,trauma,0.2209,0.0197,0.2095,66
+2010-2014,complex ptsd,trauma informed,0.5408,0.0147,0.5357,66
+2010-2014,complex ptsd,traumatic stress,0.1492,0.0158,0.1363,66
+2010-2014,complex ptsd,vicarious trauma,0.1576,0.0013,0.1575,66
+2010-2014,intergenerational trauma,measure,1.0602,0.0232,1.0648,43
+2010-2014,intergenerational trauma,moral injury,0.0879,0.0059,0.0838,32
+2010-2014,intergenerational trauma,participants,0.9225,0.029,0.9215,43
+2010-2014,intergenerational trauma,posttraumatic stress,0.3637,0.0345,0.3601,43
+2010-2014,intergenerational trauma,posttraumatic stress disorder,0.2518,0.0205,0.2415,43
+2010-2014,intergenerational trauma,psychological trauma,0.1157,0.0125,0.0997,43
+2010-2014,intergenerational trauma,ptsd,0.296,0.0221,0.2834,43
+2010-2014,intergenerational trauma,results,1.0182,0.0339,1.0246,43
+2010-2014,intergenerational trauma,secondary traumatic stress,0.1481,0.0092,0.1415,43
+2010-2014,intergenerational trauma,shell shock,0.218,0.0231,0.1898,15
+2010-2014,intergenerational trauma,significant,0.9928,0.0322,0.9908,43
+2010-2014,intergenerational trauma,trauma,0.1883,0.0318,0.1647,43
+2010-2014,intergenerational trauma,trauma informed,0.5092,0.0169,0.5038,43
+2010-2014,intergenerational trauma,traumatic stress,0.1774,0.023,0.1585,43
+2010-2014,intergenerational trauma,vicarious trauma,0.0943,0.005,0.0898,43
+2010-2014,measure,moral injury,1.032,0.0301,1.0324,32
+2010-2014,measure,participants,1.3939,0.0042,1.3948,250
+2010-2014,measure,posttraumatic stress,1.0098,0.0064,1.0093,250
+2010-2014,measure,posttraumatic stress disorder,1.0837,0.0069,1.0836,250
+2010-2014,measure,psychological trauma,1.0598,0.0075,1.0605,250
+2010-2014,measure,ptsd,1.0684,0.0086,1.0672,250
+2010-2014,measure,results,1.445,0.0049,1.4458,250
+2010-2014,measure,secondary traumatic stress,1.0503,0.0161,1.0509,103
+2010-2014,measure,shell shock,1.0626,0.0485,1.0737,15
+2010-2014,measure,significant,1.1703,0.0058,1.1699,250
+2010-2014,measure,trauma,0.9726,0.0085,0.9735,250
+2010-2014,measure,trauma informed,0.9757,0.006,0.9762,232
+2010-2014,measure,traumatic stress,1.0243,0.0066,1.0235,250
+2010-2014,measure,vicarious trauma,1.0739,0.0234,1.0715,67
+2010-2014,moral injury,participants,0.9047,0.0312,0.9024,32
+2010-2014,moral injury,posttraumatic stress,0.3022,0.0342,0.2783,32
+2010-2014,moral injury,posttraumatic stress disorder,0.1762,0.0182,0.1553,32
+2010-2014,moral injury,psychological trauma,0.1007,0.0132,0.076,32
+2010-2014,moral injury,ptsd,0.2042,0.0218,0.1897,32
+2010-2014,moral injury,results,1.0562,0.0406,1.0553,32
+2010-2014,moral injury,secondary traumatic stress,0.0847,0.0083,0.0739,32
+2010-2014,moral injury,shell shock,0.166,0.0116,0.1457,15
+2010-2014,moral injury,significant,1.0102,0.0397,1.0118,32
+2010-2014,moral injury,trauma,0.1858,0.0288,0.1553,32
+2010-2014,moral injury,trauma informed,0.5412,0.0263,0.53,32
+2010-2014,moral injury,traumatic stress,0.1611,0.027,0.1349,32
+2010-2014,moral injury,vicarious trauma,0.0644,0.005,0.055,32
+2010-2014,participants,posttraumatic stress,1.0024,0.0082,1.001,250
+2010-2014,participants,posttraumatic stress disorder,0.8453,0.0091,0.8458,250
+2010-2014,participants,psychological trauma,0.8798,0.0078,0.8794,250
+2010-2014,participants,ptsd,0.8534,0.009,0.8527,250
+2010-2014,participants,results,1.0685,0.0094,1.0668,250
+2010-2014,participants,secondary traumatic stress,0.9241,0.0181,0.9255,103
+2010-2014,participants,shell shock,0.8676,0.0526,0.8617,15
+2010-2014,participants,significant,1.5064,0.0041,1.5071,250
+2010-2014,participants,trauma,0.9386,0.0093,0.9371,250
+2010-2014,participants,trauma informed,1.0894,0.0051,1.0896,232
+2010-2014,participants,traumatic stress,0.916,0.0101,0.9166,250
+2010-2014,participants,vicarious trauma,0.9271,0.021,0.9222,67
+2010-2014,posttraumatic stress,posttraumatic stress disorder,0.1363,0.0137,0.1321,250
+2010-2014,posttraumatic stress,psychological trauma,0.2383,0.0149,0.236,250
+2010-2014,posttraumatic stress,ptsd,0.0992,0.013,0.0947,250
+2010-2014,posttraumatic stress,results,1.1756,0.0065,1.1769,250
+2010-2014,posttraumatic stress,secondary traumatic stress,0.2013,0.0202,0.1927,103
+2010-2014,posttraumatic stress,shell shock,0.3601,0.0449,0.338,15
+2010-2014,posttraumatic stress,significant,0.8324,0.0084,0.8328,250
+2010-2014,posttraumatic stress,trauma,0.2437,0.0141,0.2378,250
+2010-2014,posttraumatic stress,trauma informed,0.4874,0.0057,0.4865,232
+2010-2014,posttraumatic stress,traumatic stress,0.1364,0.0133,0.1313,250
+2010-2014,posttraumatic stress,vicarious trauma,0.2509,0.0239,0.2398,67
+2010-2014,posttraumatic stress disorder,psychological trauma,0.0936,0.0059,0.091,250
+2010-2014,posttraumatic stress disorder,ptsd,0.0261,0.0047,0.0211,250
+2010-2014,posttraumatic stress disorder,results,1.0934,0.0074,1.0934,250
+2010-2014,posttraumatic stress disorder,secondary traumatic stress,0.1262,0.0094,0.1198,103
+2010-2014,posttraumatic stress disorder,shell shock,0.2493,0.0243,0.2132,15
+2010-2014,posttraumatic stress disorder,significant,0.9813,0.0095,0.9829,250
+2010-2014,posttraumatic stress disorder,trauma,0.1828,0.0111,0.176,250
+2010-2014,posttraumatic stress disorder,trauma informed,0.5885,0.0084,0.5883,232
+2010-2014,posttraumatic stress disorder,traumatic stress,0.0978,0.0086,0.0941,250
+2010-2014,posttraumatic stress disorder,vicarious trauma,0.1471,0.0127,0.1415,67
+2010-2014,psychological trauma,ptsd,0.1277,0.0079,0.124,250
+2010-2014,psychological trauma,results,1.0588,0.0066,1.0583,250
+2010-2014,psychological trauma,secondary traumatic stress,0.1175,0.008,0.1111,103
+2010-2014,psychological trauma,shell shock,0.2075,0.0274,0.1594,15
+2010-2014,psychological trauma,significant,1.0031,0.0084,1.0044,250
+2010-2014,psychological trauma,trauma,0.0925,0.0089,0.0872,250
+2010-2014,psychological trauma,trauma informed,0.5537,0.0059,0.5535,232
+2010-2014,psychological trauma,traumatic stress,0.0681,0.007,0.0649,250
+2010-2014,psychological trauma,vicarious trauma,0.0953,0.0086,0.0856,67
+2010-2014,ptsd,results,1.1326,0.0078,1.1326,250
+2010-2014,ptsd,secondary traumatic stress,0.1501,0.0104,0.1448,103
+2010-2014,ptsd,shell shock,0.2706,0.0238,0.2429,15
+2010-2014,ptsd,significant,0.9571,0.0106,0.9568,250
+2010-2014,ptsd,trauma,0.1841,0.0112,0.1793,250
+2010-2014,ptsd,trauma informed,0.5523,0.0077,0.5526,232
+2010-2014,ptsd,traumatic stress,0.0956,0.0079,0.091,250
+2010-2014,ptsd,vicarious trauma,0.1822,0.0122,0.1772,67
+2010-2014,results,secondary traumatic stress,1.0256,0.0167,1.0252,103
+2010-2014,results,shell shock,1.0707,0.0518,1.0781,15
+2010-2014,results,significant,1.4103,0.0054,1.4107,250
+2010-2014,results,trauma,1.1382,0.0091,1.1375,250
+2010-2014,results,trauma informed,1.1976,0.0045,1.1983,232
+2010-2014,results,traumatic stress,1.1295,0.0085,1.1296,250
+2010-2014,results,vicarious trauma,1.0116,0.0221,1.0082,67
+2010-2014,secondary traumatic stress,shell shock,0.2439,0.0202,0.2182,15
+2010-2014,secondary traumatic stress,significant,1.0015,0.0172,0.9997,103
+2010-2014,secondary traumatic stress,trauma,0.2097,0.0165,0.1993,103
+2010-2014,secondary traumatic stress,trauma informed,0.5155,0.0102,0.5139,103
+2010-2014,secondary traumatic stress,traumatic stress,0.1343,0.0133,0.1259,103
+2010-2014,secondary traumatic stress,vicarious trauma,0.0297,0.003,0.0269,67
+2010-2014,shell shock,significant,0.9921,0.0651,0.9909,15
+2010-2014,shell shock,trauma,0.267,0.0379,0.2061,15
+2010-2014,shell shock,trauma informed,0.533,0.0356,0.5096,15
+2010-2014,shell shock,traumatic stress,0.2491,0.0317,0.2001,15
+2010-2014,shell shock,vicarious trauma,0.2229,0.0183,0.1999,15
+2010-2014,significant,trauma,0.9623,0.0117,0.9613,250
+2010-2014,significant,trauma informed,0.7617,0.0093,0.7617,232
+2010-2014,significant,traumatic stress,0.9414,0.0125,0.9406,250
+2010-2014,significant,vicarious trauma,1.0006,0.0283,0.9986,67
+2010-2014,trauma,trauma informed,0.4702,0.0165,0.467,232
+2010-2014,trauma,traumatic stress,0.0778,0.0079,0.0705,250
+2010-2014,trauma,vicarious trauma,0.1913,0.0233,0.1779,67
+2010-2014,trauma informed,traumatic stress,0.4414,0.0099,0.4396,232
+2010-2014,trauma informed,vicarious trauma,0.4966,0.0158,0.4915,67
+2010-2014,traumatic stress,vicarious trauma,0.1332,0.0157,0.123,67
+2015-2019,acute stress disorder,adjustment disorder,0.0595,0.0037,0.0577,129
+2015-2019,acute stress disorder,battle fatigue,0.603,0.0152,0.5936,22
+2015-2019,acute stress disorder,bereavement,0.2391,0.0117,0.2341,129
+2015-2019,acute stress disorder,collective trauma,0.3394,0.0093,0.3362,85
+2015-2019,acute stress disorder,complex posttraumatic stress disorder,0.0712,0.0032,0.0702,113
+2015-2019,acute stress disorder,complex ptsd,0.0507,0.0,0.0507,129
+2015-2019,acute stress disorder,intergenerational trauma,0.2461,0.0086,0.2441,84
+2015-2019,acute stress disorder,measure,0.9857,0.0125,0.9873,129
+2015-2019,acute stress disorder,moral injury,0.1597,0.0046,0.1587,129
+2015-2019,acute stress disorder,participants,0.9015,0.0112,0.9003,129
+2015-2019,acute stress disorder,posttraumatic stress,0.1194,0.0127,0.1177,129
+2015-2019,acute stress disorder,posttraumatic stress disorder,0.0372,0.005,0.0322,129
+2015-2019,acute stress disorder,psychological trauma,0.1512,0.0083,0.146,129
+2015-2019,acute stress disorder,ptsd,0.0522,0.0058,0.0464,129
+2015-2019,acute stress disorder,results,1.1477,0.0099,1.147,129
+2015-2019,acute stress disorder,secondary traumatic stress,0.1413,0.0064,0.1393,129
+2015-2019,acute stress disorder,shell shock,0.2347,0.0234,0.2182,20
+2015-2019,acute stress disorder,significant,0.9658,0.0151,0.9663,129
+2015-2019,acute stress disorder,trauma,0.2139,0.0124,0.2073,129
+2015-2019,acute stress disorder,trauma informed,0.599,0.0098,0.5991,129
+2015-2019,acute stress disorder,traumatic neurosis,0.2356,0.0264,0.2095,15
+2015-2019,acute stress disorder,traumatic stress,0.1275,0.0117,0.1217,129
+2015-2019,acute stress disorder,vicarious trauma,0.1721,0.0035,0.1716,116
+2015-2019,adjustment disorder,battle fatigue,0.6072,0.0166,0.5955,22
+2015-2019,adjustment disorder,bereavement,0.2795,0.0105,0.2747,230
+2015-2019,adjustment disorder,collective trauma,0.3628,0.013,0.3618,85
+2015-2019,adjustment disorder,complex posttraumatic stress disorder,0.0958,0.0085,0.0938,113
+2015-2019,adjustment disorder,complex ptsd,0.0731,0.0055,0.0717,129
+2015-2019,adjustment disorder,intergenerational trauma,0.2768,0.0113,0.2747,84
+2015-2019,adjustment disorder,measure,1.0216,0.0051,1.021,230
+2015-2019,adjustment disorder,moral injury,0.2149,0.005,0.2149,180
+2015-2019,adjustment disorder,participants,0.8628,0.0047,0.8635,230
+2015-2019,adjustment disorder,posttraumatic stress,0.2122,0.0131,0.2094,230
+2015-2019,adjustment disorder,posttraumatic stress disorder,0.0598,0.0055,0.0569,230
+2015-2019,adjustment disorder,psychological trauma,0.1817,0.0057,0.1791,230
+2015-2019,adjustment disorder,ptsd,0.1039,0.0074,0.101,230
+2015-2019,adjustment disorder,results,1.1202,0.0044,1.121,230
+2015-2019,adjustment disorder,secondary traumatic stress,0.1995,0.0029,0.1993,230
+2015-2019,adjustment disorder,shell shock,0.2613,0.023,0.2428,20
+2015-2019,adjustment disorder,significant,0.9946,0.008,0.994,230
+2015-2019,adjustment disorder,trauma,0.255,0.0121,0.2501,230
+2015-2019,adjustment disorder,trauma informed,0.6594,0.007,0.6593,230
+2015-2019,adjustment disorder,traumatic neurosis,0.2413,0.025,0.2203,15
+2015-2019,adjustment disorder,traumatic stress,0.1949,0.0086,0.1928,230
+2015-2019,adjustment disorder,vicarious trauma,0.223,0.0082,0.2207,116
+2015-2019,battle fatigue,bereavement,0.507,0.0379,0.4791,22
+2015-2019,battle fatigue,collective trauma,0.4274,0.0197,0.4119,22
+2015-2019,battle fatigue,complex posttraumatic stress disorder,0.5825,0.0162,0.5706,22
+2015-2019,battle fatigue,complex ptsd,0.5856,0.013,0.5763,22
+2015-2019,battle fatigue,intergenerational trauma,0.3988,0.0195,0.3831,22
+2015-2019,battle fatigue,measure,0.9675,0.0251,0.9648,22
+2015-2019,battle fatigue,moral injury,0.4428,0.0173,0.4308,22
+2015-2019,battle fatigue,participants,0.9772,0.0254,0.9801,22
+2015-2019,battle fatigue,posttraumatic stress,0.6511,0.033,0.6349,22
+2015-2019,battle fatigue,posttraumatic stress disorder,0.5845,0.0202,0.5732,22
+2015-2019,battle fatigue,psychological trauma,0.4769,0.0257,0.4581,22
+2015-2019,battle fatigue,ptsd,0.6197,0.0214,0.6084,22
+2015-2019,battle fatigue,results,1.0528,0.0276,1.0584,22
+2015-2019,battle fatigue,secondary traumatic stress,0.4765,0.0145,0.4668,22
+2015-2019,battle fatigue,shell shock,0.4932,0.0081,0.4921,20
+2015-2019,battle fatigue,significant,0.9914,0.0302,0.9963,22
+2015-2019,battle fatigue,trauma,0.4522,0.0371,0.4264,22
+2015-2019,battle fatigue,trauma informed,0.7261,0.0175,0.7181,22
+2015-2019,battle fatigue,traumatic neurosis,0.508,0.0155,0.5077,15
+2015-2019,battle fatigue,traumatic stress,0.5268,0.0301,0.5059,22
+2015-2019,battle fatigue,vicarious trauma,0.4226,0.0148,0.411,22
+2015-2019,bereavement,collective trauma,0.1674,0.016,0.1551,85
+2015-2019,bereavement,complex posttraumatic stress disorder,0.2445,0.0159,0.2388,113
+2015-2019,bereavement,complex ptsd,0.2465,0.0122,0.2408,129
+2015-2019,bereavement,intergenerational trauma,0.1308,0.0167,0.1219,84
+2015-2019,bereavement,measure,0.9647,0.007,0.9636,250
+2015-2019,bereavement,moral injury,0.1275,0.0087,0.1238,180
+2015-2019,bereavement,participants,0.9309,0.01,0.9302,250
+2015-2019,bereavement,posttraumatic stress,0.2533,0.0148,0.2473,250
+2015-2019,bereavement,posttraumatic stress disorder,0.2081,0.0106,0.203,250
+2015-2019,bereavement,psychological trauma,0.1172,0.0103,0.1125,250
+2015-2019,bereavement,ptsd,0.2146,0.0092,0.2097,250
+2015-2019,bereavement,results,1.1673,0.0073,1.169,250
+2015-2019,bereavement,secondary traumatic stress,0.1921,0.0102,0.1886,250
+2015-2019,bereavement,shell shock,0.2386,0.0354,0.1966,20
+2015-2019,bereavement,significant,0.939,0.0119,0.9395,250
+2015-2019,bereavement,trauma,0.0918,0.008,0.0847,250
+2015-2019,bereavement,trauma informed,0.346,0.0187,0.343,250
+2015-2019,bereavement,traumatic neurosis,0.2896,0.046,0.2369,15
+2015-2019,bereavement,traumatic stress,0.1025,0.0069,0.0969,250
+2015-2019,bereavement,vicarious trauma,0.155,0.017,0.1473,116
+2015-2019,collective trauma,complex posttraumatic stress disorder,0.2661,0.0044,0.265,85
+2015-2019,collective trauma,complex ptsd,0.2984,0.0067,0.2974,85
+2015-2019,collective trauma,intergenerational trauma,0.0709,0.0013,0.0708,84
+2015-2019,collective trauma,measure,0.9363,0.0186,0.9358,85
+2015-2019,collective trauma,moral injury,0.1203,0.0051,0.1175,85
+2015-2019,collective trauma,participants,0.9202,0.016,0.9203,85
+2015-2019,collective trauma,posttraumatic stress,0.4309,0.0262,0.4255,85
+2015-2019,collective trauma,posttraumatic stress disorder,0.3016,0.0151,0.2938,85
+2015-2019,collective trauma,psychological trauma,0.1102,0.0087,0.1023,85
+2015-2019,collective trauma,ptsd,0.3317,0.0142,0.3291,85
+2015-2019,collective trauma,results,1.1242,0.0135,1.1267,85
+2015-2019,collective trauma,secondary traumatic stress,0.2509,0.0121,0.247,85
+2015-2019,collective trauma,shell shock,0.1809,0.0211,0.1585,20
+2015-2019,collective trauma,significant,1.0148,0.0211,1.015,85
+2015-2019,collective trauma,trauma,0.1707,0.0166,0.1586,85
+2015-2019,collective trauma,trauma informed,0.5443,0.0123,0.5397,85
+2015-2019,collective trauma,traumatic neurosis,0.1858,0.0204,0.1473,15
+2015-2019,collective trauma,traumatic stress,0.2071,0.0182,0.1967,85
+2015-2019,collective trauma,vicarious trauma,0.1377,0.0054,0.1367,85
+2015-2019,complex posttraumatic stress disorder,complex ptsd,0.0233,0.0015,0.0227,113
+2015-2019,complex posttraumatic stress disorder,intergenerational trauma,0.2104,0.0046,0.2091,84
+2015-2019,complex posttraumatic stress disorder,measure,1.0096,0.0145,1.0086,113
+2015-2019,complex posttraumatic stress disorder,moral injury,0.1139,0.0045,0.112,113
+2015-2019,complex posttraumatic stress disorder,participants,0.827,0.0106,0.8272,113
+2015-2019,complex posttraumatic stress disorder,posttraumatic stress,0.2225,0.0182,0.2207,113
+2015-2019,complex posttraumatic stress disorder,posttraumatic stress disorder,0.0564,0.0058,0.0511,113
+2015-2019,complex posttraumatic stress disorder,psychological trauma,0.1374,0.0105,0.1325,113
+2015-2019,complex posttraumatic stress disorder,ptsd,0.0869,0.008,0.0823,113
+2015-2019,complex posttraumatic stress disorder,results,1.1145,0.0114,1.1166,113
+2015-2019,complex posttraumatic stress disorder,secondary traumatic stress,0.1752,0.0086,0.174,113
+2015-2019,complex posttraumatic stress disorder,shell shock,0.1923,0.0184,0.1719,20
+2015-2019,complex posttraumatic stress disorder,significant,1.0444,0.0155,1.0439,113
+2015-2019,complex posttraumatic stress disorder,trauma,0.2319,0.0151,0.2263,113
+2015-2019,complex posttraumatic stress disorder,trauma informed,0.6069,0.0118,0.6026,113
+2015-2019,complex posttraumatic stress disorder,traumatic neurosis,0.1803,0.0186,0.154,15
+2015-2019,complex posttraumatic stress disorder,traumatic stress,0.1453,0.0127,0.138,113
+2015-2019,complex posttraumatic stress disorder,vicarious trauma,0.158,0.0014,0.1577,113
+2015-2019,complex ptsd,intergenerational trauma,0.2176,0.0068,0.2163,84
+2015-2019,complex ptsd,measure,1.0206,0.0133,1.0191,129
+2015-2019,complex ptsd,moral injury,0.1373,0.005,0.1357,129
+2015-2019,complex ptsd,participants,0.8471,0.0103,0.8465,129
+2015-2019,complex ptsd,posttraumatic stress,0.1918,0.0141,0.1884,129
+2015-2019,complex ptsd,posttraumatic stress disorder,0.0442,0.004,0.0395,129
+2015-2019,complex ptsd,psychological trauma,0.1448,0.0087,0.1411,129
+2015-2019,complex ptsd,ptsd,0.0666,0.0071,0.0624,129
+2015-2019,complex ptsd,results,1.1116,0.0084,1.1115,129
+2015-2019,complex ptsd,secondary traumatic stress,0.1625,0.0068,0.1607,129
+2015-2019,complex ptsd,shell shock,0.2188,0.021,0.2011,20
+2015-2019,complex ptsd,significant,1.0206,0.0143,1.0208,129
+2015-2019,complex ptsd,trauma,0.2327,0.0159,0.2266,129
+2015-2019,complex ptsd,trauma informed,0.6169,0.0096,0.6152,129
+2015-2019,complex ptsd,traumatic neurosis,0.1999,0.0233,0.1749,15
+2015-2019,complex ptsd,traumatic stress,0.1437,0.0125,0.138,129
+2015-2019,complex ptsd,vicarious trauma,0.1604,0.0026,0.1598,116
+2015-2019,intergenerational trauma,measure,1.0241,0.0205,1.0267,84
+2015-2019,intergenerational trauma,moral injury,0.0776,0.0054,0.0747,84
+2015-2019,intergenerational trauma,participants,0.8994,0.0161,0.9016,84
+2015-2019,intergenerational trauma,posttraumatic stress,0.3434,0.0262,0.3387,84
+2015-2019,intergenerational trauma,posttraumatic stress disorder,0.2079,0.0112,0.2053,84
+2015-2019,intergenerational trauma,psychological trauma,0.0748,0.007,0.0658,84
+2015-2019,intergenerational trauma,ptsd,0.258,0.0165,0.2524,84
+2015-2019,intergenerational trauma,results,1.067,0.0138,1.0675,84
+2015-2019,intergenerational trauma,secondary traumatic stress,0.1547,0.01,0.1512,84
+2015-2019,intergenerational trauma,shell shock,0.1764,0.0146,0.1559,20
+2015-2019,intergenerational trauma,significant,1.0063,0.0205,1.0036,84
+2015-2019,intergenerational trauma,trauma,0.1546,0.019,0.1455,84
+2015-2019,intergenerational trauma,trauma informed,0.5142,0.0112,0.5102,84
+2015-2019,intergenerational trauma,traumatic neurosis,0.2082,0.0166,0.1774,15
+2015-2019,intergenerational trauma,traumatic stress,0.1583,0.0173,0.1481,84
+2015-2019,intergenerational trauma,vicarious trauma,0.062,0.0028,0.0602,84
+2015-2019,measure,moral injury,1.019,0.0098,1.0184,180
+2015-2019,measure,participants,1.3458,0.0049,1.346,250
+2015-2019,measure,posttraumatic stress,0.9722,0.0058,0.9718,250
+2015-2019,measure,posttraumatic stress disorder,1.0361,0.0064,1.035,250
+2015-2019,measure,psychological trauma,1.0078,0.0073,1.0081,250
+2015-2019,measure,ptsd,1.0134,0.0062,1.0127,250
+2015-2019,measure,results,1.4564,0.0042,1.4572,250
+2015-2019,measure,secondary traumatic stress,0.9949,0.0053,0.9961,250
+2015-2019,measure,shell shock,1.0334,0.0372,1.0438,20
+2015-2019,measure,significant,1.1778,0.0049,1.1782,250
+2015-2019,measure,trauma,0.9278,0.0092,0.9265,250
+2015-2019,measure,trauma informed,0.933,0.0048,0.9337,250
+2015-2019,measure,traumatic neurosis,0.9719,0.0457,0.9733,15
+2015-2019,measure,traumatic stress,0.9755,0.0067,0.9757,250
+2015-2019,measure,vicarious trauma,1.0222,0.0142,1.0235,116
+2015-2019,moral injury,participants,0.8746,0.0082,0.8737,180
+2015-2019,moral injury,posttraumatic stress,0.2637,0.0154,0.259,180
+2015-2019,moral injury,posttraumatic stress disorder,0.1424,0.0073,0.1392,180
+2015-2019,moral injury,psychological trauma,0.0753,0.0052,0.0721,180
+2015-2019,moral injury,ptsd,0.1778,0.0087,0.1744,180
+2015-2019,moral injury,results,1.0664,0.0079,1.0672,180
+2015-2019,moral injury,secondary traumatic stress,0.0954,0.005,0.0943,180
+2015-2019,moral injury,shell shock,0.1198,0.0133,0.1025,20
+2015-2019,moral injury,significant,1.0387,0.0115,1.0378,180
+2015-2019,moral injury,trauma,0.1559,0.0103,0.152,180
+2015-2019,moral injury,trauma informed,0.4967,0.009,0.4949,180
+2015-2019,moral injury,traumatic neurosis,0.1694,0.0188,0.1415,15
+2015-2019,moral injury,traumatic stress,0.1166,0.009,0.1126,180
+2015-2019,moral injury,vicarious trauma,0.0501,0.0032,0.0486,116
+2015-2019,participants,posttraumatic stress,1.0006,0.0066,1.0003,250
+2015-2019,participants,posttraumatic stress disorder,0.8518,0.0089,0.8504,250
+2015-2019,participants,psychological trauma,0.8865,0.0081,0.8878,250
+2015-2019,participants,ptsd,0.8611,0.0102,0.8615,250
+2015-2019,participants,results,1.1326,0.0078,1.1322,250
+2015-2019,participants,secondary traumatic stress,0.9329,0.005,0.9327,250
+2015-2019,participants,shell shock,0.8551,0.0302,0.8509,20
+2015-2019,participants,significant,1.4887,0.0048,1.4898,250
+2015-2019,participants,trauma,0.9314,0.0099,0.9316,250
+2015-2019,participants,trauma informed,1.0911,0.0072,1.0904,250
+2015-2019,participants,traumatic neurosis,0.8724,0.0431,0.8559,15
+2015-2019,participants,traumatic stress,0.9203,0.0096,0.9197,250
+2015-2019,participants,vicarious trauma,0.9156,0.0134,0.914,116
+2015-2019,posttraumatic stress,posttraumatic stress disorder,0.1311,0.016,0.1298,250
+2015-2019,posttraumatic stress,psychological trauma,0.2539,0.0145,0.2524,250
+2015-2019,posttraumatic stress,ptsd,0.0941,0.012,0.0916,250
+2015-2019,posttraumatic stress,results,1.2047,0.0048,1.205,250
+2015-2019,posttraumatic stress,secondary traumatic stress,0.2331,0.0135,0.2309,250
+2015-2019,posttraumatic stress,shell shock,0.3663,0.0395,0.3414,20
+2015-2019,posttraumatic stress,significant,0.8324,0.0105,0.832,250
+2015-2019,posttraumatic stress,trauma,0.2376,0.0125,0.2334,250
+2015-2019,posttraumatic stress,trauma informed,0.5126,0.0074,0.5127,250
+2015-2019,posttraumatic stress,traumatic neurosis,0.3816,0.0489,0.3626,15
+2015-2019,posttraumatic stress,traumatic stress,0.1288,0.0139,0.124,250
+2015-2019,posttraumatic stress,vicarious trauma,0.2826,0.0226,0.2838,116
+2015-2019,posttraumatic stress disorder,psychological trauma,0.1102,0.0075,0.1063,250
+2015-2019,posttraumatic stress disorder,ptsd,0.0295,0.0053,0.024,250
+2015-2019,posttraumatic stress disorder,results,1.1356,0.0067,1.1364,250
+2015-2019,posttraumatic stress disorder,secondary traumatic stress,0.1558,0.0078,0.1529,250
+2015-2019,posttraumatic stress disorder,shell shock,0.2372,0.0219,0.2113,20
+2015-2019,posttraumatic stress disorder,significant,0.9786,0.0103,0.9785,250
+2015-2019,posttraumatic stress disorder,trauma,0.1812,0.0118,0.1769,250
+2015-2019,posttraumatic stress disorder,trauma informed,0.6038,0.01,0.6026,250
+2015-2019,posttraumatic stress disorder,traumatic neurosis,0.232,0.0263,0.192,15
+2015-2019,posttraumatic stress disorder,traumatic stress,0.0913,0.0078,0.0883,250
+2015-2019,posttraumatic stress disorder,vicarious trauma,0.1635,0.0097,0.1602,116
+2015-2019,psychological trauma,ptsd,0.1481,0.0089,0.145,250
+2015-2019,psychological trauma,results,1.0991,0.0057,1.0982,250
+2015-2019,psychological trauma,secondary traumatic stress,0.1332,0.0053,0.1311,250
+2015-2019,psychological trauma,shell shock,0.1793,0.0206,0.1451,20
+2015-2019,psychological trauma,significant,1.0041,0.0088,1.0048,250
+2015-2019,psychological trauma,trauma,0.0981,0.012,0.0925,250
+2015-2019,psychological trauma,trauma informed,0.5661,0.0081,0.566,250
+2015-2019,psychological trauma,traumatic neurosis,0.1863,0.0259,0.1395,15
+2015-2019,psychological trauma,traumatic stress,0.0809,0.0086,0.0765,250
+2015-2019,psychological trauma,vicarious trauma,0.0701,0.0047,0.0643,116
+2015-2019,ptsd,results,1.1767,0.0066,1.1773,250
+2015-2019,ptsd,secondary traumatic stress,0.1876,0.0083,0.1851,250
+2015-2019,ptsd,shell shock,0.2713,0.0285,0.2466,20
+2015-2019,ptsd,significant,0.9502,0.0093,0.9504,250
+2015-2019,ptsd,trauma,0.1805,0.01,0.1753,250
+2015-2019,ptsd,trauma informed,0.5627,0.0116,0.5637,250
+2015-2019,ptsd,traumatic neurosis,0.2569,0.032,0.2256,15
+2015-2019,ptsd,traumatic stress,0.0863,0.0081,0.0813,250
+2015-2019,ptsd,vicarious trauma,0.2095,0.0129,0.2067,116
+2015-2019,results,secondary traumatic stress,1.0684,0.0043,1.0682,250
+2015-2019,results,shell shock,1.072,0.039,1.0773,20
+2015-2019,results,significant,1.3952,0.0049,1.3946,250
+2015-2019,results,trauma,1.1753,0.0068,1.1786,250
+2015-2019,results,trauma informed,1.2179,0.0046,1.218,250
+2015-2019,results,traumatic neurosis,1.1213,0.0349,1.1266,15
+2015-2019,results,traumatic stress,1.174,0.0065,1.1756,250
+2015-2019,results,vicarious trauma,1.0614,0.0113,1.0627,116
+2015-2019,secondary traumatic stress,shell shock,0.2308,0.0236,0.2157,20
+2015-2019,secondary traumatic stress,significant,1.0019,0.0059,1.0023,250
+2015-2019,secondary traumatic stress,trauma,0.2306,0.0121,0.2285,250
+2015-2019,secondary traumatic stress,trauma informed,0.5777,0.0079,0.5749,250
+2015-2019,secondary traumatic stress,traumatic neurosis,0.2797,0.0273,0.2578,15
+2015-2019,secondary traumatic stress,traumatic stress,0.1757,0.0098,0.174,250
+2015-2019,secondary traumatic stress,vicarious trauma,0.0577,0.0056,0.0544,116
+2015-2019,shell shock,significant,1.0258,0.0473,1.0258,20
+2015-2019,shell shock,trauma,0.2568,0.0319,0.2139,20
+2015-2019,shell shock,trauma informed,0.5503,0.0289,0.532,20
+2015-2019,shell shock,traumatic neurosis,0.1352,0.0092,0.1246,15
+2015-2019,shell shock,traumatic stress,0.2423,0.0327,0.1999,20
+2015-2019,shell shock,vicarious trauma,0.1779,0.019,0.157,20
+2015-2019,significant,trauma,0.9626,0.0107,0.9639,250
+2015-2019,significant,trauma informed,0.769,0.0098,0.7708,250
+2015-2019,significant,traumatic neurosis,1.037,0.0602,1.0404,15
+2015-2019,significant,traumatic stress,0.9302,0.0132,0.9319,250
+2015-2019,significant,vicarious trauma,0.999,0.0187,0.9994,116
+2015-2019,trauma,trauma informed,0.4747,0.0171,0.472,250
+2015-2019,trauma,traumatic neurosis,0.2707,0.0439,0.2224,15
+2015-2019,trauma,traumatic stress,0.0702,0.0064,0.0644,250
+2015-2019,trauma,vicarious trauma,0.1829,0.0157,0.1754,116
+2015-2019,trauma informed,traumatic neurosis,0.625,0.031,0.609,15
+2015-2019,trauma informed,traumatic stress,0.4605,0.0115,0.4571,250
+2015-2019,trauma informed,vicarious trauma,0.5439,0.0105,0.5397,116
+2015-2019,traumatic neurosis,traumatic stress,0.2565,0.0375,0.2081,15
+2015-2019,traumatic neurosis,vicarious trauma,0.2122,0.0196,0.1842,15
+2015-2019,traumatic stress,vicarious trauma,0.1473,0.0133,0.1422,116
+2020-2024,acute stress disorder,adjustment disorder,0.0347,0.0021,0.0335,183
+2020-2024,acute stress disorder,battle fatigue,0.5342,0.0105,0.5328,65
+2020-2024,acute stress disorder,bereavement,0.2192,0.0097,0.2158,183
+2020-2024,acute stress disorder,collective trauma,0.3124,0.0057,0.311,183
+2020-2024,acute stress disorder,complex posttraumatic stress disorder,0.0561,0.0033,0.0546,183
+2020-2024,acute stress disorder,complex ptsd,0.0559,0.003,0.0544,183
+2020-2024,acute stress disorder,intergenerational trauma,0.2256,0.0043,0.225,183
+2020-2024,acute stress disorder,measure,0.9623,0.0107,0.9621,183
+2020-2024,acute stress disorder,moral injury,0.1187,0.0064,0.1168,183
+2020-2024,acute stress disorder,participants,0.9047,0.0094,0.9049,183
+2020-2024,acute stress disorder,posttraumatic stress,0.126,0.0108,0.1226,183
+2020-2024,acute stress disorder,posttraumatic stress disorder,0.0275,0.0035,0.0242,183
+2020-2024,acute stress disorder,psychological trauma,0.123,0.006,0.1196,183
+2020-2024,acute stress disorder,ptsd,0.049,0.005,0.0469,183
+2020-2024,acute stress disorder,results,1.1343,0.0066,1.1347,183
+2020-2024,acute stress disorder,secondary traumatic stress,0.1298,0.0059,0.1284,183
+2020-2024,acute stress disorder,significant,0.9933,0.0088,0.995,183
+2020-2024,acute stress disorder,trauma,0.1905,0.0103,0.1858,183
+2020-2024,acute stress disorder,trauma informed,0.5902,0.0074,0.5878,183
+2020-2024,acute stress disorder,traumatic stress,0.0935,0.0079,0.0899,183
+2020-2024,acute stress disorder,vicarious trauma,0.1402,0.0033,0.1392,183
+2020-2024,adjustment disorder,battle fatigue,0.556,0.0091,0.5549,65
+2020-2024,adjustment disorder,bereavement,0.2685,0.0112,0.2662,250
+2020-2024,adjustment disorder,collective trauma,0.3511,0.003,0.3512,250
+2020-2024,adjustment disorder,complex posttraumatic stress disorder,0.0679,0.0023,0.0677,250
+2020-2024,adjustment disorder,complex ptsd,0.0607,0.0024,0.0602,250
+2020-2024,adjustment disorder,intergenerational trauma,0.2681,0.003,0.2678,250
+2020-2024,adjustment disorder,measure,0.987,0.0056,0.987,250
+2020-2024,adjustment disorder,moral injury,0.1678,0.0058,0.1667,250
+2020-2024,adjustment disorder,participants,0.883,0.0054,0.8828,250
+2020-2024,adjustment disorder,posttraumatic stress,0.168,0.0115,0.1671,250
+2020-2024,adjustment disorder,posttraumatic stress disorder,0.0436,0.0041,0.0414,250
+2020-2024,adjustment disorder,psychological trauma,0.1679,0.0062,0.1654,250
+2020-2024,adjustment disorder,ptsd,0.0773,0.007,0.0742,250
+2020-2024,adjustment disorder,results,1.1292,0.0038,1.1289,250
+2020-2024,adjustment disorder,secondary traumatic stress,0.1802,0.0052,0.1789,250
+2020-2024,adjustment disorder,significant,0.9978,0.0043,0.9979,250
+2020-2024,adjustment disorder,trauma,0.2394,0.0102,0.2349,250
+2020-2024,adjustment disorder,trauma informed,0.6269,0.0076,0.6268,250
+2020-2024,adjustment disorder,traumatic stress,0.1504,0.0083,0.1478,250
+2020-2024,adjustment disorder,vicarious trauma,0.1906,0.0023,0.1904,250
+2020-2024,battle fatigue,bereavement,0.4354,0.021,0.4253,65
+2020-2024,battle fatigue,collective trauma,0.3593,0.0145,0.3533,65
+2020-2024,battle fatigue,complex posttraumatic stress disorder,0.5144,0.009,0.5096,65
+2020-2024,battle fatigue,complex ptsd,0.5346,0.0089,0.5297,65
+2020-2024,battle fatigue,intergenerational trauma,0.3474,0.0101,0.3391,65
+2020-2024,battle fatigue,measure,0.938,0.0196,0.9377,65
+2020-2024,battle fatigue,moral injury,0.3801,0.0119,0.3751,65
+2020-2024,battle fatigue,participants,0.9795,0.0155,0.978,65
+2020-2024,battle fatigue,posttraumatic stress,0.5945,0.0199,0.5939,65
+2020-2024,battle fatigue,posttraumatic stress disorder,0.5337,0.0117,0.5279,65
+2020-2024,battle fatigue,psychological trauma,0.419,0.0134,0.4115,65
+2020-2024,battle fatigue,ptsd,0.5728,0.0147,0.568,65
+2020-2024,battle fatigue,results,1.0596,0.0192,1.0636,65
+2020-2024,battle fatigue,secondary traumatic stress,0.4284,0.0077,0.4261,65
+2020-2024,battle fatigue,significant,1.0143,0.0129,1.017,65
+2020-2024,battle fatigue,trauma,0.3745,0.0251,0.3656,65
+2020-2024,battle fatigue,trauma informed,0.6875,0.0139,0.6851,65
+2020-2024,battle fatigue,traumatic stress,0.4447,0.0204,0.4376,65
+2020-2024,battle fatigue,vicarious trauma,0.3761,0.0072,0.372,65
+2020-2024,bereavement,collective trauma,0.1659,0.0102,0.1636,250
+2020-2024,bereavement,complex posttraumatic stress disorder,0.2272,0.0107,0.2235,250
+2020-2024,bereavement,complex ptsd,0.253,0.012,0.2493,250
+2020-2024,bereavement,intergenerational trauma,0.1396,0.0103,0.1351,250
+2020-2024,bereavement,measure,0.9333,0.0085,0.9341,250
+2020-2024,bereavement,moral injury,0.127,0.0093,0.1205,250
+2020-2024,bereavement,participants,0.9184,0.0095,0.9167,250
+2020-2024,bereavement,posttraumatic stress,0.2639,0.0131,0.2613,250
+2020-2024,bereavement,posttraumatic stress disorder,0.2091,0.0103,0.2039,250
+2020-2024,bereavement,psychological trauma,0.1125,0.0101,0.108,250
+2020-2024,bereavement,ptsd,0.2183,0.0095,0.2141,250
+2020-2024,bereavement,results,1.1667,0.0078,1.1673,250
+2020-2024,bereavement,secondary traumatic stress,0.2113,0.0113,0.2069,250
+2020-2024,bereavement,significant,0.9787,0.0117,0.9791,250
+2020-2024,bereavement,trauma,0.0884,0.0075,0.082,250
+2020-2024,bereavement,trauma informed,0.3388,0.0174,0.3338,250
+2020-2024,bereavement,traumatic stress,0.102,0.0082,0.0961,250
+2020-2024,bereavement,vicarious trauma,0.1516,0.0098,0.1472,250
+2020-2024,collective trauma,complex posttraumatic stress disorder,0.2759,0.0036,0.276,250
+2020-2024,collective trauma,complex ptsd,0.3143,0.004,0.3143,250
+2020-2024,collective trauma,intergenerational trauma,0.0624,0.002,0.0619,250
+2020-2024,collective trauma,measure,0.9209,0.0067,0.9207,250
+2020-2024,collective trauma,moral injury,0.1304,0.0046,0.1293,250
+2020-2024,collective trauma,participants,0.94,0.0065,0.939,250
+2020-2024,collective trauma,posttraumatic stress,0.4217,0.0147,0.4204,250
+2020-2024,collective trauma,posttraumatic stress disorder,0.2969,0.0077,0.2955,250
+2020-2024,collective trauma,psychological trauma,0.1087,0.0051,0.1057,250
+2020-2024,collective trauma,ptsd,0.3414,0.0098,0.3389,250
+2020-2024,collective trauma,results,1.1132,0.0052,1.1135,250
+2020-2024,collective trauma,secondary traumatic stress,0.2467,0.0074,0.2464,250
+2020-2024,collective trauma,significant,1.0212,0.006,1.0212,250
+2020-2024,collective trauma,trauma,0.1492,0.0095,0.1459,250
+2020-2024,collective trauma,trauma informed,0.5437,0.0087,0.5413,250
+2020-2024,collective trauma,traumatic stress,0.1908,0.009,0.1883,250
+2020-2024,collective trauma,vicarious trauma,0.1394,0.0022,0.1392,250
+2020-2024,complex posttraumatic stress disorder,complex ptsd,0.0255,0.0024,0.0251,250
+2020-2024,complex posttraumatic stress disorder,intergenerational trauma,0.1979,0.0046,0.1969,250
+2020-2024,complex posttraumatic stress disorder,measure,0.9875,0.0061,0.9881,250
+2020-2024,complex posttraumatic stress disorder,moral injury,0.1058,0.0051,0.1035,250
+2020-2024,complex posttraumatic stress disorder,participants,0.8406,0.0071,0.8403,250
+2020-2024,complex posttraumatic stress disorder,posttraumatic stress,0.2011,0.0128,0.1979,250
+2020-2024,complex posttraumatic stress disorder,posttraumatic stress disorder,0.041,0.0037,0.0383,250
+2020-2024,complex posttraumatic stress disorder,psychological trauma,0.1242,0.0066,0.1224,250
+2020-2024,complex posttraumatic stress disorder,ptsd,0.0754,0.0065,0.0721,250
+2020-2024,complex posttraumatic stress disorder,results,1.1057,0.0047,1.1061,250
+2020-2024,complex posttraumatic stress disorder,secondary traumatic stress,0.1747,0.0064,0.1727,250
+2020-2024,complex posttraumatic stress disorder,significant,1.056,0.0058,1.0567,250
+2020-2024,complex posttraumatic stress disorder,trauma,0.2031,0.0101,0.2006,250
+2020-2024,complex posttraumatic stress disorder,trauma informed,0.5994,0.0083,0.598,250
+2020-2024,complex posttraumatic stress disorder,traumatic stress,0.1125,0.0069,0.1101,250
+2020-2024,complex posttraumatic stress disorder,vicarious trauma,0.1585,0.0034,0.1579,250
+2020-2024,complex ptsd,intergenerational trauma,0.2336,0.0037,0.2326,250
+2020-2024,complex ptsd,measure,0.9753,0.0065,0.9749,250
+2020-2024,complex ptsd,moral injury,0.142,0.0058,0.1404,250
+2020-2024,complex ptsd,participants,0.8662,0.0056,0.8661,250
+2020-2024,complex ptsd,posttraumatic stress,0.1879,0.0121,0.1862,250
+2020-2024,complex ptsd,posttraumatic stress disorder,0.0506,0.0036,0.048,250
+2020-2024,complex ptsd,psychological trauma,0.1559,0.0066,0.1535,250
+2020-2024,complex ptsd,ptsd,0.0773,0.006,0.0748,250
+2020-2024,complex ptsd,results,1.1185,0.0044,1.1191,250
+2020-2024,complex ptsd,secondary traumatic stress,0.1704,0.0052,0.169,250
+2020-2024,complex ptsd,significant,1.0333,0.0054,1.0332,250
+2020-2024,complex ptsd,trauma,0.2269,0.0102,0.2238,250
+2020-2024,complex ptsd,trauma informed,0.6226,0.0077,0.623,250
+2020-2024,complex ptsd,traumatic stress,0.1365,0.0081,0.132,250
+2020-2024,complex ptsd,vicarious trauma,0.1734,0.0031,0.1728,250
+2020-2024,intergenerational trauma,measure,1.0145,0.0054,1.0139,250
+2020-2024,intergenerational trauma,moral injury,0.0667,0.0029,0.0652,250
+2020-2024,intergenerational trauma,participants,0.9022,0.0058,0.903,250
+2020-2024,intergenerational trauma,posttraumatic stress,0.3476,0.0161,0.3445,250
+2020-2024,intergenerational trauma,posttraumatic stress disorder,0.2072,0.0068,0.2037,250
+2020-2024,intergenerational trauma,psychological trauma,0.0632,0.0033,0.0611,250
+2020-2024,intergenerational trauma,ptsd,0.2588,0.0095,0.257,250
+2020-2024,intergenerational trauma,results,1.0681,0.0051,1.0681,250
+2020-2024,intergenerational trauma,secondary traumatic stress,0.1612,0.0064,0.1602,250
+2020-2024,intergenerational trauma,significant,1.0125,0.0059,1.0119,250
+2020-2024,intergenerational trauma,trauma,0.1321,0.0117,0.1293,250
+2020-2024,intergenerational trauma,trauma informed,0.5031,0.0088,0.5014,250
+2020-2024,intergenerational trauma,traumatic stress,0.1368,0.0095,0.1348,250
+2020-2024,intergenerational trauma,vicarious trauma,0.0658,0.0017,0.0653,250
+2020-2024,measure,moral injury,0.9961,0.0072,0.9965,250
+2020-2024,measure,participants,1.3397,0.0046,1.3405,250
+2020-2024,measure,posttraumatic stress,0.9476,0.0058,0.9473,250
+2020-2024,measure,posttraumatic stress disorder,1.0044,0.0083,1.0041,250
+2020-2024,measure,psychological trauma,0.9848,0.0071,0.9847,250
+2020-2024,measure,ptsd,0.9763,0.0077,0.9756,250
+2020-2024,measure,results,1.4708,0.0035,1.472,250
+2020-2024,measure,secondary traumatic stress,0.9637,0.0063,0.9641,250
+2020-2024,measure,significant,1.154,0.0051,1.1555,250
+2020-2024,measure,trauma,0.8999,0.0083,0.8998,250
+2020-2024,measure,trauma informed,0.9036,0.0059,0.9042,250
+2020-2024,measure,traumatic stress,0.9395,0.0082,0.9388,250
+2020-2024,measure,vicarious trauma,0.9997,0.0049,1.0002,250
+2020-2024,moral injury,participants,0.8895,0.0077,0.8887,250
+2020-2024,moral injury,posttraumatic stress,0.2336,0.0176,0.2321,250
+2020-2024,moral injury,posttraumatic stress disorder,0.1165,0.0079,0.1122,250
+2020-2024,moral injury,psychological trauma,0.0533,0.0043,0.0498,250
+2020-2024,moral injury,ptsd,0.1573,0.009,0.1537,250
+2020-2024,moral injury,results,1.0746,0.0069,1.0756,250
+2020-2024,moral injury,secondary traumatic stress,0.071,0.0062,0.0691,250
+2020-2024,moral injury,significant,1.0333,0.0081,1.0336,250
+2020-2024,moral injury,trauma,0.1336,0.0106,0.1291,250
+2020-2024,moral injury,trauma informed,0.4986,0.0103,0.4973,250
+2020-2024,moral injury,traumatic stress,0.0871,0.0083,0.0815,250
+2020-2024,moral injury,vicarious trauma,0.0338,0.0033,0.0323,250
+2020-2024,participants,posttraumatic stress,1.0056,0.0073,1.0043,250
+2020-2024,participants,posttraumatic stress disorder,0.8646,0.0105,0.8634,250
+2020-2024,participants,psychological trauma,0.8943,0.0088,0.8944,250
+2020-2024,participants,ptsd,0.8804,0.0094,0.8788,250
+2020-2024,participants,results,1.0912,0.0082,1.0916,250
+2020-2024,participants,secondary traumatic stress,0.9476,0.0061,0.9472,250
+2020-2024,participants,significant,1.5132,0.0044,1.5137,250
+2020-2024,participants,trauma,0.9364,0.0095,0.9351,250
+2020-2024,participants,trauma informed,1.0872,0.0069,1.088,250
+2020-2024,participants,traumatic stress,0.927,0.009,0.9275,250
+2020-2024,participants,vicarious trauma,0.9187,0.0046,0.9183,250
+2020-2024,posttraumatic stress,posttraumatic stress disorder,0.1254,0.0151,0.1202,250
+2020-2024,posttraumatic stress,psychological trauma,0.2372,0.017,0.2336,250
+2020-2024,posttraumatic stress,ptsd,0.0869,0.0116,0.0839,250
+2020-2024,posttraumatic stress,results,1.1962,0.0058,1.1978,250
+2020-2024,posttraumatic stress,secondary traumatic stress,0.2365,0.0157,0.2333,250
+2020-2024,posttraumatic stress,significant,0.8603,0.01,0.8594,250
+2020-2024,posttraumatic stress,trauma,0.2367,0.0139,0.2346,250
+2020-2024,posttraumatic stress,trauma informed,0.5147,0.0083,0.5129,250
+2020-2024,posttraumatic stress,traumatic stress,0.1193,0.0138,0.1131,250
+2020-2024,posttraumatic stress,vicarious trauma,0.266,0.0155,0.2638,250
+2020-2024,posttraumatic stress disorder,psychological trauma,0.1055,0.0074,0.1005,250
+2020-2024,posttraumatic stress disorder,ptsd,0.0293,0.0057,0.0251,250
+2020-2024,posttraumatic stress disorder,results,1.1347,0.0065,1.1352,250
+2020-2024,posttraumatic stress disorder,secondary traumatic stress,0.1534,0.0091,0.1512,250
+2020-2024,posttraumatic stress disorder,significant,0.9923,0.0087,0.9941,250
+2020-2024,posttraumatic stress disorder,trauma,0.1797,0.0098,0.1736,250
+2020-2024,posttraumatic stress disorder,trauma informed,0.5957,0.0106,0.5928,250
+2020-2024,posttraumatic stress disorder,traumatic stress,0.0795,0.0071,0.074,250
+2020-2024,posttraumatic stress disorder,vicarious trauma,0.1478,0.0069,0.1446,250
+2020-2024,psychological trauma,ptsd,0.148,0.0103,0.1421,250
+2020-2024,psychological trauma,results,1.1059,0.0069,1.1066,250
+2020-2024,psychological trauma,secondary traumatic stress,0.1327,0.0082,0.1308,250
+2020-2024,psychological trauma,significant,1.0103,0.0083,1.0103,250
+2020-2024,psychological trauma,trauma,0.0901,0.0096,0.0825,250
+2020-2024,psychological trauma,trauma informed,0.5401,0.0132,0.5379,250
+2020-2024,psychological trauma,traumatic stress,0.0632,0.0083,0.0575,250
+2020-2024,psychological trauma,vicarious trauma,0.0553,0.0039,0.0529,250
+2020-2024,ptsd,results,1.1748,0.0067,1.1755,250
+2020-2024,ptsd,secondary traumatic stress,0.1885,0.0096,0.1857,250
+2020-2024,ptsd,significant,0.9685,0.0085,0.9685,250
+2020-2024,ptsd,trauma,0.1838,0.0106,0.1778,250
+2020-2024,ptsd,trauma informed,0.5568,0.0117,0.5525,250
+2020-2024,ptsd,traumatic stress,0.0786,0.0078,0.074,250
+2020-2024,ptsd,vicarious trauma,0.2008,0.0096,0.1974,250
+2020-2024,results,secondary traumatic stress,1.0671,0.0051,1.068,250
+2020-2024,results,significant,1.4221,0.0053,1.4222,250
+2020-2024,results,trauma,1.1755,0.007,1.1758,250
+2020-2024,results,trauma informed,1.2207,0.0062,1.2216,250
+2020-2024,results,traumatic stress,1.1735,0.0077,1.1739,250
+2020-2024,results,vicarious trauma,1.0663,0.0049,1.0669,250
+2020-2024,secondary traumatic stress,significant,1.0173,0.0056,1.017,250
+2020-2024,secondary traumatic stress,trauma,0.2273,0.0124,0.2201,250
+2020-2024,secondary traumatic stress,trauma informed,0.578,0.0108,0.5764,250
+2020-2024,secondary traumatic stress,traumatic stress,0.1526,0.0121,0.1496,250
+2020-2024,secondary traumatic stress,vicarious trauma,0.0524,0.0044,0.0525,250
+2020-2024,significant,trauma,0.9845,0.0095,0.9857,250
+2020-2024,significant,trauma informed,0.7996,0.009,0.8003,250
+2020-2024,significant,traumatic stress,0.9595,0.01,0.959,250
+2020-2024,significant,vicarious trauma,1.0117,0.005,1.0115,250
+2020-2024,trauma,trauma informed,0.4577,0.0134,0.4538,250
+2020-2024,trauma,traumatic stress,0.066,0.0069,0.0604,250
+2020-2024,trauma,vicarious trauma,0.1514,0.0091,0.1462,250
+2020-2024,trauma informed,traumatic stress,0.4593,0.0114,0.4573,250
+2020-2024,trauma informed,vicarious trauma,0.5381,0.0066,0.5365,250
+2020-2024,traumatic stress,vicarious trauma,0.1158,0.0098,0.1124,250
+2025-2025,acute stress disorder,adjustment disorder,0.0468,0.0059,0.037,24
+2025-2025,acute stress disorder,battle fatigue,0.6132,0.0117,0.6115,18
+2025-2025,acute stress disorder,bereavement,0.2974,0.0338,0.2633,24
+2025-2025,acute stress disorder,collective trauma,0.2932,0.0244,0.2811,24
+2025-2025,acute stress disorder,complex posttraumatic stress disorder,0.0726,0.011,0.0553,24
+2025-2025,acute stress disorder,complex ptsd,0.067,0.0093,0.0554,24
+2025-2025,acute stress disorder,intergenerational trauma,0.2436,0.0187,0.2306,24
+2025-2025,acute stress disorder,measure,0.9939,0.0342,1.0008,24
+2025-2025,acute stress disorder,moral injury,0.1477,0.0188,0.1281,24
+2025-2025,acute stress disorder,participants,0.884,0.033,0.88,24
+2025-2025,acute stress disorder,posttraumatic stress,0.1754,0.0391,0.1515,24
+2025-2025,acute stress disorder,posttraumatic stress disorder,0.0547,0.011,0.0294,24
+2025-2025,acute stress disorder,psychological trauma,0.1747,0.0228,0.1475,24
+2025-2025,acute stress disorder,ptsd,0.0902,0.0234,0.0635,24
+2025-2025,acute stress disorder,results,1.129,0.0244,1.1355,24
+2025-2025,acute stress disorder,secondary traumatic stress,0.1517,0.0161,0.1393,24
+2025-2025,acute stress disorder,significant,0.9813,0.0314,0.9821,24
+2025-2025,acute stress disorder,trauma,0.2555,0.0318,0.2221,24
+2025-2025,acute stress disorder,trauma informed,0.6642,0.0243,0.6538,24
+2025-2025,acute stress disorder,traumatic stress,0.166,0.0307,0.1341,24
+2025-2025,acute stress disorder,vicarious trauma,0.1662,0.0181,0.1528,24
+2025-2025,adjustment disorder,battle fatigue,0.6064,0.0184,0.5977,18
+2025-2025,adjustment disorder,bereavement,0.2928,0.0251,0.2796,47
+2025-2025,adjustment disorder,collective trauma,0.3032,0.0116,0.297,47
+2025-2025,adjustment disorder,complex posttraumatic stress disorder,0.066,0.007,0.0603,47
+2025-2025,adjustment disorder,complex ptsd,0.052,0.0045,0.0486,47
+2025-2025,adjustment disorder,intergenerational trauma,0.2537,0.0099,0.2517,47
+2025-2025,adjustment disorder,measure,1.0258,0.0236,1.0262,47
+2025-2025,adjustment disorder,moral injury,0.1584,0.0132,0.1498,47
+2025-2025,adjustment disorder,participants,0.8513,0.0211,0.8492,47
+2025-2025,adjustment disorder,posttraumatic stress,0.1817,0.029,0.1761,47
+2025-2025,adjustment disorder,posttraumatic stress disorder,0.0498,0.0092,0.0378,47
+2025-2025,adjustment disorder,psychological trauma,0.1929,0.0148,0.1822,47
+2025-2025,adjustment disorder,ptsd,0.0948,0.0167,0.0782,47
+2025-2025,adjustment disorder,results,1.1188,0.0158,1.119,47
+2025-2025,adjustment disorder,secondary traumatic stress,0.1722,0.0084,0.1661,47
+2025-2025,adjustment disorder,significant,1.0025,0.0238,1.0024,47
+2025-2025,adjustment disorder,trauma,0.2536,0.0219,0.2383,47
+2025-2025,adjustment disorder,trauma informed,0.678,0.0164,0.6717,47
+2025-2025,adjustment disorder,traumatic stress,0.1699,0.0231,0.1546,47
+2025-2025,adjustment disorder,vicarious trauma,0.1949,0.0079,0.1926,47
+2025-2025,battle fatigue,bereavement,0.501,0.0389,0.4805,18
+2025-2025,battle fatigue,collective trauma,0.4249,0.0216,0.408,18
+2025-2025,battle fatigue,complex posttraumatic stress disorder,0.608,0.0148,0.5973,18
+2025-2025,battle fatigue,complex ptsd,0.5963,0.0168,0.586,18
+2025-2025,battle fatigue,intergenerational trauma,0.4111,0.0175,0.3935,18
+2025-2025,battle fatigue,measure,0.948,0.0358,0.9451,18
+2025-2025,battle fatigue,moral injury,0.4405,0.0193,0.4264,18
+2025-2025,battle fatigue,participants,1.0041,0.0313,1.002,18
+2025-2025,battle fatigue,posttraumatic stress,0.6414,0.0361,0.6262,18
+2025-2025,battle fatigue,posttraumatic stress disorder,0.5919,0.0228,0.5759,18
+2025-2025,battle fatigue,psychological trauma,0.4635,0.0257,0.4431,18
+2025-2025,battle fatigue,ptsd,0.6236,0.0255,0.6125,18
+2025-2025,battle fatigue,results,1.0616,0.0254,1.0662,18
+2025-2025,battle fatigue,secondary traumatic stress,0.4956,0.016,0.4876,18
+2025-2025,battle fatigue,significant,0.9842,0.0325,0.9866,18
+2025-2025,battle fatigue,trauma,0.43,0.0431,0.3942,18
+2025-2025,battle fatigue,trauma informed,0.7348,0.0232,0.7238,18
+2025-2025,battle fatigue,traumatic stress,0.49,0.0357,0.4586,18
+2025-2025,battle fatigue,vicarious trauma,0.4453,0.0124,0.4325,18
+2025-2025,bereavement,collective trauma,0.1739,0.0199,0.1629,77
+2025-2025,bereavement,complex posttraumatic stress disorder,0.2428,0.0165,0.236,80
+2025-2025,bereavement,complex ptsd,0.2743,0.0184,0.2649,76
+2025-2025,bereavement,intergenerational trauma,0.1534,0.0144,0.1448,82
+2025-2025,bereavement,measure,0.9461,0.0069,0.9452,250
+2025-2025,bereavement,moral injury,0.1383,0.0095,0.1376,182
+2025-2025,bereavement,participants,0.9119,0.0086,0.9117,250
+2025-2025,bereavement,posttraumatic stress,0.2712,0.0108,0.27,250
+2025-2025,bereavement,posttraumatic stress disorder,0.2162,0.0085,0.2127,250
+2025-2025,bereavement,psychological trauma,0.1236,0.0099,0.1202,163
+2025-2025,bereavement,ptsd,0.2234,0.0093,0.2199,250
+2025-2025,bereavement,results,1.2037,0.0053,1.2054,250
+2025-2025,bereavement,secondary traumatic stress,0.2283,0.0104,0.2242,196
+2025-2025,bereavement,significant,0.9396,0.0096,0.9388,250
+2025-2025,bereavement,trauma,0.086,0.0071,0.0806,250
+2025-2025,bereavement,trauma informed,0.3616,0.0152,0.3604,250
+2025-2025,bereavement,traumatic stress,0.1052,0.0049,0.103,217
+2025-2025,bereavement,vicarious trauma,0.1774,0.0196,0.169,68
+2025-2025,collective trauma,complex posttraumatic stress disorder,0.2576,0.0027,0.2575,77
+2025-2025,collective trauma,complex ptsd,0.2743,0.0015,0.2741,76
+2025-2025,collective trauma,intergenerational trauma,0.0432,0.0011,0.0427,77
+2025-2025,collective trauma,measure,0.9926,0.0195,0.9961,77
+2025-2025,collective trauma,moral injury,0.0907,0.0057,0.0874,77
+2025-2025,collective trauma,participants,0.8922,0.0229,0.8927,77
+2025-2025,collective trauma,posttraumatic stress,0.3924,0.0271,0.3882,77
+2025-2025,collective trauma,posttraumatic stress disorder,0.2681,0.0138,0.2616,77
+2025-2025,collective trauma,psychological trauma,0.1005,0.008,0.0951,77
+2025-2025,collective trauma,ptsd,0.3163,0.0167,0.3113,77
+2025-2025,collective trauma,results,1.1068,0.0129,1.1106,77
+2025-2025,collective trauma,secondary traumatic stress,0.1979,0.0115,0.1958,77
+2025-2025,collective trauma,significant,0.999,0.0237,0.998,77
+2025-2025,collective trauma,trauma,0.1462,0.0194,0.1331,77
+2025-2025,collective trauma,trauma informed,0.5533,0.0149,0.5496,77
+2025-2025,collective trauma,traumatic stress,0.1835,0.0172,0.1763,77
+2025-2025,collective trauma,vicarious trauma,0.1004,0.0046,0.0989,68
+2025-2025,complex posttraumatic stress disorder,complex ptsd,0.0509,0.002,0.0508,76
+2025-2025,complex posttraumatic stress disorder,intergenerational trauma,0.2309,0.0021,0.2306,80
+2025-2025,complex posttraumatic stress disorder,measure,1.0191,0.0155,1.0208,80
+2025-2025,complex posttraumatic stress disorder,moral injury,0.1371,0.0082,0.1328,80
+2025-2025,complex posttraumatic stress disorder,participants,0.8346,0.0171,0.8362,80
+2025-2025,complex posttraumatic stress disorder,posttraumatic stress,0.1337,0.0163,0.1287,80
+2025-2025,complex posttraumatic stress disorder,posttraumatic stress disorder,0.0356,0.0062,0.0289,80
+2025-2025,complex posttraumatic stress disorder,psychological trauma,0.173,0.0113,0.1694,80
+2025-2025,complex posttraumatic stress disorder,ptsd,0.0516,0.0077,0.0442,80
+2025-2025,complex posttraumatic stress disorder,results,1.1573,0.0122,1.1592,80
+2025-2025,complex posttraumatic stress disorder,secondary traumatic stress,0.1907,0.0108,0.1877,80
+2025-2025,complex posttraumatic stress disorder,significant,0.9819,0.0196,0.9815,80
+2025-2025,complex posttraumatic stress disorder,trauma,0.2157,0.0158,0.2059,80
+2025-2025,complex posttraumatic stress disorder,trauma informed,0.6113,0.014,0.6094,80
+2025-2025,complex posttraumatic stress disorder,traumatic stress,0.12,0.0128,0.114,80
+2025-2025,complex posttraumatic stress disorder,vicarious trauma,0.1771,0.004,0.1753,68
+2025-2025,complex ptsd,intergenerational trauma,0.235,0.0033,0.2346,76
+2025-2025,complex ptsd,measure,0.9866,0.0151,0.9853,76
+2025-2025,complex ptsd,moral injury,0.1452,0.0094,0.1426,76
+2025-2025,complex ptsd,participants,0.8706,0.0171,0.8697,76
+2025-2025,complex ptsd,posttraumatic stress,0.1648,0.0206,0.1613,76
+2025-2025,complex ptsd,posttraumatic stress disorder,0.0575,0.0065,0.0497,76
+2025-2025,complex ptsd,psychological trauma,0.1914,0.0097,0.1855,76
+2025-2025,complex ptsd,ptsd,0.0835,0.011,0.0766,76
+2025-2025,complex ptsd,results,1.1549,0.0117,1.1542,76
+2025-2025,complex ptsd,secondary traumatic stress,0.1622,0.0069,0.1604,76
+2025-2025,complex ptsd,significant,0.9889,0.018,0.9882,76
+2025-2025,complex ptsd,trauma,0.2387,0.0158,0.229,76
+2025-2025,complex ptsd,trauma informed,0.6416,0.0127,0.6381,76
+2025-2025,complex ptsd,traumatic stress,0.1527,0.0148,0.1451,76
+2025-2025,complex ptsd,vicarious trauma,0.1866,0.0045,0.1862,68
+2025-2025,intergenerational trauma,measure,1.0187,0.019,1.0214,82
+2025-2025,intergenerational trauma,moral injury,0.065,0.0046,0.062,82
+2025-2025,intergenerational trauma,participants,0.9154,0.0197,0.917,82
+2025-2025,intergenerational trauma,posttraumatic stress,0.3389,0.0288,0.3318,82
+2025-2025,intergenerational trauma,posttraumatic stress disorder,0.2171,0.0135,0.2112,82
+2025-2025,intergenerational trauma,psychological trauma,0.0734,0.0056,0.0691,82
+2025-2025,intergenerational trauma,ptsd,0.2739,0.0195,0.2698,82
+2025-2025,intergenerational trauma,results,1.1,0.0123,1.1007,82
+2025-2025,intergenerational trauma,secondary traumatic stress,0.1551,0.0091,0.153,82
+2025-2025,intergenerational trauma,significant,0.9575,0.0202,0.962,82
+2025-2025,intergenerational trauma,trauma,0.1336,0.0167,0.1189,82
+2025-2025,intergenerational trauma,trauma informed,0.5055,0.0124,0.5032,82
+2025-2025,intergenerational trauma,traumatic stress,0.1576,0.0151,0.1508,82
+2025-2025,intergenerational trauma,vicarious trauma,0.0687,0.003,0.0671,68
+2025-2025,measure,moral injury,1.0002,0.0082,1.0023,182
+2025-2025,measure,participants,1.3517,0.0049,1.3527,250
+2025-2025,measure,posttraumatic stress,0.9617,0.0051,0.9604,250
+2025-2025,measure,posttraumatic stress disorder,1.0104,0.0069,1.0101,250
+2025-2025,measure,psychological trauma,0.9842,0.0111,0.9838,163
+2025-2025,measure,ptsd,0.9794,0.0081,0.9786,250
+2025-2025,measure,results,1.4756,0.0036,1.4764,250
+2025-2025,measure,secondary traumatic stress,0.974,0.0083,0.9738,196
+2025-2025,measure,significant,1.149,0.0043,1.149,250
+2025-2025,measure,trauma,0.921,0.0094,0.9203,250
+2025-2025,measure,trauma informed,0.9153,0.0054,0.915,250
+2025-2025,measure,traumatic stress,0.943,0.0066,0.943,217
+2025-2025,measure,vicarious trauma,1.0205,0.0215,1.0214,68
+2025-2025,moral injury,participants,0.8999,0.0097,0.9003,182
+2025-2025,moral injury,posttraumatic stress,0.2306,0.0151,0.2326,182
+2025-2025,moral injury,posttraumatic stress disorder,0.1208,0.0073,0.118,182
+2025-2025,moral injury,psychological trauma,0.0492,0.0014,0.0489,163
+2025-2025,moral injury,ptsd,0.171,0.0103,0.1701,182
+2025-2025,moral injury,results,1.1109,0.0063,1.1108,182
+2025-2025,moral injury,secondary traumatic stress,0.0561,0.0017,0.0562,182
+2025-2025,moral injury,significant,0.9859,0.0094,0.9853,182
+2025-2025,moral injury,trauma,0.126,0.0105,0.1197,182
+2025-2025,moral injury,trauma informed,0.5457,0.0091,0.5432,182
+2025-2025,moral injury,traumatic stress,0.095,0.0044,0.0945,182
+2025-2025,moral injury,vicarious trauma,0.0287,0.0038,0.0237,68
+2025-2025,participants,posttraumatic stress,1.0014,0.007,1.0027,250
+2025-2025,participants,posttraumatic stress disorder,0.8684,0.0094,0.8684,250
+2025-2025,participants,psychological trauma,0.9216,0.0105,0.9219,163
+2025-2025,participants,ptsd,0.894,0.0105,0.8916,250
+2025-2025,participants,results,1.0812,0.0092,1.0813,250
+2025-2025,participants,secondary traumatic stress,0.9312,0.0081,0.9314,196
+2025-2025,participants,significant,1.5119,0.0056,1.5128,250
+2025-2025,participants,trauma,0.9342,0.009,0.9369,250
+2025-2025,participants,trauma informed,1.108,0.007,1.1086,250
+2025-2025,participants,traumatic stress,0.9308,0.006,0.9304,217
+2025-2025,participants,vicarious trauma,0.9049,0.0212,0.9009,68
+2025-2025,posttraumatic stress,posttraumatic stress disorder,0.1123,0.0129,0.107,250
+2025-2025,posttraumatic stress,psychological trauma,0.2385,0.0168,0.2359,163
+2025-2025,posttraumatic stress,ptsd,0.0733,0.0076,0.0699,250
+2025-2025,posttraumatic stress,results,1.2201,0.0047,1.22,250
+2025-2025,posttraumatic stress,secondary traumatic stress,0.2308,0.0134,0.2281,196
+2025-2025,posttraumatic stress,significant,0.8295,0.008,0.8284,250
+2025-2025,posttraumatic stress,trauma,0.2383,0.0136,0.2338,250
+2025-2025,posttraumatic stress,trauma informed,0.5371,0.0065,0.5352,250
+2025-2025,posttraumatic stress,traumatic stress,0.1189,0.0073,0.1179,217
+2025-2025,posttraumatic stress,vicarious trauma,0.2719,0.0291,0.2724,68
+2025-2025,posttraumatic stress disorder,psychological trauma,0.1308,0.0075,0.1275,163
+2025-2025,posttraumatic stress disorder,ptsd,0.0328,0.0059,0.0291,250
+2025-2025,posttraumatic stress disorder,results,1.1662,0.0062,1.1653,250
+2025-2025,posttraumatic stress disorder,secondary traumatic stress,0.1544,0.0075,0.1514,196
+2025-2025,posttraumatic stress disorder,significant,0.9569,0.0102,0.9563,250
+2025-2025,posttraumatic stress disorder,trauma,0.181,0.0092,0.1754,250
+2025-2025,posttraumatic stress disorder,trauma informed,0.6138,0.0115,0.6122,250
+2025-2025,posttraumatic stress disorder,traumatic stress,0.0913,0.0046,0.0883,217
+2025-2025,posttraumatic stress disorder,vicarious trauma,0.1617,0.0122,0.1546,68
+2025-2025,psychological trauma,ptsd,0.1792,0.0092,0.1762,163
+2025-2025,psychological trauma,results,1.1406,0.0075,1.1412,163
+2025-2025,psychological trauma,secondary traumatic stress,0.1219,0.0035,0.1213,163
+2025-2025,psychological trauma,significant,0.9547,0.0117,0.9542,163
+2025-2025,psychological trauma,trauma,0.0865,0.0092,0.0793,163
+2025-2025,psychological trauma,trauma informed,0.565,0.0086,0.5629,163
+2025-2025,psychological trauma,traumatic stress,0.0821,0.0055,0.081,163
+2025-2025,psychological trauma,vicarious trauma,0.0666,0.0071,0.0598,68
+2025-2025,ptsd,results,1.2095,0.0064,1.2094,250
+2025-2025,ptsd,secondary traumatic stress,0.1921,0.0104,0.1903,196
+2025-2025,ptsd,significant,0.9225,0.0097,0.9228,250
+2025-2025,ptsd,trauma,0.1831,0.0101,0.1799,250
+2025-2025,ptsd,trauma informed,0.5695,0.0126,0.5663,250
+2025-2025,ptsd,traumatic stress,0.0885,0.0045,0.0871,217
+2025-2025,ptsd,vicarious trauma,0.2165,0.0158,0.2108,68
+2025-2025,results,secondary traumatic stress,1.0957,0.0057,1.0955,196
+2025-2025,results,significant,1.4229,0.0057,1.4238,250
+2025-2025,results,trauma,1.1984,0.0071,1.1999,250
+2025-2025,results,trauma informed,1.2458,0.0048,1.2466,250
+2025-2025,results,traumatic stress,1.1992,0.0044,1.199,217
+2025-2025,results,vicarious trauma,1.0827,0.0131,1.0857,68
+2025-2025,secondary traumatic stress,significant,0.9959,0.008,0.9974,196
+2025-2025,secondary traumatic stress,trauma,0.2147,0.0104,0.2105,196
+2025-2025,secondary traumatic stress,trauma informed,0.5937,0.0076,0.5922,196
+2025-2025,secondary traumatic stress,traumatic stress,0.1496,0.0045,0.1485,196
+2025-2025,secondary traumatic stress,vicarious trauma,0.0656,0.0082,0.0624,68
+2025-2025,significant,trauma,0.9449,0.0085,0.9437,250
+2025-2025,significant,trauma informed,0.7504,0.01,0.7485,250
+2025-2025,significant,traumatic stress,0.9297,0.0079,0.9297,217
+2025-2025,significant,vicarious trauma,0.9908,0.0223,0.9907,68
+2025-2025,trauma,trauma informed,0.476,0.015,0.4746,250
+2025-2025,trauma,traumatic stress,0.0632,0.0044,0.0598,217
+2025-2025,trauma,vicarious trauma,0.1577,0.0204,0.147,68
+2025-2025,trauma informed,traumatic stress,0.4796,0.008,0.4775,217
+2025-2025,trauma informed,vicarious trauma,0.555,0.0144,0.5498,68
+2025-2025,traumatic stress,vicarious trauma,0.14,0.0185,0.1283,68

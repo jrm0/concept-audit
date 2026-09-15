@@ -3,145 +3,24 @@
   "concept": "posttraumatic stress disorder",
   "config": "configs/ptsd_trauma.yaml",
   "config_sha1": "a76e6b8c7b68",
-  "timestamp": "2026-09-14T15:32:08-04:00",
-  "git_commit": "a7563b5",
+  "timestamp": "2026-09-15T06:33:48-04:00",
+  "git_commit": "f06572b",
   "git_dirty": false,
   "argv": [
     "--config",
     "configs/ptsd_trauma.yaml",
-    "--frame-control"
+    "--center"
   ],
   "params": {
-    "center": false,
+    "center": true,
     "subset_filter": {
       "sources": [],
       "dbs": [],
       "strata": []
     },
-    "suffix": "_framectl",
-    "frame_control": true,
-    "frame_r2": {
-      "acute stress disorder": {
-        "r2": 0.1378,
-        "n": 819
-      },
-      "adjustment disorder": {
-        "r2": 0.0999,
-        "n": 1355
-      },
-      "battle fatigue": {
-        "r2": 0.3004,
-        "n": 139
-      },
-      "bereavement": {
-        "r2": 0.1534,
-        "n": 9566
-      },
-      "collective trauma": {
-        "r2": 0.0677,
-        "n": 562
-      },
-      "combat fatigue": {
-        "r2": 0.1416,
-        "n": 56
-      },
-      "combat neurosis": {
-        "r2": null,
-        "n": 7
-      },
-      "complex posttraumatic stress disorder": {
-        "r2": 0.1149,
-        "n": 609
-      },
-      "complex ptsd": {
-        "r2": 0.1279,
-        "n": 678
-      },
-      "gross stress reaction": {
-        "r2": null,
-        "n": 3
-      },
-      "intergenerational trauma": {
-        "r2": 0.1052,
-        "n": 512
-      },
-      "measure": {
-        "r2": 0.1439,
-        "n": 2158
-      },
-      "moral injury": {
-        "r2": 0.1188,
-        "n": 1076
-      },
-      "participants": {
-        "r2": 0.0837,
-        "n": 2138
-      },
-      "posttraumatic stress": {
-        "r2": 0.1995,
-        "n": 8909
-      },
-      "posttraumatic stress disorder": {
-        "r2": 0.1336,
-        "n": 42749
-      },
-      "postvietnam syndrome": {
-        "r2": null,
-        "n": 9
-      },
-      "psychological trauma": {
-        "r2": 0.0758,
-        "n": 2418
-      },
-      "ptsd": {
-        "r2": 0.1479,
-        "n": 35520
-      },
-      "rape trauma syndrome": {
-        "r2": 0.2087,
-        "n": 63
-      },
-      "results": {
-        "r2": 0.2077,
-        "n": 2910
-      },
-      "secondary traumatic stress": {
-        "r2": 0.1477,
-        "n": 1417
-      },
-      "shell shock": {
-        "r2": 0.135,
-        "n": 114
-      },
-      "significant": {
-        "r2": 0.0409,
-        "n": 2770
-      },
-      "trauma": {
-        "r2": 0.1414,
-        "n": 78361
-      },
-      "trauma informed": {
-        "r2": 0.083,
-        "n": 5840
-      },
-      "traumatic neurosis": {
-        "r2": 0.095,
-        "n": 152
-      },
-      "traumatic stress": {
-        "r2": 0.1267,
-        "n": 3747
-      },
-      "vicarious trauma": {
-        "r2": 0.104,
-        "n": 577
-      },
-      "war neurosis": {
-        "r2": 0.2244,
-        "n": 56
-      }
-    },
+    "suffix": "_centered",
+    "frame_control": false,
+    "frame_r2": null,
     "equalize_n": 250,
     "equalize_reps": 100,
     "min_n": 15,
@@ -240,47 +119,20 @@
       ]
     ],
     "clustering": "cluster_core (dip + Hennig Jaccard)",
-    "cells_tested": 113,
-    "cells_supported": 6,
+    "cells_tested": 0,
+    "cells_supported": 0,
     "syntax_guard": {
       "threshold": 0.5,
-      "checked": 6,
+      "checked": 0,
       "unchecked_old_shards": 0,
       "flagged": []
     },
     "n_shards": 298
   },
   "outputs": [
-    "results/ptsd_trauma_v2/lineage_drift_framectl.csv",
-    "results/ptsd_trauma_v2/term_distances_framectl.csv",
-    "results/ptsd_trauma_v2/lineage_report_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_tree_framectl.json",
-    "results/ptsd_trauma_v2/lineage_samples_acute_stress_disorder_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_adjustment_disorder_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_battle_fatigue_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_bereavement_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_collective_trauma_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_combat_fatigue_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_combat_neurosis_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_complex_posttraumatic_stress_disorder_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_complex_ptsd_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_gross_stress_reaction_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_intergenerational_trauma_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_moral_injury_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_posttraumatic_stress_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_posttraumatic_stress_disorder_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_postvietnam_syndrome_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_psychological_trauma_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_ptsd_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_rape_trauma_syndrome_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_secondary_traumatic_stress_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_shell_shock_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_trauma_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_trauma_informed_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_traumatic_neurosis_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_traumatic_stress_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_vicarious_trauma_framectl.txt",
-    "results/ptsd_trauma_v2/lineage_samples_war_neurosis_framectl.txt"
+    "results/ptsd_trauma_v2/lineage_drift_centered.csv",
+    "results/ptsd_trauma_v2/term_distances_centered.csv",
+    "results/ptsd_trauma_v2/lineage_report_centered.txt"
   ],
   "versions": {
     "python": "3.13.7",

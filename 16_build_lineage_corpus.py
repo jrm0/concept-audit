@@ -60,7 +60,7 @@ from pipeline_config import canon, term_pattern
 
 CFG, _ARGV = pc.load()
 
-RIS_ROOT = Path(CFG["ris_root"])
+RIS_ROOT = Path(CFG.get("ris_root") or ".")     # null for jsonl-only corpora (popular stratum)
 OUT_PATH = Path(CFG["docs_path"])
 FAMILY_DIR = OUT_PATH.parent
 FAMILY_CSV = Path(CFG["family_csv"])
@@ -73,6 +73,11 @@ CONTROL_TERMS = CFG.controls
 CORPUS = CFG.get("corpus", {}) or {}
 ALLOW_UNLISTED = "--allow-unlisted" in _ARGV
 RULES = pc.mention_rules(CFG)      # see pipeline_config: mention extraction
+# Sentence length bounds. 30 chars suits abstracts; headlines are shorter
+# ("Knee trauma ends season" = 23), so the popular config sets
+# mentions.min_sentence_chars lower.
+MIN_SENT_CHARS = int(RULES.get("min_sentence_chars", 30))
+MAX_SENT_CHARS = int(RULES.get("max_sentence_chars", 1200))
 
 TAG_RE = re.compile(r"^([A-Z][A-Z0-9])  - (.*)$")
 
@@ -225,7 +230,7 @@ def main():
             return None
         text = f"{title}. {abstract}"
         sentences = [s.strip() for s in SENT_RE.split(text)
-                     if 30 <= len(s.strip()) <= 1200]
+                     if MIN_SENT_CHARS <= len(s.strip()) <= MAX_SENT_CHARS]
         mentions = defaultdict(list)
         for s in sentences:
             # (1) strip "(ACRONYM)" after a family term — definitional device
@@ -270,7 +275,7 @@ def main():
     # 1. All RIS files, recursively.
     #    DB tags are ground truth for provenance; the file a record came in
     #    is only a convenience. Dedupe order: DOI, then normalized title.
-    all_ris = sorted(RIS_ROOT.rglob("*.ris"))
+    all_ris = sorted(RIS_ROOT.rglob("*.ris")) if CFG.get("ris_root") else []
     ris_files, unlisted, ignored = [], [], []
     for f in all_ris:
         sid, entry = source_of(f)
@@ -297,8 +302,23 @@ def main():
                              "(they will be ingested with source=UNLISTED).")
         print("WARNING: " + msg + "\n   ingesting as source=UNLISTED")
         ris_files += [(u, "UNLISTED", {}) for u in unlisted]
+    # 1b. JSONL sources (Session 33: the POPULAR stratum — news articles from
+    #     25_popular_news.py). A source whose `files` globs end in .jsonl is
+    #     read line by line; each line is one document:
+    #       {"id": ..., "url": ..., "doi": "", "year": 1999, "outlet": "The Guardian",
+    #        "section": ..., "title": ..., "text": ..., "dbs": ["Guardian"],
+    #        "ty": "NEWS", "index_terms": [...]}
+    #     Same dedupe (url/id, then normalized title), same mention rules, same
+    #     audit. Stratum comes from `ty` through corpus.strata (NEWS -> popular).
+    jsonl_files = []
+    for s in CORPUS.get("sources", []) or []:
+        for g in s.get("files", []):
+            if str(g).endswith(".jsonl"):
+                for jf in sorted(Path().glob(str(g))):
+                    jsonl_files.append((jf, s["id"], s))
     listed_missing = [s["id"] for s in CORPUS.get("sources", []) or []
-                      if not any(sid == s["id"] for _, sid, _ in ris_files)]
+                      if not any(sid == s["id"] for _, sid, _ in ris_files)
+                      and not any(sid == s["id"] for _, sid, _ in jsonl_files)]
     if listed_missing:
         print(f"WARNING: corpus.sources with no export on disk: {listed_missing}")
 
@@ -342,6 +362,46 @@ def main():
             if made and nt:
                 by_title[nt] = made
         print(f"{f.name} [{sid}]: +{len(docs) - n_before} docs, "
+              f"{stats['merged_duplicates'] - merged_before} merged "
+              f"(total {len(docs)})")
+
+    for jf, sid, entry in jsonl_files:
+        n_before, merged_before = len(docs), stats["merged_duplicates"]
+        with open(jf, encoding="utf-8") as fh:
+            for line in fh:
+                try:
+                    w = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                audit[sid]["records"] += 1
+                text = (w.get("text") or w.get("abstract") or "").strip()
+                if text:
+                    audit[sid]["with_abstract"] += 1
+                ty = (w.get("ty") or "NEWS").strip()
+                audit[sid][f"TY:{ty}"] += 1
+                title = w.get("title") or ""
+                nt = norm_title(title)
+                dbs = [d for d in (w.get("dbs") or []) if d]
+                key = (w.get("doi") or w.get("url") or w.get("id") or "").strip().lower()
+                if not key:
+                    key = f"T:{nt or title[:80].lower()}"
+                if key in docs:
+                    merge(key, dbs, sid)
+                    continue
+                if nt and nt in by_title:
+                    merge(by_title[nt], dbs, sid)
+                    continue
+                # `journal` = the news SECTION (the venue within the outlet, what
+                # venue_categories match); the outlet itself is the DB tag.
+                made = add_doc(key, w.get("year"),
+                               w.get("section") or w.get("journal") or w.get("outlet") or "",
+                               title, text, w.get("index_terms") or [], dbs,
+                               source=sid, stratum=stratum_of(ty))
+                if made:
+                    docs[made]["outlet"] = w.get("outlet") or ""
+                    if nt:
+                        by_title[nt] = made
+        print(f"{jf.name} [{sid}]: +{len(docs) - n_before} docs, "
               f"{stats['merged_duplicates'] - merged_before} merged "
               f"(total {len(docs)})")
 
