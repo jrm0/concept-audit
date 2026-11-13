@@ -1,0 +1,84 @@
+{
+  "script": "29_creep_measures",
+  "concept": "ego depletion",
+  "config": "configs/ego_depletion.yaml",
+  "config_sha1": "e150f30e44af",
+  "timestamp": "2026-10-01T15:02:51-04:00",
+  "git_commit": "5beeaba",
+  "git_dirty": true,
+  "argv": [
+    "--config",
+    "configs/ego_depletion.yaml",
+    "--phase",
+    "report"
+  ],
+  "params": {
+    "window": 5,
+    "min_n": 15,
+    "boot": 500,
+    "seed": 42,
+    "parent": "self control",
+    "breadth": {
+      "n_sample": 50,
+      "reps": 10,
+      "min_n": 15,
+      "seed": 42,
+      "controls": [
+        "participants",
+        "results",
+        "significant",
+        "measure"
+      ],
+      "sentence_model": "sentence-transformers/all-mpnet-base-v2",
+      "masked_model": "allenai/scibert_scivocab_uncased",
+      "emb_dir": "data/lineage_emb_full_v2"
+    },
+    "merge": {},
+    "intensifiers": [
+      "debilitating",
+      "destructive",
+      "devastating",
+      "extreme",
+      "great",
+      "harsh",
+      "intense",
+      "major",
+      "powerful",
+      "serious",
+      "severe"
+    ],
+    "pathology_lexicon": [
+      "ailment",
+      "clinic",
+      "clinical",
+      "cure",
+      "diagnosis",
+      "disease",
+      "disorder",
+      "ill",
+      "illness",
+      "medical",
+      "medicine",
+      "pathology",
+      "prognosis",
+      "sick",
+      "sickness",
+      "symptom",
+      "treatment"
+    ]
+  },
+  "outputs": [
+    "results/ego_depletion_full_v2/creep_measures.json",
+    "results/ego_depletion_full_v2/creep_measures_report.txt"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "diptest": "0.11.0",
+    "torch": "2.12.0",
+    "transformers": "5.13.0"
+  },
+  "notes": "Concept-creep instrument (Baes/Haslam/Vylomova) re-implemented on this corpus for the head-to-head in Paper 1; see docstring for sources."
+}

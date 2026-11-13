@@ -1,0 +1,237 @@
+{
+  "corpus_docs": 48908,
+  "resolved": 29092,
+  "route_counts": {
+    "doi": 27714,
+    "doi_via_crossref": 1315,
+    "title": 57,
+    "title_after_doi_miss": 6
+  },
+  "per_period": {
+    "2025-2025": {
+      "n": 4245,
+      "resolved": 2311,
+      "n_journal": 3986,
+      "resolved_journal": 2263,
+      "n_thesis": 203,
+      "intra_refs_out": 13304
+    },
+    "2020-2024": {
+      "n": 11583,
+      "resolved": 7702,
+      "n_journal": 10360,
+      "resolved_journal": 7425,
+      "n_thesis": 847,
+      "intra_refs_out": 52771
+    },
+    "2015-2019": {
+      "n": 10071,
+      "resolved": 6692,
+      "n_journal": 8460,
+      "resolved_journal": 6289,
+      "n_thesis": 940,
+      "intra_refs_out": 45956
+    },
+    "2010-2014": {
+      "n": 7908,
+      "resolved": 4805,
+      "n_journal": 6470,
+      "resolved_journal": 4464,
+      "n_thesis": 692,
+      "intra_refs_out": 25323
+    },
+    "1995-1999": {
+      "n": 2426,
+      "resolved": 964,
+      "n_journal": 1881,
+      "resolved_journal": 910,
+      "n_thesis": 300,
+      "intra_refs_out": 1381
+    },
+    "2005-2009": {
+      "n": 5346,
+      "resolved": 2761,
+      "n_journal": 4360,
+      "resolved_journal": 2589,
+      "n_thesis": 442,
+      "intra_refs_out": 9967
+    },
+    "2000-2004": {
+      "n": 3233,
+      "resolved": 1566,
+      "n_journal": 2569,
+      "resolved_journal": 1441,
+      "n_thesis": 332,
+      "intra_refs_out": 3798
+    },
+    "1980-1984": {
+      "n": 941,
+      "resolved": 556,
+      "n_journal": 935,
+      "resolved_journal": 555,
+      "n_thesis": 3,
+      "intra_refs_out": 562
+    },
+    "1985-1989": {
+      "n": 1065,
+      "resolved": 576,
+      "n_journal": 933,
+      "resolved_journal": 544,
+      "n_thesis": 8,
+      "intra_refs_out": 691
+    },
+    "1990-1994": {
+      "n": 1432,
+      "resolved": 718,
+      "n_journal": 1220,
+      "resolved_journal": 669,
+      "n_thesis": 23,
+      "intra_refs_out": 853
+    },
+    "1975-1979": {
+      "n": 658,
+      "resolved": 404,
+      "n_journal": 640,
+      "resolved_journal": 399,
+      "n_thesis": 2,
+      "intra_refs_out": 145
+    }
+  },
+  "intra_corpus_edges": 154751,
+  "by_stratum": {
+    "journal": {
+      "n": 41814,
+      "resolved": 27548
+    },
+    "other": {
+      "n": 25,
+      "resolved": 4
+    },
+    "book": {
+      "n": 3277,
+      "resolved": 1481
+    },
+    "thesis": {
+      "n": 3792,
+      "resolved": 22
+    }
+  },
+  "by_source": {
+    "business": {
+      "n": 7957,
+      "resolved": 4784
+    },
+    "crime_socialwork": {
+      "n": 7704,
+      "resolved": 6515
+    },
+    "education": {
+      "n": 10789,
+      "resolved": 5726
+    },
+    "openalex_works": {
+      "n": 3529,
+      "resolved": 3350
+    },
+    "psyc_family_2015_2025": {
+      "n": 14116,
+      "resolved": 11567
+    },
+    "psyc_focal": {
+      "n": 1136,
+      "resolved": 1107
+    },
+    "econ": {
+      "n": 1599,
+      "resolved": 1117
+    },
+    "health": {
+      "n": 8493,
+      "resolved": 5472
+    },
+    "psyc_family_2000_2015": {
+      "n": 11791,
+      "resolved": 8277
+    },
+    "psyc_family_all": {
+      "n": 2591,
+      "resolved": 2442
+    },
+    "psyc_family_1975_1999": {
+      "n": 4507,
+      "resolved": 2630
+    }
+  },
+  "by_venue_category": {
+    "core/other psych": {
+      "n": 30332,
+      "resolved": 17990
+    },
+    "work/org": {
+      "n": 4701,
+      "resolved": 3048
+    },
+    "education": {
+      "n": 5957,
+      "resolved": 2622
+    },
+    "crime/social": {
+      "n": 1579,
+      "resolved": 1254
+    },
+    "sport": {
+      "n": 571,
+      "resolved": 391
+    },
+    "health/med": {
+      "n": 5768,
+      "resolved": 3750
+    }
+  },
+  "by_term": {
+    "self control": {
+      "n": 18500,
+      "resolved": 11938
+    },
+    "self regulation": {
+      "n": 30046,
+      "resolved": 17020
+    },
+    "willpower": {
+      "n": 1365,
+      "resolved": 667
+    },
+    "ego depletion": {
+      "n": 732,
+      "resolved": 644
+    },
+    "strength model": {
+      "n": 179,
+      "resolved": 145
+    },
+    "executive function": {
+      "n": 911,
+      "resolved": 643
+    },
+    "self control depletion": {
+      "n": 105,
+      "resolved": 82
+    },
+    "delay of gratification": {
+      "n": 330,
+      "resolved": 255
+    },
+    "regulatory resource": {
+      "n": 19,
+      "resolved": 18
+    },
+    "self regulatory depletion": {
+      "n": 56,
+      "resolved": 47
+    },
+    "depletion effect": {
+      "n": 92,
+      "resolved": 78
+    }
+  }
+}

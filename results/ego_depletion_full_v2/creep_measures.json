@@ -1,0 +1,11106 @@
+{
+ "settings": {
+  "window": 5,
+  "min_n": 15,
+  "boot": 500,
+  "seed": 42,
+  "parent": "self control",
+  "breadth": {
+   "n_sample": 50,
+   "reps": 10,
+   "min_n": 15,
+   "seed": 42,
+   "controls": [
+    "participants",
+    "results",
+    "significant",
+    "measure"
+   ],
+   "sentence_model": "sentence-transformers/all-mpnet-base-v2",
+   "masked_model": "allenai/scibert_scivocab_uncased",
+   "emb_dir": "data/lineage_emb_full_v2"
+  },
+  "merge": {},
+  "intensifiers": [
+   "debilitating",
+   "destructive",
+   "devastating",
+   "extreme",
+   "great",
+   "harsh",
+   "intense",
+   "major",
+   "powerful",
+   "serious",
+   "severe"
+  ],
+  "pathology_lexicon": [
+   "ailment",
+   "clinic",
+   "clinical",
+   "cure",
+   "diagnosis",
+   "disease",
+   "disorder",
+   "ill",
+   "illness",
+   "medical",
+   "medicine",
+   "pathology",
+   "prognosis",
+   "sick",
+   "sickness",
+   "symptom",
+   "treatment"
+  ]
+ },
+ "periods": [
+  "1975-1979",
+  "1980-1984",
+  "1985-1989",
+  "1990-1994",
+  "1995-1999",
+  "2000-2004",
+  "2005-2009",
+  "2010-2014",
+  "2015-2019",
+  "2020-2024",
+  "2025-2025"
+ ],
+ "n_docs_period": {
+  "2025-2025": 4245,
+  "2020-2024": 11583,
+  "2015-2019": 10071,
+  "2010-2014": 7908,
+  "1995-1999": 2426,
+  "2005-2009": 5346,
+  "2000-2004": 3233,
+  "1980-1984": 941,
+  "1985-1989": 1065,
+  "1990-1994": 1432,
+  "1975-1979": 658
+ },
+ "table": {
+  "self regulation": {
+   "1975-1979": {
+    "valence": 5.5101,
+    "arousal": 4.0991,
+    "dominance": 5.719,
+    "severity": 7.589,
+    "pathologization": 0.0092,
+    "intensifier": 0.0044,
+    "coverage": 0.8312,
+    "n_docs": 166,
+    "n_mentions": 226,
+    "n_collocates": 1517,
+    "ci95": {
+     "valence": [
+      5.444,
+      5.586
+     ],
+     "arousal": [
+      4.0461,
+      4.1501
+     ],
+     "dominance": [
+      5.658,
+      5.7849
+     ],
+     "severity": [
+      7.49,
+      7.6886
+     ],
+     "pathologization": [
+      0.0041,
+      0.0138
+     ],
+     "intensifier": [
+      0.0,
+      0.0138
+     ]
+    },
+    "family_share": 0.2523,
+    "breadth_mpnet": 0.6943,
+    "breadth_mpnet_sd": 0.0143,
+    "breadth_masked": 0.2388,
+    "breadth_masked_sd": 0.0065
+   },
+   "1980-1984": {
+    "valence": 5.5504,
+    "arousal": 4.0467,
+    "dominance": 5.7153,
+    "severity": 7.4963,
+    "pathologization": 0.0089,
+    "intensifier": 0.0,
+    "coverage": 0.8178,
+    "n_docs": 317,
+    "n_mentions": 459,
+    "n_collocates": 3140,
+    "ci95": {
+     "valence": [
+      5.5008,
+      5.5966
+     ],
+     "arousal": [
+      4.0149,
+      4.0794
+     ],
+     "dominance": [
+      5.6625,
+      5.7636
+     ],
+     "severity": [
+      7.4369,
+      7.5643
+     ],
+     "pathologization": [
+      0.0048,
+      0.0139
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.3369,
+    "breadth_mpnet": 0.69,
+    "breadth_mpnet_sd": 0.0188,
+    "breadth_masked": 0.2279,
+    "breadth_masked_sd": 0.007
+   },
+   "1985-1989": {
+    "valence": 5.5817,
+    "arousal": 4.0734,
+    "dominance": 5.7218,
+    "severity": 7.4917,
+    "pathologization": 0.0103,
+    "intensifier": 0.0,
+    "coverage": 0.8174,
+    "n_docs": 463,
+    "n_mentions": 684,
+    "n_collocates": 4956,
+    "ci95": {
+     "valence": [
+      5.5404,
+      5.6229
+     ],
+     "arousal": [
+      4.0445,
+      4.1012
+     ],
+     "dominance": [
+      5.6814,
+      5.7602
+     ],
+     "severity": [
+      7.4403,
+      7.5458
+     ],
+     "pathologization": [
+      0.0069,
+      0.014
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.4347,
+    "breadth_mpnet": 0.6906,
+    "breadth_mpnet_sd": 0.0179,
+    "breadth_masked": 0.2289,
+    "breadth_masked_sd": 0.0092
+   },
+   "1990-1994": {
+    "valence": 5.5863,
+    "arousal": 4.0838,
+    "dominance": 5.7221,
+    "severity": 7.4975,
+    "pathologization": 0.0057,
+    "intensifier": 0.001,
+    "coverage": 0.8279,
+    "n_docs": 748,
+    "n_mentions": 1030,
+    "n_collocates": 7525,
+    "ci95": {
+     "valence": [
+      5.5524,
+      5.6187
+     ],
+     "arousal": [
+      4.0581,
+      4.1083
+     ],
+     "dominance": [
+      5.6891,
+      5.7504
+     ],
+     "severity": [
+      7.4582,
+      7.5359
+     ],
+     "pathologization": [
+      0.0039,
+      0.0078
+     ],
+     "intensifier": [
+      0.0,
+      0.0034
+     ]
+    },
+    "family_share": 0.5223,
+    "breadth_mpnet": 0.7016,
+    "breadth_mpnet_sd": 0.0177,
+    "breadth_masked": 0.2363,
+    "breadth_masked_sd": 0.0098
+   },
+   "1995-1999": {
+    "valence": 5.6115,
+    "arousal": 4.1225,
+    "dominance": 5.7273,
+    "severity": 7.5111,
+    "pathologization": 0.0062,
+    "intensifier": 0.0035,
+    "coverage": 0.837,
+    "n_docs": 1473,
+    "n_mentions": 2275,
+    "n_collocates": 16195,
+    "ci95": {
+     "valence": [
+      5.585,
+      5.6404
+     ],
+     "arousal": [
+      4.1052,
+      4.1392
+     ],
+     "dominance": [
+      5.7052,
+      5.7485
+     ],
+     "severity": [
+      7.4754,
+      7.541
+     ],
+     "pathologization": [
+      0.0047,
+      0.0079
+     ],
+     "intensifier": [
+      0.0011,
+      0.0064
+     ]
+    },
+    "family_share": 0.6072,
+    "breadth_mpnet": 0.7074,
+    "breadth_mpnet_sd": 0.0173,
+    "breadth_masked": 0.2275,
+    "breadth_masked_sd": 0.009
+   },
+   "2000-2004": {
+    "valence": 5.6539,
+    "arousal": 4.1134,
+    "dominance": 5.7376,
+    "severity": 7.4595,
+    "pathologization": 0.0057,
+    "intensifier": 0.0009,
+    "coverage": 0.8305,
+    "n_docs": 2094,
+    "n_mentions": 3450,
+    "n_collocates": 24870,
+    "ci95": {
+     "valence": [
+      5.6341,
+      5.6731
+     ],
+     "arousal": [
+      4.0999,
+      4.1277
+     ],
+     "dominance": [
+      5.7195,
+      5.7552
+     ],
+     "severity": [
+      7.4361,
+      7.4823
+     ],
+     "pathologization": [
+      0.0046,
+      0.0068
+     ],
+     "intensifier": [
+      0.0,
+      0.002
+     ]
+    },
+    "family_share": 0.6477,
+    "breadth_mpnet": 0.7122,
+    "breadth_mpnet_sd": 0.0163,
+    "breadth_masked": 0.2177,
+    "breadth_masked_sd": 0.0083
+   },
+   "2005-2009": {
+    "valence": 5.6871,
+    "arousal": 4.1203,
+    "dominance": 5.7745,
+    "severity": 7.4332,
+    "pathologization": 0.0054,
+    "intensifier": 0.0021,
+    "coverage": 0.826,
+    "n_docs": 3288,
+    "n_mentions": 5735,
+    "n_collocates": 42230,
+    "ci95": {
+     "valence": [
+      5.6704,
+      5.7031
+     ],
+     "arousal": [
+      4.1096,
+      4.1305
+     ],
+     "dominance": [
+      5.7607,
+      5.7875
+     ],
+     "severity": [
+      7.4152,
+      7.4516
+     ],
+     "pathologization": [
+      0.0046,
+      0.0063
+     ],
+     "intensifier": [
+      0.0011,
+      0.0033
+     ]
+    },
+    "family_share": 0.615,
+    "breadth_mpnet": 0.7111,
+    "breadth_mpnet_sd": 0.0271,
+    "breadth_masked": 0.2269,
+    "breadth_masked_sd": 0.0142
+   },
+   "2010-2014": {
+    "valence": 5.7101,
+    "arousal": 4.1307,
+    "dominance": 5.7881,
+    "severity": 7.4207,
+    "pathologization": 0.0051,
+    "intensifier": 0.0018,
+    "coverage": 0.8232,
+    "n_docs": 4933,
+    "n_mentions": 9249,
+    "n_collocates": 70020,
+    "ci95": {
+     "valence": [
+      5.6968,
+      5.7226
+     ],
+     "arousal": [
+      4.1223,
+      4.1395
+     ],
+     "dominance": [
+      5.7774,
+      5.7995
+     ],
+     "severity": [
+      7.4071,
+      7.4354
+     ],
+     "pathologization": [
+      0.0044,
+      0.0059
+     ],
+     "intensifier": [
+      0.0011,
+      0.0028
+     ]
+    },
+    "family_share": 0.6238,
+    "breadth_mpnet": 0.697,
+    "breadth_mpnet_sd": 0.0212,
+    "breadth_masked": 0.2179,
+    "breadth_masked_sd": 0.0137
+   },
+   "2015-2019": {
+    "valence": 5.7349,
+    "arousal": 4.1471,
+    "dominance": 5.7907,
+    "severity": 7.4123,
+    "pathologization": 0.0051,
+    "intensifier": 0.002,
+    "coverage": 0.821,
+    "n_docs": 6251,
+    "n_mentions": 12482,
+    "n_collocates": 96162,
+    "ci95": {
+     "valence": [
+      5.7237,
+      5.7466
+     ],
+     "arousal": [
+      4.1397,
+      4.1543
+     ],
+     "dominance": [
+      5.7806,
+      5.8001
+     ],
+     "severity": [
+      7.3987,
+      7.4248
+     ],
+     "pathologization": [
+      0.0045,
+      0.0057
+     ],
+     "intensifier": [
+      0.0012,
+      0.0029
+     ]
+    },
+    "family_share": 0.6207,
+    "breadth_mpnet": 0.7002,
+    "breadth_mpnet_sd": 0.0143,
+    "breadth_masked": 0.2257,
+    "breadth_masked_sd": 0.0088
+   },
+   "2020-2024": {
+    "valence": 5.7766,
+    "arousal": 4.1514,
+    "dominance": 5.8163,
+    "severity": 7.3748,
+    "pathologization": 0.0041,
+    "intensifier": 0.0016,
+    "coverage": 0.8139,
+    "n_docs": 7312,
+    "n_mentions": 15249,
+    "n_collocates": 119712,
+    "ci95": {
+     "valence": [
+      5.766,
+      5.7857
+     ],
+     "arousal": [
+      4.1453,
+      4.1581
+     ],
+     "dominance": [
+      5.8069,
+      5.8248
+     ],
+     "severity": [
+      7.3636,
+      7.3872
+     ],
+     "pathologization": [
+      0.0037,
+      0.0046
+     ],
+     "intensifier": [
+      0.001,
+      0.0023
+     ]
+    },
+    "family_share": 0.6313,
+    "breadth_mpnet": 0.6979,
+    "breadth_mpnet_sd": 0.0221,
+    "breadth_masked": 0.2058,
+    "breadth_masked_sd": 0.0091
+   },
+   "2025-2025": {
+    "valence": 5.786,
+    "arousal": 4.1619,
+    "dominance": 5.831,
+    "severity": 7.3759,
+    "pathologization": 0.0035,
+    "intensifier": 0.0012,
+    "coverage": 0.8079,
+    "n_docs": 3001,
+    "n_mentions": 6010,
+    "n_collocates": 48007,
+    "ci95": {
+     "valence": [
+      5.7708,
+      5.8011
+     ],
+     "arousal": [
+      4.1504,
+      4.1717
+     ],
+     "dominance": [
+      5.8162,
+      5.8456
+     ],
+     "severity": [
+      7.3569,
+      7.3945
+     ],
+     "pathologization": [
+      0.0029,
+      0.0042
+     ],
+     "intensifier": [
+      0.0005,
+      0.002
+     ]
+    },
+    "family_share": 0.7069,
+    "breadth_mpnet": 0.7007,
+    "breadth_mpnet_sd": 0.0259,
+    "breadth_masked": 0.2109,
+    "breadth_masked_sd": 0.0117
+   }
+  },
+  "self control": {
+   "1975-1979": {
+    "valence": 5.5318,
+    "arousal": 4.1174,
+    "dominance": 5.6607,
+    "severity": 7.5855,
+    "pathologization": 0.0129,
+    "intensifier": 0.0047,
+    "coverage": 0.8298,
+    "n_docs": 493,
+    "n_mentions": 843,
+    "n_collocates": 5974,
+    "ci95": {
+     "valence": [
+      5.4932,
+      5.5712
+     ],
+     "arousal": [
+      4.0888,
+      4.1439
+     ],
+     "dominance": [
+      5.6279,
+      5.6913
+     ],
+     "severity": [
+      7.5344,
+      7.6363
+     ],
+     "pathologization": [
+      0.0095,
+      0.0163
+     ],
+     "intensifier": [
+      0.0011,
+      0.0106
+     ]
+    },
+    "family_share": 0.7492,
+    "breadth_mpnet": 0.6375,
+    "breadth_mpnet_sd": 0.0162,
+    "breadth_masked": 0.2311,
+    "breadth_masked_sd": 0.016
+   },
+   "1980-1984": {
+    "valence": 5.5153,
+    "arousal": 4.1094,
+    "dominance": 5.6482,
+    "severity": 7.5942,
+    "pathologization": 0.0112,
+    "intensifier": 0.0077,
+    "coverage": 0.8394,
+    "n_docs": 627,
+    "n_mentions": 1036,
+    "n_collocates": 7586,
+    "ci95": {
+     "valence": [
+      5.4763,
+      5.5527
+     ],
+     "arousal": [
+      4.0877,
+      4.1334
+     ],
+     "dominance": [
+      5.6165,
+      5.6806
+     ],
+     "severity": [
+      7.5507,
+      7.6416
+     ],
+     "pathologization": [
+      0.0086,
+      0.0138
+     ],
+     "intensifier": [
+      0.0028,
+      0.0132
+     ]
+    },
+    "family_share": 0.6663,
+    "breadth_mpnet": 0.6491,
+    "breadth_mpnet_sd": 0.0179,
+    "breadth_masked": 0.2212,
+    "breadth_masked_sd": 0.0125
+   },
+   "1985-1989": {
+    "valence": 5.4973,
+    "arousal": 4.1797,
+    "dominance": 5.6793,
+    "severity": 7.6824,
+    "pathologization": 0.0127,
+    "intensifier": 0.0066,
+    "coverage": 0.8382,
+    "n_docs": 596,
+    "n_mentions": 911,
+    "n_collocates": 6946,
+    "ci95": {
+     "valence": [
+      5.461,
+      5.5288
+     ],
+     "arousal": [
+      4.1519,
+      4.209
+     ],
+     "dominance": [
+      5.646,
+      5.7104
+     ],
+     "severity": [
+      7.6343,
+      7.7299
+     ],
+     "pathologization": [
+      0.0093,
+      0.0168
+     ],
+     "intensifier": [
+      0.0012,
+      0.0132
+     ]
+    },
+    "family_share": 0.5596,
+    "breadth_mpnet": 0.6545,
+    "breadth_mpnet_sd": 0.019,
+    "breadth_masked": 0.2269,
+    "breadth_masked_sd": 0.0145
+   },
+   "1990-1994": {
+    "valence": 5.4716,
+    "arousal": 4.2071,
+    "dominance": 5.628,
+    "severity": 7.7355,
+    "pathologization": 0.0098,
+    "intensifier": 0.0065,
+    "coverage": 0.8295,
+    "n_docs": 665,
+    "n_mentions": 921,
+    "n_collocates": 7038,
+    "ci95": {
+     "valence": [
+      5.4361,
+      5.511
+     ],
+     "arousal": [
+      4.1815,
+      4.2357
+     ],
+     "dominance": [
+      5.5992,
+      5.6612
+     ],
+     "severity": [
+      7.68,
+      7.7816
+     ],
+     "pathologization": [
+      0.0073,
+      0.0128
+     ],
+     "intensifier": [
+      0.0021,
+      0.0117
+     ]
+    },
+    "family_share": 0.4644,
+    "breadth_mpnet": 0.704,
+    "breadth_mpnet_sd": 0.017,
+    "breadth_masked": 0.2316,
+    "breadth_masked_sd": 0.0078
+   },
+   "1995-1999": {
+    "valence": 5.5307,
+    "arousal": 4.1966,
+    "dominance": 5.6334,
+    "severity": 7.6659,
+    "pathologization": 0.0081,
+    "intensifier": 0.0076,
+    "coverage": 0.839,
+    "n_docs": 941,
+    "n_mentions": 1579,
+    "n_collocates": 12048,
+    "ci95": {
+     "valence": [
+      5.4933,
+      5.5641
+     ],
+     "arousal": [
+      4.1735,
+      4.2179
+     ],
+     "dominance": [
+      5.6045,
+      5.6626
+     ],
+     "severity": [
+      7.622,
+      7.7124
+     ],
+     "pathologization": [
+      0.0058,
+      0.0106
+     ],
+     "intensifier": [
+      0.0032,
+      0.0123
+     ]
+    },
+    "family_share": 0.3879,
+    "breadth_mpnet": 0.6931,
+    "breadth_mpnet_sd": 0.022,
+    "breadth_masked": 0.2091,
+    "breadth_masked_sd": 0.0136
+   },
+   "2000-2004": {
+    "valence": 5.5297,
+    "arousal": 4.1896,
+    "dominance": 5.6538,
+    "severity": 7.6599,
+    "pathologization": 0.006,
+    "intensifier": 0.0015,
+    "coverage": 0.836,
+    "n_docs": 1116,
+    "n_mentions": 2046,
+    "n_collocates": 15406,
+    "ci95": {
+     "valence": [
+      5.5008,
+      5.5626
+     ],
+     "arousal": [
+      4.1706,
+      4.2097
+     ],
+     "dominance": [
+      5.6276,
+      5.6823
+     ],
+     "severity": [
+      7.6221,
+      7.6936
+     ],
+     "pathologization": [
+      0.0045,
+      0.0075
+     ],
+     "intensifier": [
+      0.0,
+      0.0034
+     ]
+    },
+    "family_share": 0.3452,
+    "breadth_mpnet": 0.6939,
+    "breadth_mpnet_sd": 0.0132,
+    "breadth_masked": 0.2031,
+    "breadth_masked_sd": 0.0102
+   },
+   "2005-2009": {
+    "valence": 5.523,
+    "arousal": 4.1496,
+    "dominance": 5.6084,
+    "severity": 7.6266,
+    "pathologization": 0.0031,
+    "intensifier": 0.0031,
+    "coverage": 0.8196,
+    "n_docs": 2033,
+    "n_mentions": 4579,
+    "n_collocates": 34007,
+    "ci95": {
+     "valence": [
+      5.5007,
+      5.5427
+     ],
+     "arousal": [
+      4.1352,
+      4.1647
+     ],
+     "dominance": [
+      5.5906,
+      5.6242
+     ],
+     "severity": [
+      7.6055,
+      7.6529
+     ],
+     "pathologization": [
+      0.0024,
+      0.004
+     ],
+     "intensifier": [
+      0.0015,
+      0.0046
+     ]
+    },
+    "family_share": 0.3803,
+    "breadth_mpnet": 0.6621,
+    "breadth_mpnet_sd": 0.0188,
+    "breadth_masked": 0.196,
+    "breadth_masked_sd": 0.0089
+   },
+   "2010-2014": {
+    "valence": 5.5497,
+    "arousal": 4.1466,
+    "dominance": 5.6547,
+    "severity": 7.5969,
+    "pathologization": 0.0034,
+    "intensifier": 0.003,
+    "coverage": 0.8271,
+    "n_docs": 2912,
+    "n_mentions": 6962,
+    "n_collocates": 52538,
+    "ci95": {
+     "valence": [
+      5.5308,
+      5.5687
+     ],
+     "arousal": [
+      4.1353,
+      4.1591
+     ],
+     "dominance": [
+      5.6402,
+      5.6695
+     ],
+     "severity": [
+      7.5748,
+      7.6184
+     ],
+     "pathologization": [
+      0.0027,
+      0.0041
+     ],
+     "intensifier": [
+      0.0015,
+      0.0049
+     ]
+    },
+    "family_share": 0.3682,
+    "breadth_mpnet": 0.6815,
+    "breadth_mpnet_sd": 0.0178,
+    "breadth_masked": 0.2026,
+    "breadth_masked_sd": 0.008
+   },
+   "2015-2019": {
+    "valence": 5.5431,
+    "arousal": 4.14,
+    "dominance": 5.6483,
+    "severity": 7.5969,
+    "pathologization": 0.0029,
+    "intensifier": 0.0027,
+    "coverage": 0.8204,
+    "n_docs": 3768,
+    "n_mentions": 9911,
+    "n_collocates": 75641,
+    "ci95": {
+     "valence": [
+      5.5293,
+      5.5568
+     ],
+     "arousal": [
+      4.1309,
+      4.15
+     ],
+     "dominance": [
+      5.6353,
+      5.6613
+     ],
+     "severity": [
+      7.5804,
+      7.6137
+     ],
+     "pathologization": [
+      0.0024,
+      0.0034
+     ],
+     "intensifier": [
+      0.0016,
+      0.0039
+     ]
+    },
+    "family_share": 0.3741,
+    "breadth_mpnet": 0.6718,
+    "breadth_mpnet_sd": 0.0222,
+    "breadth_masked": 0.193,
+    "breadth_masked_sd": 0.0134
+   },
+   "2020-2024": {
+    "valence": 5.5636,
+    "arousal": 4.1472,
+    "dominance": 5.6373,
+    "severity": 7.5836,
+    "pathologization": 0.0038,
+    "intensifier": 0.0021,
+    "coverage": 0.8095,
+    "n_docs": 4154,
+    "n_mentions": 10998,
+    "n_collocates": 85804,
+    "ci95": {
+     "valence": [
+      5.5479,
+      5.5778
+     ],
+     "arousal": [
+      4.1388,
+      4.1556
+     ],
+     "dominance": [
+      5.6234,
+      5.6491
+     ],
+     "severity": [
+      7.5671,
+      7.6021
+     ],
+     "pathologization": [
+      0.0032,
+      0.0045
+     ],
+     "intensifier": [
+      0.0013,
+      0.0029
+     ]
+    },
+    "family_share": 0.3586,
+    "breadth_mpnet": 0.682,
+    "breadth_mpnet_sd": 0.0229,
+    "breadth_masked": 0.189,
+    "breadth_masked_sd": 0.0134
+   },
+   "2025-2025": {
+    "valence": 5.5679,
+    "arousal": 4.1474,
+    "dominance": 5.633,
+    "severity": 7.5795,
+    "pathologization": 0.0037,
+    "intensifier": 0.0035,
+    "coverage": 0.8048,
+    "n_docs": 1195,
+    "n_mentions": 3166,
+    "n_collocates": 25063,
+    "ci95": {
+     "valence": [
+      5.5398,
+      5.6008
+     ],
+     "arousal": [
+      4.1291,
+      4.1646
+     ],
+     "dominance": [
+      5.6121,
+      5.6591
+     ],
+     "severity": [
+      7.5423,
+      7.6152
+     ],
+     "pathologization": [
+      0.0024,
+      0.005
+     ],
+     "intensifier": [
+      0.0013,
+      0.0061
+     ]
+    },
+    "family_share": 0.2815,
+    "breadth_mpnet": 0.6821,
+    "breadth_mpnet_sd": 0.014,
+    "breadth_masked": 0.1714,
+    "breadth_masked_sd": 0.0098
+   }
+  },
+  "willpower": {
+   "1985-1989": {
+    "valence": 5.3433,
+    "arousal": 4.2859,
+    "dominance": 5.6084,
+    "severity": 7.9426,
+    "pathologization": 0.0055,
+    "intensifier": 0.0,
+    "coverage": 0.8177,
+    "n_docs": 20,
+    "n_mentions": 24,
+    "n_collocates": 181,
+    "ci95": {
+     "valence": [
+      4.9934,
+      5.6942
+     ],
+     "arousal": [
+      4.1596,
+      4.4118
+     ],
+     "dominance": [
+      5.3573,
+      5.8602
+     ],
+     "severity": [
+      7.6499,
+      8.2257
+     ],
+     "pathologization": [
+      0.0,
+      0.0167
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0188,
+    "breadth_mpnet": 0.7143,
+    "breadth_mpnet_sd": 0.0,
+    "breadth_masked": 0.2066,
+    "breadth_masked_sd": 0.0
+   },
+   "1990-1994": {
+    "valence": 5.3318,
+    "arousal": 4.1389,
+    "dominance": 5.5546,
+    "severity": 7.8071,
+    "pathologization": 0.0168,
+    "intensifier": 0.0,
+    "coverage": 0.8352,
+    "n_docs": 43,
+    "n_mentions": 47,
+    "n_collocates": 358,
+    "ci95": {
+     "valence": [
+      5.1017,
+      5.5383
+     ],
+     "arousal": [
+      4.0509,
+      4.2388
+     ],
+     "dominance": [
+      5.3859,
+      5.6977
+     ],
+     "severity": [
+      7.5724,
+      8.0903
+     ],
+     "pathologization": [
+      0.0031,
+      0.0312
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.03,
+    "breadth_mpnet": 0.7304,
+    "breadth_mpnet_sd": 0.0,
+    "breadth_masked": 0.2731,
+    "breadth_masked_sd": 0.0
+   },
+   "1995-1999": {
+    "valence": 5.5799,
+    "arousal": 4.1359,
+    "dominance": 5.7368,
+    "severity": 7.5559,
+    "pathologization": 0.0093,
+    "intensifier": 0.0,
+    "coverage": 0.8237,
+    "n_docs": 57,
+    "n_mentions": 71,
+    "n_collocates": 539,
+    "ci95": {
+     "valence": [
+      5.3856,
+      5.7658
+     ],
+     "arousal": [
+      4.0619,
+      4.2201
+     ],
+     "dominance": [
+      5.5814,
+      5.8799
+     ],
+     "severity": [
+      7.361,
+      7.7561
+     ],
+     "pathologization": [
+      0.0019,
+      0.0178
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0235,
+    "breadth_mpnet": 0.7346,
+    "breadth_mpnet_sd": 0.0074,
+    "breadth_masked": 0.2103,
+    "breadth_masked_sd": 0.0032
+   },
+   "2000-2004": {
+    "valence": 5.6332,
+    "arousal": 4.1738,
+    "dominance": 5.7122,
+    "severity": 7.5405,
+    "pathologization": 0.0042,
+    "intensifier": 0.0,
+    "coverage": 0.8673,
+    "n_docs": 93,
+    "n_mentions": 130,
+    "n_collocates": 942,
+    "ci95": {
+     "valence": [
+      5.5279,
+      5.7306
+     ],
+     "arousal": [
+      4.1143,
+      4.2265
+     ],
+     "dominance": [
+      5.6369,
+      5.78
+     ],
+     "severity": [
+      7.4426,
+      7.6448
+     ],
+     "pathologization": [
+      0.0,
+      0.0103
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0288,
+    "breadth_mpnet": 0.7018,
+    "breadth_mpnet_sd": 0.0196,
+    "breadth_masked": 0.2004,
+    "breadth_masked_sd": 0.0051
+   },
+   "2005-2009": {
+    "valence": 5.5844,
+    "arousal": 4.218,
+    "dominance": 5.7596,
+    "severity": 7.6336,
+    "pathologization": 0.0036,
+    "intensifier": 0.0,
+    "coverage": 0.8544,
+    "n_docs": 156,
+    "n_mentions": 191,
+    "n_collocates": 1401,
+    "ci95": {
+     "valence": [
+      5.5068,
+      5.6773
+     ],
+     "arousal": [
+      4.1644,
+      4.2679
+     ],
+     "dominance": [
+      5.696,
+      5.831
+     ],
+     "severity": [
+      7.5289,
+      7.7247
+     ],
+     "pathologization": [
+      0.0008,
+      0.007
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0292,
+    "breadth_mpnet": 0.6987,
+    "breadth_mpnet_sd": 0.0138,
+    "breadth_masked": 0.2265,
+    "breadth_masked_sd": 0.0069
+   },
+   "2010-2014": {
+    "valence": 5.6499,
+    "arousal": 4.1754,
+    "dominance": 5.7922,
+    "severity": 7.5255,
+    "pathologization": 0.0058,
+    "intensifier": 0.0,
+    "coverage": 0.8419,
+    "n_docs": 267,
+    "n_mentions": 431,
+    "n_collocates": 3124,
+    "ci95": {
+     "valence": [
+      5.5861,
+      5.7074
+     ],
+     "arousal": [
+      4.1369,
+      4.2138
+     ],
+     "dominance": [
+      5.7351,
+      5.8459
+     ],
+     "severity": [
+      7.4581,
+      7.5945
+     ],
+     "pathologization": [
+      0.0031,
+      0.009
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0338,
+    "breadth_mpnet": 0.6642,
+    "breadth_mpnet_sd": 0.0232,
+    "breadth_masked": 0.2172,
+    "breadth_masked_sd": 0.0085
+   },
+   "2015-2019": {
+    "valence": 5.608,
+    "arousal": 4.1225,
+    "dominance": 5.7818,
+    "severity": 7.5145,
+    "pathologization": 0.0025,
+    "intensifier": 0.0,
+    "coverage": 0.8141,
+    "n_docs": 295,
+    "n_mentions": 512,
+    "n_collocates": 3960,
+    "ci95": {
+     "valence": [
+      5.5491,
+      5.6611
+     ],
+     "arousal": [
+      4.0894,
+      4.1578
+     ],
+     "dominance": [
+      5.7362,
+      5.8244
+     ],
+     "severity": [
+      7.46,
+      7.5779
+     ],
+     "pathologization": [
+      0.0007,
+      0.0047
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0293,
+    "breadth_mpnet": 0.6548,
+    "breadth_mpnet_sd": 0.026,
+    "breadth_masked": 0.217,
+    "breadth_masked_sd": 0.0087
+   },
+   "2020-2024": {
+    "valence": 5.5475,
+    "arousal": 4.1335,
+    "dominance": 5.7698,
+    "severity": 7.586,
+    "pathologization": 0.0065,
+    "intensifier": 0.0037,
+    "coverage": 0.8266,
+    "n_docs": 304,
+    "n_mentions": 545,
+    "n_collocates": 4279,
+    "ci95": {
+     "valence": [
+      5.4899,
+      5.6011
+     ],
+     "arousal": [
+      4.0995,
+      4.1636
+     ],
+     "dominance": [
+      5.7272,
+      5.8094
+     ],
+     "severity": [
+      7.524,
+      7.6494
+     ],
+     "pathologization": [
+      0.0037,
+      0.0104
+     ],
+     "intensifier": [
+      0.0,
+      0.0093
+     ]
+    },
+    "family_share": 0.0262,
+    "breadth_mpnet": 0.6907,
+    "breadth_mpnet_sd": 0.0199,
+    "breadth_masked": 0.2088,
+    "breadth_masked_sd": 0.0125
+   },
+   "2025-2025": {
+    "valence": 5.6889,
+    "arousal": 4.1986,
+    "dominance": 5.8305,
+    "severity": 7.5097,
+    "pathologization": 0.0007,
+    "intensifier": 0.0176,
+    "coverage": 0.8336,
+    "n_docs": 107,
+    "n_mentions": 170,
+    "n_collocates": 1340,
+    "ci95": {
+     "valence": [
+      5.6004,
+      5.7822
+     ],
+     "arousal": [
+      4.146,
+      4.2661
+     ],
+     "dominance": [
+      5.7502,
+      5.9103
+     ],
+     "severity": [
+      7.4113,
+      7.6112
+     ],
+     "pathologization": [
+      0.0,
+      0.0027
+     ],
+     "intensifier": [
+      0.0,
+      0.0469
+     ]
+    },
+    "family_share": 0.0252,
+    "breadth_mpnet": 0.676,
+    "breadth_mpnet_sd": 0.0068,
+    "breadth_masked": 0.2095,
+    "breadth_masked_sd": 0.0075
+   }
+  },
+  "executive function": {
+   "2000-2004": {
+    "valence": 5.5167,
+    "arousal": 4.1744,
+    "dominance": 5.6997,
+    "severity": 7.6576,
+    "pathologization": 0.0383,
+    "intensifier": 0.0,
+    "coverage": 0.8371,
+    "n_docs": 26,
+    "n_mentions": 43,
+    "n_collocates": 313,
+    "ci95": {
+     "valence": [
+      5.3591,
+      5.6285
+     ],
+     "arousal": [
+      4.104,
+      4.2727
+     ],
+     "dominance": [
+      5.544,
+      5.8713
+     ],
+     "severity": [
+      7.5117,
+      7.809
+     ],
+     "pathologization": [
+      0.0143,
+      0.0638
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.008,
+    "breadth_mpnet": 0.4956,
+    "breadth_mpnet_sd": 0.0,
+    "breadth_masked": 0.1984,
+    "breadth_masked_sd": 0.0
+   },
+   "2005-2009": {
+    "valence": 5.6208,
+    "arousal": 4.141,
+    "dominance": 5.7481,
+    "severity": 7.5202,
+    "pathologization": 0.0068,
+    "intensifier": 0.0,
+    "coverage": 0.8151,
+    "n_docs": 62,
+    "n_mentions": 117,
+    "n_collocates": 876,
+    "ci95": {
+     "valence": [
+      5.5443,
+      5.6905
+     ],
+     "arousal": [
+      4.0769,
+      4.2009
+     ],
+     "dominance": [
+      5.6766,
+      5.8138
+     ],
+     "severity": [
+      7.4259,
+      7.6136
+     ],
+     "pathologization": [
+      0.001,
+      0.0148
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0116,
+    "breadth_mpnet": 0.52,
+    "breadth_mpnet_sd": 0.0037,
+    "breadth_masked": 0.1783,
+    "breadth_masked_sd": 0.0056
+   },
+   "2010-2014": {
+    "valence": 5.6109,
+    "arousal": 4.1686,
+    "dominance": 5.7147,
+    "severity": 7.5577,
+    "pathologization": 0.0075,
+    "intensifier": 0.0,
+    "coverage": 0.8291,
+    "n_docs": 158,
+    "n_mentions": 337,
+    "n_collocates": 2545,
+    "ci95": {
+     "valence": [
+      5.5422,
+      5.6707
+     ],
+     "arousal": [
+      4.1341,
+      4.2003
+     ],
+     "dominance": [
+      5.6655,
+      5.7616
+     ],
+     "severity": [
+      7.4926,
+      7.6415
+     ],
+     "pathologization": [
+      0.0033,
+      0.0121
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.02,
+    "breadth_mpnet": 0.5167,
+    "breadth_mpnet_sd": 0.0155,
+    "breadth_masked": 0.1876,
+    "breadth_masked_sd": 0.0063
+   },
+   "2015-2019": {
+    "valence": 5.63,
+    "arousal": 4.1714,
+    "dominance": 5.7264,
+    "severity": 7.5414,
+    "pathologization": 0.0049,
+    "intensifier": 0.0,
+    "coverage": 0.8241,
+    "n_docs": 257,
+    "n_mentions": 474,
+    "n_collocates": 3645,
+    "ci95": {
+     "valence": [
+      5.5778,
+      5.6824
+     ],
+     "arousal": [
+      4.14,
+      4.2041
+     ],
+     "dominance": [
+      5.685,
+      5.7719
+     ],
+     "severity": [
+      7.4809,
+      7.5974
+     ],
+     "pathologization": [
+      0.0021,
+      0.0078
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0255,
+    "breadth_mpnet": 0.5475,
+    "breadth_mpnet_sd": 0.0208,
+    "breadth_masked": 0.1841,
+    "breadth_masked_sd": 0.0121
+   },
+   "2020-2024": {
+    "valence": 5.6556,
+    "arousal": 4.1245,
+    "dominance": 5.7273,
+    "severity": 7.4689,
+    "pathologization": 0.0031,
+    "intensifier": 0.0,
+    "coverage": 0.8227,
+    "n_docs": 292,
+    "n_mentions": 573,
+    "n_collocates": 4569,
+    "ci95": {
+     "valence": [
+      5.6061,
+      5.7018
+     ],
+     "arousal": [
+      4.0991,
+      4.1511
+     ],
+     "dominance": [
+      5.6875,
+      5.7666
+     ],
+     "severity": [
+      7.4147,
+      7.5283
+     ],
+     "pathologization": [
+      0.0012,
+      0.0054
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0252,
+    "breadth_mpnet": 0.5328,
+    "breadth_mpnet_sd": 0.0245,
+    "breadth_masked": 0.1928,
+    "breadth_masked_sd": 0.0095
+   },
+   "2025-2025": {
+    "valence": 5.6796,
+    "arousal": 4.1524,
+    "dominance": 5.7596,
+    "severity": 7.4728,
+    "pathologization": 0.0058,
+    "intensifier": 0.0,
+    "coverage": 0.8088,
+    "n_docs": 105,
+    "n_mentions": 235,
+    "n_collocates": 1909,
+    "ci95": {
+     "valence": [
+      5.5966,
+      5.7588
+     ],
+     "arousal": [
+      4.1116,
+      4.202
+     ],
+     "dominance": [
+      5.6855,
+      5.8271
+     ],
+     "severity": [
+      7.382,
+      7.5711
+     ],
+     "pathologization": [
+      0.0016,
+      0.0113
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0247,
+    "breadth_mpnet": 0.5518,
+    "breadth_mpnet_sd": 0.0062,
+    "breadth_masked": 0.1897,
+    "breadth_masked_sd": 0.0108
+   }
+  },
+  "ego depletion": {
+   "2005-2009": {
+    "valence": 5.5802,
+    "arousal": 4.1924,
+    "dominance": 5.82,
+    "severity": 7.6122,
+    "pathologization": 0.0035,
+    "intensifier": 0.0116,
+    "coverage": 0.8246,
+    "n_docs": 43,
+    "n_mentions": 86,
+    "n_collocates": 570,
+    "ci95": {
+     "valence": [
+      5.4851,
+      5.67
+     ],
+     "arousal": [
+      4.1133,
+      4.2909
+     ],
+     "dominance": [
+      5.7381,
+      5.9158
+     ],
+     "severity": [
+      7.4966,
+      7.746
+     ],
+     "pathologization": [
+      0.0,
+      0.0105
+     ],
+     "intensifier": [
+      0.0,
+      0.0403
+     ]
+    },
+    "family_share": 0.008,
+    "breadth_mpnet": 0.4495,
+    "breadth_mpnet_sd": 0.0,
+    "breadth_masked": 0.1627,
+    "breadth_masked_sd": 0.0
+   },
+   "2010-2014": {
+    "valence": 5.5203,
+    "arousal": 4.1976,
+    "dominance": 5.7402,
+    "severity": 7.6773,
+    "pathologization": 0.0,
+    "intensifier": 0.0037,
+    "coverage": 0.8586,
+    "n_docs": 120,
+    "n_mentions": 273,
+    "n_collocates": 1923,
+    "ci95": {
+     "valence": [
+      5.4432,
+      5.5923
+     ],
+     "arousal": [
+      4.1581,
+      4.2372
+     ],
+     "dominance": [
+      5.6857,
+      5.7946
+     ],
+     "severity": [
+      7.5994,
+      7.7604
+     ],
+     "pathologization": [
+      0.0,
+      0.0
+     ],
+     "intensifier": [
+      0.0,
+      0.0124
+     ]
+    },
+    "family_share": 0.0152,
+    "breadth_mpnet": 0.4824,
+    "breadth_mpnet_sd": 0.0162,
+    "breadth_masked": 0.1677,
+    "breadth_masked_sd": 0.0081
+   },
+   "2015-2019": {
+    "valence": 5.5408,
+    "arousal": 4.1489,
+    "dominance": 5.7477,
+    "severity": 7.6081,
+    "pathologization": 0.0004,
+    "intensifier": 0.0013,
+    "coverage": 0.845,
+    "n_docs": 263,
+    "n_mentions": 764,
+    "n_collocates": 5490,
+    "ci95": {
+     "valence": [
+      5.5048,
+      5.5846
+     ],
+     "arousal": [
+      4.121,
+      4.1768
+     ],
+     "dominance": [
+      5.716,
+      5.781
+     ],
+     "severity": [
+      7.5622,
+      7.6527
+     ],
+     "pathologization": [
+      0.0,
+      0.0009
+     ],
+     "intensifier": [
+      0.0,
+      0.0041
+     ]
+    },
+    "family_share": 0.0261,
+    "breadth_mpnet": 0.4685,
+    "breadth_mpnet_sd": 0.0096,
+    "breadth_masked": 0.156,
+    "breadth_masked_sd": 0.0081
+   },
+   "2020-2024": {
+    "valence": 5.4839,
+    "arousal": 4.1976,
+    "dominance": 5.6304,
+    "severity": 7.7136,
+    "pathologization": 0.0006,
+    "intensifier": 0.003,
+    "coverage": 0.8217,
+    "n_docs": 208,
+    "n_mentions": 669,
+    "n_collocates": 5059,
+    "ci95": {
+     "valence": [
+      5.4322,
+      5.5406
+     ],
+     "arousal": [
+      4.1571,
+      4.2354
+     ],
+     "dominance": [
+      5.5853,
+      5.6802
+     ],
+     "severity": [
+      7.6476,
+      7.773
+     ],
+     "pathologization": [
+      0.0,
+      0.0014
+     ],
+     "intensifier": [
+      0.0,
+      0.0081
+     ]
+    },
+    "family_share": 0.018,
+    "breadth_mpnet": 0.5547,
+    "breadth_mpnet_sd": 0.0152,
+    "breadth_masked": 0.1512,
+    "breadth_masked_sd": 0.0064
+   },
+   "2025-2025": {
+    "valence": 5.4664,
+    "arousal": 4.1905,
+    "dominance": 5.6395,
+    "severity": 7.7241,
+    "pathologization": 0.001,
+    "intensifier": 0.0075,
+    "coverage": 0.8182,
+    "n_docs": 86,
+    "n_mentions": 266,
+    "n_collocates": 2063,
+    "ci95": {
+     "valence": [
+      5.3899,
+      5.5529
+     ],
+     "arousal": [
+      4.1306,
+      4.2359
+     ],
+     "dominance": [
+      5.5723,
+      5.7117
+     ],
+     "severity": [
+      7.6172,
+      7.8132
+     ],
+     "pathologization": [
+      0.0,
+      0.0026
+     ],
+     "intensifier": [
+      0.0,
+      0.0191
+     ]
+    },
+    "family_share": 0.0203,
+    "breadth_mpnet": 0.5714,
+    "breadth_mpnet_sd": 0.0105,
+    "breadth_masked": 0.1512,
+    "breadth_masked_sd": 0.0095
+   }
+  },
+  "delay of gratification": {
+   "1995-1999": {
+    "valence": 5.5987,
+    "arousal": 4.1868,
+    "dominance": 5.6749,
+    "severity": 7.5881,
+    "pathologization": 0.0093,
+    "intensifier": 0.0,
+    "coverage": 0.838,
+    "n_docs": 16,
+    "n_mentions": 29,
+    "n_collocates": 216,
+    "ci95": {
+     "valence": [
+      5.4142,
+      5.8081
+     ],
+     "arousal": [
+      4.0518,
+      4.312
+     ],
+     "dominance": [
+      5.4811,
+      5.8508
+     ],
+     "severity": [
+      7.3606,
+      7.7933
+     ],
+     "pathologization": [
+      0.0,
+      0.0249
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0066,
+    "breadth_mpnet": 0.4717,
+    "breadth_mpnet_sd": 0.0,
+    "breadth_masked": 0.1708,
+    "breadth_masked_sd": 0.0
+   },
+   "2000-2004": {
+    "valence": 5.7148,
+    "arousal": 4.1837,
+    "dominance": 5.7427,
+    "severity": 7.4689,
+    "pathologization": 0.0026,
+    "intensifier": 0.0,
+    "coverage": 0.8479,
+    "n_docs": 21,
+    "n_mentions": 50,
+    "n_collocates": 388,
+    "ci95": {
+     "valence": [
+      5.5969,
+      5.8252
+     ],
+     "arousal": [
+      4.0652,
+      4.2927
+     ],
+     "dominance": [
+      5.6159,
+      5.8826
+     ],
+     "severity": [
+      7.2778,
+      7.6301
+     ],
+     "pathologization": [
+      0.0,
+      0.0084
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0065,
+    "breadth_mpnet": 0.4074,
+    "breadth_mpnet_sd": 0.0,
+    "breadth_masked": 0.1478,
+    "breadth_masked_sd": 0.0
+   },
+   "2005-2009": {
+    "valence": 5.5717,
+    "arousal": 4.1563,
+    "dominance": 5.7396,
+    "severity": 7.5846,
+    "pathologization": 0.0,
+    "intensifier": 0.0,
+    "coverage": 0.8646,
+    "n_docs": 29,
+    "n_mentions": 51,
+    "n_collocates": 384,
+    "ci95": {
+     "valence": [
+      5.4762,
+      5.6627
+     ],
+     "arousal": [
+      4.0525,
+      4.2426
+     ],
+     "dominance": [
+      5.6265,
+      5.8254
+     ],
+     "severity": [
+      7.4525,
+      7.7258
+     ],
+     "pathologization": [
+      0.0,
+      0.0
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0054,
+    "breadth_mpnet": 0.4867,
+    "breadth_mpnet_sd": 0.0,
+    "breadth_masked": 0.1861,
+    "breadth_masked_sd": 0.0
+   },
+   "2010-2014": {
+    "valence": 5.6633,
+    "arousal": 4.1149,
+    "dominance": 5.7338,
+    "severity": 7.4516,
+    "pathologization": 0.0,
+    "intensifier": 0.0,
+    "coverage": 0.8403,
+    "n_docs": 66,
+    "n_mentions": 119,
+    "n_collocates": 858,
+    "ci95": {
+     "valence": [
+      5.5671,
+      5.7437
+     ],
+     "arousal": [
+      4.0457,
+      4.1699
+     ],
+     "dominance": [
+      5.6643,
+      5.8095
+     ],
+     "severity": [
+      7.3467,
+      7.5629
+     ],
+     "pathologization": [
+      0.0,
+      0.0
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0083,
+    "breadth_mpnet": 0.4683,
+    "breadth_mpnet_sd": 0.0078,
+    "breadth_masked": 0.1621,
+    "breadth_masked_sd": 0.0048
+   },
+   "2015-2019": {
+    "valence": 5.7085,
+    "arousal": 4.1852,
+    "dominance": 5.7001,
+    "severity": 7.4767,
+    "pathologization": 0.0017,
+    "intensifier": 0.0,
+    "coverage": 0.8455,
+    "n_docs": 79,
+    "n_mentions": 154,
+    "n_collocates": 1146,
+    "ci95": {
+     "valence": [
+      5.6446,
+      5.776
+     ],
+     "arousal": [
+      4.1186,
+      4.2478
+     ],
+     "dominance": [
+      5.6209,
+      5.7839
+     ],
+     "severity": [
+      7.3791,
+      7.5575
+     ],
+     "pathologization": [
+      0.0,
+      0.0044
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0078,
+    "breadth_mpnet": 0.4722,
+    "breadth_mpnet_sd": 0.0083,
+    "breadth_masked": 0.1674,
+    "breadth_masked_sd": 0.0069
+   },
+   "2020-2024": {
+    "valence": 5.7337,
+    "arousal": 4.182,
+    "dominance": 5.6726,
+    "severity": 7.4482,
+    "pathologization": 0.0,
+    "intensifier": 0.0073,
+    "coverage": 0.7953,
+    "n_docs": 67,
+    "n_mentions": 137,
+    "n_collocates": 1060,
+    "ci95": {
+     "valence": [
+      5.6461,
+      5.8227
+     ],
+     "arousal": [
+      4.1258,
+      4.2374
+     ],
+     "dominance": [
+      5.6029,
+      5.7465
+     ],
+     "severity": [
+      7.3554,
+      7.5375
+     ],
+     "pathologization": [
+      0.0,
+      0.0
+     ],
+     "intensifier": [
+      0.0,
+      0.0239
+     ]
+    },
+    "family_share": 0.0058,
+    "breadth_mpnet": 0.4915,
+    "breadth_mpnet_sd": 0.0095,
+    "breadth_masked": 0.1717,
+    "breadth_masked_sd": 0.005
+   },
+   "2025-2025": {
+    "valence": 5.8894,
+    "arousal": 4.1442,
+    "dominance": 5.8717,
+    "severity": 7.2548,
+    "pathologization": 0.0035,
+    "intensifier": 0.0,
+    "coverage": 0.7703,
+    "n_docs": 16,
+    "n_mentions": 36,
+    "n_collocates": 283,
+    "ci95": {
+     "valence": [
+      5.7544,
+      5.9775
+     ],
+     "arousal": [
+      4.0177,
+      4.2289
+     ],
+     "dominance": [
+      5.7296,
+      6.0301
+     ],
+     "severity": [
+      7.1379,
+      7.3895
+     ],
+     "pathologization": [
+      0.0,
+      0.0128
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0038,
+    "breadth_mpnet": 0.5726,
+    "breadth_mpnet_sd": 0.0,
+    "breadth_masked": 0.2103,
+    "breadth_masked_sd": 0.0
+   }
+  },
+  "strength model": {
+   "2005-2009": {
+    "valence": 5.6679,
+    "arousal": 4.1789,
+    "dominance": 6.0984,
+    "severity": 7.511,
+    "pathologization": 0.0,
+    "intensifier": 0.0,
+    "coverage": 0.8426,
+    "n_docs": 20,
+    "n_mentions": 27,
+    "n_collocates": 197,
+    "ci95": {
+     "valence": [
+      5.5332,
+      5.8023
+     ],
+     "arousal": [
+      4.077,
+      4.2903
+     ],
+     "dominance": [
+      5.9817,
+      6.2174
+     ],
+     "severity": [
+      7.3538,
+      7.6705
+     ],
+     "pathologization": [
+      0.0,
+      0.0
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0037,
+    "breadth_mpnet": 0.3102,
+    "breadth_mpnet_sd": 0.0,
+    "breadth_masked": 0.1912,
+    "breadth_masked_sd": 0.0
+   },
+   "2010-2014": {
+    "valence": 5.6732,
+    "arousal": 4.1688,
+    "dominance": 6.0462,
+    "severity": 7.4955,
+    "pathologization": 0.0,
+    "intensifier": 0.0,
+    "coverage": 0.8346,
+    "n_docs": 42,
+    "n_mentions": 53,
+    "n_collocates": 387,
+    "ci95": {
+     "valence": [
+      5.5683,
+      5.7806
+     ],
+     "arousal": [
+      4.0914,
+      4.2605
+     ],
+     "dominance": [
+      5.9633,
+      6.1289
+     ],
+     "severity": [
+      7.3506,
+      7.6222
+     ],
+     "pathologization": [
+      0.0,
+      0.0
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0053,
+    "breadth_mpnet": 0.359,
+    "breadth_mpnet_sd": 0.0,
+    "breadth_masked": 0.1937,
+    "breadth_masked_sd": 0.0
+   },
+   "2015-2019": {
+    "valence": 5.6179,
+    "arousal": 4.1786,
+    "dominance": 5.9849,
+    "severity": 7.5607,
+    "pathologization": 0.0,
+    "intensifier": 0.0,
+    "coverage": 0.859,
+    "n_docs": 70,
+    "n_mentions": 110,
+    "n_collocates": 773,
+    "ci95": {
+     "valence": [
+      5.5675,
+      5.67
+     ],
+     "arousal": [
+      4.1152,
+      4.248
+     ],
+     "dominance": [
+      5.9143,
+      6.0504
+     ],
+     "severity": [
+      7.4778,
+      7.6456
+     ],
+     "pathologization": [
+      0.0,
+      0.0
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.007,
+    "breadth_mpnet": 0.4028,
+    "breadth_mpnet_sd": 0.0113,
+    "breadth_masked": 0.1689,
+    "breadth_masked_sd": 0.0062
+   },
+   "2020-2024": {
+    "valence": 5.6617,
+    "arousal": 4.2453,
+    "dominance": 6.0703,
+    "severity": 7.5835,
+    "pathologization": 0.0031,
+    "intensifier": 0.0,
+    "coverage": 0.8804,
+    "n_docs": 38,
+    "n_mentions": 42,
+    "n_collocates": 326,
+    "ci95": {
+     "valence": [
+      5.5604,
+      5.7578
+     ],
+     "arousal": [
+      4.1574,
+      4.3395
+     ],
+     "dominance": [
+      6.0057,
+      6.1365
+     ],
+     "severity": [
+      7.4585,
+      7.7159
+     ],
+     "pathologization": [
+      0.0,
+      0.0098
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0033,
+    "breadth_mpnet": 0.4967,
+    "breadth_mpnet_sd": 0.0,
+    "breadth_masked": 0.1805,
+    "breadth_masked_sd": 0.0
+   }
+  },
+  "self control depletion": {
+   "2010-2014": {
+    "valence": 5.4896,
+    "arousal": 4.1757,
+    "dominance": 5.601,
+    "severity": 7.6861,
+    "pathologization": 0.0,
+    "intensifier": 0.0364,
+    "coverage": 0.8474,
+    "n_docs": 29,
+    "n_mentions": 55,
+    "n_collocates": 380,
+    "ci95": {
+     "valence": [
+      5.3473,
+      5.6515
+     ],
+     "arousal": [
+      4.0878,
+      4.2594
+     ],
+     "dominance": [
+      5.4796,
+      5.7461
+     ],
+     "severity": [
+      7.4706,
+      7.8464
+     ],
+     "pathologization": [
+      0.0,
+      0.0
+     ],
+     "intensifier": [
+      0.0,
+      0.08
+     ]
+    },
+    "family_share": 0.0037,
+    "breadth_mpnet": 0.496,
+    "breadth_mpnet_sd": 0.0,
+    "breadth_masked": 0.1709,
+    "breadth_masked_sd": 0.0
+   },
+   "2015-2019": {
+    "valence": 5.49,
+    "arousal": 4.1199,
+    "dominance": 5.6907,
+    "severity": 7.6298,
+    "pathologization": 0.0021,
+    "intensifier": 0.0,
+    "coverage": 0.7826,
+    "n_docs": 35,
+    "n_mentions": 71,
+    "n_collocates": 483,
+    "ci95": {
+     "valence": [
+      5.3591,
+      5.6094
+     ],
+     "arousal": [
+      4.0161,
+      4.2033
+     ],
+     "dominance": [
+      5.5609,
+      5.8153
+     ],
+     "severity": [
+      7.4718,
+      7.7923
+     ],
+     "pathologization": [
+      0.0,
+      0.0075
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0035,
+    "breadth_mpnet": 0.4985,
+    "breadth_mpnet_sd": 0.0,
+    "breadth_masked": 0.1661,
+    "breadth_masked_sd": 0.0
+   },
+   "2020-2024": {
+    "valence": 5.739,
+    "arousal": 4.1635,
+    "dominance": 5.7958,
+    "severity": 7.4245,
+    "pathologization": 0.0032,
+    "intensifier": 0.0244,
+    "coverage": 0.746,
+    "n_docs": 22,
+    "n_mentions": 41,
+    "n_collocates": 315,
+    "ci95": {
+     "valence": [
+      5.5918,
+      5.8428
+     ],
+     "arousal": [
+      4.0844,
+      4.2328
+     ],
+     "dominance": [
+      5.6761,
+      5.8971
+     ],
+     "severity": [
+      7.317,
+      7.5917
+     ],
+     "pathologization": [
+      0.0,
+      0.0111
+     ],
+     "intensifier": [
+      0.0,
+      0.078
+     ]
+    },
+    "family_share": 0.0019,
+    "breadth_mpnet": 0.5718,
+    "breadth_mpnet_sd": 0.0,
+    "breadth_masked": 0.172,
+    "breadth_masked_sd": 0.0
+   }
+  },
+  "depletion effect": {
+   "2010-2014": {
+    "valence": 5.4941,
+    "arousal": 4.1622,
+    "dominance": 5.7078,
+    "severity": 7.6681,
+    "pathologization": 0.0,
+    "intensifier": 0.0,
+    "coverage": 0.8785,
+    "n_docs": 17,
+    "n_mentions": 36,
+    "n_collocates": 247,
+    "ci95": {
+     "valence": [
+      5.3355,
+      5.6463
+     ],
+     "arousal": [
+      4.1178,
+      4.2333
+     ],
+     "dominance": [
+      5.5983,
+      5.7913
+     ],
+     "severity": [
+      7.5036,
+      7.8468
+     ],
+     "pathologization": [
+      0.0,
+      0.0
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0021,
+    "breadth_mpnet": 0.5422,
+    "breadth_mpnet_sd": 0.0,
+    "breadth_masked": 0.1611,
+    "breadth_masked_sd": 0.0
+   },
+   "2015-2019": {
+    "valence": 5.384,
+    "arousal": 4.0877,
+    "dominance": 5.7827,
+    "severity": 7.7036,
+    "pathologization": 0.0,
+    "intensifier": 0.0,
+    "coverage": 0.8165,
+    "n_docs": 44,
+    "n_mentions": 80,
+    "n_collocates": 534,
+    "ci95": {
+     "valence": [
+      5.2934,
+      5.4623
+     ],
+     "arousal": [
+      4.0015,
+      4.1684
+     ],
+     "dominance": [
+      5.7032,
+      5.8556
+     ],
+     "severity": [
+      7.5946,
+      7.8177
+     ],
+     "pathologization": [
+      0.0,
+      0.0
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0044,
+    "breadth_mpnet": 0.4686,
+    "breadth_mpnet_sd": 0.0,
+    "breadth_masked": 0.1787,
+    "breadth_masked_sd": 0.0
+   },
+   "2020-2024": {
+    "valence": 5.4252,
+    "arousal": 4.1823,
+    "dominance": 5.6658,
+    "severity": 7.757,
+    "pathologization": 0.0056,
+    "intensifier": 0.0,
+    "coverage": 0.7889,
+    "n_docs": 18,
+    "n_mentions": 25,
+    "n_collocates": 180,
+    "ci95": {
+     "valence": [
+      5.2714,
+      5.5807
+     ],
+     "arousal": [
+      4.0424,
+      4.3462
+     ],
+     "dominance": [
+      5.5249,
+      5.8168
+     ],
+     "severity": [
+      7.5626,
+      7.9642
+     ],
+     "pathologization": [
+      0.0,
+      0.0164
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0016,
+    "breadth_mpnet": 0.5922,
+    "breadth_mpnet_sd": 0.0,
+    "breadth_masked": 0.2088,
+    "breadth_masked_sd": 0.0
+   }
+  },
+  "self regulatory depletion": {
+   "2010-2014": {
+    "valence": 5.3876,
+    "arousal": 4.11,
+    "dominance": 5.5866,
+    "severity": 7.7225,
+    "pathologization": 0.0,
+    "intensifier": 0.0,
+    "coverage": 0.8487,
+    "n_docs": 22,
+    "n_mentions": 34,
+    "n_collocates": 238,
+    "ci95": {
+     "valence": [
+      5.2537,
+      5.521
+     ],
+     "arousal": [
+      4.0278,
+      4.1941
+     ],
+     "dominance": [
+      5.4336,
+      5.7336
+     ],
+     "severity": [
+      7.5663,
+      7.8846
+     ],
+     "pathologization": [
+      0.0,
+      0.0
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0028,
+    "breadth_mpnet": 0.5511,
+    "breadth_mpnet_sd": 0.0,
+    "breadth_masked": 0.1804,
+    "breadth_masked_sd": 0.0
+   },
+   "2015-2019": {
+    "valence": 5.4143,
+    "arousal": 4.1281,
+    "dominance": 5.6837,
+    "severity": 7.7138,
+    "pathologization": 0.0,
+    "intensifier": 0.0,
+    "coverage": 0.8324,
+    "n_docs": 19,
+    "n_mentions": 26,
+    "n_collocates": 179,
+    "ci95": {
+     "valence": [
+      5.2562,
+      5.5591
+     ],
+     "arousal": [
+      4.0103,
+      4.2402
+     ],
+     "dominance": [
+      5.5028,
+      5.8672
+     ],
+     "severity": [
+      7.5416,
+      7.9199
+     ],
+     "pathologization": [
+      0.0,
+      0.0
+     ],
+     "intensifier": [
+      0.0,
+      0.0
+     ]
+    },
+    "family_share": 0.0019,
+    "breadth_mpnet": 0.4969,
+    "breadth_mpnet_sd": 0.0,
+    "breadth_masked": 0.1709,
+    "breadth_masked_sd": 0.0
+   }
+  }
+ },
+ "trends": {
+  "self regulation": {
+   "valence": {
+    "beta": 0.996,
+    "p": 0.0,
+    "n": 11
+   },
+   "arousal": {
+    "beta": 0.891,
+    "p": 0.0005,
+    "n": 11
+   },
+   "dominance": {
+    "beta": 0.948,
+    "p": 0.0,
+    "n": 11
+   },
+   "severity": {
+    "beta": -0.943,
+    "p": 0.0,
+    "n": 11
+   },
+   "pathologization": {
+    "beta": -0.897,
+    "p": 0.0,
+    "n": 11
+   },
+   "intensifier": {
+    "beta": -0.073,
+    "p": 0.8856,
+    "n": 11
+   },
+   "family_share": {
+    "beta": 0.887,
+    "p": 0.0,
+    "n": 11
+   },
+   "breadth_mpnet": {
+    "beta": 0.355,
+    "p": 0.1751,
+    "n": 11
+   },
+   "breadth_masked": {
+    "beta": -0.822,
+    "p": 0.0001,
+    "n": 11
+   }
+  },
+  "self control": {
+   "valence": {
+    "beta": 0.705,
+    "p": 0.0235,
+    "n": 11
+   },
+   "arousal": {
+    "beta": 0.017,
+    "p": 0.9658,
+    "n": 11
+   },
+   "dominance": {
+    "beta": -0.393,
+    "p": 0.0828,
+    "n": 11
+   },
+   "severity": {
+    "beta": -0.376,
+    "p": 0.3588,
+    "n": 11
+   },
+   "pathologization": {
+    "beta": -0.929,
+    "p": 0.0,
+    "n": 11
+   },
+   "intensifier": {
+    "beta": -0.693,
+    "p": 0.0101,
+    "n": 11
+   },
+   "family_share": {
+    "beta": -0.887,
+    "p": 0.0,
+    "n": 11
+   },
+   "breadth_mpnet": {
+    "beta": 0.483,
+    "p": 0.1042,
+    "n": 11
+   },
+   "breadth_masked": {
+    "beta": -0.931,
+    "p": 0.0,
+    "n": 11
+   }
+  },
+  "willpower": {
+   "valence": {
+    "beta": 0.747,
+    "p": 0.0143,
+    "n": 9
+   },
+   "arousal": {
+    "beta": -0.357,
+    "p": 0.5471,
+    "n": 9
+   },
+   "dominance": {
+    "beta": 0.865,
+    "p": 0.0001,
+    "n": 9
+   },
+   "severity": {
+    "beta": -0.758,
+    "p": 0.034,
+    "n": 9
+   },
+   "pathologization": {
+    "beta": -0.597,
+    "p": 0.202,
+    "n": 9
+   },
+   "intensifier": {
+    "beta": 0.605,
+    "p": 0.2354,
+    "n": 9
+   },
+   "family_share": {
+    "beta": 0.34,
+    "p": 0.5389,
+    "n": 9
+   },
+   "breadth_mpnet": {
+    "beta": -0.777,
+    "p": 0.0046,
+    "n": 9
+   },
+   "breadth_masked": {
+    "beta": -0.319,
+    "p": 0.5398,
+    "n": 9
+   }
+  },
+  "executive function": {
+   "valence": {
+    "beta": 0.899,
+    "p": 0.0246,
+    "n": 6
+   },
+   "arousal": {
+    "beta": -0.441,
+    "p": 0.3695,
+    "n": 6
+   },
+   "dominance": {
+    "beta": 0.583,
+    "p": 0.312,
+    "n": 6
+   },
+   "severity": {
+    "beta": -0.851,
+    "p": 0.0418,
+    "n": 6
+   },
+   "pathologization": {
+    "beta": -0.724,
+    "p": 0.2991,
+    "n": 6
+   },
+   "family_share": {
+    "beta": 0.931,
+    "p": 0.0001,
+    "n": 6
+   },
+   "breadth_mpnet": {
+    "beta": 0.89,
+    "p": 0.0003,
+    "n": 6
+   },
+   "breadth_masked": {
+    "beta": -0.036,
+    "p": 0.9686,
+    "n": 6
+   }
+  },
+  "ego depletion": {
+   "valence": {
+    "beta": -0.919,
+    "p": 0.0,
+    "n": 5
+   },
+   "arousal": {
+    "beta": -0.048,
+    "p": 0.8979,
+    "n": 5
+   },
+   "dominance": {
+    "beta": -0.943,
+    "p": 0.0,
+    "n": 5
+   },
+   "severity": {
+    "beta": 0.741,
+    "p": 0.0003,
+    "n": 5
+   },
+   "pathologization": {
+    "beta": -0.537,
+    "p": 0.5929,
+    "n": 5
+   },
+   "intensifier": {
+    "beta": -0.403,
+    "p": 0.7039,
+    "n": 5
+   },
+   "family_share": {
+    "beta": 0.676,
+    "p": 0.2153,
+    "n": 5
+   },
+   "breadth_mpnet": {
+    "beta": 0.913,
+    "p": 0.0,
+    "n": 5
+   },
+   "breadth_masked": {
+    "beta": -0.867,
+    "p": 0.0603,
+    "n": 5
+   }
+  },
+  "delay of gratification": {
+   "valence": {
+    "beta": 0.748,
+    "p": 0.0619,
+    "n": 7
+   },
+   "arousal": {
+    "beta": -0.275,
+    "p": 0.4296,
+    "n": 7
+   },
+   "dominance": {
+    "beta": 0.423,
+    "p": 0.5223,
+    "n": 7
+   },
+   "severity": {
+    "beta": -0.77,
+    "p": 0.059,
+    "n": 7
+   },
+   "pathologization": {
+    "beta": -0.515,
+    "p": 0.472,
+    "n": 7
+   },
+   "intensifier": {
+    "beta": 0.438,
+    "p": 0.444,
+    "n": 7
+   },
+   "family_share": {
+    "beta": -0.341,
+    "p": 0.4889,
+    "n": 7
+   },
+   "breadth_mpnet": {
+    "beta": 0.693,
+    "p": 0.2139,
+    "n": 7
+   },
+   "breadth_masked": {
+    "beta": 0.541,
+    "p": 0.3418,
+    "n": 7
+   }
+  },
+  "strength model": {
+   "valence": {
+    "beta": -0.377,
+    "p": 0.6886,
+    "n": 4
+   },
+   "arousal": {
+    "beta": 0.766,
+    "p": 0.4485,
+    "n": 4
+   },
+   "dominance": {
+    "beta": -0.389,
+    "p": 0.7735,
+    "n": 4
+   },
+   "severity": {
+    "beta": 0.883,
+    "p": 0.0893,
+    "n": 4
+   },
+   "pathologization": {
+    "beta": 0.775,
+    "p": 0.4116,
+    "n": 4
+   },
+   "family_share": {
+    "beta": 0.038,
+    "p": 0.9794,
+    "n": 4
+   },
+   "breadth_mpnet": {
+    "beta": 0.982,
+    "p": 0.0003,
+    "n": 4
+   },
+   "breadth_masked": {
+    "beta": -0.648,
+    "p": 0.3332,
+    "n": 4
+   }
+  },
+  "self control depletion": {},
+  "depletion effect": {},
+  "self regulatory depletion": {}
+ },
+ "collocates": {
+  "self regulation": {
+   "top": {
+    "1975-1979": [
+     [
+      "self",
+      17
+     ],
+     [
+      "process",
+      14
+     ],
+     [
+      "research",
+      13
+     ],
+     [
+      "biofeedback",
+      13
+     ],
+     [
+      "procedure",
+      13
+     ],
+     [
+      "training",
+      13
+     ],
+     [
+      "behavior",
+      13
+     ],
+     [
+      "profession",
+      12
+     ],
+     [
+      "program",
+      11
+     ],
+     [
+      "child",
+      10
+     ],
+     [
+      "treatment",
+      10
+     ],
+     [
+      "consciousness",
+      9
+     ],
+     [
+      "alpha",
+      9
+     ],
+     [
+      "study",
+      9
+     ],
+     [
+      "social",
+      9
+     ],
+     [
+      "approach",
+      8
+     ],
+     [
+      "control",
+      8
+     ],
+     [
+      "include",
+      8
+     ],
+     [
+      "theory",
+      8
+     ],
+     [
+      "aversion",
+      8
+     ],
+     [
+      "accounting",
+      7
+     ],
+     [
+      "advertising",
+      7
+     ],
+     [
+      "professional",
+      7
+     ],
+     [
+      "review",
+      7
+     ],
+     [
+      "effective",
+      7
+     ]
+    ],
+    "1980-1984": [
+     [
+      "self",
+      47
+     ],
+     [
+      "control",
+      38
+     ],
+     [
+      "regulation",
+      27
+     ],
+     [
+      "behavior",
+      26
+     ],
+     [
+      "biofeedback",
+      20
+     ],
+     [
+      "advertising",
+      19
+     ],
+     [
+      "discuss",
+      19
+     ],
+     [
+      "process",
+      19
+     ],
+     [
+      "industry",
+      18
+     ],
+     [
+      "model",
+      18
+     ],
+     [
+      "professional",
+      16
+     ],
+     [
+      "review",
+      16
+     ],
+     [
+      "system",
+      16
+     ],
+     [
+      "theory",
+      16
+     ],
+     [
+      "child",
+      15
+     ],
+     [
+      "strategy",
+      15
+     ],
+     [
+      "profession",
+      14
+     ],
+     [
+      "program",
+      14
+     ],
+     [
+      "use",
+      14
+     ],
+     [
+      "technique",
+      14
+     ],
+     [
+      "result",
+      14
+     ],
+     [
+      "group",
+      13
+     ],
+     [
+      "training",
+      13
+     ],
+     [
+      "public",
+      12
+     ],
+     [
+      "present",
+      12
+     ]
+    ],
+    "1985-1989": [
+     [
+      "self",
+      75
+     ],
+     [
+      "br",
+      47
+     ],
+     [
+      "model",
+      44
+     ],
+     [
+      "control",
+      40
+     ],
+     [
+      "development",
+      38
+     ],
+     [
+      "effect",
+      37
+     ],
+     [
+      "system",
+      36
+     ],
+     [
+      "theory",
+      33
+     ],
+     [
+      "study",
+      32
+     ],
+     [
+      "advertising",
+      30
+     ],
+     [
+      "use",
+      30
+     ],
+     [
+      "training",
+      30
+     ],
+     [
+      "child",
+      30
+     ],
+     [
+      "discuss",
+      30
+     ],
+     [
+      "activity",
+      29
+     ],
+     [
+      "behavior",
+      29
+     ],
+     [
+      "process",
+      28
+     ],
+     [
+      "mechanism",
+      26
+     ],
+     [
+      "method",
+      24
+     ],
+     [
+      "cognitive",
+      22
+     ],
+     [
+      "strategy",
+      22
+     ],
+     [
+      "regulation",
+      21
+     ],
+     [
+      "biofeedback",
+      20
+     ],
+     [
+      "role",
+      19
+     ],
+     [
+      "health",
+      18
+     ]
+    ],
+    "1990-1994": [
+     [
+      "self",
+      115
+     ],
+     [
+      "industry",
+      64
+     ],
+     [
+      "process",
+      56
+     ],
+     [
+      "cognitive",
+      53
+     ],
+     [
+      "model",
+      49
+     ],
+     [
+      "child",
+      48
+     ],
+     [
+      "theory",
+      48
+     ],
+     [
+      "control",
+      47
+     ],
+     [
+      "system",
+      44
+     ],
+     [
+      "social",
+      43
+     ],
+     [
+      "regulation",
+      39
+     ],
+     [
+      "study",
+      39
+     ],
+     [
+      "development",
+      38
+     ],
+     [
+      "behavioral",
+      37
+     ],
+     [
+      "behavior",
+      36
+     ],
+     [
+      "strategy",
+      35
+     ],
+     [
+      "use",
+      35
+     ],
+     [
+      "role",
+      33
+     ],
+     [
+      "advertising",
+      32
+     ],
+     [
+      "base",
+      31
+     ],
+     [
+      "examine",
+      30
+     ],
+     [
+      "record",
+      30
+     ],
+     [
+      "concept",
+      30
+     ],
+     [
+      "issue",
+      28
+     ],
+     [
+      "professional",
+      28
+     ]
+    ],
+    "1995-1999": [
+     [
+      "self",
+      254
+     ],
+     [
+      "model",
+      142
+     ],
+     [
+      "industry",
+      127
+     ],
+     [
+      "child",
+      121
+     ],
+     [
+      "use",
+      116
+     ],
+     [
+      "theory",
+      108
+     ],
+     [
+      "development",
+      105
+     ],
+     [
+      "behavior",
+      103
+     ],
+     [
+      "control",
+      98
+     ],
+     [
+      "process",
+      95
+     ],
+     [
+      "strategy",
+      86
+     ],
+     [
+      "social",
+      80
+     ],
+     [
+      "emotional",
+      80
+     ],
+     [
+      "student",
+      80
+     ],
+     [
+      "discuss",
+      78
+     ],
+     [
+      "study",
+      74
+     ],
+     [
+      "motivation",
+      74
+     ],
+     [
+      "goal",
+      72
+     ],
+     [
+      "cognitive",
+      71
+     ],
+     [
+      "advertising",
+      68
+     ],
+     [
+      "role",
+      65
+     ],
+     [
+      "system",
+      65
+     ],
+     [
+      "issue",
+      63
+     ],
+     [
+      "high",
+      59
+     ],
+     [
+      "performance",
+      57
+     ]
+    ],
+    "2000-2004": [
+     [
+      "self",
+      394
+     ],
+     [
+      "child",
+      223
+     ],
+     [
+      "model",
+      215
+     ],
+     [
+      "industry",
+      189
+     ],
+     [
+      "theory",
+      183
+     ],
+     [
+      "process",
+      169
+     ],
+     [
+      "social",
+      163
+     ],
+     [
+      "development",
+      156
+     ],
+     [
+      "control",
+      151
+     ],
+     [
+      "use",
+      151
+     ],
+     [
+      "behavior",
+      144
+     ],
+     [
+      "role",
+      144
+     ],
+     [
+      "study",
+      136
+     ],
+     [
+      "strategy",
+      135
+     ],
+     [
+      "goal",
+      119
+     ],
+     [
+      "cognitive",
+      116
+     ],
+     [
+      "regulation",
+      113
+     ],
+     [
+      "student",
+      112
+     ],
+     [
+      "problem",
+      102
+     ],
+     [
+      "motivation",
+      101
+     ],
+     [
+      "emotional",
+      101
+     ],
+     [
+      "discuss",
+      96
+     ],
+     [
+      "system",
+      95
+     ],
+     [
+      "skill",
+      95
+     ],
+     [
+      "learning",
+      86
+     ]
+    ],
+    "2005-2009": [
+     [
+      "self",
+      693
+     ],
+     [
+      "model",
+      362
+     ],
+     [
+      "child",
+      347
+     ],
+     [
+      "process",
+      319
+     ],
+     [
+      "social",
+      315
+     ],
+     [
+      "use",
+      279
+     ],
+     [
+      "study",
+      259
+     ],
+     [
+      "theory",
+      254
+     ],
+     [
+      "development",
+      251
+     ],
+     [
+      "goal",
+      245
+     ],
+     [
+      "behavior",
+      243
+     ],
+     [
+      "student",
+      240
+     ],
+     [
+      "control",
+      234
+     ],
+     [
+      "strategy",
+      233
+     ],
+     [
+      "skill",
+      205
+     ],
+     [
+      "research",
+      204
+     ],
+     [
+      "motivation",
+      193
+     ],
+     [
+      "role",
+      192
+     ],
+     [
+      "regulation",
+      176
+     ],
+     [
+      "learning",
+      175
+     ],
+     [
+      "cognitive",
+      174
+     ],
+     [
+      "industry",
+      172
+     ],
+     [
+      "base",
+      172
+     ],
+     [
+      "efficacy",
+      164
+     ],
+     [
+      "emotional",
+      159
+     ]
+    ],
+    "2010-2014": [
+     [
+      "self",
+      1114
+     ],
+     [
+      "child",
+      627
+     ],
+     [
+      "social",
+      514
+     ],
+     [
+      "student",
+      503
+     ],
+     [
+      "study",
+      502
+     ],
+     [
+      "use",
+      495
+     ],
+     [
+      "skill",
+      469
+     ],
+     [
+      "control",
+      465
+     ],
+     [
+      "strategy",
+      464
+     ],
+     [
+      "model",
+      458
+     ],
+     [
+      "process",
+      419
+     ],
+     [
+      "development",
+      408
+     ],
+     [
+      "theory",
+      375
+     ],
+     [
+      "goal",
+      370
+     ],
+     [
+      "behavior",
+      370
+     ],
+     [
+      "efficacy",
+      365
+     ],
+     [
+      "relationship",
+      362
+     ],
+     [
+      "role",
+      350
+     ],
+     [
+      "effect",
+      346
+     ],
+     [
+      "learning",
+      343
+     ],
+     [
+      "cognitive",
+      342
+     ],
+     [
+      "motivation",
+      338
+     ],
+     [
+      "research",
+      304
+     ],
+     [
+      "relate",
+      304
+     ],
+     [
+      "emotional",
+      299
+     ]
+    ],
+    "2015-2019": [
+     [
+      "self",
+      1452
+     ],
+     [
+      "child",
+      1337
+     ],
+     [
+      "student",
+      867
+     ],
+     [
+      "skill",
+      811
+     ],
+     [
+      "study",
+      710
+     ],
+     [
+      "use",
+      671
+     ],
+     [
+      "behavior",
+      660
+     ],
+     [
+      "social",
+      647
+     ],
+     [
+      "strategy",
+      610
+     ],
+     [
+      "model",
+      550
+     ],
+     [
+      "relationship",
+      543
+     ],
+     [
+      "control",
+      535
+     ],
+     [
+      "emotional",
+      514
+     ],
+     [
+      "process",
+      509
+     ],
+     [
+      "cognitive",
+      509
+     ],
+     [
+      "development",
+      506
+     ],
+     [
+      "efficacy",
+      497
+     ],
+     [
+      "effect",
+      486
+     ],
+     [
+      "role",
+      472
+     ],
+     [
+      "theory",
+      457
+     ],
+     [
+      "intervention",
+      447
+     ],
+     [
+      "learning",
+      447
+     ],
+     [
+      "motivation",
+      442
+     ],
+     [
+      "relate",
+      413
+     ],
+     [
+      "academic",
+      406
+     ]
+    ],
+    "2020-2024": [
+     [
+      "self",
+      1889
+     ],
+     [
+      "child",
+      1725
+     ],
+     [
+      "skill",
+      1477
+     ],
+     [
+      "student",
+      1470
+     ],
+     [
+      "study",
+      926
+     ],
+     [
+      "social",
+      890
+     ],
+     [
+      "use",
+      883
+     ],
+     [
+      "learning",
+      805
+     ],
+     [
+      "relationship",
+      800
+     ],
+     [
+      "emotional",
+      784
+     ],
+     [
+      "strategy",
+      777
+     ],
+     [
+      "academic",
+      771
+     ],
+     [
+      "efficacy",
+      704
+     ],
+     [
+      "effect",
+      670
+     ],
+     [
+      "motivation",
+      666
+     ],
+     [
+      "behavior",
+      656
+     ],
+     [
+      "development",
+      622
+     ],
+     [
+      "cognitive",
+      613
+     ],
+     [
+      "support",
+      605
+     ],
+     [
+      "learn",
+      586
+     ],
+     [
+      "model",
+      584
+     ],
+     [
+      "theory",
+      574
+     ],
+     [
+      "process",
+      571
+     ],
+     [
+      "role",
+      564
+     ],
+     [
+      "relate",
+      554
+     ]
+    ],
+    "2025-2025": [
+     [
+      "self",
+      749
+     ],
+     [
+      "skill",
+      637
+     ],
+     [
+      "student",
+      619
+     ],
+     [
+      "child",
+      541
+     ],
+     [
+      "emotional",
+      500
+     ],
+     [
+      "social",
+      405
+     ],
+     [
+      "study",
+      387
+     ],
+     [
+      "academic",
+      365
+     ],
+     [
+      "strategy",
+      353
+     ],
+     [
+      "support",
+      352
+     ],
+     [
+      "use",
+      325
+     ],
+     [
+      "relationship",
+      311
+     ],
+     [
+      "learning",
+      300
+     ],
+     [
+      "motivation",
+      293
+     ],
+     [
+      "efficacy",
+      290
+     ],
+     [
+      "theory",
+      277
+     ],
+     [
+      "role",
+      263
+     ],
+     [
+      "behavior",
+      250
+     ],
+     [
+      "cognitive",
+      247
+     ],
+     [
+      "effect",
+      224
+     ],
+     [
+      "development",
+      219
+     ],
+     [
+      "high",
+      217
+     ],
+     [
+      "enhance",
+      213
+     ],
+     [
+      "awareness",
+      208
+     ],
+     [
+      "model",
+      200
+     ]
+    ]
+   },
+   "movers": {
+    "from": "1975-1979",
+    "to": "2025-2025",
+    "unit": "per-mille of collocate tokens; [word, delta, valence, arousal]",
+    "up": [
+     [
+      "student",
+      19.52,
+      6.41,
+      4.25
+     ],
+     [
+      "skill",
+      16.94,
+      6.65,
+      4.94
+     ],
+     [
+      "emotional",
+      11.83,
+      5.11,
+      5.32
+     ],
+     [
+      "academic",
+      11.51,
+      6.61,
+      3.32
+     ],
+     [
+      "strategy",
+      10.34,
+      5.95,
+      4.15
+     ],
+     [
+      "self",
+      10.23,
+      6.86,
+      4.78
+     ],
+     [
+      "support",
+      9.53,
+      6.89,
+      3.05
+     ],
+     [
+      "motivation",
+      9.24,
+      6.24,
+      4.73
+     ],
+     [
+      "child",
+      9.19,
+      7.2,
+      5.33
+     ],
+     [
+      "efficacy",
+      9.14,
+      null,
+      null
+     ],
+     [
+      "relationship",
+      7.44,
+      7.83,
+      5.0
+     ],
+     [
+      "awareness",
+      6.56,
+      6.45,
+      3.73
+     ],
+     [
+      "use",
+      6.31,
+      5.18,
+      4.19
+     ],
+     [
+      "learn",
+      6.18,
+      6.85,
+      4.8
+     ],
+     [
+      "social",
+      5.68,
+      6.08,
+      5.16
+     ],
+     [
+      "learning",
+      5.52,
+      null,
+      null
+     ],
+     [
+      "scale",
+      5.52,
+      5.06,
+      3.8
+     ],
+     [
+      "performance",
+      5.39,
+      6.2,
+      5.61
+     ],
+     [
+      "high",
+      5.27,
+      5.77,
+      4.1
+     ],
+     [
+      "engagement",
+      5.27,
+      6.65,
+      5.19
+     ]
+    ],
+    "down": [
+     [
+      "procedure",
+      -10.24,
+      4.28,
+      4.15
+     ],
+     [
+      "biofeedback",
+      -10.2,
+      null,
+      null
+     ],
+     [
+      "profession",
+      -9.45,
+      5.52,
+      3.33
+     ],
+     [
+      "training",
+      -7.21,
+      5.19,
+      4.1
+     ],
+     [
+      "consciousness",
+      -7.09,
+      6.48,
+      3.33
+     ],
+     [
+      "alpha",
+      -7.09,
+      5.5,
+      3.67
+     ],
+     [
+      "treatment",
+      -7.09,
+      5.0,
+      4.47
+     ],
+     [
+      "aversion",
+      -6.3,
+      4.0,
+      5.14
+     ],
+     [
+      "research",
+      -6.29,
+      6.5,
+      4.8
+     ],
+     [
+      "program",
+      -5.79,
+      5.5,
+      3.9
+     ],
+     [
+      "advertising",
+      -5.51,
+      4.68,
+      3.25
+     ],
+     [
+      "accounting",
+      -5.51,
+      4.42,
+      3.68
+     ],
+     [
+      "process",
+      -5.44,
+      5.62,
+      3.9
+     ],
+     [
+      "review",
+      -4.75,
+      5.09,
+      3.77
+     ],
+     [
+      "dose",
+      -4.72,
+      4.91,
+      2.95
+     ],
+     [
+      "article",
+      -4.72,
+      5.68,
+      3.5
+     ],
+     [
+      "private",
+      -4.72,
+      5.44,
+      3.62
+     ],
+     [
+      "faf",
+      -4.72,
+      null,
+      null
+     ],
+     [
+      "condition",
+      -4.25,
+      4.32,
+      4.15
+     ],
+     [
+      "depression",
+      -4.25,
+      2.44,
+      5.2
+     ]
+    ]
+   }
+  },
+  "self control": {
+   "top": {
+    "1975-1979": [
+     [
+      "behavior",
+      95
+     ],
+     [
+      "self",
+      90
+     ],
+     [
+      "procedure",
+      89
+     ],
+     [
+      "behavioral",
+      71
+     ],
+     [
+      "training",
+      67
+     ],
+     [
+      "treatment",
+      64
+     ],
+     [
+      "use",
+      56
+     ],
+     [
+      "technique",
+      56
+     ],
+     [
+      "control",
+      54
+     ],
+     [
+      "child",
+      52
+     ],
+     [
+      "group",
+      51
+     ],
+     [
+      "study",
+      47
+     ],
+     [
+      "skill",
+      40
+     ],
+     [
+      "program",
+      39
+     ],
+     [
+      "cognitive",
+      34
+     ],
+     [
+      "review",
+      34
+     ],
+     [
+      "anxiety",
+      34
+     ],
+     [
+      "ss",
+      33
+     ],
+     [
+      "relaxation",
+      32
+     ],
+     [
+      "desensitization",
+      30
+     ],
+     [
+      "model",
+      28
+     ],
+     [
+      "development",
+      26
+     ],
+     [
+      "discuss",
+      25
+     ],
+     [
+      "strategy",
+      25
+     ],
+     [
+      "significantly",
+      25
+     ]
+    ],
+    "1980-1984": [
+     [
+      "self",
+      112
+     ],
+     [
+      "training",
+      85
+     ],
+     [
+      "behavior",
+      84
+     ],
+     [
+      "child",
+      80
+     ],
+     [
+      "behavioral",
+      80
+     ],
+     [
+      "use",
+      75
+     ],
+     [
+      "technique",
+      72
+     ],
+     [
+      "control",
+      65
+     ],
+     [
+      "ss",
+      62
+     ],
+     [
+      "procedure",
+      58
+     ],
+     [
+      "treatment",
+      57
+     ],
+     [
+      "cognitive",
+      49
+     ],
+     [
+      "model",
+      47
+     ],
+     [
+      "program",
+      47
+     ],
+     [
+      "strategy",
+      47
+     ],
+     [
+      "skill",
+      45
+     ],
+     [
+      "therapy",
+      44
+     ],
+     [
+      "group",
+      43
+     ],
+     [
+      "social",
+      43
+     ],
+     [
+      "study",
+      42
+     ],
+     [
+      "increase",
+      40
+     ],
+     [
+      "result",
+      38
+     ],
+     [
+      "scale",
+      37
+     ],
+     [
+      "rating",
+      36
+     ],
+     [
+      "anxiety",
+      32
+     ]
+    ],
+    "1985-1989": [
+     [
+      "self",
+      145
+     ],
+     [
+      "training",
+      89
+     ],
+     [
+      "behavioral",
+      77
+     ],
+     [
+      "control",
+      65
+     ],
+     [
+      "behavior",
+      65
+     ],
+     [
+      "skill",
+      64
+     ],
+     [
+      "child",
+      63
+     ],
+     [
+      "use",
+      62
+     ],
+     [
+      "cognitive",
+      62
+     ],
+     [
+      "treatment",
+      61
+     ],
+     [
+      "scale",
+      59
+     ],
+     [
+      "social",
+      55
+     ],
+     [
+      "ss",
+      53
+     ],
+     [
+      "strategy",
+      49
+     ],
+     [
+      "deficit",
+      44
+     ],
+     [
+      "problem",
+      42
+     ],
+     [
+      "measure",
+      41
+     ],
+     [
+      "technique",
+      41
+     ],
+     [
+      "procedure",
+      41
+     ],
+     [
+      "group",
+      39
+     ],
+     [
+      "rating",
+      38
+     ],
+     [
+      "br",
+      38
+     ],
+     [
+      "study",
+      35
+     ],
+     [
+      "therapy",
+      35
+     ],
+     [
+      "include",
+      35
+     ]
+    ],
+    "1990-1994": [
+     [
+      "self",
+      108
+     ],
+     [
+      "behavior",
+      86
+     ],
+     [
+      "training",
+      79
+     ],
+     [
+      "use",
+      70
+     ],
+     [
+      "control",
+      68
+     ],
+     [
+      "child",
+      68
+     ],
+     [
+      "behavioral",
+      68
+     ],
+     [
+      "social",
+      62
+     ],
+     [
+      "skill",
+      58
+     ],
+     [
+      "strategy",
+      50
+     ],
+     [
+      "problem",
+      45
+     ],
+     [
+      "cognitive",
+      45
+     ],
+     [
+      "ss",
+      44
+     ],
+     [
+      "treatment",
+      36
+     ],
+     [
+      "low",
+      32
+     ],
+     [
+      "scale",
+      32
+     ],
+     [
+      "measure",
+      31
+     ],
+     [
+      "high",
+      30
+     ],
+     [
+      "theory",
+      30
+     ],
+     [
+      "individual",
+      28
+     ],
+     [
+      "therapy",
+      28
+     ],
+     [
+      "include",
+      27
+     ],
+     [
+      "factor",
+      26
+     ],
+     [
+      "study",
+      26
+     ],
+     [
+      "level",
+      26
+     ]
+    ],
+    "1995-1999": [
+     [
+      "self",
+      219
+     ],
+     [
+      "behavior",
+      144
+     ],
+     [
+      "social",
+      132
+     ],
+     [
+      "low",
+      120
+     ],
+     [
+      "child",
+      103
+     ],
+     [
+      "control",
+      97
+     ],
+     [
+      "use",
+      90
+     ],
+     [
+      "measure",
+      89
+     ],
+     [
+      "skill",
+      84
+     ],
+     [
+      "problem",
+      77
+     ],
+     [
+      "scale",
+      77
+     ],
+     [
+      "behavioral",
+      63
+     ],
+     [
+      "theory",
+      63
+     ],
+     [
+      "group",
+      60
+     ],
+     [
+      "choice",
+      60
+     ],
+     [
+      "effect",
+      57
+     ],
+     [
+      "cognitive",
+      57
+     ],
+     [
+      "increase",
+      52
+     ],
+     [
+      "study",
+      51
+     ],
+     [
+      "treatment",
+      51
+     ],
+     [
+      "high",
+      49
+     ],
+     [
+      "model",
+      48
+     ],
+     [
+      "training",
+      45
+     ],
+     [
+      "level",
+      43
+     ],
+     [
+      "strategy",
+      43
+     ]
+    ],
+    "2000-2004": [
+     [
+      "self",
+      285
+     ],
+     [
+      "behavior",
+      202
+     ],
+     [
+      "low",
+      196
+     ],
+     [
+      "social",
+      155
+     ],
+     [
+      "theory",
+      134
+     ],
+     [
+      "use",
+      133
+     ],
+     [
+      "child",
+      110
+     ],
+     [
+      "problem",
+      107
+     ],
+     [
+      "skill",
+      104
+     ],
+     [
+      "study",
+      101
+     ],
+     [
+      "measure",
+      96
+     ],
+     [
+      "effect",
+      96
+     ],
+     [
+      "high",
+      95
+     ],
+     [
+      "control",
+      84
+     ],
+     [
+      "scale",
+      78
+     ],
+     [
+      "relationship",
+      76
+     ],
+     [
+      "model",
+      72
+     ],
+     [
+      "increase",
+      65
+     ],
+     [
+      "result",
+      63
+     ],
+     [
+      "level",
+      63
+     ],
+     [
+      "individual",
+      60
+     ],
+     [
+      "student",
+      60
+     ],
+     [
+      "training",
+      59
+     ],
+     [
+      "behavioral",
+      57
+     ],
+     [
+      "examine",
+      55
+     ]
+    ],
+    "2005-2009": [
+     [
+      "low",
+      624
+     ],
+     [
+      "self",
+      422
+     ],
+     [
+      "theory",
+      402
+     ],
+     [
+      "social",
+      345
+     ],
+     [
+      "behavior",
+      338
+     ],
+     [
+      "effect",
+      286
+     ],
+     [
+      "child",
+      259
+     ],
+     [
+      "use",
+      242
+     ],
+     [
+      "study",
+      219
+     ],
+     [
+      "level",
+      209
+     ],
+     [
+      "control",
+      201
+     ],
+     [
+      "measure",
+      199
+     ],
+     [
+      "individual",
+      194
+     ],
+     [
+      "relationship",
+      187
+     ],
+     [
+      "high",
+      161
+     ],
+     [
+      "test",
+      159
+     ],
+     [
+      "examine",
+      158
+     ],
+     [
+      "problem",
+      155
+     ],
+     [
+      "crime",
+      155
+     ],
+     [
+      "factor",
+      148
+     ],
+     [
+      "delinquency",
+      140
+     ],
+     [
+      "research",
+      134
+     ],
+     [
+      "influence",
+      133
+     ],
+     [
+      "skill",
+      128
+     ],
+     [
+      "hirschi",
+      128
+     ]
+    ],
+    "2010-2014": [
+     [
+      "low",
+      677
+     ],
+     [
+      "self",
+      638
+     ],
+     [
+      "social",
+      435
+     ],
+     [
+      "effect",
+      422
+     ],
+     [
+      "behavior",
+      419
+     ],
+     [
+      "study",
+      387
+     ],
+     [
+      "high",
+      367
+     ],
+     [
+      "relationship",
+      354
+     ],
+     [
+      "use",
+      344
+     ],
+     [
+      "theory",
+      336
+     ],
+     [
+      "individual",
+      327
+     ],
+     [
+      "level",
+      319
+     ],
+     [
+      "task",
+      291
+     ],
+     [
+      "control",
+      278
+     ],
+     [
+      "model",
+      262
+     ],
+     [
+      "result",
+      251
+     ],
+     [
+      "examine",
+      247
+     ],
+     [
+      "relate",
+      245
+     ],
+     [
+      "measure",
+      242
+     ],
+     [
+      "resource",
+      227
+     ],
+     [
+      "problem",
+      226
+     ],
+     [
+      "child",
+      222
+     ],
+     [
+      "trait",
+      220
+     ],
+     [
+      "research",
+      215
+     ],
+     [
+      "increase",
+      214
+     ]
+    ],
+    "2015-2019": [
+     [
+      "low",
+      1066
+     ],
+     [
+      "self",
+      845
+     ],
+     [
+      "effect",
+      665
+     ],
+     [
+      "high",
+      623
+     ],
+     [
+      "trait",
+      607
+     ],
+     [
+      "behavior",
+      601
+     ],
+     [
+      "study",
+      591
+     ],
+     [
+      "social",
+      590
+     ],
+     [
+      "use",
+      525
+     ],
+     [
+      "relationship",
+      504
+     ],
+     [
+      "level",
+      462
+     ],
+     [
+      "individual",
+      455
+     ],
+     [
+      "measure",
+      436
+     ],
+     [
+      "theory",
+      406
+     ],
+     [
+      "control",
+      386
+     ],
+     [
+      "model",
+      385
+     ],
+     [
+      "task",
+      368
+     ],
+     [
+      "relate",
+      354
+     ],
+     [
+      "examine",
+      347
+     ],
+     [
+      "role",
+      344
+     ],
+     [
+      "increase",
+      316
+     ],
+     [
+      "predict",
+      309
+     ],
+     [
+      "result",
+      305
+     ],
+     [
+      "scale",
+      300
+     ],
+     [
+      "research",
+      293
+     ]
+    ],
+    "2020-2024": [
+     [
+      "self",
+      1122
+     ],
+     [
+      "low",
+      1103
+     ],
+     [
+      "effect",
+      906
+     ],
+     [
+      "relationship",
+      770
+     ],
+     [
+      "high",
+      742
+     ],
+     [
+      "behavior",
+      696
+     ],
+     [
+      "study",
+      671
+     ],
+     [
+      "role",
+      670
+     ],
+     [
+      "use",
+      656
+     ],
+     [
+      "trait",
+      640
+     ],
+     [
+      "scale",
+      576
+     ],
+     [
+      "social",
+      574
+     ],
+     [
+      "level",
+      542
+     ],
+     [
+      "individual",
+      509
+     ],
+     [
+      "associate",
+      454
+     ],
+     [
+      "mediate",
+      423
+     ],
+     [
+      "student",
+      398
+     ],
+     [
+      "control",
+      390
+     ],
+     [
+      "adolescent",
+      383
+     ],
+     [
+      "predict",
+      375
+     ],
+     [
+      "moderate",
+      369
+     ],
+     [
+      "child",
+      352
+     ],
+     [
+      "examine",
+      346
+     ],
+     [
+      "result",
+      345
+     ],
+     [
+      "association",
+      345
+     ]
+    ],
+    "2025-2025": [
+     [
+      "self",
+      358
+     ],
+     [
+      "low",
+      307
+     ],
+     [
+      "relationship",
+      300
+     ],
+     [
+      "role",
+      281
+     ],
+     [
+      "effect",
+      250
+     ],
+     [
+      "social",
+      245
+     ],
+     [
+      "scale",
+      198
+     ],
+     [
+      "behavior",
+      196
+     ],
+     [
+      "high",
+      194
+     ],
+     [
+      "mediate",
+      191
+     ],
+     [
+      "trait",
+      177
+     ],
+     [
+      "study",
+      175
+     ],
+     [
+      "use",
+      164
+     ],
+     [
+      "moderate",
+      161
+     ],
+     [
+      "level",
+      153
+     ],
+     [
+      "influence",
+      139
+     ],
+     [
+      "associate",
+      133
+     ],
+     [
+      "adolescent",
+      130
+     ],
+     [
+      "association",
+      128
+     ],
+     [
+      "examine",
+      121
+     ],
+     [
+      "emotional",
+      119
+     ],
+     [
+      "financial",
+      117
+     ],
+     [
+      "mediating",
+      113
+     ],
+     [
+      "academic",
+      112
+     ],
+     [
+      "student",
+      109
+     ]
+    ]
+   },
+   "movers": {
+    "from": "1975-1979",
+    "to": "2025-2025",
+    "unit": "per-mille of collocate tokens; [word, delta, valence, arousal]",
+    "up": [
+     [
+      "relationship",
+      15.72,
+      7.83,
+      5.0
+     ],
+     [
+      "low",
+      15.65,
+      4.39,
+      2.21
+     ],
+     [
+      "role",
+      13.67,
+      5.1,
+      4.4
+     ],
+     [
+      "mediate",
+      11.06,
+      null,
+      null
+     ],
+     [
+      "trait",
+      10.25,
+      5.44,
+      3.55
+     ],
+     [
+      "scale",
+      9.57,
+      5.06,
+      3.8
+     ],
+     [
+      "moderate",
+      9.33,
+      5.52,
+      4.0
+     ],
+     [
+      "effect",
+      9.03,
+      5.5,
+      4.08
+     ],
+     [
+      "social",
+      8.74,
+      6.08,
+      5.16
+     ],
+     [
+      "association",
+      7.41,
+      5.5,
+      3.67
+     ],
+     [
+      "influence",
+      7.34,
+      5.53,
+      4.3
+     ],
+     [
+      "high",
+      6.97,
+      5.77,
+      4.1
+     ],
+     [
+      "financial",
+      6.78,
+      5.0,
+      4.55
+     ],
+     [
+      "associate",
+      6.76,
+      5.2,
+      3.11
+     ],
+     [
+      "level",
+      6.73,
+      5.72,
+      2.15
+     ],
+     [
+      "mediating",
+      6.55,
+      null,
+      null
+     ],
+     [
+      "adolescent",
+      5.87,
+      5.38,
+      4.2
+     ],
+     [
+      "addiction",
+      5.21,
+      3.52,
+      4.48
+     ],
+     [
+      "support",
+      5.16,
+      6.89,
+      3.05
+     ],
+     [
+      "academic",
+      5.07,
+      6.61,
+      3.32
+     ]
+    ],
+    "down": [
+     [
+      "procedure",
+      -21.1,
+      4.28,
+      4.15
+     ],
+     [
+      "treatment",
+      -14.88,
+      5.0,
+      4.47
+     ],
+     [
+      "behavioral",
+      -14.4,
+      5.1,
+      4.1
+     ],
+     [
+      "training",
+      -14.38,
+      5.19,
+      4.1
+     ],
+     [
+      "technique",
+      -13.28,
+      7.0,
+      3.45
+     ],
+     [
+      "behavior",
+      -11.17,
+      5.28,
+      4.27
+     ],
+     [
+      "group",
+      -9.25,
+      5.78,
+      3.43
+     ],
+     [
+      "program",
+      -8.38,
+      5.5,
+      3.9
+     ],
+     [
+      "review",
+      -8.0,
+      5.09,
+      3.77
+     ],
+     [
+      "ss",
+      -7.82,
+      null,
+      null
+     ],
+     [
+      "control",
+      -7.82,
+      4.43,
+      4.76
+     ],
+     [
+      "relaxation",
+      -7.59,
+      8.0,
+      3.15
+     ],
+     [
+      "desensitization",
+      -7.11,
+      null,
+      null
+     ],
+     [
+      "child",
+      -6.48,
+      7.2,
+      5.33
+     ],
+     [
+      "skill",
+      -5.78,
+      6.65,
+      4.94
+     ],
+     [
+      "discuss",
+      -5.52,
+      5.89,
+      2.76
+     ],
+     [
+      "biofeedback",
+      -5.45,
+      null,
+      null
+     ],
+     [
+      "effectiveness",
+      -5.22,
+      6.9,
+      4.95
+     ],
+     [
+      "smoking",
+      -5.22,
+      null,
+      null
+     ],
+     [
+      "development",
+      -5.06,
+      5.25,
+      4.23
+     ]
+    ]
+   }
+  },
+  "willpower": {
+   "top": {
+    "1985-1989": [
+     [
+      "control",
+      6
+     ],
+     [
+      "lack",
+      5
+     ],
+     [
+      "strength",
+      3
+     ],
+     [
+      "self",
+      3
+     ],
+     [
+      "use",
+      2
+     ],
+     [
+      "foundation",
+      2
+     ],
+     [
+      "overcome",
+      2
+     ],
+     [
+      "problem",
+      2
+     ],
+     [
+      "importance",
+      2
+     ],
+     [
+      "contributor",
+      2
+     ],
+     [
+      "e.g",
+      2
+     ],
+     [
+      "effort",
+      2
+     ],
+     [
+      "suggest",
+      2
+     ],
+     [
+      "employ",
+      2
+     ],
+     [
+      "stimulus",
+      2
+     ],
+     [
+      "interpersonal",
+      2
+     ],
+     [
+      "strategy",
+      2
+     ],
+     [
+      "belief",
+      2
+     ],
+     [
+      "factor",
+      2
+     ],
+     [
+      "life",
+      2
+     ],
+     [
+      "little",
+      2
+     ],
+     [
+      "vs",
+      2
+     ],
+     [
+      "resource",
+      1
+     ],
+     [
+      "encompass",
+      1
+     ],
+     [
+      "affection",
+      1
+     ]
+    ],
+    "1990-1994": [
+     [
+      "control",
+      5
+     ],
+     [
+      "lack",
+      5
+     ],
+     [
+      "self",
+      4
+     ],
+     [
+      "time",
+      4
+     ],
+     [
+      "physical",
+      4
+     ],
+     [
+      "addiction",
+      4
+     ],
+     [
+      "study",
+      4
+     ],
+     [
+      "use",
+      3
+     ],
+     [
+      "cause",
+      3
+     ],
+     [
+      "loss",
+      3
+     ],
+     [
+      "theory",
+      3
+     ],
+     [
+      "mechanism",
+      3
+     ],
+     [
+      "issue",
+      3
+     ],
+     [
+      "know",
+      3
+     ],
+     [
+      "symptom",
+      3
+     ],
+     [
+      "vs",
+      2
+     ],
+     [
+      "life",
+      2
+     ],
+     [
+      "war",
+      2
+     ],
+     [
+      "save",
+      2
+     ],
+     [
+      "spend",
+      2
+     ],
+     [
+      "guide",
+      2
+     ],
+     [
+      "william",
+      2
+     ],
+     [
+      "eddy",
+      2
+     ],
+     [
+      "decision",
+      2
+     ],
+     [
+      "europe",
+      2
+     ]
+    ],
+    "1995-1999": [
+     [
+      "self",
+      11
+     ],
+     [
+      "lack",
+      9
+     ],
+     [
+      "addiction",
+      7
+     ],
+     [
+      "barrier",
+      7
+     ],
+     [
+      "personal",
+      6
+     ],
+     [
+      "work",
+      5
+     ],
+     [
+      "control",
+      5
+     ],
+     [
+      "foundation",
+      5
+     ],
+     [
+      "nature",
+      4
+     ],
+     [
+      "behavior",
+      4
+     ],
+     [
+      "intention",
+      4
+     ],
+     [
+      "theory",
+      4
+     ],
+     [
+      "goal",
+      4
+     ],
+     [
+      "level",
+      4
+     ],
+     [
+      "success",
+      3
+     ],
+     [
+      "quickly",
+      3
+     ],
+     [
+      "help",
+      3
+     ],
+     [
+      "process",
+      3
+     ],
+     [
+      "analysis",
+      3
+     ],
+     [
+      "understanding",
+      3
+     ],
+     [
+      "hyperbolic",
+      3
+     ],
+     [
+      "relapse",
+      3
+     ],
+     [
+      "high",
+      3
+     ],
+     [
+      "individual",
+      3
+     ],
+     [
+      "disease",
+      3
+     ]
+    ],
+    "2000-2004": [
+     [
+      "energy",
+      18
+     ],
+     [
+      "lack",
+      12
+     ],
+     [
+      "self",
+      11
+     ],
+     [
+      "result",
+      10
+     ],
+     [
+      "support",
+      10
+     ],
+     [
+      "use",
+      9
+     ],
+     [
+      "control",
+      7
+     ],
+     [
+      "action",
+      7
+     ],
+     [
+      "motivation",
+      7
+     ],
+     [
+      "require",
+      7
+     ],
+     [
+      "strong",
+      7
+     ],
+     [
+      "adolescent",
+      7
+     ],
+     [
+      "time",
+      6
+     ],
+     [
+      "people",
+      6
+     ],
+     [
+      "fold",
+      6
+     ],
+     [
+      "strategy",
+      5
+     ],
+     [
+      "manager",
+      5
+     ],
+     [
+      "harness",
+      5
+     ],
+     [
+      "stop",
+      5
+     ],
+     [
+      "suggest",
+      5
+     ],
+     [
+      "human",
+      5
+     ],
+     [
+      "choice",
+      5
+     ],
+     [
+      "change",
+      5
+     ],
+     [
+      "importance",
+      5
+     ],
+     [
+      "physician",
+      5
+     ]
+    ],
+    "2005-2009": [
+     [
+      "lack",
+      27
+     ],
+     [
+      "control",
+      22
+     ],
+     [
+      "self",
+      20
+     ],
+     [
+      "resist",
+      11
+     ],
+     [
+      "decision",
+      10
+     ],
+     [
+      "individual",
+      10
+     ],
+     [
+      "test",
+      9
+     ],
+     [
+      "time",
+      8
+     ],
+     [
+      "require",
+      7
+     ],
+     [
+      "strength",
+      7
+     ],
+     [
+      "exercise",
+      7
+     ],
+     [
+      "emotion",
+      7
+     ],
+     [
+      "barrier",
+      7
+     ],
+     [
+      "physical",
+      7
+     ],
+     [
+      "social",
+      7
+     ],
+     [
+      "temptation",
+      6
+     ],
+     [
+      "drug",
+      6
+     ],
+     [
+      "effective",
+      6
+     ],
+     [
+      "achieve",
+      6
+     ],
+     [
+      "live",
+      6
+     ],
+     [
+      "character",
+      6
+     ],
+     [
+      "loss",
+      6
+     ],
+     [
+      "people",
+      6
+     ],
+     [
+      "support",
+      6
+     ],
+     [
+      "cost",
+      6
+     ]
+    ],
+    "2010-2014": [
+     [
+      "self",
+      58
+     ],
+     [
+      "control",
+      39
+     ],
+     [
+      "lack",
+      33
+     ],
+     [
+      "people",
+      26
+     ],
+     [
+      "limited",
+      18
+     ],
+     [
+      "individual",
+      18
+     ],
+     [
+      "include",
+      18
+     ],
+     [
+      "use",
+      17
+     ],
+     [
+      "human",
+      16
+     ],
+     [
+      "belief",
+      16
+     ],
+     [
+      "behavior",
+      16
+     ],
+     [
+      "discipline",
+      16
+     ],
+     [
+      "influence",
+      15
+     ],
+     [
+      "require",
+      14
+     ],
+     [
+      "temptation",
+      14
+     ],
+     [
+      "leader",
+      14
+     ],
+     [
+      "leadership",
+      14
+     ],
+     [
+      "research",
+      13
+     ],
+     [
+      "action",
+      13
+     ],
+     [
+      "strength",
+      13
+     ],
+     [
+      "role",
+      12
+     ],
+     [
+      "ability",
+      12
+     ],
+     [
+      "suggest",
+      12
+     ],
+     [
+      "need",
+      12
+     ],
+     [
+      "work",
+      12
+     ]
+    ],
+    "2015-2019": [
+     [
+      "self",
+      83
+     ],
+     [
+      "theory",
+      67
+     ],
+     [
+      "lack",
+      60
+     ],
+     [
+      "control",
+      55
+     ],
+     [
+      "belief",
+      42
+     ],
+     [
+      "limited",
+      38
+     ],
+     [
+      "implicit",
+      37
+     ],
+     [
+      "people",
+      36
+     ],
+     [
+      "individual",
+      35
+     ],
+     [
+      "believe",
+      30
+     ],
+     [
+      "resource",
+      28
+     ],
+     [
+      "effect",
+      25
+     ],
+     [
+      "depletion",
+      22
+     ],
+     [
+      "use",
+      22
+     ],
+     [
+      "capacity",
+      20
+     ],
+     [
+      "research",
+      18
+     ],
+     [
+      "deplete",
+      17
+     ],
+     [
+      "goal",
+      16
+     ],
+     [
+      "ego",
+      16
+     ],
+     [
+      "result",
+      16
+     ],
+     [
+      "time",
+      16
+     ],
+     [
+      "quit",
+      16
+     ],
+     [
+      "study",
+      15
+     ],
+     [
+      "strategy",
+      15
+     ],
+     [
+      "strength",
+      15
+     ]
+    ],
+    "2020-2024": [
+     [
+      "self",
+      99
+     ],
+     [
+      "lack",
+      91
+     ],
+     [
+      "belief",
+      79
+     ],
+     [
+      "control",
+      66
+     ],
+     [
+      "limited",
+      54
+     ],
+     [
+      "theory",
+      48
+     ],
+     [
+      "resource",
+      35
+     ],
+     [
+      "people",
+      34
+     ],
+     [
+      "associate",
+      31
+     ],
+     [
+      "affect",
+      24
+     ],
+     [
+      "high",
+      24
+     ],
+     [
+      "motivation",
+      23
+     ],
+     [
+      "use",
+      22
+     ],
+     [
+      "implicit",
+      21
+     ],
+     [
+      "believe",
+      20
+     ],
+     [
+      "examine",
+      20
+     ],
+     [
+      "depletion",
+      20
+     ],
+     [
+      "individual",
+      20
+     ],
+     [
+      "fat",
+      20
+     ],
+     [
+      "time",
+      19
+     ],
+     [
+      "result",
+      19
+     ],
+     [
+      "study",
+      19
+     ],
+     [
+      "effect",
+      19
+     ],
+     [
+      "barrier",
+      19
+     ],
+     [
+      "strength",
+      18
+     ]
+    ],
+    "2025-2025": [
+     [
+      "belief",
+      33
+     ],
+     [
+      "self",
+      25
+     ],
+     [
+      "control",
+      20
+     ],
+     [
+      "individual",
+      13
+     ],
+     [
+      "motivation",
+      10
+     ],
+     [
+      "rely",
+      10
+     ],
+     [
+      "student",
+      10
+     ],
+     [
+      "relationship",
+      9
+     ],
+     [
+      "lack",
+      9
+     ],
+     [
+      "experience",
+      8
+     ],
+     [
+      "resource",
+      8
+     ],
+     [
+      "enhance",
+      8
+     ],
+     [
+      "effect",
+      8
+     ],
+     [
+      "limited",
+      8
+     ],
+     [
+      "study",
+      8
+     ],
+     [
+      "education",
+      8
+     ],
+     [
+      "high",
+      8
+     ],
+     [
+      "emotional",
+      8
+     ],
+     [
+      "low",
+      7
+     ],
+     [
+      "implicit",
+      6
+     ],
+     [
+      "theory",
+      6
+     ],
+     [
+      "role",
+      6
+     ],
+     [
+      "depletion",
+      6
+     ],
+     [
+      "people",
+      6
+     ],
+     [
+      "strong",
+      6
+     ]
+    ]
+   },
+   "movers": {
+    "from": "2005-2009",
+    "to": "2025-2025",
+    "unit": "per-mille of collocate tokens; [word, delta, valence, arousal]",
+    "up": [
+     [
+      "belief",
+      31.71,
+      6.14,
+      3.95
+     ],
+     [
+      "student",
+      10.27,
+      6.41,
+      4.25
+     ],
+     [
+      "rely",
+      10.27,
+      5.76,
+      3.8
+     ],
+     [
+      "relationship",
+      9.24,
+      7.83,
+      5.0
+     ],
+     [
+      "experience",
+      8.21,
+      6.89,
+      3.71
+     ],
+     [
+      "enhance",
+      8.21,
+      6.62,
+      4.04
+     ],
+     [
+      "emotional",
+      8.21,
+      5.11,
+      5.32
+     ],
+     [
+      "study",
+      8.21,
+      5.78,
+      2.55
+     ],
+     [
+      "effect",
+      8.21,
+      5.5,
+      4.08
+     ],
+     [
+      "depletion",
+      6.16,
+      null,
+      null
+     ],
+     [
+      "theory",
+      6.16,
+      5.65,
+      4.41
+     ],
+     [
+      "implicit",
+      6.16,
+      null,
+      null
+     ],
+     [
+      "practical",
+      6.16,
+      5.63,
+      3.5
+     ],
+     [
+      "general",
+      6.16,
+      5.32,
+      3.71
+     ],
+     [
+      "environment",
+      6.16,
+      6.7,
+      3.45
+     ],
+     [
+      "limited",
+      6.04,
+      null,
+      null
+     ],
+     [
+      "motivation",
+      5.92,
+      6.24,
+      4.73
+     ],
+     [
+      "examine",
+      5.13,
+      5.61,
+      3.95
+     ],
+     [
+      "performance",
+      5.13,
+      6.2,
+      5.61
+     ],
+     [
+      "scale",
+      5.13,
+      5.06,
+      3.8
+     ]
+    ],
+    "down": [
+     [
+      "lack",
+      -20.11,
+      3.68,
+      2.24
+     ],
+     [
+      "resist",
+      -9.9,
+      3.95,
+      3.6
+     ],
+     [
+      "test",
+      -9.78,
+      4.44,
+      4.3
+     ],
+     [
+      "strength",
+      -7.61,
+      6.73,
+      5.3
+     ],
+     [
+      "exercise",
+      -7.61,
+      6.33,
+      5.41
+     ],
+     [
+      "effective",
+      -6.52,
+      6.95,
+      3.95
+     ],
+     [
+      "live",
+      -6.52,
+      7.95,
+      4.71
+     ],
+     [
+      "achieve",
+      -6.52,
+      7.75,
+      4.7
+     ],
+     [
+      "loss",
+      -6.52,
+      2.9,
+      5.2
+     ],
+     [
+      "cost",
+      -6.52,
+      4.11,
+      4.9
+     ],
+     [
+      "drug",
+      -6.52,
+      4.11,
+      4.48
+     ],
+     [
+      "decision",
+      -5.74,
+      5.5,
+      3.43
+     ],
+     [
+      "require",
+      -5.56,
+      4.74,
+      4.33
+     ],
+     [
+      "emotion",
+      -5.56,
+      6.62,
+      4.75
+     ],
+     [
+      "influence",
+      -5.43,
+      5.53,
+      4.3
+     ],
+     [
+      "likely",
+      -5.43,
+      6.9,
+      4.42
+     ],
+     [
+      "person",
+      -5.43,
+      6.1,
+      3.71
+     ],
+     [
+      "stop",
+      -5.43,
+      4.73,
+      4.14
+     ],
+     [
+      "eat",
+      -5.43,
+      7.1,
+      4.38
+     ],
+     [
+      "like",
+      -5.43,
+      7.44,
+      4.4
+     ]
+    ]
+   }
+  },
+  "executive function": {
+   "top": {
+    "2000-2004": [
+     [
+      "self",
+      14
+     ],
+     [
+      "task",
+      10
+     ],
+     [
+      "disorder",
+      10
+     ],
+     [
+      "theory",
+      8
+     ],
+     [
+      "regulation",
+      7
+     ],
+     [
+      "measure",
+      7
+     ],
+     [
+      "child",
+      7
+     ],
+     [
+      "model",
+      5
+     ],
+     [
+      "deficit",
+      5
+     ],
+     [
+      "control",
+      4
+     ],
+     [
+      "use",
+      4
+     ],
+     [
+      "adhd",
+      4
+     ],
+     [
+      "rating",
+      4
+     ],
+     [
+      "assess",
+      3
+     ],
+     [
+      "comorbid",
+      3
+     ],
+     [
+      "age",
+      3
+     ],
+     [
+      "behavior",
+      3
+     ],
+     [
+      "development",
+      3
+     ],
+     [
+      "executive",
+      3
+     ],
+     [
+      "mind",
+      3
+     ],
+     [
+      "correlation",
+      3
+     ],
+     [
+      "affect",
+      2
+     ],
+     [
+      "performance",
+      2
+     ],
+     [
+      "test",
+      2
+     ],
+     [
+      "focus",
+      2
+     ]
+    ],
+    "2005-2009": [
+     [
+      "self",
+      25
+     ],
+     [
+      "child",
+      15
+     ],
+     [
+      "control",
+      14
+     ],
+     [
+      "regulation",
+      13
+     ],
+     [
+      "rating",
+      13
+     ],
+     [
+      "behavior",
+      12
+     ],
+     [
+      "task",
+      12
+     ],
+     [
+      "deficit",
+      10
+     ],
+     [
+      "social",
+      10
+     ],
+     [
+      "measure",
+      10
+     ],
+     [
+      "performance",
+      9
+     ],
+     [
+      "study",
+      8
+     ],
+     [
+      "examine",
+      8
+     ],
+     [
+      "relate",
+      8
+     ],
+     [
+      "development",
+      8
+     ],
+     [
+      "behaviour",
+      7
+     ],
+     [
+      "emotional",
+      7
+     ],
+     [
+      "cognitive",
+      7
+     ],
+     [
+      "impairment",
+      6
+     ],
+     [
+      "inventory",
+      6
+     ],
+     [
+      "test",
+      6
+     ],
+     [
+      "parent",
+      5
+     ],
+     [
+      "adolescent",
+      5
+     ],
+     [
+      "brief",
+      5
+     ],
+     [
+      "preschool",
+      5
+     ]
+    ],
+    "2010-2014": [
+     [
+      "self",
+      77
+     ],
+     [
+      "regulation",
+      60
+     ],
+     [
+      "child",
+      55
+     ],
+     [
+      "control",
+      40
+     ],
+     [
+      "task",
+      31
+     ],
+     [
+      "development",
+      29
+     ],
+     [
+      "behavior",
+      27
+     ],
+     [
+      "cognitive",
+      27
+     ],
+     [
+      "skill",
+      27
+     ],
+     [
+      "attention",
+      26
+     ],
+     [
+      "memory",
+      21
+     ],
+     [
+      "deficit",
+      20
+     ],
+     [
+      "performance",
+      19
+     ],
+     [
+      "relate",
+      19
+     ],
+     [
+      "measure",
+      18
+     ],
+     [
+      "process",
+      16
+     ],
+     [
+      "effect",
+      16
+     ],
+     [
+      "test",
+      16
+     ],
+     [
+      "work",
+      16
+     ],
+     [
+      "rating",
+      15
+     ],
+     [
+      "associate",
+      15
+     ],
+     [
+      "behavioral",
+      14
+     ],
+     [
+      "inventory",
+      14
+     ],
+     [
+      "year",
+      13
+     ],
+     [
+      "use",
+      13
+     ]
+    ],
+    "2015-2019": [
+     [
+      "self",
+      126
+     ],
+     [
+      "child",
+      99
+     ],
+     [
+      "regulation",
+      96
+     ],
+     [
+      "control",
+      62
+     ],
+     [
+      "skill",
+      47
+     ],
+     [
+      "behavior",
+      47
+     ],
+     [
+      "measure",
+      39
+     ],
+     [
+      "cognitive",
+      36
+     ],
+     [
+      "development",
+      35
+     ],
+     [
+      "task",
+      33
+     ],
+     [
+      "school",
+      27
+     ],
+     [
+      "process",
+      26
+     ],
+     [
+      "relate",
+      26
+     ],
+     [
+      "deficit",
+      24
+     ],
+     [
+      "social",
+      23
+     ],
+     [
+      "report",
+      22
+     ],
+     [
+      "role",
+      21
+     ],
+     [
+      "preschool",
+      20
+     ],
+     [
+      "relationship",
+      20
+     ],
+     [
+      "high",
+      20
+     ],
+     [
+      "examine",
+      20
+     ],
+     [
+      "rating",
+      19
+     ],
+     [
+      "study",
+      19
+     ],
+     [
+      "training",
+      18
+     ],
+     [
+      "problem",
+      18
+     ]
+    ],
+    "2020-2024": [
+     [
+      "self",
+      170
+     ],
+     [
+      "regulation",
+      170
+     ],
+     [
+      "child",
+      99
+     ],
+     [
+      "control",
+      72
+     ],
+     [
+      "behavior",
+      71
+     ],
+     [
+      "skill",
+      63
+     ],
+     [
+      "development",
+      47
+     ],
+     [
+      "rating",
+      46
+     ],
+     [
+      "measure",
+      45
+     ],
+     [
+      "preschool",
+      38
+     ],
+     [
+      "inventory",
+      37
+     ],
+     [
+      "task",
+      36
+     ],
+     [
+      "cognitive",
+      36
+     ],
+     [
+      "associate",
+      31
+     ],
+     [
+      "relationship",
+      29
+     ],
+     [
+      "effortful",
+      28
+     ],
+     [
+      "social",
+      27
+     ],
+     [
+      "study",
+      27
+     ],
+     [
+      "relation",
+      27
+     ],
+     [
+      "emotion",
+      26
+     ],
+     [
+      "use",
+      26
+     ],
+     [
+      "academic",
+      26
+     ],
+     [
+      "early",
+      25
+     ],
+     [
+      "teacher",
+      24
+     ],
+     [
+      "examine",
+      23
+     ]
+    ],
+    "2025-2025": [
+     [
+      "self",
+      68
+     ],
+     [
+      "regulation",
+      57
+     ],
+     [
+      "child",
+      52
+     ],
+     [
+      "skill",
+      45
+     ],
+     [
+      "control",
+      23
+     ],
+     [
+      "measure",
+      20
+     ],
+     [
+      "behavior",
+      19
+     ],
+     [
+      "study",
+      18
+     ],
+     [
+      "early",
+      18
+     ],
+     [
+      "include",
+      17
+     ],
+     [
+      "development",
+      17
+     ],
+     [
+      "social",
+      17
+     ],
+     [
+      "cognitive",
+      15
+     ],
+     [
+      "associate",
+      14
+     ],
+     [
+      "play",
+      13
+     ],
+     [
+      "use",
+      12
+     ],
+     [
+      "age",
+      12
+     ],
+     [
+      "deficit",
+      11
+     ],
+     [
+      "report",
+      11
+     ],
+     [
+      "effect",
+      11
+     ],
+     [
+      "rating",
+      11
+     ],
+     [
+      "role",
+      11
+     ],
+     [
+      "support",
+      11
+     ],
+     [
+      "learning",
+      11
+     ],
+     [
+      "inventory",
+      10
+     ]
+    ]
+   },
+   "movers": {
+    "from": "2010-2014",
+    "to": "2025-2025",
+    "unit": "per-mille of collocate tokens; [word, delta, valence, arousal]",
+    "up": [
+     [
+      "skill",
+      15.63,
+      6.65,
+      4.94
+     ],
+     [
+      "early",
+      7.75,
+      null,
+      null
+     ],
+     [
+      "support",
+      7.35,
+      6.89,
+      3.05
+     ],
+     [
+      "study",
+      6.14,
+      5.78,
+      2.55
+     ],
+     [
+      "social",
+      6.01,
+      6.08,
+      5.16
+     ],
+     [
+      "include",
+      6.01,
+      6.39,
+      3.05
+     ],
+     [
+      "regulation",
+      5.98,
+      4.15,
+      3.45
+     ],
+     [
+      "t1",
+      5.35,
+      null,
+      null
+     ],
+     [
+      "child",
+      5.32,
+      7.2,
+      5.33
+     ],
+     [
+      "learning",
+      5.21,
+      null,
+      null
+     ],
+     [
+      "self",
+      4.23,
+      6.86,
+      4.78
+     ],
+     [
+      "t2",
+      4.01,
+      null,
+      null
+     ],
+     [
+      "longitudinal",
+      4.01,
+      null,
+      null
+     ],
+     [
+      "flexibility",
+      4.01,
+      6.9,
+      4.5
+     ],
+     [
+      "symptom",
+      3.87,
+      3.33,
+      4.17
+     ],
+     [
+      "adolescent",
+      3.74,
+      5.38,
+      4.2
+     ],
+     [
+      "measure",
+      3.73,
+      5.14,
+      4.36
+     ],
+     [
+      "explore",
+      3.61,
+      7.0,
+      4.05
+     ],
+     [
+      "relationship",
+      3.47,
+      7.83,
+      5.0
+     ],
+     [
+      "literacy",
+      3.34,
+      7.55,
+      3.95
+     ]
+    ],
+    "down": [
+     [
+      "task",
+      -12.58,
+      6.05,
+      3.83
+     ],
+     [
+      "attention",
+      -9.91,
+      6.68,
+      4.05
+     ],
+     [
+      "test",
+      -8.57,
+      4.44,
+      4.3
+     ],
+     [
+      "process",
+      -7.23,
+      5.62,
+      3.9
+     ],
+     [
+      "relate",
+      -6.16,
+      6.05,
+      3.64
+     ],
+     [
+      "control",
+      -6.04,
+      4.43,
+      4.76
+     ],
+     [
+      "memory",
+      -5.89,
+      6.58,
+      4.08
+     ],
+     [
+      "disorder",
+      -5.89,
+      3.76,
+      4.9
+     ],
+     [
+      "motor",
+      -5.35,
+      5.64,
+      5.42
+     ],
+     [
+      "performance",
+      -4.82,
+      6.2,
+      5.61
+     ],
+     [
+      "relation",
+      -4.82,
+      5.84,
+      4.36
+     ],
+     [
+      "work",
+      -4.55,
+      5.05,
+      4.33
+     ],
+     [
+      "research",
+      -4.55,
+      6.5,
+      4.8
+     ],
+     [
+      "cognitive",
+      -4.43,
+      5.68,
+      5.27
+     ],
+     [
+      "delay",
+      -4.28,
+      3.45,
+      3.0
+     ],
+     [
+      "component",
+      -4.28,
+      5.62,
+      4.27
+     ],
+     [
+      "impulsivity",
+      -4.28,
+      null,
+      null
+     ],
+     [
+      "impairment",
+      -4.28,
+      null,
+      null
+     ],
+     [
+      "development",
+      -4.16,
+      5.25,
+      4.23
+     ],
+     [
+      "goal",
+      -3.75,
+      6.79,
+      4.67
+     ]
+    ]
+   }
+  },
+  "ego depletion": {
+   "top": {
+    "2005-2009": [
+     [
+      "self",
+      30
+     ],
+     [
+      "control",
+      25
+     ],
+     [
+      "effect",
+      14
+     ],
+     [
+      "study",
+      9
+     ],
+     [
+      "overcome",
+      8
+     ],
+     [
+      "regulation",
+      7
+     ],
+     [
+      "regulatory",
+      7
+     ],
+     [
+      "research",
+      6
+     ],
+     [
+      "experiment",
+      6
+     ],
+     [
+      "model",
+      6
+     ],
+     [
+      "participant",
+      6
+     ],
+     [
+      "choice",
+      5
+     ],
+     [
+      "performance",
+      5
+     ],
+     [
+      "motivation",
+      5
+     ],
+     [
+      "resource",
+      5
+     ],
+     [
+      "support",
+      5
+     ],
+     [
+      "rebound",
+      5
+     ],
+     [
+      "behavior",
+      4
+     ],
+     [
+      "result",
+      4
+     ],
+     [
+      "affect",
+      4
+     ],
+     [
+      "strength",
+      4
+     ],
+     [
+      "process",
+      4
+     ],
+     [
+      "temporal",
+      4
+     ],
+     [
+      "theory",
+      4
+     ],
+     [
+      "state",
+      4
+     ]
+    ],
+    "2010-2014": [
+     [
+      "self",
+      70
+     ],
+     [
+      "effect",
+      61
+     ],
+     [
+      "control",
+      52
+     ],
+     [
+      "theory",
+      21
+     ],
+     [
+      "task",
+      21
+     ],
+     [
+      "result",
+      20
+     ],
+     [
+      "resource",
+      20
+     ],
+     [
+      "regulation",
+      18
+     ],
+     [
+      "study",
+      17
+     ],
+     [
+      "behavior",
+      16
+     ],
+     [
+      "individual",
+      15
+     ],
+     [
+      "increase",
+      14
+     ],
+     [
+      "use",
+      14
+     ],
+     [
+      "research",
+      14
+     ],
+     [
+      "reduce",
+      14
+     ],
+     [
+      "model",
+      13
+     ],
+     [
+      "examine",
+      12
+     ],
+     [
+      "test",
+      12
+     ],
+     [
+      "lead",
+      12
+     ],
+     [
+      "depletion",
+      12
+     ],
+     [
+      "cognitive",
+      12
+     ],
+     [
+      "suggest",
+      11
+     ],
+     [
+      "performance",
+      11
+     ],
+     [
+      "decision",
+      11
+     ],
+     [
+      "experiment",
+      11
+     ]
+    ],
+    "2015-2019": [
+     [
+      "effect",
+      236
+     ],
+     [
+      "self",
+      172
+     ],
+     [
+      "control",
+      150
+     ],
+     [
+      "task",
+      75
+     ],
+     [
+      "study",
+      74
+     ],
+     [
+      "use",
+      57
+     ],
+     [
+      "research",
+      52
+     ],
+     [
+      "performance",
+      50
+     ],
+     [
+      "state",
+      48
+     ],
+     [
+      "theory",
+      43
+     ],
+     [
+      "result",
+      38
+     ],
+     [
+      "participant",
+      34
+     ],
+     [
+      "work",
+      33
+     ],
+     [
+      "behavior",
+      33
+     ],
+     [
+      "model",
+      32
+     ],
+     [
+      "suggest",
+      32
+     ],
+     [
+      "experiment",
+      31
+     ],
+     [
+      "test",
+      31
+     ],
+     [
+      "examine",
+      29
+     ],
+     [
+      "phenomenon",
+      28
+     ],
+     [
+      "investigate",
+      27
+     ],
+     [
+      "relationship",
+      27
+     ],
+     [
+      "resource",
+      26
+     ],
+     [
+      "reduce",
+      26
+     ],
+     [
+      "find",
+      24
+     ]
+    ],
+    "2020-2024": [
+     [
+      "effect",
+      176
+     ],
+     [
+      "self",
+      117
+     ],
+     [
+      "theory",
+      81
+     ],
+     [
+      "control",
+      80
+     ],
+     [
+      "relationship",
+      78
+     ],
+     [
+      "mediate",
+      62
+     ],
+     [
+      "work",
+      60
+     ],
+     [
+      "task",
+      60
+     ],
+     [
+      "study",
+      60
+     ],
+     [
+      "role",
+      55
+     ],
+     [
+      "negative",
+      51
+     ],
+     [
+      "employee",
+      46
+     ],
+     [
+      "moderate",
+      42
+     ],
+     [
+      "behavior",
+      41
+     ],
+     [
+      "examine",
+      34
+     ],
+     [
+      "result",
+      34
+     ],
+     [
+      "use",
+      32
+     ],
+     [
+      "mediating",
+      31
+     ],
+     [
+      "increase",
+      31
+     ],
+     [
+      "performance",
+      30
+     ],
+     [
+      "resource",
+      26
+     ],
+     [
+      "positively",
+      26
+     ],
+     [
+      "conflict",
+      25
+     ],
+     [
+      "influence",
+      25
+     ],
+     [
+      "daily",
+      24
+     ]
+    ],
+    "2025-2025": [
+     [
+      "effect",
+      69
+     ],
+     [
+      "self",
+      45
+     ],
+     [
+      "control",
+      40
+     ],
+     [
+      "role",
+      31
+     ],
+     [
+      "theory",
+      29
+     ],
+     [
+      "mediate",
+      27
+     ],
+     [
+      "performance",
+      27
+     ],
+     [
+      "moderate",
+      25
+     ],
+     [
+      "work",
+      24
+     ],
+     [
+      "task",
+      22
+     ],
+     [
+      "relationship",
+      21
+     ],
+     [
+      "study",
+      20
+     ],
+     [
+      "social",
+      20
+     ],
+     [
+      "behavior",
+      18
+     ],
+     [
+      "abusive",
+      17
+     ],
+     [
+      "induce",
+      15
+     ],
+     [
+      "base",
+      14
+     ],
+     [
+      "leader",
+      14
+     ],
+     [
+      "indirect",
+      13
+     ],
+     [
+      "supervision",
+      13
+     ],
+     [
+      "student",
+      13
+     ],
+     [
+      "employee",
+      12
+     ],
+     [
+      "prospective",
+      12
+     ],
+     [
+      "memory",
+      12
+     ],
+     [
+      "result",
+      12
+     ]
+    ]
+   },
+   "movers": {
+    "from": "2010-2014",
+    "to": "2020-2024",
+    "unit": "per-mille of collocate tokens; [word, delta, valence, arousal]",
+    "up": [
+     [
+      "relationship",
+      19.98,
+      7.83,
+      5.0
+     ],
+     [
+      "work",
+      14.35,
+      5.05,
+      4.33
+     ],
+     [
+      "mediate",
+      14.2,
+      null,
+      null
+     ],
+     [
+      "employee",
+      12.6,
+      5.29,
+      4.65
+     ],
+     [
+      "role",
+      12.29,
+      5.1,
+      4.4
+     ],
+     [
+      "negative",
+      11.19,
+      2.52,
+      5.05
+     ],
+     [
+      "mediating",
+      8.49,
+      null,
+      null
+     ],
+     [
+      "theory",
+      7.59,
+      5.65,
+      4.41
+     ],
+     [
+      "moderate",
+      7.33,
+      5.52,
+      4.0
+     ],
+     [
+      "conflict",
+      6.85,
+      3.05,
+      5.41
+     ],
+     [
+      "daily",
+      6.58,
+      5.74,
+      4.2
+     ],
+     [
+      "stressor",
+      6.58,
+      null,
+      null
+     ],
+     [
+      "explore",
+      6.3,
+      7.0,
+      4.05
+     ],
+     [
+      "effect",
+      5.8,
+      5.5,
+      4.08
+     ],
+     [
+      "workplace",
+      5.75,
+      5.38,
+      3.5
+     ],
+     [
+      "positively",
+      5.73,
+      null,
+      null
+     ],
+     [
+      "job",
+      5.48,
+      5.64,
+      4.0
+     ],
+     [
+      "abusive",
+      4.93,
+      2.05,
+      5.27
+     ],
+     [
+      "influence",
+      4.76,
+      5.53,
+      4.3
+     ],
+     [
+      "indirect",
+      4.66,
+      3.58,
+      3.77
+     ]
+    ],
+    "down": [
+     [
+      "self",
+      -16.62,
+      6.86,
+      4.78
+     ],
+     [
+      "control",
+      -14.24,
+      4.43,
+      4.76
+     ],
+     [
+      "regulation",
+      -7.86,
+      4.15,
+      3.45
+     ],
+     [
+      "depletion",
+      -6.98,
+      null,
+      null
+     ],
+     [
+      "resource",
+      -6.78,
+      5.63,
+      3.71
+     ],
+     [
+      "individual",
+      -6.32,
+      6.17,
+      3.47
+     ],
+     [
+      "counteract",
+      -6.26,
+      4.73,
+      4.27
+     ],
+     [
+      "decision",
+      -5.73,
+      5.5,
+      3.43
+     ],
+     [
+      "cognitive",
+      -5.33,
+      5.68,
+      5.27
+     ],
+     [
+      "reduce",
+      -5.08,
+      5.1,
+      3.67
+     ],
+     [
+      "hypothesis",
+      -4.89,
+      5.78,
+      3.29
+     ],
+     [
+      "strength",
+      -4.87,
+      6.73,
+      5.3
+     ],
+     [
+      "suggest",
+      -4.64,
+      5.55,
+      3.75
+     ],
+     [
+      "result",
+      -4.59,
+      6.11,
+      4.14
+     ],
+     [
+      "indicate",
+      -4.47,
+      5.05,
+      3.32
+     ],
+     [
+      "research",
+      -4.26,
+      6.5,
+      4.8
+     ],
+     [
+      "test",
+      -4.24,
+      4.44,
+      4.3
+     ],
+     [
+      "making",
+      -4.19,
+      null,
+      null
+     ],
+     [
+      "subsequent",
+      -4.19,
+      5.16,
+      4.0
+     ],
+     [
+      "term",
+      -4.17,
+      5.57,
+      3.6
+     ]
+    ]
+   }
+  },
+  "delay of gratification": {
+   "top": {
+    "1995-1999": [
+     [
+      "self",
+      10
+     ],
+     [
+      "control",
+      7
+     ],
+     [
+      "task",
+      7
+     ],
+     [
+      "regulation",
+      4
+     ],
+     [
+      "measure",
+      4
+     ],
+     [
+      "academic",
+      4
+     ],
+     [
+      "personality",
+      3
+     ],
+     [
+      "risk",
+      3
+     ],
+     [
+      "research",
+      3
+     ],
+     [
+      "procedure",
+      3
+     ],
+     [
+      "child",
+      3
+     ],
+     [
+      "correlate",
+      2
+     ],
+     [
+      "willpower",
+      2
+     ],
+     [
+      "paradigm",
+      2
+     ],
+     [
+      "emotional",
+      2
+     ],
+     [
+      "emotion",
+      2
+     ],
+     [
+      "use",
+      2
+     ],
+     [
+      "behavior",
+      2
+     ],
+     [
+      "boy",
+      2
+     ],
+     [
+      "result",
+      2
+     ],
+     [
+      "factor",
+      2
+     ],
+     [
+      "externalize",
+      2
+     ],
+     [
+      "disorder",
+      2
+     ],
+     [
+      "good",
+      2
+     ],
+     [
+      "base",
+      2
+     ]
+    ],
+    "2000-2004": [
+     [
+      "child",
+      18
+     ],
+     [
+      "self",
+      16
+     ],
+     [
+      "control",
+      8
+     ],
+     [
+      "regulation",
+      7
+     ],
+     [
+      "research",
+      7
+     ],
+     [
+      "behavior",
+      7
+     ],
+     [
+      "association",
+      7
+     ],
+     [
+      "mechanism",
+      6
+     ],
+     [
+      "age",
+      6
+     ],
+     [
+      "cognitive",
+      5
+     ],
+     [
+      "time",
+      5
+     ],
+     [
+      "study",
+      5
+     ],
+     [
+      "parenting",
+      5
+     ],
+     [
+      "impose",
+      5
+     ],
+     [
+      "mental",
+      5
+     ],
+     [
+      "ftp",
+      5
+     ],
+     [
+      "assess",
+      4
+     ],
+     [
+      "sustain",
+      4
+     ],
+     [
+      "preschooler",
+      4
+     ],
+     [
+      "infant",
+      4
+     ],
+     [
+      "paradigm",
+      3
+     ],
+     [
+      "attentional",
+      3
+     ],
+     [
+      "strategy",
+      3
+     ],
+     [
+      "task",
+      3
+     ],
+     [
+      "observe",
+      3
+     ]
+    ],
+    "2005-2009": [
+     [
+      "self",
+      25
+     ],
+     [
+      "control",
+      10
+     ],
+     [
+      "regulation",
+      9
+     ],
+     [
+      "academic",
+      9
+     ],
+     [
+      "impose",
+      9
+     ],
+     [
+      "use",
+      8
+     ],
+     [
+      "strategy",
+      7
+     ],
+     [
+      "child",
+      6
+     ],
+     [
+      "gender",
+      5
+     ],
+     [
+      "task",
+      5
+     ],
+     [
+      "chimpanzee",
+      5
+     ],
+     [
+      "difference",
+      4
+     ],
+     [
+      "performance",
+      4
+     ],
+     [
+      "motivation",
+      4
+     ],
+     [
+      "social",
+      4
+     ],
+     [
+      "compare",
+      4
+     ],
+     [
+      "test",
+      4
+     ],
+     [
+      "effect",
+      4
+     ],
+     [
+      "behavior",
+      3
+     ],
+     [
+      "term",
+      3
+     ],
+     [
+      "long",
+      3
+     ],
+     [
+      "emotionality",
+      3
+     ],
+     [
+      "adjustment",
+      3
+     ],
+     [
+      "learning",
+      3
+     ],
+     [
+      "cognitive",
+      3
+     ]
+    ],
+    "2010-2014": [
+     [
+      "self",
+      30
+     ],
+     [
+      "task",
+      23
+     ],
+     [
+      "regulation",
+      18
+     ],
+     [
+      "control",
+      16
+     ],
+     [
+      "child",
+      16
+     ],
+     [
+      "measure",
+      13
+     ],
+     [
+      "time",
+      9
+     ],
+     [
+      "study",
+      9
+     ],
+     [
+      "year",
+      9
+     ],
+     [
+      "include",
+      9
+     ],
+     [
+      "research",
+      8
+     ],
+     [
+      "test",
+      8
+     ],
+     [
+      "performance",
+      8
+     ],
+     [
+      "predict",
+      8
+     ],
+     [
+      "use",
+      7
+     ],
+     [
+      "behavioral",
+      7
+     ],
+     [
+      "perspective",
+      7
+     ],
+     [
+      "ability",
+      7
+     ],
+     [
+      "academic",
+      7
+     ],
+     [
+      "high",
+      7
+     ],
+     [
+      "attention",
+      6
+     ],
+     [
+      "relate",
+      6
+     ],
+     [
+      "poor",
+      6
+     ],
+     [
+      "paradigm",
+      5
+     ],
+     [
+      "correlate",
+      5
+     ]
+    ],
+    "2015-2019": [
+     [
+      "task",
+      52
+     ],
+     [
+      "control",
+      39
+     ],
+     [
+      "self",
+      38
+     ],
+     [
+      "child",
+      33
+     ],
+     [
+      "regulation",
+      17
+     ],
+     [
+      "study",
+      15
+     ],
+     [
+      "use",
+      13
+     ],
+     [
+      "assess",
+      12
+     ],
+     [
+      "year",
+      11
+     ],
+     [
+      "academic",
+      11
+     ],
+     [
+      "strategy",
+      11
+     ],
+     [
+      "measure",
+      10
+     ],
+     [
+      "predict",
+      10
+     ],
+     [
+      "performance",
+      9
+     ],
+     [
+      "age",
+      8
+     ],
+     [
+      "month",
+      8
+     ],
+     [
+      "regulatory",
+      8
+     ],
+     [
+      "effect",
+      8
+     ],
+     [
+      "test",
+      7
+     ],
+     [
+      "individual",
+      7
+     ],
+     [
+      "time",
+      7
+     ],
+     [
+      "emotion",
+      7
+     ],
+     [
+      "change",
+      7
+     ],
+     [
+      "group",
+      7
+     ],
+     [
+      "old",
+      6
+     ]
+    ],
+    "2020-2024": [
+     [
+      "task",
+      46
+     ],
+     [
+      "self",
+      39
+     ],
+     [
+      "child",
+      33
+     ],
+     [
+      "control",
+      28
+     ],
+     [
+      "measure",
+      20
+     ],
+     [
+      "regulation",
+      17
+     ],
+     [
+      "ability",
+      13
+     ],
+     [
+      "study",
+      10
+     ],
+     [
+      "test",
+      10
+     ],
+     [
+      "age",
+      10
+     ],
+     [
+      "role",
+      9
+     ],
+     [
+      "effect",
+      9
+     ],
+     [
+      "associate",
+      9
+     ],
+     [
+      "vocational",
+      8
+     ],
+     [
+      "game",
+      8
+     ],
+     [
+      "wait",
+      8
+     ],
+     [
+      "preschool",
+      8
+     ],
+     [
+      "use",
+      8
+     ],
+     [
+      "time",
+      8
+     ],
+     [
+      "reward",
+      8
+     ],
+     [
+      "significant",
+      8
+     ],
+     [
+      "work",
+      7
+     ],
+     [
+      "behavior",
+      7
+     ],
+     [
+      "predict",
+      7
+     ],
+     [
+      "examine",
+      7
+     ]
+    ],
+    "2025-2025": [
+     [
+      "academic",
+      11
+     ],
+     [
+      "child",
+      9
+     ],
+     [
+      "self",
+      8
+     ],
+     [
+      "motivated",
+      7
+     ],
+     [
+      "strategy",
+      6
+     ],
+     [
+      "task",
+      6
+     ],
+     [
+      "control",
+      5
+     ],
+     [
+      "performance",
+      5
+     ],
+     [
+      "wait",
+      4
+     ],
+     [
+      "learning",
+      4
+     ],
+     [
+      "associate",
+      4
+     ],
+     [
+      "perceive",
+      4
+     ],
+     [
+      "behavior",
+      4
+     ],
+     [
+      "work",
+      3
+     ],
+     [
+      "grit",
+      3
+     ],
+     [
+      "regulation",
+      3
+     ],
+     [
+      "outcome",
+      3
+     ],
+     [
+      "children",
+      3
+     ],
+     [
+      "strategies",
+      3
+     ],
+     [
+      "increase",
+      3
+     ],
+     [
+      "japanese",
+      3
+     ],
+     [
+      "positively",
+      2
+     ],
+     [
+      "future",
+      2
+     ],
+     [
+      "relate",
+      2
+     ],
+     [
+      "study",
+      2
+     ]
+    ]
+   }
+  },
+  "strength model": {
+   "top": {
+    "2005-2009": [
+     [
+      "self",
+      34
+     ],
+     [
+      "control",
+      16
+     ],
+     [
+      "regulation",
+      10
+     ],
+     [
+      "regulatory",
+      6
+     ],
+     [
+      "model",
+      5
+     ],
+     [
+      "resource",
+      4
+     ],
+     [
+      "depletion",
+      4
+     ],
+     [
+      "limited",
+      4
+     ],
+     [
+      "review",
+      3
+     ],
+     [
+      "present",
+      3
+     ],
+     [
+      "research",
+      3
+     ],
+     [
+      "propose",
+      3
+     ],
+     [
+      "test",
+      3
+     ],
+     [
+      "discuss",
+      2
+     ],
+     [
+      "examine",
+      2
+     ],
+     [
+      "ego",
+      2
+     ],
+     [
+      "exert",
+      2
+     ],
+     [
+      "apply",
+      2
+     ],
+     [
+      "support",
+      2
+     ],
+     [
+      "health",
+      2
+     ],
+     [
+      "relate",
+      2
+     ],
+     [
+      "hypothesis",
+      2
+     ],
+     [
+      "chapter",
+      2
+     ],
+     [
+      "prediction",
+      2
+     ],
+     [
+      "consistent",
+      2
+     ]
+    ],
+    "2010-2014": [
+     [
+      "self",
+      59
+     ],
+     [
+      "control",
+      38
+     ],
+     [
+      "limited",
+      14
+     ],
+     [
+      "resource",
+      10
+     ],
+     [
+      "regulation",
+      10
+     ],
+     [
+      "depletion",
+      8
+     ],
+     [
+      "regulatory",
+      8
+     ],
+     [
+      "support",
+      7
+     ],
+     [
+      "ego",
+      6
+     ],
+     [
+      "effect",
+      6
+     ],
+     [
+      "accord",
+      5
+     ],
+     [
+      "draw",
+      4
+     ],
+     [
+      "baumeister",
+      4
+     ],
+     [
+      "suggest",
+      4
+     ],
+     [
+      "use",
+      4
+     ],
+     [
+      "research",
+      4
+     ],
+     [
+      "posit",
+      4
+     ],
+     [
+      "hypothesis",
+      3
+     ],
+     [
+      "integrate",
+      3
+     ],
+     [
+      "lend",
+      3
+     ],
+     [
+      "cognitive",
+      3
+     ],
+     [
+      "predict",
+      3
+     ],
+     [
+      "base",
+      3
+     ],
+     [
+      "muraven",
+      3
+     ],
+     [
+      "trait",
+      2
+     ]
+    ],
+    "2015-2019": [
+     [
+      "self",
+      123
+     ],
+     [
+      "control",
+      83
+     ],
+     [
+      "regulation",
+      32
+     ],
+     [
+      "study",
+      14
+     ],
+     [
+      "limited",
+      10
+     ],
+     [
+      "propose",
+      9
+     ],
+     [
+      "use",
+      9
+     ],
+     [
+      "model",
+      9
+     ],
+     [
+      "test",
+      8
+     ],
+     [
+      "base",
+      8
+     ],
+     [
+      "resource",
+      8
+     ],
+     [
+      "theory",
+      7
+     ],
+     [
+      "accord",
+      7
+     ],
+     [
+      "baumeister",
+      7
+     ],
+     [
+      "apply",
+      6
+     ],
+     [
+      "assumption",
+      6
+     ],
+     [
+      "research",
+      5
+     ],
+     [
+      "depletion",
+      5
+     ],
+     [
+      "task",
+      5
+     ],
+     [
+      "theoretical",
+      5
+     ],
+     [
+      "examine",
+      4
+     ],
+     [
+      "field",
+      4
+     ],
+     [
+      "explain",
+      4
+     ],
+     [
+      "framework",
+      4
+     ],
+     [
+      "implication",
+      4
+     ]
+    ],
+    "2020-2024": [
+     [
+      "self",
+      45
+     ],
+     [
+      "control",
+      36
+     ],
+     [
+      "theory",
+      14
+     ],
+     [
+      "model",
+      9
+     ],
+     [
+      "study",
+      8
+     ],
+     [
+      "base",
+      7
+     ],
+     [
+      "propose",
+      6
+     ],
+     [
+      "resource",
+      6
+     ],
+     [
+      "use",
+      6
+     ],
+     [
+      "research",
+      5
+     ],
+     [
+      "regulation",
+      5
+     ],
+     [
+      "draw",
+      4
+     ],
+     [
+      "conservation",
+      4
+     ],
+     [
+      "prominent",
+      3
+     ],
+     [
+      "willpower",
+      3
+     ],
+     [
+      "limited",
+      3
+     ],
+     [
+      "regulatory",
+      3
+     ],
+     [
+      "process",
+      3
+     ],
+     [
+      "aim",
+      3
+     ],
+     [
+      "explain",
+      3
+     ],
+     [
+      "relationship",
+      3
+     ],
+     [
+      "examine",
+      3
+     ],
+     [
+      "depletion",
+      2
+     ],
+     [
+      "integrate",
+      2
+     ],
+     [
+      "derive",
+      2
+     ]
+    ]
+   }
+  },
+  "self control depletion": {
+   "top": {
+    "2010-2014": [
+     [
+      "effect",
+      10
+     ],
+     [
+      "participant",
+      6
+     ],
+     [
+      "counteract",
+      6
+     ],
+     [
+      "dietary",
+      6
+     ],
+     [
+      "restraint",
+      6
+     ],
+     [
+      "task",
+      6
+     ],
+     [
+      "increase",
+      5
+     ],
+     [
+      "study",
+      4
+     ],
+     [
+      "individual",
+      4
+     ],
+     [
+      "great",
+      4
+     ],
+     [
+      "follow",
+      4
+     ],
+     [
+      "control",
+      4
+     ],
+     [
+      "food",
+      4
+     ],
+     [
+      "result",
+      4
+     ],
+     [
+      "cue",
+      4
+     ],
+     [
+      "lead",
+      3
+     ],
+     [
+      "motivational",
+      3
+     ],
+     [
+      "exercise",
+      3
+     ],
+     [
+      "understand",
+      3
+     ],
+     [
+      "smoking",
+      3
+     ],
+     [
+      "personal",
+      3
+     ],
+     [
+      "prayer",
+      3
+     ],
+     [
+      "condition",
+      3
+     ],
+     [
+      "power",
+      3
+     ],
+     [
+      "hedonic",
+      3
+     ]
+    ],
+    "2015-2019": [
+     [
+      "effect",
+      17
+     ],
+     [
+      "stressor",
+      11
+     ],
+     [
+      "self",
+      9
+     ],
+     [
+      "daily",
+      8
+     ],
+     [
+      "task",
+      7
+     ],
+     [
+      "negative",
+      6
+     ],
+     [
+      "predict",
+      6
+     ],
+     [
+      "result",
+      5
+     ],
+     [
+      "study",
+      5
+     ],
+     [
+      "increase",
+      5
+     ],
+     [
+      "state",
+      4
+     ],
+     [
+      "affect",
+      4
+     ],
+     [
+      "behavior",
+      4
+     ],
+     [
+      "diminish",
+      4
+     ],
+     [
+      "drinking",
+      4
+     ],
+     [
+      "alcohol",
+      4
+     ],
+     [
+      "follow",
+      4
+     ],
+     [
+      "test",
+      4
+     ],
+     [
+      "bedtime",
+      4
+     ],
+     [
+      "cause",
+      3
+     ],
+     [
+      "attitude",
+      3
+     ],
+     [
+      "decision",
+      3
+     ],
+     [
+      "impact",
+      3
+     ],
+     [
+      "social",
+      3
+     ],
+     [
+      "consumption",
+      3
+     ]
+    ],
+    "2020-2024": [
+     [
+      "relate",
+      9
+     ],
+     [
+      "relationship",
+      8
+     ],
+     [
+      "work",
+      7
+     ],
+     [
+      "positively",
+      7
+     ],
+     [
+      "self",
+      6
+     ],
+     [
+      "mistreatment",
+      6
+     ],
+     [
+      "perceive",
+      6
+     ],
+     [
+      "study",
+      5
+     ],
+     [
+      "role",
+      5
+     ],
+     [
+      "subsequent",
+      5
+     ],
+     [
+      "effect",
+      5
+     ],
+     [
+      "model",
+      4
+     ],
+     [
+      "surface",
+      4
+     ],
+     [
+      "performance",
+      4
+     ],
+     [
+      "expectancy",
+      4
+     ],
+     [
+      "disconfirmation",
+      4
+     ],
+     [
+      "theory",
+      3
+     ],
+     [
+      "mindfulness",
+      3
+     ],
+     [
+      "moderate",
+      3
+     ],
+     [
+      "mediate",
+      3
+     ],
+     [
+      "customer",
+      3
+     ],
+     [
+      "behavior",
+      3
+     ],
+     [
+      "buffer",
+      3
+     ],
+     [
+      "positive",
+      3
+     ],
+     [
+      "lead",
+      3
+     ]
+    ]
+   }
+  },
+  "depletion effect": {
+   "top": {
+    "2010-2014": [
+     [
+      "self",
+      8
+     ],
+     [
+      "ego",
+      7
+     ],
+     [
+      "control",
+      6
+     ],
+     [
+      "task",
+      6
+     ],
+     [
+      "conclude",
+      5
+     ],
+     [
+      "examine",
+      3
+     ],
+     [
+      "work",
+      3
+     ],
+     [
+      "stress",
+      3
+     ],
+     [
+      "model",
+      3
+     ],
+     [
+      "meta",
+      3
+     ],
+     [
+      "great",
+      3
+     ],
+     [
+      "existence",
+      3
+     ],
+     [
+      "phenomenon",
+      3
+     ],
+     [
+      "evidence",
+      3
+     ],
+     [
+      "cognitive",
+      3
+     ],
+     [
+      "high",
+      2
+     ],
+     [
+      "support",
+      2
+     ],
+     [
+      "employee",
+      2
+     ],
+     [
+      "attenuate",
+      2
+     ],
+     [
+      "test",
+      2
+     ],
+     [
+      "goal",
+      2
+     ],
+     [
+      "increase",
+      2
+     ],
+     [
+      "result",
+      2
+     ],
+     [
+      "analysis",
+      2
+     ],
+     [
+      "robust",
+      2
+     ]
+    ],
+    "2015-2019": [
+     [
+      "ego",
+      51
+     ],
+     [
+      "control",
+      18
+     ],
+     [
+      "self",
+      15
+     ],
+     [
+      "meta",
+      8
+     ],
+     [
+      "result",
+      7
+     ],
+     [
+      "recent",
+      7
+     ],
+     [
+      "resource",
+      6
+     ],
+     [
+      "size",
+      6
+     ],
+     [
+      "evidence",
+      5
+     ],
+     [
+      "d",
+      5
+     ],
+     [
+      "study",
+      5
+     ],
+     [
+      "aim",
+      5
+     ],
+     [
+      "participant",
+      5
+     ],
+     [
+      "effect",
+      4
+     ],
+     [
+      "analytic",
+      4
+     ],
+     [
+      "test",
+      4
+     ],
+     [
+      "estimate",
+      4
+     ],
+     [
+      "trait",
+      4
+     ],
+     [
+      "analysis",
+      4
+     ],
+     [
+      "investigate",
+      4
+     ],
+     [
+      "condition",
+      4
+     ],
+     [
+      "examine",
+      4
+     ],
+     [
+      "replication",
+      4
+     ],
+     [
+      "task",
+      3
+     ],
+     [
+      "attenuate",
+      3
+     ]
+    ],
+    "2020-2024": [
+     [
+      "ego",
+      16
+     ],
+     [
+      "self",
+      6
+     ],
+     [
+      "task",
+      5
+     ],
+     [
+      "evidence",
+      5
+     ],
+     [
+      "replication",
+      4
+     ],
+     [
+      "i.e",
+      3
+     ],
+     [
+      "performance",
+      3
+     ],
+     [
+      "find",
+      3
+     ],
+     [
+      "impair",
+      3
+     ],
+     [
+      "efficacy",
+      3
+     ],
+     [
+      "existence",
+      2
+     ],
+     [
+      "resource",
+      2
+     ],
+     [
+      "use",
+      2
+     ],
+     [
+      "control",
+      2
+     ],
+     [
+      "initial",
+      2
+     ],
+     [
+      "high",
+      2
+     ],
+     [
+      "result",
+      2
+     ],
+     [
+      "moderate",
+      2
+     ],
+     [
+      "child",
+      2
+     ],
+     [
+      "possible",
+      2
+     ],
+     [
+      "work",
+      2
+     ],
+     [
+      "cop",
+      2
+     ],
+     [
+      "burnout",
+      2
+     ],
+     [
+      "require",
+      2
+     ],
+     [
+      "evaluation",
+      1
+     ]
+    ]
+   }
+  },
+  "self regulatory depletion": {
+   "top": {
+    "2010-2014": [
+     [
+      "study",
+      6
+     ],
+     [
+      "self",
+      5
+     ],
+     [
+      "increase",
+      5
+     ],
+     [
+      "moral",
+      4
+     ],
+     [
+      "experiment",
+      4
+     ],
+     [
+      "stress",
+      4
+     ],
+     [
+      "regulation",
+      3
+     ],
+     [
+      "examine",
+      3
+     ],
+     [
+      "result",
+      3
+     ],
+     [
+      "effect",
+      3
+     ],
+     [
+      "memory",
+      3
+     ],
+     [
+      "literature",
+      2
+     ],
+     [
+      "contingent",
+      2
+     ],
+     [
+      "identity",
+      2
+     ],
+     [
+      "leader",
+      2
+     ],
+     [
+      "promote",
+      2
+     ],
+     [
+      "concern",
+      2
+     ],
+     [
+      "b",
+      2
+     ],
+     [
+      "lab",
+      2
+     ],
+     [
+      "resource",
+      2
+     ],
+     [
+      "finding",
+      2
+     ],
+     [
+      "suggest",
+      2
+     ],
+     [
+      "individual",
+      2
+     ],
+     [
+      "difference",
+      2
+     ],
+     [
+      "exercise",
+      2
+     ]
+    ],
+    "2015-2019": [
+     [
+      "effect",
+      10
+     ],
+     [
+      "control",
+      5
+     ],
+     [
+      "job",
+      3
+     ],
+     [
+      "performance",
+      3
+     ],
+     [
+      "study",
+      3
+     ],
+     [
+      "relate",
+      2
+     ],
+     [
+      "individual",
+      2
+     ],
+     [
+      "buffer",
+      2
+     ],
+     [
+      "term",
+      2
+     ],
+     [
+      "high",
+      2
+     ],
+     [
+      "self",
+      2
+     ],
+     [
+      "successful",
+      2
+     ],
+     [
+      "weight",
+      2
+     ],
+     [
+      "behavior",
+      2
+     ],
+     [
+      "inhibitory",
+      2
+     ],
+     [
+      "reduce",
+      2
+     ],
+     [
+      "ability",
+      2
+     ],
+     [
+      "examine",
+      2
+     ],
+     [
+      "executive",
+      2
+     ],
+     [
+      "stress",
+      2
+     ],
+     [
+      "ego",
+      2
+     ],
+     [
+      "depletion",
+      2
+     ],
+     [
+      "compare",
+      2
+     ],
+     [
+      "cognitive",
+      2
+     ],
+     [
+      "load",
+      2
+     ]
+    ]
+   }
+  }
+ },
+ "control_breadth": {
+  "participants": {
+   "series": {
+    "1990-1994": {
+     "breadth_mpnet": 0.7691,
+     "breadth_masked": 0.234
+    },
+    "1995-1999": {
+     "breadth_mpnet": 0.7488,
+     "breadth_masked": 0.2101
+    },
+    "2000-2004": {
+     "breadth_mpnet": 0.7368,
+     "breadth_masked": 0.2035
+    },
+    "2005-2009": {
+     "breadth_mpnet": 0.7372,
+     "breadth_masked": 0.1935
+    },
+    "2010-2014": {
+     "breadth_mpnet": 0.7411,
+     "breadth_masked": 0.1896
+    },
+    "2015-2019": {
+     "breadth_mpnet": 0.7319,
+     "breadth_masked": 0.1991
+    },
+    "2020-2024": {
+     "breadth_mpnet": 0.7274,
+     "breadth_masked": 0.1841
+    },
+    "2025-2025": {
+     "breadth_mpnet": 0.7149,
+     "breadth_masked": 0.1978
+    }
+   },
+   "trends": {
+    "breadth_mpnet": {
+     "beta": -0.905,
+     "p": 0.0006,
+     "n": 8
+    },
+    "breadth_masked": {
+     "beta": -0.777,
+     "p": 0.079,
+     "n": 8
+    }
+   }
+  },
+  "results": {
+   "series": {
+    "1975-1979": {
+     "breadth_mpnet": 0.7067,
+     "breadth_masked": 0.1981
+    },
+    "1980-1984": {
+     "breadth_mpnet": 0.7124,
+     "breadth_masked": 0.1846
+    },
+    "1985-1989": {
+     "breadth_mpnet": 0.733,
+     "breadth_masked": 0.2033
+    },
+    "1990-1994": {
+     "breadth_mpnet": 0.7799,
+     "breadth_masked": 0.2398
+    },
+    "1995-1999": {
+     "breadth_mpnet": 0.7486,
+     "breadth_masked": 0.2191
+    },
+    "2000-2004": {
+     "breadth_mpnet": 0.7676,
+     "breadth_masked": 0.2177
+    },
+    "2005-2009": {
+     "breadth_mpnet": 0.7529,
+     "breadth_masked": 0.2322
+    },
+    "2010-2014": {
+     "breadth_mpnet": 0.7665,
+     "breadth_masked": 0.2284
+    },
+    "2015-2019": {
+     "breadth_mpnet": 0.7571,
+     "breadth_masked": 0.2134
+    },
+    "2020-2024": {
+     "breadth_mpnet": 0.7647,
+     "breadth_masked": 0.2164
+    },
+    "2025-2025": {
+     "breadth_mpnet": 0.7521,
+     "breadth_masked": 0.204
+    }
+   },
+   "trends": {
+    "breadth_mpnet": {
+     "beta": 0.645,
+     "p": 0.0374,
+     "n": 11
+    },
+    "breadth_masked": {
+     "beta": 0.347,
+     "p": 0.3552,
+     "n": 11
+    }
+   }
+  },
+  "significant": {
+   "series": {
+    "1975-1979": {
+     "breadth_mpnet": 0.7254,
+     "breadth_masked": 0.2543
+    },
+    "1980-1984": {
+     "breadth_mpnet": 0.726,
+     "breadth_masked": 0.266
+    },
+    "1985-1989": {
+     "breadth_mpnet": 0.7403,
+     "breadth_masked": 0.2651
+    },
+    "1990-1994": {
+     "breadth_mpnet": 0.7635,
+     "breadth_masked": 0.2809
+    },
+    "1995-1999": {
+     "breadth_mpnet": 0.7502,
+     "breadth_masked": 0.2712
+    },
+    "2000-2004": {
+     "breadth_mpnet": 0.7704,
+     "breadth_masked": 0.2911
+    },
+    "2005-2009": {
+     "breadth_mpnet": 0.7682,
+     "breadth_masked": 0.2711
+    },
+    "2010-2014": {
+     "breadth_mpnet": 0.7548,
+     "breadth_masked": 0.2716
+    },
+    "2015-2019": {
+     "breadth_mpnet": 0.7594,
+     "breadth_masked": 0.2727
+    },
+    "2020-2024": {
+     "breadth_mpnet": 0.7579,
+     "breadth_masked": 0.2649
+    },
+    "2025-2025": {
+     "breadth_mpnet": 0.7381,
+     "breadth_masked": 0.2623
+    }
+   },
+   "trends": {
+    "breadth_mpnet": {
+     "beta": 0.491,
+     "p": 0.2098,
+     "n": 11
+    },
+    "breadth_masked": {
+     "beta": 0.135,
+     "p": 0.7402,
+     "n": 11
+    }
+   }
+  },
+  "measure": {
+   "series": {
+    "1975-1979": {
+     "breadth_mpnet": 0.7452,
+     "breadth_masked": 0.3033
+    },
+    "1980-1984": {
+     "breadth_mpnet": 0.7404,
+     "breadth_masked": 0.2971
+    },
+    "1985-1989": {
+     "breadth_mpnet": 0.6721,
+     "breadth_masked": 0.2895
+    },
+    "1990-1994": {
+     "breadth_mpnet": 0.6982,
+     "breadth_masked": 0.2706
+    },
+    "1995-1999": {
+     "breadth_mpnet": 0.6961,
+     "breadth_masked": 0.2791
+    },
+    "2000-2004": {
+     "breadth_mpnet": 0.7019,
+     "breadth_masked": 0.2771
+    },
+    "2005-2009": {
+     "breadth_mpnet": 0.7124,
+     "breadth_masked": 0.2745
+    },
+    "2010-2014": {
+     "breadth_mpnet": 0.7322,
+     "breadth_masked": 0.28
+    },
+    "2015-2019": {
+     "breadth_mpnet": 0.7131,
+     "breadth_masked": 0.2859
+    },
+    "2020-2024": {
+     "breadth_mpnet": 0.7283,
+     "breadth_masked": 0.2727
+    },
+    "2025-2025": {
+     "breadth_mpnet": 0.7146,
+     "breadth_masked": 0.2672
+    }
+   },
+   "trends": {
+    "breadth_mpnet": {
+     "beta": 0.008,
+     "p": 0.9859,
+     "n": 11
+    },
+    "breadth_masked": {
+     "beta": -0.73,
+     "p": 0.0048,
+     "n": 11
+    }
+   }
+  }
+ },
+ "parent_by_year": {
+  "1975": {
+   "valence": 5.5447,
+   "arousal": 4.0582,
+   "severity": 7.5135,
+   "n_docs": 69
+  },
+  "1976": {
+   "valence": 5.5415,
+   "arousal": 4.0936,
+   "severity": 7.5521,
+   "n_docs": 117
+  },
+  "1977": {
+   "valence": 5.4422,
+   "arousal": 4.1715,
+   "severity": 7.7293,
+   "n_docs": 105
+  },
+  "1978": {
+   "valence": 5.5375,
+   "arousal": 4.1008,
+   "severity": 7.5633,
+   "n_docs": 114
+  },
+  "1979": {
+   "valence": 5.5986,
+   "arousal": 4.1485,
+   "severity": 7.5499,
+   "n_docs": 88
+  },
+  "1980": {
+   "valence": 5.4918,
+   "arousal": 4.0796,
+   "severity": 7.5878,
+   "n_docs": 117
+  },
+  "1981": {
+   "valence": 5.5438,
+   "arousal": 4.1172,
+   "severity": 7.5734,
+   "n_docs": 95
+  },
+  "1982": {
+   "valence": 5.5657,
+   "arousal": 4.1329,
+   "severity": 7.5671,
+   "n_docs": 120
+  },
+  "1983": {
+   "valence": 5.5295,
+   "arousal": 4.0614,
+   "severity": 7.5319,
+   "n_docs": 144
+  },
+  "1984": {
+   "valence": 5.4645,
+   "arousal": 4.1552,
+   "severity": 7.6907,
+   "n_docs": 151
+  },
+  "1985": {
+   "valence": 5.4876,
+   "arousal": 4.1368,
+   "severity": 7.6492,
+   "n_docs": 128
+  },
+  "1986": {
+   "valence": 5.4982,
+   "arousal": 4.1454,
+   "severity": 7.6472,
+   "n_docs": 139
+  },
+  "1987": {
+   "valence": 5.5728,
+   "arousal": 4.1987,
+   "severity": 7.6259,
+   "n_docs": 118
+  },
+  "1988": {
+   "valence": 5.4389,
+   "arousal": 4.1916,
+   "severity": 7.7528,
+   "n_docs": 106
+  },
+  "1989": {
+   "valence": 5.476,
+   "arousal": 4.2516,
+   "severity": 7.7756,
+   "n_docs": 105
+  },
+  "1990": {
+   "valence": 5.482,
+   "arousal": 4.1958,
+   "severity": 7.7138,
+   "n_docs": 132
+  },
+  "1991": {
+   "valence": 5.4656,
+   "arousal": 4.205,
+   "severity": 7.7394,
+   "n_docs": 123
+  },
+  "1992": {
+   "valence": 5.5039,
+   "arousal": 4.2463,
+   "severity": 7.7424,
+   "n_docs": 124
+  },
+  "1993": {
+   "valence": 5.4625,
+   "arousal": 4.1872,
+   "severity": 7.7247,
+   "n_docs": 127
+  },
+  "1994": {
+   "valence": 5.4504,
+   "arousal": 4.2052,
+   "severity": 7.7548,
+   "n_docs": 159
+  },
+  "1995": {
+   "valence": 5.5219,
+   "arousal": 4.1939,
+   "severity": 7.672,
+   "n_docs": 195
+  },
+  "1996": {
+   "valence": 5.4915,
+   "arousal": 4.1724,
+   "severity": 7.6809,
+   "n_docs": 170
+  },
+  "1997": {
+   "valence": 5.6057,
+   "arousal": 4.1963,
+   "severity": 7.5906,
+   "n_docs": 175
+  },
+  "1998": {
+   "valence": 5.4765,
+   "arousal": 4.1783,
+   "severity": 7.7018,
+   "n_docs": 186
+  },
+  "1999": {
+   "valence": 5.5542,
+   "arousal": 4.2331,
+   "severity": 7.6789,
+   "n_docs": 215
+  },
+  "2000": {
+   "valence": 5.5029,
+   "arousal": 4.2097,
+   "severity": 7.7068,
+   "n_docs": 185
+  },
+  "2001": {
+   "valence": 5.5467,
+   "arousal": 4.2179,
+   "severity": 7.6712,
+   "n_docs": 226
+  },
+  "2002": {
+   "valence": 5.5309,
+   "arousal": 4.2101,
+   "severity": 7.6791,
+   "n_docs": 208
+  },
+  "2003": {
+   "valence": 5.5192,
+   "arousal": 4.1683,
+   "severity": 7.6491,
+   "n_docs": 235
+  },
+  "2004": {
+   "valence": 5.5438,
+   "arousal": 4.1562,
+   "severity": 7.6125,
+   "n_docs": 262
+  },
+  "2005": {
+   "valence": 5.4955,
+   "arousal": 4.1897,
+   "severity": 7.6941,
+   "n_docs": 302
+  },
+  "2006": {
+   "valence": 5.5287,
+   "arousal": 4.1303,
+   "severity": 7.6017,
+   "n_docs": 396
+  },
+  "2007": {
+   "valence": 5.507,
+   "arousal": 4.1374,
+   "severity": 7.6305,
+   "n_docs": 410
+  },
+  "2008": {
+   "valence": 5.5184,
+   "arousal": 4.1482,
+   "severity": 7.6298,
+   "n_docs": 454
+  },
+  "2009": {
+   "valence": 5.5543,
+   "arousal": 4.1539,
+   "severity": 7.5996,
+   "n_docs": 471
+  },
+  "2010": {
+   "valence": 5.5693,
+   "arousal": 4.139,
+   "severity": 7.5697,
+   "n_docs": 471
+  },
+  "2011": {
+   "valence": 5.5705,
+   "arousal": 4.1662,
+   "severity": 7.5958,
+   "n_docs": 505
+  },
+  "2012": {
+   "valence": 5.5294,
+   "arousal": 4.1377,
+   "severity": 7.6083,
+   "n_docs": 574
+  },
+  "2013": {
+   "valence": 5.5312,
+   "arousal": 4.1519,
+   "severity": 7.6207,
+   "n_docs": 630
+  },
+  "2014": {
+   "valence": 5.5554,
+   "arousal": 4.1416,
+   "severity": 7.5862,
+   "n_docs": 732
+  },
+  "2015": {
+   "valence": 5.5291,
+   "arousal": 4.1467,
+   "severity": 7.6176,
+   "n_docs": 766
+  },
+  "2016": {
+   "valence": 5.5282,
+   "arousal": 4.1368,
+   "severity": 7.6086,
+   "n_docs": 778
+  },
+  "2017": {
+   "valence": 5.5555,
+   "arousal": 4.1364,
+   "severity": 7.5809,
+   "n_docs": 723
+  },
+  "2018": {
+   "valence": 5.533,
+   "arousal": 4.1329,
+   "severity": 7.5999,
+   "n_docs": 805
+  },
+  "2019": {
+   "valence": 5.5734,
+   "arousal": 4.1489,
+   "severity": 7.5755,
+   "n_docs": 696
+  },
+  "2020": {
+   "valence": 5.5758,
+   "arousal": 4.1365,
+   "severity": 7.5607,
+   "n_docs": 746
+  },
+  "2021": {
+   "valence": 5.5506,
+   "arousal": 4.1489,
+   "severity": 7.5983,
+   "n_docs": 834
+  },
+  "2022": {
+   "valence": 5.561,
+   "arousal": 4.1264,
+   "severity": 7.5653,
+   "n_docs": 818
+  },
+  "2023": {
+   "valence": 5.5648,
+   "arousal": 4.1437,
+   "severity": 7.5789,
+   "n_docs": 873
+  },
+  "2024": {
+   "valence": 5.5667,
+   "arousal": 4.1764,
+   "severity": 7.6097,
+   "n_docs": 883
+  },
+  "2025": {
+   "valence": 5.5727,
+   "arousal": 4.1537,
+   "severity": 7.5811,
+   "n_docs": 831
+  },
+  "2026": {
+   "valence": 5.5574,
+   "arousal": 4.1333,
+   "severity": 7.5759,
+   "n_docs": 364
+  }
+ },
+ "comparison_baes2023": null
+}

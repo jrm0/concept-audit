@@ -34,6 +34,8 @@ Usage:
     python3 25_popular_news.py --config configs/ptsd_trauma_popular.yaml --source guardian
     python3 25_popular_news.py --config configs/ptsd_trauma_popular.yaml --source nyt --max-calls 450
     python3 25_popular_news.py --config ... --terms "trauma,PTSD" --years 1999-2005
+    python3 25_popular_news.py --config ... --source nyt --terms "trauma,PTSD" --nyt-relevance 3
+        # relevance-ranked, stop after 3 pages with no head match (see NYT_RELEVANCE_STOP)
 """
 
 import csv
@@ -66,6 +68,14 @@ def _opt(name, default=None):
 SOURCE = _opt("--source", "all")             # guardian | nyt | all
 MAX_CALLS = int(_opt("--max-calls", 400))     # per outlet per run (stay under daily caps)
 DRY_RUN = "--dry-run" in _ARGV
+# NYT relevance mode (Session 34): the API searches the full body but returns
+# only the head; ~90% of oldest-first hits never show the term in what we get.
+# Relevance ranking front-loads head-matched articles (probe: 10/10), so
+# --nyt-relevance N paginates by relevance and stops after N consecutive pages
+# with no head match. Logged as "relevance-stop" — a documented truncation,
+# not the completeness of oldest-first. Head match = term in headline,
+# abstract, lead paragraph or snippet (the same text 16 will see).
+NYT_RELEVANCE_STOP = int(_opt("--nyt-relevance", 0))
 OUT_DIR = Path(CFG["docs_path"]).parent
 LOG_PATH = OUT_DIR / "retrieval_log.jsonl"
 RESULTS = CFG.results
@@ -170,6 +180,8 @@ def nyt_window(term, d0, d1, key, budget):
     (docs, None, calls, complete)."""
     base = "https://api.nytimes.com/svc/search/v2/articlesearch.json"
     docs, calls = [], 0
+    if NYT_RELEVANCE_STOP:
+        return nyt_window_relevance(term, d0, d1, key, budget, base)
     cursor = d0
     while calls < budget:
         page, last_date, full_last_page = 0, None, False
@@ -215,6 +227,51 @@ def nyt_window(term, d0, d1, key, budget):
         if cursor > d1:
             return docs, None, calls, True
     return docs, None, calls, False                       # budget exhausted mid-window
+
+
+def _nyt_doc(r, term):
+    date = (r.get("pub_date") or "")[:10]
+    head = ((r.get("headline") or {}).get("main")) or ""
+    text = " ".join(x for x in [r.get("abstract") or "", r.get("lead_paragraph") or "",
+                                r.get("snippet") or ""] if x).strip()
+    return {"id": r.get("web_url") or r.get("_id"), "url": r.get("web_url"), "doi": "",
+            "year": int(date[:4]) if date[:4].isdigit() else None, "date": date,
+            "outlet": OUTLETS["nyt"]["name"],
+            "section": r.get("section_name") or r.get("news_desk") or "",
+            "title": head, "text": text, "dbs": [OUTLETS["nyt"]["db"]], "ty": "NEWS",
+            "index_terms": [k.get("value") for k in (r.get("keywords") or []) if k.get("value")],
+            "retrieved_by": [term]}
+
+
+def nyt_window_relevance(term, d0, d1, key, budget, base):
+    """--nyt-relevance N: relevance-ranked pages; stop after N consecutive
+    pages with no head match, or at the 100-page cap. Only head-matched
+    documents are kept (the others would be dropped by 16 anyway)."""
+    pat = pc.term_pattern(term)
+    docs, calls, page, empty_run = [], 0, 0, 0
+    while page <= 100 and calls < budget:
+        q = {"q": f'"{term}"', "begin_date": d0.strftime("%Y%m%d"),
+             "end_date": d1.strftime("%Y%m%d"), "page": page, "api-key": key}
+        data, ok = get_json(base + "?" + urllib.parse.urlencode(q), OUTLETS["nyt"]["sleep"])
+        calls += 1
+        if not ok:
+            return docs, None, calls, False
+        got = (data.get("response") or {}).get("docs") or []
+        matched = 0
+        for r in got:
+            if (r.get("document_type") or "article") != "article":
+                continue
+            d = _nyt_doc(r, term)
+            if pat.search(pc.normalize_text(d["title"] + " " + d["text"])):
+                docs.append(d)
+                matched += 1
+        if len(got) < 10:
+            return docs, None, calls, True
+        empty_run = empty_run + 1 if matched == 0 else 0
+        if empty_run >= NYT_RELEVANCE_STOP:
+            return docs, None, calls, True          # relevance-stop: logged as complete
+        page += 1
+    return docs, None, calls, True
 
 
 def month_windows(year):
@@ -292,11 +349,11 @@ def probe_nyt(key):
     diagnosis: 450 windows returned HTTP 200 with hits=0."""
     base = "https://api.nytimes.com/svc/search/v2/articlesearch.json"
     variants = {
-        "A quoted q + fq document_type": {"q": '"trauma"', "fq": 'document_type:("article")'},
-        "B plain q, no fq":               {"q": "trauma"},
-        "C plain q + fq document_type":   {"q": "trauma", "fq": 'document_type:("article")'},
-        "D plain q + begin/end 2004":     {"q": "trauma", "begin_date": "20040101", "end_date": "20041231"},
-        "E quoted q + begin/end 2004":    {"q": '"trauma"', "begin_date": "20040101", "end_date": "20041231", "sort": "oldest"},
+        "B plain q (reference)":          {"q": "trauma", "begin_date": "19850101", "end_date": "19851231"},
+        "F fq headline only":             {"fq": 'headline:("trauma")', "begin_date": "19850101", "end_date": "19851231", "sort": "oldest"},
+        "G fq headline OR abstract":      {"fq": 'headline:("trauma") OR abstract:("trauma")', "begin_date": "19850101", "end_date": "19851231", "sort": "oldest"},
+        "H fq headline OR abstract OR lead": {"fq": 'headline:("trauma") OR abstract:("trauma") OR lead_paragraph:("trauma")', "begin_date": "19850101", "end_date": "19851231", "sort": "oldest"},
+        "I fq type_of_material":          {"q": "trauma", "fq": 'type_of_material:("News")', "begin_date": "19850101", "end_date": "19851231"},
     }
     for name, q in variants.items():
         q = dict(q, **{"api-key": key})
@@ -315,7 +372,10 @@ def probe_nyt(key):
             meta = resp.get("meta") or {}
             docs = resp.get("docs") or []
             first = docs[0] if docs else {}
-            summ = (f"status={data.get('status')} hits={meta.get('hits')} docs={len(docs)}"
+            import re as _re
+            in_head = sum(1 for d in docs if _re.search(r"trauma", " ".join([((d.get("headline") or {}).get("main") or ""),
+                          d.get("abstract") or "", d.get("lead_paragraph") or ""]), _re.I))
+            summ = (f"status={data.get('status')} hits={meta.get('hits')} docs={len(docs)} term_in_head={in_head}/{len(docs)}"
                     + (f" first={((first.get('headline') or {}).get('main') or '')[:60]!r} "
                        f"date={str(first.get('pub_date'))[:10]} type={first.get('document_type')}" if first else "")
                     + ("" if "response" in data else f" RAW={body[:300]}"))
@@ -376,6 +436,7 @@ def main():
                 if complete:
                     log_window({"outlet": outlet, "term": term, "from": win[2], "to": win[3],
                                 "hits_reported": hits, "docs_written": n, "calls": calls,
+                                "mode": (f"relevance-stop{NYT_RELEVANCE_STOP}" if outlet == "nyt" and NYT_RELEVANCE_STOP else "complete"),
                                 "timestamp": dt.datetime.now().isoformat(timespec="seconds")})
                 else:
                     stopped = True

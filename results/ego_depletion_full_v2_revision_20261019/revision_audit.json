@@ -1,0 +1,2889 @@
+{
+  "coverage": {
+    "stored_records": 48908,
+    "stored_year_range": [
+      1975,
+      2027
+    ],
+    "after_2024": 4245,
+    "analysis_records": 44663,
+    "after_2025_in_2025_bin": 1390,
+    "resolved_analysis_records": 26744,
+    "resolved_without_references": 3025,
+    "duplicate_openalex_ids": 69,
+    "records_in_repeated_openalex_resolutions": 138,
+    "records_in_repeated_resolutions_through_2024": 95,
+    "unidentifiable_analysis_records": 115,
+    "by_stratum": {
+      "book": {
+        "n": 3222,
+        "resolved": 1435
+      },
+      "journal": {
+        "n": 37828,
+        "resolved": 25285
+      },
+      "other": {
+        "n": 24,
+        "resolved": 4
+      },
+      "thesis": {
+        "n": 3589,
+        "resolved": 20
+      }
+    },
+    "abstracts_available_unique_id": 43409
+  },
+  "breadth_contrasts": {
+    "ego depletion": {
+      "breadth_mpnet": {
+        "periods": [
+          {
+            "period": "2005-2009",
+            "target": 0.4495,
+            "mean_control": 0.7426750000000001,
+            "difference": -0.2931750000000001
+          },
+          {
+            "period": "2010-2014",
+            "target": 0.4824,
+            "mean_control": 0.74865,
+            "difference": -0.26625000000000004
+          },
+          {
+            "period": "2015-2019",
+            "target": 0.4685,
+            "mean_control": 0.7403749999999999,
+            "difference": -0.27187499999999987
+          },
+          {
+            "period": "2020-2024",
+            "target": 0.5547,
+            "mean_control": 0.744575,
+            "difference": -0.18987500000000002
+          }
+        ],
+        "target_change": 0.10519999999999996,
+        "control_change": 0.0018999999999999018,
+        "difference_in_changes": 0.10330000000000006,
+        "difference_slope_per_year": 0.006085500000000066,
+        "status": "descriptive re-expression of saved raw breadth estimates; no CI; no equivalence claim; representations differ in encoder, masking, and aggregation"
+      },
+      "breadth_masked": {
+        "periods": [
+          {
+            "period": "2005-2009",
+            "target": 0.1627,
+            "mean_control": 0.242825,
+            "difference": -0.080125
+          },
+          {
+            "period": "2010-2014",
+            "target": 0.1677,
+            "mean_control": 0.2424,
+            "difference": -0.07470000000000002
+          },
+          {
+            "period": "2015-2019",
+            "target": 0.156,
+            "mean_control": 0.24277500000000002,
+            "difference": -0.08677500000000002
+          },
+          {
+            "period": "2020-2024",
+            "target": 0.1512,
+            "mean_control": 0.23452499999999998,
+            "difference": -0.08332499999999998
+          }
+        ],
+        "target_change": -0.01150000000000001,
+        "control_change": -0.00830000000000003,
+        "difference_in_changes": -0.0031999999999999806,
+        "difference_slope_per_year": -0.00043350000000001254,
+        "status": "descriptive re-expression of saved raw breadth estimates; no CI; no equivalence claim; representations differ in encoder, masking, and aggregation"
+      }
+    },
+    "self control": {
+      "breadth_mpnet": {
+        "periods": [
+          {
+            "period": "1990-1994",
+            "target": 0.704,
+            "mean_control": 0.752675,
+            "difference": -0.048675000000000024
+          },
+          {
+            "period": "1995-1999",
+            "target": 0.6931,
+            "mean_control": 0.735925,
+            "difference": -0.042825
+          },
+          {
+            "period": "2000-2004",
+            "target": 0.6939,
+            "mean_control": 0.744175,
+            "difference": -0.05027500000000007
+          },
+          {
+            "period": "2005-2009",
+            "target": 0.6621,
+            "mean_control": 0.7426750000000001,
+            "difference": -0.08057500000000006
+          },
+          {
+            "period": "2010-2014",
+            "target": 0.6815,
+            "mean_control": 0.74865,
+            "difference": -0.06715000000000004
+          },
+          {
+            "period": "2015-2019",
+            "target": 0.6718,
+            "mean_control": 0.7403749999999999,
+            "difference": -0.06857499999999994
+          },
+          {
+            "period": "2020-2024",
+            "target": 0.682,
+            "mean_control": 0.744575,
+            "difference": -0.06257499999999994
+          }
+        ],
+        "target_change": -0.02199999999999991,
+        "control_change": -0.008099999999999996,
+        "difference_in_changes": -0.013899999999999912,
+        "difference_slope_per_year": -0.0007862499999999939,
+        "status": "descriptive re-expression of saved raw breadth estimates; no CI; no equivalence claim; representations differ in encoder, masking, and aggregation"
+      },
+      "breadth_masked": {
+        "periods": [
+          {
+            "period": "1990-1994",
+            "target": 0.2316,
+            "mean_control": 0.25632499999999997,
+            "difference": -0.02472499999999997
+          },
+          {
+            "period": "1995-1999",
+            "target": 0.2091,
+            "mean_control": 0.244875,
+            "difference": -0.035775
+          },
+          {
+            "period": "2000-2004",
+            "target": 0.2031,
+            "mean_control": 0.24735000000000001,
+            "difference": -0.04425000000000001
+          },
+          {
+            "period": "2005-2009",
+            "target": 0.196,
+            "mean_control": 0.242825,
+            "difference": -0.046825000000000006
+          },
+          {
+            "period": "2010-2014",
+            "target": 0.2026,
+            "mean_control": 0.2424,
+            "difference": -0.0398
+          },
+          {
+            "period": "2015-2019",
+            "target": 0.193,
+            "mean_control": 0.24277500000000002,
+            "difference": -0.049775000000000014
+          },
+          {
+            "period": "2020-2024",
+            "target": 0.189,
+            "mean_control": 0.23452499999999998,
+            "difference": -0.04552499999999998
+          }
+        ],
+        "target_change": -0.0426,
+        "control_change": -0.021799999999999986,
+        "difference_in_changes": -0.020800000000000013,
+        "difference_slope_per_year": -0.0006139285714285736,
+        "status": "descriptive re-expression of saved raw breadth estimates; no CI; no equivalence claim; representations differ in encoder, masking, and aggregation"
+      }
+    },
+    "self regulation": {
+      "breadth_mpnet": {
+        "periods": [
+          {
+            "period": "1990-1994",
+            "target": 0.7016,
+            "mean_control": 0.752675,
+            "difference": -0.05107499999999998
+          },
+          {
+            "period": "1995-1999",
+            "target": 0.7074,
+            "mean_control": 0.735925,
+            "difference": -0.028525000000000023
+          },
+          {
+            "period": "2000-2004",
+            "target": 0.7122,
+            "mean_control": 0.744175,
+            "difference": -0.031974999999999976
+          },
+          {
+            "period": "2005-2009",
+            "target": 0.7111,
+            "mean_control": 0.7426750000000001,
+            "difference": -0.03157500000000013
+          },
+          {
+            "period": "2010-2014",
+            "target": 0.697,
+            "mean_control": 0.74865,
+            "difference": -0.051650000000000085
+          },
+          {
+            "period": "2015-2019",
+            "target": 0.7002,
+            "mean_control": 0.7403749999999999,
+            "difference": -0.04017499999999985
+          },
+          {
+            "period": "2020-2024",
+            "target": 0.6979,
+            "mean_control": 0.744575,
+            "difference": -0.04667500000000002
+          }
+        ],
+        "target_change": -0.0037000000000000366,
+        "control_change": -0.008099999999999996,
+        "difference_in_changes": 0.0043999999999999595,
+        "difference_slope_per_year": -0.0002126785714285601,
+        "status": "descriptive re-expression of saved raw breadth estimates; no CI; no equivalence claim; representations differ in encoder, masking, and aggregation"
+      },
+      "breadth_masked": {
+        "periods": [
+          {
+            "period": "1990-1994",
+            "target": 0.2363,
+            "mean_control": 0.25632499999999997,
+            "difference": -0.02002499999999996
+          },
+          {
+            "period": "1995-1999",
+            "target": 0.2275,
+            "mean_control": 0.244875,
+            "difference": -0.017375
+          },
+          {
+            "period": "2000-2004",
+            "target": 0.2177,
+            "mean_control": 0.24735000000000001,
+            "difference": -0.02965000000000001
+          },
+          {
+            "period": "2005-2009",
+            "target": 0.2269,
+            "mean_control": 0.242825,
+            "difference": -0.015925000000000022
+          },
+          {
+            "period": "2010-2014",
+            "target": 0.2179,
+            "mean_control": 0.2424,
+            "difference": -0.024499999999999994
+          },
+          {
+            "period": "2015-2019",
+            "target": 0.2257,
+            "mean_control": 0.24277500000000002,
+            "difference": -0.017075000000000007
+          },
+          {
+            "period": "2020-2024",
+            "target": 0.2058,
+            "mean_control": 0.23452499999999998,
+            "difference": -0.028724999999999973
+          }
+        ],
+        "target_change": -0.0305,
+        "control_change": -0.021799999999999986,
+        "difference_in_changes": -0.008700000000000013,
+        "difference_slope_per_year": -0.00014535714285714247,
+        "status": "descriptive re-expression of saved raw breadth estimates; no CI; no equivalence claim; representations differ in encoder, masking, and aggregation"
+      }
+    }
+  },
+  "source_review_packet_n": 60,
+  "anchors": {
+    "resolved": {
+      "coinage_1998": {
+        "oa": "https://openalex.org/W2123817056",
+        "year": 1998,
+        "title": "Ego depletion: Is the active self a limited resource?",
+        "match_score": 0.9807692307692307,
+        "doi": "10.1037/0022-3514.74.5.1252"
+      },
+      "rrr_2016": {
+        "oa": "https://openalex.org/W2499154041",
+        "year": 2016,
+        "title": "A multilab preregistered replication of the ego-depletion effect.",
+        "match_score": 0.9763779527559056,
+        "doi": "10.1177/1745691616652873"
+      },
+      "rrr_2021": {
+        "oa": "https://openalex.org/W3119325546",
+        "year": 2021,
+        "title": "A multisite preregistered paradigmatic test of the ego-depletion effect.",
+        "match_score": 0.9645390070921985,
+        "doi": "10.1177/0956797621989733"
+      },
+      "carter_2014": {
+        "oa": "https://openalex.org/W2007393966",
+        "year": 2014,
+        "title": "Publication bias and the limited strength model of self-control: Has the evidence for ego depletion been overestimated?",
+        "match_score": 0.95,
+        "doi": "10.3389/fpsyg.2014.00823"
+      },
+      "hagger_2010_meta": {
+        "oa": "https://openalex.org/W2060763381",
+        "year": 2010,
+        "title": "Ego Depletion and the Strength Model of Self-Control: A Meta-Analysis.",
+        "match_score": 0.9855072463768116,
+        "doi": "10.1037/a0019486"
+      },
+      "inzlicht_2012": {
+        "oa": "https://openalex.org/W2000141755",
+        "year": 2012,
+        "title": "What is ego depletion? Toward a mechanistic revision of the resource model of self-control.",
+        "match_score": 0.8902439024390244,
+        "doi": "10.1177/1745691612454134"
+      },
+      "friese_2019": {
+        "oa": "https://openalex.org/W2794580436",
+        "year": 2019,
+        "title": "Is Ego Depletion Real? An Analysis of Arguments.",
+        "match_score": 1.0,
+        "doi": "10.1177/1088868318762183"
+      },
+      "dang_2018": {
+        "oa": "https://openalex.org/W2604293295",
+        "year": 2018,
+        "title": "An updated meta-analysis of the ego depletion effect.",
+        "match_score": 1.0,
+        "doi": "10.1007/s00426-017-0862-x"
+      }
+    },
+    "eligible_rates_by_lag": {
+      "0": {
+        "core/other psych": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 214,
+            "citers": 149,
+            "share": 0.6962616822429907
+          },
+          "rrr_2016": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 214,
+            "citers": 103,
+            "share": 0.48130841121495327
+          },
+          "rrr_2021": {
+            "eligible_from": 2021,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 101,
+            "citers": 10,
+            "share": 0.09900990099009901
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 214,
+            "citers": 49,
+            "share": 0.22897196261682243
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 214,
+            "citers": 131,
+            "share": 0.6121495327102804
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 214,
+            "citers": 62,
+            "share": 0.2897196261682243
+          },
+          "friese_2019": {
+            "eligible_from": 2019,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 151,
+            "citers": 35,
+            "share": 0.23178807947019867
+          },
+          "dang_2018": {
+            "eligible_from": 2018,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 180,
+            "citers": 29,
+            "share": 0.16111111111111112
+          }
+        },
+        "crime/social": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 1,
+            "citers": 1,
+            "share": 1.0
+          },
+          "rrr_2016": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 1,
+            "citers": 1,
+            "share": 1.0
+          },
+          "rrr_2021": {
+            "eligible_from": 2021,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 0,
+            "citers": 0,
+            "share": null
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 1,
+            "citers": 1,
+            "share": 1.0
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 1,
+            "citers": 1,
+            "share": 1.0
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 1,
+            "citers": 0,
+            "share": 0.0
+          },
+          "friese_2019": {
+            "eligible_from": 2019,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 0,
+            "citers": 0,
+            "share": null
+          },
+          "dang_2018": {
+            "eligible_from": 2018,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 1,
+            "citers": 0,
+            "share": 0.0
+          }
+        },
+        "education": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 8,
+            "citers": 4,
+            "share": 0.5
+          },
+          "rrr_2016": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 8,
+            "citers": 2,
+            "share": 0.25
+          },
+          "rrr_2021": {
+            "eligible_from": 2021,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 6,
+            "citers": 0,
+            "share": 0.0
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 8,
+            "citers": 0,
+            "share": 0.0
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 8,
+            "citers": 4,
+            "share": 0.5
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 8,
+            "citers": 1,
+            "share": 0.125
+          },
+          "friese_2019": {
+            "eligible_from": 2019,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 6,
+            "citers": 1,
+            "share": 0.16666666666666666
+          },
+          "dang_2018": {
+            "eligible_from": 2018,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 6,
+            "citers": 1,
+            "share": 0.16666666666666666
+          }
+        },
+        "health/med": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 7,
+            "citers": 3,
+            "share": 0.42857142857142855
+          },
+          "rrr_2016": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 7,
+            "citers": 1,
+            "share": 0.14285714285714285
+          },
+          "rrr_2021": {
+            "eligible_from": 2021,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 3,
+            "citers": 0,
+            "share": 0.0
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 7,
+            "citers": 0,
+            "share": 0.0
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 7,
+            "citers": 4,
+            "share": 0.5714285714285714
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 7,
+            "citers": 1,
+            "share": 0.14285714285714285
+          },
+          "friese_2019": {
+            "eligible_from": 2019,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 3,
+            "citers": 0,
+            "share": 0.0
+          },
+          "dang_2018": {
+            "eligible_from": 2018,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 7,
+            "citers": 0,
+            "share": 0.0
+          }
+        },
+        "sport": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 10,
+            "citers": 7,
+            "share": 0.7
+          },
+          "rrr_2016": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 10,
+            "citers": 7,
+            "share": 0.7
+          },
+          "rrr_2021": {
+            "eligible_from": 2021,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 4,
+            "citers": 1,
+            "share": 0.25
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 10,
+            "citers": 2,
+            "share": 0.2
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 10,
+            "citers": 9,
+            "share": 0.9
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 10,
+            "citers": 4,
+            "share": 0.4
+          },
+          "friese_2019": {
+            "eligible_from": 2019,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 7,
+            "citers": 2,
+            "share": 0.2857142857142857
+          },
+          "dang_2018": {
+            "eligible_from": 2018,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 9,
+            "citers": 4,
+            "share": 0.4444444444444444
+          }
+        },
+        "work/org": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 81,
+            "citers": 49,
+            "share": 0.6049382716049383
+          },
+          "rrr_2016": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 81,
+            "citers": 7,
+            "share": 0.08641975308641975
+          },
+          "rrr_2021": {
+            "eligible_from": 2021,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 49,
+            "citers": 1,
+            "share": 0.02040816326530612
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 81,
+            "citers": 1,
+            "share": 0.012345679012345678
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 81,
+            "citers": 25,
+            "share": 0.30864197530864196
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 81,
+            "citers": 8,
+            "share": 0.09876543209876543
+          },
+          "friese_2019": {
+            "eligible_from": 2019,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 66,
+            "citers": 6,
+            "share": 0.09090909090909091
+          },
+          "dang_2018": {
+            "eligible_from": 2018,
+            "eligible_to": 2024,
+            "lag": 0,
+            "n": 76,
+            "citers": 2,
+            "share": 0.02631578947368421
+          }
+        }
+      },
+      "1": {
+        "core/other psych": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 214,
+            "citers": 149,
+            "share": 0.6962616822429907
+          },
+          "rrr_2016": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 214,
+            "citers": 103,
+            "share": 0.48130841121495327
+          },
+          "rrr_2021": {
+            "eligible_from": 2022,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 74,
+            "citers": 8,
+            "share": 0.10810810810810811
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 214,
+            "citers": 49,
+            "share": 0.22897196261682243
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 214,
+            "citers": 131,
+            "share": 0.6121495327102804
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 214,
+            "citers": 62,
+            "share": 0.2897196261682243
+          },
+          "friese_2019": {
+            "eligible_from": 2020,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 118,
+            "citers": 27,
+            "share": 0.2288135593220339
+          },
+          "dang_2018": {
+            "eligible_from": 2019,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 151,
+            "citers": 24,
+            "share": 0.15894039735099338
+          }
+        },
+        "crime/social": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 1,
+            "citers": 1,
+            "share": 1.0
+          },
+          "rrr_2016": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 1,
+            "citers": 1,
+            "share": 1.0
+          },
+          "rrr_2021": {
+            "eligible_from": 2022,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 0,
+            "citers": 0,
+            "share": null
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 1,
+            "citers": 1,
+            "share": 1.0
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 1,
+            "citers": 1,
+            "share": 1.0
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 1,
+            "citers": 0,
+            "share": 0.0
+          },
+          "friese_2019": {
+            "eligible_from": 2020,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 0,
+            "citers": 0,
+            "share": null
+          },
+          "dang_2018": {
+            "eligible_from": 2019,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 0,
+            "citers": 0,
+            "share": null
+          }
+        },
+        "education": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 8,
+            "citers": 4,
+            "share": 0.5
+          },
+          "rrr_2016": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 8,
+            "citers": 2,
+            "share": 0.25
+          },
+          "rrr_2021": {
+            "eligible_from": 2022,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 5,
+            "citers": 0,
+            "share": 0.0
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 8,
+            "citers": 0,
+            "share": 0.0
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 8,
+            "citers": 4,
+            "share": 0.5
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 8,
+            "citers": 1,
+            "share": 0.125
+          },
+          "friese_2019": {
+            "eligible_from": 2020,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 6,
+            "citers": 1,
+            "share": 0.16666666666666666
+          },
+          "dang_2018": {
+            "eligible_from": 2019,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 6,
+            "citers": 1,
+            "share": 0.16666666666666666
+          }
+        },
+        "health/med": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 7,
+            "citers": 3,
+            "share": 0.42857142857142855
+          },
+          "rrr_2016": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 7,
+            "citers": 1,
+            "share": 0.14285714285714285
+          },
+          "rrr_2021": {
+            "eligible_from": 2022,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 2,
+            "citers": 0,
+            "share": 0.0
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 7,
+            "citers": 0,
+            "share": 0.0
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 7,
+            "citers": 4,
+            "share": 0.5714285714285714
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 7,
+            "citers": 1,
+            "share": 0.14285714285714285
+          },
+          "friese_2019": {
+            "eligible_from": 2020,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 3,
+            "citers": 0,
+            "share": 0.0
+          },
+          "dang_2018": {
+            "eligible_from": 2019,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 3,
+            "citers": 0,
+            "share": 0.0
+          }
+        },
+        "sport": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 10,
+            "citers": 7,
+            "share": 0.7
+          },
+          "rrr_2016": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 10,
+            "citers": 7,
+            "share": 0.7
+          },
+          "rrr_2021": {
+            "eligible_from": 2022,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 3,
+            "citers": 1,
+            "share": 0.3333333333333333
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 10,
+            "citers": 2,
+            "share": 0.2
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 10,
+            "citers": 9,
+            "share": 0.9
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 10,
+            "citers": 4,
+            "share": 0.4
+          },
+          "friese_2019": {
+            "eligible_from": 2020,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 6,
+            "citers": 2,
+            "share": 0.3333333333333333
+          },
+          "dang_2018": {
+            "eligible_from": 2019,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 7,
+            "citers": 3,
+            "share": 0.42857142857142855
+          }
+        },
+        "work/org": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 81,
+            "citers": 49,
+            "share": 0.6049382716049383
+          },
+          "rrr_2016": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 81,
+            "citers": 7,
+            "share": 0.08641975308641975
+          },
+          "rrr_2021": {
+            "eligible_from": 2022,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 43,
+            "citers": 1,
+            "share": 0.023255813953488372
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 81,
+            "citers": 1,
+            "share": 0.012345679012345678
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 81,
+            "citers": 25,
+            "share": 0.30864197530864196
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 81,
+            "citers": 8,
+            "share": 0.09876543209876543
+          },
+          "friese_2019": {
+            "eligible_from": 2020,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 60,
+            "citers": 4,
+            "share": 0.06666666666666667
+          },
+          "dang_2018": {
+            "eligible_from": 2019,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 66,
+            "citers": 2,
+            "share": 0.030303030303030304
+          }
+        }
+      },
+      "2": {
+        "core/other psych": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 214,
+            "citers": 149,
+            "share": 0.6962616822429907
+          },
+          "rrr_2016": {
+            "eligible_from": 2018,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 180,
+            "citers": 84,
+            "share": 0.4666666666666667
+          },
+          "rrr_2021": {
+            "eligible_from": 2023,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 43,
+            "citers": 4,
+            "share": 0.09302325581395349
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 214,
+            "citers": 49,
+            "share": 0.22897196261682243
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 214,
+            "citers": 131,
+            "share": 0.6121495327102804
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 214,
+            "citers": 62,
+            "share": 0.2897196261682243
+          },
+          "friese_2019": {
+            "eligible_from": 2021,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 101,
+            "citers": 22,
+            "share": 0.21782178217821782
+          },
+          "dang_2018": {
+            "eligible_from": 2020,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 118,
+            "citers": 14,
+            "share": 0.11864406779661017
+          }
+        },
+        "crime/social": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 1,
+            "citers": 1,
+            "share": 1.0
+          },
+          "rrr_2016": {
+            "eligible_from": 2018,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 1,
+            "citers": 1,
+            "share": 1.0
+          },
+          "rrr_2021": {
+            "eligible_from": 2023,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 0,
+            "citers": 0,
+            "share": null
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 1,
+            "citers": 1,
+            "share": 1.0
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 1,
+            "citers": 1,
+            "share": 1.0
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 1,
+            "citers": 0,
+            "share": 0.0
+          },
+          "friese_2019": {
+            "eligible_from": 2021,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 0,
+            "citers": 0,
+            "share": null
+          },
+          "dang_2018": {
+            "eligible_from": 2020,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 0,
+            "citers": 0,
+            "share": null
+          }
+        },
+        "education": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 8,
+            "citers": 4,
+            "share": 0.5
+          },
+          "rrr_2016": {
+            "eligible_from": 2018,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 6,
+            "citers": 1,
+            "share": 0.16666666666666666
+          },
+          "rrr_2021": {
+            "eligible_from": 2023,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 4,
+            "citers": 0,
+            "share": 0.0
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 8,
+            "citers": 0,
+            "share": 0.0
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 8,
+            "citers": 4,
+            "share": 0.5
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 8,
+            "citers": 1,
+            "share": 0.125
+          },
+          "friese_2019": {
+            "eligible_from": 2021,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 6,
+            "citers": 1,
+            "share": 0.16666666666666666
+          },
+          "dang_2018": {
+            "eligible_from": 2020,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 6,
+            "citers": 1,
+            "share": 0.16666666666666666
+          }
+        },
+        "health/med": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 7,
+            "citers": 3,
+            "share": 0.42857142857142855
+          },
+          "rrr_2016": {
+            "eligible_from": 2018,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 7,
+            "citers": 1,
+            "share": 0.14285714285714285
+          },
+          "rrr_2021": {
+            "eligible_from": 2023,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 1,
+            "citers": 0,
+            "share": 0.0
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 7,
+            "citers": 0,
+            "share": 0.0
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 7,
+            "citers": 4,
+            "share": 0.5714285714285714
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 7,
+            "citers": 1,
+            "share": 0.14285714285714285
+          },
+          "friese_2019": {
+            "eligible_from": 2021,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 3,
+            "citers": 0,
+            "share": 0.0
+          },
+          "dang_2018": {
+            "eligible_from": 2020,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 3,
+            "citers": 0,
+            "share": 0.0
+          }
+        },
+        "sport": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 10,
+            "citers": 7,
+            "share": 0.7
+          },
+          "rrr_2016": {
+            "eligible_from": 2018,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 9,
+            "citers": 6,
+            "share": 0.6666666666666666
+          },
+          "rrr_2021": {
+            "eligible_from": 2023,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 3,
+            "citers": 1,
+            "share": 0.3333333333333333
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 10,
+            "citers": 2,
+            "share": 0.2
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 10,
+            "citers": 9,
+            "share": 0.9
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 10,
+            "citers": 4,
+            "share": 0.4
+          },
+          "friese_2019": {
+            "eligible_from": 2021,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 4,
+            "citers": 1,
+            "share": 0.25
+          },
+          "dang_2018": {
+            "eligible_from": 2020,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 6,
+            "citers": 3,
+            "share": 0.5
+          }
+        },
+        "work/org": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 81,
+            "citers": 49,
+            "share": 0.6049382716049383
+          },
+          "rrr_2016": {
+            "eligible_from": 2018,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 76,
+            "citers": 7,
+            "share": 0.09210526315789473
+          },
+          "rrr_2021": {
+            "eligible_from": 2023,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 30,
+            "citers": 1,
+            "share": 0.03333333333333333
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 81,
+            "citers": 1,
+            "share": 0.012345679012345678
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 81,
+            "citers": 25,
+            "share": 0.30864197530864196
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 81,
+            "citers": 8,
+            "share": 0.09876543209876543
+          },
+          "friese_2019": {
+            "eligible_from": 2021,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 49,
+            "citers": 4,
+            "share": 0.08163265306122448
+          },
+          "dang_2018": {
+            "eligible_from": 2020,
+            "eligible_to": 2024,
+            "lag": 2,
+            "n": 60,
+            "citers": 1,
+            "share": 0.016666666666666666
+          }
+        }
+      }
+    },
+    "year_standardized": {
+      "coinage_1998": {
+        "years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "weighting": "equal weight per common year, not population weighting",
+        "groups": {
+          "work/org": {
+            "annual": {
+              "2017": {
+                "eligible_from": 2017,
+                "eligible_to": 2017,
+                "lag": 1,
+                "n": 5,
+                "citers": 3,
+                "share": 0.6
+              },
+              "2018": {
+                "eligible_from": 2018,
+                "eligible_to": 2018,
+                "lag": 1,
+                "n": 10,
+                "citers": 6,
+                "share": 0.6
+              },
+              "2019": {
+                "eligible_from": 2019,
+                "eligible_to": 2019,
+                "lag": 1,
+                "n": 6,
+                "citers": 5,
+                "share": 0.8333333333333334
+              },
+              "2020": {
+                "eligible_from": 2020,
+                "eligible_to": 2020,
+                "lag": 1,
+                "n": 11,
+                "citers": 6,
+                "share": 0.5454545454545454
+              },
+              "2021": {
+                "eligible_from": 2021,
+                "eligible_to": 2021,
+                "lag": 1,
+                "n": 6,
+                "citers": 3,
+                "share": 0.5
+              },
+              "2022": {
+                "eligible_from": 2022,
+                "eligible_to": 2022,
+                "lag": 1,
+                "n": 13,
+                "citers": 8,
+                "share": 0.6153846153846154
+              },
+              "2023": {
+                "eligible_from": 2023,
+                "eligible_to": 2023,
+                "lag": 1,
+                "n": 20,
+                "citers": 11,
+                "share": 0.55
+              },
+              "2024": {
+                "eligible_from": 2024,
+                "eligible_to": 2024,
+                "lag": 1,
+                "n": 10,
+                "citers": 7,
+                "share": 0.7
+              }
+            },
+            "standardized_share": 0.6180215617715619
+          },
+          "core/other psych": {
+            "annual": {
+              "2017": {
+                "eligible_from": 2017,
+                "eligible_to": 2017,
+                "lag": 1,
+                "n": 34,
+                "citers": 22,
+                "share": 0.6470588235294118
+              },
+              "2018": {
+                "eligible_from": 2018,
+                "eligible_to": 2018,
+                "lag": 1,
+                "n": 29,
+                "citers": 25,
+                "share": 0.8620689655172413
+              },
+              "2019": {
+                "eligible_from": 2019,
+                "eligible_to": 2019,
+                "lag": 1,
+                "n": 33,
+                "citers": 23,
+                "share": 0.696969696969697
+              },
+              "2020": {
+                "eligible_from": 2020,
+                "eligible_to": 2020,
+                "lag": 1,
+                "n": 17,
+                "citers": 11,
+                "share": 0.6470588235294118
+              },
+              "2021": {
+                "eligible_from": 2021,
+                "eligible_to": 2021,
+                "lag": 1,
+                "n": 27,
+                "citers": 19,
+                "share": 0.7037037037037037
+              },
+              "2022": {
+                "eligible_from": 2022,
+                "eligible_to": 2022,
+                "lag": 1,
+                "n": 31,
+                "citers": 21,
+                "share": 0.6774193548387096
+              },
+              "2023": {
+                "eligible_from": 2023,
+                "eligible_to": 2023,
+                "lag": 1,
+                "n": 22,
+                "citers": 13,
+                "share": 0.5909090909090909
+              },
+              "2024": {
+                "eligible_from": 2024,
+                "eligible_to": 2024,
+                "lag": 1,
+                "n": 21,
+                "citers": 15,
+                "share": 0.7142857142857143
+              }
+            },
+            "standardized_share": 0.6924342716603726
+          }
+        }
+      },
+      "rrr_2016": {
+        "years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "weighting": "equal weight per common year, not population weighting",
+        "groups": {
+          "work/org": {
+            "annual": {
+              "2017": {
+                "eligible_from": 2017,
+                "eligible_to": 2017,
+                "lag": 1,
+                "n": 5,
+                "citers": 0,
+                "share": 0.0
+              },
+              "2018": {
+                "eligible_from": 2018,
+                "eligible_to": 2018,
+                "lag": 1,
+                "n": 10,
+                "citers": 1,
+                "share": 0.1
+              },
+              "2019": {
+                "eligible_from": 2019,
+                "eligible_to": 2019,
+                "lag": 1,
+                "n": 6,
+                "citers": 2,
+                "share": 0.3333333333333333
+              },
+              "2020": {
+                "eligible_from": 2020,
+                "eligible_to": 2020,
+                "lag": 1,
+                "n": 11,
+                "citers": 0,
+                "share": 0.0
+              },
+              "2021": {
+                "eligible_from": 2021,
+                "eligible_to": 2021,
+                "lag": 1,
+                "n": 6,
+                "citers": 0,
+                "share": 0.0
+              },
+              "2022": {
+                "eligible_from": 2022,
+                "eligible_to": 2022,
+                "lag": 1,
+                "n": 13,
+                "citers": 2,
+                "share": 0.15384615384615385
+              },
+              "2023": {
+                "eligible_from": 2023,
+                "eligible_to": 2023,
+                "lag": 1,
+                "n": 20,
+                "citers": 2,
+                "share": 0.1
+              },
+              "2024": {
+                "eligible_from": 2024,
+                "eligible_to": 2024,
+                "lag": 1,
+                "n": 10,
+                "citers": 0,
+                "share": 0.0
+              }
+            },
+            "standardized_share": 0.0858974358974359
+          },
+          "core/other psych": {
+            "annual": {
+              "2017": {
+                "eligible_from": 2017,
+                "eligible_to": 2017,
+                "lag": 1,
+                "n": 34,
+                "citers": 19,
+                "share": 0.5588235294117647
+              },
+              "2018": {
+                "eligible_from": 2018,
+                "eligible_to": 2018,
+                "lag": 1,
+                "n": 29,
+                "citers": 18,
+                "share": 0.6206896551724138
+              },
+              "2019": {
+                "eligible_from": 2019,
+                "eligible_to": 2019,
+                "lag": 1,
+                "n": 33,
+                "citers": 23,
+                "share": 0.696969696969697
+              },
+              "2020": {
+                "eligible_from": 2020,
+                "eligible_to": 2020,
+                "lag": 1,
+                "n": 17,
+                "citers": 13,
+                "share": 0.7647058823529411
+              },
+              "2021": {
+                "eligible_from": 2021,
+                "eligible_to": 2021,
+                "lag": 1,
+                "n": 27,
+                "citers": 13,
+                "share": 0.48148148148148145
+              },
+              "2022": {
+                "eligible_from": 2022,
+                "eligible_to": 2022,
+                "lag": 1,
+                "n": 31,
+                "citers": 8,
+                "share": 0.25806451612903225
+              },
+              "2023": {
+                "eligible_from": 2023,
+                "eligible_to": 2023,
+                "lag": 1,
+                "n": 22,
+                "citers": 3,
+                "share": 0.13636363636363635
+              },
+              "2024": {
+                "eligible_from": 2024,
+                "eligible_to": 2024,
+                "lag": 1,
+                "n": 21,
+                "citers": 6,
+                "share": 0.2857142857142857
+              }
+            },
+            "standardized_share": 0.47535158544940653
+          }
+        }
+      },
+      "rrr_2021": {
+        "years": [
+          2022,
+          2023,
+          2024
+        ],
+        "weighting": "equal weight per common year, not population weighting",
+        "groups": {
+          "work/org": {
+            "annual": {
+              "2022": {
+                "eligible_from": 2022,
+                "eligible_to": 2022,
+                "lag": 1,
+                "n": 13,
+                "citers": 0,
+                "share": 0.0
+              },
+              "2023": {
+                "eligible_from": 2023,
+                "eligible_to": 2023,
+                "lag": 1,
+                "n": 20,
+                "citers": 1,
+                "share": 0.05
+              },
+              "2024": {
+                "eligible_from": 2024,
+                "eligible_to": 2024,
+                "lag": 1,
+                "n": 10,
+                "citers": 0,
+                "share": 0.0
+              }
+            },
+            "standardized_share": 0.016666666666666666
+          },
+          "core/other psych": {
+            "annual": {
+              "2022": {
+                "eligible_from": 2022,
+                "eligible_to": 2022,
+                "lag": 1,
+                "n": 31,
+                "citers": 4,
+                "share": 0.12903225806451613
+              },
+              "2023": {
+                "eligible_from": 2023,
+                "eligible_to": 2023,
+                "lag": 1,
+                "n": 22,
+                "citers": 2,
+                "share": 0.09090909090909091
+              },
+              "2024": {
+                "eligible_from": 2024,
+                "eligible_to": 2024,
+                "lag": 1,
+                "n": 21,
+                "citers": 2,
+                "share": 0.09523809523809523
+              }
+            },
+            "standardized_share": 0.1050598147372341
+          }
+        }
+      },
+      "carter_2014": {
+        "years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "weighting": "equal weight per common year, not population weighting",
+        "groups": {
+          "work/org": {
+            "annual": {
+              "2017": {
+                "eligible_from": 2017,
+                "eligible_to": 2017,
+                "lag": 1,
+                "n": 5,
+                "citers": 0,
+                "share": 0.0
+              },
+              "2018": {
+                "eligible_from": 2018,
+                "eligible_to": 2018,
+                "lag": 1,
+                "n": 10,
+                "citers": 0,
+                "share": 0.0
+              },
+              "2019": {
+                "eligible_from": 2019,
+                "eligible_to": 2019,
+                "lag": 1,
+                "n": 6,
+                "citers": 1,
+                "share": 0.16666666666666666
+              },
+              "2020": {
+                "eligible_from": 2020,
+                "eligible_to": 2020,
+                "lag": 1,
+                "n": 11,
+                "citers": 0,
+                "share": 0.0
+              },
+              "2021": {
+                "eligible_from": 2021,
+                "eligible_to": 2021,
+                "lag": 1,
+                "n": 6,
+                "citers": 0,
+                "share": 0.0
+              },
+              "2022": {
+                "eligible_from": 2022,
+                "eligible_to": 2022,
+                "lag": 1,
+                "n": 13,
+                "citers": 0,
+                "share": 0.0
+              },
+              "2023": {
+                "eligible_from": 2023,
+                "eligible_to": 2023,
+                "lag": 1,
+                "n": 20,
+                "citers": 0,
+                "share": 0.0
+              },
+              "2024": {
+                "eligible_from": 2024,
+                "eligible_to": 2024,
+                "lag": 1,
+                "n": 10,
+                "citers": 0,
+                "share": 0.0
+              }
+            },
+            "standardized_share": 0.020833333333333332
+          },
+          "core/other psych": {
+            "annual": {
+              "2017": {
+                "eligible_from": 2017,
+                "eligible_to": 2017,
+                "lag": 1,
+                "n": 34,
+                "citers": 9,
+                "share": 0.2647058823529412
+              },
+              "2018": {
+                "eligible_from": 2018,
+                "eligible_to": 2018,
+                "lag": 1,
+                "n": 29,
+                "citers": 10,
+                "share": 0.3448275862068966
+              },
+              "2019": {
+                "eligible_from": 2019,
+                "eligible_to": 2019,
+                "lag": 1,
+                "n": 33,
+                "citers": 14,
+                "share": 0.42424242424242425
+              },
+              "2020": {
+                "eligible_from": 2020,
+                "eligible_to": 2020,
+                "lag": 1,
+                "n": 17,
+                "citers": 7,
+                "share": 0.4117647058823529
+              },
+              "2021": {
+                "eligible_from": 2021,
+                "eligible_to": 2021,
+                "lag": 1,
+                "n": 27,
+                "citers": 5,
+                "share": 0.18518518518518517
+              },
+              "2022": {
+                "eligible_from": 2022,
+                "eligible_to": 2022,
+                "lag": 1,
+                "n": 31,
+                "citers": 2,
+                "share": 0.06451612903225806
+              },
+              "2023": {
+                "eligible_from": 2023,
+                "eligible_to": 2023,
+                "lag": 1,
+                "n": 22,
+                "citers": 2,
+                "share": 0.09090909090909091
+              },
+              "2024": {
+                "eligible_from": 2024,
+                "eligible_to": 2024,
+                "lag": 1,
+                "n": 21,
+                "citers": 0,
+                "share": 0.0
+              }
+            },
+            "standardized_share": 0.22326887547639362
+          }
+        }
+      },
+      "hagger_2010_meta": {
+        "years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "weighting": "equal weight per common year, not population weighting",
+        "groups": {
+          "work/org": {
+            "annual": {
+              "2017": {
+                "eligible_from": 2017,
+                "eligible_to": 2017,
+                "lag": 1,
+                "n": 5,
+                "citers": 3,
+                "share": 0.6
+              },
+              "2018": {
+                "eligible_from": 2018,
+                "eligible_to": 2018,
+                "lag": 1,
+                "n": 10,
+                "citers": 7,
+                "share": 0.7
+              },
+              "2019": {
+                "eligible_from": 2019,
+                "eligible_to": 2019,
+                "lag": 1,
+                "n": 6,
+                "citers": 4,
+                "share": 0.6666666666666666
+              },
+              "2020": {
+                "eligible_from": 2020,
+                "eligible_to": 2020,
+                "lag": 1,
+                "n": 11,
+                "citers": 2,
+                "share": 0.18181818181818182
+              },
+              "2021": {
+                "eligible_from": 2021,
+                "eligible_to": 2021,
+                "lag": 1,
+                "n": 6,
+                "citers": 1,
+                "share": 0.16666666666666666
+              },
+              "2022": {
+                "eligible_from": 2022,
+                "eligible_to": 2022,
+                "lag": 1,
+                "n": 13,
+                "citers": 1,
+                "share": 0.07692307692307693
+              },
+              "2023": {
+                "eligible_from": 2023,
+                "eligible_to": 2023,
+                "lag": 1,
+                "n": 20,
+                "citers": 6,
+                "share": 0.3
+              },
+              "2024": {
+                "eligible_from": 2024,
+                "eligible_to": 2024,
+                "lag": 1,
+                "n": 10,
+                "citers": 1,
+                "share": 0.1
+              }
+            },
+            "standardized_share": 0.349009324009324
+          },
+          "core/other psych": {
+            "annual": {
+              "2017": {
+                "eligible_from": 2017,
+                "eligible_to": 2017,
+                "lag": 1,
+                "n": 34,
+                "citers": 26,
+                "share": 0.7647058823529411
+              },
+              "2018": {
+                "eligible_from": 2018,
+                "eligible_to": 2018,
+                "lag": 1,
+                "n": 29,
+                "citers": 18,
+                "share": 0.6206896551724138
+              },
+              "2019": {
+                "eligible_from": 2019,
+                "eligible_to": 2019,
+                "lag": 1,
+                "n": 33,
+                "citers": 24,
+                "share": 0.7272727272727273
+              },
+              "2020": {
+                "eligible_from": 2020,
+                "eligible_to": 2020,
+                "lag": 1,
+                "n": 17,
+                "citers": 13,
+                "share": 0.7647058823529411
+              },
+              "2021": {
+                "eligible_from": 2021,
+                "eligible_to": 2021,
+                "lag": 1,
+                "n": 27,
+                "citers": 16,
+                "share": 0.5925925925925926
+              },
+              "2022": {
+                "eligible_from": 2022,
+                "eligible_to": 2022,
+                "lag": 1,
+                "n": 31,
+                "citers": 18,
+                "share": 0.5806451612903226
+              },
+              "2023": {
+                "eligible_from": 2023,
+                "eligible_to": 2023,
+                "lag": 1,
+                "n": 22,
+                "citers": 7,
+                "share": 0.3181818181818182
+              },
+              "2024": {
+                "eligible_from": 2024,
+                "eligible_to": 2024,
+                "lag": 1,
+                "n": 21,
+                "citers": 9,
+                "share": 0.42857142857142855
+              }
+            },
+            "standardized_share": 0.5996706434733982
+          }
+        }
+      },
+      "inzlicht_2012": {
+        "years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "weighting": "equal weight per common year, not population weighting",
+        "groups": {
+          "work/org": {
+            "annual": {
+              "2017": {
+                "eligible_from": 2017,
+                "eligible_to": 2017,
+                "lag": 1,
+                "n": 5,
+                "citers": 1,
+                "share": 0.2
+              },
+              "2018": {
+                "eligible_from": 2018,
+                "eligible_to": 2018,
+                "lag": 1,
+                "n": 10,
+                "citers": 0,
+                "share": 0.0
+              },
+              "2019": {
+                "eligible_from": 2019,
+                "eligible_to": 2019,
+                "lag": 1,
+                "n": 6,
+                "citers": 1,
+                "share": 0.16666666666666666
+              },
+              "2020": {
+                "eligible_from": 2020,
+                "eligible_to": 2020,
+                "lag": 1,
+                "n": 11,
+                "citers": 1,
+                "share": 0.09090909090909091
+              },
+              "2021": {
+                "eligible_from": 2021,
+                "eligible_to": 2021,
+                "lag": 1,
+                "n": 6,
+                "citers": 1,
+                "share": 0.16666666666666666
+              },
+              "2022": {
+                "eligible_from": 2022,
+                "eligible_to": 2022,
+                "lag": 1,
+                "n": 13,
+                "citers": 1,
+                "share": 0.07692307692307693
+              },
+              "2023": {
+                "eligible_from": 2023,
+                "eligible_to": 2023,
+                "lag": 1,
+                "n": 20,
+                "citers": 2,
+                "share": 0.1
+              },
+              "2024": {
+                "eligible_from": 2024,
+                "eligible_to": 2024,
+                "lag": 1,
+                "n": 10,
+                "citers": 1,
+                "share": 0.1
+              }
+            },
+            "standardized_share": 0.11264568764568764
+          },
+          "core/other psych": {
+            "annual": {
+              "2017": {
+                "eligible_from": 2017,
+                "eligible_to": 2017,
+                "lag": 1,
+                "n": 34,
+                "citers": 10,
+                "share": 0.29411764705882354
+              },
+              "2018": {
+                "eligible_from": 2018,
+                "eligible_to": 2018,
+                "lag": 1,
+                "n": 29,
+                "citers": 11,
+                "share": 0.3793103448275862
+              },
+              "2019": {
+                "eligible_from": 2019,
+                "eligible_to": 2019,
+                "lag": 1,
+                "n": 33,
+                "citers": 13,
+                "share": 0.3939393939393939
+              },
+              "2020": {
+                "eligible_from": 2020,
+                "eligible_to": 2020,
+                "lag": 1,
+                "n": 17,
+                "citers": 5,
+                "share": 0.29411764705882354
+              },
+              "2021": {
+                "eligible_from": 2021,
+                "eligible_to": 2021,
+                "lag": 1,
+                "n": 27,
+                "citers": 10,
+                "share": 0.37037037037037035
+              },
+              "2022": {
+                "eligible_from": 2022,
+                "eligible_to": 2022,
+                "lag": 1,
+                "n": 31,
+                "citers": 7,
+                "share": 0.22580645161290322
+              },
+              "2023": {
+                "eligible_from": 2023,
+                "eligible_to": 2023,
+                "lag": 1,
+                "n": 22,
+                "citers": 2,
+                "share": 0.09090909090909091
+              },
+              "2024": {
+                "eligible_from": 2024,
+                "eligible_to": 2024,
+                "lag": 1,
+                "n": 21,
+                "citers": 4,
+                "share": 0.19047619047619047
+              }
+            },
+            "standardized_share": 0.2798808920316478
+          }
+        }
+      },
+      "friese_2019": {
+        "years": [
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "weighting": "equal weight per common year, not population weighting",
+        "groups": {
+          "work/org": {
+            "annual": {
+              "2020": {
+                "eligible_from": 2020,
+                "eligible_to": 2020,
+                "lag": 1,
+                "n": 11,
+                "citers": 0,
+                "share": 0.0
+              },
+              "2021": {
+                "eligible_from": 2021,
+                "eligible_to": 2021,
+                "lag": 1,
+                "n": 6,
+                "citers": 0,
+                "share": 0.0
+              },
+              "2022": {
+                "eligible_from": 2022,
+                "eligible_to": 2022,
+                "lag": 1,
+                "n": 13,
+                "citers": 0,
+                "share": 0.0
+              },
+              "2023": {
+                "eligible_from": 2023,
+                "eligible_to": 2023,
+                "lag": 1,
+                "n": 20,
+                "citers": 2,
+                "share": 0.1
+              },
+              "2024": {
+                "eligible_from": 2024,
+                "eligible_to": 2024,
+                "lag": 1,
+                "n": 10,
+                "citers": 2,
+                "share": 0.2
+              }
+            },
+            "standardized_share": 0.06000000000000001
+          },
+          "core/other psych": {
+            "annual": {
+              "2020": {
+                "eligible_from": 2020,
+                "eligible_to": 2020,
+                "lag": 1,
+                "n": 17,
+                "citers": 5,
+                "share": 0.29411764705882354
+              },
+              "2021": {
+                "eligible_from": 2021,
+                "eligible_to": 2021,
+                "lag": 1,
+                "n": 27,
+                "citers": 7,
+                "share": 0.25925925925925924
+              },
+              "2022": {
+                "eligible_from": 2022,
+                "eligible_to": 2022,
+                "lag": 1,
+                "n": 31,
+                "citers": 7,
+                "share": 0.22580645161290322
+              },
+              "2023": {
+                "eligible_from": 2023,
+                "eligible_to": 2023,
+                "lag": 1,
+                "n": 22,
+                "citers": 3,
+                "share": 0.13636363636363635
+              },
+              "2024": {
+                "eligible_from": 2024,
+                "eligible_to": 2024,
+                "lag": 1,
+                "n": 21,
+                "citers": 5,
+                "share": 0.23809523809523808
+              }
+            },
+            "standardized_share": 0.2307284464779721
+          }
+        }
+      },
+      "dang_2018": {
+        "years": [
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "weighting": "equal weight per common year, not population weighting",
+        "groups": {
+          "work/org": {
+            "annual": {
+              "2019": {
+                "eligible_from": 2019,
+                "eligible_to": 2019,
+                "lag": 1,
+                "n": 6,
+                "citers": 1,
+                "share": 0.16666666666666666
+              },
+              "2020": {
+                "eligible_from": 2020,
+                "eligible_to": 2020,
+                "lag": 1,
+                "n": 11,
+                "citers": 1,
+                "share": 0.09090909090909091
+              },
+              "2021": {
+                "eligible_from": 2021,
+                "eligible_to": 2021,
+                "lag": 1,
+                "n": 6,
+                "citers": 0,
+                "share": 0.0
+              },
+              "2022": {
+                "eligible_from": 2022,
+                "eligible_to": 2022,
+                "lag": 1,
+                "n": 13,
+                "citers": 0,
+                "share": 0.0
+              },
+              "2023": {
+                "eligible_from": 2023,
+                "eligible_to": 2023,
+                "lag": 1,
+                "n": 20,
+                "citers": 0,
+                "share": 0.0
+              },
+              "2024": {
+                "eligible_from": 2024,
+                "eligible_to": 2024,
+                "lag": 1,
+                "n": 10,
+                "citers": 0,
+                "share": 0.0
+              }
+            },
+            "standardized_share": 0.04292929292929293
+          },
+          "core/other psych": {
+            "annual": {
+              "2019": {
+                "eligible_from": 2019,
+                "eligible_to": 2019,
+                "lag": 1,
+                "n": 33,
+                "citers": 10,
+                "share": 0.30303030303030304
+              },
+              "2020": {
+                "eligible_from": 2020,
+                "eligible_to": 2020,
+                "lag": 1,
+                "n": 17,
+                "citers": 3,
+                "share": 0.17647058823529413
+              },
+              "2021": {
+                "eligible_from": 2021,
+                "eligible_to": 2021,
+                "lag": 1,
+                "n": 27,
+                "citers": 6,
+                "share": 0.2222222222222222
+              },
+              "2022": {
+                "eligible_from": 2022,
+                "eligible_to": 2022,
+                "lag": 1,
+                "n": 31,
+                "citers": 4,
+                "share": 0.12903225806451613
+              },
+              "2023": {
+                "eligible_from": 2023,
+                "eligible_to": 2023,
+                "lag": 1,
+                "n": 22,
+                "citers": 1,
+                "share": 0.045454545454545456
+              },
+              "2024": {
+                "eligible_from": 2024,
+                "eligible_to": 2024,
+                "lag": 1,
+                "n": 21,
+                "citers": 0,
+                "share": 0.0
+              }
+            },
+            "standardized_share": 0.1460349861678135
+          }
+        }
+      }
+    }
+  },
+  "joint_document_subset": {
+    "window": [
+      2017,
+      2024
+    ],
+    "unit": "unique identified focal-term document with an abstract, stored masked vector, and resolved citation record",
+    "rows": [
+      {
+        "venue": "work/org",
+        "citation_eligible_n": 81,
+        "common_n": 81,
+        "n_naming_instrument": 2,
+        "top_detected_families": [
+          [
+            "implicit theories of willpower scale",
+            2
+          ]
+        ],
+        "anchor_rates": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 81,
+            "citers": 49,
+            "share": 0.6049382716049383
+          },
+          "rrr_2016": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 81,
+            "citers": 7,
+            "share": 0.08641975308641975
+          },
+          "rrr_2021": {
+            "eligible_from": 2022,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 43,
+            "citers": 1,
+            "share": 0.023255813953488372
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 81,
+            "citers": 1,
+            "share": 0.012345679012345678
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 81,
+            "citers": 25,
+            "share": 0.30864197530864196
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 81,
+            "citers": 8,
+            "share": 0.09876543209876543
+          },
+          "friese_2019": {
+            "eligible_from": 2020,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 60,
+            "citers": 4,
+            "share": 0.06666666666666667
+          },
+          "dang_2018": {
+            "eligible_from": 2019,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 66,
+            "citers": 2,
+            "share": 0.030303030303030304
+          }
+        }
+      },
+      {
+        "venue": "core/other psych",
+        "citation_eligible_n": 214,
+        "common_n": 214,
+        "n_naming_instrument": 44,
+        "top_detected_families": [
+          [
+            "stroop task",
+            25
+          ],
+          [
+            "stop signal task",
+            5
+          ],
+          [
+            "letter crossing task",
+            4
+          ],
+          [
+            "sequential task paradigm",
+            4
+          ],
+          [
+            "anagram task",
+            3
+          ],
+          [
+            "implicit theories of willpower scale",
+            2
+          ]
+        ],
+        "anchor_rates": {
+          "coinage_1998": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 214,
+            "citers": 149,
+            "share": 0.6962616822429907
+          },
+          "rrr_2016": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 214,
+            "citers": 103,
+            "share": 0.48130841121495327
+          },
+          "rrr_2021": {
+            "eligible_from": 2022,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 74,
+            "citers": 8,
+            "share": 0.10810810810810811
+          },
+          "carter_2014": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 214,
+            "citers": 49,
+            "share": 0.22897196261682243
+          },
+          "hagger_2010_meta": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 214,
+            "citers": 131,
+            "share": 0.6121495327102804
+          },
+          "inzlicht_2012": {
+            "eligible_from": 2017,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 214,
+            "citers": 62,
+            "share": 0.2897196261682243
+          },
+          "friese_2019": {
+            "eligible_from": 2020,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 118,
+            "citers": 27,
+            "share": 0.2288135593220339
+          },
+          "dang_2018": {
+            "eligible_from": 2019,
+            "eligible_to": 2024,
+            "lag": 1,
+            "n": 151,
+            "citers": 24,
+            "share": 0.15894039735099338
+          }
+        }
+      }
+    ],
+    "interpretation": "descriptive association on an explicitly shared population; name detection is not evidence of instrument role",
+    "year_matched_representation_comparison": {
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "n_per_year": {
+        "2017": 2,
+        "2018": 5,
+        "2019": 3,
+        "2020": 5,
+        "2021": 3,
+        "2022": 6,
+        "2023": 10,
+        "2024": 5
+      },
+      "sample_size": 39,
+      "draws": 100,
+      "results": {
+        "between_PRT": {
+          "mean": 0.0775037936320445,
+          "sd": 0.016526226872561604
+        },
+        "between_APD": {
+          "mean": 0.5709755321994067,
+          "sd": 0.012735311667227373
+        },
+        "between_AMD": {
+          "mean": 0.30019227222267736,
+          "sd": 0.012752381632175744
+        },
+        "between_SAMD": {
+          "mean": 0.40120262591007555,
+          "sd": 0.01894463214834102
+        },
+        "work_floor_PRT": {
+          "mean": 0.028443228980113467,
+          "sd": 0.011671528672076928
+        },
+        "work_floor_APD": {
+          "mean": 0.5201948333643749,
+          "sd": 0.0032233888930001593
+        },
+        "work_floor_AMD": {
+          "mean": 0.2546368278642828,
+          "sd": 0.005946332109010168
+        },
+        "work_floor_SAMD": {
+          "mean": 0.3183714823335977,
+          "sd": 0.01568317132951141
+        },
+        "core_floor_PRT": {
+          "mean": 0.03258661159478791,
+          "sd": 0.008832966912032496
+        },
+        "core_floor_APD": {
+          "mean": 0.572163546322451,
+          "sd": 0.011603706976425793
+        },
+        "core_floor_AMD": {
+          "mean": 0.2884840006225943,
+          "sd": 0.010203774516072652
+        },
+        "core_floor_SAMD": {
+          "mean": 0.36052321699881057,
+          "sd": 0.015237344853649188
+        }
+      },
+      "uncertainty": "subsampling SD, not CI; known-use validation still pending"
+    }
+  }
+}

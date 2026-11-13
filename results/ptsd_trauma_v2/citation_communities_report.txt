@@ -1,0 +1,127 @@
+CITATION COMMUNITIES — posttraumatic stress disorder  (nodes 110,547, edges 1,006,235, year >= 1995)
+leiden/RBConfiguration, resolution 1.0, modularity 0.584; 18 communities >= 200 nodes
+
+== communities (read before interpreting) ==
+  C0  n=8,237
+     venues: Journal of Traumatic Stress (362); Journal of Affective Disorders (242); Psychological Trauma Theory Research Practice and Policy (224); Psychiatry Research (188); Frontiers in Psychiatry (187); European Journal of Psychotraumatology (184)
+     terms:  PTSD 62%; trauma 46%; posttraumatic stress 18%; traumatic stress 6%; psychological trauma 2%; bereavement 2%
+     periods:1995-1999:178 2000-2004:441 2005-2009:891 2010-2014:1231 2015-2019:1521 2020-2024:3415 2025-2025:560
+  C1  n=8,180
+     venues: Biological Psychiatry (405); Psychoneuroendocrinology (271); Journal of Psychiatric Research (200); Journal of Affective Disorders (194); Neuropsychopharmacology (187); Behavioural Brain Research (163)
+     terms:  PTSD 85%; trauma 41%; posttraumatic stress 8%; traumatic stress 6%; psychological trauma 2%; acute stress disorder 1%
+     periods:1995-1999:234 2000-2004:500 2005-2009:865 2010-2014:1554 2015-2019:2273 2020-2024:2396 2025-2025:358
+  C2  n=8,054
+     venues: Child Abuse & Neglect (383); Journal of Child & Adolescent Trauma (251); Children and Youth Services Review (243); Journal of Traumatic Stress (243); European Journal of Psychotraumatology (201); Journal of Interpersonal Violence (181)
+     terms:  trauma 72%; PTSD 38%; posttraumatic stress 15%; trauma informed 11%; complex PTSD 6%; traumatic stress 6%
+     periods:1995-1999:306 2000-2004:515 2005-2009:885 2010-2014:1285 2015-2019:1899 2020-2024:2624 2025-2025:540
+  C3  n=7,038
+     venues: Journal of Affective Disorders (327); Child Abuse & Neglect (240); Psychiatry Research (234); Frontiers in Psychiatry (204); Psychological Medicine (177); Journal of Psychiatric Research (170)
+     terms:  trauma 84%; PTSD 22%; trauma informed 4%; posttraumatic stress 3%; psychological trauma 1%; traumatic stress 1%
+     periods:1995-1999:121 2000-2004:278 2005-2009:502 2010-2014:976 2015-2019:1742 2020-2024:2840 2025-2025:579
+  C4  n=6,855
+     venues: Death Studies (583); OMEGA - Journal of Death and Dying (415); Journal of Palliative Medicine (139); Journal of Loss and Trauma (121); Palliative Medicine (114); Journal of Affective Disorders (103)
+     terms:  bereavement 82%; trauma 13%; PTSD 10%; posttraumatic stress 4%; traumatic stress 1%; psychological trauma 0%
+     periods:1995-1999:407 2000-2004:656 2005-2009:807 2010-2014:1087 2015-2019:1372 2020-2024:2043 2025-2025:483
+  C5  n=6,627
+     venues: Journal of Traumatic Stress (417); Military Medicine (280); Journal of Interpersonal Violence (164); Psychological Trauma Theory Research Practice and Policy (157); Journal of Affective Disorders (120); Psychiatric Services (117)
+     terms:  PTSD 75%; trauma 41%; posttraumatic stress 8%; trauma informed 3%; traumatic stress 2%; psychological trauma 1%
+     periods:1995-1999:209 2000-2004:386 2005-2009:723 2010-2014:1353 2015-2019:1735 2020-2024:1888 2025-2025:333
+  C6  n=6,384
+     venues: Psychoanalytic Dialogues (136); The American Journal of Psychoanalysis (105); The International Journal of Psychoanalysis (101); Child Abuse & Neglect (92); Archives of Women s Mental Health (89); Psychological Trauma Theory Research Practice and Policy (77)
+     terms:  trauma 77%; PTSD 23%; posttraumatic stress 7%; trauma informed 6%; intergenerational trauma 4%; traumatic stress 3%
+     periods:1995-1999:173 2000-2004:358 2005-2009:607 2010-2014:907 2015-2019:1352 2020-2024:2431 2025-2025:556
+  C7  n=6,019
+     venues: Journal of Neurotrauma (526); Brain Injury (324); Journal of Head Trauma Rehabilitation (241); The Journal of Trauma: Injury, Infection, and Critical Care (148); Military Medicine (102); Pain (94)
+     terms:  trauma 77%; PTSD 27%; posttraumatic stress 5%; traumatic stress 1%; psychological trauma 1%; trauma informed 1%
+     periods:1995-1999:300 2000-2004:394 2005-2009:739 2010-2014:1251 2015-2019:1654 2020-2024:1459 2025-2025:222
+  C8  n=5,776
+     venues: Journal of Interpersonal Violence (194); Addictive Behaviors (185); Journal of Traumatic Stress (169); Psychological Trauma Theory Research Practice and Policy (117); Drug and Alcohol Dependence (115); AIDS Care (100)
+     terms:  PTSD 58%; trauma 55%; trauma informed 10%; posttraumatic stress 8%; traumatic stress 2%; psychological trauma 2%
+     periods:1995-1999:207 2000-2004:367 2005-2009:661 2010-2014:989 2015-2019:1403 2020-2024:1808 2025-2025:341
+  C9  n=5,651
+     venues: Journal of Traumatic Stress (303); European Journal of Psychotraumatology (184); Journal of EMDR Practice and Research (150); Psychological Trauma Theory Research Practice and Policy (144); Military Medicine (97); Frontiers in Psychology (97)
+     terms:  PTSD 82%; trauma 44%; posttraumatic stress 6%; traumatic stress 3%; complex PTSD 2%; trauma informed 2%
+     periods:1995-1999:207 2000-2004:435 2005-2009:592 2010-2014:886 2015-2019:1324 2020-2024:1852 2025-2025:355
+  C10  n=5,643
+     venues: Journal of Traumatic Stress (153); Transcultural Psychiatry (136); European Journal of Psychotraumatology (116); BMC Psychiatry (94); Social Science & Medicine (88); The Journal of Nervous and Mental Disease (86)
+     terms:  trauma 68%; PTSD 46%; posttraumatic stress 11%; traumatic stress 4%; trauma informed 4%; psychological trauma 2%
+     periods:1995-1999:211 2000-2004:427 2005-2009:564 2010-2014:824 2015-2019:1320 2020-2024:1887 2025-2025:410
+  C11  n=5,556
+     venues: Traumatology An International Journal (110); Psychological Trauma Theory Research Practice and Policy (86); Children and Youth Services Review (82); International Journal of Mental Health Nursing (67); Child Abuse & Neglect (54); School Mental Health (50)
+     terms:  trauma 64%; trauma informed 31%; secondary traumatic stress 19%; PTSD 12%; vicarious trauma 6%; traumatic stress 4%
+     periods:1995-1999:71 2000-2004:192 2005-2009:275 2010-2014:452 2015-2019:1136 2020-2024:2707 2025-2025:723
+  C12  n=4,204
+     venues: Journal of Traumatic Stress (208); Behaviour Research and Therapy (147); Psychological Trauma Theory Research Practice and Policy (129); Journal of Behavior Therapy and Experimental Psychiatry (107); Journal of Anxiety Disorders (102); European Journal of Psychotraumatology (96)
+     terms:  PTSD 68%; trauma 64%; posttraumatic stress 15%; acute stress disorder 5%; traumatic stress 3%; psychological trauma 2%
+     periods:1995-1999:245 2000-2004:393 2005-2009:638 2010-2014:707 2015-2019:926 2020-2024:1098 2025-2025:197
+  C13  n=1,842
+     venues: Journal of Trauma & Dissociation (238); Epilepsy & Behavior (76); European Journal of Trauma & Dissociation (55); European Journal of Psychotraumatology (43); Psychological Trauma Theory Research Practice and Policy (36); The Journal of Nervous and Mental Disease (32)
+     terms:  trauma 82%; PTSD 29%; psychological trauma 4%; posttraumatic stress 4%; traumatic stress 2%; complex PTSD 2%
+     periods:1995-1999:160 2000-2004:203 2005-2009:211 2010-2014:287 2015-2019:387 2020-2024:481 2025-2025:113
+  C14  n=1,236
+     venues: Journal of Forensic Sciences (167); Forensic Science International (148); Child Abuse & Neglect (122); International Journal of Legal Medicine (108); Journal of Forensic and Legal Medicine (92); PEDIATRICS (84)
+     terms:  trauma 99%; trauma informed 0%; PTSD 0%; bereavement 0%; posttraumatic stress 0%; traumatic stress 0%
+     periods:1995-1999:50 2000-2004:87 2005-2009:169 2010-2014:270 2015-2019:268 2020-2024:332 2025-2025:60
+  C15  n=1,171
+     venues: SLEEP (80); Journal of Traumatic Stress (63); Dreaming (43); Behavioral Sleep Medicine (34); Journal of Sleep Research (33); Sleep Medicine (32)
+     terms:  PTSD 83%; trauma 42%; posttraumatic stress 7%; traumatic stress 2%; trauma informed 1%; psychological trauma 1%
+     periods:1995-1999:52 2000-2004:72 2005-2009:115 2010-2014:214 2015-2019:266 2020-2024:380 2025-2025:72
+  C16  n=1,144
+     venues: Psychological Trauma Theory Research Practice and Policy (70); Journal of Traumatic Stress (49); Journal of Religion and Health (44); European Journal of Psychotraumatology (36); Traumatology An International Journal (35); Frontiers in Psychiatry (33)
+     terms:  moral injury 68%; PTSD 39%; trauma 36%; posttraumatic stress 6%; traumatic stress 3%; psychological trauma 2%
+     periods:1995-1999:11 2000-2004:21 2005-2009:34 2010-2014:75 2015-2019:227 2020-2024:633 2025-2025:143
+  C17  n=796
+     venues: Psycho-Oncology (64); Supportive Care in Cancer (20); Journal of Affective Disorders (19); Journal of Psychosocial Oncology (18); General Hospital Psychiatry (15); Psychosomatics (12)
+     terms:  adjustment disorder 44%; PTSD 37%; trauma 18%; posttraumatic stress 14%; traumatic stress 6%; acute stress disorder 2%
+     periods:1995-1999:39 2000-2004:63 2005-2009:123 2010-2014:133 2015-2019:200 2020-2024:196 2025-2025:42
+
+== term x community (P1/P3) ==
+  term                           docs   topC  topShare  entropy  inOver  JSvsTrauma
+  trauma                        66528      3     0.115    0.924   0.000         nan
+  PTSD                          44697      1     0.166    0.876   0.299      0.1071
+  trauma informed                5409     11     0.369    0.686   0.681      0.2041
+  secondary traumatic stress     1276     11     0.883    0.218   0.883      0.6128
+  vicarious trauma                507     11     0.794    0.366   0.794      0.5022
+  complex PTSD                   1010      2     0.528    0.637   0.655      0.2372
+  moral injury                   1018     16     0.867    0.249   0.867      0.7201
+  collective trauma               492      6     0.338    0.663   0.630      0.3104
+  intergenerational trauma        467      6     0.659    0.519   0.659      0.3573
+  posttraumatic stress           8099      0     0.197    0.868   0.435      0.0896
+  traumatic stress               3304      2     0.164    0.865   0.180      0.0869
+  psychological trauma           1936      0     0.122    0.935   0.050      0.0412
+  bereavement                    7488      4     0.900    0.196   0.900      0.7157
+  acute stress disorder           721     12     0.300    0.732   0.516      0.2456
+  adjustment disorder             998     17     0.471    0.730   0.471      0.3343
+
+== insulation: same-term citation vs within-period label-shuffle null ==
+  term                            refs    obs   null  ratio       z  ->trauma  ->PTSD
+  trauma                        901646  0.412  0.472   1.02     1.7      1.02    1.49
+  PTSD                          996507  0.549  0.326   3.22   132.3      1.24    3.22
+  trauma informed                78255  0.179  0.023   8.38   126.0      1.02    0.77
+  secondary traumatic stress     22747  0.288  0.006  65.79   402.8      0.99    0.76
+  vicarious trauma                8477  0.142  0.003  68.51   222.0      1.16    0.64
+  complex PTSD                   42569  0.168  0.005 109.58   549.0      2.36    3.95
+  moral injury                   25726  0.343  0.004 152.30   874.6      0.87    1.97
+  collective trauma               4238  0.077  0.003  21.19    63.3      0.68    0.55
+  intergenerational trauma        5522  0.054  0.002  22.91    61.0      1.03    0.71
+  posttraumatic stress          195557  0.106  0.053   4.01    61.3      1.37    2.94
+  traumatic stress               70419  0.066  0.024   4.98    51.5      1.29    2.52
+  psychological trauma           28001  0.026  0.014   2.34    10.8      0.98    1.71
+  bereavement                    64091  0.657  0.063   8.27   141.7      0.19    0.38
+  acute stress disorder          21088  0.133  0.007  52.01   250.0      1.66    3.79
+  adjustment disorder             6479  0.276  0.009  18.82    97.6      0.25    0.66
+
+== P2: trauma-informed subgraph ==
+  docs 5,409, intra edges 14,023, 1532 sub-communities, modularity 0.587, Cramer's V (sub-community x venue category) = 0.337
+  S0 n=571: nursing/health 316; core/other psych 198; psychiatry 22; social work 17; education 10
+       PEDIATRICS (13); Child Abuse & Neglect (12); Journal of Nursing Education (12); Journal of Midwifery & Women s Health (9)
+  S1 n=467: education 217; core/other psych 160; nursing/health 57; social work 20; psychiatry 5
+       School Mental Health (33); Journal of Child & Adolescent Trauma (21); Psychology in the Schools (20); Children & Schools (19)
+  S2 n=446: core/other psych 265; social work 93; nursing/health 67; psychiatry 9; education 6
+       Children and Youth Services Review (53); Child Abuse & Neglect (25); Journal of Child & Adolescent Trauma (23); Journal of Public Child Welfare (17)
+  S3 n=327: nursing/health 169; core/other psych 84; psychiatry 41; social work 17; education 8
+       International Journal of Mental Health Nursing (35); Issues in Mental Health Nursing (14); Journal of Psychiatric and Mental Health Nursing (9); Journal of Psychosocial Nursing and Mental Health Services (6)
+  S4 n=273: core/other psych 130; nursing/health 55; social work 51; psychiatry 15; law/forensic 15
+       The Clinical Supervisor (10); Traumatology An International Journal (8); Journal of Aggression Maltreatment & Trauma (8); Children and Youth Services Review (6)
+  S5 n=256: core/other psych 139; nursing/health 66; social work 23; psychiatry 19; work/org 3
+       Journal of Substance Abuse Treatment (8); Journal of Community Psychology (7); Children and Youth Services Review (6); Journal of Dual Diagnosis (5)

@@ -1,0 +1,396 @@
+{
+  "coverage": {
+    "stored_records": 129977,
+    "stored_year_range": [
+      1965,
+      2025
+    ],
+    "after_2024": 8545,
+    "analysis_records": 121432,
+    "after_2025_in_2025_bin": 0,
+    "resolved_analysis_records": 108050,
+    "resolved_without_references": 10982,
+    "duplicate_openalex_ids": 168,
+    "records_in_repeated_openalex_resolutions": 342,
+    "records_in_repeated_resolutions_through_2024": 332,
+    "unidentifiable_analysis_records": 104,
+    "by_stratum": {
+      "book": {
+        "n": 2,
+        "resolved": 1
+      },
+      "journal": {
+        "n": 121412,
+        "resolved": 108049
+      },
+      "popular": {
+        "n": 2,
+        "resolved": 0
+      },
+      "thesis": {
+        "n": 16,
+        "resolved": 0
+      }
+    },
+    "abstracts_available_unique_id": 120592
+  },
+  "breadth_contrasts": {
+    "trauma": {
+      "breadth_mpnet": {
+        "periods": [
+          {
+            "period": "1985-1989",
+            "target": 0.6882,
+            "mean_control": 0.728475,
+            "difference": -0.04027499999999995
+          },
+          {
+            "period": "1990-1994",
+            "target": 0.6815,
+            "mean_control": 0.7432750000000001,
+            "difference": -0.061775000000000135
+          },
+          {
+            "period": "1995-1999",
+            "target": 0.676,
+            "mean_control": 0.720725,
+            "difference": -0.044724999999999904
+          },
+          {
+            "period": "2000-2004",
+            "target": 0.642,
+            "mean_control": 0.7004999999999999,
+            "difference": -0.058499999999999885
+          },
+          {
+            "period": "2005-2009",
+            "target": 0.6656,
+            "mean_control": 0.7058249999999999,
+            "difference": -0.040224999999999955
+          },
+          {
+            "period": "2010-2014",
+            "target": 0.6636,
+            "mean_control": 0.71095,
+            "difference": -0.04735
+          },
+          {
+            "period": "2015-2019",
+            "target": 0.6458,
+            "mean_control": 0.70195,
+            "difference": -0.05614999999999992
+          },
+          {
+            "period": "2020-2024",
+            "target": 0.6546,
+            "mean_control": 0.7097000000000001,
+            "difference": -0.05510000000000015
+          }
+        ],
+        "target_change": -0.033600000000000074,
+        "control_change": -0.018774999999999875,
+        "difference_in_changes": -0.014825000000000199,
+        "difference_slope_per_year": -0.0001553571428571445,
+        "status": "descriptive re-expression of saved raw breadth estimates; no CI; no equivalence claim; representations differ in encoder, masking, and aggregation"
+      },
+      "breadth_masked": {
+        "periods": [
+          {
+            "period": "1985-1989",
+            "target": 0.2702,
+            "mean_control": 0.268625,
+            "difference": 0.001574999999999993
+          },
+          {
+            "period": "1990-1994",
+            "target": 0.2637,
+            "mean_control": 0.28645,
+            "difference": -0.022749999999999992
+          },
+          {
+            "period": "1995-1999",
+            "target": 0.2562,
+            "mean_control": 0.262225,
+            "difference": -0.006025000000000003
+          },
+          {
+            "period": "2000-2004",
+            "target": 0.2428,
+            "mean_control": 0.25307500000000005,
+            "difference": -0.010275000000000062
+          },
+          {
+            "period": "2005-2009",
+            "target": 0.2404,
+            "mean_control": 0.25429999999999997,
+            "difference": -0.013899999999999968
+          },
+          {
+            "period": "2010-2014",
+            "target": 0.2518,
+            "mean_control": 0.2582,
+            "difference": -0.006399999999999961
+          },
+          {
+            "period": "2015-2019",
+            "target": 0.2473,
+            "mean_control": 0.239925,
+            "difference": 0.007374999999999993
+          },
+          {
+            "period": "2020-2024",
+            "target": 0.2416,
+            "mean_control": 0.23925,
+            "difference": 0.0023500000000000187
+          }
+        ],
+        "target_change": -0.028599999999999987,
+        "control_change": -0.029375000000000012,
+        "difference_in_changes": 0.0007750000000000257,
+        "difference_slope_per_year": 0.0003602380952380837,
+        "status": "descriptive re-expression of saved raw breadth estimates; no CI; no equivalence claim; representations differ in encoder, masking, and aggregation"
+      }
+    },
+    "secondary traumatic stress": {
+      "breadth_mpnet": {
+        "periods": [
+          {
+            "period": "2000-2004",
+            "target": 0.4276,
+            "mean_control": 0.7004999999999999,
+            "difference": -0.2728999999999999
+          },
+          {
+            "period": "2005-2009",
+            "target": 0.4476,
+            "mean_control": 0.7058249999999999,
+            "difference": -0.2582249999999999
+          },
+          {
+            "period": "2010-2014",
+            "target": 0.4717,
+            "mean_control": 0.71095,
+            "difference": -0.23924999999999996
+          },
+          {
+            "period": "2015-2019",
+            "target": 0.4869,
+            "mean_control": 0.70195,
+            "difference": -0.21504999999999996
+          },
+          {
+            "period": "2020-2024",
+            "target": 0.4829,
+            "mean_control": 0.7097000000000001,
+            "difference": -0.2268000000000001
+          }
+        ],
+        "target_change": 0.055300000000000016,
+        "control_change": 0.009200000000000208,
+        "difference_in_changes": 0.04609999999999981,
+        "difference_slope_per_year": 0.0027074999999999994,
+        "status": "descriptive re-expression of saved raw breadth estimates; no CI; no equivalence claim; representations differ in encoder, masking, and aggregation"
+      },
+      "breadth_masked": {
+        "periods": [
+          {
+            "period": "2000-2004",
+            "target": 0.1656,
+            "mean_control": 0.25307500000000005,
+            "difference": -0.08747500000000005
+          },
+          {
+            "period": "2005-2009",
+            "target": 0.1507,
+            "mean_control": 0.25429999999999997,
+            "difference": -0.10359999999999997
+          },
+          {
+            "period": "2010-2014",
+            "target": 0.1498,
+            "mean_control": 0.2582,
+            "difference": -0.1084
+          },
+          {
+            "period": "2015-2019",
+            "target": 0.1366,
+            "mean_control": 0.239925,
+            "difference": -0.103325
+          },
+          {
+            "period": "2020-2024",
+            "target": 0.1277,
+            "mean_control": 0.23925,
+            "difference": -0.11154999999999998
+          }
+        ],
+        "target_change": -0.03789999999999999,
+        "control_change": -0.01382500000000006,
+        "difference_in_changes": -0.02407499999999993,
+        "difference_slope_per_year": -0.0009575000000000013,
+        "status": "descriptive re-expression of saved raw breadth estimates; no CI; no equivalence claim; representations differ in encoder, masking, and aggregation"
+      }
+    },
+    "vicarious trauma": {
+      "breadth_mpnet": {
+        "periods": [
+          {
+            "period": "2000-2004",
+            "target": 0.404,
+            "mean_control": 0.7004999999999999,
+            "difference": -0.2964999999999999
+          },
+          {
+            "period": "2005-2009",
+            "target": 0.4441,
+            "mean_control": 0.7058249999999999,
+            "difference": -0.26172499999999993
+          },
+          {
+            "period": "2010-2014",
+            "target": 0.4398,
+            "mean_control": 0.71095,
+            "difference": -0.27114999999999995
+          },
+          {
+            "period": "2015-2019",
+            "target": 0.4814,
+            "mean_control": 0.70195,
+            "difference": -0.22054999999999997
+          },
+          {
+            "period": "2020-2024",
+            "target": 0.4845,
+            "mean_control": 0.7097000000000001,
+            "difference": -0.22520000000000012
+          }
+        ],
+        "target_change": 0.08049999999999996,
+        "control_change": 0.009200000000000208,
+        "difference_in_changes": 0.07129999999999975,
+        "difference_slope_per_year": 0.0036755000000000234,
+        "status": "descriptive re-expression of saved raw breadth estimates; no CI; no equivalence claim; representations differ in encoder, masking, and aggregation"
+      },
+      "breadth_masked": {
+        "periods": [
+          {
+            "period": "2000-2004",
+            "target": 0.1547,
+            "mean_control": 0.25307500000000005,
+            "difference": -0.09837500000000005
+          },
+          {
+            "period": "2005-2009",
+            "target": 0.1515,
+            "mean_control": 0.25429999999999997,
+            "difference": -0.10279999999999997
+          },
+          {
+            "period": "2010-2014",
+            "target": 0.1638,
+            "mean_control": 0.2582,
+            "difference": -0.09439999999999998
+          },
+          {
+            "period": "2015-2019",
+            "target": 0.1595,
+            "mean_control": 0.239925,
+            "difference": -0.080425
+          },
+          {
+            "period": "2020-2024",
+            "target": 0.155,
+            "mean_control": 0.23925,
+            "difference": -0.08424999999999999
+          }
+        ],
+        "target_change": 0.0002999999999999947,
+        "control_change": -0.01382500000000006,
+        "difference_in_changes": 0.014125000000000054,
+        "difference_slope_per_year": 0.0010124999999999956,
+        "status": "descriptive re-expression of saved raw breadth estimates; no CI; no equivalence claim; representations differ in encoder, masking, and aggregation"
+      }
+    },
+    "trauma informed": {
+      "breadth_mpnet": {
+        "periods": [
+          {
+            "period": "2000-2004",
+            "target": 0.469,
+            "mean_control": 0.7004999999999999,
+            "difference": -0.23149999999999993
+          },
+          {
+            "period": "2005-2009",
+            "target": 0.4726,
+            "mean_control": 0.7058249999999999,
+            "difference": -0.2332249999999999
+          },
+          {
+            "period": "2010-2014",
+            "target": 0.4788,
+            "mean_control": 0.71095,
+            "difference": -0.23214999999999997
+          },
+          {
+            "period": "2015-2019",
+            "target": 0.5006,
+            "mean_control": 0.70195,
+            "difference": -0.20134999999999992
+          },
+          {
+            "period": "2020-2024",
+            "target": 0.5322,
+            "mean_control": 0.7097000000000001,
+            "difference": -0.1775000000000001
+          }
+        ],
+        "target_change": 0.06320000000000003,
+        "control_change": 0.009200000000000208,
+        "difference_in_changes": 0.053999999999999826,
+        "difference_slope_per_year": 0.002797499999999964,
+        "status": "descriptive re-expression of saved raw breadth estimates; no CI; no equivalence claim; representations differ in encoder, masking, and aggregation"
+      },
+      "breadth_masked": {
+        "periods": [
+          {
+            "period": "2000-2004",
+            "target": 0.2244,
+            "mean_control": 0.25307500000000005,
+            "difference": -0.02867500000000006
+          },
+          {
+            "period": "2005-2009",
+            "target": 0.2078,
+            "mean_control": 0.25429999999999997,
+            "difference": -0.04649999999999996
+          },
+          {
+            "period": "2010-2014",
+            "target": 0.2165,
+            "mean_control": 0.2582,
+            "difference": -0.04169999999999999
+          },
+          {
+            "period": "2015-2019",
+            "target": 0.2047,
+            "mean_control": 0.239925,
+            "difference": -0.035225000000000006
+          },
+          {
+            "period": "2020-2024",
+            "target": 0.216,
+            "mean_control": 0.23925,
+            "difference": -0.023249999999999993
+          }
+        ],
+        "target_change": -0.00839999999999999,
+        "control_change": -0.01382500000000006,
+        "difference_in_changes": 0.005425000000000069,
+        "difference_slope_per_year": 0.0004424999999999722,
+        "status": "descriptive re-expression of saved raw breadth estimates; no CI; no equivalence claim; representations differ in encoder, masking, and aggregation"
+      }
+    }
+  },
+  "source_review_packet_n": 60
+}

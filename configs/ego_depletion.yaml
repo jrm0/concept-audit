@@ -288,3 +288,55 @@ citation:
   crisis_set: [rrr_2016, rrr_2021, carter_2014, inzlicht_2012, friese_2019, dang_2018]
   milestone_control: hagger_2010_meta
   hub_category: work/org          # venue whose non-engaged papers' references are tabulated
+  # --- 27_citation_communities.py (graph-level, concept-general; added 2026-10-01) ---
+  # Same instrument as the trauma run (results/ptsd_trauma_v2). Labels must
+  # match the term labels 16 writes into lineage_docs.jsonl (space form).
+  # Pre-registered reading, mirroring the trauma P1-P3: do "ego depletion" and
+  # "strength model" form a citation community of their own (insulation vs
+  # the within-period / period x venue label-shuffle null), do they cite the
+  # parent "self control" at or below base rate, and does the ego-depletion
+  # subgraph split by venue category (work/org vs core psych = the migration).
+  parent: self control
+  focus_terms: [ego depletion, self control, self regulation, willpower,
+                strength model, executive function, delay of gratification]
+  compounds: [ego depletion, strength model]
+  subgraph_term: ego depletion
+  merge: {}
+
+# --- instrument / operationalisation stratum (28) ------------------------------
+# Seed list = [canonical, alias, ...]. For this family the operationalisations
+# are PARADIGMS as much as scales ("Stroop task", "handgrip"), so task names
+# are seeded too; 28's generic detector also catches "<Name> task/paradigm".
+instruments:
+  seed:
+    - [Self-Control Scale, Brief Self-Control Scale, BSCS, Tangney Self-Control Scale]   # one family: Tangney et al.'s scale and its brief form; 'SCS' dropped (ambiguous with Self-Control Schedule)
+    - [Barratt Impulsiveness Scale, BIS-11, BIS]
+    - [Low Self-Control Scale, Grasmick scale, Grasmick et al. scale]
+    - [Stroop task, Stroop test, Stroop, color-word Stroop, emotional Stroop]
+    - [handgrip task, handgrip, hand grip task, handgrip endurance]
+    - [letter-crossing task, e-crossing task, letter e task, crossing out letters, e-crossing]
+    - [anagram task, unsolvable anagrams, anagrams]
+    - [cold pressor task, cold pressor]
+    - [thought suppression task, white bear task, white bear]
+    - [attention control task, attention control video, video task]
+    - [sequential task paradigm, sequential-task paradigm, dual-task paradigm, two-task paradigm]
+    - [delay discounting task, delay discounting, temporal discounting task, Monetary Choice Questionnaire, MCQ]
+    - [marshmallow test, marshmallow task, delay of gratification task]
+    - [Go/No-Go task, go no-go task, go/no-go]
+    - [stop-signal task, stop signal task, SST]
+    - [Wisconsin Card Sorting Test, WCST]
+    - [Trail Making Test, TMT]
+    - [Behavior Rating Inventory of Executive Function, BRIEF]
+    - [Self-Regulation Questionnaire, SRQ]
+    - [Motivated Strategies for Learning Questionnaire, MSLQ]
+    - [Implicit Theories of Willpower Scale, willpower theory scale, implicit theories about willpower]
+    - [Effortful Control Scale, Early Adolescent Temperament Questionnaire, EATQ]
+    - [Children's Behavior Questionnaire, CBQ]
+    - [Dickman Impulsivity Inventory]
+    - [UPPS Impulsive Behavior Scale, UPPS, UPPS-P]
+    - [Eysenck Impulsiveness Scale]
+    - [Head-Toes-Knees-Shoulders task, HTKS]
+    - [Self-Control Schedule, Rosenbaum Self-Control Schedule]
+    - [State Self-Control Capacity Scale, SSCCS]
+    - [Self-Regulation Scale]
+    - [Short Self-Regulation Questionnaire, SSRQ]

@@ -1,0 +1,380 @@
+INSTRUMENT / OPERATIONALISATION STRATUM — posttraumatic stress disorder  (cell floor 15; seed families 37; generic detection on)
+
+== most detected families (document count; how = seed / generic / acronym) ==
+  biological measure                                           seed       4398
+  ptsd checklist                                               seed       3887
+  childhood trauma questionnaire                               seed       2551
+  impact of event scale                                        seed       2548
+  adverse childhood experiences                                seed       1631
+  clinician administered ptsd scale                            seed       1554
+  patient health questionnaire                                 seed       1392
+  beck depression inventory                                    seed       1188
+  structured clinical interview for dsm                        seed        713
+  injury severity score                                        seed        683
+  professional quality of life scale                           seed        535
+  dissociative experiences scale                               seed        497
+  glasgow coma scale                                           seed        476
+  ptsd symptom scale                                           seed        459
+  harvard trauma questionnaire                                 seed        383
+  posttraumatic diagnostic scale                               seed        370
+  posttraumatic growth inventory                               seed        328
+  trauma symptom checklist                                     seed        313
+  life events checklist                                        seed        264
+  abbreviated injury scale                                     seed        248
+  international trauma questionnaire                           seed        229
+  primary care ptsd screen                                     seed        193
+  davidson trauma scale                                        seed        176
+  mississippi scale                                            seed        158
+  trauma symptom inventory                                     seed        150
+
+== trauma ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  1965-1969     111    9.9%     4    0.573  0.391    0.250  biological measure 10; wishes and fears inventory 1; benton visual retention test 1; auditory word learning test 1
+  1970-1974     141    1.4%     2    1.000  0.500    0.256  newman keuls test 1; biological measure 1
+  1975-1979     288    5.2%    10    0.778  0.722    0.276  biological measure 9; beck depression inventory 1; rotter s internal external l 1; wesley rigidity inventory 1
+  1980-1984     533    4.3%    13    0.804  0.799    0.272  biological measure 10; beck depression inventory 5; wide range achievement test 1; bender gestalt test 1
+  1985-1989    1177    5.3%    25    0.767  0.846    0.270  injury severity score 24; biological measure 13; glasgow coma scale 7; impact of event scale 3
+  1990-1994    2140    9.2%    55    0.698  0.878    0.264  injury severity score 67; biological measure 40; glasgow coma scale 24; impact of event scale 15
+  1995-1999    3419   12.1%   160    0.750  0.948    0.256  injury severity score 68; biological measure 67; impact of event scale 55; dissociative experiences sca 37
+  2000-2004    5480   12.7%   220    0.709  0.947    0.243  biological measure 151; impact of event scale 99; injury severity score 61; childhood trauma questionnai 58
+  2005-2009    8634   14.3%   402    0.698  0.950    0.240  biological measure 310; childhood trauma questionnai 121; impact of event scale 105; injury severity score 76
+  2010-2014   12165   17.2%   599    0.659  0.945    0.252  biological measure 541; childhood trauma questionnai 329; impact of event scale 175; ptsd checklist 155
+  2015-2019   16075   19.1%   860    0.633  0.947    0.247  biological measure 702; childhood trauma questionnai 643; ptsd checklist 345; adverse childhood experience 235
+  2020-2024   22528   20.6%  1306    0.612  0.946    0.242  childhood trauma questionnai 1130; biological measure 788; adverse childhood experience 684; ptsd checklist 675
+  2025-2025    5112   18.2%   414    0.694  0.944    0.233  childhood trauma questionnai 244; ptsd checklist 151; adverse childhood experience 144; biological measure 114
+  instrument dispersion vs concept breadth: Spearman rho = -0.55 (p = 0.0514, 13 periods); on first differences rho = 0.392 (p = 0.2081)
+  families (first period; versions by period):
+    biological measure                       first 1965-1969  2010-2014: base 541; 2015-2019: base 702; 2020-2024: base 788; 2025-2025: base 114
+    childhood trauma questionnaire           first 1990-1994  2010-2014: base 311, sf 18; 2015-2019: base 591, sf 52; 2020-2024: base 1012, sf 118; 2025-2025: base 213, sf 31
+    ptsd checklist                           first 1995-1999  2010-2014: base 118, c 26, s 6; 2015-2019: base 203, 5 53, c 46; 2020-2024: 5 251, base 249, for dsm 5 134; 2025-2025: 5 65, base 48, for dsm 5 31
+    adverse childhood experiences            first 1995-1999  2010-2014: base 50; 2015-2019: base 235; 2020-2024: base 684; 2025-2025: base 144
+    impact of event scale                    first 1980-1984  2010-2014: base 85, revised 48, r 42; 2015-2019: base 81, r 52, revised 51; 2020-2024: base 96, r 69, revised 61; 2025-2025: revised 12, r 11, base 10
+    clinician administered ptsd scale        first 1995-1999  2010-2014: base 109; 2015-2019: base 180, 5 16; 2020-2024: base 185, 5 71; 2025-2025: base 25, 5 18
+    injury severity score                    first 1980-1984  2010-2014: base 103; 2015-2019: base 118; 2020-2024: base 123; 2025-2025: base 15
+    beck depression inventory                first 1975-1979  2010-2014: base 92, ii 13; 2015-2019: base 140, ii 30; 2020-2024: base 133, ii 41; 2025-2025: base 18, ii 6
+
+== PTSD ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  1980-1984     105    4.8%     5    0.969  0.781    0.154  beck depression inventory 2; biological measure 2; impact of event scale 2; self rating depression scale 1
+  1985-1989     569   11.8%    26    0.764  0.856    0.166  biological measure 23; impact of event scale 13; minnesota multiphasic person 8; beck depression inventory 8
+  1990-1994    1190   12.7%    57    0.731  0.894    0.181  biological measure 45; impact of event scale 33; mississippi scale 25; beck depression inventory 14
+  1995-1999    2097   19.2%   139    0.689  0.919    0.186  biological measure 107; impact of event scale 93; mississippi scale 44; beck depression inventory 43
+  2000-2004    3646   20.0%   209    0.662  0.923    0.178  biological measure 200; impact of event scale 143; clinician administered ptsd  129; ptsd checklist 69
+  2005-2009    5746   22.1%   405    0.662  0.937    0.186  biological measure 321; impact of event scale 223; ptsd checklist 174; clinician administered ptsd  166
+  2010-2014    8652   23.2%   565    0.626  0.933    0.175  biological measure 475; ptsd checklist 473; impact of event scale 318; clinician administered ptsd  236
+  2015-2019   11277   24.4%   716    0.599  0.922    0.174  ptsd checklist 949; biological measure 632; clinician administered ptsd  388; impact of event scale 365
+  2020-2024   14200   27.8%  1085    0.571  0.914    0.185  ptsd checklist 1747; biological measure 657; patient health questionnaire 560; impact of event scale 533
+  2025-2025    2660   28.1%   286    0.637  0.898    0.179  ptsd checklist 383; patient health questionnaire 124; biological measure 99; clinician administered ptsd  87
+  instrument dispersion vs concept breadth: Spearman rho = 0.467 (p = 0.1739, 10 periods); on first differences rho = 0.6 (p = 0.0876)
+  families (first period; versions by period):
+    ptsd checklist                           first 1990-1994  2010-2014: base 344, c 85, m 28; 2015-2019: base 579, c 129, 5 119; 2020-2024: base 689, 5 573, for dsm 5 304; 2025-2025: 5 166, base 120, for dsm 5 76
+    biological measure                       first 1980-1984  2010-2014: base 475; 2015-2019: base 632; 2020-2024: base 657; 2025-2025: base 99
+    impact of event scale                    first 1980-1984  2010-2014: base 129, revised 101, r 88; 2015-2019: base 131, r 121, revised 113; 2020-2024: revised 183, r 178, base 172; 2025-2025: revised 27, base 26, r 24
+    clinician administered ptsd scale        first 1990-1994  2010-2014: base 236; 2015-2019: base 357, 5 31; 2020-2024: base 349, 5 142; 2025-2025: base 52, 5 35
+    patient health questionnaire             first 2000-2004  2010-2014: base 61, 9 20; 2015-2019: base 127, 9 54; 2020-2024: base 353, 9 207; 2025-2025: base 64, 9 60
+    beck depression inventory                first 1980-1984  2010-2014: base 113, ii 19; 2015-2019: base 139, ii 39; 2020-2024: base 123, ii 42; 2025-2025: base 16, ii 6
+    structured clinical interview for dsm    first 1985-1989  2010-2014: base 114; 2015-2019: base 85, 5 3; 2020-2024: base 62, 5 24; 2025-2025: base 6, 5 3
+    ptsd symptom scale                       first 1990-1994  2010-2014: base 61, sr 11; 2015-2019: base 82, sr 7; 2020-2024: base 77, sr 10; 2025-2025: base 13, sr 1
+
+== bereavement ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  1965-1969      24    0.0%     0      nan    nan    0.186  
+  1970-1974      32    0.0%     0      nan    nan    0.180  
+  1975-1979      89    1.1%     1    0.000  0.000    0.194  malaise inventory 1
+  1980-1984     188    4.8%     6    0.936  0.790    0.202  beck depression inventory 3; biological measure 2; texas inventory 1; examines the social readjust 1
+  1985-1989     360    3.6%     8    0.888  0.806    0.209  biological measure 4; beck depression inventory 4; center for epidemiologic stu 1; structured clinical intervie 1
+  1990-1994     516    5.6%    15    0.849  0.855    0.212  beck depression inventory 10; impact of event scale 6; texas revised inventory of g 3; biological measure 3
+  1995-1999     675    4.9%    32    0.918  0.941    0.210  beck depression inventory 7; texas revised inventory of g 6; impact of event scale 5; biological measure 2
+  2000-2004     935    4.9%    36    0.930  0.952    0.221  beck depression inventory 8; texas revised inventory of g 6; inventory of complicated gri 4; biological measure 4
+  2005-2009    1148    5.1%    50    0.902  0.955    0.217  inventory of complicated gri 11; impact of event scale 9; texas revised inventory of g 6; biological measure 5
+  2010-2014    1368    7.5%    74    0.874  0.958    0.216  inventory of complicated gri 19; impact of event scale 16; beck depression inventory 11; patient health questionnaire 8
+  2015-2019    1485    7.5%    78    0.872  0.955    0.218  inventory of complicated gri 26; ptsd checklist 9; biological measure 9; beck depression inventory 8
+  2020-2024    2152    7.2%   117    0.850  0.960    0.222  inventory of complicated gri 32; impact of event scale 19; prolonged grief disorder sca 19; patient health questionnaire 11
+  2025-2025     503    8.6%    34    0.928  0.951    0.212  patient health questionnaire 6; prolonged grief disorder sca 6; impact of event scale 5; inventory of complicated gri 5
+  instrument dispersion vs concept breadth: Spearman rho = 0.909 (p = 0.0001, 11 periods); on first differences rho = 0.491 (p = 0.1497)
+  families (first period; versions by period):
+    inventory of complicated grief           first 1995-1999  2010-2014: base 19; 2015-2019: base 26; 2020-2024: base 32; 2025-2025: base 5
+    impact of event scale                    first 1990-1994  2010-2014: revised 6, base 5, r 5; 2015-2019: base 4, r 1, revised 1; 2020-2024: revised 11, r 5, base 3; 2025-2025: revised 3, base 1, r 1
+    beck depression inventory                first 1980-1984  2010-2014: base 9, ii 2; 2015-2019: ii 4, base 4; 2020-2024: base 7, ii 1; 2025-2025: base 1
+    biological measure                       first 1980-1984  2010-2014: base 5; 2015-2019: base 9; 2020-2024: base 10; 2025-2025: base 1
+    prolonged grief disorder scale           first 2010-2014  2010-2014: 13 6; 2015-2019: 13 6, base 1; 2020-2024: 13 14, base 5; 2025-2025: 13 5, base 1
+    texas revised inventory of grief         first 1990-1994  2010-2014: base 6; 2015-2019: base 5; 2020-2024: base 3; 2025-2025: base 2
+    patient health questionnaire             first 2010-2014  2010-2014: base 5, 9 3; 2015-2019: base 4, 9 2; 2020-2024: base 8, 9 3; 2025-2025: base 4, 9 2
+    ptsd checklist                           first 2010-2014  2010-2014: base 2, c 1; 2015-2019: base 6, c 2, 5 1; 2020-2024: base 3, 5 3, for dsm 5 1; 2025-2025: for dsm 5 1, 5 1
+
+== posttraumatic stress ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  1980-1984      32    9.4%     5    0.970  0.778    0.196  beck depression inventory 2; self rating depression scale 1; state trait anxiety inventor 1; biological measure 1
+  1985-1989      70    4.3%     4    0.961  0.720    0.216  impact of event scale 2; beck depression inventory 1; disaster supplement and the  1; posttraumatic stress disorde 1
+  1990-1994     117   12.8%    15    0.840  0.820    0.224  impact of event scale 9; validation of the purdue pos 1; ptsd checklist 1; violence index 1
+  1995-1999     254   22.8%    44    0.811  0.882    0.206  impact of event scale 29; mississippi scale 6; beck depression inventory 4; clinician administered ptsd  3
+  2000-2004     549   23.5%    69    0.756  0.883    0.212  impact of event scale 60; posttraumatic diagnostic sca 16; beck depression inventory 10; biological measure 9
+  2005-2009     920   28.8%   132    0.740  0.917    0.202  impact of event scale 103; posttraumatic diagnostic sca 39; ptsd checklist 28; biological measure 28
+  2010-2014    1378   29.4%   184    0.723  0.927    0.187  impact of event scale 157; ptsd checklist 71; posttraumatic diagnostic sca 45; biological measure 43
+  2015-2019    2030   27.6%   259    0.728  0.942    0.201  impact of event scale 156; ptsd checklist 146; biological measure 62; posttraumatic diagnostic sca 48
+  2020-2024    2970   28.5%   358    0.672  0.924    0.187  ptsd checklist 327; impact of event scale 233; patient health questionnaire 122; biological measure 72
+  2025-2025     556   25.0%    81    0.752  0.901    0.188  ptsd checklist 60; impact of event scale 29; biological measure 14; patient health questionnaire 13
+  instrument dispersion vs concept breadth: Spearman rho = -0.624 (p = 0.0537, 10 periods); on first differences rho = -0.267 (p = 0.4879)
+  families (first period; versions by period):
+    impact of event scale                    first 1980-1984  2010-2014: base 70, revised 44, r 43; 2015-2019: base 60, revised 57, r 39; 2020-2024: r 80, revised 77, base 76; 2025-2025: r 11, base 11, revised 7
+    ptsd checklist                           first 1990-1994  2010-2014: base 48, c 16, m 7; 2015-2019: base 86, c 20, 5 15; 2020-2024: base 132, 5 105, for dsm 5 50; 2025-2025: 5 28, base 17, for dsm 5 11
+    biological measure                       first 1980-1984  2010-2014: base 43; 2015-2019: base 62; 2020-2024: base 72; 2025-2025: base 14
+    patient health questionnaire             first 2010-2014  2010-2014: base 9, 9 3; 2015-2019: base 28, 9 10; 2020-2024: base 78, 9 44; 2025-2025: base 8, 9 5
+    posttraumatic diagnostic scale           first 1990-1994  2010-2014: base 45; 2015-2019: base 48; 2020-2024: base 15, 5 1; 2025-2025: 5 1, base 1
+    beck depression inventory                first 1980-1984  2010-2014: base 24, ii 2; 2015-2019: base 23, ii 5; 2020-2024: base 21, ii 10; 2025-2025: ii 2, base 1
+    clinician administered ptsd scale        first 1995-1999  2010-2014: base 24; 2015-2019: base 24; 2020-2024: base 24, 5 8; 2025-2025: base 1
+    ptsd symptom scale                       first 1995-1999  2010-2014: base 12, sr 5; 2015-2019: base 17, sr 1; 2020-2024: base 25, sr 3; 2025-2025: base 2
+
+== trauma informed ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  2000-2004      18    0.0%     0      nan    nan    0.224  
+  2005-2009      66    1.5%     1    0.000  0.000    0.208  british national survey 1
+  2010-2014     228    3.1%     8    0.949  0.840    0.216  adverse childhood experience 3; ucla ptsd reaction index 1; trauma symptom checklist 1; professional quality of life 1
+  2015-2019    1063   11.8%    45    0.635  0.736    0.205  adverse childhood experience 80; ptsd checklist 10; childhood trauma questionnai 7; impact of event scale 6
+  2020-2024    3225   14.8%   117    0.531  0.710    0.216  adverse childhood experience 325; ptsd checklist 41; attitudes related to trauma  36; patient health questionnaire 21
+  2025-2025    1219   14.4%    79    0.666  0.803    0.211  adverse childhood experience 102; patient health questionnaire 15; childhood trauma questionnai 11; ptsd checklist 8
+  instrument dispersion vs concept breadth: Spearman rho = 0.5 (p = 0.391, 5 periods); on first differences rho = 0.4 (p = 0.6)
+  families (first period; versions by period):
+    adverse childhood experiences            first 2010-2014  2010-2014: base 3; 2015-2019: base 80; 2020-2024: base 325; 2025-2025: base 102
+    ptsd checklist                           first 2015-2019  2015-2019: base 5, c 4, 5 1; 2020-2024: base 15, 5 15, for dsm 5 8; 2025-2025: base 3, 5 3, m 1
+    attitudes related to trauma informed car first 2015-2019  2015-2019: base 2; 2020-2024: base 36; 2025-2025: base 5
+    patient health questionnaire             first 2010-2014  2010-2014: base 1; 2015-2019: base 3, 9 2; 2020-2024: base 14, 9 7; 2025-2025: base 11, 9 4
+    childhood trauma questionnaire           first 2015-2019  2015-2019: base 6, sf 1; 2020-2024: base 9, sf 1; 2025-2025: base 10, sf 1
+    professional quality of life scale       first 2010-2014  2010-2014: base 1; 2015-2019: base 3; 2020-2024: base 10; 2025-2025: base 7
+    impact of event scale                    first 2015-2019  2015-2019: r 4, revised 1, base 1; 2020-2024: base 3, r 3, revised 2; 2025-2025: base 3, revised 2, r 2
+    biological measure                       first 2015-2019  2015-2019: base 1; 2020-2024: base 9; 2025-2025: base 3
+
+== traumatic stress ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  1985-1989      31    3.2%     1    0.000  0.000    0.240  minnesota multiphasic person 1
+  1990-1994      73    4.1%     4    1.000  0.750    0.225  impact of event scale 1; hamilton rating scale 1; biological measure 1; trauma symptom inventory 1
+  1995-1999     127   17.3%    12    0.826  0.811    0.241  impact of event scale 11; biological measure 5; general health questionnaire 3; ptsd checklist 2
+  2000-2004     314   13.7%    17    0.667  0.692    0.239  impact of event scale 29; biological measure 4; clinician administered ptsd  4; ptsd checklist 3
+  2005-2009     478   18.0%    62    0.850  0.940    0.234  impact of event scale 24; biological measure 16; ptsd checklist 8; clinician administered ptsd  7
+  2010-2014     648   20.8%    78    0.809  0.933    0.232  biological measure 34; impact of event scale 33; ptsd checklist 12; trauma symptom checklist 12
+  2015-2019     764   17.7%    72    0.789  0.926    0.241  impact of event scale 34; ptsd checklist 33; biological measure 29; adverse childhood experience 9
+  2020-2024    1056   21.3%   123    0.797  0.951    0.227  ptsd checklist 50; impact of event scale 49; biological measure 21; adverse childhood experience 20
+  2025-2025     217   21.7%    35    0.868  0.926    0.236  ptsd checklist 16; impact of event scale 8; adverse childhood experience 7; biological measure 5
+  instrument dispersion vs concept breadth: Spearman rho = -0.417 (p = 0.2646, 9 periods); on first differences rho = -0.476 (p = 0.2329)
+  families (first period; versions by period):
+    impact of event scale                    first 1990-1994  2010-2014: base 20, r 7, revised 6; 2015-2019: r 12, revised 11, base 11; 2020-2024: base 19, r 17, revised 13; 2025-2025: revised 3, r 3, base 2
+    ptsd checklist                           first 1995-1999  2010-2014: base 8, c 4; 2015-2019: base 20, c 8, 5 4; 2020-2024: base 24, 5 15, for dsm 5 6; 2025-2025: 5 7, base 6, for dsm 5 2
+    biological measure                       first 1990-1994  2010-2014: base 34; 2015-2019: base 29; 2020-2024: base 21; 2025-2025: base 5
+    adverse childhood experiences            first 2005-2009  2010-2014: base 4; 2015-2019: base 9; 2020-2024: base 20; 2025-2025: base 7
+    clinician administered ptsd scale        first 2000-2004  2010-2014: base 5; 2015-2019: base 5, 5 1; 2020-2024: base 10, 5 3; 2025-2025: base 3
+    beck depression inventory                first 1995-1999  2010-2014: base 5, ii 3; 2015-2019: base 7, ii 1; 2020-2024: base 6, ii 1; 2025-2025: base 3
+    patient health questionnaire             first 2015-2019  2015-2019: base 4, 9 1; 2020-2024: base 13, 9 7; 2025-2025: base 4
+    trauma symptom checklist                 first 2005-2009  2005-2009: base 2; 2010-2014: base 8, 40 4; 2015-2019: base 2, 40 1; 2020-2024: base 7, 40 1
+
+== psychological trauma ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  1980-1984      27    0.0%     0      nan    nan    0.240  
+  1985-1989      35    5.7%     1    0.000  0.000    0.230  biological measure 2
+  1990-1994      70    1.4%     1    0.000  0.000    0.212  violence interview 1
+  1995-1999     103    6.8%     7    1.000  0.857    0.208  impact of event scale 1; beck depression inventory 1; trauma symptom checklist 1; structured clinical intervie 1
+  2000-2004     188    7.4%    10    0.795  0.742    0.189  impact of event scale 9; biological measure 2; clinician administered ptsd  1; trauma symptom inventory 1
+  2005-2009     286   10.8%    29    0.892  0.924    0.197  biological measure 10; impact of event scale 8; structured clinical intervie 3; beck depression inventory 3
+  2010-2014     352   12.8%    35    0.860  0.918    0.210  biological measure 16; beck depression inventory 8; impact of event scale 5; ptsd checklist 5
+  2015-2019     441   13.2%    46    0.878  0.945    0.207  biological measure 15; ptsd checklist 7; beck depression inventory 7; childhood trauma questionnai 7
+  2020-2024     711   15.8%    71    0.842  0.950    0.199  biological measure 25; ptsd checklist 17; adverse childhood experience 14; impact of event scale 14
+  2025-2025     160   16.2%    39    0.956  0.962    0.211  ptsd checklist 6; life events checklist 3; clinician administered ptsd  3; impact of event scale 3
+  instrument dispersion vs concept breadth: Spearman rho = -0.326 (p = 0.3914, 9 periods); on first differences rho = 0.286 (p = 0.4927)
+  families (first period; versions by period):
+    biological measure                       first 1970-1974  2010-2014: base 16; 2015-2019: base 15; 2020-2024: base 25; 2025-2025: base 1
+    impact of event scale                    first 1995-1999  2010-2014: base 3, revised 1, r 1; 2015-2019: revised 3, r 2, base 2; 2020-2024: base 6, revised 4, r 4; 2025-2025: r 2, revised 1
+    ptsd checklist                           first 2005-2009  2010-2014: base 3, c 2; 2015-2019: base 3, c 3, 5 1; 2020-2024: 5 8, for dsm 5 5, base 3; 2025-2025: base 3, 5 2, for dsm 5 1
+    beck depression inventory                first 1995-1999  2005-2009: base 3; 2010-2014: base 8; 2015-2019: base 7; 2020-2024: base 2, ii 1
+    clinician administered ptsd scale        first 2000-2004  2010-2014: base 3; 2015-2019: base 2; 2020-2024: base 5, 5 1; 2025-2025: base 3
+    adverse childhood experiences            first 2015-2019  2015-2019: base 1; 2020-2024: base 14; 2025-2025: base 1
+    childhood trauma questionnaire           first 2005-2009  2005-2009: base 2; 2010-2014: base 1; 2015-2019: base 7; 2020-2024: base 5
+    patient health questionnaire             first 2010-2014  2010-2014: base 1, 9 1; 2015-2019: base 2; 2020-2024: base 6, 9 3; 2025-2025: base 1
+
+== secondary traumatic stress ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  2000-2004      43   11.6%     4    0.959  0.722    0.166  secondary traumatic stress s 2; impact of event scale 2; trauma symptom inventory 1; development and validation o 1
+  2005-2009      63   20.6%     9    0.780  0.716    0.151  secondary traumatic stress s 9; impact of event scale 2; beck depression inventory 1; marital adjustment test 1
+  2010-2014     103   29.1%    15    0.796  0.823    0.150  secondary traumatic stress s 11; professional quality of life 11; impact of event scale 3; utrecht work engagement scal 2
+  2015-2019     300   49.7%    47    0.545  0.663    0.137  professional quality of life 113; secondary traumatic stress s 21; impact of event scale 5; life events checklist 5
+  2020-2024     700   50.7%    95    0.509  0.682    0.128  professional quality of life 262; secondary traumatic stress s 61; adverse childhood experience 15; posttraumatic growth invento 7
+  2025-2025     195   51.3%    38    0.606  0.750    0.117  professional quality of life 65; secondary traumatic stress s 33; ptsd checklist 6; patient health questionnaire 3
+  instrument dispersion vs concept breadth: Spearman rho = 0.086 (p = 0.8717, 6 periods); on first differences rho = 0.8 (p = 0.1041)
+  families (first period; versions by period):
+    professional quality of life scale       first 2005-2009  2010-2014: base 11; 2015-2019: base 113; 2020-2024: base 262; 2025-2025: base 65
+    secondary traumatic stress scale         first 2000-2004  2010-2014: base 11; 2015-2019: base 21; 2020-2024: base 61; 2025-2025: base 33
+    impact of event scale                    first 2000-2004  2010-2014: revised 2, base 1; 2015-2019: revised 4, base 1; 2020-2024: revised 3, base 2, r 1; 2025-2025: revised 1, r 1
+    adverse childhood experiences            first 2015-2019  2015-2019: base 3; 2020-2024: base 15; 2025-2025: base 2
+    ptsd checklist                           first 2010-2014  2010-2014: base 1, m 1; 2020-2024: 5 4, base 1, for dsm 5 1; 2025-2025: 5 3, for dsm 5 2, base 1
+    life events checklist                    first 2015-2019  2015-2019: base 5; 2020-2024: base 5, 5 1
+    connor davidson resilience scale         first 2015-2019  2015-2019: base 5; 2020-2024: base 5; 2025-2025: base 1
+    patient health questionnaire             first 2015-2019  2015-2019: base 1; 2020-2024: base 3, 9 2; 2025-2025: 9 2, base 1
+
+== adjustment disorder ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  1980-1984      15   20.0%     4    1.000  0.750    0.218  biological measure 1; use of the michigan alcoholi 1; beck depression inventory 1; state trait anxiety inventor 1
+  1985-1989      78   20.5%     5    0.645  0.500    0.211  biological measure 11; beck depression inventory 2; diagnostic interview schedul 1; bender gestalt test 1
+  1990-1994     103    5.8%     6    1.000  0.833    0.222  structured clinical intervie 1; beck depression inventory 1; axis v global assessment of  1; trail making test 1
+  1995-1999     123   16.3%    16    0.956  0.915    0.195  biological measure 4; beck depression inventory 2; impact of event scale 1; short form health status sur 1
+  2000-2004     113   17.7%    18    0.936  0.917    0.202  biological measure 4; beck depression inventory 4; structured clinical intervie 3; screening instrument 1
+  2005-2009     179   16.2%    27    0.922  0.932    0.197  structured clinical intervie 8; beck depression inventory 4; ptsd checklist 3; impact of event scale 2
+  2010-2014     193   20.2%    35    0.882  0.929    0.184  beck depression inventory 11; structured clinical intervie 10; impact of event scale 4; biological measure 4
+  2015-2019     230   20.0%    48    0.925  0.961    0.172  beck depression inventory 7; biological measure 6; structured clinical intervie 6; impact of event scale 5
+  2020-2024     266   22.6%    52    0.880  0.947    0.172  patient health questionnaire 16; structured clinical intervie 9; beck depression inventory 7; impact of event scale 6
+  2025-2025      47   23.4%    16    0.961  0.921    0.152  biological measure 3; patient health questionnaire 3; adverse childhood experience 2; posttrauma stress scale 1
+  instrument dispersion vs concept breadth: Spearman rho = -0.754 (p = 0.0118, 10 periods); on first differences rho = 0.167 (p = 0.6682)
+  families (first period; versions by period):
+    beck depression inventory                first 1980-1984  2005-2009: base 4; 2010-2014: base 11; 2015-2019: base 4, ii 3; 2020-2024: base 5, ii 2
+    biological measure                       first 1980-1984  2010-2014: base 4; 2015-2019: base 6; 2020-2024: base 1; 2025-2025: base 3
+    structured clinical interview for dsm    first 1990-1994  2005-2009: base 8; 2010-2014: base 10; 2015-2019: base 6; 2020-2024: base 7, 5 2
+    patient health questionnaire             first 2005-2009  2010-2014: base 1, 9 1; 2015-2019: 9 3, base 2; 2020-2024: 9 9, base 7; 2025-2025: base 2, 9 1
+    impact of event scale                    first 1995-1999  2005-2009: r 1, base 1; 2010-2014: base 2, r 2; 2015-2019: revised 2, base 2, r 1; 2020-2024: base 3, revised 2, r 1
+    ptsd checklist                           first 2005-2009  2005-2009: base 2, c 1; 2010-2014: base 1, c 1; 2020-2024: 5 2, base 1; 2025-2025: 5 1
+    ptsd symptom scale                       first 2015-2019  2015-2019: base 3; 2020-2024: base 3; 2025-2025: base 1
+    structured clinical interview            first 1995-1999  2000-2004: base 1; 2005-2009: base 2; 2010-2014: base 1; 2015-2019: base 1
+
+== complex PTSD ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  1995-1999      17   29.4%     4    0.875  0.656      nan  dissociative experiences sca 4; childhood trauma questionnai 2; mcmi ii and adult attachment 1; adult attachment scale 1
+  2000-2004      28   14.3%     4    1.000  0.750    0.150  ptsd checklist 1; anxiety and depression quest 1; bartholomew attachment scale 1; biological measure 1
+  2005-2009      65   10.8%     7    1.000  0.857    0.159  minnesota multiphasic person 1; structured clinical intervie 1; biological measure 1; childhood trauma questionnai 1
+  2010-2014     102   11.8%    14    0.944  0.902    0.161  ptsd checklist 4; biological measure 3; ucla ptsd reaction index 2; beck depression inventory 2
+  2015-2019     196   21.9%    23    0.891  0.912    0.146  international trauma questio 16; impact of event scale 5; adverse childhood experience 5; clinician administered ptsd  5
+  2020-2024     533   34.5%    65    0.632  0.803    0.158  international trauma questio 128; adverse childhood experience 24; ptsd checklist 21; clinician administered ptsd  20
+  2025-2025     141   27.0%    21    0.793  0.843    0.159  international trauma questio 24; ptsd checklist 8; adverse childhood experience 6; patient health questionnaire 4
+  instrument dispersion vs concept breadth: Spearman rho = 0.143 (p = 0.7872, 6 periods); on first differences rho = 0.0 (p = 1.0)
+  families (first period; versions by period):
+    international trauma questionnaire       first 2015-2019  2015-2019: base 16; 2020-2024: base 128; 2025-2025: base 24
+    ptsd checklist                           first 2000-2004  2010-2014: base 2, c 2; 2015-2019: base 2, 5 2; 2020-2024: 5 13, for dsm 5 7, base 1; 2025-2025: 5 4, for dsm 5 3, base 1
+    adverse childhood experiences            first 2015-2019  2015-2019: base 5; 2020-2024: base 24; 2025-2025: base 6
+    clinician administered ptsd scale        first 2010-2014  2010-2014: base 1; 2015-2019: base 5; 2020-2024: base 13, 5 7; 2025-2025: 5 3, base 1
+    life events checklist                    first 2015-2019  2015-2019: base 2; 2020-2024: base 11, 5 4; 2025-2025: base 2
+    biological measure                       first 2000-2004  2010-2014: base 3; 2015-2019: base 1; 2020-2024: base 8; 2025-2025: base 2
+    dissociative experiences scale           first 1995-1999  2010-2014: base 1; 2015-2019: base 4; 2020-2024: base 2; 2025-2025: base 2, ii 1
+    impact of event scale                    first 2005-2009  2005-2009: revised 1; 2015-2019: base 3, revised 1, r 1; 2020-2024: base 3, revised 3, r 1; 2025-2025: base 1
+
+== moral injury ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  2010-2014      32    9.4%     4    1.000  0.750    0.158  impact of event scale 1; moral injury events scale 1; ptsd checklist 1; posttraumatic stress checkli 1
+  2015-2019     180   12.8%    17    0.825  0.849    0.126  moral injury events scale 12; ptsd checklist 6; moral injury symptom scale 4; patient health questionnaire 3
+  2020-2024     676   14.8%    57    0.786  0.918    0.145  moral injury symptom scale 31; moral injury events scale 30; ptsd checklist 17; patient health questionnaire 10
+  2025-2025     182   14.3%    31    0.899  0.927    0.142  moral injury events scale 9; moral injury symptom scale 7; patient health questionnaire 2; rushton moral resilience sca 2
+  instrument dispersion vs concept breadth: Spearman rho = -0.4 (p = 0.6, 4 periods); on first differences rho = None (p = None)
+  families (first period; versions by period):
+    moral injury events scale                first 2010-2014  2010-2014: base 1; 2015-2019: base 12; 2020-2024: base 30; 2025-2025: base 9
+    moral injury symptom scale               first 2015-2019  2015-2019: base 2, m 2; 2020-2024: base 28, m 3; 2025-2025: base 7
+    ptsd checklist                           first 2010-2014  2010-2014: m 1; 2015-2019: base 2, for dsm 5 2, 5 1; 2020-2024: 5 9, base 4, for dsm 5 4; 2025-2025: base 1
+    patient health questionnaire             first 2015-2019  2015-2019: base 3; 2020-2024: base 6, 9 4; 2025-2025: base 2
+    adverse childhood experiences            first 2015-2019  2015-2019: base 1; 2020-2024: base 8; 2025-2025: base 1
+    impact of event scale                    first 2010-2014  2010-2014: revised 1; 2020-2024: revised 2, base 2, r 2
+    international trauma questionnaire       first 2020-2024  2020-2024: base 7
+    biological measure                       first 2015-2019  2015-2019: base 1; 2020-2024: base 5
+
+== acute stress disorder ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  1995-1999      43   16.3%     7    0.880  0.781    0.149  beck depression inventory 4; impact of event scale 4; dissociative experiences sca 1; coping style questionnaire 1
+  2000-2004     118   19.5%    20    0.922  0.920    0.151  impact of event scale 7; clinician administered ptsd  5; beck depression inventory 3; beck anxiety inventory 3
+  2005-2009     179   20.1%    27    0.909  0.934    0.161  impact of event scale 9; beck depression inventory 7; structured clinical intervie 5; biological measure 4
+  2010-2014     134   23.9%    28    0.901  0.931    0.166  biological measure 8; structured clinical intervie 7; impact of event scale 5; ptsd checklist 4
+  2015-2019     129   20.9%    20    0.911  0.915    0.171  impact of event scale 7; ptsd checklist 6; clinician administered ptsd  3; biological measure 3
+  2020-2024     182   22.0%    39    0.903  0.945    0.177  patient health questionnaire 12; ptsd checklist 9; acute stress disorder scale 5; clinician administered ptsd  4
+  2025-2025      24   29.2%    10    0.975  0.888    0.153  structured clinical intervie 2; ptsd checklist 2; impact of event scale 2; acute stress symptoms adult  1
+  instrument dispersion vs concept breadth: Spearman rho = 0.679 (p = 0.0938, 7 periods); on first differences rho = 0.314 (p = 0.5441)
+  families (first period; versions by period):
+    impact of event scale                    first 1995-1999  2010-2014: base 2, revised 2, r 1; 2015-2019: base 4, r 2, revised 1; 2020-2024: revised 1, r 1; 2025-2025: revised 1, r 1
+    ptsd checklist                           first 2000-2004  2010-2014: base 3, c 1; 2015-2019: base 4, m 1, 5 1; 2020-2024: 5 4, for dsm 5 3, base 2; 2025-2025: 5 1, base 1
+    clinician administered ptsd scale        first 2000-2004  2005-2009: base 4; 2010-2014: base 3; 2015-2019: base 3; 2020-2024: base 4
+    biological measure                       first 2000-2004  2005-2009: base 4; 2010-2014: base 8; 2015-2019: base 3; 2020-2024: base 2
+    beck depression inventory                first 1995-1999  1995-1999: base 4; 2000-2004: base 3; 2005-2009: base 7; 2020-2024: base 4
+    structured clinical interview for dsm    first 2000-2004  2005-2009: base 5; 2010-2014: base 7; 2015-2019: base 1; 2025-2025: base 1, 5 1
+    patient health questionnaire             first 2015-2019  2015-2019: base 2, 9 1; 2020-2024: base 8, 9 4
+    acute stress disorder scale              first 2000-2004  2005-2009: base 1; 2010-2014: base 1; 2015-2019: base 1; 2020-2024: base 5
+
+== vicarious trauma ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  2000-2004      22   18.2%     2    1.000  0.500    0.155  trauma symptom inventory 2; impact of event scale 2
+  2005-2009      30   20.0%     9    0.985  0.880    0.151  childhood trauma questionnai 2; impact of event scale 1; trauma and attachment belief 1; vicarious trauma scale 1
+  2010-2014      67    9.0%     6    0.882  0.741    0.164  secondary traumatic stress s 4; hurlbert index 1; utrecht work engagement scal 1; mindful awareness attention  1
+  2015-2019     115    9.6%    13    0.954  0.901    0.160  trauma and attachment belief 3; impact of event scale 3; professional quality of life 2; posttraumatic stress symptom 1
+  2020-2024     269    7.8%    13    0.877  0.856    0.155  professional quality of life 8; impact of event scale 4; secondary traumatic stress s 3; adverse childhood experience 2
+  2025-2025      67    7.5%     7    0.971  0.840    0.158  secondary traumatic stress s 2; vicarious trauma scale 2; ptsd checklist 1; coreq checklist 1
+  instrument dispersion vs concept breadth: Spearman rho = -0.029 (p = 0.9572, 6 periods); on first differences rho = -0.3 (p = 0.6238)
+  families (first period; versions by period):
+    professional quality of life scale       first 2005-2009  2005-2009: base 1; 2010-2014: base 1; 2015-2019: base 2; 2020-2024: base 8
+    impact of event scale                    first 2000-2004  2000-2004: base 2; 2005-2009: revised 1; 2015-2019: base 2, revised 1; 2020-2024: revised 2, base 1, r 1
+    secondary traumatic stress scale         first 2010-2014  2010-2014: base 4; 2020-2024: base 3; 2025-2025: base 2
+    trauma and attachment belief scale       first 2005-2009  2005-2009: base 1; 2010-2014: base 1; 2015-2019: base 3; 2020-2024: base 1
+    vicarious trauma scale                   first 2005-2009  2005-2009: base 1; 2015-2019: base 1; 2020-2024: base 2; 2025-2025: base 2
+    trauma symptom inventory                 first 2000-2004  2000-2004: base 2; 2005-2009: base 1
+    adverse childhood experiences            first 2015-2019  2015-2019: base 1; 2020-2024: base 2
+    defense style questionnaire              first 2005-2009  2005-2009: base 1; 2020-2024: base 1
+
+== collective trauma ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  2000-2004      20    0.0%     0      nan    nan    0.259  
+  2005-2009      38    0.0%     0      nan    nan    0.183  
+  2010-2014      63    0.0%     0      nan    nan    0.203  
+  2015-2019      85    3.5%     3    1.000  0.667    0.205  biological measure 1; impact of event scale 1; harvard trauma questionnaire 1
+  2020-2024     262    3.8%    13    0.935  0.893    0.220  impact of event scale 4; patient health questionnaire 4; biological measure 2; posttraumatic growth invento 2
+  2025-2025      75    0.0%     0      nan    nan    0.183  
+  families (first period; versions by period):
+    impact of event scale                    first 2015-2019  2015-2019: r 1; 2020-2024: r 2, revised 1, base 1
+    patient health questionnaire             first 2020-2024  2020-2024: base 3, 9 1
+    biological measure                       first 2015-2019  2015-2019: base 1; 2020-2024: base 2
+    harvard trauma questionnaire             first 2015-2019  2015-2019: base 1; 2020-2024: base 1
+    posttraumatic growth inventory           first 2020-2024  2020-2024: base 2
+    ptsd checklist                           first 2020-2024  2020-2024: base 1, 5 1
+    childhood understanding behaviors survey first 2020-2024  2020-2024: base 1
+    state trait anxiety inventory            first 2020-2024  2020-2024: base 1
+
+== intergenerational trauma ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  2005-2009      16    6.2%     2    1.000  0.500    0.166  anxiety questionnaire scale 1; defence mechanism inventory 1
+  2010-2014      43    4.7%     2    1.000  0.500    0.189  adverse childhood experience 1; adult attachment interview 1
+  2015-2019      84    3.6%     3    1.000  0.667    0.187  short form health survey 1; adverse childhood experience 1; inventory of complicated gri 1
+  2020-2024     277    8.3%    15    0.745  0.743    0.182  adverse childhood experience 15; impact of event scale 3; life scale 1; biological measure 1
+  2025-2025      82    4.9%     2    0.811  0.375    0.167  adverse childhood experience 3; childhood trauma questionnai 1
+  instrument dispersion vs concept breadth: Spearman rho = 0.308 (p = 0.6144, 5 periods); on first differences rho = 0.4 (p = 0.6)
+  families (first period; versions by period):
+    adverse childhood experiences            first 2010-2014  2010-2014: base 1; 2015-2019: base 1; 2020-2024: base 15; 2025-2025: base 3
+    impact of event scale                    first 2020-2024  2020-2024: r 2, base 1
+    adult attachment interview               first 2000-2004  2000-2004: base 1; 2010-2014: base 1
+    anxiety questionnaire scale              first 2005-2009  2005-2009: base 1
+    defence mechanism inventory              first 2005-2009  2005-2009: base 1
+    short form health survey                 first 2015-2019  2015-2019: base 1
+    inventory of complicated grief           first 2015-2019  2015-2019: base 1
+    life scale                               first 2020-2024  2020-2024: base 1
+
+== traumatic neurosis ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  1980-1984      17    5.9%     1    0.000  0.000    0.182  biological measure 1
+  1985-1989      17    0.0%     0      nan    nan    0.164  
+  2000-2004      18    0.0%     0      nan    nan    0.190  
+  2005-2009      15    0.0%     0      nan    nan    0.184  
+  2015-2019      15    0.0%     0      nan    nan    0.201  
+  families (first period; versions by period):
+    biological measure                       first 1965-1969  1965-1969: base 1; 1980-1984: base 1
+    glasgow coma scale                       first 2020-2024  2020-2024: base 1
+
+== battle fatigue ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  2015-2019      21    0.0%     0      nan    nan    0.103  
+  2020-2024      65    0.0%     0      nan    nan    0.147  
+  2025-2025      18    5.6%     1    0.000  0.000    0.129  adea climate survey 1
+  families (first period; versions by period):
+    adea climate survey                      first 2025-2025  2025-2025: base 1
+
+== shell shock ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  2000-2004      19    0.0%     0      nan    nan    0.192  
+  2005-2009      31    0.0%     0      nan    nan    0.183  
+  2015-2019      20    0.0%     0      nan    nan    0.162  
+  families (first period; versions by period):
+    posttraumatic diagnostic scale           first 2010-2014  2010-2014: base 1
+    posttraumatic growth inventory           first 2010-2014  2010-2014: base 1
+    social acknowledgement questionnaire     first 2010-2014  2010-2014: base 1
+    biological measure                       first 2010-2014  2010-2014: base 1
+
+== rape trauma syndrome ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  1985-1989      15    0.0%     0      nan    nan    0.167  
+
+Reading guide: named% = share of documents mentioning the term that name any instrument (operationalised vs colloquial usage); 1-HHI = instrument dispersion (0 = one instrument, ->1 = many equally); breadth = 29's masked-target document breadth for the same cell. Families collapse versions (PCL / PCL-C / PCL-5). Read the paired correlation on first differences: both series trend, so the level correlation is not evidence of coupling.

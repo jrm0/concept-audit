@@ -1,0 +1,2332 @@
+{
+  "graph": {
+    "nodes": 26833,
+    "edges": 140977,
+    "year_min": 1995,
+    "algorithm": "leiden/RBConfiguration (cached, iterations=-1)",
+    "resolution": 1.0,
+    "modularity": 0.6324,
+    "n_communities": 6753,
+    "n_communities_ge_min": 15,
+    "min_community": 200
+  },
+  "communities": {
+    "0": {
+      "n": 3282,
+      "top_venues": [
+        [
+          "Frontiers in Psychology",
+          116
+        ],
+        [
+          "Early Childhood Research Quarterly",
+          96
+        ],
+        [
+          "Developmental Psychology",
+          91
+        ],
+        [
+          "Development and Psychopathology",
+          85
+        ],
+        [
+          "Early Education and Development",
+          83
+        ],
+        [
+          "Early Child Development and Care",
+          64
+        ]
+      ],
+      "top_terms": [
+        [
+          "self regulation",
+          2763,
+          0.842
+        ],
+        [
+          "self control",
+          527,
+          0.161
+        ],
+        [
+          "executive function",
+          375,
+          0.114
+        ],
+        [
+          "delay of gratification",
+          100,
+          0.03
+        ],
+        [
+          "willpower",
+          9,
+          0.003
+        ],
+        [
+          "ego depletion",
+          4,
+          0.001
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          80
+        ],
+        [
+          "2000-2004",
+          157
+        ],
+        [
+          "2005-2009",
+          264
+        ],
+        [
+          "2010-2014",
+          533
+        ],
+        [
+          "2015-2019",
+          933
+        ],
+        [
+          "2020-2024",
+          1066
+        ],
+        [
+          "2025-2025",
+          249
+        ]
+      ]
+    },
+    "1": {
+      "n": 2919,
+      "top_venues": [
+        [
+          "Frontiers in Psychology",
+          138
+        ],
+        [
+          "Personality and Individual Differences",
+          100
+        ],
+        [
+          "Current Psychology",
+          77
+        ],
+        [
+          "Appetite",
+          64
+        ],
+        [
+          "Journal of Consumer Research",
+          55
+        ],
+        [
+          "Journal of Personality and Social Psychology",
+          53
+        ]
+      ],
+      "top_terms": [
+        [
+          "self control",
+          2240,
+          0.767
+        ],
+        [
+          "self regulation",
+          798,
+          0.273
+        ],
+        [
+          "willpower",
+          89,
+          0.03
+        ],
+        [
+          "delay of gratification",
+          47,
+          0.016
+        ],
+        [
+          "executive function",
+          41,
+          0.014
+        ],
+        [
+          "ego depletion",
+          21,
+          0.007
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          29
+        ],
+        [
+          "2000-2004",
+          46
+        ],
+        [
+          "2005-2009",
+          172
+        ],
+        [
+          "2010-2014",
+          473
+        ],
+        [
+          "2015-2019",
+          802
+        ],
+        [
+          "2020-2024",
+          1112
+        ],
+        [
+          "2025-2025",
+          285
+        ]
+      ]
+    },
+    "2": {
+      "n": 2265,
+      "top_venues": [
+        [
+          "Frontiers in Psychology",
+          132
+        ],
+        [
+          "Educational Psychology Review",
+          50
+        ],
+        [
+          "Computers & Education",
+          49
+        ],
+        [
+          "Metacognition and Learning",
+          47
+        ],
+        [
+          "Contemporary Educational Psychology",
+          40
+        ],
+        [
+          "Educational Psychologist",
+          37
+        ]
+      ],
+      "top_terms": [
+        [
+          "self regulation",
+          2148,
+          0.948
+        ],
+        [
+          "self control",
+          120,
+          0.053
+        ],
+        [
+          "executive function",
+          14,
+          0.006
+        ],
+        [
+          "willpower",
+          14,
+          0.006
+        ],
+        [
+          "delay of gratification",
+          13,
+          0.006
+        ],
+        [
+          "depletion effect",
+          1,
+          0.0
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          78
+        ],
+        [
+          "2000-2004",
+          120
+        ],
+        [
+          "2005-2009",
+          228
+        ],
+        [
+          "2010-2014",
+          374
+        ],
+        [
+          "2015-2019",
+          493
+        ],
+        [
+          "2020-2024",
+          746
+        ],
+        [
+          "2025-2025",
+          226
+        ]
+      ]
+    },
+    "3": {
+      "n": 2100,
+      "top_venues": [
+        [
+          "Frontiers in Psychology",
+          122
+        ],
+        [
+          "Journal of Experimental Social Psychology",
+          55
+        ],
+        [
+          "Journal of Applied Psychology",
+          46
+        ],
+        [
+          "Journal of Personality and Social Psychology",
+          42
+        ],
+        [
+          "Current Psychology",
+          41
+        ],
+        [
+          "Personality and Social Psychology Bulletin",
+          36
+        ]
+      ],
+      "top_terms": [
+        [
+          "self control",
+          1229,
+          0.585
+        ],
+        [
+          "self regulation",
+          726,
+          0.346
+        ],
+        [
+          "ego depletion",
+          584,
+          0.278
+        ],
+        [
+          "willpower",
+          124,
+          0.059
+        ],
+        [
+          "strength model",
+          123,
+          0.059
+        ],
+        [
+          "self control depletion",
+          72,
+          0.034
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          19
+        ],
+        [
+          "2000-2004",
+          40
+        ],
+        [
+          "2005-2009",
+          173
+        ],
+        [
+          "2010-2014",
+          477
+        ],
+        [
+          "2015-2019",
+          684
+        ],
+        [
+          "2020-2024",
+          540
+        ],
+        [
+          "2025-2025",
+          167
+        ]
+      ]
+    },
+    "4": {
+      "n": 1891,
+      "top_venues": [
+        [
+          "Deviant Behavior",
+          143
+        ],
+        [
+          "Journal of Criminal Justice",
+          119
+        ],
+        [
+          "Crime & Delinquency",
+          69
+        ],
+        [
+          "Criminal Justice and Behavior",
+          63
+        ],
+        [
+          "International Journal of Offender Therapy and Comparative Criminology",
+          58
+        ],
+        [
+          "Criminology",
+          51
+        ]
+      ],
+      "top_terms": [
+        [
+          "self control",
+          1753,
+          0.927
+        ],
+        [
+          "self regulation",
+          165,
+          0.087
+        ],
+        [
+          "willpower",
+          6,
+          0.003
+        ],
+        [
+          "executive function",
+          6,
+          0.003
+        ],
+        [
+          "delay of gratification",
+          3,
+          0.002
+        ],
+        [
+          "strength model",
+          2,
+          0.001
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          54
+        ],
+        [
+          "2000-2004",
+          117
+        ],
+        [
+          "2005-2009",
+          204
+        ],
+        [
+          "2010-2014",
+          355
+        ],
+        [
+          "2015-2019",
+          497
+        ],
+        [
+          "2020-2024",
+          510
+        ],
+        [
+          "2025-2025",
+          154
+        ]
+      ]
+    },
+    "5": {
+      "n": 1374,
+      "top_venues": [
+        [
+          "Journal of Applied Psychology",
+          39
+        ],
+        [
+          "Personality and Individual Differences",
+          35
+        ],
+        [
+          "Applied Psychology",
+          24
+        ],
+        [
+          "Journal of Vocational Behavior",
+          24
+        ],
+        [
+          "Journal of Personality and Social Psychology",
+          22
+        ],
+        [
+          "Current Psychology",
+          21
+        ]
+      ],
+      "top_terms": [
+        [
+          "self regulation",
+          1237,
+          0.9
+        ],
+        [
+          "self control",
+          167,
+          0.122
+        ],
+        [
+          "willpower",
+          11,
+          0.008
+        ],
+        [
+          "executive function",
+          10,
+          0.007
+        ],
+        [
+          "ego depletion",
+          3,
+          0.002
+        ],
+        [
+          "delay of gratification",
+          2,
+          0.001
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          44
+        ],
+        [
+          "2000-2004",
+          110
+        ],
+        [
+          "2005-2009",
+          205
+        ],
+        [
+          "2010-2014",
+          293
+        ],
+        [
+          "2015-2019",
+          283
+        ],
+        [
+          "2020-2024",
+          329
+        ],
+        [
+          "2025-2025",
+          110
+        ]
+      ]
+    },
+    "6": {
+      "n": 1097,
+      "top_venues": [
+        [
+          "Psychology and Health",
+          59
+        ],
+        [
+          "British Journal of Health Psychology",
+          34
+        ],
+        [
+          "Health Psychology Review",
+          32
+        ],
+        [
+          "Journal of Behavioral Medicine",
+          25
+        ],
+        [
+          "Frontiers in Psychology",
+          24
+        ],
+        [
+          "International Journal of Behavioral Nutrition and Physical Activity",
+          22
+        ]
+      ],
+      "top_terms": [
+        [
+          "self regulation",
+          983,
+          0.896
+        ],
+        [
+          "self control",
+          104,
+          0.095
+        ],
+        [
+          "willpower",
+          37,
+          0.034
+        ],
+        [
+          "executive function",
+          16,
+          0.015
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          31
+        ],
+        [
+          "2000-2004",
+          56
+        ],
+        [
+          "2005-2009",
+          139
+        ],
+        [
+          "2010-2014",
+          220
+        ],
+        [
+          "2015-2019",
+          301
+        ],
+        [
+          "2020-2024",
+          298
+        ],
+        [
+          "2025-2025",
+          52
+        ]
+      ]
+    },
+    "7": {
+      "n": 1019,
+      "top_venues": [
+        [
+          "Frontiers in Psychology",
+          63
+        ],
+        [
+          "Mindfulness",
+          56
+        ],
+        [
+          "Personality and Individual Differences",
+          17
+        ],
+        [
+          "International Journal of Psychophysiology",
+          12
+        ],
+        [
+          "PLoS ONE",
+          12
+        ],
+        [
+          "Applied Psychophysiology and Biofeedback",
+          11
+        ]
+      ],
+      "top_terms": [
+        [
+          "self regulation",
+          798,
+          0.783
+        ],
+        [
+          "self control",
+          222,
+          0.218
+        ],
+        [
+          "executive function",
+          20,
+          0.02
+        ],
+        [
+          "willpower",
+          19,
+          0.019
+        ],
+        [
+          "delay of gratification",
+          3,
+          0.003
+        ],
+        [
+          "ego depletion",
+          2,
+          0.002
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          11
+        ],
+        [
+          "2000-2004",
+          30
+        ],
+        [
+          "2005-2009",
+          57
+        ],
+        [
+          "2010-2014",
+          180
+        ],
+        [
+          "2015-2019",
+          288
+        ],
+        [
+          "2020-2024",
+          359
+        ],
+        [
+          "2025-2025",
+          94
+        ]
+      ]
+    },
+    "8": {
+      "n": 681,
+      "top_venues": [
+        [
+          "Journal of Business Ethics",
+          30
+        ],
+        [
+          "International Journal of Drug Policy",
+          17
+        ],
+        [
+          "Addiction Research & Theory",
+          12
+        ],
+        [
+          "Journal of Regulatory Economics",
+          10
+        ],
+        [
+          "JAMA",
+          10
+        ],
+        [
+          "Addiction",
+          10
+        ]
+      ],
+      "top_terms": [
+        [
+          "self regulation",
+          612,
+          0.899
+        ],
+        [
+          "self control",
+          65,
+          0.095
+        ],
+        [
+          "willpower",
+          6,
+          0.009
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          23
+        ],
+        [
+          "2000-2004",
+          81
+        ],
+        [
+          "2005-2009",
+          111
+        ],
+        [
+          "2010-2014",
+          146
+        ],
+        [
+          "2015-2019",
+          163
+        ],
+        [
+          "2020-2024",
+          124
+        ],
+        [
+          "2025-2025",
+          33
+        ]
+      ]
+    },
+    "9": {
+      "n": 654,
+      "top_venues": [
+        [
+          "Journal of Youth and Adolescence",
+          22
+        ],
+        [
+          "Addictive Behaviors",
+          21
+        ],
+        [
+          "Psychology of Addictive Behaviors",
+          21
+        ],
+        [
+          "Journal of Adolescence",
+          18
+        ],
+        [
+          "Substance Use & Misuse",
+          13
+        ],
+        [
+          "Personality and Individual Differences",
+          12
+        ]
+      ],
+      "top_terms": [
+        [
+          "self regulation",
+          432,
+          0.661
+        ],
+        [
+          "self control",
+          253,
+          0.387
+        ],
+        [
+          "executive function",
+          6,
+          0.009
+        ],
+        [
+          "delay of gratification",
+          3,
+          0.005
+        ],
+        [
+          "willpower",
+          1,
+          0.002
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          23
+        ],
+        [
+          "2000-2004",
+          37
+        ],
+        [
+          "2005-2009",
+          67
+        ],
+        [
+          "2010-2014",
+          138
+        ],
+        [
+          "2015-2019",
+          176
+        ],
+        [
+          "2020-2024",
+          177
+        ],
+        [
+          "2025-2025",
+          36
+        ]
+      ]
+    },
+    "10": {
+      "n": 461,
+      "top_venues": [
+        [
+          "Journal of Economic Behavior & Organization",
+          28
+        ],
+        [
+          "National Bureau of Economic Research",
+          19
+        ],
+        [
+          "SSRN Electronic Journal",
+          17
+        ],
+        [
+          "Econometrica",
+          14
+        ],
+        [
+          "American Economic Review",
+          13
+        ],
+        [
+          "Management Science",
+          12
+        ]
+      ],
+      "top_terms": [
+        [
+          "self control",
+          431,
+          0.935
+        ],
+        [
+          "willpower",
+          28,
+          0.061
+        ],
+        [
+          "self regulation",
+          26,
+          0.056
+        ],
+        [
+          "executive function",
+          1,
+          0.002
+        ],
+        [
+          "self regulatory depletion",
+          1,
+          0.002
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          3
+        ],
+        [
+          "2000-2004",
+          29
+        ],
+        [
+          "2005-2009",
+          66
+        ],
+        [
+          "2010-2014",
+          84
+        ],
+        [
+          "2015-2019",
+          126
+        ],
+        [
+          "2020-2024",
+          124
+        ],
+        [
+          "2025-2025",
+          29
+        ]
+      ]
+    },
+    "11": {
+      "n": 458,
+      "top_venues": [
+        [
+          "Frontiers in Psychology",
+          38
+        ],
+        [
+          "Personality and Individual Differences",
+          18
+        ],
+        [
+          "Current Psychology",
+          13
+        ],
+        [
+          "Motivation and Emotion",
+          8
+        ],
+        [
+          "Learning and Individual Differences",
+          8
+        ],
+        [
+          "Psychological Reports",
+          7
+        ]
+      ],
+      "top_terms": [
+        [
+          "self regulation",
+          343,
+          0.749
+        ],
+        [
+          "self control",
+          126,
+          0.275
+        ],
+        [
+          "willpower",
+          10,
+          0.022
+        ],
+        [
+          "executive function",
+          6,
+          0.013
+        ],
+        [
+          "delay of gratification",
+          3,
+          0.007
+        ],
+        [
+          "self control depletion",
+          2,
+          0.004
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          9
+        ],
+        [
+          "2000-2004",
+          21
+        ],
+        [
+          "2005-2009",
+          29
+        ],
+        [
+          "2010-2014",
+          76
+        ],
+        [
+          "2015-2019",
+          125
+        ],
+        [
+          "2020-2024",
+          148
+        ],
+        [
+          "2025-2025",
+          50
+        ]
+      ]
+    },
+    "12": {
+      "n": 412,
+      "top_venues": [
+        [
+          "Journal of the Experimental Analysis of Behavior",
+          36
+        ],
+        [
+          "Journal of Applied Behavior Analysis",
+          28
+        ],
+        [
+          "Behavioural Processes",
+          27
+        ],
+        [
+          "Animal Cognition",
+          27
+        ],
+        [
+          "The Psychological Record",
+          14
+        ],
+        [
+          "Frontiers in Psychology",
+          13
+        ]
+      ],
+      "top_terms": [
+        [
+          "self control",
+          368,
+          0.893
+        ],
+        [
+          "self regulation",
+          39,
+          0.095
+        ],
+        [
+          "delay of gratification",
+          26,
+          0.063
+        ],
+        [
+          "willpower",
+          13,
+          0.032
+        ],
+        [
+          "executive function",
+          9,
+          0.022
+        ],
+        [
+          "ego depletion",
+          1,
+          0.002
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          46
+        ],
+        [
+          "2000-2004",
+          48
+        ],
+        [
+          "2005-2009",
+          58
+        ],
+        [
+          "2010-2014",
+          89
+        ],
+        [
+          "2015-2019",
+          89
+        ],
+        [
+          "2020-2024",
+          71
+        ],
+        [
+          "2025-2025",
+          11
+        ]
+      ]
+    },
+    "13": {
+      "n": 298,
+      "top_venues": [
+        [
+          "NeuroImage",
+          29
+        ],
+        [
+          "Frontiers in Human Neuroscience",
+          20
+        ],
+        [
+          "Human Brain Mapping",
+          14
+        ],
+        [
+          "Applied Psychophysiology and Biofeedback",
+          13
+        ],
+        [
+          "Frontiers in Behavioral Neuroscience",
+          9
+        ],
+        [
+          "Journal of Neurotherapy",
+          7
+        ]
+      ],
+      "top_terms": [
+        [
+          "self regulation",
+          238,
+          0.799
+        ],
+        [
+          "self control",
+          71,
+          0.238
+        ],
+        [
+          "executive function",
+          3,
+          0.01
+        ],
+        [
+          "willpower",
+          1,
+          0.003
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          11
+        ],
+        [
+          "2000-2004",
+          30
+        ],
+        [
+          "2005-2009",
+          28
+        ],
+        [
+          "2010-2014",
+          65
+        ],
+        [
+          "2015-2019",
+          89
+        ],
+        [
+          "2020-2024",
+          65
+        ],
+        [
+          "2025-2025",
+          10
+        ]
+      ]
+    },
+    "14": {
+      "n": 254,
+      "top_venues": [
+        [
+          "Accident Analysis & Prevention",
+          37
+        ],
+        [
+          "Transportation Research Part F Traffic Psychology and Behaviour",
+          36
+        ],
+        [
+          "Neuropsychological Rehabilitation",
+          12
+        ],
+        [
+          "Journal of Safety Research",
+          12
+        ],
+        [
+          "Traffic Injury Prevention",
+          11
+        ],
+        [
+          "Brain Injury",
+          9
+        ]
+      ],
+      "top_terms": [
+        [
+          "self regulation",
+          227,
+          0.894
+        ],
+        [
+          "self control",
+          29,
+          0.114
+        ],
+        [
+          "executive function",
+          19,
+          0.075
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          3
+        ],
+        [
+          "2000-2004",
+          17
+        ],
+        [
+          "2005-2009",
+          37
+        ],
+        [
+          "2010-2014",
+          52
+        ],
+        [
+          "2015-2019",
+          77
+        ],
+        [
+          "2020-2024",
+          55
+        ],
+        [
+          "2025-2025",
+          13
+        ]
+      ]
+    }
+  },
+  "term_distribution": [
+    {
+      "term": "ego depletion",
+      "n_docs": 644,
+      "top_community": 3,
+      "top_community_share": 0.945,
+      "norm_entropy": 0.137,
+      "share_in_overrepresented_comms": 0.945,
+      "n_overrepresented_comms": 1,
+      "js_vs_parent": 0.5446
+    },
+    {
+      "term": "self control",
+      "n_docs": 10528,
+      "top_community": 1,
+      "top_community_share": 0.291,
+      "norm_entropy": 0.765,
+      "share_in_overrepresented_comms": 0.331,
+      "n_overrepresented_comms": 3,
+      "js_vs_parent": null
+    },
+    {
+      "term": "self regulation",
+      "n_docs": 16204,
+      "top_community": 0,
+      "top_community_share": 0.24,
+      "norm_entropy": 0.843,
+      "share_in_overrepresented_comms": 0.0,
+      "n_overrepresented_comms": 0,
+      "js_vs_parent": 0.3566
+    },
+    {
+      "term": "willpower",
+      "n_docs": 633,
+      "top_community": 3,
+      "top_community_share": 0.337,
+      "norm_entropy": 0.755,
+      "share_in_overrepresented_comms": 0.413,
+      "n_overrepresented_comms": 2,
+      "js_vs_parent": 0.1628
+    },
+    {
+      "term": "strength model",
+      "n_docs": 145,
+      "top_community": 3,
+      "top_community_share": 0.885,
+      "norm_entropy": 0.257,
+      "share_in_overrepresented_comms": 0.885,
+      "n_overrepresented_comms": 1,
+      "js_vs_parent": 0.4561
+    },
+    {
+      "term": "executive function",
+      "n_docs": 640,
+      "top_community": 0,
+      "top_community_share": 0.676,
+      "norm_entropy": 0.518,
+      "share_in_overrepresented_comms": 0.71,
+      "n_overrepresented_comms": 2,
+      "js_vs_parent": 0.4165
+    },
+    {
+      "term": "delay of gratification",
+      "n_docs": 227,
+      "top_community": 0,
+      "top_community_share": 0.472,
+      "norm_entropy": 0.679,
+      "share_in_overrepresented_comms": 0.594,
+      "n_overrepresented_comms": 2,
+      "js_vs_parent": 0.3004
+    }
+  ],
+  "insulation": [
+    {
+      "term": "ego depletion",
+      "refs_out_to_focus": 19753,
+      "same_term_share_obs": 0.2552,
+      "same_term_share_null": 0.0171,
+      "insulation_ratio": 73.22,
+      "insulation_z": 287.3,
+      "to_parent_ratio": 5.41,
+      "to_second_ratio": 1.79,
+      "second": "self regulation"
+    },
+    {
+      "term": "self control",
+      "refs_out_to_focus": 102805,
+      "same_term_share_obs": 0.6241,
+      "same_term_share_null": 0.3671,
+      "insulation_ratio": 2.95,
+      "insulation_z": 42.4,
+      "to_parent_ratio": 2.95,
+      "to_second_ratio": 0.59,
+      "second": "self regulation"
+    },
+    {
+      "term": "self regulation",
+      "refs_out_to_focus": 83783,
+      "same_term_share_obs": 0.6386,
+      "same_term_share_null": 0.5639,
+      "insulation_ratio": 1.04,
+      "insulation_z": 1.3,
+      "to_parent_ratio": 0.53,
+      "to_second_ratio": 1.04,
+      "second": "self regulation"
+    },
+    {
+      "term": "willpower",
+      "refs_out_to_focus": 6093,
+      "same_term_share_obs": 0.1237,
+      "same_term_share_null": 0.0216,
+      "insulation_ratio": 9.64,
+      "insulation_z": 34.9,
+      "to_parent_ratio": 2.06,
+      "to_second_ratio": 0.62,
+      "second": "self regulation"
+    },
+    {
+      "term": "strength model",
+      "refs_out_to_focus": 4992,
+      "same_term_share_obs": 0.094,
+      "same_term_share_null": 0.0052,
+      "insulation_ratio": 104.34,
+      "insulation_z": 179.6,
+      "to_parent_ratio": 6.64,
+      "to_second_ratio": 2.45,
+      "second": "self regulation"
+    },
+    {
+      "term": "executive function",
+      "refs_out_to_focus": 6403,
+      "same_term_share_obs": 0.1773,
+      "same_term_share_null": 0.018,
+      "insulation_ratio": 15.84,
+      "insulation_z": 56.5,
+      "to_parent_ratio": 0.95,
+      "to_second_ratio": 1.49,
+      "second": "self regulation"
+    },
+    {
+      "term": "delay of gratification",
+      "refs_out_to_focus": 3643,
+      "same_term_share_obs": 0.1631,
+      "same_term_share_null": 0.0078,
+      "insulation_ratio": 58.41,
+      "insulation_z": 114.1,
+      "to_parent_ratio": 2.62,
+      "to_second_ratio": 1.67,
+      "second": "self regulation"
+    }
+  ],
+  "flow_ratio": {
+    "terms": [
+      "ego depletion",
+      "self control",
+      "self regulation",
+      "willpower",
+      "strength model",
+      "executive function",
+      "delay of gratification"
+    ],
+    "obs": [
+      [
+        5040,
+        7991,
+        4058,
+        764,
+        1607,
+        230,
+        63
+      ],
+      [
+        8688,
+        64156,
+        19687,
+        2931,
+        4171,
+        1533,
+        1639
+      ],
+      [
+        3526,
+        17812,
+        53504,
+        1287,
+        1676,
+        4489,
+        1489
+      ],
+      [
+        871,
+        2737,
+        1263,
+        754,
+        287,
+        70,
+        111
+      ],
+      [
+        942,
+        2114,
+        1195,
+        190,
+        469,
+        58,
+        24
+      ],
+      [
+        165,
+        1386,
+        3354,
+        85,
+        81,
+        1135,
+        197
+      ],
+      [
+        142,
+        1262,
+        1234,
+        139,
+        60,
+        212,
+        594
+      ]
+    ],
+    "ratio_obs_over_null": [
+      [
+        73.22,
+        5.41,
+        1.79,
+        8.51,
+        75.69,
+        3.16,
+        1.94
+      ],
+      [
+        8.98,
+        2.95,
+        0.59,
+        2.26,
+        13.78,
+        1.48,
+        3.46
+      ],
+      [
+        2.37,
+        0.53,
+        1.04,
+        0.64,
+        3.58,
+        2.8,
+        2.05
+      ],
+      [
+        15.04,
+        2.06,
+        0.62,
+        9.64,
+        15.95,
+        1.1,
+        3.8
+      ],
+      [
+        69.75,
+        6.64,
+        2.45,
+        9.93,
+        104.34,
+        3.92,
+        3.4
+      ],
+      [
+        2.44,
+        0.95,
+        1.49,
+        0.97,
+        3.77,
+        15.84,
+        6.21
+      ],
+      [
+        6.63,
+        2.62,
+        1.67,
+        4.84,
+        8.47,
+        9.22,
+        58.41
+      ]
+    ],
+    "z": [
+      [
+        287.3,
+        57.2,
+        12.3,
+        35.5,
+        189.9,
+        9.1,
+        2.5
+      ],
+      [
+        36.7,
+        42.4,
+        -15.4,
+        6.9,
+        37.8,
+        2.2,
+        7.4
+      ],
+      [
+        6.4,
+        -11.2,
+        1.3,
+        -1.9,
+        7.8,
+        8.5,
+        3.1
+      ],
+      [
+        53.6,
+        13.3,
+        -6.0,
+        34.9,
+        35.3,
+        0.4,
+        7.1
+      ],
+      [
+        179.9,
+        41.6,
+        12.0,
+        28.5,
+        179.6,
+        7.7,
+        4.4
+      ],
+      [
+        5.9,
+        -0.7,
+        7.4,
+        -0.1,
+        7.5,
+        56.5,
+        14.3
+      ],
+      [
+        16.6,
+        13.7,
+        6.4,
+        13.8,
+        13.9,
+        26.4,
+        114.1
+      ]
+    ],
+    "perms": 200
+  },
+  "p2_subgraph": {
+    "subgraph_term": "ego depletion",
+    "n_docs": 644,
+    "intra_edges": 5040,
+    "n_subcommunities": 43,
+    "modularity": 0.307,
+    "cramers_v_subcomm_x_venue_category": 0.308,
+    "subcommunities": {
+      "0": {
+        "n": 183,
+        "venue_categories": [
+          [
+            "work/org",
+            104
+          ],
+          [
+            "core/other psych",
+            72
+          ],
+          [
+            "health/med",
+            3
+          ],
+          [
+            "education",
+            3
+          ],
+          [
+            "crime/social",
+            1
+          ]
+        ],
+        "top_venues": [
+          [
+            "Journal of Applied Psychology",
+            13
+          ],
+          [
+            "Frontiers in Psychology",
+            11
+          ],
+          [
+            "Journal of Business Ethics",
+            10
+          ],
+          [
+            "Current Psychology",
+            9
+          ]
+        ]
+      },
+      "1": {
+        "n": 115,
+        "venue_categories": [
+          [
+            "core/other psych",
+            106
+          ],
+          [
+            "sport",
+            4
+          ],
+          [
+            "health/med",
+            3
+          ],
+          [
+            "work/org",
+            1
+          ],
+          [
+            "crime/social",
+            1
+          ]
+        ],
+        "top_venues": [
+          [
+            "Frontiers in Psychology",
+            14
+          ],
+          [
+            "Social Psychology",
+            8
+          ],
+          [
+            "Journal of Experimental Social Psychology",
+            7
+          ],
+          [
+            "PLoS ONE",
+            7
+          ]
+        ]
+      },
+      "2": {
+        "n": 95,
+        "venue_categories": [
+          [
+            "core/other psych",
+            78
+          ],
+          [
+            "education",
+            7
+          ],
+          [
+            "work/org",
+            5
+          ],
+          [
+            "health/med",
+            4
+          ],
+          [
+            "sport",
+            1
+          ]
+        ],
+        "top_venues": [
+          [
+            "Frontiers in Psychology",
+            12
+          ],
+          [
+            "Journal of Neuroscience Psychology and Economics",
+            4
+          ],
+          [
+            "Personality and Individual Differences",
+            3
+          ],
+          [
+            "Journal of Experimental Social Psychology",
+            3
+          ]
+        ]
+      },
+      "3": {
+        "n": 86,
+        "venue_categories": [
+          [
+            "core/other psych",
+            73
+          ],
+          [
+            "work/org",
+            10
+          ],
+          [
+            "health/med",
+            2
+          ],
+          [
+            "education",
+            1
+          ]
+        ],
+        "top_venues": [
+          [
+            "Journal of Experimental Social Psychology",
+            9
+          ],
+          [
+            "Journal of Personality and Social Psychology",
+            5
+          ],
+          [
+            "Frontiers in Psychology",
+            5
+          ],
+          [
+            "Elsevier eBooks",
+            4
+          ]
+        ]
+      },
+      "4": {
+        "n": 70,
+        "venue_categories": [
+          [
+            "core/other psych",
+            42
+          ],
+          [
+            "sport",
+            14
+          ],
+          [
+            "work/org",
+            12
+          ],
+          [
+            "education",
+            1
+          ],
+          [
+            "health/med",
+            1
+          ]
+        ],
+        "top_venues": [
+          [
+            "Frontiers in Psychology",
+            9
+          ],
+          [
+            "Journal of Consumer Psychology",
+            4
+          ],
+          [
+            "Journal of Sport and Exercise Psychology",
+            4
+          ],
+          [
+            "Psychology of sport and exercise",
+            4
+          ]
+        ]
+      },
+      "5": {
+        "n": 55,
+        "venue_categories": [
+          [
+            "core/other psych",
+            50
+          ],
+          [
+            "work/org",
+            2
+          ],
+          [
+            "health/med",
+            1
+          ],
+          [
+            "education",
+            1
+          ],
+          [
+            "crime/social",
+            1
+          ]
+        ],
+        "top_venues": [
+          [
+            "Appetite",
+            3
+          ],
+          [
+            "Frontiers in Psychology",
+            3
+          ],
+          [
+            "Aggressive Behavior",
+            3
+          ],
+          [
+            "The Journal of Social Psychology",
+            2
+          ]
+        ]
+      }
+    }
+  },
+  "p2b_anchor_citation": {
+    "resolved": {
+      "coinage_1998": {
+        "how": "title (0.98): Ego depletion: Is the active self a limited resource?",
+        "year": 1998,
+        "in_graph": true,
+        "in_graph_citers": 1303
+      },
+      "rrr_2016": {
+        "how": "title (0.98): A multilab preregistered replication of the ego-depletion effect.",
+        "year": 2016,
+        "in_graph": true,
+        "in_graph_citers": 291
+      },
+      "rrr_2021": {
+        "how": "title (0.96): A multisite preregistered paradigmatic test of the ego-depletion effect.",
+        "year": 2021,
+        "in_graph": true,
+        "in_graph_citers": 43
+      },
+      "carter_2014": {
+        "how": "title (0.95): Publication bias and the limited strength model of self-control: Has the evidence for ego ",
+        "year": 2014,
+        "in_graph": true,
+        "in_graph_citers": 136
+      },
+      "hagger_2010_meta": {
+        "how": "title (0.99): Ego Depletion and the Strength Model of Self-Control: A Meta-Analysis.",
+        "year": 2010,
+        "in_graph": true,
+        "in_graph_citers": 861
+      },
+      "inzlicht_2012": {
+        "how": "title (0.89): What is ego depletion? Toward a mechanistic revision of the resource model of self-control",
+        "year": 2012,
+        "in_graph": true,
+        "in_graph_citers": 392
+      },
+      "friese_2019": {
+        "how": "doi",
+        "year": null,
+        "in_graph": true,
+        "in_graph_citers": 114
+      },
+      "dang_2018": {
+        "how": "doi",
+        "year": null,
+        "in_graph": true,
+        "in_graph_citers": 82
+      }
+    },
+    "window_year_min": 2017,
+    "coinage": "coinage_1998",
+    "correction_set": [
+      "rrr_2016",
+      "rrr_2021"
+    ],
+    "rates_by_subcommunity": {
+      "0": {
+        "n_docs_in_window": 137,
+        "coinage_1998": 0.759,
+        "rrr_2016": 0.066,
+        "rrr_2021": 0.015,
+        "carter_2014": 0.007,
+        "hagger_2010_meta": 0.365,
+        "inzlicht_2012": 0.088,
+        "friese_2019": 0.08,
+        "dang_2018": 0.022
+      },
+      "1": {
+        "n_docs_in_window": 93,
+        "coinage_1998": 0.763,
+        "rrr_2016": 0.903,
+        "rrr_2021": 0.161,
+        "carter_2014": 0.452,
+        "hagger_2010_meta": 0.796,
+        "inzlicht_2012": 0.452,
+        "friese_2019": 0.312,
+        "dang_2018": 0.344
+      },
+      "2": {
+        "n_docs_in_window": 49,
+        "coinage_1998": 0.714,
+        "rrr_2016": 0.286,
+        "rrr_2021": 0.0,
+        "carter_2014": 0.122,
+        "hagger_2010_meta": 0.531,
+        "inzlicht_2012": 0.245,
+        "friese_2019": 0.061,
+        "dang_2018": 0.122
+      },
+      "3": {
+        "n_docs_in_window": 28,
+        "coinage_1998": 0.5,
+        "rrr_2016": 0.321,
+        "rrr_2021": 0.0,
+        "carter_2014": 0.107,
+        "hagger_2010_meta": 0.5,
+        "inzlicht_2012": 0.25,
+        "friese_2019": 0.107,
+        "dang_2018": 0.036
+      },
+      "4": {
+        "n_docs_in_window": 34,
+        "coinage_1998": 0.441,
+        "rrr_2016": 0.324,
+        "rrr_2021": 0.029,
+        "carter_2014": 0.059,
+        "hagger_2010_meta": 0.706,
+        "inzlicht_2012": 0.206,
+        "friese_2019": 0.176,
+        "dang_2018": 0.059
+      },
+      "5": {
+        "n_docs_in_window": 24,
+        "coinage_1998": 0.667,
+        "rrr_2016": 0.417,
+        "rrr_2021": 0.042,
+        "carter_2014": 0.25,
+        "hagger_2010_meta": 0.708,
+        "inzlicht_2012": 0.458,
+        "friese_2019": 0.042,
+        "dang_2018": 0.167
+      }
+    },
+    "rates_by_subcommunity_anchors_removed": {
+      "0": {
+        "n_docs_in_window": 125,
+        "coinage_1998": 0.744,
+        "rrr_2016": 0.088,
+        "rrr_2021": 0.016,
+        "carter_2014": 0.016,
+        "hagger_2010_meta": 0.408,
+        "inzlicht_2012": 0.096,
+        "friese_2019": 0.096,
+        "dang_2018": 0.032,
+        "n_total": 166,
+        "venue_categories": [
+          [
+            "work/org",
+            106
+          ],
+          [
+            "core/other psych",
+            54
+          ],
+          [
+            "health/med",
+            4
+          ]
+        ]
+      },
+      "1": {
+        "n_docs_in_window": 86,
+        "coinage_1998": 0.779,
+        "rrr_2016": 0.86,
+        "rrr_2021": 0.151,
+        "carter_2014": 0.419,
+        "hagger_2010_meta": 0.802,
+        "inzlicht_2012": 0.477,
+        "friese_2019": 0.291,
+        "dang_2018": 0.326,
+        "n_total": 127,
+        "venue_categories": [
+          [
+            "core/other psych",
+            119
+          ],
+          [
+            "health/med",
+            3
+          ],
+          [
+            "sport",
+            3
+          ]
+        ]
+      },
+      "2": {
+        "n_docs_in_window": 35,
+        "coinage_1998": 0.686,
+        "rrr_2016": 0.286,
+        "rrr_2021": 0.0,
+        "carter_2014": 0.229,
+        "hagger_2010_meta": 0.571,
+        "inzlicht_2012": 0.371,
+        "friese_2019": 0.057,
+        "dang_2018": 0.086,
+        "n_total": 96,
+        "venue_categories": [
+          [
+            "core/other psych",
+            84
+          ],
+          [
+            "work/org",
+            10
+          ],
+          [
+            "crime/social",
+            1
+          ]
+        ]
+      },
+      "3": {
+        "n_docs_in_window": 31,
+        "coinage_1998": 0.645,
+        "rrr_2016": 0.29,
+        "rrr_2021": 0.0,
+        "carter_2014": 0.065,
+        "hagger_2010_meta": 0.548,
+        "inzlicht_2012": 0.226,
+        "friese_2019": 0.097,
+        "dang_2018": 0.161,
+        "n_total": 58,
+        "venue_categories": [
+          [
+            "core/other psych",
+            46
+          ],
+          [
+            "education",
+            7
+          ],
+          [
+            "health/med",
+            3
+          ]
+        ]
+      },
+      "4": {
+        "n_docs_in_window": 26,
+        "coinage_1998": 0.615,
+        "rrr_2016": 0.5,
+        "rrr_2021": 0.115,
+        "carter_2014": 0.231,
+        "hagger_2010_meta": 0.654,
+        "inzlicht_2012": 0.231,
+        "friese_2019": 0.115,
+        "dang_2018": 0.192,
+        "n_total": 53,
+        "venue_categories": [
+          [
+            "core/other psych",
+            43
+          ],
+          [
+            "work/org",
+            4
+          ],
+          [
+            "health/med",
+            2
+          ]
+        ]
+      },
+      "5": {
+        "n_docs_in_window": 28,
+        "coinage_1998": 0.393,
+        "rrr_2016": 0.357,
+        "rrr_2021": 0.036,
+        "carter_2014": 0.071,
+        "hagger_2010_meta": 0.5,
+        "inzlicht_2012": 0.25,
+        "friese_2019": 0.107,
+        "dang_2018": 0.036,
+        "n_total": 45,
+        "venue_categories": [
+          [
+            "core/other psych",
+            26
+          ],
+          [
+            "sport",
+            15
+          ],
+          [
+            "work/org",
+            3
+          ]
+        ]
+      }
+    },
+    "rates_by_venue_category": {
+      "core/other psych": {
+        "n_docs_in_window": 256,
+        "coinage_1998": 0.684,
+        "rrr_2016": 0.457,
+        "rrr_2021": 0.055,
+        "carter_2014": 0.215,
+        "hagger_2010_meta": 0.586,
+        "inzlicht_2012": 0.277,
+        "friese_2019": 0.164,
+        "dang_2018": 0.148
+      },
+      "crime/social": {
+        "n_docs_in_window": 2,
+        "coinage_1998": 1.0,
+        "rrr_2016": 1.0,
+        "rrr_2021": 0.5,
+        "carter_2014": 1.0,
+        "hagger_2010_meta": 1.0,
+        "inzlicht_2012": 0.5,
+        "friese_2019": 0.0,
+        "dang_2018": 0.5
+      },
+      "education": {
+        "n_docs_in_window": 10,
+        "coinage_1998": 0.5,
+        "rrr_2016": 0.2,
+        "rrr_2021": 0.0,
+        "carter_2014": 0.0,
+        "hagger_2010_meta": 0.5,
+        "inzlicht_2012": 0.2,
+        "friese_2019": 0.1,
+        "dang_2018": 0.2
+      },
+      "health/med": {
+        "n_docs_in_window": 12,
+        "coinage_1998": 0.417,
+        "rrr_2016": 0.083,
+        "rrr_2021": 0.083,
+        "carter_2014": 0.0,
+        "hagger_2010_meta": 0.5,
+        "inzlicht_2012": 0.167,
+        "friese_2019": 0.0,
+        "dang_2018": 0.0
+      },
+      "sport": {
+        "n_docs_in_window": 11,
+        "coinage_1998": 0.636,
+        "rrr_2016": 0.727,
+        "rrr_2021": 0.091,
+        "carter_2014": 0.182,
+        "hagger_2010_meta": 0.818,
+        "inzlicht_2012": 0.364,
+        "friese_2019": 0.182,
+        "dang_2018": 0.364
+      },
+      "work/org": {
+        "n_docs_in_window": 108,
+        "coinage_1998": 0.574,
+        "rrr_2016": 0.065,
+        "rrr_2021": 0.019,
+        "carter_2014": 0.009,
+        "hagger_2010_meta": 0.306,
+        "inzlicht_2012": 0.102,
+        "friese_2019": 0.074,
+        "dang_2018": 0.028
+      }
+    },
+    "all_subgraph": {
+      "n_docs_in_window": 399,
+      "coinage_1998": 0.642,
+      "rrr_2016": 0.343,
+      "rrr_2021": 0.048,
+      "carter_2014": 0.15,
+      "hagger_2010_meta": 0.514,
+      "inzlicht_2012": 0.228,
+      "friese_2019": 0.133,
+      "dang_2018": 0.12
+    }
+  },
+  "settings": {
+    "parent": "self control",
+    "focus": [
+      "ego depletion",
+      "self control",
+      "self regulation",
+      "willpower",
+      "strength model",
+      "executive function",
+      "delay of gratification"
+    ],
+    "compounds": [
+      "ego depletion",
+      "strength model"
+    ],
+    "merge": {},
+    "subgraph_term": "ego depletion",
+    "second": "self regulation",
+    "null": "period",
+    "iterations": -1
+  },
+  "predictions_trauma_case": {
+    "P1": "compounds distinct from bare trauma; insulation >> null",
+    "P2": "trauma-informed sub-communities align with practice vs care venues",
+    "P3": "PTSD continuous with bare trauma by citation",
+    "P4": "embarrassment condition: compounds continuous with parent"
+  }
+}

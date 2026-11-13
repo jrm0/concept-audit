@@ -1,0 +1,89 @@
+{
+  "script": "29_creep_measures",
+  "concept": "posttraumatic stress disorder",
+  "config": "configs/ptsd_trauma.yaml",
+  "config_sha1": "a76e6b8c7b68",
+  "timestamp": "2026-10-01T15:01:22-04:00",
+  "git_commit": "5beeaba",
+  "git_dirty": true,
+  "argv": [
+    "--config",
+    "configs/ptsd_trauma.yaml",
+    "--phase",
+    "report"
+  ],
+  "params": {
+    "window": 5,
+    "min_n": 15,
+    "boot": 500,
+    "seed": 42,
+    "parent": "trauma",
+    "breadth": {
+      "n_sample": 50,
+      "reps": 10,
+      "min_n": 15,
+      "seed": 42,
+      "controls": [
+        "participants",
+        "results",
+        "significant",
+        "measure"
+      ],
+      "sentence_model": "sentence-transformers/all-mpnet-base-v2",
+      "masked_model": "allenai/scibert_scivocab_uncased",
+      "emb_dir": "data/ptsd_trauma/lineage_emb_v2"
+    },
+    "merge": {
+      "ptsd": "PTSD",
+      "posttraumatic stress disorder": "PTSD",
+      "complex ptsd": "complex PTSD",
+      "complex posttraumatic stress disorder": "complex PTSD"
+    },
+    "intensifiers": [
+      "debilitating",
+      "destructive",
+      "devastating",
+      "extreme",
+      "great",
+      "harsh",
+      "intense",
+      "major",
+      "powerful",
+      "serious",
+      "severe"
+    ],
+    "pathology_lexicon": [
+      "ailment",
+      "clinic",
+      "clinical",
+      "cure",
+      "diagnosis",
+      "disease",
+      "disorder",
+      "ill",
+      "illness",
+      "medical",
+      "medicine",
+      "pathology",
+      "prognosis",
+      "sick",
+      "sickness",
+      "symptom",
+      "treatment"
+    ]
+  },
+  "outputs": [
+    "results/ptsd_trauma_v2/creep_measures.json",
+    "results/ptsd_trauma_v2/creep_measures_report.txt"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "diptest": "0.11.0",
+    "torch": "2.12.0",
+    "transformers": "5.13.0"
+  },
+  "notes": "Concept-creep instrument (Baes/Haslam/Vylomova) re-implemented on this corpus for the head-to-head in Paper 1; see docstring for sources."
+}

@@ -1,0 +1,41 @@
+{
+  "script": "26_pull_openalex_citations",
+  "concept": "posttraumatic stress disorder",
+  "config": "configs/ptsd_trauma.yaml",
+  "config_sha1": "a76e6b8c7b68",
+  "timestamp": "2026-09-28T19:44:06-04:00",
+  "git_commit": "5beeaba",
+  "git_dirty": true,
+  "argv": [
+    "--config",
+    "configs/ptsd_trauma.yaml",
+    "--phase",
+    "outbound-crossref"
+  ],
+  "params": {
+    "phase": "outbound-crossref",
+    "credit_budget": 90000,
+    "min_cited_by": 1,
+    "max_works": null,
+    "title_sim": 0.92,
+    "year_slack": 1,
+    "credits_spent_this_run": 0
+  },
+  "outputs": [
+    "data/ptsd_trauma/citations/openalex_works.jsonl",
+    "data/ptsd_trauma/citations/crossref_dois.jsonl",
+    "data/ptsd_trauma/citations/openalex_cites.jsonl",
+    "data/ptsd_trauma/citations/unresolved.jsonl",
+    "data/ptsd_trauma/citations/retrieval_log.jsonl"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "diptest": "0.11.0",
+    "torch": "2.12.0",
+    "transformers": "5.13.0"
+  },
+  "notes": "OpenAlex credit model since 2026-02-13; list request = 10 credits. Intra-corpus edges are complete from the outbound pass."
+}

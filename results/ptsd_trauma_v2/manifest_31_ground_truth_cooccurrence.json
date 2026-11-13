@@ -1,0 +1,40 @@
+{
+  "script": "31_ground_truth_cooccurrence",
+  "concept": "posttraumatic stress disorder",
+  "config": "configs/ptsd_trauma.yaml",
+  "config_sha1": "c6eaa77a2118",
+  "timestamp": "2026-10-13T10:28:40-04:00",
+  "git_commit": "5beeaba",
+  "git_dirty": true,
+  "argv": [
+    "--config",
+    "configs/ptsd_trauma.yaml",
+    "--show-annual"
+  ],
+  "params": {
+    "boot": 500,
+    "seed": 42,
+    "min_n": 15,
+    "merge": {
+      "ptsd": "PTSD",
+      "posttraumatic stress disorder": "PTSD",
+      "complex ptsd": "complex PTSD",
+      "complex posttraumatic stress disorder": "complex PTSD"
+    }
+  },
+  "outputs": [
+    "results/ptsd_trauma_v2/ground_truth_cooccurrence.json",
+    "results/ptsd_trauma_v2/ground_truth_cooccurrence_report.txt",
+    "results/ptsd_trauma_v2/ground_truth_doc_flags.jsonl"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "diptest": "0.11.0",
+    "torch": "2.12.0",
+    "transformers": "5.13.0"
+  },
+  "notes": "Pre-registered vocabulary co-occurrence cells from Historical_Ground_Truth_Claims_v1.md; vocabularies and thresholds fixed in Lab Notebook Session 46 before the first run."
+}

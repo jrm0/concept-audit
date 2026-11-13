@@ -1,0 +1,77 @@
+{
+  "corpus_docs": 129977,
+  "resolved": 116188,
+  "route_counts": {
+    "doi": 113353,
+    "title": 222,
+    "doi_via_crossref": 2613
+  },
+  "per_period": {
+    "2025-2025": {
+      "n": 8545,
+      "resolved": 8061,
+      "intra_refs_out": 75572
+    },
+    "2020-2024": {
+      "n": 37771,
+      "resolved": 36051,
+      "intra_refs_out": 391792
+    },
+    "2015-2019": {
+      "n": 26265,
+      "resolved": 24519,
+      "intra_refs_out": 274653
+    },
+    "2005-2009": {
+      "n": 14311,
+      "resolved": 12055,
+      "intra_refs_out": 94746
+    },
+    "2000-2004": {
+      "n": 9362,
+      "resolved": 7526,
+      "intra_refs_out": 47533
+    },
+    "2010-2014": {
+      "n": 20101,
+      "resolved": 17866,
+      "intra_refs_out": 174286
+    },
+    "1990-1994": {
+      "n": 3858,
+      "resolved": 2916,
+      "intra_refs_out": 7477
+    },
+    "1995-1999": {
+      "n": 5930,
+      "resolved": 4416,
+      "intra_refs_out": 19244
+    },
+    "1980-1984": {
+      "n": 877,
+      "resolved": 625,
+      "intra_refs_out": 418
+    },
+    "1985-1989": {
+      "n": 2198,
+      "resolved": 1583,
+      "intra_refs_out": 2343
+    },
+    "1975-1979": {
+      "n": 412,
+      "resolved": 275,
+      "intra_refs_out": 80
+    },
+    "1965-1969": {
+      "n": 155,
+      "resolved": 95,
+      "intra_refs_out": 14
+    },
+    "1970-1974": {
+      "n": 192,
+      "resolved": 123,
+      "intra_refs_out": 19
+    }
+  },
+  "intra_corpus_edges": 1088177
+}

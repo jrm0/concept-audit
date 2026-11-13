@@ -1,0 +1,345 @@
+{
+  "graph": {
+    "nodes": 102230,
+    "edges": 927573,
+    "year_min": 1995,
+    "algorithm": "skipped (--flows-only)",
+    "resolution": 1.0,
+    "modularity": null,
+    "n_communities": null,
+    "n_communities_ge_min": 1,
+    "min_community": 200
+  },
+  "communities": {},
+  "term_distribution": [],
+  "insulation": [
+    {
+      "term": "trauma",
+      "refs_out_to_focus": 723399,
+      "edges_from_term_docs": 526883,
+      "same_term_edges": 339387,
+      "same_term_share_obs": 0.6441411091266942,
+      "same_term_share_null": 0.5448596316419081,
+      "insulation_ratio": 1.1822147792186515,
+      "insulation_z": 18.717989188179455,
+      "null_share_sd": 0.005304067466150855,
+      "null_valid_draws": 200,
+      "count_enrichment_ratio": 1.1925096073346577,
+      "to_parent_ratio": 1.1925096073346577,
+      "to_second_ratio": 1.1261626536153586,
+      "second": "PTSD"
+    },
+    {
+      "term": "PTSD",
+      "refs_out_to_focus": 816735,
+      "edges_from_term_docs": 594241,
+      "same_term_edges": 515262,
+      "same_term_share_obs": 0.8670926442302029,
+      "same_term_share_null": 0.6488875775360288,
+      "insulation_ratio": 1.3362756111355185,
+      "insulation_z": 43.200476856362975,
+      "null_share_sd": 0.005050987455987649,
+      "null_valid_draws": 200,
+      "count_enrichment_ratio": 1.6041167541913401,
+      "to_parent_ratio": 1.123059564884425,
+      "to_second_ratio": 1.6041167541913401,
+      "second": "PTSD"
+    },
+    {
+      "term": "trauma informed",
+      "refs_out_to_focus": 56115,
+      "edges_from_term_docs": 38442,
+      "same_term_edges": 10874,
+      "same_term_share_obs": 0.2828676967899693,
+      "same_term_share_null": 0.061576486611244104,
+      "insulation_ratio": 4.593761553429009,
+      "insulation_z": 77.11533969048864,
+      "null_share_sd": 0.0028696133748084772,
+      "null_valid_draws": 200,
+      "count_enrichment_ratio": 4.468332532041404,
+      "to_parent_ratio": 1.2185037591677397,
+      "to_second_ratio": 0.7572496472955494,
+      "second": "PTSD"
+    },
+    {
+      "term": "secondary traumatic stress",
+      "refs_out_to_focus": 17516,
+      "edges_from_term_docs": 11550,
+      "same_term_edges": 5507,
+      "same_term_share_obs": 0.4767965367965368,
+      "same_term_share_null": 0.02864142919027429,
+      "insulation_ratio": 16.64709304933853,
+      "insulation_z": 106.72273560555068,
+      "null_share_sd": 0.004199246815248932,
+      "null_valid_draws": 200,
+      "count_enrichment_ratio": 19.30451852630841,
+      "to_parent_ratio": 1.228431036452977,
+      "to_second_ratio": 0.709293814879233,
+      "second": "PTSD"
+    },
+    {
+      "term": "vicarious trauma",
+      "refs_out_to_focus": 6649,
+      "edges_from_term_docs": 4242,
+      "same_term_edges": 1042,
+      "same_term_share_obs": 0.24563884959924565,
+      "same_term_share_null": 0.013359321786672422,
+      "insulation_ratio": 18.387074847190284,
+      "insulation_z": 73.98429608330055,
+      "null_share_sd": 0.0031395788040078747,
+      "null_valid_draws": 200,
+      "count_enrichment_ratio": 21.319693094629155,
+      "to_parent_ratio": 1.4522148880426575,
+      "to_second_ratio": 0.6399739671606579,
+      "second": "PTSD"
+    },
+    {
+      "term": "complex PTSD",
+      "refs_out_to_focus": 32868,
+      "edges_from_term_docs": 17602,
+      "same_term_edges": 6063,
+      "same_term_share_obs": 0.34444949437563915,
+      "same_term_share_null": 0.013529753596876025,
+      "insulation_ratio": 25.45866721883031,
+      "insulation_z": 187.50058397663085,
+      "null_share_sd": 0.001764899787298835,
+      "null_valid_draws": 200,
+      "count_enrichment_ratio": 36.73321014207385,
+      "to_parent_ratio": 1.8344503895616258,
+      "to_second_ratio": 1.8774176752677272,
+      "second": "PTSD"
+    }
+  ],
+  "flow_ratio": {
+    "terms": [
+      "trauma",
+      "PTSD",
+      "trauma informed",
+      "secondary traumatic stress",
+      "vicarious trauma",
+      "complex PTSD"
+    ],
+    "obs": [
+      [
+        339387.0,
+        351010.0,
+        13842.0,
+        5558.0,
+        2798.0,
+        10804.0
+      ],
+      [
+        285552.0,
+        515262.0,
+        3278.0,
+        1794.0,
+        591.0,
+        10258.0
+      ],
+      [
+        28189.0,
+        15155.0,
+        10874.0,
+        869.0,
+        489.0,
+        539.0
+      ],
+      [
+        6665.0,
+        3605.0,
+        524.0,
+        5507.0,
+        1163.0,
+        52.0
+      ],
+      [
+        3068.0,
+        1180.0,
+        323.0,
+        1011.0,
+        1042.0,
+        25.0
+      ],
+      [
+        12214.0,
+        14315.0,
+        236.0,
+        23.0,
+        17.0,
+        6063.0
+      ]
+    ],
+    "ratio_obs_over_null": [
+      [
+        1.19,
+        1.13,
+        1.54,
+        1.79,
+        2.19,
+        2.77
+      ],
+      [
+        1.12,
+        1.6,
+        0.61,
+        0.8,
+        0.75,
+        2.84
+      ],
+      [
+        1.22,
+        0.76,
+        4.47,
+        1.7,
+        2.34,
+        1.69
+      ],
+      [
+        1.23,
+        0.71,
+        1.38,
+        19.3,
+        15.25,
+        0.69
+      ],
+      [
+        1.45,
+        0.64,
+        2.43,
+        13.85,
+        21.32,
+        0.86
+      ],
+      [
+        1.83,
+        1.88,
+        1.2,
+        0.33,
+        0.65,
+        36.73
+      ]
+    ],
+    "z": [
+      [
+        18.7,
+        15.3,
+        13.3,
+        7.0,
+        10.3,
+        17.0
+      ],
+      [
+        10.2,
+        68.3,
+        -7.5,
+        -1.3,
+        -1.7,
+        16.0
+      ],
+      [
+        13.0,
+        -13.0,
+        69.4,
+        6.9,
+        11.1,
+        5.5
+      ],
+      [
+        7.6,
+        -8.7,
+        4.5,
+        121.7,
+        71.1,
+        -1.9
+      ],
+      [
+        8.4,
+        -5.4,
+        10.2,
+        69.3,
+        83.8,
+        -0.6
+      ],
+      [
+        25.0,
+        25.8,
+        1.9,
+        -3.5,
+        -1.3,
+        259.2
+      ]
+    ],
+    "perms": 200
+  },
+  "p2_subgraph": null,
+  "p2b_anchor_citation": null,
+  "settings": {
+    "parent": "trauma",
+    "focus": [
+      "trauma",
+      "PTSD",
+      "trauma informed",
+      "secondary traumatic stress",
+      "vicarious trauma",
+      "complex PTSD"
+    ],
+    "compounds": [
+      "trauma informed",
+      "secondary traumatic stress",
+      "vicarious trauma"
+    ],
+    "merge": {
+      "ptsd": "PTSD",
+      "posttraumatic stress disorder": "PTSD",
+      "complex ptsd": "complex PTSD",
+      "complex posttraumatic stress disorder": "complex PTSD"
+    },
+    "subgraph_term": "trauma informed",
+    "second": "PTSD",
+    "null": "journal",
+    "iterations": -1,
+    "window": null,
+    "flows_only": true,
+    "groups": {
+      "ancestor": {
+        "terms": [
+          "traumatic neurosis",
+          "war neurosis",
+          "combat neurosis",
+          "battle fatigue",
+          "combat fatigue",
+          "shell shock",
+          "gross stress reaction",
+          "postvietnam syndrome",
+          "rape trauma syndrome"
+        ]
+      },
+      "analytic": {
+        "venue": "psychoanal|analytic|psychoanalysis"
+      },
+      "abuse": {
+        "flag": "A_abuse"
+      },
+      "veteran": {
+        "flag": "V_veteran"
+      },
+      "cat": {
+        "venue_categories": true
+      }
+    },
+    "edges_in_window": 927573,
+    "year_max": 2024,
+    "identity_policy": "exclude all repeated OpenAlex resolutions pending adjudication; unique source-target reference edges",
+    "insulation_estimand": "observed same-term share / mean of per-permutation same-term shares; denominator = all distinct outgoing intra-corpus edges from source-term documents",
+    "null_strata": 12479,
+    "nodes_in_non_singleton_strata": 97615,
+    "degree_null": "period x venue category x log2(1+in-degree) x log2(1+out-degree) bins; approximate degree adjustment, not degree-preserving rewiring",
+    "flow_ratio_estimand": "count enrichment; distinct from insulation share ratio"
+  },
+  "predictions_trauma_case": {
+    "P1": "compounds distinct from bare trauma; insulation >> null",
+    "P2": "trauma-informed sub-communities align with practice vs care venues",
+    "P3": "PTSD continuous with bare trauma by citation",
+    "P4": "embarrassment condition: compounds continuous with parent"
+  }
+}

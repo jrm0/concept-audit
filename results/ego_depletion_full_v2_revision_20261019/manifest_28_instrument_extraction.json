@@ -1,0 +1,81 @@
+{
+  "script": "28_instrument_extraction",
+  "concept": "ego depletion",
+  "config": "configs/ego_depletion_revision_20261019.yaml",
+  "config_sha1": "7f2fed72e1b0",
+  "timestamp": "2026-10-19T12:49:34-04:00",
+  "git_commit": "5beeaba",
+  "git_dirty": true,
+  "argv": [
+    "--config",
+    "configs/ego_depletion_revision_20261019.yaml"
+  ],
+  "params": {
+    "min_n": 15,
+    "generic": true,
+    "seed_families": [
+      "anagram task",
+      "attention control task",
+      "barratt impulsiveness scale",
+      "behavior rating inventory of executive function",
+      "children s behavior questionnaire",
+      "cold pressor task",
+      "delay discounting task",
+      "dickman impulsivity inventory",
+      "effortful control scale",
+      "eysenck impulsiveness scale",
+      "go no go task",
+      "handgrip task",
+      "head toes knees shoulders task",
+      "implicit theories of willpower scale",
+      "letter crossing task",
+      "low self control scale",
+      "marshmallow test",
+      "motivated strategies for learning questionnaire",
+      "self control scale",
+      "self control schedule",
+      "self regulation questionnaire",
+      "self regulation scale",
+      "sequential task paradigm",
+      "short self regulation questionnaire",
+      "state self control capacity scale",
+      "stop signal task",
+      "stroop task",
+      "thought suppression task",
+      "trail making test",
+      "upps impulsive behavior scale",
+      "wisconsin card sorting test"
+    ],
+    "heads": [
+      "Scale",
+      "Inventory",
+      "Questionnaire",
+      "Checklist",
+      "Interview",
+      "Index",
+      "Schedule",
+      "Battery",
+      "Survey",
+      "Measure",
+      "Task",
+      "Paradigm",
+      "Test",
+      "Screen",
+      "Instrument",
+      "Subscale"
+    ]
+  },
+  "outputs": [
+    "results/ego_depletion_full_v2_revision_20261019/instrument_mentions.jsonl",
+    "results/ego_depletion_full_v2_revision_20261019/instrument_measures.json",
+    "results/ego_depletion_full_v2_revision_20261019/instrument_measures_report.txt"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.3.3",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "torch": "2.12.1",
+    "transformers": "5.12.1"
+  }
+}

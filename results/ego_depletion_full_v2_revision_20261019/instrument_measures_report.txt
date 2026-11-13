@@ -1,0 +1,208 @@
+INSTRUMENT / OPERATIONALISATION STRATUM — ego depletion  (cell floor 15; seed families 31; generic detection on)
+
+== most detected families (document count; how = seed / generic / acronym) ==
+  self control scale unspecified                               seed        331
+  self regulation questionnaire                                seed        267
+  stroop task                                                  seed        258
+  motivated strategies for learning questionnaire              seed        167
+  delay discounting task                                       seed        151
+  barratt impulsiveness scale                                  seed        145
+  self regulation scale                                        seed        145
+  self control scale                                           seed        142
+  self control schedule                                        seed        127
+  behavior rating inventory of executive function              seed         93
+  marshmallow test                                             seed         78
+  stop signal task                                             seed         69
+  head toes knees shoulders task                               seed         47
+  handgrip task                                                seed         46
+  anagram task                                                 seed         41
+  beck depression inventory                                    generic      36
+  short self regulation questionnaire                          seed         28
+  cold pressor task                                            seed         25
+  implicit theories of willpower scale                         seed         20
+  upps impulsive behavior scale                                seed         20
+  rotter s internal external locus of control scale            generic      20
+  child behavior checklist                                     generic      19
+  sequential task paradigm                                     seed         18
+  state trait anxiety inventory                                generic      17
+  trail making test                                            seed         16
+
+== self regulation ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  1975-1979     153    4.6%    10    1.000  0.900    0.239  byrne s repression sensitiza 1; ss on the tellegen absorptio 1; slosson intelligence test 1; mcgill pain questionnaire 1
+  1980-1984     304    2.6%     8    1.000  0.875    0.228  embedded figures test 1; cold pressor task 1; standard achievement test 1; stanford binet intelligence  1
+  1985-1989     447    1.6%     8    1.000  0.875    0.229  self control schedule 1; form b of the peabody pictur 1; self regulation questionnair 1; social avoidance and distres 1
+  1990-1994     692    2.6%    19    1.000  0.947    0.236  motivated strategies for lea 1; scores on the kendall wilcox 1; barratt impulsiveness scale 1; self control schedule 1
+  1995-1999    1378    4.0%    60    0.940  0.968    0.228  self regulation questionnair 9; motivated strategies for lea 7; anagram task 3; self regulation scale 3
+  2000-2004    1977    4.0%    76    0.933  0.970    0.218  self regulation questionnair 13; stroop task 6; anagram task 4; barratt impulsiveness scale 4
+  2005-2009    3157    5.3%   149    0.875  0.967    0.227  self regulation questionnair 29; motivated strategies for lea 24; stroop task 17; self regulation scale 8
+  2010-2014    4803    7.1%   246    0.860  0.974    0.218  motivated strategies for lea 51; self regulation questionnair 33; stroop task 23; self regulation scale 20
+  2015-2019    6156    8.4%   388    0.860  0.980    0.226  self regulation questionnair 64; motivated strategies for lea 48; self regulation scale 33; stroop task 30
+  2020-2024    7257    9.4%   543    0.850  0.976    0.206  self regulation questionnair 113; self regulation scale 78; motivated strategies for lea 31; stroop task 28
+  instrument dispersion vs concept breadth: Spearman rho = -0.802 (p = 0.0052, 10 periods); on first differences rho = 0.467 (p = 0.2054)
+  families (first period; versions by period):
+    self regulation questionnaire            first 1985-1989  2005-2009: base 29; 2010-2014: base 33; 2015-2019: base 64; 2020-2024: base 113
+    motivated strategies for learning questi first 1990-1994  2005-2009: base 24; 2010-2014: base 51; 2015-2019: base 48; 2020-2024: base 31
+    self regulation scale                    first 1995-1999  2005-2009: base 8; 2010-2014: base 20; 2015-2019: base 33; 2020-2024: base 78
+    stroop task                              first 1995-1999  2005-2009: base 17; 2010-2014: base 23; 2015-2019: base 30; 2020-2024: base 28
+    behavior rating inventory of executive f first 2000-2004  2005-2009: base 7; 2010-2014: base 9; 2015-2019: base 17; 2020-2024: base 25
+    barratt impulsiveness scale              first 1990-1994  2005-2009: base 4; 2010-2014: base 13, 11 4; 2015-2019: base 12, 11 1; 2020-2024: base 9, 11 2
+    head toes knees shoulders task           first 2005-2009  2005-2009: base 2; 2010-2014: base 9; 2015-2019: base 18; 2020-2024: base 18
+    marshmallow test                         first 1995-1999  2005-2009: base 2; 2010-2014: base 5; 2015-2019: base 14; 2020-2024: base 12
+
+== self control ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  1975-1979     486    9.0%    40    0.935  0.953    0.231  rotter s internal external l 8; cold pressor task 5; eysenck personality inventor 3; michigan alcoholism screenin 2
+  1980-1984     618    8.4%    38    0.916  0.950    0.221  self control schedule 7; rotter s internal external l 7; self control scale unspecifi 6; beck depression inventory 4
+  1985-1989     580    8.8%    45    0.864  0.921    0.227  self control schedule 19; self control scale unspecifi 7; cold pressor task 4; beck depression inventory 3
+  1990-1994     629    7.1%    38    0.873  0.910    0.232  self control schedule 16; self control scale unspecifi 3; delay discounting task 2; beck depression inventory 2
+  1995-1999     896   10.4%    90    0.885  0.953    0.209  self control schedule 25; self control scale unspecifi 11; rosenbaum s self control sch 4; beck depression inventory 4
+  2000-2004    1070    8.1%    87    0.906  0.962    0.203  self control schedule 18; self control scale unspecifi 12; self control rating scale 3; barratt impulsiveness scale 3
+  2005-2009    1949    7.6%   122    0.877  0.963    0.196  self control scale unspecifi 28; self control schedule 21; delay discounting task 9; barratt impulsiveness scale 7
+  2010-2014    2809   10.1%   205    0.839  0.967    0.203  self control scale unspecifi 46; stroop task 41; delay discounting task 24; self control schedule 14
+  2015-2019    3685   12.4%   250    0.783  0.959    0.193  self control scale unspecifi 85; stroop task 63; delay discounting task 48; barratt impulsiveness scale 35
+  2020-2024    4113   13.5%   378    0.784  0.951    0.189  self control scale unspecifi 132; self control scale 93; stroop task 38; delay discounting task 36
+  instrument dispersion vs concept breadth: Spearman rho = -0.564 (p = 0.0897, 10 periods); on first differences rho = -0.4 (p = 0.2861)
+  families (first period; versions by period):
+    self control scale unspecified           first 1975-1979  2005-2009: base 28; 2010-2014: base 46; 2015-2019: base 85; 2020-2024: base 132
+    stroop task                              first 1985-1989  2005-2009: base 4; 2010-2014: base 41; 2015-2019: base 63; 2020-2024: base 38
+    self control scale                       first 2005-2009  2005-2009: base 3; 2010-2014: base 12; 2015-2019: base 34; 2020-2024: base 93
+    self control schedule                    first 1980-1984  2000-2004: base 18; 2005-2009: base 21; 2010-2014: base 14; 2015-2019: base 7
+    delay discounting task                   first 1990-1994  2005-2009: base 9; 2010-2014: base 24; 2015-2019: base 48; 2020-2024: base 36
+    barratt impulsiveness scale              first 1995-1999  2005-2009: base 7, 11 2; 2010-2014: base 8, 11 4; 2015-2019: base 31, 11 12; 2020-2024: base 21, 11 10
+    stop signal task                         first 1995-1999  2005-2009: base 1; 2010-2014: base 7; 2015-2019: base 23; 2020-2024: base 12
+    marshmallow test                         first 1975-1979  2005-2009: base 3; 2010-2014: base 13; 2015-2019: base 13; 2020-2024: base 13
+
+== willpower ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  1985-1989      19    0.0%     0      nan    nan    0.207  
+  1990-1994      35    0.0%     0      nan    nan    0.273  
+  1995-1999      51    2.0%     1    0.000  0.000    0.210  learning test 1
+  2000-2004      76    1.3%     1    0.000  0.000    0.200  delay discounting task 1
+  2005-2009     144    4.2%     6    0.976  0.816    0.227  handgrip task 2; stroop task 1; boosting scholastic test 1; mental control interview 1
+  2010-2014     238    3.8%    10    0.979  0.889    0.217  delay discounting task 2; marshmallow test 2; implicit theories of willpow 1; delay of gratification test 1
+  2015-2019     277    9.8%    16    0.815  0.820    0.217  implicit theories of willpow 13; stroop task 4; letter crossing task 2; antifat attitudes questionna 2
+  2020-2024     299    9.0%    26    0.948  0.940    0.209  implicit theories of willpow 6; stroop task 2; marshmallow test 2; delay discounting task 2
+  instrument dispersion vs concept breadth: Spearman rho = 0.203 (p = 0.6998, 6 periods); on first differences rho = 0.4 (p = 0.5046)
+  families (first period; versions by period):
+    implicit theories of willpower scale     first 2010-2014  2010-2014: base 1; 2015-2019: base 13; 2020-2024: base 6
+    delay discounting task                   first 2000-2004  2000-2004: base 1; 2010-2014: base 2; 2015-2019: base 2; 2020-2024: base 2
+    stroop task                              first 2005-2009  2005-2009: base 1; 2015-2019: base 4; 2020-2024: base 2
+    marshmallow test                         first 2010-2014  2010-2014: base 2; 2020-2024: base 2
+    handgrip task                            first 2005-2009  2005-2009: base 2; 2020-2024: base 1
+    letter crossing task                     first 2015-2019  2015-2019: base 2
+    antifat attitudes scale                  first 2015-2019  2015-2019: base 1; 2020-2024: base 1
+    antifat attitudes questionnaire          first 2015-2019  2015-2019: base 2
+
+== executive function ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  2000-2004      26   19.2%     5    0.970  0.778    0.198  behavior rating inventory of 2; barratt impulsiveness scale 1; dimensional change card sort 1; stroop task 1
+  2005-2009      62   24.2%    23    0.910  0.907    0.178  behavior rating inventory of 8; stroop task 2; dysexecutive questionnaire 1; drinking survey 1
+  2010-2014     157   21.0%    21    0.840  0.876    0.188  behavior rating inventory of 13; stroop task 7; delay discounting task 4; head toes knees shoulders ta 4
+  2015-2019     256   15.2%    34    0.831  0.899    0.184  behavior rating inventory of 18; stroop task 9; behavior rating inventory 6; delay discounting task 4
+  2020-2024     291   19.6%    34    0.770  0.844    0.193  behavior rating inventory of 29; stroop task 8; behavior rating inventory 4; stop signal task 3
+  instrument dispersion vs concept breadth: Spearman rho = -1.0 (p = 0.0, 5 periods); on first differences rho = -0.8 (p = 0.2)
+  families (first period; versions by period):
+    behavior rating inventory of executive f first 2000-2004  2005-2009: base 8; 2010-2014: base 13; 2015-2019: base 18; 2020-2024: base 29
+    stroop task                              first 2000-2004  2005-2009: base 2; 2010-2014: base 7; 2015-2019: base 9; 2020-2024: base 8
+    behavior rating inventory                first 2000-2004  2000-2004: base 1; 2010-2014: base 2; 2015-2019: base 6; 2020-2024: base 4
+    barratt impulsiveness scale              first 2000-2004  2000-2004: base 1; 2005-2009: base 1, 11 1; 2010-2014: base 2, 11 2; 2015-2019: base 2
+    delay discounting task                   first 2010-2014  2010-2014: base 4; 2015-2019: base 4; 2020-2024: base 1
+    head toes knees shoulders task           first 2010-2014  2010-2014: base 4; 2015-2019: base 2; 2020-2024: base 3
+    marshmallow test                         first 2005-2009  2005-2009: base 1; 2015-2019: base 2; 2020-2024: base 2
+    stop signal task                         first 2010-2014  2010-2014: base 1; 2020-2024: base 3
+
+== ego depletion ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  2005-2009      43    7.0%     2    0.918  0.444    0.163  handgrip task 2; anagram task 1
+  2010-2014     120   11.7%     7    0.830  0.729    0.168  stroop task 7; delay discounting task 2; handgrip task 2; implicit theories of willpow 1
+  2015-2019     263   20.9%    17    0.829  0.853    0.156  stroop task 22; sequential task paradigm 7; letter crossing task 6; implicit theories of willpow 5
+  2020-2024     208   13.9%    17    0.755  0.765    0.151  stroop task 18; handgrip task 3; attention control task 2; sequential task paradigm 2
+  instrument dispersion vs concept breadth: Spearman rho = -0.6 (p = 0.4, 4 periods); on first differences rho = None (p = None)
+  families (first period; versions by period):
+    stroop task                              first 2000-2004  2000-2004: base 1; 2010-2014: base 7; 2015-2019: base 22; 2020-2024: base 18
+    handgrip task                            first 2000-2004  2005-2009: base 2; 2010-2014: base 2; 2015-2019: base 3; 2020-2024: base 3
+    sequential task paradigm                 first 2010-2014  2010-2014: base 1; 2015-2019: base 7; 2020-2024: base 2
+    anagram task                             first 1995-1999  1995-1999: base 1; 2005-2009: base 1; 2015-2019: base 5; 2020-2024: base 1
+    stop signal task                         first 2015-2019  2015-2019: base 5; 2020-2024: base 2
+    implicit theories of willpower scale     first 2010-2014  2010-2014: base 1; 2015-2019: base 5
+    letter crossing task                     first 2015-2019  2015-2019: base 6
+    attention control task                   first 2015-2019  2015-2019: base 3; 2020-2024: base 2
+
+== delay of gratification ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  1995-1999      16   25.0%     2    0.811  0.375    0.171  marshmallow test 3; kendall s self control ratin 1
+  2000-2004      21    4.8%     1    0.000  0.000    0.148  delay discounting task 1
+  2005-2009      29   20.7%     3    0.725  0.449    0.186  marshmallow test 5; self regulation questionnair 1; short self regulation questi 1
+  2010-2014      66   34.8%     9    0.733  0.705    0.162  marshmallow test 13; delay discounting task 6; self control scale unspecifi 2; delay of gratification test 1
+  2015-2019      79   36.7%    11    0.640  0.642    0.167  marshmallow test 22; delay discounting task 7; stroop task 2; handgrip task 1
+  2020-2024      67   43.3%    10    0.619  0.576    0.172  marshmallow test 23; home food inventory 2; power of food scale 2; barratt impulsiveness scale 2
+  instrument dispersion vs concept breadth: Spearman rho = 0.029 (p = 0.9572, 6 periods); on first differences rho = 0.4 (p = 0.5046)
+  families (first period; versions by period):
+    marshmallow test                         first 1975-1979  2005-2009: base 5; 2010-2014: base 13; 2015-2019: base 22; 2020-2024: base 23
+    delay discounting task                   first 2000-2004  2000-2004: base 1; 2010-2014: base 6; 2015-2019: base 7
+    stroop task                              first 2015-2019  2015-2019: base 2; 2020-2024: base 2
+    self control scale unspecified           first 2010-2014  2010-2014: base 2
+    barratt impulsiveness scale              first 2020-2024  2020-2024: base 2
+    power of food scale                      first 2020-2024  2020-2024: base 2
+    home food inventory                      first 2020-2024  2020-2024: base 2
+    mischel s delay of reward choices questi first 1975-1979  1975-1979: base 1
+
+== strength model ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  2005-2009      20   15.0%     2    1.000  0.500    0.191  handgrip task 2; stroop task 2
+  2010-2014      41   17.1%     5    0.914  0.740    0.194  stroop task 4; handgrip task 2; sequential task paradigm 2; wisconsin card sorting test 1
+  2015-2019      70   18.6%     9    0.971  0.875    0.169  stroop task 3; implicit theories of willpow 2; self control scale unspecifi 2; delay discounting task 2
+  2020-2024      38   15.8%     6    0.931  0.781    0.180  stroop task 3; sequential task paradigm 1; handgrip task 1; self control scale unspecifi 1
+  instrument dispersion vs concept breadth: Spearman rho = -0.8 (p = 0.2, 4 periods); on first differences rho = None (p = None)
+  families (first period; versions by period):
+    stroop task                              first 2005-2009  2005-2009: base 2; 2010-2014: base 4; 2015-2019: base 3; 2020-2024: base 3
+    handgrip task                            first 2005-2009  2005-2009: base 2; 2010-2014: base 2; 2015-2019: base 2; 2020-2024: base 1
+    sequential task paradigm                 first 2010-2014  2010-2014: base 2; 2015-2019: base 2; 2020-2024: base 1
+    self control scale unspecified           first 2015-2019  2015-2019: base 2; 2020-2024: base 1
+    anagram task                             first 1995-1999  1995-1999: base 1; 2015-2019: base 1
+    stop signal task                         first 2010-2014  2010-2014: base 1; 2015-2019: base 1
+    implicit theories of willpower scale     first 2015-2019  2015-2019: base 2
+    delay discounting task                   first 2015-2019  2015-2019: base 2
+
+== self control depletion ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  2010-2014      29   31.0%     4    0.894  0.684    0.171  stroop task 6; handgrip task 4; thought suppression task 3; wisconsin card sorting test 1
+  2015-2019      35   17.1%     4    0.906  0.688    0.166  stroop task 3; handgrip task 3; delay discounting task 1; realistic task 1
+  2020-2024      22    9.1%     1    0.000  0.000    0.172  stroop task 2
+  families (first period; versions by period):
+    stroop task                              first 2010-2014  2010-2014: base 6; 2015-2019: base 3; 2020-2024: base 2
+    handgrip task                            first 2010-2014  2010-2014: base 4; 2015-2019: base 3
+    thought suppression task                 first 2010-2014  2010-2014: base 3
+    delay discounting task                   first 2005-2009  2005-2009: base 1; 2015-2019: base 1
+    wisconsin card sorting test              first 2010-2014  2010-2014: base 1
+    realistic task                           first 2015-2019  2015-2019: base 1
+
+== depletion effect ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  2010-2014      17   17.6%     2    0.811  0.375    0.161  stroop task 3; handgrip task 1
+  2015-2019      44   25.0%     9    0.921  0.833    0.179  stroop task 4; attention control task 1; letter crossing task 1; self control scale unspecifi 1
+  2020-2024      18   27.8%     4    0.832  0.612    0.209  stroop task 4; anagram task 1; stop signal task 1; sequential task paradigm 1
+  families (first period; versions by period):
+    stroop task                              first 2010-2014  2010-2014: base 3; 2015-2019: base 4; 2020-2024: base 4
+    handgrip task                            first 2005-2009  2005-2009: base 1; 2010-2014: base 1; 2015-2019: base 1
+    stop signal task                         first 2015-2019  2015-2019: base 1; 2020-2024: base 1
+    attention control task                   first 2015-2019  2015-2019: base 1
+    letter crossing task                     first 2015-2019  2015-2019: base 1
+    self control scale unspecified           first 2015-2019  2015-2019: base 1
+    precision effect test                    first 2015-2019  2015-2019: base 1
+    realistic task                           first 2015-2019  2015-2019: base 1
+
+== self regulatory depletion ==
+  period          n  named%  fams  entropy  1-HHI  breadth  top families
+  2010-2014      22   18.2%     3    0.946  0.625    0.180  stroop task 2; anagram task 1; attention control task 1
+  2015-2019      19   21.1%     4    0.961  0.720    0.171  stop signal task 2; delay discounting task 1; stroop task 1; anagram task 1
+  families (first period; versions by period):
+    stroop task                              first 2005-2009  2005-2009: base 1; 2010-2014: base 2; 2015-2019: base 1
+    anagram task                             first 2000-2004  2000-2004: base 1; 2010-2014: base 1; 2015-2019: base 1
+    stop signal task                         first 2015-2019  2015-2019: base 2
+    thought suppression task                 first 2000-2004  2000-2004: base 1
+    attention control task                   first 2010-2014  2010-2014: base 1
+    delay discounting task                   first 2015-2019  2015-2019: base 1
+
+Reading guide: named% = share of documents mentioning the term that name any instrument (operationalised vs colloquial usage); 1-HHI = instrument dispersion (0 = one instrument, ->1 = many equally); breadth = 29's masked-target document breadth for the same cell. Families collapse versions (PCL / PCL-C / PCL-5). Read the paired correlation on first differences: both series trend, so the level correlation is not evidence of coupling.

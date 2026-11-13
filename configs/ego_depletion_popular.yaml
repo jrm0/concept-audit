@@ -1,0 +1,159 @@
+# configs/ego_depletion_popular.yaml — the POPULAR STRATUM of the ego-depletion
+# / self-control family (Session 33, 2026-09-16). News contexts, own lineage.
+#
+# Same design as ptsd_trauma_popular.yaml (see its header for why a separate
+# config): principle 7 by construction; news-register control terms; the same
+# SciBERT model so drift is commensurable with the journal stratum; every
+# script reused. Compare on OUTPUTS, never on pooled vectors.
+#
+# THE QUESTION THIS STRATUM ANSWERS (Jonathan, 2026-09-16): the journal
+# stratum showed the correction being filtered at the disciplinary boundary
+# (Session 18: core psych cited the RRRs, applied literatures largely did
+# not). The lay press is the next register out. Jonathan's expectation: the
+# replication-crisis coverage mentioned ego depletion fairly regularly — so
+# the CORRECTION should be visible in the ego-depletion documents. The open
+# question is the PARENT: did "self-control" (and "willpower") keep
+# circulating unchanged — stable-under-looping in the lay register while the
+# daughter was contested? Written down before retrieval; scored later.
+#   E1  ego depletion appears in the press only after 1998, with a lag; its
+#       document count peaks around 2011 (trade book) and 2016 (RRR).
+#   E2  correction visibility: from 2016 on, a substantial share of
+#       ego-depletion documents co-mention replication/failed/crumbling
+#       (measure to add: keyword co-occurrence per document, 20-style).
+#   E3  self-control and willpower show no drift step across 2014–2021 in
+#       the lay register (drift within the control envelope; no supported
+#       non-frame split) — the parent circulates unchanged.
+#   E4  willpower's contexts stay in the strength/muscle/resource frame after
+#       2016 (read samples) — the folk model survives its scientific
+#       correction.
+#
+# Retrieval order matters for the NYT daily cap: "ego depletion" (tiny, the
+# key one), "willpower" (moderate), "self-regulation" (small in lay text),
+# "delay of gratification" (small), then "self-control" (a common lay word —
+# NYT-expensive; run last, or year-limited with --years). Guardian can take
+# them all at once.
+
+concept: ego depletion
+slug: ego_depletion_popular
+
+family_csv: families/ego_depletion_family.csv
+ris_root: null
+family_works_glob: null
+docs_path: data/ego_depletion_popular/lineage_docs.jsonl
+emb_dir: data/ego_depletion_popular/lineage_emb
+citations_cache: null
+results_dir: results/ego_depletion_popular
+
+corpus:
+  platform: "Guardian Open Platform API; NYT Article Search API (+ Google Books Ngram salience)"
+  exported: null
+  expanders: []
+  fields: [headline, abstract/lead paragraph, body text (Guardian only)]
+  limiters: []
+  language_filter: english
+  document_type_filter: "articles (client-side document_type=article for NYT; type=article for Guardian)"
+  queries:
+    popular_terms: ["ego depletion", "willpower", "self-regulation", "delay of gratification",
+                    "self-control"]
+  exclusions:
+    - {term: "self-control in non-psychological senses (industry self-regulation; fiscal self-control; 'self-control' of a machine)", why: "NOT filtered at retrieval — the lay word's sense mix IS the object; 'self-regulation' in news is dominated by industry/press self-regulation, and that share by period is reported, not removed. Expect a large regulatory cluster for self-regulation."}
+    - {habitat: "UK vs US register", why: "Guardian (UK) and NYT (US) kept as separate DB tags; compared, never pooled without saying so"}
+    - {habitat: "self-help books, podcasts, social media", why: "not sampled; the folk model of willpower lives there too — a limit on the map"}
+  strata:
+    popular: [NEWS]
+    journal: [JOUR]
+  sources:
+    - id: guardian
+      files: ["data/ego_depletion_popular/news_guardian_*.jsonl"]
+      databases: [Guardian]
+      query: popular_terms
+      dates: 1999-2025
+      role: popular
+      question: "UK lay usage with full body text across the coinage, the trade-book peak and both RRRs"
+      n_records: null
+    - id: nyt
+      files: ["data/ego_depletion_popular/news_nyt_*.jsonl"]
+      databases: [NYT]
+      query: popular_terms
+      dates: 1975-2025
+      role: popular
+      question: "US record back to the pre-coinage era (headline + abstract + lead paragraph only)"
+      n_records: null
+  ignore: []
+  audit:
+    min_abstract_share: 0.95
+    warn_if_dedupe_share_above: 0.30
+
+periods:
+  year_min: 1975
+  year_max: 2025
+  width: 5
+
+control_terms: [people, year, city, family]
+
+mentions:
+  exclude_nested: true
+  strip_acronym_parentheticals: true
+  exclude_hyphen_prefixed: true
+  min_sentence_chars: 12
+
+embedding:
+  model: allenai/scibert_scivocab_uncased
+  max_length: 256
+  max_sent_per_doc: 3
+  cap_per_term_period: null
+  control_cap: 300
+  seed: 42
+
+analysis:
+  syntax_flag_diff: 0.5
+  min_n: 15
+  cluster_min_n: 60
+  max_k: 4
+  n_sample_titles: 10
+  seed: 42
+  equalize_n: 250
+  equalize_reps: 100
+
+# Dated events for the lay register. The 2011 trade book and the 2016 press
+# coverage are LEADS — verify dates/venues before they appear in print.
+events:
+  1998: "coinage (Baumeister et al. 1998)"
+  2011: "trade book 'Willpower' (Baumeister & Tierney) — verify"
+  2016: "Registered Replication Report + press coverage ('everything is crumbling') — verify"
+  2021: "second RRR (Vohs et al.)"
+event_short_labels: {1998: coinage, 2011: book, 2016: RRR, 2021: "RRR 2"}
+
+key_pairs:
+  - [ego depletion, self control]
+  - [ego depletion, willpower]
+  - [willpower, self control]
+  - [self control, self regulation]
+  - [self control, delay of gratification]
+
+figures:
+  trajectory_terms: [ego depletion, willpower, self control, self regulation, delay of gratification]
+  trajectory_min_docs: 60
+  drift_terms:
+    - [willpower, crimson]
+    - [self control, navy]
+    - [ego depletion, "0.45"]
+  distance_pairs:
+    - [ego depletion, self control, navy]
+    - [willpower, self control, crimson]
+
+# Venue categories = news sections (16 stores the section in `journal`).
+venue_categories:
+  - name: world/politics
+    pattern: "world|politics|us news|uk news|international|foreign|washington"
+  - name: health/science
+    pattern: "health|science|well|medicine|wellness"
+  - name: culture/arts
+    pattern: "culture|arts|books|film|music|television|theatre|theater|movies|review"
+  - name: sport
+    pattern: "sport|football|soccer|baseball|basketball|olympic"
+  - name: business/money
+    pattern: "business|money|economy|finance|technology|jobs"
+  - name: lifestyle/opinion
+    pattern: "lifestyle|opinion|comment|society|education|family|life|style|magazine|fashion|food|travel"
+core_label: news/other

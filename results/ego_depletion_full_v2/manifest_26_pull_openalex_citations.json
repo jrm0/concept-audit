@@ -1,0 +1,44 @@
+{
+  "script": "26_pull_openalex_citations",
+  "concept": "ego depletion",
+  "config": "configs/ego_depletion.yaml",
+  "config_sha1": "e150f30e44af",
+  "timestamp": "2026-10-01T13:18:04-04:00",
+  "git_commit": "5beeaba",
+  "git_dirty": true,
+  "argv": [
+    "--config",
+    "configs/ego_depletion.yaml",
+    "--phase",
+    "titles",
+    "--allow-search",
+    "--limit",
+    "200"
+  ],
+  "params": {
+    "phase": "titles",
+    "credit_budget": 90000,
+    "min_cited_by": 1,
+    "max_works": null,
+    "title_sim": 0.92,
+    "year_slack": 1,
+    "credits_spent_this_run": 25860
+  },
+  "outputs": [
+    "data/family/citations/openalex_works.jsonl",
+    "data/family/citations/crossref_dois.jsonl",
+    "data/family/citations/openalex_cites.jsonl",
+    "data/family/citations/unresolved.jsonl",
+    "data/family/citations/retrieval_log.jsonl"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "diptest": "0.11.0",
+    "torch": "2.12.0",
+    "transformers": "5.13.0"
+  },
+  "notes": "OpenAlex credit model since 2026-02-13; list request = 10 credits. Intra-corpus edges are complete from the outbound pass."
+}

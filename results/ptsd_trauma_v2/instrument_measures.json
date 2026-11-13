@@ -1,0 +1,7376 @@
+{
+ "settings": {
+  "min_n": 15,
+  "generic": true,
+  "seed_families": [
+   "abbreviated injury scale",
+   "adverse childhood experiences",
+   "attitudes related to trauma informed care",
+   "beck depression inventory",
+   "biological measure",
+   "child ptsd symptom scale",
+   "childhood trauma questionnaire",
+   "clinician administered ptsd scale",
+   "davidson trauma scale",
+   "dissociative experiences scale",
+   "glasgow coma scale",
+   "harvard trauma questionnaire",
+   "impact of event scale",
+   "injury severity score",
+   "international trauma questionnaire",
+   "inventory of complicated grief",
+   "life events checklist",
+   "mississippi scale",
+   "moral injury events scale",
+   "moral injury symptom scale",
+   "patient health questionnaire",
+   "posttraumatic diagnostic scale",
+   "posttraumatic growth inventory",
+   "primary care ptsd screen",
+   "professional quality of life scale",
+   "prolonged grief disorder scale",
+   "ptsd checklist",
+   "ptsd symptom scale",
+   "secondary traumatic stress scale",
+   "structured clinical interview for dsm",
+   "texas revised inventory of grief",
+   "trauma and attachment belief scale",
+   "trauma history questionnaire",
+   "trauma symptom checklist",
+   "trauma symptom inventory",
+   "traumatic events questionnaire",
+   "ucla ptsd reaction index"
+  ],
+  "heads": [
+   "Scale",
+   "Inventory",
+   "Questionnaire",
+   "Checklist",
+   "Interview",
+   "Index",
+   "Schedule",
+   "Battery",
+   "Survey",
+   "Measure",
+   "Task",
+   "Paradigm",
+   "Test",
+   "Screen",
+   "Instrument",
+   "Subscale"
+  ]
+ },
+ "periods": [
+  "1965-1969",
+  "1970-1974",
+  "1975-1979",
+  "1980-1984",
+  "1985-1989",
+  "1990-1994",
+  "1995-1999",
+  "2000-2004",
+  "2005-2009",
+  "2010-2014",
+  "2015-2019",
+  "2020-2024",
+  "2025-2025"
+ ],
+ "table": {
+  "trauma": {
+   "1965-1969": {
+    "n_docs": 111,
+    "share_naming_instrument": 0.0991,
+    "n_families": 4,
+    "n_mentions": 13,
+    "entropy": 0.5726,
+    "dispersion_1_minus_hhi": 0.3905,
+    "top_families": [
+     [
+      "biological measure",
+      10
+     ],
+     [
+      "wishes and fears inventory",
+      1
+     ],
+     [
+      "benton visual retention test",
+      1
+     ],
+     [
+      "auditory word learning test",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2496
+   },
+   "1970-1974": {
+    "n_docs": 141,
+    "share_naming_instrument": 0.0142,
+    "n_families": 2,
+    "n_mentions": 2,
+    "entropy": 1.0,
+    "dispersion_1_minus_hhi": 0.5,
+    "top_families": [
+     [
+      "newman keuls test",
+      1
+     ],
+     [
+      "biological measure",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2562
+   },
+   "1975-1979": {
+    "n_docs": 288,
+    "share_naming_instrument": 0.0521,
+    "n_families": 10,
+    "n_mentions": 18,
+    "entropy": 0.7782,
+    "dispersion_1_minus_hhi": 0.7222,
+    "top_families": [
+     [
+      "biological measure",
+      9
+     ],
+     [
+      "beck depression inventory",
+      1
+     ],
+     [
+      "rotter s internal external locus of control scale",
+      1
+     ],
+     [
+      "wesley rigidity inventory",
+      1
+     ],
+     [
+      "glasgow coma scale",
+      1
+     ],
+     [
+      "hand test",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2763
+   },
+   "1980-1984": {
+    "n_docs": 533,
+    "share_naming_instrument": 0.0432,
+    "n_families": 13,
+    "n_mentions": 26,
+    "entropy": 0.8043,
+    "dispersion_1_minus_hhi": 0.7988,
+    "top_families": [
+     [
+      "biological measure",
+      10
+     ],
+     [
+      "beck depression inventory",
+      5
+     ],
+     [
+      "wide range achievement test",
+      1
+     ],
+     [
+      "bender gestalt test",
+      1
+     ],
+     [
+      "trail making test",
+      1
+     ],
+     [
+      "narratives test",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2721
+   },
+   "1985-1989": {
+    "n_docs": 1177,
+    "share_naming_instrument": 0.0535,
+    "n_families": 25,
+    "n_mentions": 74,
+    "entropy": 0.7666,
+    "dispersion_1_minus_hhi": 0.8455,
+    "top_families": [
+     [
+      "injury severity score",
+      24
+     ],
+     [
+      "biological measure",
+      13
+     ],
+     [
+      "glasgow coma scale",
+      7
+     ],
+     [
+      "impact of event scale",
+      3
+     ],
+     [
+      "wechsler adult intelligence scale",
+      3
+     ],
+     [
+      "abbreviated injury scale",
+      3
+     ]
+    ],
+    "breadth_masked": 0.2702
+   },
+   "1990-1994": {
+    "n_docs": 2140,
+    "share_naming_instrument": 0.0925,
+    "n_families": 55,
+    "n_mentions": 248,
+    "entropy": 0.698,
+    "dispersion_1_minus_hhi": 0.8777,
+    "top_families": [
+     [
+      "injury severity score",
+      67
+     ],
+     [
+      "biological measure",
+      40
+     ],
+     [
+      "glasgow coma scale",
+      24
+     ],
+     [
+      "impact of event scale",
+      15
+     ],
+     [
+      "abbreviated injury scale",
+      15
+     ],
+     [
+      "dissociative experiences scale",
+      13
+     ]
+    ],
+    "breadth_masked": 0.2637
+   },
+   "1995-1999": {
+    "n_docs": 3419,
+    "share_naming_instrument": 0.1214,
+    "n_families": 160,
+    "n_mentions": 569,
+    "entropy": 0.7495,
+    "dispersion_1_minus_hhi": 0.9479,
+    "top_families": [
+     [
+      "injury severity score",
+      68
+     ],
+     [
+      "biological measure",
+      67
+     ],
+     [
+      "impact of event scale",
+      55
+     ],
+     [
+      "dissociative experiences scale",
+      37
+     ],
+     [
+      "glasgow coma scale",
+      28
+     ],
+     [
+      "trauma symptom checklist",
+      26
+     ]
+    ],
+    "breadth_masked": 0.2562
+   },
+   "2000-2004": {
+    "n_docs": 5480,
+    "share_naming_instrument": 0.1265,
+    "n_families": 220,
+    "n_mentions": 1006,
+    "entropy": 0.7092,
+    "dispersion_1_minus_hhi": 0.9473,
+    "top_families": [
+     [
+      "biological measure",
+      151
+     ],
+     [
+      "impact of event scale",
+      99
+     ],
+     [
+      "injury severity score",
+      61
+     ],
+     [
+      "childhood trauma questionnaire",
+      58
+     ],
+     [
+      "dissociative experiences scale",
+      53
+     ],
+     [
+      "clinician administered ptsd scale",
+      44
+     ]
+    ],
+    "breadth_masked": 0.2428
+   },
+   "2005-2009": {
+    "n_docs": 8634,
+    "share_naming_instrument": 0.1433,
+    "n_families": 402,
+    "n_mentions": 1790,
+    "entropy": 0.6979,
+    "dispersion_1_minus_hhi": 0.9499,
+    "top_families": [
+     [
+      "biological measure",
+      310
+     ],
+     [
+      "childhood trauma questionnaire",
+      121
+     ],
+     [
+      "impact of event scale",
+      105
+     ],
+     [
+      "injury severity score",
+      76
+     ],
+     [
+      "clinician administered ptsd scale",
+      72
+     ],
+     [
+      "structured clinical interview for dsm",
+      70
+     ]
+    ],
+    "breadth_masked": 0.2404
+   },
+   "2010-2014": {
+    "n_docs": 12165,
+    "share_naming_instrument": 0.1719,
+    "n_families": 599,
+    "n_mentions": 3122,
+    "entropy": 0.6587,
+    "dispersion_1_minus_hhi": 0.9452,
+    "top_families": [
+     [
+      "biological measure",
+      541
+     ],
+     [
+      "childhood trauma questionnaire",
+      329
+     ],
+     [
+      "impact of event scale",
+      175
+     ],
+     [
+      "ptsd checklist",
+      155
+     ],
+     [
+      "clinician administered ptsd scale",
+      109
+     ],
+     [
+      "beck depression inventory",
+      105
+     ]
+    ],
+    "breadth_masked": 0.2518
+   },
+   "2015-2019": {
+    "n_docs": 16075,
+    "share_naming_instrument": 0.1907,
+    "n_families": 860,
+    "n_mentions": 4874,
+    "entropy": 0.6329,
+    "dispersion_1_minus_hhi": 0.9466,
+    "top_families": [
+     [
+      "biological measure",
+      702
+     ],
+     [
+      "childhood trauma questionnaire",
+      643
+     ],
+     [
+      "ptsd checklist",
+      345
+     ],
+     [
+      "adverse childhood experiences",
+      235
+     ],
+     [
+      "clinician administered ptsd scale",
+      196
+     ],
+     [
+      "impact of event scale",
+      184
+     ]
+    ],
+    "breadth_masked": 0.2473
+   },
+   "2020-2024": {
+    "n_docs": 22528,
+    "share_naming_instrument": 0.2063,
+    "n_families": 1306,
+    "n_mentions": 7674,
+    "entropy": 0.6118,
+    "dispersion_1_minus_hhi": 0.9458,
+    "top_families": [
+     [
+      "childhood trauma questionnaire",
+      1130
+     ],
+     [
+      "biological measure",
+      788
+     ],
+     [
+      "adverse childhood experiences",
+      684
+     ],
+     [
+      "ptsd checklist",
+      675
+     ],
+     [
+      "patient health questionnaire",
+      319
+     ],
+     [
+      "clinician administered ptsd scale",
+      256
+     ]
+    ],
+    "breadth_masked": 0.2416
+   },
+   "2025-2025": {
+    "n_docs": 5112,
+    "share_naming_instrument": 0.1817,
+    "n_families": 414,
+    "n_mentions": 1526,
+    "entropy": 0.694,
+    "dispersion_1_minus_hhi": 0.9444,
+    "top_families": [
+     [
+      "childhood trauma questionnaire",
+      244
+     ],
+     [
+      "ptsd checklist",
+      151
+     ],
+     [
+      "adverse childhood experiences",
+      144
+     ],
+     [
+      "biological measure",
+      114
+     ],
+     [
+      "patient health questionnaire",
+      67
+     ],
+     [
+      "clinician administered ptsd scale",
+      43
+     ]
+    ],
+    "breadth_masked": 0.2328
+   }
+  },
+  "PTSD": {
+   "1980-1984": {
+    "n_docs": 105,
+    "share_naming_instrument": 0.0476,
+    "n_families": 5,
+    "n_mentions": 8,
+    "entropy": 0.969,
+    "dispersion_1_minus_hhi": 0.7812,
+    "top_families": [
+     [
+      "beck depression inventory",
+      2
+     ],
+     [
+      "biological measure",
+      2
+     ],
+     [
+      "impact of event scale",
+      2
+     ],
+     [
+      "self rating depression scale",
+      1
+     ],
+     [
+      "state trait anxiety inventory",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1539
+   },
+   "1985-1989": {
+    "n_docs": 569,
+    "share_naming_instrument": 0.1178,
+    "n_families": 26,
+    "n_mentions": 77,
+    "entropy": 0.7637,
+    "dispersion_1_minus_hhi": 0.8555,
+    "top_families": [
+     [
+      "biological measure",
+      23
+     ],
+     [
+      "impact of event scale",
+      13
+     ],
+     [
+      "minnesota multiphasic personality inventory",
+      8
+     ],
+     [
+      "beck depression inventory",
+      8
+     ],
+     [
+      "mississippi scale",
+      2
+     ],
+     [
+      "state trait anxiety inventory",
+      2
+     ]
+    ],
+    "breadth_masked": 0.1663
+   },
+   "1990-1994": {
+    "n_docs": 1190,
+    "share_naming_instrument": 0.1269,
+    "n_families": 57,
+    "n_mentions": 199,
+    "entropy": 0.7305,
+    "dispersion_1_minus_hhi": 0.8939,
+    "top_families": [
+     [
+      "biological measure",
+      45
+     ],
+     [
+      "impact of event scale",
+      33
+     ],
+     [
+      "mississippi scale",
+      25
+     ],
+     [
+      "beck depression inventory",
+      14
+     ],
+     [
+      "structured clinical interview for dsm",
+      9
+     ],
+     [
+      "dissociative experiences scale",
+      8
+     ]
+    ],
+    "breadth_masked": 0.1814
+   },
+   "1995-1999": {
+    "n_docs": 2097,
+    "share_naming_instrument": 0.1917,
+    "n_families": 139,
+    "n_mentions": 581,
+    "entropy": 0.6885,
+    "dispersion_1_minus_hhi": 0.9187,
+    "top_families": [
+     [
+      "biological measure",
+      107
+     ],
+     [
+      "impact of event scale",
+      93
+     ],
+     [
+      "mississippi scale",
+      44
+     ],
+     [
+      "beck depression inventory",
+      43
+     ],
+     [
+      "clinician administered ptsd scale",
+      38
+     ],
+     [
+      "structured clinical interview for dsm",
+      24
+     ]
+    ],
+    "breadth_masked": 0.1857
+   },
+   "2000-2004": {
+    "n_docs": 3646,
+    "share_naming_instrument": 0.2002,
+    "n_families": 209,
+    "n_mentions": 1104,
+    "entropy": 0.6619,
+    "dispersion_1_minus_hhi": 0.9235,
+    "top_families": [
+     [
+      "biological measure",
+      200
+     ],
+     [
+      "impact of event scale",
+      143
+     ],
+     [
+      "clinician administered ptsd scale",
+      129
+     ],
+     [
+      "ptsd checklist",
+      69
+     ],
+     [
+      "beck depression inventory",
+      59
+     ],
+     [
+      "structured clinical interview for dsm",
+      53
+     ]
+    ],
+    "breadth_masked": 0.1782
+   },
+   "2005-2009": {
+    "n_docs": 5746,
+    "share_naming_instrument": 0.2205,
+    "n_families": 405,
+    "n_mentions": 1944,
+    "entropy": 0.6617,
+    "dispersion_1_minus_hhi": 0.9373,
+    "top_families": [
+     [
+      "biological measure",
+      321
+     ],
+     [
+      "impact of event scale",
+      223
+     ],
+     [
+      "ptsd checklist",
+      174
+     ],
+     [
+      "clinician administered ptsd scale",
+      166
+     ],
+     [
+      "structured clinical interview for dsm",
+      90
+     ],
+     [
+      "beck depression inventory",
+      67
+     ]
+    ],
+    "breadth_masked": 0.1858
+   },
+   "2010-2014": {
+    "n_docs": 8652,
+    "share_naming_instrument": 0.232,
+    "n_families": 565,
+    "n_mentions": 3153,
+    "entropy": 0.6257,
+    "dispersion_1_minus_hhi": 0.9328,
+    "top_families": [
+     [
+      "biological measure",
+      475
+     ],
+     [
+      "ptsd checklist",
+      473
+     ],
+     [
+      "impact of event scale",
+      318
+     ],
+     [
+      "clinician administered ptsd scale",
+      236
+     ],
+     [
+      "beck depression inventory",
+      132
+     ],
+     [
+      "structured clinical interview for dsm",
+      114
+     ]
+    ],
+    "breadth_masked": 0.1754
+   },
+   "2015-2019": {
+    "n_docs": 11277,
+    "share_naming_instrument": 0.2437,
+    "n_families": 716,
+    "n_mentions": 4684,
+    "entropy": 0.5986,
+    "dispersion_1_minus_hhi": 0.9225,
+    "top_families": [
+     [
+      "ptsd checklist",
+      949
+     ],
+     [
+      "biological measure",
+      632
+     ],
+     [
+      "clinician administered ptsd scale",
+      388
+     ],
+     [
+      "impact of event scale",
+      365
+     ],
+     [
+      "patient health questionnaire",
+      181
+     ],
+     [
+      "beck depression inventory",
+      178
+     ]
+    ],
+    "breadth_masked": 0.1745
+   },
+   "2020-2024": {
+    "n_docs": 14200,
+    "share_naming_instrument": 0.2779,
+    "n_families": 1085,
+    "n_mentions": 7221,
+    "entropy": 0.571,
+    "dispersion_1_minus_hhi": 0.9141,
+    "top_families": [
+     [
+      "ptsd checklist",
+      1747
+     ],
+     [
+      "biological measure",
+      657
+     ],
+     [
+      "patient health questionnaire",
+      560
+     ],
+     [
+      "impact of event scale",
+      533
+     ],
+     [
+      "clinician administered ptsd scale",
+      491
+     ],
+     [
+      "adverse childhood experiences",
+      195
+     ]
+    ],
+    "breadth_masked": 0.1852
+   },
+   "2025-2025": {
+    "n_docs": 2660,
+    "share_naming_instrument": 0.2805,
+    "n_families": 286,
+    "n_mentions": 1377,
+    "entropy": 0.6371,
+    "dispersion_1_minus_hhi": 0.8984,
+    "top_families": [
+     [
+      "ptsd checklist",
+      383
+     ],
+     [
+      "patient health questionnaire",
+      124
+     ],
+     [
+      "biological measure",
+      99
+     ],
+     [
+      "clinician administered ptsd scale",
+      87
+     ],
+     [
+      "impact of event scale",
+      77
+     ],
+     [
+      "adverse childhood experiences",
+      55
+     ]
+    ],
+    "breadth_masked": 0.1791
+   }
+  },
+  "bereavement": {
+   "1965-1969": {
+    "n_docs": 24,
+    "share_naming_instrument": 0.0,
+    "n_families": 0,
+    "n_mentions": 0,
+    "entropy": null,
+    "dispersion_1_minus_hhi": null,
+    "top_families": [],
+    "breadth_masked": 0.1865
+   },
+   "1970-1974": {
+    "n_docs": 32,
+    "share_naming_instrument": 0.0,
+    "n_families": 0,
+    "n_mentions": 0,
+    "entropy": null,
+    "dispersion_1_minus_hhi": null,
+    "top_families": [],
+    "breadth_masked": 0.1802
+   },
+   "1975-1979": {
+    "n_docs": 89,
+    "share_naming_instrument": 0.0112,
+    "n_families": 1,
+    "n_mentions": 1,
+    "entropy": 0.0,
+    "dispersion_1_minus_hhi": 0.0,
+    "top_families": [
+     [
+      "malaise inventory",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1936
+   },
+   "1980-1984": {
+    "n_docs": 188,
+    "share_naming_instrument": 0.0479,
+    "n_families": 6,
+    "n_mentions": 9,
+    "entropy": 0.9359,
+    "dispersion_1_minus_hhi": 0.7901,
+    "top_families": [
+     [
+      "beck depression inventory",
+      3
+     ],
+     [
+      "biological measure",
+      2
+     ],
+     [
+      "texas inventory",
+      1
+     ],
+     [
+      "examines the social readjustment rating scale",
+      1
+     ],
+     [
+      "self rating depression scale",
+      1
+     ],
+     [
+      "goldberg s general health questionnaire",
+      1
+     ]
+    ],
+    "breadth_masked": 0.202
+   },
+   "1985-1989": {
+    "n_docs": 360,
+    "share_naming_instrument": 0.0361,
+    "n_families": 8,
+    "n_mentions": 14,
+    "entropy": 0.8882,
+    "dispersion_1_minus_hhi": 0.8061,
+    "top_families": [
+     [
+      "biological measure",
+      4
+     ],
+     [
+      "beck depression inventory",
+      4
+     ],
+     [
+      "center for epidemiologic studies depression scale",
+      1
+     ],
+     [
+      "structured clinical interview for dsm",
+      1
+     ],
+     [
+      "scores on the beck depression inventory",
+      1
+     ],
+     [
+      "children s depression rating scale",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2094
+   },
+   "1990-1994": {
+    "n_docs": 516,
+    "share_naming_instrument": 0.0562,
+    "n_families": 15,
+    "n_mentions": 34,
+    "entropy": 0.8487,
+    "dispersion_1_minus_hhi": 0.8547,
+    "top_families": [
+     [
+      "beck depression inventory",
+      10
+     ],
+     [
+      "impact of event scale",
+      6
+     ],
+     [
+      "texas revised inventory of grief",
+      3
+     ],
+     [
+      "biological measure",
+      3
+     ],
+     [
+      "grief experience inventory",
+      2
+     ],
+     [
+      "marital adjustment test",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2116
+   },
+   "1995-1999": {
+    "n_docs": 675,
+    "share_naming_instrument": 0.0489,
+    "n_families": 32,
+    "n_mentions": 50,
+    "entropy": 0.9177,
+    "dispersion_1_minus_hhi": 0.9408,
+    "top_families": [
+     [
+      "beck depression inventory",
+      7
+     ],
+     [
+      "texas revised inventory of grief",
+      6
+     ],
+     [
+      "impact of event scale",
+      5
+     ],
+     [
+      "biological measure",
+      2
+     ],
+     [
+      "eysenck personality questionnaire",
+      2
+     ],
+     [
+      "texas revised inventory",
+      2
+     ]
+    ],
+    "breadth_masked": 0.2103
+   },
+   "2000-2004": {
+    "n_docs": 935,
+    "share_naming_instrument": 0.0492,
+    "n_families": 36,
+    "n_mentions": 65,
+    "entropy": 0.9297,
+    "dispersion_1_minus_hhi": 0.9524,
+    "top_families": [
+     [
+      "beck depression inventory",
+      8
+     ],
+     [
+      "texas revised inventory of grief",
+      6
+     ],
+     [
+      "inventory of complicated grief",
+      4
+     ],
+     [
+      "biological measure",
+      4
+     ],
+     [
+      "impact of event scale",
+      3
+     ],
+     [
+      "general health questionnaire",
+      3
+     ]
+    ],
+    "breadth_masked": 0.2207
+   },
+   "2005-2009": {
+    "n_docs": 1148,
+    "share_naming_instrument": 0.0514,
+    "n_families": 50,
+    "n_mentions": 90,
+    "entropy": 0.9021,
+    "dispersion_1_minus_hhi": 0.9546,
+    "top_families": [
+     [
+      "inventory of complicated grief",
+      11
+     ],
+     [
+      "impact of event scale",
+      9
+     ],
+     [
+      "texas revised inventory of grief",
+      6
+     ],
+     [
+      "biological measure",
+      5
+     ],
+     [
+      "beck depression inventory",
+      5
+     ],
+     [
+      "general health questionnaire",
+      4
+     ]
+    ],
+    "breadth_masked": 0.2168
+   },
+   "2010-2014": {
+    "n_docs": 1368,
+    "share_naming_instrument": 0.0753,
+    "n_families": 74,
+    "n_mentions": 159,
+    "entropy": 0.8742,
+    "dispersion_1_minus_hhi": 0.9583,
+    "top_families": [
+     [
+      "inventory of complicated grief",
+      19
+     ],
+     [
+      "impact of event scale",
+      16
+     ],
+     [
+      "beck depression inventory",
+      11
+     ],
+     [
+      "patient health questionnaire",
+      8
+     ],
+     [
+      "texas revised inventory of grief",
+      6
+     ],
+     [
+      "prolonged grief disorder scale",
+      6
+     ]
+    ],
+    "breadth_masked": 0.2158
+   },
+   "2015-2019": {
+    "n_docs": 1485,
+    "share_naming_instrument": 0.0747,
+    "n_families": 78,
+    "n_mentions": 161,
+    "entropy": 0.872,
+    "dispersion_1_minus_hhi": 0.9549,
+    "top_families": [
+     [
+      "inventory of complicated grief",
+      26
+     ],
+     [
+      "ptsd checklist",
+      9
+     ],
+     [
+      "biological measure",
+      9
+     ],
+     [
+      "beck depression inventory",
+      8
+     ],
+     [
+      "prolonged grief disorder scale",
+      7
+     ],
+     [
+      "impact of event scale",
+      6
+     ]
+    ],
+    "breadth_masked": 0.2184
+   },
+   "2020-2024": {
+    "n_docs": 2152,
+    "share_naming_instrument": 0.072,
+    "n_families": 117,
+    "n_mentions": 241,
+    "entropy": 0.8497,
+    "dispersion_1_minus_hhi": 0.9602,
+    "top_families": [
+     [
+      "inventory of complicated grief",
+      32
+     ],
+     [
+      "impact of event scale",
+      19
+     ],
+     [
+      "prolonged grief disorder scale",
+      19
+     ],
+     [
+      "patient health questionnaire",
+      11
+     ],
+     [
+      "biological measure",
+      10
+     ],
+     [
+      "ptsd checklist",
+      8
+     ]
+    ],
+    "breadth_masked": 0.2217
+   },
+   "2025-2025": {
+    "n_docs": 503,
+    "share_naming_instrument": 0.0855,
+    "n_families": 34,
+    "n_mentions": 61,
+    "entropy": 0.9281,
+    "dispersion_1_minus_hhi": 0.9508,
+    "top_families": [
+     [
+      "patient health questionnaire",
+      6
+     ],
+     [
+      "prolonged grief disorder scale",
+      6
+     ],
+     [
+      "impact of event scale",
+      5
+     ],
+     [
+      "inventory of complicated grief",
+      5
+     ],
+     [
+      "international trauma questionnaire",
+      3
+     ],
+     [
+      "posttraumatic growth inventory",
+      3
+     ]
+    ],
+    "breadth_masked": 0.212
+   }
+  },
+  "posttraumatic stress": {
+   "1980-1984": {
+    "n_docs": 32,
+    "share_naming_instrument": 0.0938,
+    "n_families": 5,
+    "n_mentions": 6,
+    "entropy": 0.9697,
+    "dispersion_1_minus_hhi": 0.7778,
+    "top_families": [
+     [
+      "beck depression inventory",
+      2
+     ],
+     [
+      "self rating depression scale",
+      1
+     ],
+     [
+      "state trait anxiety inventory",
+      1
+     ],
+     [
+      "biological measure",
+      1
+     ],
+     [
+      "impact of event scale",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1962
+   },
+   "1985-1989": {
+    "n_docs": 70,
+    "share_naming_instrument": 0.0429,
+    "n_families": 4,
+    "n_mentions": 5,
+    "entropy": 0.961,
+    "dispersion_1_minus_hhi": 0.72,
+    "top_families": [
+     [
+      "impact of event scale",
+      2
+     ],
+     [
+      "beck depression inventory",
+      1
+     ],
+     [
+      "disaster supplement and the impact of event scale",
+      1
+     ],
+     [
+      "posttraumatic stress disorder reaction index",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2157
+   },
+   "1990-1994": {
+    "n_docs": 117,
+    "share_naming_instrument": 0.1282,
+    "n_families": 15,
+    "n_mentions": 23,
+    "entropy": 0.8404,
+    "dispersion_1_minus_hhi": 0.8204,
+    "top_families": [
+     [
+      "impact of event scale",
+      9
+     ],
+     [
+      "validation of the purdue posttraumatic stress scale",
+      1
+     ],
+     [
+      "ptsd checklist",
+      1
+     ],
+     [
+      "violence index",
+      1
+     ],
+     [
+      "posttraumatic diagnostic scale",
+      1
+     ],
+     [
+      "phillips dissociation scale",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2243
+   },
+   "1995-1999": {
+    "n_docs": 254,
+    "share_naming_instrument": 0.2283,
+    "n_families": 44,
+    "n_mentions": 91,
+    "entropy": 0.8108,
+    "dispersion_1_minus_hhi": 0.8823,
+    "top_families": [
+     [
+      "impact of event scale",
+      29
+     ],
+     [
+      "mississippi scale",
+      6
+     ],
+     [
+      "beck depression inventory",
+      4
+     ],
+     [
+      "clinician administered ptsd scale",
+      3
+     ],
+     [
+      "trauma symptom checklist",
+      3
+     ],
+     [
+      "trauma symptom inventory",
+      3
+     ]
+    ],
+    "breadth_masked": 0.2056
+   },
+   "2000-2004": {
+    "n_docs": 549,
+    "share_naming_instrument": 0.235,
+    "n_families": 69,
+    "n_mentions": 191,
+    "entropy": 0.7564,
+    "dispersion_1_minus_hhi": 0.8829,
+    "top_families": [
+     [
+      "impact of event scale",
+      60
+     ],
+     [
+      "posttraumatic diagnostic scale",
+      16
+     ],
+     [
+      "beck depression inventory",
+      10
+     ],
+     [
+      "biological measure",
+      9
+     ],
+     [
+      "ptsd symptom scale",
+      6
+     ],
+     [
+      "dissociative experiences scale",
+      6
+     ]
+    ],
+    "breadth_masked": 0.2117
+   },
+   "2005-2009": {
+    "n_docs": 920,
+    "share_naming_instrument": 0.288,
+    "n_families": 132,
+    "n_mentions": 423,
+    "entropy": 0.7398,
+    "dispersion_1_minus_hhi": 0.9174,
+    "top_families": [
+     [
+      "impact of event scale",
+      103
+     ],
+     [
+      "posttraumatic diagnostic scale",
+      39
+     ],
+     [
+      "ptsd checklist",
+      28
+     ],
+     [
+      "biological measure",
+      28
+     ],
+     [
+      "beck depression inventory",
+      18
+     ],
+     [
+      "clinician administered ptsd scale",
+      13
+     ]
+    ],
+    "breadth_masked": 0.2021
+   },
+   "2010-2014": {
+    "n_docs": 1378,
+    "share_naming_instrument": 0.2939,
+    "n_families": 184,
+    "n_mentions": 708,
+    "entropy": 0.723,
+    "dispersion_1_minus_hhi": 0.9267,
+    "top_families": [
+     [
+      "impact of event scale",
+      157
+     ],
+     [
+      "ptsd checklist",
+      71
+     ],
+     [
+      "posttraumatic diagnostic scale",
+      45
+     ],
+     [
+      "biological measure",
+      43
+     ],
+     [
+      "beck depression inventory",
+      26
+     ],
+     [
+      "clinician administered ptsd scale",
+      24
+     ]
+    ],
+    "breadth_masked": 0.1871
+   },
+   "2015-2019": {
+    "n_docs": 2030,
+    "share_naming_instrument": 0.2764,
+    "n_families": 259,
+    "n_mentions": 1000,
+    "entropy": 0.7275,
+    "dispersion_1_minus_hhi": 0.9424,
+    "top_families": [
+     [
+      "impact of event scale",
+      156
+     ],
+     [
+      "ptsd checklist",
+      146
+     ],
+     [
+      "biological measure",
+      62
+     ],
+     [
+      "posttraumatic diagnostic scale",
+      48
+     ],
+     [
+      "patient health questionnaire",
+      38
+     ],
+     [
+      "beck depression inventory",
+      28
+     ]
+    ],
+    "breadth_masked": 0.2007
+   },
+   "2020-2024": {
+    "n_docs": 2970,
+    "share_naming_instrument": 0.2848,
+    "n_families": 358,
+    "n_mentions": 1583,
+    "entropy": 0.6717,
+    "dispersion_1_minus_hhi": 0.9238,
+    "top_families": [
+     [
+      "ptsd checklist",
+      327
+     ],
+     [
+      "impact of event scale",
+      233
+     ],
+     [
+      "patient health questionnaire",
+      122
+     ],
+     [
+      "biological measure",
+      72
+     ],
+     [
+      "adverse childhood experiences",
+      45
+     ],
+     [
+      "posttraumatic growth inventory",
+      33
+     ]
+    ],
+    "breadth_masked": 0.1869
+   },
+   "2025-2025": {
+    "n_docs": 556,
+    "share_naming_instrument": 0.25,
+    "n_families": 81,
+    "n_mentions": 228,
+    "entropy": 0.7518,
+    "dispersion_1_minus_hhi": 0.9014,
+    "top_families": [
+     [
+      "ptsd checklist",
+      60
+     ],
+     [
+      "impact of event scale",
+      29
+     ],
+     [
+      "biological measure",
+      14
+     ],
+     [
+      "patient health questionnaire",
+      13
+     ],
+     [
+      "adverse childhood experiences",
+      11
+     ],
+     [
+      "posttraumatic growth inventory",
+      7
+     ]
+    ],
+    "breadth_masked": 0.1876
+   }
+  },
+  "trauma informed": {
+   "2000-2004": {
+    "n_docs": 18,
+    "share_naming_instrument": 0.0,
+    "n_families": 0,
+    "n_mentions": 0,
+    "entropy": null,
+    "dispersion_1_minus_hhi": null,
+    "top_families": [],
+    "breadth_masked": 0.2244
+   },
+   "2005-2009": {
+    "n_docs": 66,
+    "share_naming_instrument": 0.0152,
+    "n_families": 1,
+    "n_mentions": 1,
+    "entropy": 0.0,
+    "dispersion_1_minus_hhi": 0.0,
+    "top_families": [
+     [
+      "british national survey",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2078
+   },
+   "2010-2014": {
+    "n_docs": 228,
+    "share_naming_instrument": 0.0307,
+    "n_families": 8,
+    "n_mentions": 10,
+    "entropy": 0.9488,
+    "dispersion_1_minus_hhi": 0.84,
+    "top_families": [
+     [
+      "adverse childhood experiences",
+      3
+     ],
+     [
+      "ucla ptsd reaction index",
+      1
+     ],
+     [
+      "trauma symptom checklist",
+      1
+     ],
+     [
+      "professional quality of life scale",
+      1
+     ],
+     [
+      "patient health questionnaire",
+      1
+     ],
+     [
+      "posttraumatic diagnostic scale",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2165
+   },
+   "2015-2019": {
+    "n_docs": 1063,
+    "share_naming_instrument": 0.1185,
+    "n_families": 45,
+    "n_mentions": 159,
+    "entropy": 0.6347,
+    "dispersion_1_minus_hhi": 0.7356,
+    "top_families": [
+     [
+      "adverse childhood experiences",
+      80
+     ],
+     [
+      "ptsd checklist",
+      10
+     ],
+     [
+      "childhood trauma questionnaire",
+      7
+     ],
+     [
+      "impact of event scale",
+      6
+     ],
+     [
+      "patient health questionnaire",
+      5
+     ],
+     [
+      "professional quality of life scale",
+      3
+     ]
+    ],
+    "breadth_masked": 0.2047
+   },
+   "2020-2024": {
+    "n_docs": 3225,
+    "share_naming_instrument": 0.1476,
+    "n_families": 117,
+    "n_mentions": 615,
+    "entropy": 0.5309,
+    "dispersion_1_minus_hhi": 0.7098,
+    "top_families": [
+     [
+      "adverse childhood experiences",
+      325
+     ],
+     [
+      "ptsd checklist",
+      41
+     ],
+     [
+      "attitudes related to trauma informed care",
+      36
+     ],
+     [
+      "patient health questionnaire",
+      21
+     ],
+     [
+      "professional quality of life scale",
+      10
+     ],
+     [
+      "childhood trauma questionnaire",
+      10
+     ]
+    ],
+    "breadth_masked": 0.216
+   },
+   "2025-2025": {
+    "n_docs": 1219,
+    "share_naming_instrument": 0.1444,
+    "n_families": 79,
+    "n_mentions": 237,
+    "entropy": 0.6656,
+    "dispersion_1_minus_hhi": 0.8033,
+    "top_families": [
+     [
+      "adverse childhood experiences",
+      102
+     ],
+     [
+      "patient health questionnaire",
+      15
+     ],
+     [
+      "childhood trauma questionnaire",
+      11
+     ],
+     [
+      "ptsd checklist",
+      8
+     ],
+     [
+      "impact of event scale",
+      7
+     ],
+     [
+      "professional quality of life scale",
+      7
+     ]
+    ],
+    "breadth_masked": 0.2113
+   }
+  },
+  "traumatic stress": {
+   "1985-1989": {
+    "n_docs": 31,
+    "share_naming_instrument": 0.0323,
+    "n_families": 1,
+    "n_mentions": 1,
+    "entropy": 0.0,
+    "dispersion_1_minus_hhi": 0.0,
+    "top_families": [
+     [
+      "minnesota multiphasic personality inventory",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2402
+   },
+   "1990-1994": {
+    "n_docs": 73,
+    "share_naming_instrument": 0.0411,
+    "n_families": 4,
+    "n_mentions": 4,
+    "entropy": 1.0,
+    "dispersion_1_minus_hhi": 0.75,
+    "top_families": [
+     [
+      "impact of event scale",
+      1
+     ],
+     [
+      "hamilton rating scale",
+      1
+     ],
+     [
+      "biological measure",
+      1
+     ],
+     [
+      "trauma symptom inventory",
+      1
+     ]
+    ],
+    "breadth_masked": 0.225
+   },
+   "1995-1999": {
+    "n_docs": 127,
+    "share_naming_instrument": 0.1732,
+    "n_families": 12,
+    "n_mentions": 30,
+    "entropy": 0.8256,
+    "dispersion_1_minus_hhi": 0.8111,
+    "top_families": [
+     [
+      "impact of event scale",
+      11
+     ],
+     [
+      "biological measure",
+      5
+     ],
+     [
+      "general health questionnaire",
+      3
+     ],
+     [
+      "ptsd checklist",
+      2
+     ],
+     [
+      "mississippi scale",
+      2
+     ],
+     [
+      "ptsd symptom scale",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2407
+   },
+   "2000-2004": {
+    "n_docs": 314,
+    "share_naming_instrument": 0.1369,
+    "n_families": 17,
+    "n_mentions": 54,
+    "entropy": 0.6666,
+    "dispersion_1_minus_hhi": 0.692,
+    "top_families": [
+     [
+      "impact of event scale",
+      29
+     ],
+     [
+      "biological measure",
+      4
+     ],
+     [
+      "clinician administered ptsd scale",
+      4
+     ],
+     [
+      "ptsd checklist",
+      3
+     ],
+     [
+      "dissociative experiences scale",
+      2
+     ],
+     [
+      "trauma symptom inventory",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2386
+   },
+   "2005-2009": {
+    "n_docs": 478,
+    "share_naming_instrument": 0.1799,
+    "n_families": 62,
+    "n_mentions": 136,
+    "entropy": 0.8502,
+    "dispersion_1_minus_hhi": 0.94,
+    "top_families": [
+     [
+      "impact of event scale",
+      24
+     ],
+     [
+      "biological measure",
+      16
+     ],
+     [
+      "ptsd checklist",
+      8
+     ],
+     [
+      "clinician administered ptsd scale",
+      7
+     ],
+     [
+      "adverse childhood experiences",
+      6
+     ],
+     [
+      "posttraumatic growth inventory",
+      4
+     ]
+    ],
+    "breadth_masked": 0.2345
+   },
+   "2010-2014": {
+    "n_docs": 648,
+    "share_naming_instrument": 0.2083,
+    "n_families": 78,
+    "n_mentions": 205,
+    "entropy": 0.8088,
+    "dispersion_1_minus_hhi": 0.9328,
+    "top_families": [
+     [
+      "biological measure",
+      34
+     ],
+     [
+      "impact of event scale",
+      33
+     ],
+     [
+      "ptsd checklist",
+      12
+     ],
+     [
+      "trauma symptom checklist",
+      12
+     ],
+     [
+      "beck depression inventory",
+      8
+     ],
+     [
+      "dissociative experiences scale",
+      6
+     ]
+    ],
+    "breadth_masked": 0.2318
+   },
+   "2015-2019": {
+    "n_docs": 764,
+    "share_naming_instrument": 0.1767,
+    "n_families": 72,
+    "n_mentions": 217,
+    "entropy": 0.7889,
+    "dispersion_1_minus_hhi": 0.9261,
+    "top_families": [
+     [
+      "impact of event scale",
+      34
+     ],
+     [
+      "ptsd checklist",
+      33
+     ],
+     [
+      "biological measure",
+      29
+     ],
+     [
+      "adverse childhood experiences",
+      9
+     ],
+     [
+      "beck depression inventory",
+      8
+     ],
+     [
+      "clinician administered ptsd scale",
+      6
+     ]
+    ],
+    "breadth_masked": 0.241
+   },
+   "2020-2024": {
+    "n_docs": 1056,
+    "share_naming_instrument": 0.2131,
+    "n_families": 123,
+    "n_mentions": 383,
+    "entropy": 0.7967,
+    "dispersion_1_minus_hhi": 0.951,
+    "top_families": [
+     [
+      "ptsd checklist",
+      50
+     ],
+     [
+      "impact of event scale",
+      49
+     ],
+     [
+      "biological measure",
+      21
+     ],
+     [
+      "adverse childhood experiences",
+      20
+     ],
+     [
+      "patient health questionnaire",
+      20
+     ],
+     [
+      "clinician administered ptsd scale",
+      13
+     ]
+    ],
+    "breadth_masked": 0.2269
+   },
+   "2025-2025": {
+    "n_docs": 217,
+    "share_naming_instrument": 0.2166,
+    "n_families": 35,
+    "n_mentions": 81,
+    "entropy": 0.8683,
+    "dispersion_1_minus_hhi": 0.9264,
+    "top_families": [
+     [
+      "ptsd checklist",
+      16
+     ],
+     [
+      "impact of event scale",
+      8
+     ],
+     [
+      "adverse childhood experiences",
+      7
+     ],
+     [
+      "biological measure",
+      5
+     ],
+     [
+      "life events checklist",
+      4
+     ],
+     [
+      "patient health questionnaire",
+      4
+     ]
+    ],
+    "breadth_masked": 0.2361
+   }
+  },
+  "psychological trauma": {
+   "1980-1984": {
+    "n_docs": 27,
+    "share_naming_instrument": 0.0,
+    "n_families": 0,
+    "n_mentions": 0,
+    "entropy": null,
+    "dispersion_1_minus_hhi": null,
+    "top_families": [],
+    "breadth_masked": 0.24
+   },
+   "1985-1989": {
+    "n_docs": 35,
+    "share_naming_instrument": 0.0571,
+    "n_families": 1,
+    "n_mentions": 2,
+    "entropy": 0.0,
+    "dispersion_1_minus_hhi": 0.0,
+    "top_families": [
+     [
+      "biological measure",
+      2
+     ]
+    ],
+    "breadth_masked": 0.2295
+   },
+   "1990-1994": {
+    "n_docs": 70,
+    "share_naming_instrument": 0.0143,
+    "n_families": 1,
+    "n_mentions": 1,
+    "entropy": 0.0,
+    "dispersion_1_minus_hhi": 0.0,
+    "top_families": [
+     [
+      "violence interview",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2119
+   },
+   "1995-1999": {
+    "n_docs": 103,
+    "share_naming_instrument": 0.068,
+    "n_families": 7,
+    "n_mentions": 7,
+    "entropy": 1.0,
+    "dispersion_1_minus_hhi": 0.8571,
+    "top_families": [
+     [
+      "impact of event scale",
+      1
+     ],
+     [
+      "beck depression inventory",
+      1
+     ],
+     [
+      "trauma symptom checklist",
+      1
+     ],
+     [
+      "structured clinical interview for dsm",
+      1
+     ],
+     [
+      "dissociative experiences scale",
+      1
+     ],
+     [
+      "through the wilcoxon sign rank test",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2078
+   },
+   "2000-2004": {
+    "n_docs": 188,
+    "share_naming_instrument": 0.0745,
+    "n_families": 10,
+    "n_mentions": 19,
+    "entropy": 0.7951,
+    "dispersion_1_minus_hhi": 0.7424,
+    "top_families": [
+     [
+      "impact of event scale",
+      9
+     ],
+     [
+      "biological measure",
+      2
+     ],
+     [
+      "clinician administered ptsd scale",
+      1
+     ],
+     [
+      "trauma symptom inventory",
+      1
+     ],
+     [
+      "dissociative experiences scale",
+      1
+     ],
+     [
+      "beck depression inventory",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1893
+   },
+   "2005-2009": {
+    "n_docs": 286,
+    "share_naming_instrument": 0.1084,
+    "n_families": 29,
+    "n_mentions": 54,
+    "entropy": 0.8921,
+    "dispersion_1_minus_hhi": 0.9239,
+    "top_families": [
+     [
+      "biological measure",
+      10
+     ],
+     [
+      "impact of event scale",
+      8
+     ],
+     [
+      "structured clinical interview for dsm",
+      3
+     ],
+     [
+      "beck depression inventory",
+      3
+     ],
+     [
+      "ptsd checklist",
+      2
+     ],
+     [
+      "beck anxiety inventory",
+      2
+     ]
+    ],
+    "breadth_masked": 0.1973
+   },
+   "2010-2014": {
+    "n_docs": 352,
+    "share_naming_instrument": 0.1278,
+    "n_families": 35,
+    "n_mentions": 72,
+    "entropy": 0.8597,
+    "dispersion_1_minus_hhi": 0.9178,
+    "top_families": [
+     [
+      "biological measure",
+      16
+     ],
+     [
+      "beck depression inventory",
+      8
+     ],
+     [
+      "impact of event scale",
+      5
+     ],
+     [
+      "ptsd checklist",
+      5
+     ],
+     [
+      "clinician administered ptsd scale",
+      3
+     ],
+     [
+      "trauma symptom inventory",
+      3
+     ]
+    ],
+    "breadth_masked": 0.2096
+   },
+   "2015-2019": {
+    "n_docs": 441,
+    "share_naming_instrument": 0.1315,
+    "n_families": 46,
+    "n_mentions": 99,
+    "entropy": 0.8779,
+    "dispersion_1_minus_hhi": 0.9452,
+    "top_families": [
+     [
+      "biological measure",
+      15
+     ],
+     [
+      "ptsd checklist",
+      7
+     ],
+     [
+      "beck depression inventory",
+      7
+     ],
+     [
+      "childhood trauma questionnaire",
+      7
+     ],
+     [
+      "impact of event scale",
+      7
+     ],
+     [
+      "dissociative experiences scale",
+      6
+     ]
+    ],
+    "breadth_masked": 0.2067
+   },
+   "2020-2024": {
+    "n_docs": 711,
+    "share_naming_instrument": 0.1575,
+    "n_families": 71,
+    "n_mentions": 181,
+    "entropy": 0.8421,
+    "dispersion_1_minus_hhi": 0.9495,
+    "top_families": [
+     [
+      "biological measure",
+      25
+     ],
+     [
+      "ptsd checklist",
+      17
+     ],
+     [
+      "adverse childhood experiences",
+      14
+     ],
+     [
+      "impact of event scale",
+      14
+     ],
+     [
+      "patient health questionnaire",
+      9
+     ],
+     [
+      "clinician administered ptsd scale",
+      6
+     ]
+    ],
+    "breadth_masked": 0.1994
+   },
+   "2025-2025": {
+    "n_docs": 160,
+    "share_naming_instrument": 0.1625,
+    "n_families": 39,
+    "n_mentions": 52,
+    "entropy": 0.9556,
+    "dispersion_1_minus_hhi": 0.9615,
+    "top_families": [
+     [
+      "ptsd checklist",
+      6
+     ],
+     [
+      "life events checklist",
+      3
+     ],
+     [
+      "clinician administered ptsd scale",
+      3
+     ],
+     [
+      "impact of event scale",
+      3
+     ],
+     [
+      "professional quality of life scale",
+      2
+     ],
+     [
+      "connor davidson resilience scale",
+      2
+     ]
+    ],
+    "breadth_masked": 0.2113
+   }
+  },
+  "secondary traumatic stress": {
+   "2000-2004": {
+    "n_docs": 43,
+    "share_naming_instrument": 0.1163,
+    "n_families": 4,
+    "n_mentions": 6,
+    "entropy": 0.9591,
+    "dispersion_1_minus_hhi": 0.7222,
+    "top_families": [
+     [
+      "secondary traumatic stress scale",
+      2
+     ],
+     [
+      "impact of event scale",
+      2
+     ],
+     [
+      "trauma symptom inventory",
+      1
+     ],
+     [
+      "development and validation of the secondary traumatic stress scale",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1656
+   },
+   "2005-2009": {
+    "n_docs": 63,
+    "share_naming_instrument": 0.2063,
+    "n_families": 9,
+    "n_mentions": 18,
+    "entropy": 0.7804,
+    "dispersion_1_minus_hhi": 0.716,
+    "top_families": [
+     [
+      "secondary traumatic stress scale",
+      9
+     ],
+     [
+      "impact of event scale",
+      2
+     ],
+     [
+      "beck depression inventory",
+      1
+     ],
+     [
+      "marital adjustment test",
+      1
+     ],
+     [
+      "beck anxiety inventory",
+      1
+     ],
+     [
+      "depression inventory",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1507
+   },
+   "2010-2014": {
+    "n_docs": 103,
+    "share_naming_instrument": 0.2913,
+    "n_families": 15,
+    "n_mentions": 39,
+    "entropy": 0.7959,
+    "dispersion_1_minus_hhi": 0.8231,
+    "top_families": [
+     [
+      "secondary traumatic stress scale",
+      11
+     ],
+     [
+      "professional quality of life scale",
+      11
+     ],
+     [
+      "impact of event scale",
+      3
+     ],
+     [
+      "utrecht work engagement scale",
+      2
+     ],
+     [
+      "ptsd checklist",
+      2
+     ],
+     [
+      "hurlbert index",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1498
+   },
+   "2015-2019": {
+    "n_docs": 300,
+    "share_naming_instrument": 0.4967,
+    "n_families": 47,
+    "n_mentions": 199,
+    "entropy": 0.545,
+    "dispersion_1_minus_hhi": 0.6626,
+    "top_families": [
+     [
+      "professional quality of life scale",
+      113
+     ],
+     [
+      "secondary traumatic stress scale",
+      21
+     ],
+     [
+      "impact of event scale",
+      5
+     ],
+     [
+      "life events checklist",
+      5
+     ],
+     [
+      "connor davidson resilience scale",
+      5
+     ],
+     [
+      "perceived stress scale",
+      4
+     ]
+    ],
+    "breadth_masked": 0.1366
+   },
+   "2020-2024": {
+    "n_docs": 700,
+    "share_naming_instrument": 0.5071,
+    "n_families": 95,
+    "n_mentions": 479,
+    "entropy": 0.5091,
+    "dispersion_1_minus_hhi": 0.682,
+    "top_families": [
+     [
+      "professional quality of life scale",
+      262
+     ],
+     [
+      "secondary traumatic stress scale",
+      61
+     ],
+     [
+      "adverse childhood experiences",
+      15
+     ],
+     [
+      "posttraumatic growth inventory",
+      7
+     ],
+     [
+      "life events checklist",
+      6
+     ],
+     [
+      "impact of event scale",
+      6
+     ]
+    ],
+    "breadth_masked": 0.1277
+   },
+   "2025-2025": {
+    "n_docs": 195,
+    "share_naming_instrument": 0.5128,
+    "n_families": 38,
+    "n_mentions": 147,
+    "entropy": 0.6059,
+    "dispersion_1_minus_hhi": 0.7495,
+    "top_families": [
+     [
+      "professional quality of life scale",
+      65
+     ],
+     [
+      "secondary traumatic stress scale",
+      33
+     ],
+     [
+      "ptsd checklist",
+      6
+     ],
+     [
+      "patient health questionnaire",
+      3
+     ],
+     [
+      "ptsd symptom scale",
+      3
+     ],
+     [
+      "posttraumatic growth inventory",
+      2
+     ]
+    ],
+    "breadth_masked": 0.1175
+   }
+  },
+  "adjustment disorder": {
+   "1980-1984": {
+    "n_docs": 15,
+    "share_naming_instrument": 0.2,
+    "n_families": 4,
+    "n_mentions": 4,
+    "entropy": 1.0,
+    "dispersion_1_minus_hhi": 0.75,
+    "top_families": [
+     [
+      "biological measure",
+      1
+     ],
+     [
+      "use of the michigan alcoholism screening test",
+      1
+     ],
+     [
+      "beck depression inventory",
+      1
+     ],
+     [
+      "state trait anxiety inventory",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2185
+   },
+   "1985-1989": {
+    "n_docs": 78,
+    "share_naming_instrument": 0.2051,
+    "n_families": 5,
+    "n_mentions": 16,
+    "entropy": 0.6446,
+    "dispersion_1_minus_hhi": 0.5,
+    "top_families": [
+     [
+      "biological measure",
+      11
+     ],
+     [
+      "beck depression inventory",
+      2
+     ],
+     [
+      "diagnostic interview schedule",
+      1
+     ],
+     [
+      "bender gestalt test",
+      1
+     ],
+     [
+      "general health questionnaire",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2107
+   },
+   "1990-1994": {
+    "n_docs": 103,
+    "share_naming_instrument": 0.0583,
+    "n_families": 6,
+    "n_mentions": 6,
+    "entropy": 1.0,
+    "dispersion_1_minus_hhi": 0.8333,
+    "top_families": [
+     [
+      "structured clinical interview for dsm",
+      1
+     ],
+     [
+      "beck depression inventory",
+      1
+     ],
+     [
+      "axis v global assessment of functioning scale",
+      1
+     ],
+     [
+      "trail making test",
+      1
+     ],
+     [
+      "biological measure",
+      1
+     ],
+     [
+      "children s depression inventory",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2217
+   },
+   "1995-1999": {
+    "n_docs": 123,
+    "share_naming_instrument": 0.1626,
+    "n_families": 16,
+    "n_mentions": 20,
+    "entropy": 0.9555,
+    "dispersion_1_minus_hhi": 0.915,
+    "top_families": [
+     [
+      "biological measure",
+      4
+     ],
+     [
+      "beck depression inventory",
+      2
+     ],
+     [
+      "impact of event scale",
+      1
+     ],
+     [
+      "short form health status survey",
+      1
+     ],
+     [
+      "zung s self rating anxiety and depression scale",
+      1
+     ],
+     [
+      "auditory verbal learning test",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1953
+   },
+   "2000-2004": {
+    "n_docs": 113,
+    "share_naming_instrument": 0.177,
+    "n_families": 18,
+    "n_mentions": 26,
+    "entropy": 0.9358,
+    "dispersion_1_minus_hhi": 0.9172,
+    "top_families": [
+     [
+      "biological measure",
+      4
+     ],
+     [
+      "beck depression inventory",
+      4
+     ],
+     [
+      "structured clinical interview for dsm",
+      3
+     ],
+     [
+      "screening instrument",
+      1
+     ],
+     [
+      "mississippi scale",
+      1
+     ],
+     [
+      "structured clinical interview",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2016
+   },
+   "2005-2009": {
+    "n_docs": 179,
+    "share_naming_instrument": 0.162,
+    "n_families": 27,
+    "n_mentions": 43,
+    "entropy": 0.9223,
+    "dispersion_1_minus_hhi": 0.9324,
+    "top_families": [
+     [
+      "structured clinical interview for dsm",
+      8
+     ],
+     [
+      "beck depression inventory",
+      4
+     ],
+     [
+      "ptsd checklist",
+      3
+     ],
+     [
+      "impact of event scale",
+      2
+     ],
+     [
+      "biological measure",
+      2
+     ],
+     [
+      "brief symptom inventory",
+      2
+     ]
+    ],
+    "breadth_masked": 0.1967
+   },
+   "2010-2014": {
+    "n_docs": 193,
+    "share_naming_instrument": 0.2021,
+    "n_families": 35,
+    "n_mentions": 65,
+    "entropy": 0.8824,
+    "dispersion_1_minus_hhi": 0.9292,
+    "top_families": [
+     [
+      "beck depression inventory",
+      11
+     ],
+     [
+      "structured clinical interview for dsm",
+      10
+     ],
+     [
+      "impact of event scale",
+      4
+     ],
+     [
+      "biological measure",
+      4
+     ],
+     [
+      "depression inventory",
+      2
+     ],
+     [
+      "hospital anxiety and depression scale",
+      2
+     ]
+    ],
+    "breadth_masked": 0.1836
+   },
+   "2015-2019": {
+    "n_docs": 230,
+    "share_naming_instrument": 0.2,
+    "n_families": 48,
+    "n_mentions": 77,
+    "entropy": 0.9253,
+    "dispersion_1_minus_hhi": 0.961,
+    "top_families": [
+     [
+      "beck depression inventory",
+      7
+     ],
+     [
+      "biological measure",
+      6
+     ],
+     [
+      "structured clinical interview for dsm",
+      6
+     ],
+     [
+      "impact of event scale",
+      5
+     ],
+     [
+      "patient health questionnaire",
+      5
+     ],
+     [
+      "ptsd symptom scale",
+      3
+     ]
+    ],
+    "breadth_masked": 0.1715
+   },
+   "2020-2024": {
+    "n_docs": 266,
+    "share_naming_instrument": 0.2256,
+    "n_families": 52,
+    "n_mentions": 100,
+    "entropy": 0.8799,
+    "dispersion_1_minus_hhi": 0.9466,
+    "top_families": [
+     [
+      "patient health questionnaire",
+      16
+     ],
+     [
+      "structured clinical interview for dsm",
+      9
+     ],
+     [
+      "beck depression inventory",
+      7
+     ],
+     [
+      "impact of event scale",
+      6
+     ],
+     [
+      "primary care ptsd screen",
+      5
+     ],
+     [
+      "international trauma questionnaire",
+      4
+     ]
+    ],
+    "breadth_masked": 0.1715
+   },
+   "2025-2025": {
+    "n_docs": 47,
+    "share_naming_instrument": 0.234,
+    "n_families": 16,
+    "n_mentions": 21,
+    "entropy": 0.9611,
+    "dispersion_1_minus_hhi": 0.9206,
+    "top_families": [
+     [
+      "biological measure",
+      3
+     ],
+     [
+      "patient health questionnaire",
+      3
+     ],
+     [
+      "adverse childhood experiences",
+      2
+     ],
+     [
+      "posttrauma stress scale",
+      1
+     ],
+     [
+      "depression scale",
+      1
+     ],
+     [
+      "anxiety scale",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1525
+   }
+  },
+  "complex PTSD": {
+   "1995-1999": {
+    "n_docs": 17,
+    "share_naming_instrument": 0.2941,
+    "n_families": 4,
+    "n_mentions": 8,
+    "entropy": 0.875,
+    "dispersion_1_minus_hhi": 0.6562,
+    "top_families": [
+     [
+      "dissociative experiences scale",
+      4
+     ],
+     [
+      "childhood trauma questionnaire",
+      2
+     ],
+     [
+      "mcmi ii and adult attachment scale",
+      1
+     ],
+     [
+      "adult attachment scale",
+      1
+     ]
+    ],
+    "breadth_masked": null
+   },
+   "2000-2004": {
+    "n_docs": 28,
+    "share_naming_instrument": 0.1429,
+    "n_families": 4,
+    "n_mentions": 4,
+    "entropy": 1.0,
+    "dispersion_1_minus_hhi": 0.75,
+    "top_families": [
+     [
+      "ptsd checklist",
+      1
+     ],
+     [
+      "anxiety and depression questionnaire",
+      1
+     ],
+     [
+      "bartholomew attachment scale",
+      1
+     ],
+     [
+      "biological measure",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1502
+   },
+   "2005-2009": {
+    "n_docs": 65,
+    "share_naming_instrument": 0.1077,
+    "n_families": 7,
+    "n_mentions": 7,
+    "entropy": 1.0,
+    "dispersion_1_minus_hhi": 0.8571,
+    "top_families": [
+     [
+      "minnesota multiphasic personality inventory",
+      1
+     ],
+     [
+      "structured clinical interview for dsm",
+      1
+     ],
+     [
+      "biological measure",
+      1
+     ],
+     [
+      "childhood trauma questionnaire",
+      1
+     ],
+     [
+      "multidimensional personality questionnaire",
+      1
+     ],
+     [
+      "impact of event scale",
+      1
+     ]
+    ],
+    "breadth_masked": 0.159
+   },
+   "2010-2014": {
+    "n_docs": 102,
+    "share_naming_instrument": 0.1176,
+    "n_families": 14,
+    "n_mentions": 21,
+    "entropy": 0.9441,
+    "dispersion_1_minus_hhi": 0.9025,
+    "top_families": [
+     [
+      "ptsd checklist",
+      4
+     ],
+     [
+      "biological measure",
+      3
+     ],
+     [
+      "ucla ptsd reaction index",
+      2
+     ],
+     [
+      "beck depression inventory",
+      2
+     ],
+     [
+      "trauma symptom checklist",
+      1
+     ],
+     [
+      "international society for traumatic stress studies complex trauma task",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1605
+   },
+   "2015-2019": {
+    "n_docs": 196,
+    "share_naming_instrument": 0.2194,
+    "n_families": 23,
+    "n_mentions": 71,
+    "entropy": 0.8914,
+    "dispersion_1_minus_hhi": 0.9125,
+    "top_families": [
+     [
+      "international trauma questionnaire",
+      16
+     ],
+     [
+      "impact of event scale",
+      5
+     ],
+     [
+      "adverse childhood experiences",
+      5
+     ],
+     [
+      "clinician administered ptsd scale",
+      5
+     ],
+     [
+      "ptsd checklist",
+      4
+     ],
+     [
+      "beck depression inventory",
+      4
+     ]
+    ],
+    "breadth_masked": 0.1459
+   },
+   "2020-2024": {
+    "n_docs": 533,
+    "share_naming_instrument": 0.3452,
+    "n_families": 65,
+    "n_mentions": 305,
+    "entropy": 0.6318,
+    "dispersion_1_minus_hhi": 0.8028,
+    "top_families": [
+     [
+      "international trauma questionnaire",
+      128
+     ],
+     [
+      "adverse childhood experiences",
+      24
+     ],
+     [
+      "ptsd checklist",
+      21
+     ],
+     [
+      "clinician administered ptsd scale",
+      20
+     ],
+     [
+      "life events checklist",
+      15
+     ],
+     [
+      "biological measure",
+      8
+     ]
+    ],
+    "breadth_masked": 0.158
+   },
+   "2025-2025": {
+    "n_docs": 141,
+    "share_naming_instrument": 0.2695,
+    "n_families": 21,
+    "n_mentions": 69,
+    "entropy": 0.7933,
+    "dispersion_1_minus_hhi": 0.8427,
+    "top_families": [
+     [
+      "international trauma questionnaire",
+      24
+     ],
+     [
+      "ptsd checklist",
+      8
+     ],
+     [
+      "adverse childhood experiences",
+      6
+     ],
+     [
+      "patient health questionnaire",
+      4
+     ],
+     [
+      "clinician administered ptsd scale",
+      4
+     ],
+     [
+      "childhood trauma questionnaire",
+      3
+     ]
+    ],
+    "breadth_masked": 0.1585
+   }
+  },
+  "moral injury": {
+   "2010-2014": {
+    "n_docs": 32,
+    "share_naming_instrument": 0.0938,
+    "n_families": 4,
+    "n_mentions": 4,
+    "entropy": 1.0,
+    "dispersion_1_minus_hhi": 0.75,
+    "top_families": [
+     [
+      "impact of event scale",
+      1
+     ],
+     [
+      "moral injury events scale",
+      1
+     ],
+     [
+      "ptsd checklist",
+      1
+     ],
+     [
+      "posttraumatic stress checklist",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1582
+   },
+   "2015-2019": {
+    "n_docs": 180,
+    "share_naming_instrument": 0.1278,
+    "n_families": 17,
+    "n_mentions": 38,
+    "entropy": 0.825,
+    "dispersion_1_minus_hhi": 0.849,
+    "top_families": [
+     [
+      "moral injury events scale",
+      12
+     ],
+     [
+      "ptsd checklist",
+      6
+     ],
+     [
+      "moral injury symptom scale",
+      4
+     ],
+     [
+      "patient health questionnaire",
+      3
+     ],
+     [
+      "moral injury questionnaire",
+      1
+     ],
+     [
+      "posttraumatic diagnostic scale",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1262
+   },
+   "2020-2024": {
+    "n_docs": 676,
+    "share_naming_instrument": 0.1479,
+    "n_families": 57,
+    "n_mentions": 175,
+    "entropy": 0.7864,
+    "dispersion_1_minus_hhi": 0.9178,
+    "top_families": [
+     [
+      "moral injury symptom scale",
+      31
+     ],
+     [
+      "moral injury events scale",
+      30
+     ],
+     [
+      "ptsd checklist",
+      17
+     ],
+     [
+      "patient health questionnaire",
+      10
+     ],
+     [
+      "adverse childhood experiences",
+      8
+     ],
+     [
+      "international trauma questionnaire",
+      7
+     ]
+    ],
+    "breadth_masked": 0.145
+   },
+   "2025-2025": {
+    "n_docs": 182,
+    "share_naming_instrument": 0.1429,
+    "n_families": 31,
+    "n_mentions": 48,
+    "entropy": 0.8995,
+    "dispersion_1_minus_hhi": 0.9271,
+    "top_families": [
+     [
+      "moral injury events scale",
+      9
+     ],
+     [
+      "moral injury symptom scale",
+      7
+     ],
+     [
+      "patient health questionnaire",
+      2
+     ],
+     [
+      "rushton moral resilience scale",
+      2
+     ],
+     [
+      "professional quality of life scale",
+      2
+     ],
+     [
+      "positive affect questionnaire",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1421
+   }
+  },
+  "acute stress disorder": {
+   "1995-1999": {
+    "n_docs": 43,
+    "share_naming_instrument": 0.1628,
+    "n_families": 7,
+    "n_mentions": 13,
+    "entropy": 0.8797,
+    "dispersion_1_minus_hhi": 0.7811,
+    "top_families": [
+     [
+      "beck depression inventory",
+      4
+     ],
+     [
+      "impact of event scale",
+      4
+     ],
+     [
+      "dissociative experiences scale",
+      1
+     ],
+     [
+      "coping style questionnaire",
+      1
+     ],
+     [
+      "injury severity score",
+      1
+     ],
+     [
+      "general health questionnaire",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1491
+   },
+   "2000-2004": {
+    "n_docs": 118,
+    "share_naming_instrument": 0.1949,
+    "n_families": 20,
+    "n_mentions": 40,
+    "entropy": 0.9218,
+    "dispersion_1_minus_hhi": 0.92,
+    "top_families": [
+     [
+      "impact of event scale",
+      7
+     ],
+     [
+      "clinician administered ptsd scale",
+      5
+     ],
+     [
+      "beck depression inventory",
+      3
+     ],
+     [
+      "beck anxiety inventory",
+      3
+     ],
+     [
+      "trauma symptom checklist",
+      3
+     ],
+     [
+      "posttraumatic diagnostic scale",
+      2
+     ]
+    ],
+    "breadth_masked": 0.1515
+   },
+   "2005-2009": {
+    "n_docs": 179,
+    "share_naming_instrument": 0.2011,
+    "n_families": 27,
+    "n_mentions": 61,
+    "entropy": 0.9092,
+    "dispersion_1_minus_hhi": 0.9342,
+    "top_families": [
+     [
+      "impact of event scale",
+      9
+     ],
+     [
+      "beck depression inventory",
+      7
+     ],
+     [
+      "structured clinical interview for dsm",
+      5
+     ],
+     [
+      "biological measure",
+      4
+     ],
+     [
+      "clinician administered ptsd scale",
+      4
+     ],
+     [
+      "peritraumatic dissociative experiences questionnaire",
+      3
+     ]
+    ],
+    "breadth_masked": 0.1612
+   },
+   "2010-2014": {
+    "n_docs": 134,
+    "share_naming_instrument": 0.2388,
+    "n_families": 28,
+    "n_mentions": 53,
+    "entropy": 0.901,
+    "dispersion_1_minus_hhi": 0.9306,
+    "top_families": [
+     [
+      "biological measure",
+      8
+     ],
+     [
+      "structured clinical interview for dsm",
+      7
+     ],
+     [
+      "impact of event scale",
+      5
+     ],
+     [
+      "ptsd checklist",
+      4
+     ],
+     [
+      "clinician administered ptsd scale",
+      3
+     ],
+     [
+      "posttraumatic diagnostic scale",
+      2
+     ]
+    ],
+    "breadth_masked": 0.166
+   },
+   "2015-2019": {
+    "n_docs": 129,
+    "share_naming_instrument": 0.2093,
+    "n_families": 20,
+    "n_mentions": 40,
+    "entropy": 0.9108,
+    "dispersion_1_minus_hhi": 0.915,
+    "top_families": [
+     [
+      "impact of event scale",
+      7
+     ],
+     [
+      "ptsd checklist",
+      6
+     ],
+     [
+      "clinician administered ptsd scale",
+      3
+     ],
+     [
+      "biological measure",
+      3
+     ],
+     [
+      "patient health questionnaire",
+      3
+     ],
+     [
+      "los angeles posttraumatic stress disorder reaction index",
+      2
+     ]
+    ],
+    "breadth_masked": 0.1711
+   },
+   "2020-2024": {
+    "n_docs": 182,
+    "share_naming_instrument": 0.2198,
+    "n_families": 39,
+    "n_mentions": 80,
+    "entropy": 0.9031,
+    "dispersion_1_minus_hhi": 0.9447,
+    "top_families": [
+     [
+      "patient health questionnaire",
+      12
+     ],
+     [
+      "ptsd checklist",
+      9
+     ],
+     [
+      "acute stress disorder scale",
+      5
+     ],
+     [
+      "clinician administered ptsd scale",
+      4
+     ],
+     [
+      "beck depression inventory",
+      4
+     ],
+     [
+      "acute stress disorder short scale",
+      3
+     ]
+    ],
+    "breadth_masked": 0.1775
+   },
+   "2025-2025": {
+    "n_docs": 24,
+    "share_naming_instrument": 0.2917,
+    "n_families": 10,
+    "n_mentions": 13,
+    "entropy": 0.975,
+    "dispersion_1_minus_hhi": 0.8876,
+    "top_families": [
+     [
+      "structured clinical interview for dsm",
+      2
+     ],
+     [
+      "ptsd checklist",
+      2
+     ],
+     [
+      "impact of event scale",
+      2
+     ],
+     [
+      "acute stress symptoms adult scale",
+      1
+     ],
+     [
+      "national stressful events survey short scale",
+      1
+     ],
+     [
+      "self rating anxiety scale",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1533
+   }
+  },
+  "vicarious trauma": {
+   "2000-2004": {
+    "n_docs": 22,
+    "share_naming_instrument": 0.1818,
+    "n_families": 2,
+    "n_mentions": 4,
+    "entropy": 1.0,
+    "dispersion_1_minus_hhi": 0.5,
+    "top_families": [
+     [
+      "trauma symptom inventory",
+      2
+     ],
+     [
+      "impact of event scale",
+      2
+     ]
+    ],
+    "breadth_masked": 0.1547
+   },
+   "2005-2009": {
+    "n_docs": 30,
+    "share_naming_instrument": 0.2,
+    "n_families": 9,
+    "n_mentions": 10,
+    "entropy": 0.9849,
+    "dispersion_1_minus_hhi": 0.88,
+    "top_families": [
+     [
+      "childhood trauma questionnaire",
+      2
+     ],
+     [
+      "impact of event scale",
+      1
+     ],
+     [
+      "trauma and attachment belief scale",
+      1
+     ],
+     [
+      "vicarious trauma scale",
+      1
+     ],
+     [
+      "satisfaction with work scale",
+      1
+     ],
+     [
+      "trauma symptom inventory",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1515
+   },
+   "2010-2014": {
+    "n_docs": 67,
+    "share_naming_instrument": 0.0896,
+    "n_families": 6,
+    "n_mentions": 9,
+    "entropy": 0.8824,
+    "dispersion_1_minus_hhi": 0.7407,
+    "top_families": [
+     [
+      "secondary traumatic stress scale",
+      4
+     ],
+     [
+      "hurlbert index",
+      1
+     ],
+     [
+      "utrecht work engagement scale",
+      1
+     ],
+     [
+      "mindful awareness attention scale",
+      1
+     ],
+     [
+      "professional quality of life scale",
+      1
+     ],
+     [
+      "trauma and attachment belief scale",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1638
+   },
+   "2015-2019": {
+    "n_docs": 115,
+    "share_naming_instrument": 0.0957,
+    "n_families": 13,
+    "n_mentions": 18,
+    "entropy": 0.9541,
+    "dispersion_1_minus_hhi": 0.9012,
+    "top_families": [
+     [
+      "trauma and attachment belief scale",
+      3
+     ],
+     [
+      "impact of event scale",
+      3
+     ],
+     [
+      "professional quality of life scale",
+      2
+     ],
+     [
+      "posttraumatic stress symptoms scale",
+      1
+     ],
+     [
+      "posttraumatic growth inventory",
+      1
+     ],
+     [
+      "trauma history screen",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1595
+   },
+   "2020-2024": {
+    "n_docs": 269,
+    "share_naming_instrument": 0.0781,
+    "n_families": 13,
+    "n_mentions": 27,
+    "entropy": 0.877,
+    "dispersion_1_minus_hhi": 0.856,
+    "top_families": [
+     [
+      "professional quality of life scale",
+      8
+     ],
+     [
+      "impact of event scale",
+      4
+     ],
+     [
+      "secondary traumatic stress scale",
+      3
+     ],
+     [
+      "adverse childhood experiences",
+      2
+     ],
+     [
+      "vicarious trauma scale",
+      2
+     ],
+     [
+      "trauma and attachment belief scale",
+      1
+     ]
+    ],
+    "breadth_masked": 0.155
+   },
+   "2025-2025": {
+    "n_docs": 67,
+    "share_naming_instrument": 0.0746,
+    "n_families": 7,
+    "n_mentions": 9,
+    "entropy": 0.9708,
+    "dispersion_1_minus_hhi": 0.8395,
+    "top_families": [
+     [
+      "secondary traumatic stress scale",
+      2
+     ],
+     [
+      "vicarious trauma scale",
+      2
+     ],
+     [
+      "ptsd checklist",
+      1
+     ],
+     [
+      "coreq checklist",
+      1
+     ],
+     [
+      "trait shame and guilt scale",
+      1
+     ],
+     [
+      "general information questionnaire",
+      1
+     ]
+    ],
+    "breadth_masked": 0.158
+   }
+  },
+  "collective trauma": {
+   "2000-2004": {
+    "n_docs": 20,
+    "share_naming_instrument": 0.0,
+    "n_families": 0,
+    "n_mentions": 0,
+    "entropy": null,
+    "dispersion_1_minus_hhi": null,
+    "top_families": [],
+    "breadth_masked": 0.2588
+   },
+   "2005-2009": {
+    "n_docs": 38,
+    "share_naming_instrument": 0.0,
+    "n_families": 0,
+    "n_mentions": 0,
+    "entropy": null,
+    "dispersion_1_minus_hhi": null,
+    "top_families": [],
+    "breadth_masked": 0.183
+   },
+   "2010-2014": {
+    "n_docs": 63,
+    "share_naming_instrument": 0.0,
+    "n_families": 0,
+    "n_mentions": 0,
+    "entropy": null,
+    "dispersion_1_minus_hhi": null,
+    "top_families": [],
+    "breadth_masked": 0.2027
+   },
+   "2015-2019": {
+    "n_docs": 85,
+    "share_naming_instrument": 0.0353,
+    "n_families": 3,
+    "n_mentions": 3,
+    "entropy": 1.0,
+    "dispersion_1_minus_hhi": 0.6667,
+    "top_families": [
+     [
+      "biological measure",
+      1
+     ],
+     [
+      "impact of event scale",
+      1
+     ],
+     [
+      "harvard trauma questionnaire",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2054
+   },
+   "2020-2024": {
+    "n_docs": 262,
+    "share_naming_instrument": 0.0382,
+    "n_families": 13,
+    "n_mentions": 22,
+    "entropy": 0.9349,
+    "dispersion_1_minus_hhi": 0.8926,
+    "top_families": [
+     [
+      "impact of event scale",
+      4
+     ],
+     [
+      "patient health questionnaire",
+      4
+     ],
+     [
+      "biological measure",
+      2
+     ],
+     [
+      "posttraumatic growth inventory",
+      2
+     ],
+     [
+      "ptsd checklist",
+      2
+     ],
+     [
+      "childhood understanding behaviors survey",
+      1
+     ]
+    ],
+    "breadth_masked": 0.2199
+   },
+   "2025-2025": {
+    "n_docs": 75,
+    "share_naming_instrument": 0.0,
+    "n_families": 0,
+    "n_mentions": 0,
+    "entropy": null,
+    "dispersion_1_minus_hhi": null,
+    "top_families": [],
+    "breadth_masked": 0.1828
+   }
+  },
+  "intergenerational trauma": {
+   "2005-2009": {
+    "n_docs": 16,
+    "share_naming_instrument": 0.0625,
+    "n_families": 2,
+    "n_mentions": 2,
+    "entropy": 1.0,
+    "dispersion_1_minus_hhi": 0.5,
+    "top_families": [
+     [
+      "anxiety questionnaire scale",
+      1
+     ],
+     [
+      "defence mechanism inventory",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1661
+   },
+   "2010-2014": {
+    "n_docs": 43,
+    "share_naming_instrument": 0.0465,
+    "n_families": 2,
+    "n_mentions": 2,
+    "entropy": 1.0,
+    "dispersion_1_minus_hhi": 0.5,
+    "top_families": [
+     [
+      "adverse childhood experiences",
+      1
+     ],
+     [
+      "adult attachment interview",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1889
+   },
+   "2015-2019": {
+    "n_docs": 84,
+    "share_naming_instrument": 0.0357,
+    "n_families": 3,
+    "n_mentions": 3,
+    "entropy": 1.0,
+    "dispersion_1_minus_hhi": 0.6667,
+    "top_families": [
+     [
+      "short form health survey",
+      1
+     ],
+     [
+      "adverse childhood experiences",
+      1
+     ],
+     [
+      "inventory of complicated grief",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1866
+   },
+   "2020-2024": {
+    "n_docs": 277,
+    "share_naming_instrument": 0.083,
+    "n_families": 15,
+    "n_mentions": 31,
+    "entropy": 0.7449,
+    "dispersion_1_minus_hhi": 0.743,
+    "top_families": [
+     [
+      "adverse childhood experiences",
+      15
+     ],
+     [
+      "impact of event scale",
+      3
+     ],
+     [
+      "life scale",
+      1
+     ],
+     [
+      "biological measure",
+      1
+     ],
+     [
+      "patient health questionnaire",
+      1
+     ],
+     [
+      "street youth survey",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1821
+   },
+   "2025-2025": {
+    "n_docs": 82,
+    "share_naming_instrument": 0.0488,
+    "n_families": 2,
+    "n_mentions": 4,
+    "entropy": 0.8113,
+    "dispersion_1_minus_hhi": 0.375,
+    "top_families": [
+     [
+      "adverse childhood experiences",
+      3
+     ],
+     [
+      "childhood trauma questionnaire",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1674
+   }
+  },
+  "traumatic neurosis": {
+   "1980-1984": {
+    "n_docs": 17,
+    "share_naming_instrument": 0.0588,
+    "n_families": 1,
+    "n_mentions": 1,
+    "entropy": 0.0,
+    "dispersion_1_minus_hhi": 0.0,
+    "top_families": [
+     [
+      "biological measure",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1819
+   },
+   "1985-1989": {
+    "n_docs": 17,
+    "share_naming_instrument": 0.0,
+    "n_families": 0,
+    "n_mentions": 0,
+    "entropy": null,
+    "dispersion_1_minus_hhi": null,
+    "top_families": [],
+    "breadth_masked": 0.1637
+   },
+   "2000-2004": {
+    "n_docs": 18,
+    "share_naming_instrument": 0.0,
+    "n_families": 0,
+    "n_mentions": 0,
+    "entropy": null,
+    "dispersion_1_minus_hhi": null,
+    "top_families": [],
+    "breadth_masked": 0.1898
+   },
+   "2005-2009": {
+    "n_docs": 15,
+    "share_naming_instrument": 0.0,
+    "n_families": 0,
+    "n_mentions": 0,
+    "entropy": null,
+    "dispersion_1_minus_hhi": null,
+    "top_families": [],
+    "breadth_masked": 0.1837
+   },
+   "2015-2019": {
+    "n_docs": 15,
+    "share_naming_instrument": 0.0,
+    "n_families": 0,
+    "n_mentions": 0,
+    "entropy": null,
+    "dispersion_1_minus_hhi": null,
+    "top_families": [],
+    "breadth_masked": 0.2012
+   }
+  },
+  "battle fatigue": {
+   "2015-2019": {
+    "n_docs": 21,
+    "share_naming_instrument": 0.0,
+    "n_families": 0,
+    "n_mentions": 0,
+    "entropy": null,
+    "dispersion_1_minus_hhi": null,
+    "top_families": [],
+    "breadth_masked": 0.1031
+   },
+   "2020-2024": {
+    "n_docs": 65,
+    "share_naming_instrument": 0.0,
+    "n_families": 0,
+    "n_mentions": 0,
+    "entropy": null,
+    "dispersion_1_minus_hhi": null,
+    "top_families": [],
+    "breadth_masked": 0.147
+   },
+   "2025-2025": {
+    "n_docs": 18,
+    "share_naming_instrument": 0.0556,
+    "n_families": 1,
+    "n_mentions": 1,
+    "entropy": 0.0,
+    "dispersion_1_minus_hhi": 0.0,
+    "top_families": [
+     [
+      "adea climate survey",
+      1
+     ]
+    ],
+    "breadth_masked": 0.1293
+   }
+  },
+  "shell shock": {
+   "2000-2004": {
+    "n_docs": 19,
+    "share_naming_instrument": 0.0,
+    "n_families": 0,
+    "n_mentions": 0,
+    "entropy": null,
+    "dispersion_1_minus_hhi": null,
+    "top_families": [],
+    "breadth_masked": 0.1918
+   },
+   "2005-2009": {
+    "n_docs": 31,
+    "share_naming_instrument": 0.0,
+    "n_families": 0,
+    "n_mentions": 0,
+    "entropy": null,
+    "dispersion_1_minus_hhi": null,
+    "top_families": [],
+    "breadth_masked": 0.183
+   },
+   "2015-2019": {
+    "n_docs": 20,
+    "share_naming_instrument": 0.0,
+    "n_families": 0,
+    "n_mentions": 0,
+    "entropy": null,
+    "dispersion_1_minus_hhi": null,
+    "top_families": [],
+    "breadth_masked": 0.1616
+   }
+  },
+  "rape trauma syndrome": {
+   "1985-1989": {
+    "n_docs": 15,
+    "share_naming_instrument": 0.0,
+    "n_families": 0,
+    "n_mentions": 0,
+    "entropy": null,
+    "dispersion_1_minus_hhi": null,
+    "top_families": [],
+    "breadth_masked": 0.1667
+   }
+  }
+ },
+ "families": {
+  "trauma": {
+   "biological measure": {
+    "first_period": "1965-1969",
+    "by_period": {
+     "1965-1969": {
+      "base": 10
+     },
+     "1970-1974": {
+      "base": 1
+     },
+     "1975-1979": {
+      "base": 9
+     },
+     "1980-1984": {
+      "base": 10
+     },
+     "1985-1989": {
+      "base": 13
+     },
+     "1990-1994": {
+      "base": 40
+     },
+     "1995-1999": {
+      "base": 67
+     },
+     "2000-2004": {
+      "base": 151
+     },
+     "2005-2009": {
+      "base": 310
+     },
+     "2010-2014": {
+      "base": 541
+     },
+     "2015-2019": {
+      "base": 702
+     },
+     "2020-2024": {
+      "base": 788
+     },
+     "2025-2025": {
+      "base": 114
+     }
+    }
+   },
+   "childhood trauma questionnaire": {
+    "first_period": "1990-1994",
+    "by_period": {
+     "1990-1994": {
+      "base": 2
+     },
+     "1995-1999": {
+      "base": 20
+     },
+     "2000-2004": {
+      "base": 56,
+      "sf": 2
+     },
+     "2005-2009": {
+      "base": 114,
+      "sf": 7
+     },
+     "2010-2014": {
+      "base": 311,
+      "sf": 18
+     },
+     "2015-2019": {
+      "base": 591,
+      "sf": 52
+     },
+     "2020-2024": {
+      "base": 1012,
+      "sf": 118
+     },
+     "2025-2025": {
+      "base": 213,
+      "sf": 31
+     }
+    }
+   },
+   "ptsd checklist": {
+    "first_period": "1995-1999",
+    "by_period": {
+     "1995-1999": {
+      "base": 6
+     },
+     "2000-2004": {
+      "base": 13,
+      "c": 4
+     },
+     "2005-2009": {
+      "base": 46,
+      "c": 4,
+      "m": 2
+     },
+     "2010-2014": {
+      "base": 118,
+      "c": 26,
+      "m": 4,
+      "s": 6,
+      "for dsm 5": 1
+     },
+     "2015-2019": {
+      "base": 203,
+      "c": 46,
+      "for dsm 5": 34,
+      "5": 53,
+      "s": 3,
+      "m": 6
+     },
+     "2020-2024": {
+      "base": 249,
+      "5": 251,
+      "for dsm 5": 134,
+      "c": 32,
+      "m": 4,
+      "s": 5
+     },
+     "2025-2025": {
+      "for dsm 5": 31,
+      "base": 48,
+      "c": 6,
+      "5": 65,
+      "s": 1
+     }
+    }
+   },
+   "adverse childhood experiences": {
+    "first_period": "1995-1999",
+    "by_period": {
+     "1995-1999": {
+      "base": 1
+     },
+     "2000-2004": {
+      "base": 4
+     },
+     "2005-2009": {
+      "base": 13
+     },
+     "2010-2014": {
+      "base": 50
+     },
+     "2015-2019": {
+      "base": 235
+     },
+     "2020-2024": {
+      "base": 684
+     },
+     "2025-2025": {
+      "base": 144
+     }
+    }
+   },
+   "impact of event scale": {
+    "first_period": "1980-1984",
+    "by_period": {
+     "1980-1984": {
+      "base": 1
+     },
+     "1985-1989": {
+      "base": 3
+     },
+     "1990-1994": {
+      "base": 15
+     },
+     "1995-1999": {
+      "base": 54,
+      "revised": 1
+     },
+     "2000-2004": {
+      "base": 84,
+      "r": 7,
+      "revised": 8
+     },
+     "2005-2009": {
+      "revised": 22,
+      "base": 66,
+      "r": 17
+     },
+     "2010-2014": {
+      "revised": 48,
+      "r": 42,
+      "base": 85
+     },
+     "2015-2019": {
+      "base": 81,
+      "revised": 51,
+      "r": 52
+     },
+     "2020-2024": {
+      "revised": 61,
+      "r": 69,
+      "base": 96
+     },
+     "2025-2025": {
+      "revised": 12,
+      "base": 10,
+      "r": 11
+     }
+    }
+   },
+   "clinician administered ptsd scale": {
+    "first_period": "1995-1999",
+    "by_period": {
+     "1995-1999": {
+      "base": 6
+     },
+     "2000-2004": {
+      "base": 44
+     },
+     "2005-2009": {
+      "base": 72
+     },
+     "2010-2014": {
+      "base": 109
+     },
+     "2015-2019": {
+      "base": 180,
+      "5": 16
+     },
+     "2020-2024": {
+      "base": 185,
+      "5": 71
+     },
+     "2025-2025": {
+      "base": 25,
+      "5": 18
+     }
+    }
+   },
+   "injury severity score": {
+    "first_period": "1980-1984",
+    "by_period": {
+     "1980-1984": {
+      "base": 1
+     },
+     "1985-1989": {
+      "base": 24
+     },
+     "1990-1994": {
+      "base": 67
+     },
+     "1995-1999": {
+      "base": 68
+     },
+     "2000-2004": {
+      "base": 61
+     },
+     "2005-2009": {
+      "base": 76
+     },
+     "2010-2014": {
+      "base": 103
+     },
+     "2015-2019": {
+      "base": 118
+     },
+     "2020-2024": {
+      "base": 123
+     },
+     "2025-2025": {
+      "base": 15
+     }
+    }
+   },
+   "beck depression inventory": {
+    "first_period": "1975-1979",
+    "by_period": {
+     "1975-1979": {
+      "base": 1
+     },
+     "1980-1984": {
+      "base": 5
+     },
+     "1990-1994": {
+      "base": 7
+     },
+     "1995-1999": {
+      "base": 19
+     },
+     "2000-2004": {
+      "base": 40,
+      "ii": 1
+     },
+     "2005-2009": {
+      "base": 47,
+      "ii": 3
+     },
+     "2010-2014": {
+      "base": 92,
+      "ii": 13
+     },
+     "2015-2019": {
+      "base": 140,
+      "ii": 30
+     },
+     "2020-2024": {
+      "base": 133,
+      "ii": 41
+     },
+     "2025-2025": {
+      "base": 18,
+      "ii": 6
+     }
+    }
+   }
+  },
+  "PTSD": {
+   "ptsd checklist": {
+    "first_period": "1990-1994",
+    "by_period": {
+     "1990-1994": {
+      "base": 1
+     },
+     "1995-1999": {
+      "base": 15,
+      "c": 4
+     },
+     "2000-2004": {
+      "base": 50,
+      "c": 16,
+      "m": 1,
+      "s": 2
+     },
+     "2005-2009": {
+      "base": 131,
+      "c": 30,
+      "m": 12,
+      "s": 1
+     },
+     "2010-2014": {
+      "base": 344,
+      "c": 85,
+      "5": 2,
+      "m": 28,
+      "s": 13,
+      "for dsm 5": 1
+     },
+     "2015-2019": {
+      "base": 579,
+      "s": 20,
+      "c": 129,
+      "for dsm 5": 73,
+      "5": 119,
+      "m": 29
+     },
+     "2020-2024": {
+      "base": 689,
+      "c": 135,
+      "for dsm 5": 304,
+      "5": 573,
+      "m": 20,
+      "s": 26
+     },
+     "2025-2025": {
+      "for dsm 5": 76,
+      "base": 120,
+      "c": 14,
+      "5": 166,
+      "s": 4,
+      "m": 3
+     }
+    }
+   },
+   "biological measure": {
+    "first_period": "1980-1984",
+    "by_period": {
+     "1980-1984": {
+      "base": 2
+     },
+     "1985-1989": {
+      "base": 23
+     },
+     "1990-1994": {
+      "base": 45
+     },
+     "1995-1999": {
+      "base": 107
+     },
+     "2000-2004": {
+      "base": 200
+     },
+     "2005-2009": {
+      "base": 321
+     },
+     "2010-2014": {
+      "base": 475
+     },
+     "2015-2019": {
+      "base": 632
+     },
+     "2020-2024": {
+      "base": 657
+     },
+     "2025-2025": {
+      "base": 99
+     }
+    }
+   },
+   "impact of event scale": {
+    "first_period": "1980-1984",
+    "by_period": {
+     "1980-1984": {
+      "base": 2
+     },
+     "1985-1989": {
+      "base": 13
+     },
+     "1990-1994": {
+      "base": 33
+     },
+     "1995-1999": {
+      "base": 89,
+      "revised": 2,
+      "r": 2
+     },
+     "2000-2004": {
+      "base": 100,
+      "r": 22,
+      "revised": 21
+     },
+     "2005-2009": {
+      "revised": 52,
+      "r": 50,
+      "base": 121
+     },
+     "2010-2014": {
+      "revised": 101,
+      "r": 88,
+      "base": 129
+     },
+     "2015-2019": {
+      "base": 131,
+      "revised": 113,
+      "r": 121
+     },
+     "2020-2024": {
+      "revised": 183,
+      "r": 178,
+      "base": 172
+     },
+     "2025-2025": {
+      "revised": 27,
+      "base": 26,
+      "r": 24
+     }
+    }
+   },
+   "clinician administered ptsd scale": {
+    "first_period": "1990-1994",
+    "by_period": {
+     "1990-1994": {
+      "base": 6
+     },
+     "1995-1999": {
+      "base": 38
+     },
+     "2000-2004": {
+      "base": 129
+     },
+     "2005-2009": {
+      "base": 166
+     },
+     "2010-2014": {
+      "base": 236
+     },
+     "2015-2019": {
+      "base": 357,
+      "5": 31
+     },
+     "2020-2024": {
+      "base": 349,
+      "5": 142
+     },
+     "2025-2025": {
+      "base": 52,
+      "5": 35
+     }
+    }
+   },
+   "patient health questionnaire": {
+    "first_period": "2000-2004",
+    "by_period": {
+     "2000-2004": {
+      "base": 2
+     },
+     "2005-2009": {
+      "base": 19,
+      "9": 2
+     },
+     "2010-2014": {
+      "base": 61,
+      "9": 20
+     },
+     "2015-2019": {
+      "base": 127,
+      "9": 54
+     },
+     "2020-2024": {
+      "base": 353,
+      "9": 207
+     },
+     "2025-2025": {
+      "base": 64,
+      "9": 60
+     }
+    }
+   },
+   "beck depression inventory": {
+    "first_period": "1980-1984",
+    "by_period": {
+     "1980-1984": {
+      "base": 2
+     },
+     "1985-1989": {
+      "base": 8
+     },
+     "1990-1994": {
+      "base": 14
+     },
+     "1995-1999": {
+      "base": 43
+     },
+     "2000-2004": {
+      "base": 58,
+      "ii": 1
+     },
+     "2005-2009": {
+      "base": 62,
+      "ii": 5
+     },
+     "2010-2014": {
+      "base": 113,
+      "ii": 19
+     },
+     "2015-2019": {
+      "base": 139,
+      "ii": 39
+     },
+     "2020-2024": {
+      "base": 123,
+      "ii": 42
+     },
+     "2025-2025": {
+      "base": 16,
+      "ii": 6
+     }
+    }
+   },
+   "structured clinical interview for dsm": {
+    "first_period": "1985-1989",
+    "by_period": {
+     "1985-1989": {
+      "base": 1
+     },
+     "1990-1994": {
+      "base": 9
+     },
+     "1995-1999": {
+      "base": 24
+     },
+     "2000-2004": {
+      "base": 53
+     },
+     "2005-2009": {
+      "base": 90
+     },
+     "2010-2014": {
+      "base": 114
+     },
+     "2015-2019": {
+      "base": 85,
+      "5": 3
+     },
+     "2020-2024": {
+      "base": 62,
+      "5": 24
+     },
+     "2025-2025": {
+      "base": 6,
+      "5": 3
+     }
+    }
+   },
+   "ptsd symptom scale": {
+    "first_period": "1990-1994",
+    "by_period": {
+     "1990-1994": {
+      "base": 3
+     },
+     "1995-1999": {
+      "base": 14,
+      "sr": 1
+     },
+     "2000-2004": {
+      "base": 26,
+      "sr": 3
+     },
+     "2005-2009": {
+      "base": 49,
+      "sr": 7
+     },
+     "2010-2014": {
+      "base": 61,
+      "sr": 11
+     },
+     "2015-2019": {
+      "base": 82,
+      "sr": 7
+     },
+     "2020-2024": {
+      "base": 77,
+      "sr": 10
+     },
+     "2025-2025": {
+      "base": 13,
+      "sr": 1
+     }
+    }
+   }
+  },
+  "bereavement": {
+   "inventory of complicated grief": {
+    "first_period": "1995-1999",
+    "by_period": {
+     "1995-1999": {
+      "base": 1
+     },
+     "2000-2004": {
+      "base": 4
+     },
+     "2005-2009": {
+      "base": 11
+     },
+     "2010-2014": {
+      "base": 19
+     },
+     "2015-2019": {
+      "base": 26
+     },
+     "2020-2024": {
+      "base": 32
+     },
+     "2025-2025": {
+      "base": 5
+     }
+    }
+   },
+   "impact of event scale": {
+    "first_period": "1990-1994",
+    "by_period": {
+     "1990-1994": {
+      "base": 6
+     },
+     "1995-1999": {
+      "base": 5
+     },
+     "2000-2004": {
+      "base": 3
+     },
+     "2005-2009": {
+      "base": 7,
+      "revised": 1,
+      "r": 1
+     },
+     "2010-2014": {
+      "base": 5,
+      "revised": 6,
+      "r": 5
+     },
+     "2015-2019": {
+      "base": 4,
+      "r": 1,
+      "revised": 1
+     },
+     "2020-2024": {
+      "revised": 11,
+      "r": 5,
+      "base": 3
+     },
+     "2025-2025": {
+      "revised": 3,
+      "base": 1,
+      "r": 1
+     }
+    }
+   },
+   "beck depression inventory": {
+    "first_period": "1980-1984",
+    "by_period": {
+     "1980-1984": {
+      "base": 3
+     },
+     "1985-1989": {
+      "base": 4
+     },
+     "1990-1994": {
+      "base": 10
+     },
+     "1995-1999": {
+      "base": 7
+     },
+     "2000-2004": {
+      "base": 7,
+      "ii": 1
+     },
+     "2005-2009": {
+      "base": 5
+     },
+     "2010-2014": {
+      "base": 9,
+      "ii": 2
+     },
+     "2015-2019": {
+      "ii": 4,
+      "base": 4
+     },
+     "2020-2024": {
+      "base": 7,
+      "ii": 1
+     },
+     "2025-2025": {
+      "base": 1
+     }
+    }
+   },
+   "biological measure": {
+    "first_period": "1980-1984",
+    "by_period": {
+     "1980-1984": {
+      "base": 2
+     },
+     "1985-1989": {
+      "base": 4
+     },
+     "1990-1994": {
+      "base": 3
+     },
+     "1995-1999": {
+      "base": 2
+     },
+     "2000-2004": {
+      "base": 4
+     },
+     "2005-2009": {
+      "base": 5
+     },
+     "2010-2014": {
+      "base": 5
+     },
+     "2015-2019": {
+      "base": 9
+     },
+     "2020-2024": {
+      "base": 10
+     },
+     "2025-2025": {
+      "base": 1
+     }
+    }
+   },
+   "prolonged grief disorder scale": {
+    "first_period": "2010-2014",
+    "by_period": {
+     "2010-2014": {
+      "13": 6
+     },
+     "2015-2019": {
+      "13": 6,
+      "base": 1
+     },
+     "2020-2024": {
+      "13": 14,
+      "base": 5
+     },
+     "2025-2025": {
+      "13": 5,
+      "base": 1
+     }
+    }
+   },
+   "texas revised inventory of grief": {
+    "first_period": "1990-1994",
+    "by_period": {
+     "1990-1994": {
+      "base": 3
+     },
+     "1995-1999": {
+      "base": 6
+     },
+     "2000-2004": {
+      "base": 6
+     },
+     "2005-2009": {
+      "base": 6
+     },
+     "2010-2014": {
+      "base": 6
+     },
+     "2015-2019": {
+      "base": 5
+     },
+     "2020-2024": {
+      "base": 3
+     },
+     "2025-2025": {
+      "base": 2
+     }
+    }
+   },
+   "patient health questionnaire": {
+    "first_period": "2010-2014",
+    "by_period": {
+     "2010-2014": {
+      "base": 5,
+      "9": 3
+     },
+     "2015-2019": {
+      "9": 2,
+      "base": 4
+     },
+     "2020-2024": {
+      "base": 8,
+      "9": 3
+     },
+     "2025-2025": {
+      "9": 2,
+      "base": 4
+     }
+    }
+   },
+   "ptsd checklist": {
+    "first_period": "2010-2014",
+    "by_period": {
+     "2010-2014": {
+      "base": 2,
+      "c": 1
+     },
+     "2015-2019": {
+      "base": 6,
+      "c": 2,
+      "5": 1
+     },
+     "2020-2024": {
+      "base": 3,
+      "for dsm 5": 1,
+      "5": 3,
+      "c": 1
+     },
+     "2025-2025": {
+      "for dsm 5": 1,
+      "5": 1
+     }
+    }
+   }
+  },
+  "posttraumatic stress": {
+   "impact of event scale": {
+    "first_period": "1980-1984",
+    "by_period": {
+     "1980-1984": {
+      "base": 1
+     },
+     "1985-1989": {
+      "base": 2
+     },
+     "1990-1994": {
+      "base": 9
+     },
+     "1995-1999": {
+      "base": 29
+     },
+     "2000-2004": {
+      "base": 50,
+      "revised": 6,
+      "r": 4
+     },
+     "2005-2009": {
+      "base": 64,
+      "revised": 20,
+      "r": 19
+     },
+     "2010-2014": {
+      "revised": 44,
+      "base": 70,
+      "r": 43
+     },
+     "2015-2019": {
+      "base": 60,
+      "r": 39,
+      "revised": 57
+     },
+     "2020-2024": {
+      "base": 76,
+      "revised": 77,
+      "r": 80
+     },
+     "2025-2025": {
+      "r": 11,
+      "base": 11,
+      "revised": 7
+     }
+    }
+   },
+   "ptsd checklist": {
+    "first_period": "1990-1994",
+    "by_period": {
+     "1990-1994": {
+      "base": 1
+     },
+     "2000-2004": {
+      "base": 1,
+      "c": 1
+     },
+     "2005-2009": {
+      "base": 22,
+      "c": 4,
+      "m": 2
+     },
+     "2010-2014": {
+      "base": 48,
+      "m": 7,
+      "c": 16
+     },
+     "2015-2019": {
+      "base": 86,
+      "s": 10,
+      "c": 20,
+      "for dsm 5": 8,
+      "5": 15,
+      "m": 7
+     },
+     "2020-2024": {
+      "for dsm 5": 50,
+      "5": 105,
+      "base": 132,
+      "m": 4,
+      "c": 30,
+      "s": 6
+     },
+     "2025-2025": {
+      "base": 17,
+      "5": 28,
+      "for dsm 5": 11,
+      "c": 2,
+      "s": 1,
+      "m": 1
+     }
+    }
+   },
+   "biological measure": {
+    "first_period": "1980-1984",
+    "by_period": {
+     "1980-1984": {
+      "base": 1
+     },
+     "1990-1994": {
+      "base": 1
+     },
+     "1995-1999": {
+      "base": 3
+     },
+     "2000-2004": {
+      "base": 9
+     },
+     "2005-2009": {
+      "base": 28
+     },
+     "2010-2014": {
+      "base": 43
+     },
+     "2015-2019": {
+      "base": 62
+     },
+     "2020-2024": {
+      "base": 72
+     },
+     "2025-2025": {
+      "base": 14
+     }
+    }
+   },
+   "patient health questionnaire": {
+    "first_period": "2010-2014",
+    "by_period": {
+     "2010-2014": {
+      "base": 9,
+      "9": 3
+     },
+     "2015-2019": {
+      "base": 28,
+      "9": 10
+     },
+     "2020-2024": {
+      "base": 78,
+      "9": 44
+     },
+     "2025-2025": {
+      "base": 8,
+      "9": 5
+     }
+    }
+   },
+   "posttraumatic diagnostic scale": {
+    "first_period": "1990-1994",
+    "by_period": {
+     "1990-1994": {
+      "base": 1
+     },
+     "1995-1999": {
+      "base": 1
+     },
+     "2000-2004": {
+      "base": 16
+     },
+     "2005-2009": {
+      "base": 39
+     },
+     "2010-2014": {
+      "base": 45
+     },
+     "2015-2019": {
+      "base": 48
+     },
+     "2020-2024": {
+      "base": 15,
+      "5": 1
+     },
+     "2025-2025": {
+      "5": 1,
+      "base": 1
+     }
+    }
+   },
+   "beck depression inventory": {
+    "first_period": "1980-1984",
+    "by_period": {
+     "1980-1984": {
+      "base": 2
+     },
+     "1985-1989": {
+      "base": 1
+     },
+     "1995-1999": {
+      "base": 4
+     },
+     "2000-2004": {
+      "base": 10
+     },
+     "2005-2009": {
+      "base": 16,
+      "ii": 2
+     },
+     "2010-2014": {
+      "base": 24,
+      "ii": 2
+     },
+     "2015-2019": {
+      "base": 23,
+      "ii": 5
+     },
+     "2020-2024": {
+      "base": 21,
+      "ii": 10
+     },
+     "2025-2025": {
+      "base": 1,
+      "ii": 2
+     }
+    }
+   },
+   "clinician administered ptsd scale": {
+    "first_period": "1995-1999",
+    "by_period": {
+     "1995-1999": {
+      "base": 3
+     },
+     "2000-2004": {
+      "base": 5
+     },
+     "2005-2009": {
+      "base": 13
+     },
+     "2010-2014": {
+      "base": 24
+     },
+     "2015-2019": {
+      "base": 24
+     },
+     "2020-2024": {
+      "base": 24,
+      "5": 8
+     },
+     "2025-2025": {
+      "base": 1
+     }
+    }
+   },
+   "ptsd symptom scale": {
+    "first_period": "1995-1999",
+    "by_period": {
+     "1995-1999": {
+      "base": 1
+     },
+     "2000-2004": {
+      "base": 6
+     },
+     "2005-2009": {
+      "sr": 2,
+      "base": 6
+     },
+     "2010-2014": {
+      "base": 12,
+      "sr": 5
+     },
+     "2015-2019": {
+      "base": 17,
+      "sr": 1
+     },
+     "2020-2024": {
+      "base": 25,
+      "sr": 3
+     },
+     "2025-2025": {
+      "base": 2
+     }
+    }
+   }
+  },
+  "trauma informed": {
+   "adverse childhood experiences": {
+    "first_period": "2010-2014",
+    "by_period": {
+     "2010-2014": {
+      "base": 3
+     },
+     "2015-2019": {
+      "base": 80
+     },
+     "2020-2024": {
+      "base": 325
+     },
+     "2025-2025": {
+      "base": 102
+     }
+    }
+   },
+   "ptsd checklist": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 5,
+      "c": 4,
+      "5": 1
+     },
+     "2020-2024": {
+      "base": 15,
+      "5": 15,
+      "for dsm 5": 8,
+      "c": 3
+     },
+     "2025-2025": {
+      "base": 3,
+      "5": 3,
+      "m": 1,
+      "for dsm 5": 1
+     }
+    }
+   },
+   "attitudes related to trauma informed care": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 2
+     },
+     "2020-2024": {
+      "base": 36
+     },
+     "2025-2025": {
+      "base": 5
+     }
+    }
+   },
+   "patient health questionnaire": {
+    "first_period": "2010-2014",
+    "by_period": {
+     "2010-2014": {
+      "base": 1
+     },
+     "2015-2019": {
+      "base": 3,
+      "9": 2
+     },
+     "2020-2024": {
+      "base": 14,
+      "9": 7
+     },
+     "2025-2025": {
+      "base": 11,
+      "9": 4
+     }
+    }
+   },
+   "childhood trauma questionnaire": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 6,
+      "sf": 1
+     },
+     "2020-2024": {
+      "base": 9,
+      "sf": 1
+     },
+     "2025-2025": {
+      "base": 10,
+      "sf": 1
+     }
+    }
+   },
+   "professional quality of life scale": {
+    "first_period": "2010-2014",
+    "by_period": {
+     "2010-2014": {
+      "base": 1
+     },
+     "2015-2019": {
+      "base": 3
+     },
+     "2020-2024": {
+      "base": 10
+     },
+     "2025-2025": {
+      "base": 7
+     }
+    }
+   },
+   "impact of event scale": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "revised": 1,
+      "r": 4,
+      "base": 1
+     },
+     "2020-2024": {
+      "base": 3,
+      "revised": 2,
+      "r": 3
+     },
+     "2025-2025": {
+      "base": 3,
+      "revised": 2,
+      "r": 2
+     }
+    }
+   },
+   "biological measure": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 1
+     },
+     "2020-2024": {
+      "base": 9
+     },
+     "2025-2025": {
+      "base": 3
+     }
+    }
+   }
+  },
+  "traumatic stress": {
+   "impact of event scale": {
+    "first_period": "1990-1994",
+    "by_period": {
+     "1990-1994": {
+      "base": 1
+     },
+     "1995-1999": {
+      "revised": 1,
+      "base": 10
+     },
+     "2000-2004": {
+      "base": 21,
+      "revised": 3,
+      "r": 5
+     },
+     "2005-2009": {
+      "base": 12,
+      "revised": 7,
+      "r": 5
+     },
+     "2010-2014": {
+      "revised": 6,
+      "base": 20,
+      "r": 7
+     },
+     "2015-2019": {
+      "revised": 11,
+      "r": 12,
+      "base": 11
+     },
+     "2020-2024": {
+      "base": 19,
+      "revised": 13,
+      "r": 17
+     },
+     "2025-2025": {
+      "base": 2,
+      "revised": 3,
+      "r": 3
+     }
+    }
+   },
+   "ptsd checklist": {
+    "first_period": "1995-1999",
+    "by_period": {
+     "1995-1999": {
+      "base": 2
+     },
+     "2000-2004": {
+      "base": 2,
+      "c": 1
+     },
+     "2005-2009": {
+      "base": 6,
+      "c": 2
+     },
+     "2010-2014": {
+      "base": 8,
+      "c": 4
+     },
+     "2015-2019": {
+      "base": 20,
+      "m": 1,
+      "c": 8,
+      "5": 4
+     },
+     "2020-2024": {
+      "base": 24,
+      "5": 15,
+      "for dsm 5": 6,
+      "c": 5
+     },
+     "2025-2025": {
+      "base": 6,
+      "5": 7,
+      "for dsm 5": 2,
+      "m": 1
+     }
+    }
+   },
+   "biological measure": {
+    "first_period": "1990-1994",
+    "by_period": {
+     "1990-1994": {
+      "base": 1
+     },
+     "1995-1999": {
+      "base": 5
+     },
+     "2000-2004": {
+      "base": 4
+     },
+     "2005-2009": {
+      "base": 16
+     },
+     "2010-2014": {
+      "base": 34
+     },
+     "2015-2019": {
+      "base": 29
+     },
+     "2020-2024": {
+      "base": 21
+     },
+     "2025-2025": {
+      "base": 5
+     }
+    }
+   },
+   "adverse childhood experiences": {
+    "first_period": "2005-2009",
+    "by_period": {
+     "2005-2009": {
+      "base": 6
+     },
+     "2010-2014": {
+      "base": 4
+     },
+     "2015-2019": {
+      "base": 9
+     },
+     "2020-2024": {
+      "base": 20
+     },
+     "2025-2025": {
+      "base": 7
+     }
+    }
+   },
+   "clinician administered ptsd scale": {
+    "first_period": "2000-2004",
+    "by_period": {
+     "2000-2004": {
+      "base": 4
+     },
+     "2005-2009": {
+      "base": 7
+     },
+     "2010-2014": {
+      "base": 5
+     },
+     "2015-2019": {
+      "base": 5,
+      "5": 1
+     },
+     "2020-2024": {
+      "base": 10,
+      "5": 3
+     },
+     "2025-2025": {
+      "base": 3
+     }
+    }
+   },
+   "beck depression inventory": {
+    "first_period": "1995-1999",
+    "by_period": {
+     "1995-1999": {
+      "base": 1
+     },
+     "2005-2009": {
+      "base": 2
+     },
+     "2010-2014": {
+      "base": 5,
+      "ii": 3
+     },
+     "2015-2019": {
+      "base": 7,
+      "ii": 1
+     },
+     "2020-2024": {
+      "base": 6,
+      "ii": 1
+     },
+     "2025-2025": {
+      "base": 3
+     }
+    }
+   },
+   "patient health questionnaire": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 4,
+      "9": 1
+     },
+     "2020-2024": {
+      "base": 13,
+      "9": 7
+     },
+     "2025-2025": {
+      "base": 4
+     }
+    }
+   },
+   "trauma symptom checklist": {
+    "first_period": "2005-2009",
+    "by_period": {
+     "2005-2009": {
+      "base": 2
+     },
+     "2010-2014": {
+      "base": 8,
+      "40": 4
+     },
+     "2015-2019": {
+      "40": 1,
+      "base": 2
+     },
+     "2020-2024": {
+      "base": 7,
+      "40": 1
+     }
+    }
+   }
+  },
+  "psychological trauma": {
+   "biological measure": {
+    "first_period": "1970-1974",
+    "by_period": {
+     "1970-1974": {
+      "base": 1
+     },
+     "1985-1989": {
+      "base": 2
+     },
+     "1995-1999": {
+      "base": 1
+     },
+     "2000-2004": {
+      "base": 2
+     },
+     "2005-2009": {
+      "base": 10
+     },
+     "2010-2014": {
+      "base": 16
+     },
+     "2015-2019": {
+      "base": 15
+     },
+     "2020-2024": {
+      "base": 25
+     },
+     "2025-2025": {
+      "base": 1
+     }
+    }
+   },
+   "impact of event scale": {
+    "first_period": "1995-1999",
+    "by_period": {
+     "1995-1999": {
+      "revised": 1
+     },
+     "2000-2004": {
+      "base": 6,
+      "revised": 1,
+      "r": 2
+     },
+     "2005-2009": {
+      "r": 3,
+      "base": 4,
+      "revised": 1
+     },
+     "2010-2014": {
+      "revised": 1,
+      "r": 1,
+      "base": 3
+     },
+     "2015-2019": {
+      "r": 2,
+      "revised": 3,
+      "base": 2
+     },
+     "2020-2024": {
+      "revised": 4,
+      "base": 6,
+      "r": 4
+     },
+     "2025-2025": {
+      "r": 2,
+      "revised": 1
+     }
+    }
+   },
+   "ptsd checklist": {
+    "first_period": "2005-2009",
+    "by_period": {
+     "2005-2009": {
+      "base": 1,
+      "c": 1
+     },
+     "2010-2014": {
+      "base": 3,
+      "c": 2
+     },
+     "2015-2019": {
+      "base": 3,
+      "c": 3,
+      "5": 1
+     },
+     "2020-2024": {
+      "base": 3,
+      "5": 8,
+      "for dsm 5": 5,
+      "c": 1
+     },
+     "2025-2025": {
+      "base": 3,
+      "5": 2,
+      "for dsm 5": 1
+     }
+    }
+   },
+   "beck depression inventory": {
+    "first_period": "1995-1999",
+    "by_period": {
+     "1995-1999": {
+      "base": 1
+     },
+     "2000-2004": {
+      "base": 1
+     },
+     "2005-2009": {
+      "base": 3
+     },
+     "2010-2014": {
+      "base": 8
+     },
+     "2015-2019": {
+      "base": 7
+     },
+     "2020-2024": {
+      "base": 2,
+      "ii": 1
+     }
+    }
+   },
+   "clinician administered ptsd scale": {
+    "first_period": "2000-2004",
+    "by_period": {
+     "2000-2004": {
+      "base": 1
+     },
+     "2005-2009": {
+      "base": 2
+     },
+     "2010-2014": {
+      "base": 3
+     },
+     "2015-2019": {
+      "base": 2
+     },
+     "2020-2024": {
+      "base": 5,
+      "5": 1
+     },
+     "2025-2025": {
+      "base": 3
+     }
+    }
+   },
+   "adverse childhood experiences": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 1
+     },
+     "2020-2024": {
+      "base": 14
+     },
+     "2025-2025": {
+      "base": 1
+     }
+    }
+   },
+   "childhood trauma questionnaire": {
+    "first_period": "2005-2009",
+    "by_period": {
+     "2005-2009": {
+      "base": 2
+     },
+     "2010-2014": {
+      "base": 1
+     },
+     "2015-2019": {
+      "base": 7
+     },
+     "2020-2024": {
+      "base": 5
+     }
+    }
+   },
+   "patient health questionnaire": {
+    "first_period": "2010-2014",
+    "by_period": {
+     "2010-2014": {
+      "base": 1,
+      "9": 1
+     },
+     "2015-2019": {
+      "base": 2
+     },
+     "2020-2024": {
+      "base": 6,
+      "9": 3
+     },
+     "2025-2025": {
+      "base": 1
+     }
+    }
+   }
+  },
+  "secondary traumatic stress": {
+   "professional quality of life scale": {
+    "first_period": "2005-2009",
+    "by_period": {
+     "2005-2009": {
+      "base": 1
+     },
+     "2010-2014": {
+      "base": 11
+     },
+     "2015-2019": {
+      "base": 113
+     },
+     "2020-2024": {
+      "base": 262
+     },
+     "2025-2025": {
+      "base": 65
+     }
+    }
+   },
+   "secondary traumatic stress scale": {
+    "first_period": "2000-2004",
+    "by_period": {
+     "2000-2004": {
+      "base": 2
+     },
+     "2005-2009": {
+      "base": 9
+     },
+     "2010-2014": {
+      "base": 11
+     },
+     "2015-2019": {
+      "base": 21
+     },
+     "2020-2024": {
+      "base": 61
+     },
+     "2025-2025": {
+      "base": 33
+     }
+    }
+   },
+   "impact of event scale": {
+    "first_period": "2000-2004",
+    "by_period": {
+     "2000-2004": {
+      "base": 2
+     },
+     "2005-2009": {
+      "base": 1,
+      "revised": 1
+     },
+     "2010-2014": {
+      "revised": 2,
+      "base": 1
+     },
+     "2015-2019": {
+      "base": 1,
+      "revised": 4
+     },
+     "2020-2024": {
+      "revised": 3,
+      "base": 2,
+      "r": 1
+     },
+     "2025-2025": {
+      "revised": 1,
+      "r": 1
+     }
+    }
+   },
+   "adverse childhood experiences": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 3
+     },
+     "2020-2024": {
+      "base": 15
+     },
+     "2025-2025": {
+      "base": 2
+     }
+    }
+   },
+   "ptsd checklist": {
+    "first_period": "2010-2014",
+    "by_period": {
+     "2010-2014": {
+      "base": 1,
+      "m": 1
+     },
+     "2020-2024": {
+      "5": 4,
+      "base": 1,
+      "for dsm 5": 1
+     },
+     "2025-2025": {
+      "base": 1,
+      "5": 3,
+      "for dsm 5": 2
+     }
+    }
+   },
+   "life events checklist": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 5
+     },
+     "2020-2024": {
+      "base": 5,
+      "5": 1
+     }
+    }
+   },
+   "connor davidson resilience scale": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 5
+     },
+     "2020-2024": {
+      "base": 5
+     },
+     "2025-2025": {
+      "base": 1
+     }
+    }
+   },
+   "patient health questionnaire": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 1
+     },
+     "2020-2024": {
+      "base": 3,
+      "9": 2
+     },
+     "2025-2025": {
+      "9": 2,
+      "base": 1
+     }
+    }
+   }
+  },
+  "adjustment disorder": {
+   "beck depression inventory": {
+    "first_period": "1980-1984",
+    "by_period": {
+     "1980-1984": {
+      "base": 1
+     },
+     "1985-1989": {
+      "base": 2
+     },
+     "1990-1994": {
+      "base": 1
+     },
+     "1995-1999": {
+      "base": 2
+     },
+     "2000-2004": {
+      "base": 4
+     },
+     "2005-2009": {
+      "base": 4
+     },
+     "2010-2014": {
+      "base": 11
+     },
+     "2015-2019": {
+      "base": 4,
+      "ii": 3
+     },
+     "2020-2024": {
+      "base": 5,
+      "ii": 2
+     }
+    }
+   },
+   "biological measure": {
+    "first_period": "1980-1984",
+    "by_period": {
+     "1980-1984": {
+      "base": 1
+     },
+     "1985-1989": {
+      "base": 11
+     },
+     "1990-1994": {
+      "base": 1
+     },
+     "1995-1999": {
+      "base": 4
+     },
+     "2000-2004": {
+      "base": 4
+     },
+     "2005-2009": {
+      "base": 2
+     },
+     "2010-2014": {
+      "base": 4
+     },
+     "2015-2019": {
+      "base": 6
+     },
+     "2020-2024": {
+      "base": 1
+     },
+     "2025-2025": {
+      "base": 3
+     }
+    }
+   },
+   "structured clinical interview for dsm": {
+    "first_period": "1990-1994",
+    "by_period": {
+     "1990-1994": {
+      "base": 1
+     },
+     "2000-2004": {
+      "base": 3
+     },
+     "2005-2009": {
+      "base": 8
+     },
+     "2010-2014": {
+      "base": 10
+     },
+     "2015-2019": {
+      "base": 6
+     },
+     "2020-2024": {
+      "base": 7,
+      "5": 2
+     }
+    }
+   },
+   "patient health questionnaire": {
+    "first_period": "2005-2009",
+    "by_period": {
+     "2005-2009": {
+      "9": 1
+     },
+     "2010-2014": {
+      "base": 1,
+      "9": 1
+     },
+     "2015-2019": {
+      "9": 3,
+      "base": 2
+     },
+     "2020-2024": {
+      "9": 9,
+      "base": 7
+     },
+     "2025-2025": {
+      "base": 2,
+      "9": 1
+     }
+    }
+   },
+   "impact of event scale": {
+    "first_period": "1995-1999",
+    "by_period": {
+     "1995-1999": {
+      "base": 1
+     },
+     "2005-2009": {
+      "r": 1,
+      "base": 1
+     },
+     "2010-2014": {
+      "base": 2,
+      "r": 2
+     },
+     "2015-2019": {
+      "revised": 2,
+      "r": 1,
+      "base": 2
+     },
+     "2020-2024": {
+      "base": 3,
+      "revised": 2,
+      "r": 1
+     }
+    }
+   },
+   "ptsd checklist": {
+    "first_period": "2005-2009",
+    "by_period": {
+     "2005-2009": {
+      "c": 1,
+      "base": 2
+     },
+     "2010-2014": {
+      "base": 1,
+      "c": 1
+     },
+     "2020-2024": {
+      "5": 2,
+      "base": 1
+     },
+     "2025-2025": {
+      "5": 1
+     }
+    }
+   },
+   "ptsd symptom scale": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 3
+     },
+     "2020-2024": {
+      "base": 3
+     },
+     "2025-2025": {
+      "base": 1
+     }
+    }
+   },
+   "structured clinical interview": {
+    "first_period": "1995-1999",
+    "by_period": {
+     "1995-1999": {
+      "base": 1
+     },
+     "2000-2004": {
+      "base": 1
+     },
+     "2005-2009": {
+      "base": 2
+     },
+     "2010-2014": {
+      "base": 1
+     },
+     "2015-2019": {
+      "base": 1
+     }
+    }
+   }
+  },
+  "complex PTSD": {
+   "international trauma questionnaire": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 16
+     },
+     "2020-2024": {
+      "base": 128
+     },
+     "2025-2025": {
+      "base": 24
+     }
+    }
+   },
+   "ptsd checklist": {
+    "first_period": "2000-2004",
+    "by_period": {
+     "2000-2004": {
+      "c": 1
+     },
+     "2010-2014": {
+      "base": 2,
+      "c": 2
+     },
+     "2015-2019": {
+      "base": 2,
+      "5": 2
+     },
+     "2020-2024": {
+      "5": 13,
+      "for dsm 5": 7,
+      "base": 1
+     },
+     "2025-2025": {
+      "for dsm 5": 3,
+      "5": 4,
+      "base": 1
+     }
+    }
+   },
+   "adverse childhood experiences": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 5
+     },
+     "2020-2024": {
+      "base": 24
+     },
+     "2025-2025": {
+      "base": 6
+     }
+    }
+   },
+   "clinician administered ptsd scale": {
+    "first_period": "2010-2014",
+    "by_period": {
+     "2010-2014": {
+      "base": 1
+     },
+     "2015-2019": {
+      "base": 5
+     },
+     "2020-2024": {
+      "5": 7,
+      "base": 13
+     },
+     "2025-2025": {
+      "base": 1,
+      "5": 3
+     }
+    }
+   },
+   "life events checklist": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 2
+     },
+     "2020-2024": {
+      "base": 11,
+      "5": 4
+     },
+     "2025-2025": {
+      "base": 2
+     }
+    }
+   },
+   "biological measure": {
+    "first_period": "2000-2004",
+    "by_period": {
+     "2000-2004": {
+      "base": 1
+     },
+     "2005-2009": {
+      "base": 1
+     },
+     "2010-2014": {
+      "base": 3
+     },
+     "2015-2019": {
+      "base": 1
+     },
+     "2020-2024": {
+      "base": 8
+     },
+     "2025-2025": {
+      "base": 2
+     }
+    }
+   },
+   "dissociative experiences scale": {
+    "first_period": "1995-1999",
+    "by_period": {
+     "1995-1999": {
+      "base": 4
+     },
+     "2010-2014": {
+      "base": 1
+     },
+     "2015-2019": {
+      "base": 4
+     },
+     "2020-2024": {
+      "base": 2
+     },
+     "2025-2025": {
+      "base": 2,
+      "ii": 1
+     }
+    }
+   },
+   "impact of event scale": {
+    "first_period": "2005-2009",
+    "by_period": {
+     "2005-2009": {
+      "revised": 1
+     },
+     "2015-2019": {
+      "base": 3,
+      "revised": 1,
+      "r": 1
+     },
+     "2020-2024": {
+      "base": 3,
+      "revised": 3,
+      "r": 1
+     },
+     "2025-2025": {
+      "base": 1
+     }
+    }
+   }
+  },
+  "moral injury": {
+   "moral injury events scale": {
+    "first_period": "2010-2014",
+    "by_period": {
+     "2010-2014": {
+      "base": 1
+     },
+     "2015-2019": {
+      "base": 12
+     },
+     "2020-2024": {
+      "base": 30
+     },
+     "2025-2025": {
+      "base": 9
+     }
+    }
+   },
+   "moral injury symptom scale": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 2,
+      "m": 2
+     },
+     "2020-2024": {
+      "base": 28,
+      "m": 3
+     },
+     "2025-2025": {
+      "base": 7
+     }
+    }
+   },
+   "ptsd checklist": {
+    "first_period": "2010-2014",
+    "by_period": {
+     "2010-2014": {
+      "m": 1
+     },
+     "2015-2019": {
+      "base": 2,
+      "for dsm 5": 2,
+      "5": 1,
+      "c": 1
+     },
+     "2020-2024": {
+      "base": 4,
+      "for dsm 5": 4,
+      "5": 9
+     },
+     "2025-2025": {
+      "base": 1
+     }
+    }
+   },
+   "patient health questionnaire": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 3
+     },
+     "2020-2024": {
+      "base": 6,
+      "9": 4
+     },
+     "2025-2025": {
+      "base": 2
+     }
+    }
+   },
+   "adverse childhood experiences": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 1
+     },
+     "2020-2024": {
+      "base": 8
+     },
+     "2025-2025": {
+      "base": 1
+     }
+    }
+   },
+   "impact of event scale": {
+    "first_period": "2010-2014",
+    "by_period": {
+     "2010-2014": {
+      "revised": 1
+     },
+     "2020-2024": {
+      "revised": 2,
+      "base": 2,
+      "r": 2
+     }
+    }
+   },
+   "international trauma questionnaire": {
+    "first_period": "2020-2024",
+    "by_period": {
+     "2020-2024": {
+      "base": 7
+     }
+    }
+   },
+   "biological measure": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 1
+     },
+     "2020-2024": {
+      "base": 5
+     }
+    }
+   }
+  },
+  "acute stress disorder": {
+   "impact of event scale": {
+    "first_period": "1995-1999",
+    "by_period": {
+     "1995-1999": {
+      "base": 4
+     },
+     "2000-2004": {
+      "base": 7
+     },
+     "2005-2009": {
+      "base": 6,
+      "revised": 2,
+      "r": 1
+     },
+     "2010-2014": {
+      "base": 2,
+      "revised": 2,
+      "r": 1
+     },
+     "2015-2019": {
+      "base": 4,
+      "r": 2,
+      "revised": 1
+     },
+     "2020-2024": {
+      "revised": 1,
+      "r": 1
+     },
+     "2025-2025": {
+      "revised": 1,
+      "r": 1
+     }
+    }
+   },
+   "ptsd checklist": {
+    "first_period": "2000-2004",
+    "by_period": {
+     "2000-2004": {
+      "base": 1
+     },
+     "2005-2009": {
+      "base": 2,
+      "c": 1
+     },
+     "2010-2014": {
+      "base": 3,
+      "c": 1
+     },
+     "2015-2019": {
+      "base": 4,
+      "m": 1,
+      "5": 1
+     },
+     "2020-2024": {
+      "for dsm 5": 3,
+      "5": 4,
+      "base": 2
+     },
+     "2025-2025": {
+      "5": 1,
+      "base": 1
+     }
+    }
+   },
+   "clinician administered ptsd scale": {
+    "first_period": "2000-2004",
+    "by_period": {
+     "2000-2004": {
+      "base": 5
+     },
+     "2005-2009": {
+      "base": 4
+     },
+     "2010-2014": {
+      "base": 3
+     },
+     "2015-2019": {
+      "base": 3
+     },
+     "2020-2024": {
+      "base": 4
+     }
+    }
+   },
+   "biological measure": {
+    "first_period": "2000-2004",
+    "by_period": {
+     "2000-2004": {
+      "base": 2
+     },
+     "2005-2009": {
+      "base": 4
+     },
+     "2010-2014": {
+      "base": 8
+     },
+     "2015-2019": {
+      "base": 3
+     },
+     "2020-2024": {
+      "base": 2
+     }
+    }
+   },
+   "beck depression inventory": {
+    "first_period": "1995-1999",
+    "by_period": {
+     "1995-1999": {
+      "base": 4
+     },
+     "2000-2004": {
+      "base": 3
+     },
+     "2005-2009": {
+      "base": 7
+     },
+     "2020-2024": {
+      "base": 4
+     }
+    }
+   },
+   "structured clinical interview for dsm": {
+    "first_period": "2000-2004",
+    "by_period": {
+     "2000-2004": {
+      "base": 1
+     },
+     "2005-2009": {
+      "base": 5
+     },
+     "2010-2014": {
+      "base": 7
+     },
+     "2015-2019": {
+      "base": 1
+     },
+     "2025-2025": {
+      "base": 1,
+      "5": 1
+     }
+    }
+   },
+   "patient health questionnaire": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 2,
+      "9": 1
+     },
+     "2020-2024": {
+      "base": 8,
+      "9": 4
+     }
+    }
+   },
+   "acute stress disorder scale": {
+    "first_period": "2000-2004",
+    "by_period": {
+     "2000-2004": {
+      "base": 1
+     },
+     "2005-2009": {
+      "base": 1
+     },
+     "2010-2014": {
+      "base": 1
+     },
+     "2015-2019": {
+      "base": 1
+     },
+     "2020-2024": {
+      "base": 5
+     }
+    }
+   }
+  },
+  "vicarious trauma": {
+   "professional quality of life scale": {
+    "first_period": "2005-2009",
+    "by_period": {
+     "2005-2009": {
+      "base": 1
+     },
+     "2010-2014": {
+      "base": 1
+     },
+     "2015-2019": {
+      "base": 2
+     },
+     "2020-2024": {
+      "base": 8
+     }
+    }
+   },
+   "impact of event scale": {
+    "first_period": "2000-2004",
+    "by_period": {
+     "2000-2004": {
+      "base": 2
+     },
+     "2005-2009": {
+      "revised": 1
+     },
+     "2015-2019": {
+      "base": 2,
+      "revised": 1
+     },
+     "2020-2024": {
+      "base": 1,
+      "revised": 2,
+      "r": 1
+     }
+    }
+   },
+   "secondary traumatic stress scale": {
+    "first_period": "2010-2014",
+    "by_period": {
+     "2010-2014": {
+      "base": 4
+     },
+     "2020-2024": {
+      "base": 3
+     },
+     "2025-2025": {
+      "base": 2
+     }
+    }
+   },
+   "trauma and attachment belief scale": {
+    "first_period": "2005-2009",
+    "by_period": {
+     "2005-2009": {
+      "base": 1
+     },
+     "2010-2014": {
+      "base": 1
+     },
+     "2015-2019": {
+      "base": 3
+     },
+     "2020-2024": {
+      "base": 1
+     }
+    }
+   },
+   "vicarious trauma scale": {
+    "first_period": "2005-2009",
+    "by_period": {
+     "2005-2009": {
+      "base": 1
+     },
+     "2015-2019": {
+      "base": 1
+     },
+     "2020-2024": {
+      "base": 2
+     },
+     "2025-2025": {
+      "base": 2
+     }
+    }
+   },
+   "trauma symptom inventory": {
+    "first_period": "2000-2004",
+    "by_period": {
+     "2000-2004": {
+      "base": 2
+     },
+     "2005-2009": {
+      "base": 1
+     }
+    }
+   },
+   "adverse childhood experiences": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 1
+     },
+     "2020-2024": {
+      "base": 2
+     }
+    }
+   },
+   "defense style questionnaire": {
+    "first_period": "2005-2009",
+    "by_period": {
+     "2005-2009": {
+      "base": 1
+     },
+     "2020-2024": {
+      "base": 1
+     }
+    }
+   }
+  },
+  "collective trauma": {
+   "impact of event scale": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "r": 1
+     },
+     "2020-2024": {
+      "revised": 1,
+      "r": 2,
+      "base": 1
+     }
+    }
+   },
+   "patient health questionnaire": {
+    "first_period": "2020-2024",
+    "by_period": {
+     "2020-2024": {
+      "base": 3,
+      "9": 1
+     }
+    }
+   },
+   "biological measure": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 1
+     },
+     "2020-2024": {
+      "base": 2
+     }
+    }
+   },
+   "harvard trauma questionnaire": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 1
+     },
+     "2020-2024": {
+      "base": 1
+     }
+    }
+   },
+   "posttraumatic growth inventory": {
+    "first_period": "2020-2024",
+    "by_period": {
+     "2020-2024": {
+      "base": 2
+     }
+    }
+   },
+   "ptsd checklist": {
+    "first_period": "2020-2024",
+    "by_period": {
+     "2020-2024": {
+      "base": 1,
+      "5": 1
+     }
+    }
+   },
+   "childhood understanding behaviors survey": {
+    "first_period": "2020-2024",
+    "by_period": {
+     "2020-2024": {
+      "base": 1
+     }
+    }
+   },
+   "state trait anxiety inventory": {
+    "first_period": "2020-2024",
+    "by_period": {
+     "2020-2024": {
+      "base": 1
+     }
+    }
+   }
+  },
+  "intergenerational trauma": {
+   "adverse childhood experiences": {
+    "first_period": "2010-2014",
+    "by_period": {
+     "2010-2014": {
+      "base": 1
+     },
+     "2015-2019": {
+      "base": 1
+     },
+     "2020-2024": {
+      "base": 15
+     },
+     "2025-2025": {
+      "base": 3
+     }
+    }
+   },
+   "impact of event scale": {
+    "first_period": "2020-2024",
+    "by_period": {
+     "2020-2024": {
+      "r": 2,
+      "base": 1
+     }
+    }
+   },
+   "adult attachment interview": {
+    "first_period": "2000-2004",
+    "by_period": {
+     "2000-2004": {
+      "base": 1
+     },
+     "2010-2014": {
+      "base": 1
+     }
+    }
+   },
+   "anxiety questionnaire scale": {
+    "first_period": "2005-2009",
+    "by_period": {
+     "2005-2009": {
+      "base": 1
+     }
+    }
+   },
+   "defence mechanism inventory": {
+    "first_period": "2005-2009",
+    "by_period": {
+     "2005-2009": {
+      "base": 1
+     }
+    }
+   },
+   "short form health survey": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 1
+     }
+    }
+   },
+   "inventory of complicated grief": {
+    "first_period": "2015-2019",
+    "by_period": {
+     "2015-2019": {
+      "base": 1
+     }
+    }
+   },
+   "life scale": {
+    "first_period": "2020-2024",
+    "by_period": {
+     "2020-2024": {
+      "base": 1
+     }
+    }
+   }
+  },
+  "traumatic neurosis": {
+   "biological measure": {
+    "first_period": "1965-1969",
+    "by_period": {
+     "1965-1969": {
+      "base": 1
+     },
+     "1980-1984": {
+      "base": 1
+     }
+    }
+   },
+   "glasgow coma scale": {
+    "first_period": "2020-2024",
+    "by_period": {
+     "2020-2024": {
+      "base": 1
+     }
+    }
+   }
+  },
+  "battle fatigue": {
+   "adea climate survey": {
+    "first_period": "2025-2025",
+    "by_period": {
+     "2025-2025": {
+      "base": 1
+     }
+    }
+   }
+  },
+  "shell shock": {
+   "posttraumatic diagnostic scale": {
+    "first_period": "2010-2014",
+    "by_period": {
+     "2010-2014": {
+      "base": 1
+     }
+    }
+   },
+   "posttraumatic growth inventory": {
+    "first_period": "2010-2014",
+    "by_period": {
+     "2010-2014": {
+      "base": 1
+     }
+    }
+   },
+   "social acknowledgement questionnaire": {
+    "first_period": "2010-2014",
+    "by_period": {
+     "2010-2014": {
+      "base": 1
+     }
+    }
+   },
+   "biological measure": {
+    "first_period": "2010-2014",
+    "by_period": {
+     "2010-2014": {
+      "base": 1
+     }
+    }
+   }
+  },
+  "rape trauma syndrome": {},
+  "war neurosis": {},
+  "combat fatigue": {
+   "biological measure": {
+    "first_period": "1975-1979",
+    "by_period": {
+     "1975-1979": {
+      "base": 1
+     },
+     "2020-2024": {
+      "base": 1
+     }
+    }
+   },
+   "quality of life questionnaire": {
+    "first_period": "2020-2024",
+    "by_period": {
+     "2020-2024": {
+      "base": 1
+     }
+    }
+   }
+  },
+  "postvietnam syndrome": {},
+  "combat neurosis": {
+   "beck depression inventory": {
+    "first_period": "1975-1979",
+    "by_period": {
+     "1975-1979": {
+      "base": 1
+     }
+    }
+   }
+  },
+  "gross stress reaction": {}
+ },
+ "pairing_with_concept_breadth": {
+  "trauma": {
+   "n_periods": 13,
+   "spearman_instrument_dispersion_vs_breadth": [
+    -0.55,
+    0.0514
+   ],
+   "spearman_first_differences": [
+    0.392,
+    0.2081
+   ],
+   "note": "two monotone series correlate whatever their relation; the first-difference correlation asks whether period-to-period moves co-occur"
+  },
+  "PTSD": {
+   "n_periods": 10,
+   "spearman_instrument_dispersion_vs_breadth": [
+    0.467,
+    0.1739
+   ],
+   "spearman_first_differences": [
+    0.6,
+    0.0876
+   ],
+   "note": "two monotone series correlate whatever their relation; the first-difference correlation asks whether period-to-period moves co-occur"
+  },
+  "bereavement": {
+   "n_periods": 11,
+   "spearman_instrument_dispersion_vs_breadth": [
+    0.909,
+    0.0001
+   ],
+   "spearman_first_differences": [
+    0.491,
+    0.1497
+   ],
+   "note": "two monotone series correlate whatever their relation; the first-difference correlation asks whether period-to-period moves co-occur"
+  },
+  "posttraumatic stress": {
+   "n_periods": 10,
+   "spearman_instrument_dispersion_vs_breadth": [
+    -0.624,
+    0.0537
+   ],
+   "spearman_first_differences": [
+    -0.267,
+    0.4879
+   ],
+   "note": "two monotone series correlate whatever their relation; the first-difference correlation asks whether period-to-period moves co-occur"
+  },
+  "trauma informed": {
+   "n_periods": 5,
+   "spearman_instrument_dispersion_vs_breadth": [
+    0.5,
+    0.391
+   ],
+   "spearman_first_differences": [
+    0.4,
+    0.6
+   ],
+   "note": "two monotone series correlate whatever their relation; the first-difference correlation asks whether period-to-period moves co-occur"
+  },
+  "traumatic stress": {
+   "n_periods": 9,
+   "spearman_instrument_dispersion_vs_breadth": [
+    -0.417,
+    0.2646
+   ],
+   "spearman_first_differences": [
+    -0.476,
+    0.2329
+   ],
+   "note": "two monotone series correlate whatever their relation; the first-difference correlation asks whether period-to-period moves co-occur"
+  },
+  "psychological trauma": {
+   "n_periods": 9,
+   "spearman_instrument_dispersion_vs_breadth": [
+    -0.326,
+    0.3914
+   ],
+   "spearman_first_differences": [
+    0.286,
+    0.4927
+   ],
+   "note": "two monotone series correlate whatever their relation; the first-difference correlation asks whether period-to-period moves co-occur"
+  },
+  "secondary traumatic stress": {
+   "n_periods": 6,
+   "spearman_instrument_dispersion_vs_breadth": [
+    0.086,
+    0.8717
+   ],
+   "spearman_first_differences": [
+    0.8,
+    0.1041
+   ],
+   "note": "two monotone series correlate whatever their relation; the first-difference correlation asks whether period-to-period moves co-occur"
+  },
+  "adjustment disorder": {
+   "n_periods": 10,
+   "spearman_instrument_dispersion_vs_breadth": [
+    -0.754,
+    0.0118
+   ],
+   "spearman_first_differences": [
+    0.167,
+    0.6682
+   ],
+   "note": "two monotone series correlate whatever their relation; the first-difference correlation asks whether period-to-period moves co-occur"
+  },
+  "complex PTSD": {
+   "n_periods": 6,
+   "spearman_instrument_dispersion_vs_breadth": [
+    0.143,
+    0.7872
+   ],
+   "spearman_first_differences": [
+    0.0,
+    1.0
+   ],
+   "note": "two monotone series correlate whatever their relation; the first-difference correlation asks whether period-to-period moves co-occur"
+  },
+  "moral injury": {
+   "n_periods": 4,
+   "spearman_instrument_dispersion_vs_breadth": [
+    -0.4,
+    0.6
+   ],
+   "spearman_first_differences": [
+    null,
+    null
+   ],
+   "note": "two monotone series correlate whatever their relation; the first-difference correlation asks whether period-to-period moves co-occur"
+  },
+  "acute stress disorder": {
+   "n_periods": 7,
+   "spearman_instrument_dispersion_vs_breadth": [
+    0.679,
+    0.0938
+   ],
+   "spearman_first_differences": [
+    0.314,
+    0.5441
+   ],
+   "note": "two monotone series correlate whatever their relation; the first-difference correlation asks whether period-to-period moves co-occur"
+  },
+  "vicarious trauma": {
+   "n_periods": 6,
+   "spearman_instrument_dispersion_vs_breadth": [
+    -0.029,
+    0.9572
+   ],
+   "spearman_first_differences": [
+    -0.3,
+    0.6238
+   ],
+   "note": "two monotone series correlate whatever their relation; the first-difference correlation asks whether period-to-period moves co-occur"
+  },
+  "intergenerational trauma": {
+   "n_periods": 5,
+   "spearman_instrument_dispersion_vs_breadth": [
+    0.308,
+    0.6144
+   ],
+   "spearman_first_differences": [
+    0.4,
+    0.6
+   ],
+   "note": "two monotone series correlate whatever their relation; the first-difference correlation asks whether period-to-period moves co-occur"
+  }
+ },
+ "most_detected": [
+  {
+   "family": "biological measure",
+   "how": "seed",
+   "n": 4398
+  },
+  {
+   "family": "ptsd checklist",
+   "how": "seed",
+   "n": 3887
+  },
+  {
+   "family": "childhood trauma questionnaire",
+   "how": "seed",
+   "n": 2551
+  },
+  {
+   "family": "impact of event scale",
+   "how": "seed",
+   "n": 2548
+  },
+  {
+   "family": "adverse childhood experiences",
+   "how": "seed",
+   "n": 1631
+  },
+  {
+   "family": "clinician administered ptsd scale",
+   "how": "seed",
+   "n": 1554
+  },
+  {
+   "family": "patient health questionnaire",
+   "how": "seed",
+   "n": 1392
+  },
+  {
+   "family": "beck depression inventory",
+   "how": "seed",
+   "n": 1188
+  },
+  {
+   "family": "structured clinical interview for dsm",
+   "how": "seed",
+   "n": 713
+  },
+  {
+   "family": "injury severity score",
+   "how": "seed",
+   "n": 683
+  },
+  {
+   "family": "professional quality of life scale",
+   "how": "seed",
+   "n": 535
+  },
+  {
+   "family": "dissociative experiences scale",
+   "how": "seed",
+   "n": 497
+  },
+  {
+   "family": "glasgow coma scale",
+   "how": "seed",
+   "n": 476
+  },
+  {
+   "family": "ptsd symptom scale",
+   "how": "seed",
+   "n": 459
+  },
+  {
+   "family": "harvard trauma questionnaire",
+   "how": "seed",
+   "n": 383
+  },
+  {
+   "family": "posttraumatic diagnostic scale",
+   "how": "seed",
+   "n": 370
+  },
+  {
+   "family": "posttraumatic growth inventory",
+   "how": "seed",
+   "n": 328
+  },
+  {
+   "family": "trauma symptom checklist",
+   "how": "seed",
+   "n": 313
+  },
+  {
+   "family": "life events checklist",
+   "how": "seed",
+   "n": 264
+  },
+  {
+   "family": "abbreviated injury scale",
+   "how": "seed",
+   "n": 248
+  },
+  {
+   "family": "international trauma questionnaire",
+   "how": "seed",
+   "n": 229
+  },
+  {
+   "family": "primary care ptsd screen",
+   "how": "seed",
+   "n": 193
+  },
+  {
+   "family": "davidson trauma scale",
+   "how": "seed",
+   "n": 176
+  },
+  {
+   "family": "mississippi scale",
+   "how": "seed",
+   "n": 158
+  },
+  {
+   "family": "trauma symptom inventory",
+   "how": "seed",
+   "n": 150
+  },
+  {
+   "family": "secondary traumatic stress scale",
+   "how": "seed",
+   "n": 139
+  },
+  {
+   "family": "general health questionnaire",
+   "how": "generic",
+   "n": 136
+  },
+  {
+   "family": "inventory of complicated grief",
+   "how": "seed",
+   "n": 136
+  },
+  {
+   "family": "hospital anxiety and depression scale",
+   "how": "generic",
+   "n": 134
+  },
+  {
+   "family": "child ptsd symptom scale",
+   "how": "seed",
+   "n": 126
+  },
+  {
+   "family": "structured clinical interview",
+   "how": "generic",
+   "n": 110
+  },
+  {
+   "family": "beck anxiety inventory",
+   "how": "generic",
+   "n": 90
+  },
+  {
+   "family": "brief symptom inventory",
+   "how": "generic",
+   "n": 90
+  },
+  {
+   "family": "ucla ptsd reaction index",
+   "how": "seed",
+   "n": 84
+  },
+  {
+   "family": "state trait anxiety inventory",
+   "how": "generic",
+   "n": 79
+  },
+  {
+   "family": "trauma history questionnaire",
+   "how": "seed",
+   "n": 76
+  },
+  {
+   "family": "connor davidson resilience scale",
+   "how": "generic",
+   "n": 71
+  },
+  {
+   "family": "pittsburgh sleep quality index",
+   "how": "generic",
+   "n": 66
+  },
+  {
+   "family": "hamilton depression rating scale",
+   "how": "generic",
+   "n": 65
+  },
+  {
+   "family": "glasgow outcome scale",
+   "how": "generic",
+   "n": 64
+  },
+  {
+   "family": "prolonged grief disorder scale",
+   "how": "seed",
+   "n": 61
+  },
+  {
+   "family": "toronto alexithymia scale",
+   "how": "generic",
+   "n": 60
+  },
+  {
+   "family": "perceived stress scale",
+   "how": "generic",
+   "n": 58
+  },
+  {
+   "family": "mini international neuropsychiatric interview",
+   "how": "generic",
+   "n": 56
+  },
+  {
+   "family": "alcohol use disorders identification test",
+   "how": "generic",
+   "n": 55
+  },
+  {
+   "family": "insomnia severity index",
+   "how": "generic",
+   "n": 55
+  },
+  {
+   "family": "moral injury events scale",
+   "how": "seed",
+   "n": 52
+  },
+  {
+   "family": "symptom checklist",
+   "how": "generic",
+   "n": 50
+  },
+  {
+   "family": "short form health survey",
+   "how": "generic",
+   "n": 50
+  },
+  {
+   "family": "depression inventory",
+   "how": "generic",
+   "n": 50
+  },
+  {
+   "family": "national epidemiologic survey",
+   "how": "generic",
+   "n": 49
+  },
+  {
+   "family": "moral injury symptom scale",
+   "how": "seed",
+   "n": 48
+  },
+  {
+   "family": "life scale",
+   "how": "generic",
+   "n": 45
+  },
+  {
+   "family": "minnesota multiphasic personality inventory",
+   "how": "generic",
+   "n": 44
+  },
+  {
+   "family": "cumulative index",
+   "how": "generic",
+   "n": 44
+  },
+  {
+   "family": "anxiety and stress scale",
+   "how": "generic",
+   "n": 44
+  },
+  {
+   "family": "item short form health survey",
+   "how": "generic",
+   "n": 43
+  },
+  {
+   "family": "difficulties in emotion regulation scale",
+   "how": "generic",
+   "n": 43
+  },
+  {
+   "family": "attitudes related to trauma informed care",
+   "how": "seed",
+   "n": 43
+  },
+  {
+   "family": "texas revised inventory of grief",
+   "how": "seed",
+   "n": 42
+  }
+ ]
+}

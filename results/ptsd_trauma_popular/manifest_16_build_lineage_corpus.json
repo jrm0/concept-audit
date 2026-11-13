@@ -1,0 +1,191 @@
+{
+  "script": "16_build_lineage_corpus",
+  "concept": "posttraumatic stress disorder",
+  "config": "configs/ptsd_trauma_popular.yaml",
+  "config_sha1": "0b45de2f1973",
+  "timestamp": "2026-09-16T09:16:38-04:00",
+  "git_commit": "5beeaba",
+  "git_dirty": false,
+  "argv": [
+    "--config",
+    "configs/ptsd_trauma_popular.yaml"
+  ],
+  "params": {
+    "ris_root": ".",
+    "family_csv": "families/ptsd_trauma_family.csv",
+    "family_works_glob": null,
+    "ris_files": [],
+    "ignored_exports": [],
+    "allow_unlisted": false,
+    "periods": {
+      "year_min": 1965,
+      "year_max": 2025,
+      "width": 5
+    },
+    "control_terms": [
+      "people",
+      "year",
+      "city",
+      "family"
+    ],
+    "n_docs": 30253,
+    "accounting": {
+      "parentheticals_stripped": 394,
+      "kept": 30253,
+      "merged_duplicates": 219,
+      "mentions_excluded_nested_or_paren": 24949,
+      "skipped_no_family_term": 2176,
+      "skipped_no_abstract_or_year": 2997
+    },
+    "mention_rules": {
+      "exclude_nested": true,
+      "strip_acronym_parentheticals": true,
+      "exclude_hyphen_prefixed": true,
+      "min_sentence_chars": 12
+    },
+    "mentions_excluded_by_term": {
+      "adjustment disorder": 1,
+      "traumatic stress": 4190,
+      "trauma": 1522,
+      "posttraumatic stress": 3248,
+      "war neurosis": 1,
+      "ptsd": 103,
+      "shell shock": 1,
+      "posttraumatic stress disorder": 67,
+      "bereavement": 4,
+      "complex posttraumatic stress disorder": 1
+    },
+    "db_provenance": {
+      "Guardian": 30152,
+      "NYT": 101
+    },
+    "strata": {
+      "popular": 30253
+    },
+    "corpus_spec": {
+      "platform": "Guardian Open Platform API; NYT Article Search API (+ Google Books Ngram salience)",
+      "exported": null,
+      "expanders": [],
+      "fields": [
+        "headline",
+        "abstract/lead paragraph",
+        "body text (Guardian only)"
+      ],
+      "limiters": [],
+      "language_filter": "english",
+      "document_type_filter": "articles (NYT document_type=article; Guardian type=article)",
+      "queries": {
+        "popular_terms": [
+          "trauma",
+          "PTSD",
+          "posttraumatic stress disorder",
+          "post-traumatic stress",
+          "shell shock",
+          "trauma-informed",
+          "traumatic stress",
+          "moral injury",
+          "collective trauma",
+          "intergenerational trauma",
+          "vicarious trauma"
+        ]
+      },
+      "exclusions": [
+        {
+          "term": "physical trauma (trauma centre, trauma surgeon, blunt trauma)",
+          "why": "NOT excluded \u2014 in lay text the somatic sense is the majority sense for decades; its share by period is the somatic->psychic curve. Read the split, do not filter it."
+        },
+        {
+          "habitat": "UK vs US register",
+          "why": "Guardian (UK) and NYT (US) are kept as separate sources/DB tags and compared, never pooled without saying so."
+        },
+        {
+          "habitat": "social media, broadcast, fiction",
+          "why": "not sampled; news is the only lay register with dated, retrievable full text at this scale"
+        }
+      ],
+      "strata": {
+        "popular": [
+          "NEWS"
+        ],
+        "journal": [
+          "JOUR"
+        ]
+      },
+      "ignore": [],
+      "audit": {
+        "min_abstract_share": 0.95,
+        "warn_if_dedupe_share_above": 0.3
+      }
+    },
+    "corpus_sources": [
+      {
+        "id": "guardian",
+        "files": [
+          "data/ptsd_trauma_popular/news_guardian_*.jsonl"
+        ],
+        "databases": [
+          "Guardian"
+        ],
+        "query": "popular_terms",
+        "dates": "1999-2025",
+        "role": "popular",
+        "question": "UK broadsheet lay usage with FULL body text \u2014 the richest contexts; extraordinary->ordinary in ordinary prose",
+        "n_records": null
+      },
+      {
+        "id": "nyt",
+        "files": [
+          "data/ptsd_trauma_popular/news_nyt_*.jsonl"
+        ],
+        "databases": [
+          "NYT"
+        ],
+        "query": "popular_terms",
+        "dates": "1965-2025",
+        "role": "popular",
+        "question": "US record of lay usage back to the pre-coinage era (headline + abstract + lead paragraph only \u2014 short contexts)",
+        "n_records": null
+      }
+    ],
+    "coverage_audit": {
+      "guardian": {
+        "records": 30917,
+        "with_abstract": 30917,
+        "TY:NEWS": 30917,
+        "kept": 30152,
+        "stratum:popular": 30152,
+        "merged_into_existing": 218,
+        "skipped_no_family_term": 547,
+        "strata": {
+          "popular": 30152
+        }
+      },
+      "nyt": {
+        "records": 4728,
+        "with_abstract": 1730,
+        "TY:NEWS": 4728,
+        "skipped_no_family_term": 1629,
+        "skipped_no_abstract_or_year": 2997,
+        "kept": 101,
+        "stratum:popular": 101,
+        "merged_into_existing": 1,
+        "strata": {
+          "popular": 101
+        }
+      }
+    }
+  },
+  "outputs": [
+    "data/ptsd_trauma_popular/lineage_docs.jsonl",
+    "data/ptsd_trauma_popular/lineage_power_table.csv"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "diptest": "0.11.0",
+    "torch": "2.12.0",
+    "transformers": "5.13.0"
+  }
+}

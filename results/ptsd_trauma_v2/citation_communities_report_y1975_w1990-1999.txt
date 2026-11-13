@@ -1,0 +1,22 @@
+CITATION COMMUNITIES — posttraumatic stress disorder  (nodes 115,970, edges 1,086,328, year >= 1975)
+skipped (--flows-only), resolution 1.0, modularity nan; 1 communities >= 200 nodes
+parent = trauma; null = within-period label shuffle, 200 perms; flows restricted to citing documents in 1990-1999 (26,408 references)
+
+== communities (read before interpreting) ==  [skipped: --flows-only]
+
+== term x community (P1/P3) ==
+  term                           docs   topC  topShare  entropy  inOver  JSvsParent
+  trauma                        69584      0     1.000    0.000   0.000         nan
+  PTSD                          46172      0     1.000    0.000   0.000      0.0000
+  @abuse                         7636      0     1.000    0.000   0.000      0.0000
+  @veteran                      13469      0     1.000    0.000   0.000      0.0000
+  @ancestor                       393      0     1.000    0.000   0.000      0.0000
+
+== insulation: same-term citation vs within-period label-shuffle null ==
+  (->parent = citations to 'trauma' docs vs null; ->2nd = to 'PTSD' docs vs null)
+  term                           edges    refs    obs   null  ratio       z  ->parent   ->2nd
+  trauma                         11786   18622  0.321  0.510   0.69    -8.5      0.69    1.62
+  PTSD                           17323   29384  0.506  0.269   5.27    65.8      0.96    5.27
+  @abuse                          3712    6602  0.265  0.089   5.68    32.6      1.07    2.41
+  @veteran                        5767   10858  0.353  0.123   8.97    69.4      0.77    5.64
+  @ancestor                         32      57  0.088  0.010   3.60     2.7      0.23    0.44

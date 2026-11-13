@@ -1,0 +1,19 @@
+CITATION COMMUNITIES — posttraumatic stress disorder  (nodes 102,230, edges 927,573, year >= 1995)
+skipped (--flows-only), resolution 1.0, modularity nan; 1 communities >= 200 nodes
+parent = trauma; null = within-venue label shuffle, 200 perms
+
+== communities (read before interpreting) ==  [skipped: --flows-only]
+
+== term x community (P1/P3) ==
+  term                           docs   topC  topShare  entropy  inOver  JSvsParent
+
+== insulation: distinct-edge share ratio; venue label-shuffle null ==
+  ->parent and ->2nd are COUNT enrichment ratios, not share ratios.
+  (->parent = citations to 'trauma' docs vs null; ->2nd = to 'PTSD' docs vs null)
+  term                           edges    refs    obs   null  ratio       z  ->parent   ->2nd
+  trauma                        526883  723399  0.644  0.591   1.09     8.7      1.04    1.43
+  PTSD                          594241  816735  0.867  0.448   1.93    65.7      1.22    2.88
+  trauma informed                38442   56115  0.283  0.025  11.21   172.1      1.13    0.83
+  secondary traumatic stress     11550   17516  0.477  0.007  65.27   399.1      1.07    0.78
+  vicarious trauma                4242    6649  0.246  0.003  78.36   228.6      1.25    0.65
+  complex PTSD                   17602   32868  0.344  0.007  52.77   310.9      2.21    3.43

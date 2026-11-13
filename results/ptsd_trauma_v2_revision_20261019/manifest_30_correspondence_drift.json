@@ -1,0 +1,45 @@
+{
+  "script": "30_correspondence_drift",
+  "concept": "posttraumatic stress disorder",
+  "config": "configs/ptsd_trauma_revision_20261019.yaml",
+  "config_sha1": "11fd60134f87",
+  "timestamp": "2026-10-19T12:50:38-04:00",
+  "git_commit": "5beeaba",
+  "git_dirty": true,
+  "argv": [
+    "--config",
+    "configs/ptsd_trauma_revision_20261019.yaml",
+    "--cross",
+    "ANC=traumatic neurosis,war neurosis,combat neurosis,combat fatigue,battle fatigue,shell shock,gross stress reaction,postvietnam syndrome,rape trauma syndrome@1965-1979;PTSD80=PTSD@1980-1989;PTSD90=PTSD@1990-1994;BER=bereavement@1965-1979",
+    "--compare",
+    "ANC:PTSD80<BER:PTSD80",
+    "--reps",
+    "50",
+    "--min-n",
+    "30"
+  ],
+  "params": {
+    "cross": "ANC=traumatic neurosis,war neurosis,combat neurosis,combat fatigue,battle fatigue,shell shock,gross stress reaction,postvietnam syndrome,rape trauma syndrome@1965-1979;PTSD80=PTSD@1980-1989;PTSD90=PTSD@1990-1994;BER=bereavement@1965-1979",
+    "compare": [
+      "ANC:PTSD80<BER:PTSD80"
+    ],
+    "equalize": 250,
+    "reps": 50,
+    "min_n": 30,
+    "center": "controls",
+    "seed": 42
+  },
+  "outputs": [
+    "results/ptsd_trauma_v2_revision_20261019/correspondence_cross.json",
+    "results/ptsd_trauma_v2_revision_20261019/correspondence_cross_report.txt"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.3.3",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "torch": "2.12.1",
+    "transformers": "5.12.1"
+  },
+  "notes": "Addendum A1 cross-set correspondence (pooled, period-centred sets)."
+}

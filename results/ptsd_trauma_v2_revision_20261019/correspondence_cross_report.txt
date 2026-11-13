@@ -1,0 +1,20 @@
+CORRESPONDENCE — CROSS SETS — posttraumatic stress disorder  (center=controls, matched n=26, 50 paired draws)
+
+sets: ANC n=53; PTSD80 n=679; PTSD90 n=1201; BER n=147
+
+  pair                             PRT           APD           AMD      AMD A->B      AMD B->A          SAMD
+  ANC:PTSD80                0.098±0.016    0.581±0.018    0.395±0.015    0.413±0.020    0.378±0.016    0.469±0.020
+  ANC:PTSD90                0.131±0.022    0.611±0.018    0.419±0.017    0.440±0.021    0.398±0.017    0.495±0.020
+  ANC:BER                   0.176±0.023    0.662±0.018    0.469±0.018    0.464±0.023    0.473±0.020    0.545±0.021
+  PTSD80:PTSD90             0.060±0.012    0.502±0.025    0.306±0.018    0.305±0.021    0.306±0.021    0.379±0.025
+  PTSD80:BER                0.166±0.021    0.596±0.021    0.412±0.020    0.387±0.025    0.437±0.020    0.495±0.022
+  PTSD90:BER                0.197±0.018    0.624±0.022    0.437±0.019    0.413±0.022    0.460±0.022    0.517±0.020
+
+  floor (set vs itself)            PRT           APD           AMD          SAMD
+  ANC                       0.064±0.014    0.631±0.004    0.397±0.010    0.470±0.018
+  PTSD80                    0.036±0.006    0.477±0.022    0.288±0.018    0.358±0.021
+  PTSD90                    0.041±0.008    0.509±0.025    0.300±0.019    0.369±0.022
+  BER                       0.054±0.010    0.587±0.018    0.354±0.018    0.426±0.022
+
+  comparisons (symmetric AMD, paired by draw; PASS = mean diff > 0 and > 2 sd):
+  ANC:PTSD80<BER:PTSD80      FAIL   mean_diff=0.0168, sd_diff=0.0213, share_draws_lhs_smaller=0.84, lhs_AMD=0.3954, rhs_AMD=0.4122

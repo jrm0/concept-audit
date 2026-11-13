@@ -1,0 +1,20 @@
+CITATION COMMUNITIES — ego depletion  (nodes 24,423, edges 127,489, year >= 1995)
+skipped (--flows-only), resolution 1.0, modularity nan; 1 communities >= 200 nodes
+parent = self control; null = within-journal label shuffle, 200 perms
+
+== communities (read before interpreting) ==  [skipped: --flows-only]
+
+== term x community (P1/P3) ==
+  term                           docs   topC  topShare  entropy  inOver  JSvsParent
+
+== insulation: distinct-edge share ratio; journal label-shuffle null ==
+  ->parent and ->2nd are COUNT enrichment ratios, not share ratios.
+  (->parent = citations to 'self control' docs vs null; ->2nd = to 'self regulation' docs vs null)
+  term                           edges    refs    obs   null  ratio       z  ->parent   ->2nd
+  ego depletion                   9516   17544  0.460  0.093   4.95    22.6      2.71    1.01
+  self control                   70534   94012  0.827  0.583   1.42    14.9      1.63    0.66
+  self regulation                60144   75972  0.801  0.678   1.18    10.3      0.70    1.07
+  willpower                       3341    5664  0.205  0.045   4.57    26.9      1.82    0.79
+  strength model                  2728    4848  0.167  0.026   6.33    11.7      3.42    1.39
+  executive function              4092    5893  0.251  0.075   3.34    16.4      0.97    1.19
+  delay of gratification          2210    3526  0.259  0.053   4.92    23.4      1.71    1.19

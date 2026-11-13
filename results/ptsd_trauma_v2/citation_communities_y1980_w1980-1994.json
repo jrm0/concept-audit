@@ -1,0 +1,482 @@
+{
+  "graph": {
+    "nodes": 115695,
+    "edges": 1085123,
+    "year_min": 1980,
+    "algorithm": "skipped (--flows-only)",
+    "resolution": 1.0,
+    "modularity": NaN,
+    "n_communities": 1,
+    "n_communities_ge_min": 1,
+    "min_community": 200
+  },
+  "communities": {
+    "0": {
+      "n": 115695,
+      "top_venues": [
+        [
+          "Journal of Traumatic Stress",
+          2656
+        ],
+        [
+          "Psychological Trauma Theory Research Practice and Policy",
+          1721
+        ],
+        [
+          "Journal of Affective Disorders",
+          1385
+        ],
+        [
+          "European Journal of Psychotraumatology",
+          1255
+        ],
+        [
+          "Child Abuse & Neglect",
+          1168
+        ],
+        [
+          "Frontiers in Psychiatry",
+          1045
+        ]
+      ],
+      "top_terms": [
+        [
+          "trauma",
+          69392,
+          0.6
+        ],
+        [
+          "@cat:core/other psych",
+          62950,
+          0.544
+        ],
+        [
+          "PTSD",
+          46172,
+          0.399
+        ],
+        [
+          "@cat:nursing/health",
+          26141,
+          0.226
+        ],
+        [
+          "@cat:psychiatry",
+          15799,
+          0.137
+        ],
+        [
+          "@veteran",
+          13459,
+          0.116
+        ]
+      ],
+      "periods": [
+        [
+          "1980-1984",
+          625
+        ],
+        [
+          "1985-1989",
+          1583
+        ],
+        [
+          "1990-1994",
+          2940
+        ],
+        [
+          "1995-1999",
+          4418
+        ],
+        [
+          "2000-2004",
+          7532
+        ],
+        [
+          "2005-2009",
+          12066
+        ],
+        [
+          "2010-2014",
+          17874
+        ],
+        [
+          "2015-2019",
+          24524
+        ],
+        [
+          "2020-2024",
+          36067
+        ],
+        [
+          "2025-2025",
+          8066
+        ]
+      ]
+    }
+  },
+  "term_distribution": [
+    {
+      "term": "trauma",
+      "n_docs": 69392,
+      "top_community": 0,
+      "top_community_share": 1.0,
+      "norm_entropy": 0.0,
+      "share_in_overrepresented_comms": 0.0,
+      "n_overrepresented_comms": 0,
+      "js_vs_parent": null
+    },
+    {
+      "term": "PTSD",
+      "n_docs": 46172,
+      "top_community": 0,
+      "top_community_share": 1.0,
+      "norm_entropy": 0.0,
+      "share_in_overrepresented_comms": 0.0,
+      "n_overrepresented_comms": 0,
+      "js_vs_parent": 0.0
+    },
+    {
+      "term": "@ancestor",
+      "n_docs": 383,
+      "top_community": 0,
+      "top_community_share": 1.0,
+      "norm_entropy": 0.0,
+      "share_in_overrepresented_comms": 0.0,
+      "n_overrepresented_comms": 0,
+      "js_vs_parent": 0.0
+    },
+    {
+      "term": "@analytic",
+      "n_docs": 2508,
+      "top_community": 0,
+      "top_community_share": 1.0,
+      "norm_entropy": 0.0,
+      "share_in_overrepresented_comms": 0.0,
+      "n_overrepresented_comms": 0,
+      "js_vs_parent": 0.0
+    },
+    {
+      "term": "@abuse",
+      "n_docs": 7626,
+      "top_community": 0,
+      "top_community_share": 1.0,
+      "norm_entropy": 0.0,
+      "share_in_overrepresented_comms": 0.0,
+      "n_overrepresented_comms": 0,
+      "js_vs_parent": 0.0
+    },
+    {
+      "term": "@veteran",
+      "n_docs": 13459,
+      "top_community": 0,
+      "top_community_share": 1.0,
+      "norm_entropy": 0.0,
+      "share_in_overrepresented_comms": 0.0,
+      "n_overrepresented_comms": 0,
+      "js_vs_parent": 0.0
+    }
+  ],
+  "insulation": [
+    {
+      "term": "trauma",
+      "refs_out_to_focus": 5128,
+      "edges_from_term_docs": 3192,
+      "same_term_share_obs": 0.3192,
+      "same_term_share_null": 0.5204,
+      "insulation_ratio": 0.58,
+      "insulation_z": -8.7,
+      "to_parent_ratio": 0.58,
+      "to_second_ratio": 1.46,
+      "second": "PTSD"
+    },
+    {
+      "term": "PTSD",
+      "refs_out_to_focus": 10126,
+      "edges_from_term_docs": 5897,
+      "same_term_share_obs": 0.4787,
+      "same_term_share_null": 0.231,
+      "insulation_ratio": 6.74,
+      "insulation_z": 62.2,
+      "to_parent_ratio": 0.97,
+      "to_second_ratio": 6.74,
+      "second": "PTSD"
+    },
+    {
+      "term": "@ancestor",
+      "refs_out_to_focus": 101,
+      "edges_from_term_docs": 51,
+      "same_term_share_obs": 0.1485,
+      "same_term_share_null": 0.0157,
+      "insulation_ratio": 10.83,
+      "insulation_z": 10.2,
+      "to_parent_ratio": 0.5,
+      "to_second_ratio": 1.44,
+      "second": "PTSD"
+    },
+    {
+      "term": "@analytic",
+      "refs_out_to_focus": 260,
+      "edges_from_term_docs": 151,
+      "same_term_share_obs": 0.2115,
+      "same_term_share_null": 0.0264,
+      "insulation_ratio": 8.33,
+      "insulation_z": 14.6,
+      "to_parent_ratio": 0.82,
+      "to_second_ratio": 0.82,
+      "second": "PTSD"
+    },
+    {
+      "term": "@abuse",
+      "refs_out_to_focus": 1953,
+      "edges_from_term_docs": 1082,
+      "same_term_share_obs": 0.2668,
+      "same_term_share_null": 0.0775,
+      "insulation_ratio": 6.6,
+      "insulation_z": 26.5,
+      "to_parent_ratio": 1.1,
+      "to_second_ratio": 2.39,
+      "second": "PTSD"
+    },
+    {
+      "term": "@veteran",
+      "refs_out_to_focus": 4773,
+      "edges_from_term_docs": 2548,
+      "same_term_share_obs": 0.3891,
+      "same_term_share_null": 0.1336,
+      "insulation_ratio": 10.26,
+      "insulation_z": 55.4,
+      "to_parent_ratio": 0.78,
+      "to_second_ratio": 7.19,
+      "second": "PTSD"
+    }
+  ],
+  "flow_ratio": {
+    "terms": [
+      "trauma",
+      "PTSD",
+      "@ancestor",
+      "@analytic",
+      "@abuse",
+      "@veteran"
+    ],
+    "obs": [
+      [
+        1637,
+        1814,
+        91,
+        97,
+        600,
+        889
+      ],
+      [
+        1563,
+        4847,
+        141,
+        25,
+        560,
+        2990
+      ],
+      [
+        23,
+        28,
+        15,
+        2,
+        23,
+        10
+      ],
+      [
+        106,
+        46,
+        5,
+        55,
+        24,
+        24
+      ],
+      [
+        580,
+        563,
+        73,
+        28,
+        521,
+        188
+      ],
+      [
+        548,
+        2212,
+        56,
+        5,
+        95,
+        1857
+      ]
+    ],
+    "ratio_obs_over_null": [
+      [
+        0.58,
+        1.46,
+        1.16,
+        0.68,
+        1.42,
+        1.22
+      ],
+      [
+        0.97,
+        6.74,
+        3.22,
+        0.31,
+        2.33,
+        7.18
+      ],
+      [
+        0.5,
+        1.44,
+        10.83,
+        0.78,
+        3.38,
+        0.85
+      ],
+      [
+        0.82,
+        0.82,
+        1.46,
+        8.33,
+        1.24,
+        0.71
+      ],
+      [
+        1.1,
+        2.39,
+        5.26,
+        1.06,
+        6.6,
+        1.4
+      ],
+      [
+        0.78,
+        7.19,
+        2.83,
+        0.14,
+        0.91,
+        10.26
+      ]
+    ],
+    "z": [
+      [
+        -8.7,
+        5.5,
+        0.4,
+        -1.3,
+        2.8,
+        1.8
+      ],
+      [
+        -0.5,
+        62.2,
+        5.2,
+        -2.5,
+        8.2,
+        46.7
+      ],
+      [
+        -1.5,
+        1.1,
+        10.2,
+        -0.3,
+        4.6,
+        -0.4
+      ],
+      [
+        -1.0,
+        -0.8,
+        0.7,
+        14.6,
+        0.8,
+        -1.1
+      ],
+      [
+        0.9,
+        11.3,
+        8.2,
+        0.2,
+        26.5,
+        2.6
+      ],
+      [
+        -2.6,
+        52.5,
+        4.0,
+        -2.9,
+        -0.5,
+        55.4
+      ]
+    ],
+    "perms": 200
+  },
+  "p2_subgraph": null,
+  "p2b_anchor_citation": null,
+  "settings": {
+    "parent": "trauma",
+    "focus": [
+      "trauma",
+      "PTSD",
+      "@ancestor",
+      "@analytic",
+      "@abuse",
+      "@veteran"
+    ],
+    "compounds": [
+      "trauma informed",
+      "secondary traumatic stress",
+      "vicarious trauma"
+    ],
+    "merge": {
+      "ptsd": "PTSD",
+      "posttraumatic stress disorder": "PTSD",
+      "complex ptsd": "complex PTSD",
+      "complex posttraumatic stress disorder": "complex PTSD"
+    },
+    "subgraph_term": "trauma informed",
+    "second": "PTSD",
+    "null": "period",
+    "iterations": -1,
+    "window": [
+      1980,
+      1994
+    ],
+    "flows_only": true,
+    "groups": {
+      "ancestor": {
+        "terms": [
+          "traumatic neurosis",
+          "war neurosis",
+          "combat neurosis",
+          "battle fatigue",
+          "combat fatigue",
+          "shell shock",
+          "gross stress reaction",
+          "postvietnam syndrome",
+          "rape trauma syndrome"
+        ]
+      },
+      "analytic": {
+        "venue": "psychoanal|analytic|psychoanalysis"
+      },
+      "abuse": {
+        "flag": "A_abuse"
+      },
+      "veteran": {
+        "flag": "V_veteran"
+      },
+      "cat": {
+        "venue_categories": true
+      }
+    },
+    "edges_in_window": 9212
+  },
+  "predictions_trauma_case": {
+    "P1": "compounds distinct from bare trauma; insulation >> null",
+    "P2": "trauma-informed sub-communities align with practice vs care venues",
+    "P3": "PTSD continuous with bare trauma by citation",
+    "P4": "embarrassment condition: compounds continuous with parent"
+  }
+}

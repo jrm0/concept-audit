@@ -1,0 +1,133 @@
+CITATION COMMUNITIES — ego depletion  (nodes 26,833, edges 140,977, year >= 1995)
+leiden/RBConfiguration (cached, iterations=-1), resolution 1.0, modularity 0.632; 15 communities >= 200 nodes
+parent = self control; null = within-period label shuffle, 200 perms
+
+== communities (read before interpreting) ==
+  C0  n=3,282
+     venues: Frontiers in Psychology (116); Early Childhood Research Quarterly (96); Developmental Psychology (91); Development and Psychopathology (85); Early Education and Development (83); Early Child Development and Care (64)
+     terms:  self regulation 84%; self control 16%; executive function 11%; delay of gratification 3%; willpower 0%; ego depletion 0%
+     periods:1995-1999:80 2000-2004:157 2005-2009:264 2010-2014:533 2015-2019:933 2020-2024:1066 2025-2025:249
+  C1  n=2,919
+     venues: Frontiers in Psychology (138); Personality and Individual Differences (100); Current Psychology (77); Appetite (64); Journal of Consumer Research (55); Journal of Personality and Social Psychology (53)
+     terms:  self control 77%; self regulation 27%; willpower 3%; delay of gratification 2%; executive function 1%; ego depletion 1%
+     periods:1995-1999:29 2000-2004:46 2005-2009:172 2010-2014:473 2015-2019:802 2020-2024:1112 2025-2025:285
+  C2  n=2,265
+     venues: Frontiers in Psychology (132); Educational Psychology Review (50); Computers & Education (49); Metacognition and Learning (47); Contemporary Educational Psychology (40); Educational Psychologist (37)
+     terms:  self regulation 95%; self control 5%; executive function 1%; willpower 1%; delay of gratification 1%; depletion effect 0%
+     periods:1995-1999:78 2000-2004:120 2005-2009:228 2010-2014:374 2015-2019:493 2020-2024:746 2025-2025:226
+  C3  n=2,100
+     venues: Frontiers in Psychology (122); Journal of Experimental Social Psychology (55); Journal of Applied Psychology (46); Journal of Personality and Social Psychology (42); Current Psychology (41); Personality and Social Psychology Bulletin (36)
+     terms:  self control 58%; self regulation 35%; ego depletion 28%; willpower 6%; strength model 6%; self control depletion 3%
+     periods:1995-1999:19 2000-2004:40 2005-2009:173 2010-2014:477 2015-2019:684 2020-2024:540 2025-2025:167
+  C4  n=1,891
+     venues: Deviant Behavior (143); Journal of Criminal Justice (119); Crime & Delinquency (69); Criminal Justice and Behavior (63); International Journal of Offender Therapy and Comparative Criminology (58); Criminology (51)
+     terms:  self control 93%; self regulation 9%; willpower 0%; executive function 0%; delay of gratification 0%; strength model 0%
+     periods:1995-1999:54 2000-2004:117 2005-2009:204 2010-2014:355 2015-2019:497 2020-2024:510 2025-2025:154
+  C5  n=1,374
+     venues: Journal of Applied Psychology (39); Personality and Individual Differences (35); Applied Psychology (24); Journal of Vocational Behavior (24); Journal of Personality and Social Psychology (22); Current Psychology (21)
+     terms:  self regulation 90%; self control 12%; willpower 1%; executive function 1%; ego depletion 0%; delay of gratification 0%
+     periods:1995-1999:44 2000-2004:110 2005-2009:205 2010-2014:293 2015-2019:283 2020-2024:329 2025-2025:110
+  C6  n=1,097
+     venues: Psychology and Health (59); British Journal of Health Psychology (34); Health Psychology Review (32); Journal of Behavioral Medicine (25); Frontiers in Psychology (24); International Journal of Behavioral Nutrition and Physical Activity (22)
+     terms:  self regulation 90%; self control 10%; willpower 3%; executive function 2%
+     periods:1995-1999:31 2000-2004:56 2005-2009:139 2010-2014:220 2015-2019:301 2020-2024:298 2025-2025:52
+  C7  n=1,019
+     venues: Frontiers in Psychology (63); Mindfulness (56); Personality and Individual Differences (17); International Journal of Psychophysiology (12); PLoS ONE (12); Applied Psychophysiology and Biofeedback (11)
+     terms:  self regulation 78%; self control 22%; executive function 2%; willpower 2%; delay of gratification 0%; ego depletion 0%
+     periods:1995-1999:11 2000-2004:30 2005-2009:57 2010-2014:180 2015-2019:288 2020-2024:359 2025-2025:94
+  C8  n=681
+     venues: Journal of Business Ethics (30); International Journal of Drug Policy (17); Addiction Research & Theory (12); Journal of Regulatory Economics (10); JAMA (10); Addiction (10)
+     terms:  self regulation 90%; self control 10%; willpower 1%
+     periods:1995-1999:23 2000-2004:81 2005-2009:111 2010-2014:146 2015-2019:163 2020-2024:124 2025-2025:33
+  C9  n=654
+     venues: Journal of Youth and Adolescence (22); Addictive Behaviors (21); Psychology of Addictive Behaviors (21); Journal of Adolescence (18); Substance Use & Misuse (13); Personality and Individual Differences (12)
+     terms:  self regulation 66%; self control 39%; executive function 1%; delay of gratification 0%; willpower 0%
+     periods:1995-1999:23 2000-2004:37 2005-2009:67 2010-2014:138 2015-2019:176 2020-2024:177 2025-2025:36
+  C10  n=461
+     venues: Journal of Economic Behavior & Organization (28); National Bureau of Economic Research (19); SSRN Electronic Journal (17); Econometrica (14); American Economic Review (13); Management Science (12)
+     terms:  self control 94%; willpower 6%; self regulation 6%; executive function 0%; self regulatory depletion 0%
+     periods:1995-1999:3 2000-2004:29 2005-2009:66 2010-2014:84 2015-2019:126 2020-2024:124 2025-2025:29
+  C11  n=458
+     venues: Frontiers in Psychology (38); Personality and Individual Differences (18); Current Psychology (13); Motivation and Emotion (8); Learning and Individual Differences (8); Psychological Reports (7)
+     terms:  self regulation 75%; self control 28%; willpower 2%; executive function 1%; delay of gratification 1%; self control depletion 0%
+     periods:1995-1999:9 2000-2004:21 2005-2009:29 2010-2014:76 2015-2019:125 2020-2024:148 2025-2025:50
+  C12  n=412
+     venues: Journal of the Experimental Analysis of Behavior (36); Journal of Applied Behavior Analysis (28); Behavioural Processes (27); Animal Cognition (27); The Psychological Record (14); Frontiers in Psychology (13)
+     terms:  self control 89%; self regulation 10%; delay of gratification 6%; willpower 3%; executive function 2%; ego depletion 0%
+     periods:1995-1999:46 2000-2004:48 2005-2009:58 2010-2014:89 2015-2019:89 2020-2024:71 2025-2025:11
+  C13  n=298
+     venues: NeuroImage (29); Frontiers in Human Neuroscience (20); Human Brain Mapping (14); Applied Psychophysiology and Biofeedback (13); Frontiers in Behavioral Neuroscience (9); Journal of Neurotherapy (7)
+     terms:  self regulation 80%; self control 24%; executive function 1%; willpower 0%
+     periods:1995-1999:11 2000-2004:30 2005-2009:28 2010-2014:65 2015-2019:89 2020-2024:65 2025-2025:10
+  C14  n=254
+     venues: Accident Analysis & Prevention (37); Transportation Research Part F Traffic Psychology and Behaviour (36); Neuropsychological Rehabilitation (12); Journal of Safety Research (12); Traffic Injury Prevention (11); Brain Injury (9)
+     terms:  self regulation 89%; self control 11%; executive function 8%
+     periods:1995-1999:3 2000-2004:17 2005-2009:37 2010-2014:52 2015-2019:77 2020-2024:55 2025-2025:13
+
+== term x community (P1/P3) ==
+  term                           docs   topC  topShare  entropy  inOver  JSvsParent
+  ego depletion                   644      3     0.945    0.137   0.945      0.5446
+  self control                  10528      1     0.291    0.765   0.331         nan
+  self regulation               16204      0     0.240    0.843   0.000      0.3566
+  willpower                       633      3     0.337    0.755   0.413      0.1628
+  strength model                  145      3     0.885    0.257   0.885      0.4561
+  executive function              640      0     0.676    0.518   0.710      0.4165
+  delay of gratification          227      0     0.472    0.679   0.594      0.3004
+
+== insulation: same-term citation vs within-period label-shuffle null ==
+  (->parent = citations to 'self control' docs vs null; ->2nd = to 'self regulation' docs vs null)
+  term                            refs    obs   null  ratio       z  ->parent   ->2nd
+  ego depletion                  19753  0.255  0.017  73.22   287.3      5.41    1.79
+  self control                  102805  0.624  0.367   2.95    42.4      2.95    0.59
+  self regulation                83783  0.639  0.564   1.04     1.3      0.53    1.04
+  willpower                       6093  0.124  0.022   9.64    34.9      2.06    0.62
+  strength model                  4992  0.094  0.005 104.34   179.6      6.64    2.45
+  executive function              6403  0.177  0.018  15.84    56.5      0.95    1.49
+  delay of gratification          3643  0.163  0.008  58.41   114.1      2.62    1.67
+
+== P2: ego depletion subgraph ==
+  docs 644, intra edges 5,040, 43 sub-communities, modularity 0.307, Cramer's V (sub-community x venue category) = 0.308
+  S0 n=183: work/org 104; core/other psych 72; health/med 3; education 3; crime/social 1
+       Journal of Applied Psychology (13); Frontiers in Psychology (11); Journal of Business Ethics (10); Current Psychology (9)
+  S1 n=115: core/other psych 106; sport 4; health/med 3; work/org 1; crime/social 1
+       Frontiers in Psychology (14); Social Psychology (8); Journal of Experimental Social Psychology (7); PLoS ONE (7)
+  S2 n=95: core/other psych 78; education 7; work/org 5; health/med 4; sport 1
+       Frontiers in Psychology (12); Journal of Neuroscience Psychology and Economics (4); Personality and Individual Differences (3); Journal of Experimental Social Psychology (3)
+  S3 n=86: core/other psych 73; work/org 10; health/med 2; education 1
+       Journal of Experimental Social Psychology (9); Journal of Personality and Social Psychology (5); Frontiers in Psychology (5); Elsevier eBooks (4)
+  S4 n=70: core/other psych 42; sport 14; work/org 12; education 1; health/med 1
+       Frontiers in Psychology (9); Journal of Consumer Psychology (4); Journal of Sport and Exercise Psychology (4); Psychology of sport and exercise (4)
+  S5 n=55: core/other psych 50; work/org 2; health/med 1; education 1; crime/social 1
+       Appetite (3); Frontiers in Psychology (3); Aggressive Behavior (3); The Journal of Social Psychology (2)
+
+== P2b: anchor citation inside the ego depletion subgraph (documents from 2017; share of docs citing each anchor) ==
+  coinage_1998       title (0.98): Ego depletion: Is the active self a limited resource?  in-graph citers: 1303
+  rrr_2016           title (0.98): A multilab preregistered replication of the ego-depletion effect.  in-graph citers: 291
+  rrr_2021           title (0.96): A multisite preregistered paradigmatic test of the ego-depletion effect.  in-graph citers: 43
+  carter_2014        title (0.95): Publication bias and the limited strength model of self-control: Has the evidence for ego   in-graph citers: 136
+  hagger_2010_meta   title (0.99): Ego Depletion and the Strength Model of Self-Control: A Meta-Analysis.  in-graph citers: 861
+  inzlicht_2012      title (0.89): What is ego depletion? Toward a mechanistic revision of the resource model of self-control  in-graph citers: 392
+  friese_2019        doi  in-graph citers: 114
+  dang_2018          doi  in-graph citers: 82
+  group                          n  coinage_1998      rrr_2016      rrr_2021   carter_2014  hagger_2010_  inzlicht_201   friese_2019     dang_2018
+  all                          399         0.642         0.343         0.048         0.150         0.514         0.228         0.133         0.120
+  S0                           137         0.759         0.066         0.015         0.007         0.365         0.088         0.080         0.022
+  S1                            93         0.763         0.903         0.161         0.452         0.796         0.452         0.312         0.344
+  S2                            49         0.714         0.286         0.000         0.122         0.531         0.245         0.061         0.122
+  S3                            28         0.500         0.321         0.000         0.107         0.500         0.250         0.107         0.036
+  S4                            34         0.441         0.324         0.029         0.059         0.706         0.206         0.176         0.059
+  S5                            24         0.667         0.417         0.042         0.250         0.708         0.458         0.042         0.167
+  venue: core/other psych      256         0.684         0.457         0.055         0.215         0.586         0.277         0.164         0.148
+  venue: crime/social            2         1.000         1.000         0.500         1.000         1.000         0.500         0.000         0.500
+  venue: education              10         0.500         0.200         0.000         0.000         0.500         0.200         0.100         0.200
+  venue: health/med             12         0.417         0.083         0.083         0.000         0.500         0.167         0.000         0.000
+  venue: sport                  11         0.636         0.727         0.091         0.182         0.818         0.364         0.182         0.364
+  venue: work/org              108         0.574         0.065         0.019         0.009         0.306         0.102         0.074         0.028
+  -- sub-communities re-detected with the anchor nodes REMOVED (so no group is defined by citing an anchor) --
+  T0 work106/core54            125         0.744         0.088         0.016         0.016         0.408         0.096         0.096         0.032
+  T1 core119/health3            86         0.779         0.860         0.151         0.419         0.802         0.477         0.291         0.326
+  T2 core84/work10              35         0.686         0.286         0.000         0.229         0.571         0.371         0.057         0.086
+  T3 core46/education7          31         0.645         0.290         0.000         0.065         0.548         0.226         0.097         0.161
+  T4 core43/work4               26         0.615         0.500         0.115         0.231         0.654         0.231         0.115         0.192
+  T5 core26/sport15             28         0.393         0.357         0.036         0.071         0.500         0.250         0.107         0.036
+  (coinage = coinage_1998; correction set = rrr_2016, rrr_2021; a group that cites the coinage at the field's rate but the corrections below it is where the concept travelled without its correction)

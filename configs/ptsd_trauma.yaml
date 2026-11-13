@@ -386,3 +386,196 @@ citation:
   crisis_set: []
   milestone_control: null
   hub_category: nursing/health
+  # --- Addendum A (2026-10-05): pseudo-labels for the DESCENT facet (27). Each becomes
+  # a "@label" term that enters the flow / insulation machinery like any term.
+  # Run 31 first: the flag groups read results/<slug>/ground_truth_doc_flags.jsonl.
+  groups:
+    ancestor: {terms: [traumatic neurosis, war neurosis, combat neurosis, battle fatigue, combat fatigue,
+                       shell shock, gross stress reaction, postvietnam syndrome, rape trauma syndrome]}
+    analytic: {venue: "psychoanal|analytic|psychoanalysis"}     # = ground_truth.venue_sets.analytic_venue
+    abuse:    {flag: A_abuse}                                   # 31 vocabulary flags
+    veteran:  {flag: V_veteran}
+    cat:      {venue_categories: true}                          # @cat:<venue category>, the self-citation comparators (A3)
+
+# --- instrument / operationalisation stratum (28) ------------------------------
+# Seed list = [canonical, alias, alias...]; aliases include acronyms and version
+# spellings. 28 also detects any "Capitalised Name + Scale/Inventory/..." and
+# resolves acronyms introduced in the same abstract, so the seed list is a
+# floor on recall, not a ceiling. Names here are DETECTION TARGETS, not
+# references: instrument citations for the paper are verified separately.
+instruments:
+  seed:
+    - [PTSD Checklist, PCL, PCL-C, PCL-M, PCL-S, PCL-5, Posttraumatic Stress Disorder Checklist, Post-traumatic Stress Disorder Checklist, PTSD Checklist for DSM-5, PTSD Symptom Checklist]
+    - [Clinician-Administered PTSD Scale, CAPS, CAPS-5, Clinician Administered PTSD Scale]
+    - [Impact of Event Scale, IES, IES-R, Impact of Events Scale, Impact of Event Scale-Revised]
+    - [Davidson Trauma Scale, DTS]
+    - [Posttraumatic Diagnostic Scale, PDS, PDS-5, Posttraumatic Stress Diagnostic Scale]
+    - [Harvard Trauma Questionnaire, HTQ]
+    - [Trauma Symptom Inventory, TSI, TSI-2]
+    - [Trauma Symptom Checklist, TSC, TSC-40, TSCC, Trauma Symptom Checklist for Children]
+    - [Childhood Trauma Questionnaire, CTQ, CTQ-SF]
+    - [Life Events Checklist, LEC, LEC-5]
+    - [Traumatic Events Questionnaire, TEQ]
+    - [Mississippi Scale, Mississippi Scale for Combat-Related PTSD, M-PTSD]
+    - [Primary Care PTSD Screen, PC-PTSD, PC-PTSD-5]
+    - [PTSD Symptom Scale, PSS, PSS-I, PSS-SR, PTSD Symptom Scale Interview]
+    - [Structured Clinical Interview for DSM, SCID, SCID-I, SCID-5]
+    - [International Trauma Questionnaire, ITQ]
+    - [Secondary Traumatic Stress Scale, STSS]
+    - [Professional Quality of Life Scale, ProQOL, Professional Quality of Life]
+    - [Trauma and Attachment Belief Scale, TABS]
+    - [Adverse Childhood Experiences, ACE questionnaire, ACEs questionnaire, ACE scale, ACE score]
+    - [Moral Injury Events Scale, MIES]
+    - [Moral Injury Symptom Scale, MISS, MISS-M]
+    - [Attitudes Related to Trauma-Informed Care, ARTIC, ARTIC scale]
+    - [Dissociative Experiences Scale, DES, DES-II]
+    - [Inventory of Complicated Grief, ICG]
+    - [Texas Revised Inventory of Grief, TRIG]
+    - [Prolonged Grief Disorder scale, PG-13]
+    - [Beck Depression Inventory, BDI, BDI-II]
+    - [Patient Health Questionnaire, PHQ, PHQ-9]
+    - [Posttraumatic Growth Inventory, PTGI]
+    - [Trauma History Questionnaire, THQ]
+    - [Child PTSD Symptom Scale, CPSS, CPSS-5]
+    - [UCLA PTSD Reaction Index, UCLA PTSD Index]
+    - [Glasgow Coma Scale, GCS]
+    - [Injury Severity Score, ISS]
+    - [Abbreviated Injury Scale, AIS]
+    # ---- Addendum A5 (2026-10-05): the biological turn as MEASUREMENT. Procedures only —
+    # anatomy words (amygdala, hippocampus) stay in the vocabulary cell C4. Acronyms are
+    # matched case-sensitively; "PET" only as "PET scan"; "ERP" excluded (exposure and
+    # response prevention). One family so the cell is one share.
+    - [biological measure, salivary cortisol, urinary cortisol, plasma cortisol, cortisol level, cortisol levels,
+       cortisol assay, dexamethasone suppression test, DST, acoustic startle, startle response, startle reflex,
+       startle paradigm, startle magnitude, heart rate response, heart rate reactivity, heart rate variability,
+       skin conductance, galvanic skin response, electromyography, electromyographic, EMG,
+       electroencephalography, electroencephalographic, EEG, polysomnography, polysomnographic,
+       positron emission tomography, PET scan, functional magnetic resonance imaging, fMRI,
+       magnetic resonance imaging, MRI, yohimbine, urinary catecholamine, urinary catecholamines,
+       urinary norepinephrine, plasma norepinephrine, plasma catecholamine, plasma catecholamines]
+
+# --- historical ground-truth tests (31) -----------------------------------------
+# Vocabularies, denominators, thresholds and SEEN/OPEN status fixed in Lab
+# Notebook Session 46 (2026-10-02) BEFORE 31 was first run on the corpus,
+# from Historical_Ground_Truth_Claims_v1.md (Young 1995; Leys 2000; Fassin &
+# Rechtman 2009). "*" = any word ending; a space inside a phrase also matches
+# a hyphen. Shares are of DENOMINATOR documents (term sets from lineage_docs,
+# PTSD spellings merged) whose title+abstract matches the vocabulary.
+ground_truth:
+  vocabularies:
+    V_veteran:   "veteran*|military|combat|soldier*|servicemember*|service member*|army|navy|marine*|air force|troops|war zone"
+    Vietnam:     "vietnam*"
+    A_abuse:     "sexual abuse|rape|incest|child abuse|battered|domestic violence"
+    N_new:       "refugee*|torture|genocide|bosnia|rwanda|cambodia|civilian*|disaster*"
+    bio:         "cortisol|norepinephrine|noradrenal*|hpa|amygdala|hippocamp*|psychophysiolog*|startle|heart rate|neuroimag*|pet|fmri"
+    indirect:    "vicarious|secondary|witness*|bystander*|rescue*|first responder*|firefight*|police|therapist*|clinician*|family member*|television|media exposure"
+    suspicion:   "malinger*|factitious|feign*|simulat*|secondary gain|compensation neurosis|response bias|symptom validity|exaggerat*|false memor*|suggestib*|confabulat*|iatrogenic"
+    collective:  "nation|country|community|city|generation|collective|society|people"
+    memory:      "memor*|recall|dissociat*|flashback*|intrusi*|amnesi*"
+    # ---- POST-HOC sensitivity vocabularies (added 2026-10-02 AFTER the first run, Session 47):
+    # the pre-registered lists contain methods homonyms — "secondary" (analysis, outcome,
+    # school), "community" (sample, mental health), "people" (with PTSD), "simulat*"
+    # (training simulation), "pet" (animals) — so each is re-run without them. These are
+    # sensitivity checks on the cells above, reported as post-hoc, never as the pre-registered result.
+    indirect_strict:   "vicarious|witness*|bystander*|rescue*|first responder*|firefight*|family member*|media exposure|indirect* expos*|indirectly exposed"
+    suspicion_strict:  "malinger*|factitious|feign*|secondary gain|compensation neurosis|response bias|symptom validity|exaggerat*|false memor*|suggestib*|confabulat*|iatrogenic"
+    collective_strict: "nation|nations|national trauma|collective|society|societal|generation*|whole communit*|entire communit*"
+    bio_strict:        "cortisol|norepinephrine|noradrenal*|hpa axis|amygdala|hippocamp*|psychophysiolog*|startle|heart rate|neuroimag*|positron emission|fmri"
+  term_sets:
+    # documents carrying a diagnostic label for a trauma disorder (C1b):
+    # PTSD vs the pre-1980 labels. Not acute stress / adjustment disorder.
+    label_ptsd:      [PTSD]
+    label_ancestor:  [traumatic neurosis, war neurosis, combat neurosis, battle fatigue, combat fatigue,
+                      shell shock, gross stress reaction, postvietnam syndrome, rape trauma syndrome]
+    label_any:       [PTSD, traumatic neurosis, war neurosis, combat neurosis, battle fatigue, combat fatigue,
+                      shell shock, gross stress reaction, postvietnam syndrome, rape trauma syndrome]
+  venue_sets:
+    analytic_venue: "psychoanal|analytic|psychoanalysis"
+  cells:
+    # ---- C1 DSM-III replaces the vocabulary (validity, floor) ----
+    - {id: C1b, claim: "PTSD is >= 80% of diagnostically labelled documents in 1985-89", kind: VALIDITY, status: OPEN,
+       supports: "Y,L,F&R", denominator: "terms:PTSD,traumatic neurosis,war neurosis,combat neurosis,battle fatigue,combat fatigue,shell shock,gross stress reaction,postvietnam syndrome,rape trauma syndrome",
+       vocab: label_ptsd, test: {type: share_at_least, period: "1985-1989", value: 0.80}}
+    - {id: C1b2, claim: "and still >= 80% in 1990-94 (crossover not spread over 15 years)", kind: VALIDITY, status: OPEN,
+       supports: "Y,L,F&R", denominator: "terms:PTSD,traumatic neurosis,war neurosis,combat neurosis,battle fatigue,combat fatigue,shell shock,gross stress reaction,postvietnam syndrome,rape trauma syndrome",
+       vocab: label_ptsd, test: {type: share_at_least, period: "1990-1994", value: 0.80}}
+    - {id: C1c, claim: "share of ANCESTOR-label documents that sit in psychoanalytic venues, by period (Young: the surviving ancestor usage is analytic)", kind: VALIDITY, status: OPEN,
+       supports: "Y", denominator: "terms:traumatic neurosis,war neurosis,combat neurosis,battle fatigue,combat fatigue,shell shock,gross stress reaction,postvietnam syndrome,rape trauma syndrome",
+       vocab: analytic_venue, test: {type: descriptive}}
+    - {id: C1c2, claim: "  ...share of PTSD documents in the same analytic venues (comparison series; PASS for C1c = ancestor share exceeds this after 1985)", kind: VALIDITY, status: OPEN,
+       supports: "Y", denominator: "term:PTSD", vocab: analytic_venue, test: {type: descriptive}}
+    # ---- C3 who the victim is: order (discriminating) and Young's forecast ----
+    - {id: C3a, claim: "veteran > abuse vocabulary among PTSD documents in 1980-84, 1985-89, 1990-94 (Young's order)", kind: DISCRIMINATING, status: OPEN,
+       supports: "Y,L", denominator: "term:PTSD", vocab: V_veteran, test: {type: greater_than_other, other: A_abuse, periods: ["1980-1984", "1985-1989", "1990-1994"]}}
+    - {id: C3b, claim: "abuse vocabulary already >= 5% of trauma-family documents in 1970-74 and 1975-79 (Fassin & Rechtman's order)", kind: DISCRIMINATING, status: OPEN,
+       supports: "F&R", denominator: all, vocab: A_abuse, test: {type: share_at_least, period: "1975-1979", value: 0.05}}
+    - {id: C3b1, claim: "  ...same test for 1970-74", kind: DISCRIMINATING, status: OPEN,
+       supports: "F&R", denominator: all, vocab: A_abuse, test: {type: share_at_least, period: "1970-1974", value: 0.05}}
+    - {id: C3c, claim: "FORECAST (Young 1995): the Vietnam share of PTSD documents falls in every period 1995-99 -> 2010-14", kind: FORECAST, status: "SEEN-direction",
+       supports: "Y", denominator: "term:PTSD", vocab: Vietnam, test: {type: monotone_decrease, periods: ["1995-1999", "2000-2004", "2005-2009", "2010-2014"]}}
+    - {id: C3d, claim: "FORECAST: the new-victims share (refugee/torture/genocide/civilian/disaster) of PTSD documents rises 1995-99 -> 2010-14", kind: FORECAST, status: OPEN,
+       supports: "Y", denominator: "term:PTSD", vocab: N_new, test: {type: monotone_increase, periods: ["1995-1999", "2000-2004", "2005-2009", "2010-2014"]}}
+    - {id: C3e, claim: "FORECAST disconfirmer: Vietnam is NOT the plurality victim context among PTSD documents in 2000-04 (PASS = Vietnam still plurality = forecast disconfirmed)", kind: FORECAST, status: OPEN,
+       supports: "Y", denominator: "term:PTSD", vocab: Vietnam, test: {type: plurality, period: "2000-2004", others: [A_abuse, N_new]}}
+    # ---- C4 biological turn (validity) ----
+    - {id: C4a, claim: "biological vocabulary <= 5% of PTSD documents in 1980-84", kind: VALIDITY, status: OPEN,
+       supports: "Y,L", denominator: "term:PTSD", vocab: bio, test: {type: share_at_most, period: "1980-1984", value: 0.05}}
+    - {id: C4b, claim: "biological share of PTSD documents rises in every period 1985-89 -> 2000-04", kind: VALIDITY, status: OPEN,
+       supports: "Y,L", denominator: "term:PTSD", vocab: bio, test: {type: monotone_increase, periods: ["1985-1989", "1990-1994", "1995-1999", "2000-2004"]}}
+    - {id: C4c, claim: "no rise before 1980: biological share of bare-trauma documents is flat 1965-69 -> 1975-79 (descriptive)", kind: VALIDITY, status: OPEN,
+       supports: "Y,L", denominator: "term:trauma", vocab: bio, test: {type: descriptive}}
+    # ---- C6 exposure widens: timing (shared direction; Young vs F&R on timing) ----
+    - {id: C6a, claim: "SHARED: indirect-exposure share of trauma+PTSD documents is higher in 2005-09 than 1985-89", kind: VALIDITY, status: OPEN,
+       supports: "Y,L,F&R", denominator: "terms:trauma,PTSD", vocab: indirect, test: {type: monotone_increase, periods: ["1985-1989", "2005-2009"]}}
+    - {id: C6b, claim: "Young-type timing: flat 1985-89 vs 1990-93 (annual means, CIs overlap) ...", kind: DISCRIMINATING, status: OPEN,
+       supports: "Y", denominator: "terms:trauma,PTSD", vocab: indirect, test: {type: annual_step, before: [1985, 1989], after: [1990, 1993], expect: flat}}
+    - {id: C6b2, claim: "  ...then a step up 1995-97 over 1990-93", kind: DISCRIMINATING, status: OPEN,
+       supports: "Y", denominator: "terms:trauma,PTSD", vocab: indirect, test: {type: annual_step, before: [1990, 1993], after: [1995, 1997], expect: step}}
+    - {id: C6c, claim: "F&R-type timing: already rising 1990-93 over 1985-89 (step before DSM-IV) ...", kind: DISCRIMINATING, status: OPEN,
+       supports: "F&R", denominator: "terms:trauma,PTSD", vocab: indirect, test: {type: annual_step, before: [1985, 1989], after: [1990, 1993], expect: step}}
+    - {id: C6c2, claim: "  ...and a second step 2001-03 over 1998-2000", kind: DISCRIMINATING, status: OPEN,
+       supports: "F&R", denominator: "terms:trauma,PTSD", vocab: indirect, test: {type: annual_step, before: [1998, 2000], after: [2001, 2003], expect: step}}
+    # ---- C7 suspicion -> recognition: once (F&R) or back and forth (L, Y) ----
+    - {id: C7a, claim: "SHARED: suspicion vocabulary share of trauma-family documents falls from 1975-79 to 1985-89", kind: VALIDITY, status: OPEN,
+       supports: "Y,L,F&R", denominator: all, vocab: suspicion, test: {type: monotone_decrease, periods: ["1975-1979", "1985-1989"]}}
+    - {id: C7b, claim: "F&R: suspicion share stays at or below its 1985-89 level (upper CI) in 1990-94 and 1995-99", kind: DISCRIMINATING, status: "SEEN-1995-99 split",
+       supports: "F&R", denominator: all, vocab: suspicion, test: {type: within_ci, reference: "1985-1989", periods: ["1990-1994", "1995-1999"]}}
+    - {id: C7c, claim: "Leys/Young: suspicion share in 1990-94 or 1995-99 exceeds 1985-89 beyond the bootstrap CI (a rebound = oscillating)", kind: DISCRIMINATING, status: "SEEN-1995-99 split",
+       supports: "L,Y", denominator: all, vocab: suspicion, test: {type: exceeds_ci, reference: "1985-1989", periods: ["1990-1994", "1995-1999"]}}
+    - {id: C7d, claim: "  ...same test among PTSD documents only", kind: DISCRIMINATING, status: OPEN,
+       supports: "L,Y", denominator: "term:PTSD", vocab: suspicion, test: {type: exceeds_ci, reference: "1985-1989", periods: ["1990-1994", "1995-1999"]}}
+    # ---- C8b journal-side baseline for the collective-subject comparison (news stratum deferred to Paper 2) ----
+    - {id: C8b, claim: "journal-side collective-subject share of bare-trauma documents by period (baseline for the Guardian comparison; descriptive)", kind: DISCRIMINATING, status: OPEN,
+       supports: "F&R", denominator: "term:trauma", vocab: collective, test: {type: descriptive}}
+    # ---- POST-HOC sensitivity cells (Session 47): the same tests with the strict vocabularies ----
+    - {id: C4a_s, claim: "POST-HOC: bio_strict <= 5% of PTSD documents in 1980-84", kind: VALIDITY, status: "POST-HOC",
+       supports: "Y,L", denominator: "term:PTSD", vocab: bio_strict, test: {type: share_at_most, period: "1980-1984", value: 0.05}}
+    - {id: C4b_s, claim: "POST-HOC: bio_strict rises every period 1985-89 -> 2000-04", kind: VALIDITY, status: "POST-HOC",
+       supports: "Y,L", denominator: "term:PTSD", vocab: bio_strict, test: {type: monotone_increase, periods: ["1985-1989", "1990-1994", "1995-1999", "2000-2004"]}}
+    - {id: C6a_s, claim: "POST-HOC: indirect_strict share of trauma+PTSD documents higher in 2005-09 than 1985-89", kind: VALIDITY, status: "POST-HOC",
+       supports: "Y,L,F&R", denominator: "terms:trauma,PTSD", vocab: indirect_strict, test: {type: monotone_increase, periods: ["1985-1989", "2005-2009"]}}
+    - {id: C6b_s, claim: "POST-HOC Young-type: flat 1985-89 vs 1990-93 (strict)", kind: DISCRIMINATING, status: "POST-HOC",
+       supports: "Y", denominator: "terms:trauma,PTSD", vocab: indirect_strict, test: {type: annual_step, before: [1985, 1989], after: [1990, 1993], expect: flat}}
+    - {id: C6b2_s, claim: "POST-HOC Young-type: step 1995-97 over 1990-93 (strict)", kind: DISCRIMINATING, status: "POST-HOC",
+       supports: "Y", denominator: "terms:trauma,PTSD", vocab: indirect_strict, test: {type: annual_step, before: [1990, 1993], after: [1995, 1997], expect: step}}
+    - {id: C6c_s, claim: "POST-HOC F&R-type: step 1990-93 over 1985-89 (strict)", kind: DISCRIMINATING, status: "POST-HOC",
+       supports: "F&R", denominator: "terms:trauma,PTSD", vocab: indirect_strict, test: {type: annual_step, before: [1985, 1989], after: [1990, 1993], expect: step}}
+    - {id: C6c2_s, claim: "POST-HOC F&R-type: step 2001-03 over 1998-2000 (strict)", kind: DISCRIMINATING, status: "POST-HOC",
+       supports: "F&R", denominator: "terms:trauma,PTSD", vocab: indirect_strict, test: {type: annual_step, before: [1998, 2000], after: [2001, 2003], expect: step}}
+    - {id: C7c_s, claim: "POST-HOC Leys/Young rebound with suspicion_strict (family documents)", kind: DISCRIMINATING, status: "POST-HOC",
+       supports: "L,Y", denominator: all, vocab: suspicion_strict, test: {type: exceeds_ci, reference: "1985-1989", periods: ["1990-1994", "1995-1999"]}}
+    - {id: C7d_s, claim: "POST-HOC Leys/Young rebound with suspicion_strict (PTSD documents)", kind: DISCRIMINATING, status: "POST-HOC",
+       supports: "L,Y", denominator: "term:PTSD", vocab: suspicion_strict, test: {type: exceeds_ci, reference: "1985-1989", periods: ["1990-1994", "1995-1999"]}}
+    - {id: C8b_s, claim: "POST-HOC: collective_strict share of bare-trauma documents by period (descriptive)", kind: DISCRIMINATING, status: "POST-HOC",
+       supports: "F&R", denominator: "term:trauma", vocab: collective_strict, test: {type: descriptive}}
+    # ---- C2 memory-grain baseline (stance labels are Layer 3; this is only the pool size) ----
+    - {id: C2pool, claim: "share of trauma+PTSD documents with memory vocabulary, by period (the pool for the C2 stance codebook; descriptive)", kind: DISCRIMINATING, status: OPEN,
+       supports: "Y vs L", denominator: "terms:trauma,PTSD", vocab: memory, test: {type: descriptive}}
+    # ---- Addendum A5 (2026-10-05): the biological turn on the MEASUREMENT facet (28 families via inst:<family>).
+    #      Pre-registered in Historical_Ground_Truth_Claims_v1_Addendum_A.md BEFORE the run. Run 28 first.
+    - {id: A5a, claim: "A5a: share of PTSD documents naming a biological measurement procedure <= 3% in 1980-84", kind: VALIDITY, status: OPEN,
+       supports: "Y,L", denominator: "term:PTSD", vocab: "inst:biological measure", test: {type: share_at_most, period: "1980-1984", value: 0.03}}
+    - {id: A5b, claim: "A5b: that share rises in every period 1985-89 -> 2000-04", kind: VALIDITY, status: OPEN,
+       supports: "Y,L", denominator: "term:PTSD", vocab: "inst:biological measure", test: {type: monotone_increase, periods: ["1985-1989", "1990-1994", "1995-1999", "2000-2004"]}}
+    - {id: A5c, claim: "A5c: same series for bare-trauma documents (descriptive; expected physical-trauma homonym contamination pre-1980)", kind: VALIDITY, status: OPEN,
+       supports: "Y,L", denominator: "term:trauma", vocab: "inst:biological measure", test: {type: descriptive}}

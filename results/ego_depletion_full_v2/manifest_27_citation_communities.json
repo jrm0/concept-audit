@@ -1,0 +1,52 @@
+{
+  "script": "27_citation_communities",
+  "concept": "ego depletion",
+  "config": "configs/ego_depletion.yaml",
+  "config_sha1": "e150f30e44af",
+  "timestamp": "2026-10-01T19:48:28-04:00",
+  "git_commit": "5beeaba",
+  "git_dirty": true,
+  "argv": [
+    "--config",
+    "configs/ego_depletion.yaml"
+  ],
+  "params": {
+    "year_min": 1995,
+    "perms": 200,
+    "resolution": 1.0,
+    "seed": 42,
+    "iterations": -1,
+    "null": "period",
+    "min_community": 200,
+    "parent": "self control",
+    "focus_terms": [
+      "ego depletion",
+      "self control",
+      "self regulation",
+      "willpower",
+      "strength model",
+      "executive function",
+      "delay of gratification"
+    ],
+    "compounds": [
+      "ego depletion",
+      "strength model"
+    ],
+    "merge": {},
+    "subgraph_term": "ego depletion"
+  },
+  "outputs": [
+    "results/ego_depletion_full_v2/citation_communities.json",
+    "results/ego_depletion_full_v2/citation_communities_report.txt"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "diptest": "0.11.0",
+    "torch": "2.12.0",
+    "transformers": "5.13.0"
+  },
+  "notes": "pre-registered P1-P4 in the docstring; null = within-period term-label shuffle"
+}

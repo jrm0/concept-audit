@@ -1,0 +1,376 @@
+{
+  "graph": {
+    "nodes": 24423,
+    "edges": 127489,
+    "year_min": 1995,
+    "algorithm": "skipped (--flows-only)",
+    "resolution": 1.0,
+    "modularity": null,
+    "n_communities": null,
+    "n_communities_ge_min": 1,
+    "min_community": 200
+  },
+  "communities": {},
+  "term_distribution": [],
+  "insulation": [
+    {
+      "term": "ego depletion",
+      "refs_out_to_focus": 17544,
+      "edges_from_term_docs": 9516,
+      "same_term_edges": 4381,
+      "same_term_share_obs": 0.4603825136612022,
+      "same_term_share_null": 0.01994181017979011,
+      "insulation_ratio": 23.08629505097655,
+      "insulation_z": 91.01964932761459,
+      "null_share_sd": 0.00483896286939205,
+      "null_valid_draws": 200,
+      "count_enrichment_ratio": 66.7631819567205,
+      "to_parent_ratio": 5.370638850708892,
+      "to_second_ratio": 1.8531441815449659,
+      "second": "self regulation"
+    },
+    {
+      "term": "self control",
+      "refs_out_to_focus": 94012,
+      "edges_from_term_docs": 70534,
+      "same_term_edges": 58333,
+      "same_term_share_obs": 0.8270195933875861,
+      "same_term_share_null": 0.4901995122630325,
+      "insulation_ratio": 1.6871081522900861,
+      "insulation_z": 23.03413014923359,
+      "null_share_sd": 0.014622652513568462,
+      "null_valid_draws": 200,
+      "count_enrichment_ratio": 2.1526947063520048,
+      "to_parent_ratio": 2.1526947063520048,
+      "to_second_ratio": 0.6401386584987763,
+      "second": "self regulation"
+    },
+    {
+      "term": "self regulation",
+      "refs_out_to_focus": 75972,
+      "edges_from_term_docs": 60144,
+      "same_term_edges": 48178,
+      "same_term_share_obs": 0.8010441606810322,
+      "same_term_share_null": 0.5991137403499804,
+      "insulation_ratio": 1.3370485547754112,
+      "insulation_z": 12.782981388568526,
+      "null_share_sd": 0.01579681720507179,
+      "null_valid_draws": 200,
+      "count_enrichment_ratio": 1.1206592857791668,
+      "to_parent_ratio": 0.5652402340192137,
+      "to_second_ratio": 1.1206592857791668,
+      "second": "self regulation"
+    },
+    {
+      "term": "willpower",
+      "refs_out_to_focus": 5664,
+      "edges_from_term_docs": 3341,
+      "same_term_edges": 686,
+      "same_term_share_obs": 0.2053277461837773,
+      "same_term_share_null": 0.02272049346724708,
+      "insulation_ratio": 9.037116490439315,
+      "insulation_z": 35.95160929617654,
+      "null_share_sd": 0.005079251145954975,
+      "null_valid_draws": 200,
+      "count_enrichment_ratio": 10.27869343721906,
+      "to_parent_ratio": 2.0650186334387386,
+      "to_second_ratio": 0.6919264551020825,
+      "second": "self regulation"
+    },
+    {
+      "term": "strength model",
+      "refs_out_to_focus": 4848,
+      "edges_from_term_docs": 2728,
+      "same_term_edges": 456,
+      "same_term_share_obs": 0.16715542521994134,
+      "same_term_share_null": 0.005723961094655617,
+      "insulation_ratio": 29.2027535574992,
+      "insulation_z": 52.4350976331008,
+      "null_share_sd": 0.003078691018272818,
+      "null_valid_draws": 200,
+      "count_enrichment_ratio": 105.19031141868513,
+      "to_parent_ratio": 6.944701468683233,
+      "to_second_ratio": 2.5636192271442035,
+      "second": "self regulation"
+    },
+    {
+      "term": "executive function",
+      "refs_out_to_focus": 5893,
+      "edges_from_term_docs": 4092,
+      "same_term_edges": 1029,
+      "same_term_share_obs": 0.25146627565982405,
+      "same_term_share_null": 0.020946776280547794,
+      "insulation_ratio": 12.005010808911345,
+      "insulation_z": 46.75419203000775,
+      "null_share_sd": 0.004930456272911835,
+      "null_valid_draws": 200,
+      "count_enrichment_ratio": 15.333035315154225,
+      "to_parent_ratio": 0.981601694166119,
+      "to_second_ratio": 1.6291028301762087,
+      "second": "self regulation"
+    },
+    {
+      "term": "delay of gratification",
+      "refs_out_to_focus": 3526,
+      "edges_from_term_docs": 2210,
+      "same_term_edges": 573,
+      "same_term_share_obs": 0.25927601809954753,
+      "same_term_share_null": 0.009601869989284074,
+      "insulation_ratio": 27.002658689287195,
+      "insulation_z": 48.504893656974374,
+      "null_share_sd": 0.005147401206071164,
+      "null_valid_draws": 200,
+      "count_enrichment_ratio": 52.40054869684499,
+      "to_parent_ratio": 2.661116317590393,
+      "to_second_ratio": 1.7764355820047075,
+      "second": "self regulation"
+    }
+  ],
+  "flow_ratio": {
+    "terms": [
+      "ego depletion",
+      "self control",
+      "self regulation",
+      "willpower",
+      "strength model",
+      "executive function",
+      "delay of gratification"
+    ],
+    "obs": [
+      [
+        4381.0,
+        7131.0,
+        3638.0,
+        678.0,
+        1448.0,
+        208.0,
+        60.0
+      ],
+      [
+        8024.0,
+        58333.0,
+        18149.0,
+        2659.0,
+        3874.0,
+        1421.0,
+        1552.0
+      ],
+      [
+        3257.0,
+        16337.0,
+        48178.0,
+        1197.0,
+        1580.0,
+        4025.0,
+        1398.0
+      ],
+      [
+        823.0,
+        2524.0,
+        1186.0,
+        686.0,
+        272.0,
+        68.0,
+        105.0
+      ],
+      [
+        910.0,
+        2064.0,
+        1156.0,
+        182.0,
+        456.0,
+        57.0,
+        23.0
+      ],
+      [
+        160.0,
+        1277.0,
+        3081.0,
+        81.0,
+        78.0,
+        1029.0,
+        187.0
+      ],
+      [
+        140.0,
+        1221.0,
+        1200.0,
+        133.0,
+        58.0,
+        201.0,
+        573.0
+      ]
+    ],
+    "ratio_obs_over_null": [
+      [
+        66.76,
+        5.37,
+        1.85,
+        8.82,
+        74.7,
+        3.2,
+        2.04
+      ],
+      [
+        9.33,
+        2.15,
+        0.64,
+        2.48,
+        14.86,
+        1.47,
+        3.68
+      ],
+      [
+        2.55,
+        0.57,
+        1.12,
+        0.75,
+        4.06,
+        2.86,
+        2.12
+      ],
+      [
+        15.69,
+        2.07,
+        0.69,
+        10.28,
+        16.71,
+        1.2,
+        4.09
+      ],
+      [
+        62.09,
+        6.94,
+        2.56,
+        10.36,
+        105.19,
+        3.95,
+        3.46
+      ],
+      [
+        2.69,
+        0.98,
+        1.63,
+        1.12,
+        4.22,
+        15.33,
+        6.27
+      ],
+      [
+        6.76,
+        2.66,
+        1.78,
+        5.31,
+        9.27,
+        8.45,
+        52.4
+      ]
+    ],
+    "z": [
+      [
+        259.2,
+        56.4,
+        12.7,
+        31.0,
+        172.7,
+        7.9,
+        2.2
+      ],
+      [
+        36.3,
+        35.2,
+        -12.2,
+        7.3,
+        34.8,
+        2.2,
+        6.5
+      ],
+      [
+        6.9,
+        -11.0,
+        4.2,
+        -1.2,
+        8.4,
+        8.5,
+        2.8
+      ],
+      [
+        54.1,
+        14.7,
+        -4.2,
+        38.2,
+        33.8,
+        0.7,
+        6.5
+      ],
+      [
+        151.6,
+        39.9,
+        11.2,
+        27.1,
+        179.3,
+        7.1,
+        4.1
+      ],
+      [
+        6.2,
+        -0.2,
+        9.1,
+        0.5,
+        7.6,
+        53.6,
+        12.8
+      ],
+      [
+        17.0,
+        14.6,
+        7.5,
+        14.2,
+        15.4,
+        24.1,
+        92.1
+      ]
+    ],
+    "perms": 200
+  },
+  "p2_subgraph": null,
+  "p2b_anchor_citation": null,
+  "settings": {
+    "parent": "self control",
+    "focus": [
+      "ego depletion",
+      "self control",
+      "self regulation",
+      "willpower",
+      "strength model",
+      "executive function",
+      "delay of gratification"
+    ],
+    "compounds": [
+      "ego depletion",
+      "strength model"
+    ],
+    "merge": {},
+    "subgraph_term": "ego depletion",
+    "second": "self regulation",
+    "null": "venue",
+    "iterations": -1,
+    "window": null,
+    "flows_only": true,
+    "groups": {},
+    "edges_in_window": 127489,
+    "year_max": 2024,
+    "identity_policy": "exclude all repeated OpenAlex resolutions pending adjudication; unique source-target reference edges",
+    "insulation_estimand": "observed same-term share / mean of per-permutation same-term shares; denominator = all distinct outgoing intra-corpus edges from source-term documents",
+    "null_strata": 36,
+    "nodes_in_non_singleton_strata": 24423,
+    "degree_null": "period x venue category x log2(1+in-degree) x log2(1+out-degree) bins; approximate degree adjustment, not degree-preserving rewiring",
+    "flow_ratio_estimand": "count enrichment; distinct from insulation share ratio"
+  },
+  "predictions_trauma_case": {
+    "P1": "compounds distinct from bare trauma; insulation >> null",
+    "P2": "trauma-informed sub-communities align with practice vs care venues",
+    "P3": "PTSD continuous with bare trauma by citation",
+    "P4": "embarrassment condition: compounds continuous with parent"
+  }
+}

@@ -10,3 +10,11 @@ tqdm>=4.65.0
 pandas>=2.0.0
 pyyaml>=6.0
 diptest>=0.6
+# citation layer (27, 27b)
+python-igraph>=0.11
+leidenalg>=0.10
+# concept-creep head-to-head (29): spaCy + model, sentence embeddings, HC3 trends
+spacy>=3.7
+statsmodels>=0.14
+sentence-transformers>=3.0
+# after installing: python3 -m spacy download en_core_web_sm

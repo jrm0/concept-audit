@@ -1,0 +1,91 @@
+{
+  "baseline": {
+    "seed": 42,
+    "resolution": 1.0,
+    "C11": 11,
+    "C11_size": 5496
+  },
+  "iterations": 2,
+  "runs": [
+    {
+      "seed": 42,
+      "resolution": 0.7,
+      "modularity": 0.571,
+      "n_communities": 19032,
+      "ARI_vs_baseline": 0.531,
+      "C11_jaccard": 0.502,
+      "C11_recall": 0.514,
+      "C11_match_size": 2958,
+      "compound_top_share": {
+        "trauma informed": 0.538,
+        "secondary traumatic stress": 0.811,
+        "vicarious trauma": 0.657
+      },
+      "compounds_in_matched_comm": false
+    },
+    {
+      "seed": 42,
+      "resolution": 1.0,
+      "modularity": 0.583,
+      "n_communities": 19033,
+      "ARI_vs_baseline": 1.0,
+      "C11_jaccard": 1.0,
+      "C11_recall": 1.0,
+      "C11_match_size": 5496,
+      "compound_top_share": {
+        "trauma informed": 0.316,
+        "secondary traumatic stress": 0.828,
+        "vicarious trauma": 0.694
+      },
+      "compounds_in_matched_comm": true
+    },
+    {
+      "seed": 7,
+      "resolution": 1.0,
+      "modularity": 0.584,
+      "n_communities": 19036,
+      "ARI_vs_baseline": 0.59,
+      "C11_jaccard": 0.637,
+      "C11_recall": 0.759,
+      "C11_match_size": 5232,
+      "compound_top_share": {
+        "trauma informed": 0.256,
+        "secondary traumatic stress": 0.798,
+        "vicarious trauma": 0.69
+      },
+      "compounds_in_matched_comm": true
+    },
+    {
+      "seed": 1234,
+      "resolution": 1.0,
+      "modularity": 0.581,
+      "n_communities": 19033,
+      "ARI_vs_baseline": 0.592,
+      "C11_jaccard": 0.654,
+      "C11_recall": 0.751,
+      "C11_match_size": 4945,
+      "compound_top_share": {
+        "trauma informed": 0.256,
+        "secondary traumatic stress": 0.803,
+        "vicarious trauma": 0.673
+      },
+      "compounds_in_matched_comm": true
+    },
+    {
+      "seed": 42,
+      "resolution": 1.3,
+      "modularity": 0.577,
+      "n_communities": 19041,
+      "ARI_vs_baseline": 0.68,
+      "C11_jaccard": 0.806,
+      "C11_recall": 0.848,
+      "C11_match_size": 4945,
+      "compound_top_share": {
+        "trauma informed": 0.297,
+        "secondary traumatic stress": 0.824,
+        "vicarious trauma": 0.692
+      },
+      "compounds_in_matched_comm": true
+    }
+  ]
+}

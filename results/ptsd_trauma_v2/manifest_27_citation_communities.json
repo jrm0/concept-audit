@@ -1,0 +1,105 @@
+{
+  "script": "27_citation_communities",
+  "concept": "posttraumatic stress disorder",
+  "config": "configs/ptsd_trauma.yaml",
+  "config_sha1": "c6eaa77a2118",
+  "timestamp": "2026-10-13T10:29:35-04:00",
+  "git_commit": "5beeaba",
+  "git_dirty": true,
+  "argv": [
+    "--config",
+    "configs/ptsd_trauma.yaml",
+    "--year-min",
+    "1980",
+    "--window",
+    "1980-2024",
+    "--flows-only",
+    "--second",
+    "PTSD",
+    "--focus",
+    "trauma,PTSD,@ancestor,@analytic,@cat:psychiatry,@cat:nursing/health,@cat:military/veterans,@cat:law/forensic,@cat:social work,@cat:education,@cat:work/org,@cat:sociology/humanities,@cat:core/other psych"
+  ],
+  "params": {
+    "year_min": 1980,
+    "perms": 200,
+    "resolution": 1.0,
+    "seed": 42,
+    "iterations": -1,
+    "null": "period",
+    "min_community": 200,
+    "parent": "trauma",
+    "focus_terms": [
+      "trauma",
+      "PTSD",
+      "@ancestor",
+      "@analytic",
+      "@cat:psychiatry",
+      "@cat:nursing/health",
+      "@cat:military/veterans",
+      "@cat:law/forensic",
+      "@cat:social work",
+      "@cat:education",
+      "@cat:work/org",
+      "@cat:sociology/humanities",
+      "@cat:core/other psych"
+    ],
+    "compounds": [
+      "trauma informed",
+      "secondary traumatic stress",
+      "vicarious trauma"
+    ],
+    "merge": {
+      "ptsd": "PTSD",
+      "posttraumatic stress disorder": "PTSD",
+      "complex ptsd": "complex PTSD",
+      "complex posttraumatic stress disorder": "complex PTSD"
+    },
+    "subgraph_term": "trauma informed",
+    "window": [
+      1980,
+      2024
+    ],
+    "flows_only": true,
+    "groups": {
+      "ancestor": {
+        "terms": [
+          "traumatic neurosis",
+          "war neurosis",
+          "combat neurosis",
+          "battle fatigue",
+          "combat fatigue",
+          "shell shock",
+          "gross stress reaction",
+          "postvietnam syndrome",
+          "rape trauma syndrome"
+        ]
+      },
+      "analytic": {
+        "venue": "psychoanal|analytic|psychoanalysis"
+      },
+      "abuse": {
+        "flag": "A_abuse"
+      },
+      "veteran": {
+        "flag": "V_veteran"
+      },
+      "cat": {
+        "venue_categories": true
+      }
+    }
+  },
+  "outputs": [
+    "results/ptsd_trauma_v2/citation_communities_y1980_w1980-2024.json",
+    "results/ptsd_trauma_v2/citation_communities_report_y1980_w1980-2024.txt"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "diptest": "0.11.0",
+    "torch": "2.12.0",
+    "transformers": "5.13.0"
+  },
+  "notes": "pre-registered P1-P4 in the docstring; null = within-period term-label shuffle"
+}

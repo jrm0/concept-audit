@@ -1,0 +1,36 @@
+{
+  "script": "30_correspondence_drift",
+  "concept": "ego depletion",
+  "config": "configs/ego_depletion_revision_20261019.yaml",
+  "config_sha1": "7f2fed72e1b0",
+  "timestamp": "2026-10-19T12:49:45-04:00",
+  "git_commit": "5beeaba",
+  "git_dirty": true,
+  "argv": [
+    "--config",
+    "configs/ego_depletion_revision_20261019.yaml",
+    "--terms",
+    "ego depletion,strength model,self control,self regulation"
+  ],
+  "params": {
+    "equalize": 250,
+    "reps": 20,
+    "min_n": 15,
+    "center": "controls",
+    "pairs": "both",
+    "seed": 42
+  },
+  "outputs": [
+    "results/ego_depletion_full_v2_revision_20261019/correspondence_drift.json",
+    "results/ego_depletion_full_v2_revision_20261019/correspondence_drift_report.txt"
+  ],
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.3.3",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "torch": "2.12.1",
+    "transformers": "5.12.1"
+  },
+  "notes": "AMD/SAMD after Goworek & Dubossarsky (2026, LChange proceedings); APD/PRT as in the LSCD literature. Floors = same metric on two halves of one period."
+}

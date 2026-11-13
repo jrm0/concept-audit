@@ -1,0 +1,67 @@
+{
+  "script": "27_citation_communities",
+  "concept": "posttraumatic stress disorder",
+  "config": "configs/ptsd_trauma.yaml",
+  "config_sha1": "a76e6b8c7b68",
+  "timestamp": "2026-10-01T06:38:18-04:00",
+  "git_commit": null,
+  "git_dirty": null,
+  "argv": [
+    "--config",
+    "configs/ptsd_trauma.yaml",
+    "--null",
+    "venue",
+    "--perms",
+    "200"
+  ],
+  "params": {
+    "year_min": 1995,
+    "perms": 200,
+    "resolution": 1.0,
+    "seed": 42,
+    "iterations": -1,
+    "null": "venue",
+    "min_community": 200,
+    "parent": "trauma",
+    "focus_terms": [
+      "trauma",
+      "PTSD",
+      "trauma informed",
+      "secondary traumatic stress",
+      "vicarious trauma",
+      "complex PTSD",
+      "moral injury",
+      "collective trauma",
+      "intergenerational trauma",
+      "posttraumatic stress",
+      "traumatic stress",
+      "psychological trauma",
+      "bereavement",
+      "acute stress disorder",
+      "adjustment disorder"
+    ],
+    "compounds": [
+      "trauma informed",
+      "secondary traumatic stress",
+      "vicarious trauma"
+    ],
+    "merge": {
+      "ptsd": "PTSD",
+      "posttraumatic stress disorder": "PTSD",
+      "complex ptsd": "complex PTSD",
+      "complex posttraumatic stress disorder": "complex PTSD"
+    },
+    "subgraph_term": "trauma informed"
+  },
+  "outputs": [
+    "results/ptsd_trauma_v2/citation_communities_venuenull.json",
+    "results/ptsd_trauma_v2/citation_communities_report_venuenull.txt"
+  ],
+  "versions": {
+    "python": "3.11.15",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "sklearn": "1.8.0"
+  },
+  "notes": "pre-registered P1-P4 in the docstring; null = within-period term-label shuffle"
+}

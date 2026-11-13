@@ -3,14 +3,18 @@
   "concept": "posttraumatic stress disorder",
   "config": "configs/ptsd_trauma_popular.yaml",
   "config_sha1": "0b45de2f1973",
-  "timestamp": "2026-09-15T14:10:28-04:00",
-  "git_commit": "5a1ec32",
-  "git_dirty": false,
+  "timestamp": "2026-09-18T07:58:51-04:00",
+  "git_commit": "5beeaba",
+  "git_dirty": true,
   "argv": [
     "--config",
     "configs/ptsd_trauma_popular.yaml",
     "--source",
     "nyt",
+    "--terms",
+    "trauma,PTSD",
+    "--nyt-relevance",
+    "3",
     "--max-calls",
     "450"
   ],
@@ -18,16 +22,7 @@
     "source": "nyt",
     "terms": [
       "trauma",
-      "PTSD",
-      "posttraumatic stress disorder",
-      "post-traumatic stress",
-      "shell shock",
-      "trauma-informed",
-      "traumatic stress",
-      "moral injury",
-      "collective trauma",
-      "intergenerational trauma",
-      "vicarious trauma"
+      "PTSD"
     ],
     "years": [
       1965,
@@ -35,13 +30,13 @@
     ],
     "max_calls": 450,
     "summary": {
-      "nyt:docs": 0,
+      "nyt:docs": 894,
       "nyt:calls": 450
     },
     "retrieval_log": "data/ptsd_trauma_popular/retrieval_log.jsonl",
     "apis": {
       "guardian": "content.guardianapis.com/search (type=article, q=\"term\", full bodyText)",
-      "nyt": "api.nytimes.com/svc/search/v2/articlesearch (document_type=article, headline+abstract+lead_paragraph+snippet only)"
+      "nyt": "api.nytimes.com/svc/search/v2/articlesearch (q=\"term\", sort=oldest, no fq \u2014 a fq filter zeroes results; document_type checked client-side; headline+abstract+lead_paragraph+snippet only; no hit counts returned)"
     }
   },
   "outputs": [
@@ -56,5 +51,5 @@
     "torch": "2.12.0",
     "transformers": "5.13.0"
   },
-  "notes": "Windows are logged only when complete; re-run to resume. NYT hits > 1,000 per year are fetched by month."
+  "notes": "Windows are logged only when complete; re-run to resume. NYT windows past the 100-page cap continue from the last date seen (date cursor)."
 }

@@ -1,0 +1,60 @@
+{"review_id": "ptsd_trauma-001", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-002", "predicted_instruments": [{"family": "impact of event scale", "version": "base", "surface": "Impact of Event Scale", "how": "seed"}]}
+{"review_id": "ptsd_trauma-003", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-004", "predicted_instruments": [{"family": "biological measure", "version": "base", "surface": "EEG", "how": "seed"}]}
+{"review_id": "ptsd_trauma-005", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-006", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-007", "predicted_instruments": [{"family": "biological measure", "version": "base", "surface": "EEG", "how": "seed"}]}
+{"review_id": "ptsd_trauma-008", "predicted_instruments": [{"family": "abbreviated injury scale", "version": "base", "surface": "Abbreviated Injury Scale", "how": "seed"}, {"family": "injury severity score", "version": "base", "surface": "Injury Severity Score", "how": "seed"}]}
+{"review_id": "ptsd_trauma-009", "predicted_instruments": [{"family": "patient health questionnaire", "version": "base", "surface": "Patient Health Questionnaire", "how": "seed"}, {"family": "patient health questionnaire", "version": "9", "surface": "PHQ-9", "how": "seed"}, {"family": "trauma experience questionnaire", "version": "base", "surface": "Trauma Experience Questionnaire", "how": "generic"}]}
+{"review_id": "ptsd_trauma-010", "predicted_instruments": [{"family": "ptsd symptom scale", "version": "base", "surface": "PTSD Symptom Scale", "how": "seed"}]}
+{"review_id": "ptsd_trauma-011", "predicted_instruments": [{"family": "clinician administered ptsd scale", "version": "base", "surface": "Clinician-Administered PTSD Scale", "how": "seed"}, {"family": "narcissistic vulnerability scale", "version": "base", "surface": "Narcissistic Vulnerability Scale", "how": "generic"}]}
+{"review_id": "ptsd_trauma-012", "predicted_instruments": [{"family": "biological measure", "version": "base", "surface": "EMG", "how": "seed"}]}
+{"review_id": "ptsd_trauma-013", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-014", "predicted_instruments": [{"family": "posttraumatic diagnostic scale", "version": "base", "surface": "PDS", "how": "seed"}]}
+{"review_id": "ptsd_trauma-015", "predicted_instruments": [{"family": "glasgow coma scale", "version": "base", "surface": "Glasgow Coma Scale", "how": "seed"}]}
+{"review_id": "ptsd_trauma-016", "predicted_instruments": [{"family": "biological measure", "version": "base", "surface": "EEG", "how": "seed"}]}
+{"review_id": "ptsd_trauma-017", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-018", "predicted_instruments": [{"family": "biological measure", "version": "base", "surface": "EEG", "how": "seed"}]}
+{"review_id": "ptsd_trauma-019", "predicted_instruments": [{"family": "harvard trauma questionnaire", "version": "base", "surface": "Harvard Trauma Questionnaire", "how": "seed"}]}
+{"review_id": "ptsd_trauma-020", "predicted_instruments": [{"family": "impact of event scale", "version": "base", "surface": "Impact of Events Scale", "how": "seed"}]}
+{"review_id": "ptsd_trauma-021", "predicted_instruments": [{"family": "rorechach and hand test", "version": "base", "surface": "Rorechach and Hand Test", "how": "generic"}]}
+{"review_id": "ptsd_trauma-022", "predicted_instruments": [{"family": "abuse assessment screen", "version": "base", "surface": "Abuse Assessment Screen", "how": "generic"}]}
+{"review_id": "ptsd_trauma-023", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-024", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-025", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-026", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-027", "predicted_instruments": [{"family": "mississippi scale", "version": "base", "surface": "Mississippi Scale", "how": "seed"}]}
+{"review_id": "ptsd_trauma-028", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-029", "predicted_instruments": [{"family": "respiratory index", "version": "base", "surface": "Respiratory Index", "how": "generic"}]}
+{"review_id": "ptsd_trauma-030", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-031", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-032", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-033", "predicted_instruments": [{"family": "mississippi scale", "version": "base", "surface": "Mississippi scale for combat-related PTSD", "how": "seed"}]}
+{"review_id": "ptsd_trauma-034", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-035", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-036", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-037", "predicted_instruments": [{"family": "childhood trauma questionnaire", "version": "base", "surface": "Childhood Trauma Questionnaire", "how": "seed"}]}
+{"review_id": "ptsd_trauma-038", "predicted_instruments": [{"family": "biological measure", "version": "base", "surface": "Electroencephalography", "how": "seed"}]}
+{"review_id": "ptsd_trauma-039", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-040", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-041", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-042", "predicted_instruments": [{"family": "family trauma and resilience interview", "version": "base", "surface": "Family Trauma and Resilience Interview", "how": "generic"}, {"family": "kiddie schedule", "version": "base", "surface": "Kiddie Schedule", "how": "generic"}, {"family": "child global assessment schedule", "version": "base", "surface": "Child Global Assessment Schedule", "how": "generic"}]}
+{"review_id": "ptsd_trauma-043", "predicted_instruments": [{"family": "injury severity score", "version": "base", "surface": "Injury Severity Score", "how": "seed"}]}
+{"review_id": "ptsd_trauma-044", "predicted_instruments": [{"family": "biological measure", "version": "base", "surface": "EEG", "how": "seed"}]}
+{"review_id": "ptsd_trauma-045", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-046", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-047", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-048", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-049", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-050", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-051", "predicted_instruments": [{"family": "canadian national population health survey", "version": "base", "surface": "Canadian National Population Health Survey", "how": "generic"}]}
+{"review_id": "ptsd_trauma-052", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-053", "predicted_instruments": [{"family": "childhood trauma questionnaire", "version": "base", "surface": "Childhood Trauma Questionnaire", "how": "seed"}, {"family": "patient health questionnaire", "version": "base", "surface": "Patient Health Questionnaire", "how": "seed"}]}
+{"review_id": "ptsd_trauma-054", "predicted_instruments": [{"family": "biological measure", "version": "base", "surface": "EEG", "how": "seed"}, {"family": "benton visual retention test", "version": "base", "surface": "Benton Visual Retention Test", "how": "generic"}, {"family": "auditory word learning test", "version": "base", "surface": "Auditory Word Learning Test", "how": "generic"}]}
+{"review_id": "ptsd_trauma-055", "predicted_instruments": [{"family": "interference scale", "version": "base", "surface": "Interference Scale", "how": "generic"}]}
+{"review_id": "ptsd_trauma-056", "predicted_instruments": [{"family": "biological measure", "version": "base", "surface": "functional magnetic resonance imaging", "how": "seed"}]}
+{"review_id": "ptsd_trauma-057", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-058", "predicted_instruments": [{"family": "hospital anxiety and depression scale", "version": "base", "surface": "Hospital Anxiety and Depression Scale", "how": "generic"}]}
+{"review_id": "ptsd_trauma-059", "predicted_instruments": []}
+{"review_id": "ptsd_trauma-060", "predicted_instruments": []}

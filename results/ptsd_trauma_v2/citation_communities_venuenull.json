@@ -1,0 +1,3056 @@
+{
+  "graph": {
+    "nodes": 110547,
+    "edges": 1006235,
+    "year_min": 1995,
+    "algorithm": "leiden/RBConfiguration (cached, iterations=-1)",
+    "resolution": 1.0,
+    "modularity": 0.5838,
+    "n_communities": 19035,
+    "n_communities_ge_min": 18,
+    "min_community": 200
+  },
+  "communities": {
+    "0": {
+      "n": 8237,
+      "top_venues": [
+        [
+          "Journal of Traumatic Stress",
+          362
+        ],
+        [
+          "Journal of Affective Disorders",
+          242
+        ],
+        [
+          "Psychological Trauma Theory Research Practice and Policy",
+          224
+        ],
+        [
+          "Psychiatry Research",
+          188
+        ],
+        [
+          "Frontiers in Psychiatry",
+          187
+        ],
+        [
+          "European Journal of Psychotraumatology",
+          184
+        ]
+      ],
+      "top_terms": [
+        [
+          "PTSD",
+          5138,
+          0.624
+        ],
+        [
+          "trauma",
+          3769,
+          0.458
+        ],
+        [
+          "posttraumatic stress",
+          1518,
+          0.184
+        ],
+        [
+          "traumatic stress",
+          464,
+          0.056
+        ],
+        [
+          "psychological trauma",
+          182,
+          0.022
+        ],
+        [
+          "bereavement",
+          162,
+          0.02
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          178
+        ],
+        [
+          "2000-2004",
+          441
+        ],
+        [
+          "2005-2009",
+          891
+        ],
+        [
+          "2010-2014",
+          1231
+        ],
+        [
+          "2015-2019",
+          1521
+        ],
+        [
+          "2020-2024",
+          3415
+        ],
+        [
+          "2025-2025",
+          560
+        ]
+      ]
+    },
+    "1": {
+      "n": 8180,
+      "top_venues": [
+        [
+          "Biological Psychiatry",
+          405
+        ],
+        [
+          "Psychoneuroendocrinology",
+          271
+        ],
+        [
+          "Journal of Psychiatric Research",
+          200
+        ],
+        [
+          "Journal of Affective Disorders",
+          194
+        ],
+        [
+          "Neuropsychopharmacology",
+          187
+        ],
+        [
+          "Behavioural Brain Research",
+          163
+        ]
+      ],
+      "top_terms": [
+        [
+          "PTSD",
+          6964,
+          0.851
+        ],
+        [
+          "trauma",
+          3323,
+          0.406
+        ],
+        [
+          "posttraumatic stress",
+          656,
+          0.08
+        ],
+        [
+          "traumatic stress",
+          446,
+          0.055
+        ],
+        [
+          "psychological trauma",
+          157,
+          0.019
+        ],
+        [
+          "acute stress disorder",
+          72,
+          0.009
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          234
+        ],
+        [
+          "2000-2004",
+          500
+        ],
+        [
+          "2005-2009",
+          865
+        ],
+        [
+          "2010-2014",
+          1554
+        ],
+        [
+          "2015-2019",
+          2273
+        ],
+        [
+          "2020-2024",
+          2396
+        ],
+        [
+          "2025-2025",
+          358
+        ]
+      ]
+    },
+    "2": {
+      "n": 8054,
+      "top_venues": [
+        [
+          "Child Abuse & Neglect",
+          383
+        ],
+        [
+          "Journal of Child & Adolescent Trauma",
+          251
+        ],
+        [
+          "Children and Youth Services Review",
+          243
+        ],
+        [
+          "Journal of Traumatic Stress",
+          243
+        ],
+        [
+          "European Journal of Psychotraumatology",
+          201
+        ],
+        [
+          "Journal of Interpersonal Violence",
+          181
+        ]
+      ],
+      "top_terms": [
+        [
+          "trauma",
+          5793,
+          0.719
+        ],
+        [
+          "PTSD",
+          3086,
+          0.383
+        ],
+        [
+          "posttraumatic stress",
+          1196,
+          0.148
+        ],
+        [
+          "trauma informed",
+          893,
+          0.111
+        ],
+        [
+          "complex PTSD",
+          502,
+          0.062
+        ],
+        [
+          "traumatic stress",
+          494,
+          0.061
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          306
+        ],
+        [
+          "2000-2004",
+          515
+        ],
+        [
+          "2005-2009",
+          885
+        ],
+        [
+          "2010-2014",
+          1285
+        ],
+        [
+          "2015-2019",
+          1899
+        ],
+        [
+          "2020-2024",
+          2624
+        ],
+        [
+          "2025-2025",
+          540
+        ]
+      ]
+    },
+    "3": {
+      "n": 7038,
+      "top_venues": [
+        [
+          "Journal of Affective Disorders",
+          327
+        ],
+        [
+          "Child Abuse & Neglect",
+          240
+        ],
+        [
+          "Psychiatry Research",
+          234
+        ],
+        [
+          "Frontiers in Psychiatry",
+          204
+        ],
+        [
+          "Psychological Medicine",
+          177
+        ],
+        [
+          "Journal of Psychiatric Research",
+          170
+        ]
+      ],
+      "top_terms": [
+        [
+          "trauma",
+          5929,
+          0.842
+        ],
+        [
+          "PTSD",
+          1542,
+          0.219
+        ],
+        [
+          "trauma informed",
+          294,
+          0.042
+        ],
+        [
+          "posttraumatic stress",
+          206,
+          0.029
+        ],
+        [
+          "psychological trauma",
+          98,
+          0.014
+        ],
+        [
+          "traumatic stress",
+          72,
+          0.01
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          121
+        ],
+        [
+          "2000-2004",
+          278
+        ],
+        [
+          "2005-2009",
+          502
+        ],
+        [
+          "2010-2014",
+          976
+        ],
+        [
+          "2015-2019",
+          1742
+        ],
+        [
+          "2020-2024",
+          2840
+        ],
+        [
+          "2025-2025",
+          579
+        ]
+      ]
+    },
+    "4": {
+      "n": 6855,
+      "top_venues": [
+        [
+          "Death Studies",
+          583
+        ],
+        [
+          "OMEGA - Journal of Death and Dying",
+          415
+        ],
+        [
+          "Journal of Palliative Medicine",
+          139
+        ],
+        [
+          "Journal of Loss and Trauma",
+          121
+        ],
+        [
+          "Palliative Medicine",
+          114
+        ],
+        [
+          "Journal of Affective Disorders",
+          103
+        ]
+      ],
+      "top_terms": [
+        [
+          "bereavement",
+          5598,
+          0.817
+        ],
+        [
+          "trauma",
+          905,
+          0.132
+        ],
+        [
+          "PTSD",
+          714,
+          0.104
+        ],
+        [
+          "posttraumatic stress",
+          256,
+          0.037
+        ],
+        [
+          "traumatic stress",
+          46,
+          0.007
+        ],
+        [
+          "psychological trauma",
+          36,
+          0.005
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          407
+        ],
+        [
+          "2000-2004",
+          656
+        ],
+        [
+          "2005-2009",
+          807
+        ],
+        [
+          "2010-2014",
+          1087
+        ],
+        [
+          "2015-2019",
+          1372
+        ],
+        [
+          "2020-2024",
+          2043
+        ],
+        [
+          "2025-2025",
+          483
+        ]
+      ]
+    },
+    "5": {
+      "n": 6627,
+      "top_venues": [
+        [
+          "Journal of Traumatic Stress",
+          417
+        ],
+        [
+          "Military Medicine",
+          280
+        ],
+        [
+          "Journal of Interpersonal Violence",
+          164
+        ],
+        [
+          "Psychological Trauma Theory Research Practice and Policy",
+          157
+        ],
+        [
+          "Journal of Affective Disorders",
+          120
+        ],
+        [
+          "Psychiatric Services",
+          117
+        ]
+      ],
+      "top_terms": [
+        [
+          "PTSD",
+          4945,
+          0.746
+        ],
+        [
+          "trauma",
+          2709,
+          0.409
+        ],
+        [
+          "posttraumatic stress",
+          531,
+          0.08
+        ],
+        [
+          "trauma informed",
+          209,
+          0.032
+        ],
+        [
+          "traumatic stress",
+          147,
+          0.022
+        ],
+        [
+          "psychological trauma",
+          71,
+          0.011
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          209
+        ],
+        [
+          "2000-2004",
+          386
+        ],
+        [
+          "2005-2009",
+          723
+        ],
+        [
+          "2010-2014",
+          1353
+        ],
+        [
+          "2015-2019",
+          1735
+        ],
+        [
+          "2020-2024",
+          1888
+        ],
+        [
+          "2025-2025",
+          333
+        ]
+      ]
+    },
+    "6": {
+      "n": 6384,
+      "top_venues": [
+        [
+          "Psychoanalytic Dialogues",
+          136
+        ],
+        [
+          "The American Journal of Psychoanalysis",
+          105
+        ],
+        [
+          "The International Journal of Psychoanalysis",
+          101
+        ],
+        [
+          "Child Abuse & Neglect",
+          92
+        ],
+        [
+          "Archives of Women s Mental Health",
+          89
+        ],
+        [
+          "Psychological Trauma Theory Research Practice and Policy",
+          77
+        ]
+      ],
+      "top_terms": [
+        [
+          "trauma",
+          4905,
+          0.768
+        ],
+        [
+          "PTSD",
+          1483,
+          0.232
+        ],
+        [
+          "posttraumatic stress",
+          464,
+          0.073
+        ],
+        [
+          "trauma informed",
+          375,
+          0.059
+        ],
+        [
+          "intergenerational trauma",
+          224,
+          0.035
+        ],
+        [
+          "traumatic stress",
+          215,
+          0.034
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          173
+        ],
+        [
+          "2000-2004",
+          358
+        ],
+        [
+          "2005-2009",
+          607
+        ],
+        [
+          "2010-2014",
+          907
+        ],
+        [
+          "2015-2019",
+          1352
+        ],
+        [
+          "2020-2024",
+          2431
+        ],
+        [
+          "2025-2025",
+          556
+        ]
+      ]
+    },
+    "7": {
+      "n": 6019,
+      "top_venues": [
+        [
+          "Journal of Neurotrauma",
+          526
+        ],
+        [
+          "Brain Injury",
+          324
+        ],
+        [
+          "Journal of Head Trauma Rehabilitation",
+          241
+        ],
+        [
+          "The Journal of Trauma: Injury, Infection, and Critical Care",
+          148
+        ],
+        [
+          "Military Medicine",
+          102
+        ],
+        [
+          "Pain",
+          94
+        ]
+      ],
+      "top_terms": [
+        [
+          "trauma",
+          4617,
+          0.767
+        ],
+        [
+          "PTSD",
+          1646,
+          0.273
+        ],
+        [
+          "posttraumatic stress",
+          288,
+          0.048
+        ],
+        [
+          "traumatic stress",
+          63,
+          0.01
+        ],
+        [
+          "psychological trauma",
+          59,
+          0.01
+        ],
+        [
+          "trauma informed",
+          40,
+          0.007
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          300
+        ],
+        [
+          "2000-2004",
+          394
+        ],
+        [
+          "2005-2009",
+          739
+        ],
+        [
+          "2010-2014",
+          1251
+        ],
+        [
+          "2015-2019",
+          1654
+        ],
+        [
+          "2020-2024",
+          1459
+        ],
+        [
+          "2025-2025",
+          222
+        ]
+      ]
+    },
+    "8": {
+      "n": 5776,
+      "top_venues": [
+        [
+          "Journal of Interpersonal Violence",
+          194
+        ],
+        [
+          "Addictive Behaviors",
+          185
+        ],
+        [
+          "Journal of Traumatic Stress",
+          169
+        ],
+        [
+          "Psychological Trauma Theory Research Practice and Policy",
+          117
+        ],
+        [
+          "Drug and Alcohol Dependence",
+          115
+        ],
+        [
+          "AIDS Care",
+          100
+        ]
+      ],
+      "top_terms": [
+        [
+          "PTSD",
+          3351,
+          0.58
+        ],
+        [
+          "trauma",
+          3162,
+          0.547
+        ],
+        [
+          "trauma informed",
+          577,
+          0.1
+        ],
+        [
+          "posttraumatic stress",
+          488,
+          0.084
+        ],
+        [
+          "traumatic stress",
+          130,
+          0.023
+        ],
+        [
+          "psychological trauma",
+          86,
+          0.015
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          207
+        ],
+        [
+          "2000-2004",
+          367
+        ],
+        [
+          "2005-2009",
+          661
+        ],
+        [
+          "2010-2014",
+          989
+        ],
+        [
+          "2015-2019",
+          1403
+        ],
+        [
+          "2020-2024",
+          1808
+        ],
+        [
+          "2025-2025",
+          341
+        ]
+      ]
+    },
+    "9": {
+      "n": 5651,
+      "top_venues": [
+        [
+          "Journal of Traumatic Stress",
+          303
+        ],
+        [
+          "European Journal of Psychotraumatology",
+          184
+        ],
+        [
+          "Journal of EMDR Practice and Research",
+          150
+        ],
+        [
+          "Psychological Trauma Theory Research Practice and Policy",
+          144
+        ],
+        [
+          "Military Medicine",
+          97
+        ],
+        [
+          "Frontiers in Psychology",
+          97
+        ]
+      ],
+      "top_terms": [
+        [
+          "PTSD",
+          4610,
+          0.816
+        ],
+        [
+          "trauma",
+          2513,
+          0.445
+        ],
+        [
+          "posttraumatic stress",
+          353,
+          0.062
+        ],
+        [
+          "traumatic stress",
+          186,
+          0.033
+        ],
+        [
+          "complex PTSD",
+          121,
+          0.021
+        ],
+        [
+          "trauma informed",
+          92,
+          0.016
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          207
+        ],
+        [
+          "2000-2004",
+          435
+        ],
+        [
+          "2005-2009",
+          592
+        ],
+        [
+          "2010-2014",
+          886
+        ],
+        [
+          "2015-2019",
+          1324
+        ],
+        [
+          "2020-2024",
+          1852
+        ],
+        [
+          "2025-2025",
+          355
+        ]
+      ]
+    },
+    "10": {
+      "n": 5643,
+      "top_venues": [
+        [
+          "Journal of Traumatic Stress",
+          153
+        ],
+        [
+          "Transcultural Psychiatry",
+          136
+        ],
+        [
+          "European Journal of Psychotraumatology",
+          116
+        ],
+        [
+          "BMC Psychiatry",
+          94
+        ],
+        [
+          "Social Science & Medicine",
+          88
+        ],
+        [
+          "The Journal of Nervous and Mental Disease",
+          86
+        ]
+      ],
+      "top_terms": [
+        [
+          "trauma",
+          3836,
+          0.68
+        ],
+        [
+          "PTSD",
+          2625,
+          0.465
+        ],
+        [
+          "posttraumatic stress",
+          606,
+          0.107
+        ],
+        [
+          "traumatic stress",
+          252,
+          0.045
+        ],
+        [
+          "trauma informed",
+          239,
+          0.042
+        ],
+        [
+          "psychological trauma",
+          142,
+          0.025
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          211
+        ],
+        [
+          "2000-2004",
+          427
+        ],
+        [
+          "2005-2009",
+          564
+        ],
+        [
+          "2010-2014",
+          824
+        ],
+        [
+          "2015-2019",
+          1320
+        ],
+        [
+          "2020-2024",
+          1887
+        ],
+        [
+          "2025-2025",
+          410
+        ]
+      ]
+    },
+    "11": {
+      "n": 5556,
+      "top_venues": [
+        [
+          "Traumatology An International Journal",
+          110
+        ],
+        [
+          "Psychological Trauma Theory Research Practice and Policy",
+          86
+        ],
+        [
+          "Children and Youth Services Review",
+          82
+        ],
+        [
+          "International Journal of Mental Health Nursing",
+          67
+        ],
+        [
+          "Child Abuse & Neglect",
+          54
+        ],
+        [
+          "School Mental Health",
+          50
+        ]
+      ],
+      "top_terms": [
+        [
+          "trauma",
+          3579,
+          0.644
+        ],
+        [
+          "trauma informed",
+          1739,
+          0.313
+        ],
+        [
+          "secondary traumatic stress",
+          1052,
+          0.189
+        ],
+        [
+          "PTSD",
+          663,
+          0.119
+        ],
+        [
+          "vicarious trauma",
+          354,
+          0.064
+        ],
+        [
+          "traumatic stress",
+          226,
+          0.041
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          71
+        ],
+        [
+          "2000-2004",
+          192
+        ],
+        [
+          "2005-2009",
+          275
+        ],
+        [
+          "2010-2014",
+          452
+        ],
+        [
+          "2015-2019",
+          1136
+        ],
+        [
+          "2020-2024",
+          2707
+        ],
+        [
+          "2025-2025",
+          723
+        ]
+      ]
+    },
+    "12": {
+      "n": 4204,
+      "top_venues": [
+        [
+          "Journal of Traumatic Stress",
+          208
+        ],
+        [
+          "Behaviour Research and Therapy",
+          147
+        ],
+        [
+          "Psychological Trauma Theory Research Practice and Policy",
+          129
+        ],
+        [
+          "Journal of Behavior Therapy and Experimental Psychiatry",
+          107
+        ],
+        [
+          "Journal of Anxiety Disorders",
+          102
+        ],
+        [
+          "European Journal of Psychotraumatology",
+          96
+        ]
+      ],
+      "top_terms": [
+        [
+          "PTSD",
+          2870,
+          0.683
+        ],
+        [
+          "trauma",
+          2681,
+          0.638
+        ],
+        [
+          "posttraumatic stress",
+          639,
+          0.152
+        ],
+        [
+          "acute stress disorder",
+          202,
+          0.048
+        ],
+        [
+          "traumatic stress",
+          118,
+          0.028
+        ],
+        [
+          "psychological trauma",
+          99,
+          0.024
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          245
+        ],
+        [
+          "2000-2004",
+          393
+        ],
+        [
+          "2005-2009",
+          638
+        ],
+        [
+          "2010-2014",
+          707
+        ],
+        [
+          "2015-2019",
+          926
+        ],
+        [
+          "2020-2024",
+          1098
+        ],
+        [
+          "2025-2025",
+          197
+        ]
+      ]
+    },
+    "13": {
+      "n": 1842,
+      "top_venues": [
+        [
+          "Journal of Trauma & Dissociation",
+          238
+        ],
+        [
+          "Epilepsy & Behavior",
+          76
+        ],
+        [
+          "European Journal of Trauma & Dissociation",
+          55
+        ],
+        [
+          "European Journal of Psychotraumatology",
+          43
+        ],
+        [
+          "Psychological Trauma Theory Research Practice and Policy",
+          36
+        ],
+        [
+          "The Journal of Nervous and Mental Disease",
+          32
+        ]
+      ],
+      "top_terms": [
+        [
+          "trauma",
+          1504,
+          0.817
+        ],
+        [
+          "PTSD",
+          541,
+          0.294
+        ],
+        [
+          "psychological trauma",
+          75,
+          0.041
+        ],
+        [
+          "posttraumatic stress",
+          71,
+          0.039
+        ],
+        [
+          "traumatic stress",
+          45,
+          0.024
+        ],
+        [
+          "complex PTSD",
+          33,
+          0.018
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          160
+        ],
+        [
+          "2000-2004",
+          203
+        ],
+        [
+          "2005-2009",
+          211
+        ],
+        [
+          "2010-2014",
+          287
+        ],
+        [
+          "2015-2019",
+          387
+        ],
+        [
+          "2020-2024",
+          481
+        ],
+        [
+          "2025-2025",
+          113
+        ]
+      ]
+    },
+    "14": {
+      "n": 1236,
+      "top_venues": [
+        [
+          "Journal of Forensic Sciences",
+          167
+        ],
+        [
+          "Forensic Science International",
+          148
+        ],
+        [
+          "Child Abuse & Neglect",
+          122
+        ],
+        [
+          "International Journal of Legal Medicine",
+          108
+        ],
+        [
+          "Journal of Forensic and Legal Medicine",
+          92
+        ],
+        [
+          "PEDIATRICS",
+          84
+        ]
+      ],
+      "top_terms": [
+        [
+          "trauma",
+          1224,
+          0.99
+        ],
+        [
+          "trauma informed",
+          5,
+          0.004
+        ],
+        [
+          "PTSD",
+          3,
+          0.002
+        ],
+        [
+          "bereavement",
+          3,
+          0.002
+        ],
+        [
+          "posttraumatic stress",
+          2,
+          0.002
+        ],
+        [
+          "traumatic stress",
+          1,
+          0.001
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          50
+        ],
+        [
+          "2000-2004",
+          87
+        ],
+        [
+          "2005-2009",
+          169
+        ],
+        [
+          "2010-2014",
+          270
+        ],
+        [
+          "2015-2019",
+          268
+        ],
+        [
+          "2020-2024",
+          332
+        ],
+        [
+          "2025-2025",
+          60
+        ]
+      ]
+    },
+    "15": {
+      "n": 1171,
+      "top_venues": [
+        [
+          "SLEEP",
+          80
+        ],
+        [
+          "Journal of Traumatic Stress",
+          63
+        ],
+        [
+          "Dreaming",
+          43
+        ],
+        [
+          "Behavioral Sleep Medicine",
+          34
+        ],
+        [
+          "Journal of Sleep Research",
+          33
+        ],
+        [
+          "Sleep Medicine",
+          32
+        ]
+      ],
+      "top_terms": [
+        [
+          "PTSD",
+          969,
+          0.827
+        ],
+        [
+          "trauma",
+          496,
+          0.424
+        ],
+        [
+          "posttraumatic stress",
+          82,
+          0.07
+        ],
+        [
+          "traumatic stress",
+          29,
+          0.025
+        ],
+        [
+          "trauma informed",
+          13,
+          0.011
+        ],
+        [
+          "psychological trauma",
+          10,
+          0.009
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          52
+        ],
+        [
+          "2000-2004",
+          72
+        ],
+        [
+          "2005-2009",
+          115
+        ],
+        [
+          "2010-2014",
+          214
+        ],
+        [
+          "2015-2019",
+          266
+        ],
+        [
+          "2020-2024",
+          380
+        ],
+        [
+          "2025-2025",
+          72
+        ]
+      ]
+    },
+    "16": {
+      "n": 1144,
+      "top_venues": [
+        [
+          "Psychological Trauma Theory Research Practice and Policy",
+          70
+        ],
+        [
+          "Journal of Traumatic Stress",
+          49
+        ],
+        [
+          "Journal of Religion and Health",
+          44
+        ],
+        [
+          "European Journal of Psychotraumatology",
+          36
+        ],
+        [
+          "Traumatology An International Journal",
+          35
+        ],
+        [
+          "Frontiers in Psychiatry",
+          33
+        ]
+      ],
+      "top_terms": [
+        [
+          "moral injury",
+          779,
+          0.681
+        ],
+        [
+          "PTSD",
+          446,
+          0.39
+        ],
+        [
+          "trauma",
+          409,
+          0.358
+        ],
+        [
+          "posttraumatic stress",
+          64,
+          0.056
+        ],
+        [
+          "traumatic stress",
+          34,
+          0.03
+        ],
+        [
+          "psychological trauma",
+          23,
+          0.02
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          11
+        ],
+        [
+          "2000-2004",
+          21
+        ],
+        [
+          "2005-2009",
+          34
+        ],
+        [
+          "2010-2014",
+          75
+        ],
+        [
+          "2015-2019",
+          227
+        ],
+        [
+          "2020-2024",
+          633
+        ],
+        [
+          "2025-2025",
+          143
+        ]
+      ]
+    },
+    "17": {
+      "n": 796,
+      "top_venues": [
+        [
+          "Psycho-Oncology",
+          64
+        ],
+        [
+          "Supportive Care in Cancer",
+          20
+        ],
+        [
+          "Journal of Affective Disorders",
+          19
+        ],
+        [
+          "Journal of Psychosocial Oncology",
+          18
+        ],
+        [
+          "General Hospital Psychiatry",
+          15
+        ],
+        [
+          "Psychosomatics",
+          12
+        ]
+      ],
+      "top_terms": [
+        [
+          "adjustment disorder",
+          348,
+          0.437
+        ],
+        [
+          "PTSD",
+          291,
+          0.366
+        ],
+        [
+          "trauma",
+          142,
+          0.178
+        ],
+        [
+          "posttraumatic stress",
+          114,
+          0.143
+        ],
+        [
+          "traumatic stress",
+          50,
+          0.063
+        ],
+        [
+          "acute stress disorder",
+          16,
+          0.02
+        ]
+      ],
+      "periods": [
+        [
+          "1995-1999",
+          39
+        ],
+        [
+          "2000-2004",
+          63
+        ],
+        [
+          "2005-2009",
+          123
+        ],
+        [
+          "2010-2014",
+          133
+        ],
+        [
+          "2015-2019",
+          200
+        ],
+        [
+          "2020-2024",
+          196
+        ],
+        [
+          "2025-2025",
+          42
+        ]
+      ]
+    }
+  },
+  "term_distribution": [
+    {
+      "term": "trauma",
+      "n_docs": 66528,
+      "top_community": 3,
+      "top_community_share": 0.115,
+      "norm_entropy": 0.924,
+      "share_in_overrepresented_comms": 0.0,
+      "n_overrepresented_comms": 0,
+      "js_vs_parent": null
+    },
+    {
+      "term": "PTSD",
+      "n_docs": 44697,
+      "top_community": 1,
+      "top_community_share": 0.166,
+      "norm_entropy": 0.876,
+      "share_in_overrepresented_comms": 0.299,
+      "n_overrepresented_comms": 3,
+      "js_vs_parent": 0.1071
+    },
+    {
+      "term": "trauma informed",
+      "n_docs": 5409,
+      "top_community": 11,
+      "top_community_share": 0.369,
+      "norm_entropy": 0.686,
+      "share_in_overrepresented_comms": 0.681,
+      "n_overrepresented_comms": 3,
+      "js_vs_parent": 0.2041
+    },
+    {
+      "term": "secondary traumatic stress",
+      "n_docs": 1276,
+      "top_community": 11,
+      "top_community_share": 0.883,
+      "norm_entropy": 0.218,
+      "share_in_overrepresented_comms": 0.883,
+      "n_overrepresented_comms": 1,
+      "js_vs_parent": 0.6128
+    },
+    {
+      "term": "vicarious trauma",
+      "n_docs": 507,
+      "top_community": 11,
+      "top_community_share": 0.794,
+      "norm_entropy": 0.366,
+      "share_in_overrepresented_comms": 0.794,
+      "n_overrepresented_comms": 1,
+      "js_vs_parent": 0.5022
+    },
+    {
+      "term": "complex PTSD",
+      "n_docs": 1010,
+      "top_community": 2,
+      "top_community_share": 0.528,
+      "norm_entropy": 0.637,
+      "share_in_overrepresented_comms": 0.655,
+      "n_overrepresented_comms": 2,
+      "js_vs_parent": 0.2372
+    },
+    {
+      "term": "moral injury",
+      "n_docs": 1018,
+      "top_community": 16,
+      "top_community_share": 0.867,
+      "norm_entropy": 0.249,
+      "share_in_overrepresented_comms": 0.867,
+      "n_overrepresented_comms": 1,
+      "js_vs_parent": 0.7201
+    },
+    {
+      "term": "collective trauma",
+      "n_docs": 492,
+      "top_community": 6,
+      "top_community_share": 0.338,
+      "norm_entropy": 0.663,
+      "share_in_overrepresented_comms": 0.63,
+      "n_overrepresented_comms": 2,
+      "js_vs_parent": 0.3104
+    },
+    {
+      "term": "intergenerational trauma",
+      "n_docs": 467,
+      "top_community": 6,
+      "top_community_share": 0.659,
+      "norm_entropy": 0.519,
+      "share_in_overrepresented_comms": 0.659,
+      "n_overrepresented_comms": 1,
+      "js_vs_parent": 0.3573
+    },
+    {
+      "term": "posttraumatic stress",
+      "n_docs": 8099,
+      "top_community": 0,
+      "top_community_share": 0.197,
+      "norm_entropy": 0.868,
+      "share_in_overrepresented_comms": 0.435,
+      "n_overrepresented_comms": 3,
+      "js_vs_parent": 0.0896
+    },
+    {
+      "term": "traumatic stress",
+      "n_docs": 3304,
+      "top_community": 2,
+      "top_community_share": 0.164,
+      "norm_entropy": 0.865,
+      "share_in_overrepresented_comms": 0.18,
+      "n_overrepresented_comms": 2,
+      "js_vs_parent": 0.0869
+    },
+    {
+      "term": "psychological trauma",
+      "n_docs": 1936,
+      "top_community": 0,
+      "top_community_share": 0.122,
+      "norm_entropy": 0.935,
+      "share_in_overrepresented_comms": 0.05,
+      "n_overrepresented_comms": 1,
+      "js_vs_parent": 0.0412
+    },
+    {
+      "term": "bereavement",
+      "n_docs": 7488,
+      "top_community": 4,
+      "top_community_share": 0.9,
+      "norm_entropy": 0.196,
+      "share_in_overrepresented_comms": 0.9,
+      "n_overrepresented_comms": 1,
+      "js_vs_parent": 0.7157
+    },
+    {
+      "term": "acute stress disorder",
+      "n_docs": 721,
+      "top_community": 12,
+      "top_community_share": 0.3,
+      "norm_entropy": 0.732,
+      "share_in_overrepresented_comms": 0.516,
+      "n_overrepresented_comms": 3,
+      "js_vs_parent": 0.2456
+    },
+    {
+      "term": "adjustment disorder",
+      "n_docs": 998,
+      "top_community": 17,
+      "top_community_share": 0.471,
+      "norm_entropy": 0.73,
+      "share_in_overrepresented_comms": 0.471,
+      "n_overrepresented_comms": 1,
+      "js_vs_parent": 0.3343
+    }
+  ],
+  "insulation": [
+    {
+      "term": "trauma",
+      "refs_out_to_focus": 901646,
+      "same_term_share_obs": 0.4124,
+      "same_term_share_null": 0.4585,
+      "insulation_ratio": 1.05,
+      "insulation_z": 4.1,
+      "to_parent_ratio": 1.05,
+      "to_second_ratio": 1.42
+    },
+    {
+      "term": "PTSD",
+      "refs_out_to_focus": 996507,
+      "same_term_share_obs": 0.5486,
+      "same_term_share_null": 0.3464,
+      "insulation_ratio": 2.88,
+      "insulation_z": 121.7,
+      "to_parent_ratio": 1.22,
+      "to_second_ratio": 2.88
+    },
+    {
+      "term": "trauma informed",
+      "refs_out_to_focus": 78255,
+      "same_term_share_obs": 0.1792,
+      "same_term_share_null": 0.0226,
+      "insulation_ratio": 9.19,
+      "insulation_z": 156.4,
+      "to_parent_ratio": 1.11,
+      "to_second_ratio": 0.79
+    },
+    {
+      "term": "secondary traumatic stress",
+      "refs_out_to_focus": 22747,
+      "same_term_share_obs": 0.2878,
+      "same_term_share_null": 0.006,
+      "insulation_ratio": 69.76,
+      "insulation_z": 480.5,
+      "to_parent_ratio": 1.06,
+      "to_second_ratio": 0.77
+    },
+    {
+      "term": "vicarious trauma",
+      "refs_out_to_focus": 8477,
+      "same_term_share_obs": 0.1417,
+      "same_term_share_null": 0.0024,
+      "insulation_ratio": 80.63,
+      "insulation_z": 251.8,
+      "to_parent_ratio": 1.23,
+      "to_second_ratio": 0.65
+    },
+    {
+      "term": "complex PTSD",
+      "refs_out_to_focus": 42569,
+      "same_term_share_obs": 0.1675,
+      "same_term_share_null": 0.0055,
+      "insulation_ratio": 93.56,
+      "insulation_z": 565.1,
+      "to_parent_ratio": 2.26,
+      "to_second_ratio": 3.5
+    },
+    {
+      "term": "moral injury",
+      "refs_out_to_focus": 25726,
+      "same_term_share_obs": 0.3425,
+      "same_term_share_null": 0.0043,
+      "insulation_ratio": 149.57,
+      "insulation_z": 807.4,
+      "to_parent_ratio": 0.88,
+      "to_second_ratio": 1.87
+    },
+    {
+      "term": "collective trauma",
+      "refs_out_to_focus": 4238,
+      "same_term_share_obs": 0.0772,
+      "same_term_share_null": 0.0023,
+      "insulation_ratio": 23.46,
+      "insulation_z": 80.5,
+      "to_parent_ratio": 0.73,
+      "to_second_ratio": 0.55
+    },
+    {
+      "term": "intergenerational trauma",
+      "refs_out_to_focus": 5522,
+      "same_term_share_obs": 0.0536,
+      "same_term_share_null": 0.002,
+      "insulation_ratio": 25.94,
+      "insulation_z": 79.8,
+      "to_parent_ratio": 1.09,
+      "to_second_ratio": 0.72
+    },
+    {
+      "term": "posttraumatic stress",
+      "refs_out_to_focus": 195557,
+      "same_term_share_obs": 0.106,
+      "same_term_share_null": 0.0544,
+      "insulation_ratio": 3.77,
+      "insulation_z": 57.5,
+      "to_parent_ratio": 1.36,
+      "to_second_ratio": 2.68
+    },
+    {
+      "term": "traumatic stress",
+      "refs_out_to_focus": 70419,
+      "same_term_share_obs": 0.0656,
+      "same_term_share_null": 0.0247,
+      "insulation_ratio": 4.78,
+      "insulation_z": 44.1,
+      "to_parent_ratio": 1.3,
+      "to_second_ratio": 2.33
+    },
+    {
+      "term": "psychological trauma",
+      "refs_out_to_focus": 28001,
+      "same_term_share_obs": 0.0261,
+      "same_term_share_null": 0.0141,
+      "insulation_ratio": 2.28,
+      "insulation_z": 10.3,
+      "to_parent_ratio": 1.0,
+      "to_second_ratio": 1.59
+    },
+    {
+      "term": "bereavement",
+      "refs_out_to_focus": 64091,
+      "same_term_share_obs": 0.6568,
+      "same_term_share_null": 0.0594,
+      "insulation_ratio": 8.88,
+      "insulation_z": 146.5,
+      "to_parent_ratio": 0.2,
+      "to_second_ratio": 0.36
+    },
+    {
+      "term": "acute stress disorder",
+      "refs_out_to_focus": 21088,
+      "same_term_share_obs": 0.1332,
+      "same_term_share_null": 0.0076,
+      "insulation_ratio": 45.73,
+      "insulation_z": 250.4,
+      "to_parent_ratio": 1.62,
+      "to_second_ratio": 3.29
+    },
+    {
+      "term": "adjustment disorder",
+      "refs_out_to_focus": 6479,
+      "same_term_share_obs": 0.2755,
+      "same_term_share_null": 0.0101,
+      "insulation_ratio": 15.42,
+      "insulation_z": 74.8,
+      "to_parent_ratio": 0.24,
+      "to_second_ratio": 0.57
+    }
+  ],
+  "flow_ratio": {
+    "terms": [
+      "trauma",
+      "PTSD",
+      "trauma informed",
+      "secondary traumatic stress",
+      "vicarious trauma",
+      "complex PTSD",
+      "moral injury",
+      "collective trauma",
+      "intergenerational trauma",
+      "posttraumatic stress",
+      "traumatic stress",
+      "psychological trauma",
+      "bereavement",
+      "acute stress disorder",
+      "adjustment disorder"
+    ],
+    "obs": [
+      [
+        371796,
+        376243,
+        17333,
+        6532,
+        3199,
+        12366,
+        3279,
+        1252,
+        1141,
+        53824,
+        27547,
+        10933,
+        7740,
+        7261,
+        1200
+      ],
+      [
+        305507,
+        546663,
+        3981,
+        2106,
+        684,
+        11674,
+        4575,
+        482,
+        325,
+        63768,
+        27403,
+        9908,
+        8565,
+        9149,
+        1717
+      ],
+      [
+        34467,
+        17871,
+        14023,
+        1155,
+        619,
+        680,
+        138,
+        107,
+        220,
+        3504,
+        3684,
+        1084,
+        462,
+        172,
+        69
+      ],
+      [
+        7658,
+        4075,
+        684,
+        6546,
+        1285,
+        59,
+        127,
+        29,
+        4,
+        870,
+        1010,
+        179,
+        172,
+        42,
+        7
+      ],
+      [
+        3468,
+        1331,
+        379,
+        1210,
+        1201,
+        27,
+        42,
+        36,
+        14,
+        235,
+        373,
+        94,
+        38,
+        22,
+        7
+      ],
+      [
+        14312,
+        16587,
+        282,
+        34,
+        29,
+        7130,
+        238,
+        7,
+        19,
+        1618,
+        1188,
+        513,
+        293,
+        119,
+        200
+      ],
+      [
+        5513,
+        8720,
+        174,
+        162,
+        58,
+        180,
+        8812,
+        13,
+        10,
+        975,
+        435,
+        514,
+        105,
+        43,
+        12
+      ],
+      [
+        1983,
+        1105,
+        93,
+        36,
+        13,
+        13,
+        7,
+        327,
+        55,
+        289,
+        128,
+        84,
+        69,
+        30,
+        6
+      ],
+      [
+        2939,
+        1409,
+        176,
+        36,
+        27,
+        56,
+        13,
+        71,
+        296,
+        226,
+        166,
+        71,
+        29,
+        3,
+        4
+      ],
+      [
+        62632,
+        93262,
+        1171,
+        543,
+        155,
+        1644,
+        552,
+        199,
+        73,
+        20727,
+        6569,
+        1851,
+        3165,
+        2607,
+        407
+      ],
+      [
+        23234,
+        31381,
+        909,
+        684,
+        198,
+        933,
+        293,
+        109,
+        46,
+        5393,
+        4620,
+        865,
+        574,
+        1030,
+        150
+      ],
+      [
+        10376,
+        12428,
+        566,
+        163,
+        78,
+        318,
+        193,
+        32,
+        40,
+        1599,
+        980,
+        732,
+        231,
+        235,
+        30
+      ],
+      [
+        7456,
+        9934,
+        100,
+        124,
+        21,
+        152,
+        71,
+        38,
+        9,
+        2666,
+        632,
+        388,
+        42098,
+        119,
+        283
+      ],
+      [
+        5937,
+        9254,
+        22,
+        12,
+        3,
+        68,
+        13,
+        17,
+        1,
+        1970,
+        625,
+        184,
+        76,
+        2808,
+        98
+      ],
+      [
+        1231,
+        2295,
+        12,
+        5,
+        2,
+        167,
+        2,
+        6,
+        0,
+        408,
+        154,
+        39,
+        246,
+        127,
+        1785
+      ]
+    ],
+    "ratio_obs_over_null": [
+      [
+        1.05,
+        1.42,
+        1.58,
+        1.82,
+        1.92,
+        3.41,
+        1.62,
+        0.77,
+        1.03,
+        1.29,
+        1.44,
+        1.0,
+        0.17,
+        1.34,
+        0.16
+      ],
+      [
+        1.22,
+        2.88,
+        0.55,
+        0.87,
+        0.6,
+        4.62,
+        3.35,
+        0.43,
+        0.44,
+        2.15,
+        2.02,
+        1.27,
+        0.27,
+        2.34,
+        0.32
+      ],
+      [
+        1.11,
+        0.79,
+        9.19,
+        2.68,
+        3.37,
+        1.78,
+        0.49,
+        0.63,
+        1.58,
+        0.92,
+        2.28,
+        1.18,
+        0.13,
+        0.43,
+        0.13
+      ],
+      [
+        1.06,
+        0.77,
+        2.17,
+        69.76,
+        32.19,
+        0.69,
+        2.17,
+        0.77,
+        0.14,
+        0.99,
+        2.64,
+        0.82,
+        0.2,
+        0.43,
+        0.05
+      ],
+      [
+        1.23,
+        0.65,
+        3.33,
+        35.39,
+        80.63,
+        0.85,
+        2.06,
+        2.53,
+        1.28,
+        0.7,
+        2.51,
+        1.13,
+        0.11,
+        0.57,
+        0.14
+      ],
+      [
+        2.26,
+        3.5,
+        1.13,
+        0.45,
+        0.88,
+        93.56,
+        4.85,
+        0.22,
+        0.81,
+        2.09,
+        3.53,
+        2.67,
+        0.39,
+        1.35,
+        1.69
+      ],
+      [
+        0.88,
+        1.87,
+        0.6,
+        1.95,
+        1.63,
+        2.33,
+        149.57,
+        0.38,
+        0.36,
+        1.24,
+        1.32,
+        2.74,
+        0.15,
+        0.53,
+        0.11
+      ],
+      [
+        0.73,
+        0.55,
+        0.85,
+        1.11,
+        0.92,
+        0.41,
+        0.33,
+        23.46,
+        5.29,
+        0.88,
+        0.88,
+        1.02,
+        0.21,
+        0.78,
+        0.12
+      ],
+      [
+        1.09,
+        0.72,
+        1.47,
+        1.03,
+        1.76,
+        1.7,
+        0.59,
+        4.88,
+        25.94,
+        0.69,
+        1.17,
+        0.91,
+        0.09,
+        0.08,
+        0.08
+      ],
+      [
+        1.36,
+        2.68,
+        0.81,
+        1.15,
+        0.71,
+        3.4,
+        2.0,
+        0.94,
+        0.5,
+        3.77,
+        2.65,
+        1.3,
+        0.55,
+        3.7,
+        0.43
+      ],
+      [
+        1.3,
+        2.33,
+        1.72,
+        3.91,
+        2.43,
+        5.2,
+        3.04,
+        1.37,
+        0.85,
+        2.57,
+        4.78,
+        1.55,
+        0.25,
+        3.67,
+        0.4
+      ],
+      [
+        1.0,
+        1.59,
+        1.74,
+        1.53,
+        1.6,
+        2.96,
+        3.19,
+        0.69,
+        1.24,
+        1.3,
+        1.75,
+        2.28,
+        0.18,
+        1.47,
+        0.14
+      ],
+      [
+        0.2,
+        0.36,
+        0.09,
+        0.35,
+        0.13,
+        0.42,
+        0.36,
+        0.23,
+        0.08,
+        0.63,
+        0.32,
+        0.34,
+        8.88,
+        0.21,
+        0.37
+      ],
+      [
+        1.62,
+        3.29,
+        0.25,
+        0.39,
+        0.2,
+        2.0,
+        0.8,
+        1.11,
+        0.11,
+        4.64,
+        3.12,
+        1.59,
+        0.16,
+        45.73,
+        1.14
+      ],
+      [
+        0.24,
+        0.57,
+        0.09,
+        0.11,
+        0.09,
+        3.3,
+        0.08,
+        0.28,
+        0.0,
+        0.67,
+        0.54,
+        0.24,
+        0.37,
+        1.51,
+        15.42
+      ]
+    ],
+    "z": [
+      [
+        4.1,
+        32.2,
+        11.3,
+        7.8,
+        4.8,
+        19.5,
+        5.1,
+        -1.3,
+        0.2,
+        7.1,
+        6.3,
+        -0.0,
+        -18.1,
+        3.1,
+        -6.2
+      ],
+      [
+        19.4,
+        121.7,
+        -7.8,
+        -1.1,
+        -2.0,
+        27.6,
+        18.6,
+        -3.2,
+        -3.0,
+        27.1,
+        14.2,
+        2.9,
+        -15.1,
+        11.7,
+        -4.8
+      ],
+      [
+        6.2,
+        -10.9,
+        156.4,
+        16.3,
+        14.0,
+        6.3,
+        -4.3,
+        -2.1,
+        3.5,
+        -1.9,
+        18.0,
+        2.2,
+        -18.4,
+        -4.4,
+        -7.7
+      ],
+      [
+        1.5,
+        -6.3,
+        14.3,
+        480.5,
+        132.6,
+        -2.0,
+        6.7,
+        -0.9,
+        -3.7,
+        -0.2,
+        17.7,
+        -1.7,
+        -13.2,
+        -3.6,
+        -6.5
+      ],
+      [
+        3.8,
+        -5.4,
+        19.7,
+        183.9,
+        251.8,
+        -0.7,
+        4.2,
+        4.8,
+        0.9,
+        -3.6,
+        12.3,
+        0.9,
+        -10.8,
+        -2.0,
+        -4.8
+      ],
+      [
+        32.7,
+        61.8,
+        1.5,
+        -3.3,
+        -0.5,
+        565.1,
+        20.5,
+        -3.4,
+        -0.8,
+        17.5,
+        27.2,
+        14.7,
+        -9.3,
+        2.2,
+        4.4
+      ],
+      [
+        -2.9,
+        20.3,
+        -5.4,
+        6.5,
+        2.6,
+        7.5,
+        807.4,
+        -2.6,
+        -2.4,
+        4.0,
+        3.4,
+        15.1,
+        -13.1,
+        -2.8,
+        -5.7
+      ],
+      [
+        -4.6,
+        -6.9,
+        -1.2,
+        0.5,
+        -0.2,
+        -2.5,
+        -2.7,
+        80.5,
+        11.6,
+        -1.4,
+        -0.9,
+        0.1,
+        -8.9,
+        -1.0,
+        -4.5
+      ],
+      [
+        1.5,
+        -4.5,
+        4.1,
+        0.1,
+        2.4,
+        3.2,
+        -1.7,
+        14.0,
+        79.8,
+        -3.5,
+        1.5,
+        -0.6,
+        -10.3,
+        -4.4,
+        -4.5
+      ],
+      [
+        20.1,
+        84.9,
+        -3.0,
+        1.3,
+        -1.4,
+        17.4,
+        6.9,
+        -0.3,
+        -2.5,
+        57.5,
+        22.1,
+        3.2,
+        -9.2,
+        23.2,
+        -4.1
+      ],
+      [
+        11.6,
+        49.6,
+        10.1,
+        21.3,
+        6.4,
+        30.2,
+        13.3,
+        1.7,
+        -0.7,
+        32.4,
+        44.1,
+        5.2,
+        -13.2,
+        20.6,
+        -4.0
+      ],
+      [
+        -0.1,
+        16.2,
+        8.5,
+        3.6,
+        2.4,
+        12.4,
+        12.0,
+        -1.4,
+        1.0,
+        5.4,
+        8.7,
+        10.3,
+        -13.9,
+        3.3,
+        -6.0
+      ],
+      [
+        -47.5,
+        -29.4,
+        -14.0,
+        -5.7,
+        -4.6,
+        -4.4,
+        -4.5,
+        -4.0,
+        -4.6,
+        -8.2,
+        -8.2,
+        -6.4,
+        146.5,
+        -6.4,
+        -4.2
+      ],
+      [
+        12.0,
+        39.9,
+        -5.5,
+        -2.7,
+        -2.3,
+        4.7,
+        -0.7,
+        0.3,
+        -2.3,
+        44.5,
+        17.9,
+        3.7,
+        -9.0,
+        250.4,
+        0.7
+      ],
+      [
+        -16.6,
+        -9.0,
+        -7.8,
+        -4.7,
+        -3.1,
+        12.2,
+        -3.9,
+        -2.2,
+        -2.7,
+        -4.6,
+        -4.2,
+        -6.0,
+        -8.9,
+        3.3,
+        74.8
+      ]
+    ],
+    "perms": 200
+  },
+  "p2_subgraph": {
+    "subgraph_term": "trauma informed",
+    "n_docs": 5409,
+    "intra_edges": 14023,
+    "n_subcommunities": 1532,
+    "modularity": 0.587,
+    "cramers_v_subcomm_x_venue_category": 0.337,
+    "subcommunities": {
+      "0": {
+        "n": 571,
+        "venue_categories": [
+          [
+            "nursing/health",
+            316
+          ],
+          [
+            "core/other psych",
+            198
+          ],
+          [
+            "psychiatry",
+            22
+          ],
+          [
+            "social work",
+            17
+          ],
+          [
+            "education",
+            10
+          ]
+        ],
+        "top_venues": [
+          [
+            "PEDIATRICS",
+            13
+          ],
+          [
+            "Child Abuse & Neglect",
+            12
+          ],
+          [
+            "Journal of Nursing Education",
+            12
+          ],
+          [
+            "Journal of Midwifery & Women s Health",
+            9
+          ]
+        ]
+      },
+      "1": {
+        "n": 467,
+        "venue_categories": [
+          [
+            "education",
+            217
+          ],
+          [
+            "core/other psych",
+            160
+          ],
+          [
+            "nursing/health",
+            57
+          ],
+          [
+            "social work",
+            20
+          ],
+          [
+            "psychiatry",
+            5
+          ]
+        ],
+        "top_venues": [
+          [
+            "School Mental Health",
+            33
+          ],
+          [
+            "Journal of Child & Adolescent Trauma",
+            21
+          ],
+          [
+            "Psychology in the Schools",
+            20
+          ],
+          [
+            "Children & Schools",
+            19
+          ]
+        ]
+      },
+      "2": {
+        "n": 446,
+        "venue_categories": [
+          [
+            "core/other psych",
+            265
+          ],
+          [
+            "social work",
+            93
+          ],
+          [
+            "nursing/health",
+            67
+          ],
+          [
+            "psychiatry",
+            9
+          ],
+          [
+            "education",
+            6
+          ]
+        ],
+        "top_venues": [
+          [
+            "Children and Youth Services Review",
+            53
+          ],
+          [
+            "Child Abuse & Neglect",
+            25
+          ],
+          [
+            "Journal of Child & Adolescent Trauma",
+            23
+          ],
+          [
+            "Journal of Public Child Welfare",
+            17
+          ]
+        ]
+      },
+      "3": {
+        "n": 327,
+        "venue_categories": [
+          [
+            "nursing/health",
+            169
+          ],
+          [
+            "core/other psych",
+            84
+          ],
+          [
+            "psychiatry",
+            41
+          ],
+          [
+            "social work",
+            17
+          ],
+          [
+            "education",
+            8
+          ]
+        ],
+        "top_venues": [
+          [
+            "International Journal of Mental Health Nursing",
+            35
+          ],
+          [
+            "Issues in Mental Health Nursing",
+            14
+          ],
+          [
+            "Journal of Psychiatric and Mental Health Nursing",
+            9
+          ],
+          [
+            "Journal of Psychosocial Nursing and Mental Health Services",
+            6
+          ]
+        ]
+      },
+      "4": {
+        "n": 273,
+        "venue_categories": [
+          [
+            "core/other psych",
+            130
+          ],
+          [
+            "nursing/health",
+            55
+          ],
+          [
+            "social work",
+            51
+          ],
+          [
+            "psychiatry",
+            15
+          ],
+          [
+            "law/forensic",
+            15
+          ]
+        ],
+        "top_venues": [
+          [
+            "The Clinical Supervisor",
+            10
+          ],
+          [
+            "Traumatology An International Journal",
+            8
+          ],
+          [
+            "Journal of Aggression Maltreatment & Trauma",
+            8
+          ],
+          [
+            "Children and Youth Services Review",
+            6
+          ]
+        ]
+      },
+      "5": {
+        "n": 256,
+        "venue_categories": [
+          [
+            "core/other psych",
+            139
+          ],
+          [
+            "nursing/health",
+            66
+          ],
+          [
+            "social work",
+            23
+          ],
+          [
+            "psychiatry",
+            19
+          ],
+          [
+            "work/org",
+            3
+          ]
+        ],
+        "top_venues": [
+          [
+            "Journal of Substance Abuse Treatment",
+            8
+          ],
+          [
+            "Journal of Community Psychology",
+            7
+          ],
+          [
+            "Children and Youth Services Review",
+            6
+          ],
+          [
+            "Journal of Dual Diagnosis",
+            5
+          ]
+        ]
+      }
+    }
+  },
+  "settings": {
+    "parent": "trauma",
+    "focus": [
+      "trauma",
+      "PTSD",
+      "trauma informed",
+      "secondary traumatic stress",
+      "vicarious trauma",
+      "complex PTSD",
+      "moral injury",
+      "collective trauma",
+      "intergenerational trauma",
+      "posttraumatic stress",
+      "traumatic stress",
+      "psychological trauma",
+      "bereavement",
+      "acute stress disorder",
+      "adjustment disorder"
+    ],
+    "compounds": [
+      "trauma informed",
+      "secondary traumatic stress",
+      "vicarious trauma"
+    ],
+    "merge": {
+      "ptsd": "PTSD",
+      "posttraumatic stress disorder": "PTSD",
+      "complex ptsd": "complex PTSD",
+      "complex posttraumatic stress disorder": "complex PTSD"
+    },
+    "subgraph_term": "trauma informed",
+    "null": "venue",
+    "iterations": -1
+  },
+  "predictions_trauma_case": {
+    "P1": "compounds distinct from bare trauma; insulation >> null",
+    "P2": "trauma-informed sub-communities align with practice vs care venues",
+    "P3": "PTSD continuous with bare trauma by citation",
+    "P4": "embarrassment condition: compounds continuous with parent"
+  }
+}

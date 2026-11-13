@@ -1,0 +1,442 @@
+concept: ego depletion
+slug: ego_depletion
+family_csv: families/ego_depletion_family.csv
+ris_root: data/ebsco exports
+family_works_glob: data/family/ego_depletion*works.jsonl
+docs_path: data/family/lineage_docs.jsonl
+emb_dir: data/lineage_emb_full_v2
+citations_cache: data/citations/openalex_refs.jsonl
+results_dir: results/ego_depletion_full_v2_revision_20261019
+corpus:
+  platform: EBSCOhost (BU ezproxy)
+  exported: 2026-08-11 to 2026-08-13
+  expanders:
+  - apply related words
+  - also search within full text
+  - apply equivalent subjects
+  limiters:
+  - peer reviewed
+  language_filter: none
+  document_type_filter: none
+  queries:
+    focal: '"ego depletion" OR "ego-depletion" OR "self-regulatory depletion" OR "self-control
+      depletion" OR "depletion effect" OR "strength model of self-control"'
+    family: ("ego depletion" OR "ego-depletion" OR "self-regulatory depletion" OR
+      "self-control depletion" OR "depletion effect" OR "strength model of self-control"
+      OR "willpower" OR "self-control" OR "self-regulation") AND NOT ("emotion regulation"
+      OR "self-regulated learning")
+  exclusions:
+  - term: emotion regulation
+    why: largest non-family sense (affect science); would dominate ancestors
+  - term: self-regulated learning
+    why: Zimmerman SRL, education; metacognitive not resource-based
+  - habitat: Philosopher's Index
+    why: planned (akrasia lineage) but not pulled
+  - habitat: PsycTests / PsycBooks
+    why: planned (operationalization evidence) but not pulled
+  - habitat: popular usage (news, Google Books)
+    why: not sampled; horizontal creep into lay usage is invisible here
+  strata:
+    journal:
+    - JOUR
+    - ABST
+    - CONF
+    - CASE
+    - GEN
+    thesis:
+    - THES
+    book:
+    - CHAP
+    - BOOK
+    - EBOOK
+    - EDBOOK
+  sources:
+  - id: psyc_focal
+    files:
+    - data/ebsco exports/cedd0a9a-*.ris
+    databases:
+    - APA PsycArticles
+    - APA PsycInfo
+    query: focal
+    dates: all
+    role: focal
+    question: the daughter lineage — every peer-reviewed use of the coined terms
+    n_records: 2200
+    n_saved_search: 2296
+  - id: psyc_family_all
+    files:
+    - data/ebsco exports/ea388b9b-*.ris
+    databases:
+    - APA PsycArticles
+    - APA PsycInfo
+    query: family
+    dates: all
+    role: family
+    question: first full-family pull (superseded by the date-sliced psyc_family_*
+      below; kept, dedupes against them)
+    n_records: 8009
+    n_saved_search: 8230
+  - id: psyc_family_1975_1999
+    files:
+    - data/ebsco exports/Psyc_SC-SR-WP/SC-SR-WP_1975-1999.ris
+    databases:
+    - APA PsycInfo
+    - APA PsycArticles
+    query: family
+    dates: 1975-1999
+    role: ancestor
+    question: parent population BEFORE the 1998 coinage (principle 2) — no birth is
+      visible without it
+    n_records: 5219
+  - id: psyc_family_2000_2015
+    files:
+    - data/ebsco exports/Psyc_SC-SR-WP/SC-SR-WP_2000-2015.ris
+    databases:
+    - APA PsycInfo
+    - APA PsycArticles
+    query: family
+    dates: 2000-2015
+    role: ancestor
+    question: parent lineage after the split — divergence needs both lineages measured
+    n_records: 12598
+  - id: psyc_family_2015_2025
+    files:
+    - data/ebsco exports/Psyc_SC-SR-WP/SC-SR-WP_2015-2025.ris
+    databases:
+    - APA PsycInfo
+    - APA PsycArticles
+    query: family
+    dates: 2015-2025
+    role: ancestor
+    question: parent lineage through the correction era
+    n_records: 14615
+  - id: business
+    files:
+    - data/ebsco exports/Business_SC-SR-WP.ris
+    databases:
+    - Business Source Complete
+    - Business Abstracts with Full Text (H.W. Wilson)
+    - Business Source Alumni Edition
+    - 'Applied Science & Business Periodicals Retrospective: 1913-1983 (H.W. Wilson)'
+    query: family
+    dates: all
+    role: habitat
+    hypothesis: work/organizational — the venue category where the migration finding
+      lives
+    question: did the concept move into applied management/OB literatures, and did
+      the correction follow?
+    n_records: 8671
+  - id: education
+    files:
+    - data/ebsco exports/education_SC-SR-WP.ris
+    databases:
+    - Education Full Text (H.W. Wilson)
+    query: family
+    dates: all
+    role: habitat
+    hypothesis: self-regulation → self-regulated learning (Zimmerman); metacognitive,
+      not resource-based
+    n_records: 11445
+  - id: health
+    files:
+    - data/ebsco exports/health_SC-SR-WP.ris
+    databases:
+    - CINAHL
+    - Dentistry & Oral Sciences Source
+    query: family
+    dates: all
+    role: habitat
+    hypothesis: health behavior change — applied/clinical sense of self-regulation
+    n_records: 9147
+  - id: crime_socialwork
+    files:
+    - data/ebsco exports/crime-socialwork_SC-SR-WP.ris
+    databases:
+    - SocINDEX with Full Text
+    - Criminal Justice Abstracts
+    - Social Work Abstracts
+    query: family
+    dates: all
+    role: habitat
+    hypothesis: Gottfredson & Hirschi trait self-control (crime) — the sharpest cross-field
+      contrast
+    n_records: 8752
+  - id: econ
+    files:
+    - data/ebsco exports/econ_SC-SR-WP.ris
+    databases:
+    - EconLit
+    query: family
+    dates: all
+    role: habitat
+    hypothesis: intertemporal choice / present bias — formalized operationalization
+    n_records: 1851
+    note: DOI coverage 23% — dedupe relies on normalized title here
+  ignore:
+  - files: data/ebsco exports/constructs/**
+    why: Paper-2 OSC-99 construct exports (osc_coding pipeline), not the ego-depletion
+      family
+  - files: data/ebsco exports/ptsd_trauma/**
+    why: Paper-1 comparator corpus (configs/ptsd_trauma.yaml), not the ego-depletion
+      family
+  audit:
+    min_abstract_share: 0.85
+    warn_if_dedupe_share_above: 0.45
+periods:
+  year_min: 1975
+  year_max: 2025
+  width: 5
+control_terms:
+- participants
+- results
+- significant
+- measure
+mentions:
+  exclude_nested: true
+  strip_acronym_parentheticals: true
+  exclude_hyphen_prefixed: true
+embedding:
+  model: allenai/scibert_scivocab_uncased
+  max_length: 256
+  max_sent_per_doc: 3
+  cap_per_term_period: null
+  control_cap: 300
+  seed: 42
+analysis:
+  syntax_flag_diff: 0.5
+  min_n: 15
+  cluster_min_n: 60
+  max_k: 4
+  n_sample_titles: 10
+  seed: 42
+  equalize_n: 250
+  equalize_reps: 100
+events:
+  1998: coinage (Baumeister et al. 1998)
+  2010: supportive meta-analysis (Hagger et al.)
+  2014: critical re-analysis (Carter & McCullough)
+  2016: Registered Replication Report (Hagger et al.)
+  2021: second RRR (Vohs et al.)
+event_short_labels:
+  1998: coinage
+  2010: meta-analysis
+  2014: re-analysis
+  2016: RRR
+  2021: RRR 2
+key_pairs:
+- - ego depletion
+  - self control
+- - ego depletion
+  - self regulation
+- - ego depletion
+  - willpower
+- - self control
+  - self regulation
+- - ego depletion
+  - executive function
+- - ego depletion
+  - delay of gratification
+figures:
+  trajectory_terms:
+  - ego depletion
+  - self control
+  - self regulation
+  - willpower
+  - executive function
+  - strength model
+  - delay of gratification
+  trajectory_min_docs: 60
+  drift_terms:
+  - - strength model
+    - crimson
+  - - ego depletion
+    - navy
+  - - self control
+    - '0.45'
+  - - self regulation
+    - '0.6'
+  - - willpower
+    - '0.75'
+  distance_pairs:
+  - - ego depletion
+    - self control
+    - navy
+  - - ego depletion
+    - willpower
+    - darkorange
+  - - ego depletion
+    - executive function
+    - seagreen
+  - - self control
+    - self regulation
+    - crimson
+  migration_baseline_category: work/org
+  annotations:
+    ridgeline: One mode per period (dip test p = 0.71–0.99); triangles mark period
+      means
+    migration: work/org share 12.0% (2015-19) → 24.8% (2020-24), permutation p = 0.0001;
+      corpus baseline flat
+    trajectory: '''ego depletion'' (bold) starts beside its ancestors, moves away
+      through 2015-19, then turns back'
+    propagation: The concept travels; the correction doesn't — applied venues cite
+      the coinage like the home field, the critiques at a fraction of its rate
+venue_categories:
+- name: work/org
+  pattern: organi[sz]ation|management|business|occupational|vocational|work|employ|leader|market|consumer|account|tourism|hospitality|industrial|labor|labour|applied
+    psycholog|personnel|human resource|human performance|ergonomic
+- name: health/med
+  pattern: health|medic|nurs|clinical|addict|obes|diet|patient|psychosomat|prevent
+- name: education
+  pattern: educat|school|teach|learn|student|academic|curricul
+- name: sport
+  pattern: sport|exercise|athlet|kinesio|physical activity
+- name: crime/social
+  pattern: crimin|delinq|justice|offend|social work|deviant|violence
+core_label: core/other psych
+citation:
+  mailto: jrmorgan3@gmail.com
+  batch: 25
+  year_min: 2017
+  seed: 42
+  anchors:
+  - - coinage_1998
+    - Ego depletion is the active self a limited resource
+    - 1998
+  - - rrr_2016
+    - multilab preregistered replication of the ego-depletion effect
+    - 2016
+  - - rrr_2021
+    - multisite preregistered paradigmatic test of the ego depletion effect
+    - 2021
+  - - carter_2014
+    - publication bias and the limited strength model of self-control
+    - 2014
+  anchors_extra:
+  - - hagger_2010_meta
+    - ego depletion and the strength model of self-control a meta-analysis
+    - 2010
+  - - inzlicht_2012
+    - what is ego depletion toward a mechanistic revision of the resource model
+    - 2012
+  - - friese_2019
+    - doi:10.1177/1088868318762183
+    - null
+  - - dang_2018
+    - doi:10.1007/s00426-017-0862-x
+    - null
+  coinage: coinage_1998
+  correction_set:
+  - rrr_2016
+  - rrr_2021
+  crisis_set:
+  - rrr_2016
+  - rrr_2021
+  - carter_2014
+  - inzlicht_2012
+  - friese_2019
+  - dang_2018
+  milestone_control: hagger_2010_meta
+  hub_category: work/org
+  parent: self control
+  focus_terms:
+  - ego depletion
+  - self control
+  - self regulation
+  - willpower
+  - strength model
+  - executive function
+  - delay of gratification
+  compounds:
+  - ego depletion
+  - strength model
+  subgraph_term: ego depletion
+  merge: {}
+instruments:
+  seed:
+  - - Self-Control Scale
+    - Brief Self-Control Scale
+    - BSCS
+    - Tangney Self-Control Scale
+  - - Barratt Impulsiveness Scale
+    - BIS-11
+    - BIS
+  - - Low Self-Control Scale
+    - Grasmick scale
+    - Grasmick et al. scale
+  - - Stroop task
+    - Stroop test
+    - Stroop
+    - color-word Stroop
+    - emotional Stroop
+  - - handgrip task
+    - handgrip
+    - hand grip task
+    - handgrip endurance
+  - - letter-crossing task
+    - e-crossing task
+    - letter e task
+    - crossing out letters
+    - e-crossing
+  - - anagram task
+    - unsolvable anagrams
+    - anagrams
+  - - cold pressor task
+    - cold pressor
+  - - thought suppression task
+    - white bear task
+    - white bear
+  - - attention control task
+    - attention control video
+    - video task
+  - - sequential task paradigm
+    - sequential-task paradigm
+    - dual-task paradigm
+    - two-task paradigm
+  - - delay discounting task
+    - delay discounting
+    - temporal discounting task
+    - Monetary Choice Questionnaire
+    - MCQ
+  - - marshmallow test
+    - marshmallow task
+    - delay of gratification task
+  - - Go/No-Go task
+    - go no-go task
+    - go/no-go
+  - - stop-signal task
+    - stop signal task
+    - SST
+  - - Wisconsin Card Sorting Test
+    - WCST
+  - - Trail Making Test
+    - TMT
+  - - Behavior Rating Inventory of Executive Function
+    - BRIEF
+  - - Self-Regulation Questionnaire
+    - SRQ
+  - - Motivated Strategies for Learning Questionnaire
+    - MSLQ
+  - - Implicit Theories of Willpower Scale
+    - willpower theory scale
+    - implicit theories about willpower
+  - - Effortful Control Scale
+    - Early Adolescent Temperament Questionnaire
+    - EATQ
+  - - Children's Behavior Questionnaire
+    - CBQ
+  - - Dickman Impulsivity Inventory
+  - - UPPS Impulsive Behavior Scale
+    - UPPS
+    - UPPS-P
+  - - Eysenck Impulsiveness Scale
+  - - Head-Toes-Knees-Shoulders task
+    - HTKS
+  - - Self-Control Schedule
+    - Rosenbaum Self-Control Schedule
+  - - State Self-Control Capacity Scale
+    - SSCCS
+  - - Self-Regulation Scale
+  - - Short Self-Regulation Questionnaire
+    - SSRQ
+revision_baseline_results: results/ego_depletion_full_v2
+revision_analysis_year_max: 2024

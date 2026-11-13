@@ -1,0 +1,38 @@
+CITATION COMMUNITIES — posttraumatic stress disorder  (nodes 115,695, edges 1,085,123, year >= 1980)
+skipped (--flows-only), resolution 1.0, modularity nan; 1 communities >= 200 nodes
+parent = trauma; null = within-period label shuffle, 200 perms; flows restricted to citing documents in 1980-2024 (1,009,599 references)
+
+== communities (read before interpreting) ==  [skipped: --flows-only]
+
+== term x community (P1/P3) ==
+  term                           docs   topC  topShare  entropy  inOver  JSvsParent
+  trauma                        69392      0     1.000    0.000   0.000         nan
+  PTSD                          46172      0     1.000    0.000   0.000      0.0000
+  @ancestor                       383      0     1.000    0.000   0.000      0.0000
+  @analytic                      2508      0     1.000    0.000   0.000      0.0000
+  @cat:psychiatry               15799      0     1.000    0.000   0.000      0.0000
+  @cat:nursing/health           26141      0     1.000    0.000   0.000      0.0000
+  @cat:military/veterans         1116      0     1.000    0.000   0.000      0.0000
+  @cat:law/forensic              1872      0     1.000    0.000   0.000      0.0000
+  @cat:social work               3505      0     1.000    0.000   0.000      0.0000
+  @cat:education                 2375      0     1.000    0.000   0.000      0.0000
+  @cat:work/org                   845      0     1.000    0.000   0.000      0.0000
+  @cat:sociology/humanities      1092      0     1.000    0.000   0.000      0.0000
+  @cat:core/other psych         62950      0     1.000    0.000   0.000      0.0000
+
+== insulation: same-term citation vs within-period label-shuffle null ==
+  (->parent = citations to 'trauma' docs vs null; ->2nd = to 'PTSD' docs vs null)
+  term                           edges    refs    obs   null  ratio       z  ->parent   ->2nd
+  trauma                        569218 1312243  0.274  0.294   0.99    -1.1      0.99    1.53
+  PTSD                          647098 1509231  0.371  0.200   3.31   130.9      1.21    3.31
+  @ancestor                        657    1476  0.120  0.002  13.80    33.2      0.16    0.30
+  @analytic                       4652   12081  0.197  0.014   3.97    32.6      0.31    0.13
+  @cat:psychiatry               182458  416883  0.149  0.073   2.99    55.2      1.11    2.50
+  @cat:nursing/health           200089  437549  0.127  0.111   1.08     3.6      0.73    1.49
+  @cat:military/veterans         10992   24342  0.029  0.004   8.09    44.6      0.60    2.31
+  @cat:law/forensic              10070   21868  0.061  0.008   5.12    37.0      0.64    0.83
+  @cat:social work               24502   51704  0.062  0.014   3.77    35.1      0.83    0.98
+  @cat:education                 10300   21902  0.059  0.007   4.21    32.2      0.51    0.61
+  @cat:work/org                   4182    8074  0.026  0.003   4.74    17.5      0.42    0.71
+  @cat:sociology/humanities       2075    4315  0.038  0.004   1.93     5.3      0.24    0.22
+  @cat:core/other psych         564931 1267509  0.256  0.267   1.09     7.0      0.91    1.78

@@ -1,0 +1,10676 @@
+{
+ "settings": {
+  "equalize": 250,
+  "reps": 20,
+  "min_n": 15,
+  "center": "controls",
+  "pairs": "both",
+  "seed": 42,
+  "emb_dir": "data/ptsd_trauma/lineage_emb_v2",
+  "controls": [
+   "participants",
+   "results",
+   "significant",
+   "measure"
+  ],
+  "sampling_rule": "same n for between and both disjoint within-set comparisons",
+  "uncertainty": "draw SD, not a confidence interval",
+  "identity_audit": {
+   "complex_ptsd__1990-1994": {
+    "input_vectors": 1,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 1
+   },
+   "complex_ptsd__1995-1999": {
+    "input_vectors": 12,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 12
+   },
+   "complex_ptsd__2000-2004": {
+    "input_vectors": 19,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 19
+   },
+   "complex_ptsd__2005-2009": {
+    "input_vectors": 47,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 47
+   },
+   "complex_ptsd__2010-2014": {
+    "input_vectors": 66,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 66
+   },
+   "complex_ptsd__2015-2019": {
+    "input_vectors": 129,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 129
+   },
+   "complex_ptsd__2020-2024": {
+    "input_vectors": 328,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 328
+   },
+   "measure__1965-1969": {
+    "input_vectors": 1,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 1
+   },
+   "measure__1970-1974": {
+    "input_vectors": 3,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 3
+   },
+   "measure__1975-1979": {
+    "input_vectors": 6,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 6
+   },
+   "measure__1980-1984": {
+    "input_vectors": 17,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 17
+   },
+   "measure__1985-1989": {
+    "input_vectors": 33,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 33
+   },
+   "measure__1990-1994": {
+    "input_vectors": 95,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 95
+   },
+   "measure__1995-1999": {
+    "input_vectors": 203,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 203
+   },
+   "measure__2000-2004": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 300
+   },
+   "measure__2005-2009": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 300
+   },
+   "measure__2010-2014": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 300
+   },
+   "measure__2015-2019": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 1,
+    "duplicate_rows_consolidated": 0,
+    "documents": 299
+   },
+   "measure__2020-2024": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 300
+   },
+   "participants__1965-1969": {
+    "input_vectors": 1,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 1
+   },
+   "participants__1970-1974": {
+    "input_vectors": 1,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 1
+   },
+   "participants__1975-1979": {
+    "input_vectors": 1,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 1
+   },
+   "participants__1980-1984": {
+    "input_vectors": 9,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 9
+   },
+   "participants__1985-1989": {
+    "input_vectors": 17,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 17
+   },
+   "participants__1990-1994": {
+    "input_vectors": 63,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 63
+   },
+   "participants__1995-1999": {
+    "input_vectors": 246,
+    "unresolved_or_ambiguous": 1,
+    "duplicate_rows_consolidated": 0,
+    "documents": 245
+   },
+   "participants__2000-2004": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 300
+   },
+   "participants__2005-2009": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 2,
+    "duplicate_rows_consolidated": 0,
+    "documents": 298
+   },
+   "participants__2010-2014": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 300
+   },
+   "participants__2015-2019": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 300
+   },
+   "participants__2020-2024": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 300
+   },
+   "posttraumatic_stress_disorder__1980-1984": {
+    "input_vectors": 100,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 100
+   },
+   "posttraumatic_stress_disorder__1985-1989": {
+    "input_vectors": 566,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 566
+   },
+   "posttraumatic_stress_disorder__1990-1994": {
+    "input_vectors": 1184,
+    "unresolved_or_ambiguous": 1,
+    "duplicate_rows_consolidated": 3,
+    "documents": 1180
+   },
+   "posttraumatic_stress_disorder__1995-1999": {
+    "input_vectors": 1836,
+    "unresolved_or_ambiguous": 12,
+    "duplicate_rows_consolidated": 0,
+    "documents": 1824
+   },
+   "posttraumatic_stress_disorder__2000-2004": {
+    "input_vectors": 3161,
+    "unresolved_or_ambiguous": 6,
+    "duplicate_rows_consolidated": 2,
+    "documents": 3153
+   },
+   "posttraumatic_stress_disorder__2005-2009": {
+    "input_vectors": 4962,
+    "unresolved_or_ambiguous": 9,
+    "duplicate_rows_consolidated": 0,
+    "documents": 4953
+   },
+   "posttraumatic_stress_disorder__2010-2014": {
+    "input_vectors": 7507,
+    "unresolved_or_ambiguous": 10,
+    "duplicate_rows_consolidated": 1,
+    "documents": 7496
+   },
+   "posttraumatic_stress_disorder__2015-2019": {
+    "input_vectors": 9655,
+    "unresolved_or_ambiguous": 10,
+    "duplicate_rows_consolidated": 0,
+    "documents": 9645
+   },
+   "posttraumatic_stress_disorder__2020-2024": {
+    "input_vectors": 11634,
+    "unresolved_or_ambiguous": 8,
+    "duplicate_rows_consolidated": 0,
+    "documents": 11626
+   },
+   "ptsd__1980-1984": {
+    "input_vectors": 37,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 37
+   },
+   "ptsd__1985-1989": {
+    "input_vectors": 308,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 308
+   },
+   "ptsd__1990-1994": {
+    "input_vectors": 668,
+    "unresolved_or_ambiguous": 1,
+    "duplicate_rows_consolidated": 2,
+    "documents": 665
+   },
+   "ptsd__1995-1999": {
+    "input_vectors": 1395,
+    "unresolved_or_ambiguous": 4,
+    "duplicate_rows_consolidated": 0,
+    "documents": 1391
+   },
+   "ptsd__2000-2004": {
+    "input_vectors": 2473,
+    "unresolved_or_ambiguous": 10,
+    "duplicate_rows_consolidated": 1,
+    "documents": 2462
+   },
+   "ptsd__2005-2009": {
+    "input_vectors": 3982,
+    "unresolved_or_ambiguous": 7,
+    "duplicate_rows_consolidated": 0,
+    "documents": 3975
+   },
+   "ptsd__2010-2014": {
+    "input_vectors": 6130,
+    "unresolved_or_ambiguous": 8,
+    "duplicate_rows_consolidated": 1,
+    "documents": 6121
+   },
+   "ptsd__2015-2019": {
+    "input_vectors": 8236,
+    "unresolved_or_ambiguous": 8,
+    "duplicate_rows_consolidated": 0,
+    "documents": 8228
+   },
+   "ptsd__2020-2024": {
+    "input_vectors": 10375,
+    "unresolved_or_ambiguous": 7,
+    "duplicate_rows_consolidated": 0,
+    "documents": 10368
+   },
+   "results__1965-1969": {
+    "input_vectors": 27,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 27
+   },
+   "results__1970-1974": {
+    "input_vectors": 27,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 27
+   },
+   "results__1975-1979": {
+    "input_vectors": 45,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 45
+   },
+   "results__1980-1984": {
+    "input_vectors": 111,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 111
+   },
+   "results__1985-1989": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 2,
+    "duplicate_rows_consolidated": 0,
+    "documents": 298
+   },
+   "results__1990-1994": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 300
+   },
+   "results__1995-1999": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 1,
+    "duplicate_rows_consolidated": 0,
+    "documents": 299
+   },
+   "results__2000-2004": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 300
+   },
+   "results__2005-2009": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 2,
+    "duplicate_rows_consolidated": 0,
+    "documents": 298
+   },
+   "results__2010-2014": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 1,
+    "duplicate_rows_consolidated": 0,
+    "documents": 299
+   },
+   "results__2015-2019": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 300
+   },
+   "results__2020-2024": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 1,
+    "duplicate_rows_consolidated": 0,
+    "documents": 299
+   },
+   "secondary_traumatic_stress__1995-1999": {
+    "input_vectors": 6,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 6
+   },
+   "secondary_traumatic_stress__2000-2004": {
+    "input_vectors": 43,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 43
+   },
+   "secondary_traumatic_stress__2005-2009": {
+    "input_vectors": 63,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 63
+   },
+   "secondary_traumatic_stress__2010-2014": {
+    "input_vectors": 103,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 103
+   },
+   "secondary_traumatic_stress__2015-2019": {
+    "input_vectors": 302,
+    "unresolved_or_ambiguous": 2,
+    "duplicate_rows_consolidated": 0,
+    "documents": 300
+   },
+   "secondary_traumatic_stress__2020-2024": {
+    "input_vectors": 704,
+    "unresolved_or_ambiguous": 2,
+    "duplicate_rows_consolidated": 0,
+    "documents": 702
+   },
+   "significant__1965-1969": {
+    "input_vectors": 17,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 17
+   },
+   "significant__1970-1974": {
+    "input_vectors": 19,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 19
+   },
+   "significant__1975-1979": {
+    "input_vectors": 30,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 30
+   },
+   "significant__1980-1984": {
+    "input_vectors": 89,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 89
+   },
+   "significant__1985-1989": {
+    "input_vectors": 215,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 215
+   },
+   "significant__1990-1994": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 1,
+    "duplicate_rows_consolidated": 0,
+    "documents": 299
+   },
+   "significant__1995-1999": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 1,
+    "duplicate_rows_consolidated": 0,
+    "documents": 299
+   },
+   "significant__2000-2004": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 300
+   },
+   "significant__2005-2009": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 300
+   },
+   "significant__2010-2014": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 300
+   },
+   "significant__2015-2019": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 300
+   },
+   "significant__2020-2024": {
+    "input_vectors": 300,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 300
+   },
+   "trauma__1965-1969": {
+    "input_vectors": 112,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 112
+   },
+   "trauma__1970-1974": {
+    "input_vectors": 145,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 145
+   },
+   "trauma__1975-1979": {
+    "input_vectors": 294,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 294
+   },
+   "trauma__1980-1984": {
+    "input_vectors": 546,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 546
+   },
+   "trauma__1985-1989": {
+    "input_vectors": 1204,
+    "unresolved_or_ambiguous": 3,
+    "duplicate_rows_consolidated": 1,
+    "documents": 1200
+   },
+   "trauma__1990-1994": {
+    "input_vectors": 2189,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 4,
+    "documents": 2185
+   },
+   "trauma__1995-1999": {
+    "input_vectors": 3489,
+    "unresolved_or_ambiguous": 3,
+    "duplicate_rows_consolidated": 4,
+    "documents": 3482
+   },
+   "trauma__2000-2004": {
+    "input_vectors": 5559,
+    "unresolved_or_ambiguous": 3,
+    "duplicate_rows_consolidated": 7,
+    "documents": 5549
+   },
+   "trauma__2005-2009": {
+    "input_vectors": 8733,
+    "unresolved_or_ambiguous": 8,
+    "duplicate_rows_consolidated": 6,
+    "documents": 8719
+   },
+   "trauma__2010-2014": {
+    "input_vectors": 12231,
+    "unresolved_or_ambiguous": 9,
+    "duplicate_rows_consolidated": 3,
+    "documents": 12219
+   },
+   "trauma__2015-2019": {
+    "input_vectors": 16140,
+    "unresolved_or_ambiguous": 16,
+    "duplicate_rows_consolidated": 3,
+    "documents": 16121
+   },
+   "trauma__2020-2024": {
+    "input_vectors": 22578,
+    "unresolved_or_ambiguous": 25,
+    "duplicate_rows_consolidated": 0,
+    "documents": 22553
+   },
+   "trauma_informed__2000-2004": {
+    "input_vectors": 19,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 19
+   },
+   "trauma_informed__2005-2009": {
+    "input_vectors": 66,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 66
+   },
+   "trauma_informed__2010-2014": {
+    "input_vectors": 232,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 1,
+    "documents": 231
+   },
+   "trauma_informed__2015-2019": {
+    "input_vectors": 1064,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 1064
+   },
+   "trauma_informed__2020-2024": {
+    "input_vectors": 3235,
+    "unresolved_or_ambiguous": 1,
+    "duplicate_rows_consolidated": 0,
+    "documents": 3234
+   },
+   "vicarious_trauma__1995-1999": {
+    "input_vectors": 5,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 5
+   },
+   "vicarious_trauma__2000-2004": {
+    "input_vectors": 22,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 22
+   },
+   "vicarious_trauma__2005-2009": {
+    "input_vectors": 30,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 30
+   },
+   "vicarious_trauma__2010-2014": {
+    "input_vectors": 67,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 67
+   },
+   "vicarious_trauma__2015-2019": {
+    "input_vectors": 116,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 116
+   },
+   "vicarious_trauma__2020-2024": {
+    "input_vectors": 269,
+    "unresolved_or_ambiguous": 0,
+    "duplicate_rows_consolidated": 0,
+    "documents": 269
+   }
+  }
+ },
+ "results": {
+  "complex_ptsd": {
+   "periods": [
+    "2000-2004",
+    "2005-2009",
+    "2010-2014",
+    "2015-2019",
+    "2020-2024"
+   ],
+   "n": {
+    "2000-2004": 19,
+    "2005-2009": 47,
+    "2010-2014": 66,
+    "2015-2019": 129,
+    "2020-2024": 328
+   },
+   "pairs": [
+    {
+     "from": "2000-2004",
+     "to": "2005-2009",
+     "kind": "consecutive",
+     "n": 9,
+     "metrics": {
+      "PRT": [
+       0.1291,
+       0.0278
+      ],
+      "APD": [
+       0.5553,
+       0.0334
+      ],
+      "AMD": [
+       0.387,
+       0.0298
+      ],
+      "SAMD": [
+       0.4562,
+       0.0427
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1215,
+       0.0276
+      ],
+      "APD": [
+       0.5351,
+       0.0077
+      ],
+      "AMD": [
+       0.3588,
+       0.0247
+      ],
+      "SAMD": [
+       0.4288,
+       0.0302
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1428,
+       0.0336
+      ],
+      "APD": [
+       0.5679,
+       0.0307
+      ],
+      "AMD": [
+       0.4098,
+       0.0391
+      ],
+      "SAMD": [
+       0.4791,
+       0.0442
+      ]
+     },
+     "floor_n": 9
+    },
+    {
+     "from": "2005-2009",
+     "to": "2010-2014",
+     "kind": "consecutive",
+     "n": 23,
+     "metrics": {
+      "PRT": [
+       0.067,
+       0.0166
+      ],
+      "APD": [
+       0.5714,
+       0.0221
+      ],
+      "AMD": [
+       0.3679,
+       0.0201
+      ],
+      "SAMD": [
+       0.4495,
+       0.0293
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0571,
+       0.0074
+      ],
+      "APD": [
+       0.5696,
+       0.0031
+      ],
+      "AMD": [
+       0.3628,
+       0.0063
+      ],
+      "SAMD": [
+       0.4401,
+       0.009
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.06,
+       0.018
+      ],
+      "APD": [
+       0.5753,
+       0.0137
+      ],
+      "AMD": [
+       0.3376,
+       0.015
+      ],
+      "SAMD": [
+       0.4195,
+       0.0245
+      ]
+     },
+     "floor_n": 23
+    },
+    {
+     "from": "2010-2014",
+     "to": "2015-2019",
+     "kind": "consecutive",
+     "n": 33,
+     "metrics": {
+      "PRT": [
+       0.0464,
+       0.0073
+      ],
+      "APD": [
+       0.5451,
+       0.0215
+      ],
+      "AMD": [
+       0.3072,
+       0.0191
+      ],
+      "SAMD": [
+       0.388,
+       0.0184
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0377,
+       0.0062
+      ],
+      "APD": [
+       0.567,
+       0.0014
+      ],
+      "AMD": [
+       0.3142,
+       0.0091
+      ],
+      "SAMD": [
+       0.392,
+       0.015
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0349,
+       0.0125
+      ],
+      "APD": [
+       0.5172,
+       0.0157
+      ],
+      "AMD": [
+       0.2622,
+       0.014
+      ],
+      "SAMD": [
+       0.3425,
+       0.0207
+      ]
+     },
+     "floor_n": 33
+    },
+    {
+     "from": "2015-2019",
+     "to": "2020-2024",
+     "kind": "consecutive",
+     "n": 64,
+     "metrics": {
+      "PRT": [
+       0.0263,
+       0.0082
+      ],
+      "APD": [
+       0.5227,
+       0.0104
+      ],
+      "AMD": [
+       0.2502,
+       0.0089
+      ],
+      "SAMD": [
+       0.3287,
+       0.0135
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0177,
+       0.0045
+      ],
+      "APD": [
+       0.5159,
+       0.0018
+      ],
+      "AMD": [
+       0.2406,
+       0.0041
+      ],
+      "SAMD": [
+       0.3155,
+       0.0095
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0156,
+       0.0032
+      ],
+      "APD": [
+       0.5241,
+       0.0157
+      ],
+      "AMD": [
+       0.2505,
+       0.0085
+      ],
+      "SAMD": [
+       0.3166,
+       0.0115
+      ]
+     },
+     "floor_n": 64
+    },
+    {
+     "from": "2000-2004",
+     "to": "2005-2009",
+     "kind": "origin",
+     "n": 9,
+     "metrics": {
+      "PRT": [
+       0.1348,
+       0.0221
+      ],
+      "APD": [
+       0.5582,
+       0.0367
+      ],
+      "AMD": [
+       0.3917,
+       0.0336
+      ],
+      "SAMD": [
+       0.4648,
+       0.0418
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1138,
+       0.0239
+      ],
+      "APD": [
+       0.5323,
+       0.0133
+      ],
+      "AMD": [
+       0.3541,
+       0.0258
+      ],
+      "SAMD": [
+       0.4228,
+       0.0325
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1239,
+       0.0226
+      ],
+      "APD": [
+       0.5667,
+       0.0282
+      ],
+      "AMD": [
+       0.4121,
+       0.0285
+      ],
+      "SAMD": [
+       0.4799,
+       0.0286
+      ]
+     },
+     "floor_n": 9
+    },
+    {
+     "from": "2000-2004",
+     "to": "2010-2014",
+     "kind": "origin",
+     "n": 9,
+     "metrics": {
+      "PRT": [
+       0.1296,
+       0.0257
+      ],
+      "APD": [
+       0.548,
+       0.0434
+      ],
+      "AMD": [
+       0.3819,
+       0.0379
+      ],
+      "SAMD": [
+       0.4484,
+       0.0411
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1033,
+       0.0209
+      ],
+      "APD": [
+       0.528,
+       0.009
+      ],
+      "AMD": [
+       0.3427,
+       0.022
+      ],
+      "SAMD": [
+       0.4086,
+       0.0265
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1322,
+       0.0349
+      ],
+      "APD": [
+       0.5754,
+       0.0402
+      ],
+      "AMD": [
+       0.3983,
+       0.0326
+      ],
+      "SAMD": [
+       0.4669,
+       0.0351
+      ]
+     },
+     "floor_n": 9
+    },
+    {
+     "from": "2000-2004",
+     "to": "2015-2019",
+     "kind": "origin",
+     "n": 9,
+     "metrics": {
+      "PRT": [
+       0.1467,
+       0.0319
+      ],
+      "APD": [
+       0.5515,
+       0.0467
+      ],
+      "AMD": [
+       0.3813,
+       0.0388
+      ],
+      "SAMD": [
+       0.4588,
+       0.0391
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.106,
+       0.0174
+      ],
+      "APD": [
+       0.5295,
+       0.0113
+      ],
+      "AMD": [
+       0.3506,
+       0.0188
+      ],
+      "SAMD": [
+       0.4198,
+       0.0265
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1144,
+       0.0192
+      ],
+      "APD": [
+       0.5221,
+       0.0344
+      ],
+      "AMD": [
+       0.3259,
+       0.0308
+      ],
+      "SAMD": [
+       0.4149,
+       0.0413
+      ]
+     },
+     "floor_n": 9
+    },
+    {
+     "from": "2000-2004",
+     "to": "2020-2024",
+     "kind": "origin",
+     "n": 9,
+     "metrics": {
+      "PRT": [
+       0.1701,
+       0.0392
+      ],
+      "APD": [
+       0.5668,
+       0.0411
+      ],
+      "AMD": [
+       0.404,
+       0.035
+      ],
+      "SAMD": [
+       0.4791,
+       0.0406
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1194,
+       0.0305
+      ],
+      "APD": [
+       0.5354,
+       0.013
+      ],
+      "AMD": [
+       0.3583,
+       0.0304
+      ],
+      "SAMD": [
+       0.4313,
+       0.032
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1134,
+       0.0319
+      ],
+      "APD": [
+       0.5336,
+       0.0427
+      ],
+      "AMD": [
+       0.3439,
+       0.0406
+      ],
+      "SAMD": [
+       0.4259,
+       0.0431
+      ]
+     },
+     "floor_n": 9
+    }
+   ],
+   "is_control": false
+  },
+  "posttraumatic_stress_disorder": {
+   "periods": [
+    "1980-1984",
+    "1985-1989",
+    "1990-1994",
+    "1995-1999",
+    "2000-2004",
+    "2005-2009",
+    "2010-2014",
+    "2015-2019",
+    "2020-2024"
+   ],
+   "n": {
+    "1980-1984": 100,
+    "1985-1989": 566,
+    "1990-1994": 1180,
+    "1995-1999": 1824,
+    "2000-2004": 3153,
+    "2005-2009": 4953,
+    "2010-2014": 7496,
+    "2015-2019": 9645,
+    "2020-2024": 11626
+   },
+   "pairs": [
+    {
+     "from": "1980-1984",
+     "to": "1985-1989",
+     "kind": "consecutive",
+     "n": 50,
+     "metrics": {
+      "PRT": [
+       0.0297,
+       0.0034
+      ],
+      "APD": [
+       0.5228,
+       0.0114
+      ],
+      "AMD": [
+       0.2944,
+       0.0093
+      ],
+      "SAMD": [
+       0.3623,
+       0.0125
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0206,
+       0.0035
+      ],
+      "APD": [
+       0.5012,
+       0.0008
+      ],
+      "AMD": [
+       0.274,
+       0.0058
+      ],
+      "SAMD": [
+       0.3417,
+       0.0084
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0222,
+       0.005
+      ],
+      "APD": [
+       0.5308,
+       0.0213
+      ],
+      "AMD": [
+       0.2874,
+       0.0146
+      ],
+      "SAMD": [
+       0.3583,
+       0.0192
+      ]
+     },
+     "floor_n": 50
+    },
+    {
+     "from": "1985-1989",
+     "to": "1990-1994",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.0285,
+       0.0019
+      ],
+      "APD": [
+       0.5587,
+       0.0051
+      ],
+      "AMD": [
+       0.2503,
+       0.0043
+      ],
+      "SAMD": [
+       0.3172,
+       0.0063
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0044,
+       0.0008
+      ],
+      "APD": [
+       0.5305,
+       0.0029
+      ],
+      "AMD": [
+       0.2243,
+       0.0021
+      ],
+      "SAMD": [
+       0.2831,
+       0.0024
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0046,
+       0.0008
+      ],
+      "APD": [
+       0.5636,
+       0.0037
+      ],
+      "AMD": [
+       0.2395,
+       0.0042
+      ],
+      "SAMD": [
+       0.2988,
+       0.005
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "1990-1994",
+     "to": "1995-1999",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.0298,
+       0.0026
+      ],
+      "APD": [
+       0.5838,
+       0.0067
+      ],
+      "AMD": [
+       0.2532,
+       0.0046
+      ],
+      "SAMD": [
+       0.3158,
+       0.0071
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.005,
+       0.001
+      ],
+      "APD": [
+       0.5642,
+       0.0043
+      ],
+      "AMD": [
+       0.2385,
+       0.0034
+      ],
+      "SAMD": [
+       0.2989,
+       0.0056
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0061,
+       0.001
+      ],
+      "APD": [
+       0.5905,
+       0.0068
+      ],
+      "AMD": [
+       0.2419,
+       0.0043
+      ],
+      "SAMD": [
+       0.3051,
+       0.006
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "1995-1999",
+     "to": "2000-2004",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.0115,
+       0.0015
+      ],
+      "APD": [
+       0.5876,
+       0.0073
+      ],
+      "AMD": [
+       0.2488,
+       0.0063
+      ],
+      "SAMD": [
+       0.3117,
+       0.0069
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0053,
+       0.0009
+      ],
+      "APD": [
+       0.5887,
+       0.0077
+      ],
+      "AMD": [
+       0.2439,
+       0.0053
+      ],
+      "SAMD": [
+       0.3044,
+       0.0064
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0052,
+       0.0009
+      ],
+      "APD": [
+       0.5803,
+       0.008
+      ],
+      "AMD": [
+       0.2455,
+       0.0052
+      ],
+      "SAMD": [
+       0.3051,
+       0.006
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "2000-2004",
+     "to": "2005-2009",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.019,
+       0.0018
+      ],
+      "APD": [
+       0.5825,
+       0.0088
+      ],
+      "AMD": [
+       0.2505,
+       0.008
+      ],
+      "SAMD": [
+       0.3129,
+       0.0096
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0055,
+       0.0012
+      ],
+      "APD": [
+       0.5794,
+       0.0083
+      ],
+      "AMD": [
+       0.2463,
+       0.0054
+      ],
+      "SAMD": [
+       0.307,
+       0.0056
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0058,
+       0.001
+      ],
+      "APD": [
+       0.5753,
+       0.0076
+      ],
+      "AMD": [
+       0.2423,
+       0.0061
+      ],
+      "SAMD": [
+       0.3019,
+       0.0095
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "2005-2009",
+     "to": "2010-2014",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.0088,
+       0.0021
+      ],
+      "APD": [
+       0.573,
+       0.0072
+      ],
+      "AMD": [
+       0.243,
+       0.0063
+      ],
+      "SAMD": [
+       0.3028,
+       0.0096
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0055,
+       0.0013
+      ],
+      "APD": [
+       0.5749,
+       0.0074
+      ],
+      "AMD": [
+       0.2441,
+       0.0059
+      ],
+      "SAMD": [
+       0.303,
+       0.0066
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0051,
+       0.001
+      ],
+      "APD": [
+       0.5696,
+       0.0053
+      ],
+      "AMD": [
+       0.2383,
+       0.0037
+      ],
+      "SAMD": [
+       0.2963,
+       0.0058
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "2010-2014",
+     "to": "2015-2019",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.0086,
+       0.0019
+      ],
+      "APD": [
+       0.5678,
+       0.0062
+      ],
+      "AMD": [
+       0.236,
+       0.0041
+      ],
+      "SAMD": [
+       0.2961,
+       0.006
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0054,
+       0.0012
+      ],
+      "APD": [
+       0.5677,
+       0.0059
+      ],
+      "AMD": [
+       0.2365,
+       0.0043
+      ],
+      "SAMD": [
+       0.296,
+       0.0056
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0052,
+       0.0011
+      ],
+      "APD": [
+       0.5608,
+       0.0054
+      ],
+      "AMD": [
+       0.2276,
+       0.0048
+      ],
+      "SAMD": [
+       0.2872,
+       0.0076
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "2015-2019",
+     "to": "2020-2024",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.0086,
+       0.0017
+      ],
+      "APD": [
+       0.564,
+       0.0065
+      ],
+      "AMD": [
+       0.2283,
+       0.0062
+      ],
+      "SAMD": [
+       0.2907,
+       0.0082
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0049,
+       0.0013
+      ],
+      "APD": [
+       0.5628,
+       0.0087
+      ],
+      "AMD": [
+       0.229,
+       0.0062
+      ],
+      "SAMD": [
+       0.2862,
+       0.0087
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0055,
+       0.001
+      ],
+      "APD": [
+       0.5652,
+       0.0066
+      ],
+      "AMD": [
+       0.2253,
+       0.0038
+      ],
+      "SAMD": [
+       0.2852,
+       0.0065
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "1980-1984",
+     "to": "1985-1989",
+     "kind": "origin",
+     "n": 50,
+     "metrics": {
+      "PRT": [
+       0.0307,
+       0.0043
+      ],
+      "APD": [
+       0.5203,
+       0.0085
+      ],
+      "AMD": [
+       0.2902,
+       0.0081
+      ],
+      "SAMD": [
+       0.358,
+       0.0087
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.019,
+       0.0031
+      ],
+      "APD": [
+       0.5009,
+       0.0008
+      ],
+      "AMD": [
+       0.2741,
+       0.0043
+      ],
+      "SAMD": [
+       0.3398,
+       0.008
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0203,
+       0.0041
+      ],
+      "APD": [
+       0.528,
+       0.0165
+      ],
+      "AMD": [
+       0.2793,
+       0.0137
+      ],
+      "SAMD": [
+       0.3493,
+       0.0162
+      ]
+     },
+     "floor_n": 50
+    },
+    {
+     "from": "1980-1984",
+     "to": "1990-1994",
+     "kind": "origin",
+     "n": 50,
+     "metrics": {
+      "PRT": [
+       0.0429,
+       0.0045
+      ],
+      "APD": [
+       0.5436,
+       0.0169
+      ],
+      "AMD": [
+       0.3067,
+       0.0149
+      ],
+      "SAMD": [
+       0.3824,
+       0.0165
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0209,
+       0.0046
+      ],
+      "APD": [
+       0.5014,
+       0.0011
+      ],
+      "AMD": [
+       0.2755,
+       0.007
+      ],
+      "SAMD": [
+       0.3394,
+       0.0106
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.024,
+       0.0047
+      ],
+      "APD": [
+       0.5615,
+       0.0127
+      ],
+      "AMD": [
+       0.2959,
+       0.0151
+      ],
+      "SAMD": [
+       0.3641,
+       0.018
+      ]
+     },
+     "floor_n": 50
+    },
+    {
+     "from": "1980-1984",
+     "to": "1995-1999",
+     "kind": "origin",
+     "n": 50,
+     "metrics": {
+      "PRT": [
+       0.0838,
+       0.0093
+      ],
+      "APD": [
+       0.5789,
+       0.011
+      ],
+      "AMD": [
+       0.332,
+       0.0076
+      ],
+      "SAMD": [
+       0.4129,
+       0.0148
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0211,
+       0.004
+      ],
+      "APD": [
+       0.5015,
+       0.001
+      ],
+      "AMD": [
+       0.2734,
+       0.0053
+      ],
+      "SAMD": [
+       0.3418,
+       0.0085
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0268,
+       0.0063
+      ],
+      "APD": [
+       0.5824,
+       0.0142
+      ],
+      "AMD": [
+       0.2985,
+       0.0152
+      ],
+      "SAMD": [
+       0.3717,
+       0.0175
+      ]
+     },
+     "floor_n": 50
+    },
+    {
+     "from": "1980-1984",
+     "to": "2000-2004",
+     "kind": "origin",
+     "n": 50,
+     "metrics": {
+      "PRT": [
+       0.1117,
+       0.0104
+      ],
+      "APD": [
+       0.5807,
+       0.0154
+      ],
+      "AMD": [
+       0.3402,
+       0.0119
+      ],
+      "SAMD": [
+       0.421,
+       0.0119
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.02,
+       0.0041
+      ],
+      "APD": [
+       0.5011,
+       0.001
+      ],
+      "AMD": [
+       0.2732,
+       0.0036
+      ],
+      "SAMD": [
+       0.3382,
+       0.0083
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0269,
+       0.0052
+      ],
+      "APD": [
+       0.5816,
+       0.0157
+      ],
+      "AMD": [
+       0.3084,
+       0.0138
+      ],
+      "SAMD": [
+       0.3789,
+       0.0181
+      ]
+     },
+     "floor_n": 50
+    },
+    {
+     "from": "1980-1984",
+     "to": "2005-2009",
+     "kind": "origin",
+     "n": 50,
+     "metrics": {
+      "PRT": [
+       0.1452,
+       0.0097
+      ],
+      "APD": [
+       0.5965,
+       0.0137
+      ],
+      "AMD": [
+       0.3615,
+       0.0103
+      ],
+      "SAMD": [
+       0.4457,
+       0.0112
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0199,
+       0.0029
+      ],
+      "APD": [
+       0.5011,
+       0.0008
+      ],
+      "AMD": [
+       0.2747,
+       0.0042
+      ],
+      "SAMD": [
+       0.3386,
+       0.006
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0282,
+       0.0077
+      ],
+      "APD": [
+       0.5785,
+       0.0167
+      ],
+      "AMD": [
+       0.3074,
+       0.0144
+      ],
+      "SAMD": [
+       0.3801,
+       0.0182
+      ]
+     },
+     "floor_n": 50
+    },
+    {
+     "from": "1980-1984",
+     "to": "2010-2014",
+     "kind": "origin",
+     "n": 50,
+     "metrics": {
+      "PRT": [
+       0.1466,
+       0.011
+      ],
+      "APD": [
+       0.5932,
+       0.0147
+      ],
+      "AMD": [
+       0.3583,
+       0.0114
+      ],
+      "SAMD": [
+       0.4491,
+       0.0157
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0189,
+       0.0034
+      ],
+      "APD": [
+       0.5009,
+       0.0009
+      ],
+      "AMD": [
+       0.2734,
+       0.0045
+      ],
+      "SAMD": [
+       0.3394,
+       0.0074
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0288,
+       0.0053
+      ],
+      "APD": [
+       0.5739,
+       0.0191
+      ],
+      "AMD": [
+       0.302,
+       0.0146
+      ],
+      "SAMD": [
+       0.3719,
+       0.0171
+      ]
+     },
+     "floor_n": 50
+    },
+    {
+     "from": "1980-1984",
+     "to": "2015-2019",
+     "kind": "origin",
+     "n": 50,
+     "metrics": {
+      "PRT": [
+       0.1625,
+       0.0162
+      ],
+      "APD": [
+       0.5952,
+       0.0187
+      ],
+      "AMD": [
+       0.3649,
+       0.0142
+      ],
+      "SAMD": [
+       0.4586,
+       0.0199
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0198,
+       0.0034
+      ],
+      "APD": [
+       0.5011,
+       0.0009
+      ],
+      "AMD": [
+       0.275,
+       0.0055
+      ],
+      "SAMD": [
+       0.3379,
+       0.0079
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0246,
+       0.0043
+      ],
+      "APD": [
+       0.5629,
+       0.0157
+      ],
+      "AMD": [
+       0.2885,
+       0.0128
+      ],
+      "SAMD": [
+       0.3584,
+       0.0155
+      ]
+     },
+     "floor_n": 50
+    },
+    {
+     "from": "1980-1984",
+     "to": "2020-2024",
+     "kind": "origin",
+     "n": 50,
+     "metrics": {
+      "PRT": [
+       0.1811,
+       0.0173
+      ],
+      "APD": [
+       0.6107,
+       0.0163
+      ],
+      "AMD": [
+       0.3773,
+       0.0167
+      ],
+      "SAMD": [
+       0.4807,
+       0.0207
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0191,
+       0.003
+      ],
+      "APD": [
+       0.5009,
+       0.0008
+      ],
+      "AMD": [
+       0.2734,
+       0.0061
+      ],
+      "SAMD": [
+       0.3376,
+       0.0071
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0268,
+       0.0051
+      ],
+      "APD": [
+       0.5612,
+       0.0129
+      ],
+      "AMD": [
+       0.283,
+       0.0085
+      ],
+      "SAMD": [
+       0.3528,
+       0.0143
+      ]
+     },
+     "floor_n": 50
+    }
+   ],
+   "is_control": false
+  },
+  "ptsd": {
+   "periods": [
+    "1980-1984",
+    "1985-1989",
+    "1990-1994",
+    "1995-1999",
+    "2000-2004",
+    "2005-2009",
+    "2010-2014",
+    "2015-2019",
+    "2020-2024"
+   ],
+   "n": {
+    "1980-1984": 37,
+    "1985-1989": 308,
+    "1990-1994": 665,
+    "1995-1999": 1391,
+    "2000-2004": 2462,
+    "2005-2009": 3975,
+    "2010-2014": 6121,
+    "2015-2019": 8228,
+    "2020-2024": 10368
+   },
+   "pairs": [
+    {
+     "from": "1980-1984",
+     "to": "1985-1989",
+     "kind": "consecutive",
+     "n": 18,
+     "metrics": {
+      "PRT": [
+       0.0725,
+       0.0177
+      ],
+      "APD": [
+       0.4912,
+       0.0272
+      ],
+      "AMD": [
+       0.3094,
+       0.0193
+      ],
+      "SAMD": [
+       0.3894,
+       0.031
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0444,
+       0.0098
+      ],
+      "APD": [
+       0.4343,
+       0.0065
+      ],
+      "AMD": [
+       0.2658,
+       0.0066
+      ],
+      "SAMD": [
+       0.3287,
+       0.01
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0554,
+       0.0083
+      ],
+      "APD": [
+       0.5347,
+       0.0228
+      ],
+      "AMD": [
+       0.3319,
+       0.0171
+      ],
+      "SAMD": [
+       0.4023,
+       0.0209
+      ]
+     },
+     "floor_n": 18
+    },
+    {
+     "from": "1985-1989",
+     "to": "1990-1994",
+     "kind": "consecutive",
+     "n": 154,
+     "metrics": {
+      "PRT": [
+       0.0352,
+       0.0034
+      ],
+      "APD": [
+       0.5586,
+       0.0078
+      ],
+      "AMD": [
+       0.274,
+       0.0062
+      ],
+      "SAMD": [
+       0.3402,
+       0.0065
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0075,
+       0.0014
+      ],
+      "APD": [
+       0.5356,
+       0.0003
+      ],
+      "AMD": [
+       0.2514,
+       0.0057
+      ],
+      "SAMD": [
+       0.3125,
+       0.0081
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0094,
+       0.0026
+      ],
+      "APD": [
+       0.5576,
+       0.0076
+      ],
+      "AMD": [
+       0.2593,
+       0.0052
+      ],
+      "SAMD": [
+       0.3237,
+       0.0086
+      ]
+     },
+     "floor_n": 154
+    },
+    {
+     "from": "1990-1994",
+     "to": "1995-1999",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.0591,
+       0.0053
+      ],
+      "APD": [
+       0.5902,
+       0.0077
+      ],
+      "AMD": [
+       0.279,
+       0.0073
+      ],
+      "SAMD": [
+       0.3615,
+       0.0074
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.005,
+       0.0009
+      ],
+      "APD": [
+       0.5571,
+       0.004
+      ],
+      "AMD": [
+       0.2433,
+       0.0027
+      ],
+      "SAMD": [
+       0.3025,
+       0.0042
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0059,
+       0.0012
+      ],
+      "APD": [
+       0.5844,
+       0.0065
+      ],
+      "AMD": [
+       0.2544,
+       0.0033
+      ],
+      "SAMD": [
+       0.3132,
+       0.0057
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "1995-1999",
+     "to": "2000-2004",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.0264,
+       0.006
+      ],
+      "APD": [
+       0.5822,
+       0.008
+      ],
+      "AMD": [
+       0.2635,
+       0.0047
+      ],
+      "SAMD": [
+       0.3395,
+       0.0094
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0058,
+       0.0012
+      ],
+      "APD": [
+       0.5835,
+       0.0048
+      ],
+      "AMD": [
+       0.2546,
+       0.0033
+      ],
+      "SAMD": [
+       0.3124,
+       0.0052
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0054,
+       0.001
+      ],
+      "APD": [
+       0.5591,
+       0.0072
+      ],
+      "AMD": [
+       0.249,
+       0.0043
+      ],
+      "SAMD": [
+       0.3065,
+       0.0059
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "2000-2004",
+     "to": "2005-2009",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.024,
+       0.0027
+      ],
+      "APD": [
+       0.5641,
+       0.0068
+      ],
+      "AMD": [
+       0.2658,
+       0.0042
+      ],
+      "SAMD": [
+       0.3297,
+       0.0059
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0057,
+       0.0013
+      ],
+      "APD": [
+       0.5591,
+       0.0051
+      ],
+      "AMD": [
+       0.2493,
+       0.0039
+      ],
+      "SAMD": [
+       0.3075,
+       0.0042
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0044,
+       0.0008
+      ],
+      "APD": [
+       0.5449,
+       0.0072
+      ],
+      "AMD": [
+       0.2463,
+       0.0041
+      ],
+      "SAMD": [
+       0.3044,
+       0.006
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "2005-2009",
+     "to": "2010-2014",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.0097,
+       0.002
+      ],
+      "APD": [
+       0.5456,
+       0.0069
+      ],
+      "AMD": [
+       0.247,
+       0.0044
+      ],
+      "SAMD": [
+       0.3071,
+       0.0058
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.005,
+       0.001
+      ],
+      "APD": [
+       0.5461,
+       0.0072
+      ],
+      "AMD": [
+       0.2471,
+       0.0049
+      ],
+      "SAMD": [
+       0.3047,
+       0.006
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0049,
+       0.0013
+      ],
+      "APD": [
+       0.5383,
+       0.0064
+      ],
+      "AMD": [
+       0.2396,
+       0.0043
+      ],
+      "SAMD": [
+       0.2964,
+       0.0051
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "2010-2014",
+     "to": "2015-2019",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.0081,
+       0.0011
+      ],
+      "APD": [
+       0.5398,
+       0.0071
+      ],
+      "AMD": [
+       0.2394,
+       0.0041
+      ],
+      "SAMD": [
+       0.297,
+       0.0043
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0048,
+       0.0013
+      ],
+      "APD": [
+       0.5377,
+       0.0061
+      ],
+      "AMD": [
+       0.2387,
+       0.0044
+      ],
+      "SAMD": [
+       0.2962,
+       0.0056
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0047,
+       0.001
+      ],
+      "APD": [
+       0.5413,
+       0.0067
+      ],
+      "AMD": [
+       0.2364,
+       0.0034
+      ],
+      "SAMD": [
+       0.2918,
+       0.0049
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "2015-2019",
+     "to": "2020-2024",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.0096,
+       0.0037
+      ],
+      "APD": [
+       0.5439,
+       0.0089
+      ],
+      "AMD": [
+       0.2372,
+       0.0052
+      ],
+      "SAMD": [
+       0.2988,
+       0.0087
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.005,
+       0.0012
+      ],
+      "APD": [
+       0.5395,
+       0.0068
+      ],
+      "AMD": [
+       0.2345,
+       0.0041
+      ],
+      "SAMD": [
+       0.291,
+       0.0053
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.005,
+       0.0012
+      ],
+      "APD": [
+       0.5486,
+       0.0078
+      ],
+      "AMD": [
+       0.2325,
+       0.0058
+      ],
+      "SAMD": [
+       0.2906,
+       0.0071
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "1980-1984",
+     "to": "1985-1989",
+     "kind": "origin",
+     "n": 18,
+     "metrics": {
+      "PRT": [
+       0.0734,
+       0.0181
+      ],
+      "APD": [
+       0.5027,
+       0.0328
+      ],
+      "AMD": [
+       0.3223,
+       0.023
+      ],
+      "SAMD": [
+       0.4011,
+       0.0342
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0429,
+       0.0095
+      ],
+      "APD": [
+       0.4354,
+       0.0059
+      ],
+      "AMD": [
+       0.2676,
+       0.0102
+      ],
+      "SAMD": [
+       0.3284,
+       0.0098
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0643,
+       0.0127
+      ],
+      "APD": [
+       0.5314,
+       0.0214
+      ],
+      "AMD": [
+       0.3349,
+       0.0202
+      ],
+      "SAMD": [
+       0.4076,
+       0.0246
+      ]
+     },
+     "floor_n": 18
+    },
+    {
+     "from": "1980-1984",
+     "to": "1990-1994",
+     "kind": "origin",
+     "n": 18,
+     "metrics": {
+      "PRT": [
+       0.0755,
+       0.0141
+      ],
+      "APD": [
+       0.5136,
+       0.026
+      ],
+      "AMD": [
+       0.33,
+       0.0206
+      ],
+      "SAMD": [
+       0.4076,
+       0.0259
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0452,
+       0.0121
+      ],
+      "APD": [
+       0.436,
+       0.0052
+      ],
+      "AMD": [
+       0.2672,
+       0.007
+      ],
+      "SAMD": [
+       0.3304,
+       0.0112
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0705,
+       0.0131
+      ],
+      "APD": [
+       0.5677,
+       0.0214
+      ],
+      "AMD": [
+       0.3522,
+       0.0209
+      ],
+      "SAMD": [
+       0.4258,
+       0.0181
+      ]
+     },
+     "floor_n": 18
+    },
+    {
+     "from": "1980-1984",
+     "to": "1995-1999",
+     "kind": "origin",
+     "n": 18,
+     "metrics": {
+      "PRT": [
+       0.1461,
+       0.0267
+      ],
+      "APD": [
+       0.5548,
+       0.0277
+      ],
+      "AMD": [
+       0.3684,
+       0.0269
+      ],
+      "SAMD": [
+       0.454,
+       0.0338
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0404,
+       0.0062
+      ],
+      "APD": [
+       0.4342,
+       0.0037
+      ],
+      "AMD": [
+       0.2677,
+       0.0051
+      ],
+      "SAMD": [
+       0.3269,
+       0.0077
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0751,
+       0.0172
+      ],
+      "APD": [
+       0.575,
+       0.0285
+      ],
+      "AMD": [
+       0.3559,
+       0.0225
+      ],
+      "SAMD": [
+       0.4238,
+       0.0302
+      ]
+     },
+     "floor_n": 18
+    },
+    {
+     "from": "1980-1984",
+     "to": "2000-2004",
+     "kind": "origin",
+     "n": 18,
+     "metrics": {
+      "PRT": [
+       0.1578,
+       0.029
+      ],
+      "APD": [
+       0.5505,
+       0.0272
+      ],
+      "AMD": [
+       0.3624,
+       0.023
+      ],
+      "SAMD": [
+       0.4477,
+       0.0328
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0428,
+       0.0084
+      ],
+      "APD": [
+       0.4366,
+       0.0038
+      ],
+      "AMD": [
+       0.2691,
+       0.0057
+      ],
+      "SAMD": [
+       0.3314,
+       0.0104
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0666,
+       0.009
+      ],
+      "APD": [
+       0.5591,
+       0.0224
+      ],
+      "AMD": [
+       0.3473,
+       0.0226
+      ],
+      "SAMD": [
+       0.4127,
+       0.0249
+      ]
+     },
+     "floor_n": 18
+    },
+    {
+     "from": "1980-1984",
+     "to": "2005-2009",
+     "kind": "origin",
+     "n": 18,
+     "metrics": {
+      "PRT": [
+       0.1991,
+       0.0397
+      ],
+      "APD": [
+       0.577,
+       0.029
+      ],
+      "AMD": [
+       0.383,
+       0.0271
+      ],
+      "SAMD": [
+       0.4782,
+       0.0371
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0433,
+       0.0056
+      ],
+      "APD": [
+       0.4343,
+       0.0054
+      ],
+      "AMD": [
+       0.2682,
+       0.008
+      ],
+      "SAMD": [
+       0.3325,
+       0.0121
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0687,
+       0.0103
+      ],
+      "APD": [
+       0.5529,
+       0.0199
+      ],
+      "AMD": [
+       0.3439,
+       0.0203
+      ],
+      "SAMD": [
+       0.4161,
+       0.0264
+      ]
+     },
+     "floor_n": 18
+    },
+    {
+     "from": "1980-1984",
+     "to": "2010-2014",
+     "kind": "origin",
+     "n": 18,
+     "metrics": {
+      "PRT": [
+       0.1724,
+       0.026
+      ],
+      "APD": [
+       0.5527,
+       0.0259
+      ],
+      "AMD": [
+       0.3649,
+       0.0246
+      ],
+      "SAMD": [
+       0.454,
+       0.0301
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0457,
+       0.0124
+      ],
+      "APD": [
+       0.4372,
+       0.0053
+      ],
+      "AMD": [
+       0.271,
+       0.0087
+      ],
+      "SAMD": [
+       0.3365,
+       0.016
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.068,
+       0.0214
+      ],
+      "APD": [
+       0.5526,
+       0.0227
+      ],
+      "AMD": [
+       0.3409,
+       0.0187
+      ],
+      "SAMD": [
+       0.413,
+       0.0236
+      ]
+     },
+     "floor_n": 18
+    },
+    {
+     "from": "1980-1984",
+     "to": "2015-2019",
+     "kind": "origin",
+     "n": 18,
+     "metrics": {
+      "PRT": [
+       0.2034,
+       0.0234
+      ],
+      "APD": [
+       0.5689,
+       0.0197
+      ],
+      "AMD": [
+       0.3853,
+       0.0186
+      ],
+      "SAMD": [
+       0.4744,
+       0.0221
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0418,
+       0.0079
+      ],
+      "APD": [
+       0.4356,
+       0.0047
+      ],
+      "AMD": [
+       0.266,
+       0.0062
+      ],
+      "SAMD": [
+       0.3287,
+       0.0093
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0631,
+       0.0105
+      ],
+      "APD": [
+       0.5507,
+       0.0276
+      ],
+      "AMD": [
+       0.3334,
+       0.0229
+      ],
+      "SAMD": [
+       0.4046,
+       0.0262
+      ]
+     },
+     "floor_n": 18
+    },
+    {
+     "from": "1980-1984",
+     "to": "2020-2024",
+     "kind": "origin",
+     "n": 18,
+     "metrics": {
+      "PRT": [
+       0.232,
+       0.0352
+      ],
+      "APD": [
+       0.587,
+       0.0212
+      ],
+      "AMD": [
+       0.3968,
+       0.0233
+      ],
+      "SAMD": [
+       0.5003,
+       0.0309
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0437,
+       0.0065
+      ],
+      "APD": [
+       0.437,
+       0.0041
+      ],
+      "AMD": [
+       0.2711,
+       0.0061
+      ],
+      "SAMD": [
+       0.3336,
+       0.012
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0675,
+       0.0204
+      ],
+      "APD": [
+       0.5554,
+       0.0334
+      ],
+      "AMD": [
+       0.3329,
+       0.0282
+      ],
+      "SAMD": [
+       0.405,
+       0.0378
+      ]
+     },
+     "floor_n": 18
+    }
+   ],
+   "is_control": false
+  },
+  "secondary_traumatic_stress": {
+   "periods": [
+    "2000-2004",
+    "2005-2009",
+    "2010-2014",
+    "2015-2019",
+    "2020-2024"
+   ],
+   "n": {
+    "2000-2004": 43,
+    "2005-2009": 63,
+    "2010-2014": 103,
+    "2015-2019": 300,
+    "2020-2024": 702
+   },
+   "pairs": [
+    {
+     "from": "2000-2004",
+     "to": "2005-2009",
+     "kind": "consecutive",
+     "n": 21,
+     "metrics": {
+      "PRT": [
+       0.0728,
+       0.014
+      ],
+      "APD": [
+       0.5612,
+       0.0187
+      ],
+      "AMD": [
+       0.326,
+       0.026
+      ],
+      "SAMD": [
+       0.3994,
+       0.0329
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.062,
+       0.0149
+      ],
+      "APD": [
+       0.57,
+       0.0048
+      ],
+      "AMD": [
+       0.3225,
+       0.0164
+      ],
+      "SAMD": [
+       0.3918,
+       0.0245
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0586,
+       0.0115
+      ],
+      "APD": [
+       0.5465,
+       0.0181
+      ],
+      "AMD": [
+       0.3025,
+       0.0128
+      ],
+      "SAMD": [
+       0.38,
+       0.0181
+      ]
+     },
+     "floor_n": 21
+    },
+    {
+     "from": "2005-2009",
+     "to": "2010-2014",
+     "kind": "consecutive",
+     "n": 31,
+     "metrics": {
+      "PRT": [
+       0.0488,
+       0.0112
+      ],
+      "APD": [
+       0.5376,
+       0.017
+      ],
+      "AMD": [
+       0.29,
+       0.0093
+      ],
+      "SAMD": [
+       0.3677,
+       0.0166
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0371,
+       0.0094
+      ],
+      "APD": [
+       0.5429,
+       0.0035
+      ],
+      "AMD": [
+       0.2833,
+       0.0096
+      ],
+      "SAMD": [
+       0.3514,
+       0.0159
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0341,
+       0.0067
+      ],
+      "APD": [
+       0.5342,
+       0.0107
+      ],
+      "AMD": [
+       0.2687,
+       0.0124
+      ],
+      "SAMD": [
+       0.3426,
+       0.0138
+      ]
+     },
+     "floor_n": 31
+    },
+    {
+     "from": "2010-2014",
+     "to": "2015-2019",
+     "kind": "consecutive",
+     "n": 51,
+     "metrics": {
+      "PRT": [
+       0.0349,
+       0.0083
+      ],
+      "APD": [
+       0.5171,
+       0.0154
+      ],
+      "AMD": [
+       0.2561,
+       0.0114
+      ],
+      "SAMD": [
+       0.339,
+       0.0152
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0208,
+       0.0028
+      ],
+      "APD": [
+       0.5282,
+       0.0017
+      ],
+      "AMD": [
+       0.2465,
+       0.0045
+      ],
+      "SAMD": [
+       0.3172,
+       0.0069
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.019,
+       0.0054
+      ],
+      "APD": [
+       0.4847,
+       0.0185
+      ],
+      "AMD": [
+       0.2374,
+       0.0156
+      ],
+      "SAMD": [
+       0.3079,
+       0.0205
+      ]
+     },
+     "floor_n": 51
+    },
+    {
+     "from": "2015-2019",
+     "to": "2020-2024",
+     "kind": "consecutive",
+     "n": 150,
+     "metrics": {
+      "PRT": [
+       0.0107,
+       0.0019
+      ],
+      "APD": [
+       0.4794,
+       0.0081
+      ],
+      "AMD": [
+       0.2079,
+       0.0062
+      ],
+      "SAMD": [
+       0.2729,
+       0.0078
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0064,
+       0.0014
+      ],
+      "APD": [
+       0.4872,
+       0.0004
+      ],
+      "AMD": [
+       0.2011,
+       0.0035
+      ],
+      "SAMD": [
+       0.2623,
+       0.0057
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0057,
+       0.0011
+      ],
+      "APD": [
+       0.4662,
+       0.009
+      ],
+      "AMD": [
+       0.2022,
+       0.0062
+      ],
+      "SAMD": [
+       0.2607,
+       0.0089
+      ]
+     },
+     "floor_n": 150
+    },
+    {
+     "from": "2000-2004",
+     "to": "2005-2009",
+     "kind": "origin",
+     "n": 21,
+     "metrics": {
+      "PRT": [
+       0.0675,
+       0.0128
+      ],
+      "APD": [
+       0.5587,
+       0.0177
+      ],
+      "AMD": [
+       0.309,
+       0.0199
+      ],
+      "SAMD": [
+       0.3906,
+       0.0271
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0568,
+       0.0112
+      ],
+      "APD": [
+       0.569,
+       0.0047
+      ],
+      "AMD": [
+       0.3218,
+       0.0172
+      ],
+      "SAMD": [
+       0.3898,
+       0.0205
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0573,
+       0.0189
+      ],
+      "APD": [
+       0.5459,
+       0.0175
+      ],
+      "AMD": [
+       0.3037,
+       0.0202
+      ],
+      "SAMD": [
+       0.3746,
+       0.0264
+      ]
+     },
+     "floor_n": 21
+    },
+    {
+     "from": "2000-2004",
+     "to": "2010-2014",
+     "kind": "origin",
+     "n": 21,
+     "metrics": {
+      "PRT": [
+       0.0761,
+       0.0119
+      ],
+      "APD": [
+       0.5578,
+       0.0234
+      ],
+      "AMD": [
+       0.3273,
+       0.0216
+      ],
+      "SAMD": [
+       0.4021,
+       0.0271
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0601,
+       0.0115
+      ],
+      "APD": [
+       0.5681,
+       0.0044
+      ],
+      "AMD": [
+       0.3145,
+       0.0186
+      ],
+      "SAMD": [
+       0.385,
+       0.0205
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0571,
+       0.0171
+      ],
+      "APD": [
+       0.528,
+       0.0194
+      ],
+      "AMD": [
+       0.2921,
+       0.0208
+      ],
+      "SAMD": [
+       0.369,
+       0.028
+      ]
+     },
+     "floor_n": 21
+    },
+    {
+     "from": "2000-2004",
+     "to": "2015-2019",
+     "kind": "origin",
+     "n": 21,
+     "metrics": {
+      "PRT": [
+       0.1242,
+       0.0248
+      ],
+      "APD": [
+       0.5666,
+       0.0226
+      ],
+      "AMD": [
+       0.348,
+       0.0187
+      ],
+      "SAMD": [
+       0.4461,
+       0.0195
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0574,
+       0.0114
+      ],
+      "APD": [
+       0.5679,
+       0.0047
+      ],
+      "AMD": [
+       0.3202,
+       0.013
+      ],
+      "SAMD": [
+       0.393,
+       0.0178
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0471,
+       0.0138
+      ],
+      "APD": [
+       0.494,
+       0.0309
+      ],
+      "AMD": [
+       0.2732,
+       0.0216
+      ],
+      "SAMD": [
+       0.3468,
+       0.0325
+      ]
+     },
+     "floor_n": 21
+    },
+    {
+     "from": "2000-2004",
+     "to": "2020-2024",
+     "kind": "origin",
+     "n": 21,
+     "metrics": {
+      "PRT": [
+       0.1287,
+       0.029
+      ],
+      "APD": [
+       0.5622,
+       0.0229
+      ],
+      "AMD": [
+       0.345,
+       0.0214
+      ],
+      "SAMD": [
+       0.4397,
+       0.0303
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0678,
+       0.0169
+      ],
+      "APD": [
+       0.5699,
+       0.0053
+      ],
+      "AMD": [
+       0.3236,
+       0.0171
+      ],
+      "SAMD": [
+       0.3919,
+       0.0252
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0396,
+       0.0087
+      ],
+      "APD": [
+       0.4646,
+       0.0243
+      ],
+      "AMD": [
+       0.2569,
+       0.0163
+      ],
+      "SAMD": [
+       0.3333,
+       0.0235
+      ]
+     },
+     "floor_n": 21
+    }
+   ],
+   "is_control": false
+  },
+  "trauma": {
+   "periods": [
+    "1965-1969",
+    "1970-1974",
+    "1975-1979",
+    "1980-1984",
+    "1985-1989",
+    "1990-1994",
+    "1995-1999",
+    "2000-2004",
+    "2005-2009",
+    "2010-2014",
+    "2015-2019",
+    "2020-2024"
+   ],
+   "n": {
+    "1965-1969": 112,
+    "1970-1974": 145,
+    "1975-1979": 294,
+    "1980-1984": 546,
+    "1985-1989": 1200,
+    "1990-1994": 2185,
+    "1995-1999": 3482,
+    "2000-2004": 5549,
+    "2005-2009": 8719,
+    "2010-2014": 12219,
+    "2015-2019": 16121,
+    "2020-2024": 22553
+   },
+   "pairs": [
+    {
+     "from": "1965-1969",
+     "to": "1970-1974",
+     "kind": "consecutive",
+     "n": 56,
+     "metrics": {
+      "PRT": [
+       0.0948,
+       0.0103
+      ],
+      "APD": [
+       0.7013,
+       0.0079
+      ],
+      "AMD": [
+       0.4064,
+       0.013
+      ],
+      "SAMD": [
+       0.4729,
+       0.0157
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0404,
+       0.0052
+      ],
+      "APD": [
+       0.7018,
+       0.0008
+      ],
+      "AMD": [
+       0.4062,
+       0.0071
+      ],
+      "SAMD": [
+       0.4705,
+       0.0104
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0358,
+       0.0062
+      ],
+      "APD": [
+       0.6672,
+       0.0062
+      ],
+      "AMD": [
+       0.3736,
+       0.0109
+      ],
+      "SAMD": [
+       0.4428,
+       0.0142
+      ]
+     },
+     "floor_n": 56
+    },
+    {
+     "from": "1970-1974",
+     "to": "1975-1979",
+     "kind": "consecutive",
+     "n": 72,
+     "metrics": {
+      "PRT": [
+       0.0661,
+       0.0073
+      ],
+      "APD": [
+       0.6904,
+       0.0068
+      ],
+      "AMD": [
+       0.3865,
+       0.01
+      ],
+      "SAMD": [
+       0.4592,
+       0.0103
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0267,
+       0.0049
+      ],
+      "APD": [
+       0.6666,
+       0.0013
+      ],
+      "AMD": [
+       0.3605,
+       0.0081
+      ],
+      "SAMD": [
+       0.4265,
+       0.0094
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0296,
+       0.0052
+      ],
+      "APD": [
+       0.6926,
+       0.0057
+      ],
+      "AMD": [
+       0.3761,
+       0.0086
+      ],
+      "SAMD": [
+       0.4431,
+       0.0132
+      ]
+     },
+     "floor_n": 72
+    },
+    {
+     "from": "1975-1979",
+     "to": "1980-1984",
+     "kind": "consecutive",
+     "n": 147,
+     "metrics": {
+      "PRT": [
+       0.0265,
+       0.003
+      ],
+      "APD": [
+       0.6973,
+       0.0065
+      ],
+      "AMD": [
+       0.3504,
+       0.0087
+      ],
+      "SAMD": [
+       0.4122,
+       0.0092
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.015,
+       0.0031
+      ],
+      "APD": [
+       0.6925,
+       0.0005
+      ],
+      "AMD": [
+       0.3422,
+       0.0048
+      ],
+      "SAMD": [
+       0.4075,
+       0.0072
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0155,
+       0.0026
+      ],
+      "APD": [
+       0.6958,
+       0.0052
+      ],
+      "AMD": [
+       0.3428,
+       0.0064
+      ],
+      "SAMD": [
+       0.4067,
+       0.008
+      ]
+     },
+     "floor_n": 147
+    },
+    {
+     "from": "1980-1984",
+     "to": "1985-1989",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.0267,
+       0.0041
+      ],
+      "APD": [
+       0.6922,
+       0.0041
+      ],
+      "AMD": [
+       0.3233,
+       0.006
+      ],
+      "SAMD": [
+       0.3978,
+       0.0071
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0093,
+       0.002
+      ],
+      "APD": [
+       0.6969,
+       0.0014
+      ],
+      "AMD": [
+       0.3195,
+       0.0033
+      ],
+      "SAMD": [
+       0.3824,
+       0.005
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0087,
+       0.0015
+      ],
+      "APD": [
+       0.6767,
+       0.0033
+      ],
+      "AMD": [
+       0.3015,
+       0.0054
+      ],
+      "SAMD": [
+       0.366,
+       0.0068
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "1985-1989",
+     "to": "1990-1994",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.0387,
+       0.0034
+      ],
+      "APD": [
+       0.7041,
+       0.0052
+      ],
+      "AMD": [
+       0.3224,
+       0.0062
+      ],
+      "SAMD": [
+       0.4001,
+       0.0073
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0091,
+       0.0026
+      ],
+      "APD": [
+       0.6755,
+       0.0034
+      ],
+      "AMD": [
+       0.301,
+       0.0041
+      ],
+      "SAMD": [
+       0.3651,
+       0.0064
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0095,
+       0.0018
+      ],
+      "APD": [
+       0.7108,
+       0.0049
+      ],
+      "AMD": [
+       0.3168,
+       0.0054
+      ],
+      "SAMD": [
+       0.3833,
+       0.0073
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "1990-1994",
+     "to": "1995-1999",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.043,
+       0.0032
+      ],
+      "APD": [
+       0.7226,
+       0.0068
+      ],
+      "AMD": [
+       0.3309,
+       0.0059
+      ],
+      "SAMD": [
+       0.4071,
+       0.0071
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0102,
+       0.0022
+      ],
+      "APD": [
+       0.7127,
+       0.0035
+      ],
+      "AMD": [
+       0.3178,
+       0.0058
+      ],
+      "SAMD": [
+       0.3855,
+       0.0082
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0099,
+       0.0018
+      ],
+      "APD": [
+       0.712,
+       0.0069
+      ],
+      "AMD": [
+       0.3208,
+       0.0062
+      ],
+      "SAMD": [
+       0.3882,
+       0.0072
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "1995-1999",
+     "to": "2000-2004",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.0189,
+       0.0028
+      ],
+      "APD": [
+       0.7109,
+       0.0042
+      ],
+      "AMD": [
+       0.3298,
+       0.0062
+      ],
+      "SAMD": [
+       0.3997,
+       0.0073
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0102,
+       0.0017
+      ],
+      "APD": [
+       0.7137,
+       0.006
+      ],
+      "AMD": [
+       0.3223,
+       0.0048
+      ],
+      "SAMD": [
+       0.3881,
+       0.0068
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0102,
+       0.0019
+      ],
+      "APD": [
+       0.7021,
+       0.0054
+      ],
+      "AMD": [
+       0.3243,
+       0.0063
+      ],
+      "SAMD": [
+       0.3907,
+       0.0079
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "2000-2004",
+     "to": "2005-2009",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.0241,
+       0.0017
+      ],
+      "APD": [
+       0.7041,
+       0.0055
+      ],
+      "AMD": [
+       0.3278,
+       0.006
+      ],
+      "SAMD": [
+       0.3944,
+       0.0071
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0104,
+       0.003
+      ],
+      "APD": [
+       0.7024,
+       0.0047
+      ],
+      "AMD": [
+       0.3241,
+       0.0052
+      ],
+      "SAMD": [
+       0.391,
+       0.0067
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0103,
+       0.0019
+      ],
+      "APD": [
+       0.7009,
+       0.0057
+      ],
+      "AMD": [
+       0.3203,
+       0.0057
+      ],
+      "SAMD": [
+       0.3881,
+       0.0056
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "2005-2009",
+     "to": "2010-2014",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.0142,
+       0.0021
+      ],
+      "APD": [
+       0.7014,
+       0.0065
+      ],
+      "AMD": [
+       0.3195,
+       0.0067
+      ],
+      "SAMD": [
+       0.3888,
+       0.0075
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0098,
+       0.0021
+      ],
+      "APD": [
+       0.6983,
+       0.0066
+      ],
+      "AMD": [
+       0.3201,
+       0.0066
+      ],
+      "SAMD": [
+       0.3864,
+       0.0085
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.01,
+       0.0017
+      ],
+      "APD": [
+       0.6973,
+       0.0059
+      ],
+      "AMD": [
+       0.309,
+       0.0056
+      ],
+      "SAMD": [
+       0.3765,
+       0.0069
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "2010-2014",
+     "to": "2015-2019",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.0141,
+       0.0023
+      ],
+      "APD": [
+       0.6912,
+       0.007
+      ],
+      "AMD": [
+       0.3059,
+       0.0065
+      ],
+      "SAMD": [
+       0.3769,
+       0.0071
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0105,
+       0.0027
+      ],
+      "APD": [
+       0.6973,
+       0.0077
+      ],
+      "AMD": [
+       0.3072,
+       0.0051
+      ],
+      "SAMD": [
+       0.3757,
+       0.0081
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0091,
+       0.0022
+      ],
+      "APD": [
+       0.6801,
+       0.0055
+      ],
+      "AMD": [
+       0.296,
+       0.0056
+      ],
+      "SAMD": [
+       0.3645,
+       0.0058
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "2015-2019",
+     "to": "2020-2024",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.013,
+       0.0021
+      ],
+      "APD": [
+       0.6785,
+       0.0064
+      ],
+      "AMD": [
+       0.3,
+       0.0045
+      ],
+      "SAMD": [
+       0.3698,
+       0.0068
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0089,
+       0.0015
+      ],
+      "APD": [
+       0.6828,
+       0.0044
+      ],
+      "AMD": [
+       0.2967,
+       0.0053
+      ],
+      "SAMD": [
+       0.3641,
+       0.0077
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0083,
+       0.0014
+      ],
+      "APD": [
+       0.6714,
+       0.0052
+      ],
+      "AMD": [
+       0.2934,
+       0.0054
+      ],
+      "SAMD": [
+       0.3605,
+       0.0072
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "1965-1969",
+     "to": "1970-1974",
+     "kind": "origin",
+     "n": 56,
+     "metrics": {
+      "PRT": [
+       0.0902,
+       0.0092
+      ],
+      "APD": [
+       0.6988,
+       0.0074
+      ],
+      "AMD": [
+       0.4067,
+       0.0153
+      ],
+      "SAMD": [
+       0.4708,
+       0.0161
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0388,
+       0.0064
+      ],
+      "APD": [
+       0.7016,
+       0.001
+      ],
+      "AMD": [
+       0.4058,
+       0.0086
+      ],
+      "SAMD": [
+       0.4689,
+       0.011
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0351,
+       0.0062
+      ],
+      "APD": [
+       0.6652,
+       0.0055
+      ],
+      "AMD": [
+       0.3765,
+       0.0093
+      ],
+      "SAMD": [
+       0.4413,
+       0.0125
+      ]
+     },
+     "floor_n": 56
+    },
+    {
+     "from": "1965-1969",
+     "to": "1975-1979",
+     "kind": "origin",
+     "n": 56,
+     "metrics": {
+      "PRT": [
+       0.1068,
+       0.0087
+      ],
+      "APD": [
+       0.7167,
+       0.0051
+      ],
+      "AMD": [
+       0.4262,
+       0.0094
+      ],
+      "SAMD": [
+       0.4945,
+       0.0101
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0414,
+       0.0059
+      ],
+      "APD": [
+       0.702,
+       0.001
+      ],
+      "AMD": [
+       0.4093,
+       0.0072
+      ],
+      "SAMD": [
+       0.4723,
+       0.01
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0378,
+       0.0061
+      ],
+      "APD": [
+       0.6887,
+       0.0061
+      ],
+      "AMD": [
+       0.3883,
+       0.009
+      ],
+      "SAMD": [
+       0.4567,
+       0.0097
+      ]
+     },
+     "floor_n": 56
+    },
+    {
+     "from": "1965-1969",
+     "to": "1980-1984",
+     "kind": "origin",
+     "n": 56,
+     "metrics": {
+      "PRT": [
+       0.1023,
+       0.0112
+      ],
+      "APD": [
+       0.7177,
+       0.0088
+      ],
+      "AMD": [
+       0.425,
+       0.0124
+      ],
+      "SAMD": [
+       0.4937,
+       0.0121
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0418,
+       0.0071
+      ],
+      "APD": [
+       0.7021,
+       0.0011
+      ],
+      "AMD": [
+       0.4068,
+       0.009
+      ],
+      "SAMD": [
+       0.4727,
+       0.0115
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0403,
+       0.0087
+      ],
+      "APD": [
+       0.6941,
+       0.0101
+      ],
+      "AMD": [
+       0.3925,
+       0.0117
+      ],
+      "SAMD": [
+       0.461,
+       0.0146
+      ]
+     },
+     "floor_n": 56
+    },
+    {
+     "from": "1965-1969",
+     "to": "1985-1989",
+     "kind": "origin",
+     "n": 56,
+     "metrics": {
+      "PRT": [
+       0.118,
+       0.0112
+      ],
+      "APD": [
+       0.7128,
+       0.0076
+      ],
+      "AMD": [
+       0.4326,
+       0.0138
+      ],
+      "SAMD": [
+       0.505,
+       0.0152
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0435,
+       0.0075
+      ],
+      "APD": [
+       0.7024,
+       0.0012
+      ],
+      "AMD": [
+       0.4075,
+       0.0083
+      ],
+      "SAMD": [
+       0.473,
+       0.0134
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0379,
+       0.0076
+      ],
+      "APD": [
+       0.678,
+       0.0108
+      ],
+      "AMD": [
+       0.3769,
+       0.012
+      ],
+      "SAMD": [
+       0.4455,
+       0.0133
+      ]
+     },
+     "floor_n": 56
+    },
+    {
+     "from": "1965-1969",
+     "to": "1990-1994",
+     "kind": "origin",
+     "n": 56,
+     "metrics": {
+      "PRT": [
+       0.1286,
+       0.01
+      ],
+      "APD": [
+       0.7308,
+       0.0078
+      ],
+      "AMD": [
+       0.4544,
+       0.0117
+      ],
+      "SAMD": [
+       0.5313,
+       0.0142
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.041,
+       0.0083
+      ],
+      "APD": [
+       0.7019,
+       0.0013
+      ],
+      "AMD": [
+       0.4063,
+       0.0076
+      ],
+      "SAMD": [
+       0.4712,
+       0.0085
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0442,
+       0.0087
+      ],
+      "APD": [
+       0.7096,
+       0.0149
+      ],
+      "AMD": [
+       0.3904,
+       0.013
+      ],
+      "SAMD": [
+       0.462,
+       0.0155
+      ]
+     },
+     "floor_n": 56
+    },
+    {
+     "from": "1965-1969",
+     "to": "1995-1999",
+     "kind": "origin",
+     "n": 56,
+     "metrics": {
+      "PRT": [
+       0.1656,
+       0.0113
+      ],
+      "APD": [
+       0.746,
+       0.0099
+      ],
+      "AMD": [
+       0.4691,
+       0.0122
+      ],
+      "SAMD": [
+       0.5517,
+       0.0141
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0441,
+       0.008
+      ],
+      "APD": [
+       0.7024,
+       0.0012
+      ],
+      "AMD": [
+       0.4076,
+       0.0084
+      ],
+      "SAMD": [
+       0.4747,
+       0.0087
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0431,
+       0.0064
+      ],
+      "APD": [
+       0.7189,
+       0.01
+      ],
+      "AMD": [
+       0.4008,
+       0.0155
+      ],
+      "SAMD": [
+       0.4702,
+       0.0162
+      ]
+     },
+     "floor_n": 56
+    },
+    {
+     "from": "1965-1969",
+     "to": "2000-2004",
+     "kind": "origin",
+     "n": 56,
+     "metrics": {
+      "PRT": [
+       0.2003,
+       0.0171
+      ],
+      "APD": [
+       0.752,
+       0.0103
+      ],
+      "AMD": [
+       0.4829,
+       0.0094
+      ],
+      "SAMD": [
+       0.5674,
+       0.0149
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0414,
+       0.0078
+      ],
+      "APD": [
+       0.702,
+       0.0011
+      ],
+      "AMD": [
+       0.407,
+       0.009
+      ],
+      "SAMD": [
+       0.4718,
+       0.011
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0435,
+       0.01
+      ],
+      "APD": [
+       0.7037,
+       0.0093
+      ],
+      "AMD": [
+       0.3987,
+       0.012
+      ],
+      "SAMD": [
+       0.4733,
+       0.0138
+      ]
+     },
+     "floor_n": 56
+    },
+    {
+     "from": "1965-1969",
+     "to": "2005-2009",
+     "kind": "origin",
+     "n": 56,
+     "metrics": {
+      "PRT": [
+       0.2372,
+       0.0215
+      ],
+      "APD": [
+       0.7617,
+       0.0076
+      ],
+      "AMD": [
+       0.4993,
+       0.0124
+      ],
+      "SAMD": [
+       0.5823,
+       0.0165
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0402,
+       0.0072
+      ],
+      "APD": [
+       0.7018,
+       0.0011
+      ],
+      "AMD": [
+       0.4081,
+       0.006
+      ],
+      "SAMD": [
+       0.4731,
+       0.0095
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0408,
+       0.0083
+      ],
+      "APD": [
+       0.6959,
+       0.0162
+      ],
+      "AMD": [
+       0.3946,
+       0.0177
+      ],
+      "SAMD": [
+       0.4675,
+       0.0166
+      ]
+     },
+     "floor_n": 56
+    },
+    {
+     "from": "1965-1969",
+     "to": "2010-2014",
+     "kind": "origin",
+     "n": 56,
+     "metrics": {
+      "PRT": [
+       0.2169,
+       0.0158
+      ],
+      "APD": [
+       0.7551,
+       0.0068
+      ],
+      "AMD": [
+       0.4923,
+       0.0104
+      ],
+      "SAMD": [
+       0.5741,
+       0.0116
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0454,
+       0.0104
+      ],
+      "APD": [
+       0.7027,
+       0.0016
+      ],
+      "AMD": [
+       0.4082,
+       0.0092
+      ],
+      "SAMD": [
+       0.4724,
+       0.0121
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0405,
+       0.0064
+      ],
+      "APD": [
+       0.6962,
+       0.0108
+      ],
+      "AMD": [
+       0.3822,
+       0.0167
+      ],
+      "SAMD": [
+       0.4547,
+       0.016
+      ]
+     },
+     "floor_n": 56
+    },
+    {
+     "from": "1965-1969",
+     "to": "2015-2019",
+     "kind": "origin",
+     "n": 56,
+     "metrics": {
+      "PRT": [
+       0.2515,
+       0.0223
+      ],
+      "APD": [
+       0.7597,
+       0.0113
+      ],
+      "AMD": [
+       0.5074,
+       0.0136
+      ],
+      "SAMD": [
+       0.5907,
+       0.0176
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0408,
+       0.0058
+      ],
+      "APD": [
+       0.7019,
+       0.001
+      ],
+      "AMD": [
+       0.41,
+       0.0051
+      ],
+      "SAMD": [
+       0.4743,
+       0.0075
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0394,
+       0.007
+      ],
+      "APD": [
+       0.6822,
+       0.0121
+      ],
+      "AMD": [
+       0.3719,
+       0.0164
+      ],
+      "SAMD": [
+       0.4468,
+       0.0143
+      ]
+     },
+     "floor_n": 56
+    },
+    {
+     "from": "1965-1969",
+     "to": "2020-2024",
+     "kind": "origin",
+     "n": 56,
+     "metrics": {
+      "PRT": [
+       0.2596,
+       0.0186
+      ],
+      "APD": [
+       0.7564,
+       0.0113
+      ],
+      "AMD": [
+       0.5161,
+       0.0165
+      ],
+      "SAMD": [
+       0.6001,
+       0.013
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0402,
+       0.0082
+      ],
+      "APD": [
+       0.7018,
+       0.0013
+      ],
+      "AMD": [
+       0.4072,
+       0.0052
+      ],
+      "SAMD": [
+       0.4711,
+       0.009
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0399,
+       0.0084
+      ],
+      "APD": [
+       0.6791,
+       0.01
+      ],
+      "AMD": [
+       0.3633,
+       0.0131
+      ],
+      "SAMD": [
+       0.4427,
+       0.0147
+      ]
+     },
+     "floor_n": 56
+    }
+   ],
+   "is_control": false
+  },
+  "trauma_informed": {
+   "periods": [
+    "2000-2004",
+    "2005-2009",
+    "2010-2014",
+    "2015-2019",
+    "2020-2024"
+   ],
+   "n": {
+    "2000-2004": 19,
+    "2005-2009": 66,
+    "2010-2014": 231,
+    "2015-2019": 1064,
+    "2020-2024": 3234
+   },
+   "pairs": [
+    {
+     "from": "2000-2004",
+     "to": "2005-2009",
+     "kind": "consecutive",
+     "n": 9,
+     "metrics": {
+      "PRT": [
+       0.1707,
+       0.0345
+      ],
+      "APD": [
+       0.6143,
+       0.0239
+      ],
+      "AMD": [
+       0.4378,
+       0.0297
+      ],
+      "SAMD": [
+       0.5033,
+       0.0347
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1514,
+       0.0409
+      ],
+      "APD": [
+       0.6294,
+       0.0113
+      ],
+      "AMD": [
+       0.353,
+       0.048
+      ],
+      "SAMD": [
+       0.4323,
+       0.0549
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1389,
+       0.0344
+      ],
+      "APD": [
+       0.5894,
+       0.0331
+      ],
+      "AMD": [
+       0.3872,
+       0.0425
+      ],
+      "SAMD": [
+       0.4529,
+       0.0446
+      ]
+     },
+     "floor_n": 9
+    },
+    {
+     "from": "2005-2009",
+     "to": "2010-2014",
+     "kind": "consecutive",
+     "n": 33,
+     "metrics": {
+      "PRT": [
+       0.0594,
+       0.0103
+      ],
+      "APD": [
+       0.608,
+       0.0163
+      ],
+      "AMD": [
+       0.3504,
+       0.0146
+      ],
+      "SAMD": [
+       0.4279,
+       0.019
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.04,
+       0.0102
+      ],
+      "APD": [
+       0.5929,
+       0.0023
+      ],
+      "AMD": [
+       0.3104,
+       0.0137
+      ],
+      "SAMD": [
+       0.3809,
+       0.0173
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0434,
+       0.0109
+      ],
+      "APD": [
+       0.6045,
+       0.0214
+      ],
+      "AMD": [
+       0.3362,
+       0.014
+      ],
+      "SAMD": [
+       0.4061,
+       0.0188
+      ]
+     },
+     "floor_n": 33
+    },
+    {
+     "from": "2010-2014",
+     "to": "2015-2019",
+     "kind": "consecutive",
+     "n": 115,
+     "metrics": {
+      "PRT": [
+       0.0206,
+       0.004
+      ],
+      "APD": [
+       0.5961,
+       0.0085
+      ],
+      "AMD": [
+       0.2863,
+       0.0073
+      ],
+      "SAMD": [
+       0.3554,
+       0.0087
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0129,
+       0.0026
+      ],
+      "APD": [
+       0.6051,
+       0.0008
+      ],
+      "AMD": [
+       0.2809,
+       0.0043
+      ],
+      "SAMD": [
+       0.3451,
+       0.0082
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0117,
+       0.0043
+      ],
+      "APD": [
+       0.5704,
+       0.0107
+      ],
+      "AMD": [
+       0.266,
+       0.0078
+      ],
+      "SAMD": [
+       0.3277,
+       0.0083
+      ]
+     },
+     "floor_n": 115
+    },
+    {
+     "from": "2015-2019",
+     "to": "2020-2024",
+     "kind": "consecutive",
+     "n": 250,
+     "metrics": {
+      "PRT": [
+       0.0088,
+       0.0013
+      ],
+      "APD": [
+       0.582,
+       0.005
+      ],
+      "AMD": [
+       0.2529,
+       0.0054
+      ],
+      "SAMD": [
+       0.3082,
+       0.0073
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0052,
+       0.0008
+      ],
+      "APD": [
+       0.5736,
+       0.005
+      ],
+      "AMD": [
+       0.2433,
+       0.0034
+      ],
+      "SAMD": [
+       0.2979,
+       0.0057
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0057,
+       0.0011
+      ],
+      "APD": [
+       0.5849,
+       0.0055
+      ],
+      "AMD": [
+       0.2513,
+       0.005
+      ],
+      "SAMD": [
+       0.3059,
+       0.0065
+      ]
+     },
+     "floor_n": 250
+    },
+    {
+     "from": "2000-2004",
+     "to": "2005-2009",
+     "kind": "origin",
+     "n": 9,
+     "metrics": {
+      "PRT": [
+       0.207,
+       0.0403
+      ],
+      "APD": [
+       0.6341,
+       0.0277
+      ],
+      "AMD": [
+       0.4523,
+       0.0377
+      ],
+      "SAMD": [
+       0.5325,
+       0.038
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1743,
+       0.0478
+      ],
+      "APD": [
+       0.6334,
+       0.0132
+      ],
+      "AMD": [
+       0.3824,
+       0.05
+      ],
+      "SAMD": [
+       0.4686,
+       0.0591
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1407,
+       0.0367
+      ],
+      "APD": [
+       0.5919,
+       0.0278
+      ],
+      "AMD": [
+       0.4027,
+       0.0303
+      ],
+      "SAMD": [
+       0.4695,
+       0.0359
+      ]
+     },
+     "floor_n": 9
+    },
+    {
+     "from": "2000-2004",
+     "to": "2010-2014",
+     "kind": "origin",
+     "n": 9,
+     "metrics": {
+      "PRT": [
+       0.2269,
+       0.0482
+      ],
+      "APD": [
+       0.6447,
+       0.0296
+      ],
+      "AMD": [
+       0.4755,
+       0.0331
+      ],
+      "SAMD": [
+       0.5497,
+       0.0387
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.152,
+       0.0436
+      ],
+      "APD": [
+       0.6297,
+       0.0109
+      ],
+      "AMD": [
+       0.3698,
+       0.0479
+      ],
+      "SAMD": [
+       0.4454,
+       0.0638
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1536,
+       0.0498
+      ],
+      "APD": [
+       0.5952,
+       0.0342
+      ],
+      "AMD": [
+       0.4056,
+       0.0406
+      ],
+      "SAMD": [
+       0.477,
+       0.043
+      ]
+     },
+     "floor_n": 9
+    },
+    {
+     "from": "2000-2004",
+     "to": "2015-2019",
+     "kind": "origin",
+     "n": 9,
+     "metrics": {
+      "PRT": [
+       0.2007,
+       0.0363
+      ],
+      "APD": [
+       0.6226,
+       0.0265
+      ],
+      "AMD": [
+       0.453,
+       0.0334
+      ],
+      "SAMD": [
+       0.5249,
+       0.0336
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1674,
+       0.0524
+      ],
+      "APD": [
+       0.6324,
+       0.0131
+      ],
+      "AMD": [
+       0.383,
+       0.0616
+      ],
+      "SAMD": [
+       0.4648,
+       0.0731
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1341,
+       0.028
+      ],
+      "APD": [
+       0.5741,
+       0.0307
+      ],
+      "AMD": [
+       0.377,
+       0.0414
+      ],
+      "SAMD": [
+       0.4557,
+       0.0401
+      ]
+     },
+     "floor_n": 9
+    },
+    {
+     "from": "2000-2004",
+     "to": "2020-2024",
+     "kind": "origin",
+     "n": 9,
+     "metrics": {
+      "PRT": [
+       0.2333,
+       0.0378
+      ],
+      "APD": [
+       0.6347,
+       0.0184
+      ],
+      "AMD": [
+       0.4749,
+       0.0232
+      ],
+      "SAMD": [
+       0.5413,
+       0.0277
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1465,
+       0.0503
+      ],
+      "APD": [
+       0.6255,
+       0.0122
+      ],
+      "AMD": [
+       0.364,
+       0.0537
+      ],
+      "SAMD": [
+       0.4343,
+       0.0623
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1251,
+       0.0323
+      ],
+      "APD": [
+       0.5795,
+       0.0381
+      ],
+      "AMD": [
+       0.3823,
+       0.0374
+      ],
+      "SAMD": [
+       0.4465,
+       0.0447
+      ]
+     },
+     "floor_n": 9
+    }
+   ],
+   "is_control": false
+  },
+  "vicarious_trauma": {
+   "periods": [
+    "2000-2004",
+    "2005-2009",
+    "2010-2014",
+    "2015-2019",
+    "2020-2024"
+   ],
+   "n": {
+    "2000-2004": 22,
+    "2005-2009": 30,
+    "2010-2014": 67,
+    "2015-2019": 116,
+    "2020-2024": 269
+   },
+   "pairs": [
+    {
+     "from": "2000-2004",
+     "to": "2005-2009",
+     "kind": "consecutive",
+     "n": 11,
+     "metrics": {
+      "PRT": [
+       0.1223,
+       0.0152
+      ],
+      "APD": [
+       0.5683,
+       0.0202
+      ],
+      "AMD": [
+       0.3844,
+       0.0212
+      ],
+      "SAMD": [
+       0.4716,
+       0.0272
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1263,
+       0.0224
+      ],
+      "APD": [
+       0.5789,
+       0.0052
+      ],
+      "AMD": [
+       0.3735,
+       0.0225
+      ],
+      "SAMD": [
+       0.4498,
+       0.033
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0988,
+       0.0237
+      ],
+      "APD": [
+       0.5428,
+       0.0194
+      ],
+      "AMD": [
+       0.3364,
+       0.0262
+      ],
+      "SAMD": [
+       0.4172,
+       0.0363
+      ]
+     },
+     "floor_n": 11
+    },
+    {
+     "from": "2005-2009",
+     "to": "2010-2014",
+     "kind": "consecutive",
+     "n": 15,
+     "metrics": {
+      "PRT": [
+       0.0787,
+       0.0157
+      ],
+      "APD": [
+       0.5465,
+       0.0298
+      ],
+      "AMD": [
+       0.3401,
+       0.0219
+      ],
+      "SAMD": [
+       0.4253,
+       0.0318
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0776,
+       0.0157
+      ],
+      "APD": [
+       0.5469,
+       0.0047
+      ],
+      "AMD": [
+       0.3305,
+       0.0185
+      ],
+      "SAMD": [
+       0.4122,
+       0.0192
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0809,
+       0.015
+      ],
+      "APD": [
+       0.5539,
+       0.026
+      ],
+      "AMD": [
+       0.3356,
+       0.0215
+      ],
+      "SAMD": [
+       0.428,
+       0.0336
+      ]
+     },
+     "floor_n": 15
+    },
+    {
+     "from": "2010-2014",
+     "to": "2015-2019",
+     "kind": "consecutive",
+     "n": 33,
+     "metrics": {
+      "PRT": [
+       0.0371,
+       0.0066
+      ],
+      "APD": [
+       0.5531,
+       0.0161
+      ],
+      "AMD": [
+       0.3188,
+       0.0112
+      ],
+      "SAMD": [
+       0.396,
+       0.0136
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0379,
+       0.0092
+      ],
+      "APD": [
+       0.5539,
+       0.0038
+      ],
+      "AMD": [
+       0.2952,
+       0.0132
+      ],
+      "SAMD": [
+       0.3829,
+       0.0168
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0347,
+       0.0065
+      ],
+      "APD": [
+       0.547,
+       0.0128
+      ],
+      "AMD": [
+       0.3213,
+       0.0133
+      ],
+      "SAMD": [
+       0.3908,
+       0.0175
+      ]
+     },
+     "floor_n": 33
+    },
+    {
+     "from": "2015-2019",
+     "to": "2020-2024",
+     "kind": "consecutive",
+     "n": 58,
+     "metrics": {
+      "PRT": [
+       0.0266,
+       0.0052
+      ],
+      "APD": [
+       0.5331,
+       0.0121
+      ],
+      "AMD": [
+       0.2906,
+       0.0082
+      ],
+      "SAMD": [
+       0.3611,
+       0.0105
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0186,
+       0.003
+      ],
+      "APD": [
+       0.5438,
+       0.0006
+      ],
+      "AMD": [
+       0.2947,
+       0.0086
+      ],
+      "SAMD": [
+       0.3599,
+       0.0094
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.018,
+       0.005
+      ],
+      "APD": [
+       0.5187,
+       0.0142
+      ],
+      "AMD": [
+       0.2804,
+       0.0128
+      ],
+      "SAMD": [
+       0.3449,
+       0.0156
+      ]
+     },
+     "floor_n": 58
+    },
+    {
+     "from": "2000-2004",
+     "to": "2005-2009",
+     "kind": "origin",
+     "n": 11,
+     "metrics": {
+      "PRT": [
+       0.1234,
+       0.0243
+      ],
+      "APD": [
+       0.5693,
+       0.0326
+      ],
+      "AMD": [
+       0.3911,
+       0.0324
+      ],
+      "SAMD": [
+       0.4678,
+       0.035
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1201,
+       0.0239
+      ],
+      "APD": [
+       0.5776,
+       0.0057
+      ],
+      "AMD": [
+       0.3685,
+       0.0222
+      ],
+      "SAMD": [
+       0.4425,
+       0.0314
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0973,
+       0.0167
+      ],
+      "APD": [
+       0.5476,
+       0.0174
+      ],
+      "AMD": [
+       0.3532,
+       0.025
+      ],
+      "SAMD": [
+       0.4332,
+       0.0274
+      ]
+     },
+     "floor_n": 11
+    },
+    {
+     "from": "2000-2004",
+     "to": "2010-2014",
+     "kind": "origin",
+     "n": 11,
+     "metrics": {
+      "PRT": [
+       0.1214,
+       0.0169
+      ],
+      "APD": [
+       0.575,
+       0.0333
+      ],
+      "AMD": [
+       0.3848,
+       0.0265
+      ],
+      "SAMD": [
+       0.4642,
+       0.0269
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1107,
+       0.0242
+      ],
+      "APD": [
+       0.5754,
+       0.0054
+      ],
+      "AMD": [
+       0.3611,
+       0.0176
+      ],
+      "SAMD": [
+       0.4298,
+       0.0281
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.101,
+       0.0197
+      ],
+      "APD": [
+       0.5541,
+       0.0266
+      ],
+      "AMD": [
+       0.3574,
+       0.0288
+      ],
+      "SAMD": [
+       0.4393,
+       0.0324
+      ]
+     },
+     "floor_n": 11
+    },
+    {
+     "from": "2000-2004",
+     "to": "2015-2019",
+     "kind": "origin",
+     "n": 11,
+     "metrics": {
+      "PRT": [
+       0.1337,
+       0.0248
+      ],
+      "APD": [
+       0.576,
+       0.0331
+      ],
+      "AMD": [
+       0.3982,
+       0.0314
+      ],
+      "SAMD": [
+       0.4801,
+       0.0321
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1204,
+       0.0224
+      ],
+      "APD": [
+       0.5775,
+       0.0051
+      ],
+      "AMD": [
+       0.3658,
+       0.0195
+      ],
+      "SAMD": [
+       0.436,
+       0.0286
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0976,
+       0.0241
+      ],
+      "APD": [
+       0.5392,
+       0.0365
+      ],
+      "AMD": [
+       0.3676,
+       0.0393
+      ],
+      "SAMD": [
+       0.4416,
+       0.0461
+      ]
+     },
+     "floor_n": 11
+    },
+    {
+     "from": "2000-2004",
+     "to": "2020-2024",
+     "kind": "origin",
+     "n": 11,
+     "metrics": {
+      "PRT": [
+       0.1517,
+       0.0368
+      ],
+      "APD": [
+       0.5677,
+       0.0374
+      ],
+      "AMD": [
+       0.3919,
+       0.0308
+      ],
+      "SAMD": [
+       0.475,
+       0.0369
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.114,
+       0.0253
+      ],
+      "APD": [
+       0.5762,
+       0.0056
+      ],
+      "AMD": [
+       0.3644,
+       0.0213
+      ],
+      "SAMD": [
+       0.4326,
+       0.0316
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0904,
+       0.0189
+      ],
+      "APD": [
+       0.5124,
+       0.0286
+      ],
+      "AMD": [
+       0.3394,
+       0.0255
+      ],
+      "SAMD": [
+       0.4139,
+       0.0352
+      ]
+     },
+     "floor_n": 11
+    }
+   ],
+   "is_control": false
+  },
+  "participants": {
+   "periods": [
+    "1985-1989",
+    "1990-1994",
+    "1995-1999",
+    "2000-2004",
+    "2005-2009",
+    "2010-2014",
+    "2015-2019",
+    "2020-2024"
+   ],
+   "n": {
+    "1985-1989": 17,
+    "1990-1994": 63,
+    "1995-1999": 245,
+    "2000-2004": 300,
+    "2005-2009": 298,
+    "2010-2014": 300,
+    "2015-2019": 300,
+    "2020-2024": 300
+   },
+   "pairs": [
+    {
+     "from": "1985-1989",
+     "to": "1990-1994",
+     "kind": "consecutive",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.2935,
+       0.0585
+      ],
+      "APD": [
+       0.7339,
+       0.0274
+      ],
+      "AMD": [
+       0.5416,
+       0.0639
+      ],
+      "SAMD": [
+       0.6078,
+       0.0595
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2169,
+       0.0487
+      ],
+      "APD": [
+       0.7068,
+       0.0133
+      ],
+      "AMD": [
+       0.4978,
+       0.041
+      ],
+      "SAMD": [
+       0.5643,
+       0.0497
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.2543,
+       0.0709
+      ],
+      "APD": [
+       0.7342,
+       0.0324
+      ],
+      "AMD": [
+       0.4769,
+       0.0687
+      ],
+      "SAMD": [
+       0.5483,
+       0.0704
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1990-1994",
+     "to": "1995-1999",
+     "kind": "consecutive",
+     "n": 31,
+     "metrics": {
+      "PRT": [
+       0.17,
+       0.025
+      ],
+      "APD": [
+       0.7238,
+       0.0129
+      ],
+      "AMD": [
+       0.3826,
+       0.0266
+      ],
+      "SAMD": [
+       0.5103,
+       0.0231
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0768,
+       0.0194
+      ],
+      "APD": [
+       0.7328,
+       0.0027
+      ],
+      "AMD": [
+       0.3289,
+       0.0122
+      ],
+      "SAMD": [
+       0.4214,
+       0.0232
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0575,
+       0.013
+      ],
+      "APD": [
+       0.6406,
+       0.0217
+      ],
+      "AMD": [
+       0.3291,
+       0.0174
+      ],
+      "SAMD": [
+       0.4171,
+       0.0259
+      ]
+     },
+     "floor_n": 31
+    },
+    {
+     "from": "1995-1999",
+     "to": "2000-2004",
+     "kind": "consecutive",
+     "n": 122,
+     "metrics": {
+      "PRT": [
+       0.0235,
+       0.0032
+      ],
+      "APD": [
+       0.6198,
+       0.0077
+      ],
+      "AMD": [
+       0.2632,
+       0.0069
+      ],
+      "SAMD": [
+       0.3348,
+       0.0093
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0151,
+       0.0035
+      ],
+      "APD": [
+       0.6362,
+       0.0012
+      ],
+      "AMD": [
+       0.2599,
+       0.0035
+      ],
+      "SAMD": [
+       0.3331,
+       0.01
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0124,
+       0.0028
+      ],
+      "APD": [
+       0.5951,
+       0.0053
+      ],
+      "AMD": [
+       0.2445,
+       0.005
+      ],
+      "SAMD": [
+       0.3166,
+       0.01
+      ]
+     },
+     "floor_n": 122
+    },
+    {
+     "from": "2000-2004",
+     "to": "2005-2009",
+     "kind": "consecutive",
+     "n": 149,
+     "metrics": {
+      "PRT": [
+       0.0223,
+       0.0026
+      ],
+      "APD": [
+       0.6081,
+       0.0097
+      ],
+      "AMD": [
+       0.2458,
+       0.008
+      ],
+      "SAMD": [
+       0.323,
+       0.0116
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0103,
+       0.0042
+      ],
+      "APD": [
+       0.5964,
+       0.0011
+      ],
+      "AMD": [
+       0.2382,
+       0.0027
+      ],
+      "SAMD": [
+       0.3085,
+       0.0096
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0113,
+       0.0036
+      ],
+      "APD": [
+       0.6098,
+       0.0006
+      ],
+      "AMD": [
+       0.2286,
+       0.003
+      ],
+      "SAMD": [
+       0.3008,
+       0.0088
+      ]
+     },
+     "floor_n": 149
+    },
+    {
+     "from": "2005-2009",
+     "to": "2010-2014",
+     "kind": "consecutive",
+     "n": 149,
+     "metrics": {
+      "PRT": [
+       0.0101,
+       0.0019
+      ],
+      "APD": [
+       0.5885,
+       0.0088
+      ],
+      "AMD": [
+       0.2249,
+       0.0047
+      ],
+      "SAMD": [
+       0.2999,
+       0.0092
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0109,
+       0.0028
+      ],
+      "APD": [
+       0.6097,
+       0.0005
+      ],
+      "AMD": [
+       0.2282,
+       0.0029
+      ],
+      "SAMD": [
+       0.3011,
+       0.0095
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.01,
+       0.0032
+      ],
+      "APD": [
+       0.5661,
+       0.0008
+      ],
+      "AMD": [
+       0.2167,
+       0.003
+      ],
+      "SAMD": [
+       0.2858,
+       0.009
+      ]
+     },
+     "floor_n": 149
+    },
+    {
+     "from": "2010-2014",
+     "to": "2015-2019",
+     "kind": "consecutive",
+     "n": 150,
+     "metrics": {
+      "PRT": [
+       0.0106,
+       0.002
+      ],
+      "APD": [
+       0.554,
+       0.0065
+      ],
+      "AMD": [
+       0.2142,
+       0.0051
+      ],
+      "SAMD": [
+       0.2777,
+       0.0082
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0086,
+       0.002
+      ],
+      "APD": [
+       0.5659,
+       0.0004
+      ],
+      "AMD": [
+       0.2165,
+       0.0029
+      ],
+      "SAMD": [
+       0.2849,
+       0.007
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.008,
+       0.0021
+      ],
+      "APD": [
+       0.5392,
+       0.0005
+      ],
+      "AMD": [
+       0.2116,
+       0.0033
+      ],
+      "SAMD": [
+       0.2791,
+       0.0087
+      ]
+     },
+     "floor_n": 150
+    },
+    {
+     "from": "2015-2019",
+     "to": "2020-2024",
+     "kind": "consecutive",
+     "n": 150,
+     "metrics": {
+      "PRT": [
+       0.0114,
+       0.0025
+      ],
+      "APD": [
+       0.5556,
+       0.0066
+      ],
+      "AMD": [
+       0.2176,
+       0.006
+      ],
+      "SAMD": [
+       0.287,
+       0.009
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0076,
+       0.0019
+      ],
+      "APD": [
+       0.5391,
+       0.0004
+      ],
+      "AMD": [
+       0.2109,
+       0.0033
+      ],
+      "SAMD": [
+       0.2769,
+       0.006
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0085,
+       0.0017
+      ],
+      "APD": [
+       0.5668,
+       0.0003
+      ],
+      "AMD": [
+       0.2163,
+       0.003
+      ],
+      "SAMD": [
+       0.2814,
+       0.0089
+      ]
+     },
+     "floor_n": 150
+    },
+    {
+     "from": "1985-1989",
+     "to": "1990-1994",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.3137,
+       0.0612
+      ],
+      "APD": [
+       0.7439,
+       0.0271
+      ],
+      "AMD": [
+       0.5584,
+       0.0493
+      ],
+      "SAMD": [
+       0.6239,
+       0.0396
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2227,
+       0.0362
+      ],
+      "APD": [
+       0.7091,
+       0.0109
+      ],
+      "AMD": [
+       0.5005,
+       0.0348
+      ],
+      "SAMD": [
+       0.565,
+       0.0425
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.2761,
+       0.0719
+      ],
+      "APD": [
+       0.7382,
+       0.0224
+      ],
+      "AMD": [
+       0.482,
+       0.067
+      ],
+      "SAMD": [
+       0.5651,
+       0.0651
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1985-1989",
+     "to": "1995-1999",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.2296,
+       0.0521
+      ],
+      "APD": [
+       0.679,
+       0.0343
+      ],
+      "AMD": [
+       0.4592,
+       0.0567
+      ],
+      "SAMD": [
+       0.5431,
+       0.0585
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2367,
+       0.0561
+      ],
+      "APD": [
+       0.7097,
+       0.0136
+      ],
+      "AMD": [
+       0.5185,
+       0.0456
+      ],
+      "SAMD": [
+       0.5918,
+       0.0506
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1944,
+       0.0656
+      ],
+      "APD": [
+       0.6256,
+       0.0453
+      ],
+      "AMD": [
+       0.4114,
+       0.0465
+      ],
+      "SAMD": [
+       0.5041,
+       0.0531
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1985-1989",
+     "to": "2000-2004",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.2947,
+       0.0609
+      ],
+      "APD": [
+       0.6983,
+       0.0293
+      ],
+      "AMD": [
+       0.4971,
+       0.0642
+      ],
+      "SAMD": [
+       0.5755,
+       0.0558
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2125,
+       0.0465
+      ],
+      "APD": [
+       0.7057,
+       0.0142
+      ],
+      "AMD": [
+       0.4846,
+       0.0397
+      ],
+      "SAMD": [
+       0.5527,
+       0.0434
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.157,
+       0.0591
+      ],
+      "APD": [
+       0.5776,
+       0.0592
+      ],
+      "AMD": [
+       0.3835,
+       0.0491
+      ],
+      "SAMD": [
+       0.4608,
+       0.0579
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1985-1989",
+     "to": "2005-2009",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.3283,
+       0.0609
+      ],
+      "APD": [
+       0.7137,
+       0.0392
+      ],
+      "AMD": [
+       0.5069,
+       0.0461
+      ],
+      "SAMD": [
+       0.5919,
+       0.0383
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2502,
+       0.0596
+      ],
+      "APD": [
+       0.7117,
+       0.0142
+      ],
+      "AMD": [
+       0.5147,
+       0.043
+      ],
+      "SAMD": [
+       0.5847,
+       0.0516
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1537,
+       0.0347
+      ],
+      "APD": [
+       0.6001,
+       0.0597
+      ],
+      "AMD": [
+       0.3763,
+       0.0444
+      ],
+      "SAMD": [
+       0.4638,
+       0.0527
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1985-1989",
+     "to": "2010-2014",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.336,
+       0.0715
+      ],
+      "APD": [
+       0.7105,
+       0.0336
+      ],
+      "AMD": [
+       0.5053,
+       0.0598
+      ],
+      "SAMD": [
+       0.5908,
+       0.0542
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2325,
+       0.0407
+      ],
+      "APD": [
+       0.7111,
+       0.0122
+      ],
+      "AMD": [
+       0.5164,
+       0.0349
+      ],
+      "SAMD": [
+       0.5874,
+       0.0483
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1695,
+       0.0424
+      ],
+      "APD": [
+       0.5867,
+       0.0361
+      ],
+      "AMD": [
+       0.3861,
+       0.0361
+      ],
+      "SAMD": [
+       0.4801,
+       0.0521
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1985-1989",
+     "to": "2015-2019",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.3412,
+       0.0521
+      ],
+      "APD": [
+       0.7009,
+       0.0372
+      ],
+      "AMD": [
+       0.4893,
+       0.0476
+      ],
+      "SAMD": [
+       0.5938,
+       0.0392
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2143,
+       0.0376
+      ],
+      "APD": [
+       0.7072,
+       0.0117
+      ],
+      "AMD": [
+       0.4882,
+       0.0351
+      ],
+      "SAMD": [
+       0.544,
+       0.0383
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1284,
+       0.03
+      ],
+      "APD": [
+       0.5369,
+       0.0525
+      ],
+      "AMD": [
+       0.3499,
+       0.0444
+      ],
+      "SAMD": [
+       0.4296,
+       0.0505
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1985-1989",
+     "to": "2020-2024",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.3465,
+       0.059
+      ],
+      "APD": [
+       0.7058,
+       0.0315
+      ],
+      "AMD": [
+       0.5172,
+       0.0535
+      ],
+      "SAMD": [
+       0.5996,
+       0.0518
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2413,
+       0.0471
+      ],
+      "APD": [
+       0.71,
+       0.0116
+      ],
+      "AMD": [
+       0.5124,
+       0.0425
+      ],
+      "SAMD": [
+       0.5859,
+       0.0493
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1373,
+       0.0364
+      ],
+      "APD": [
+       0.5583,
+       0.0538
+      ],
+      "AMD": [
+       0.3582,
+       0.0404
+      ],
+      "SAMD": [
+       0.4408,
+       0.0475
+      ]
+     },
+     "floor_n": 8
+    }
+   ],
+   "is_control": true
+  },
+  "results": {
+   "periods": [
+    "1965-1969",
+    "1970-1974",
+    "1975-1979",
+    "1980-1984",
+    "1985-1989",
+    "1990-1994",
+    "1995-1999",
+    "2000-2004",
+    "2005-2009",
+    "2010-2014",
+    "2015-2019",
+    "2020-2024"
+   ],
+   "n": {
+    "1965-1969": 27,
+    "1970-1974": 27,
+    "1975-1979": 45,
+    "1980-1984": 111,
+    "1985-1989": 298,
+    "1990-1994": 300,
+    "1995-1999": 299,
+    "2000-2004": 300,
+    "2005-2009": 298,
+    "2010-2014": 299,
+    "2015-2019": 300,
+    "2020-2024": 299
+   },
+   "pairs": [
+    {
+     "from": "1965-1969",
+     "to": "1970-1974",
+     "kind": "consecutive",
+     "n": 13,
+     "metrics": {
+      "PRT": [
+       0.2087,
+       0.0304
+      ],
+      "APD": [
+       0.6603,
+       0.0294
+      ],
+      "AMD": [
+       0.3331,
+       0.0297
+      ],
+      "SAMD": [
+       0.4502,
+       0.0445
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1257,
+       0.031
+      ],
+      "APD": [
+       0.6531,
+       0.007
+      ],
+      "AMD": [
+       0.3761,
+       0.0238
+      ],
+      "SAMD": [
+       0.4375,
+       0.0437
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1119,
+       0.042
+      ],
+      "APD": [
+       0.5922,
+       0.0154
+      ],
+      "AMD": [
+       0.2653,
+       0.0219
+      ],
+      "SAMD": [
+       0.3845,
+       0.0554
+      ]
+     },
+     "floor_n": 13
+    },
+    {
+     "from": "1970-1974",
+     "to": "1975-1979",
+     "kind": "consecutive",
+     "n": 13,
+     "metrics": {
+      "PRT": [
+       0.1296,
+       0.033
+      ],
+      "APD": [
+       0.5895,
+       0.0428
+      ],
+      "AMD": [
+       0.2988,
+       0.0409
+      ],
+      "SAMD": [
+       0.3945,
+       0.0532
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0818,
+       0.0302
+      ],
+      "APD": [
+       0.5845,
+       0.0098
+      ],
+      "AMD": [
+       0.2527,
+       0.0222
+      ],
+      "SAMD": [
+       0.3404,
+       0.0431
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0847,
+       0.0203
+      ],
+      "APD": [
+       0.5541,
+       0.0332
+      ],
+      "AMD": [
+       0.302,
+       0.0242
+      ],
+      "SAMD": [
+       0.3801,
+       0.0331
+      ]
+     },
+     "floor_n": 13
+    },
+    {
+     "from": "1975-1979",
+     "to": "1980-1984",
+     "kind": "consecutive",
+     "n": 22,
+     "metrics": {
+      "PRT": [
+       0.0635,
+       0.0104
+      ],
+      "APD": [
+       0.5683,
+       0.032
+      ],
+      "AMD": [
+       0.2795,
+       0.0238
+      ],
+      "SAMD": [
+       0.3493,
+       0.03
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0554,
+       0.0129
+      ],
+      "APD": [
+       0.5627,
+       0.0056
+      ],
+      "AMD": [
+       0.2807,
+       0.0129
+      ],
+      "SAMD": [
+       0.3515,
+       0.0207
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0518,
+       0.0153
+      ],
+      "APD": [
+       0.5685,
+       0.0351
+      ],
+      "AMD": [
+       0.2702,
+       0.0205
+      ],
+      "SAMD": [
+       0.3536,
+       0.0296
+      ]
+     },
+     "floor_n": 22
+    },
+    {
+     "from": "1980-1984",
+     "to": "1985-1989",
+     "kind": "consecutive",
+     "n": 55,
+     "metrics": {
+      "PRT": [
+       0.0272,
+       0.0049
+      ],
+      "APD": [
+       0.5576,
+       0.0183
+      ],
+      "AMD": [
+       0.2247,
+       0.0082
+      ],
+      "SAMD": [
+       0.2919,
+       0.0184
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.019,
+       0.0045
+      ],
+      "APD": [
+       0.5649,
+       0.0026
+      ],
+      "AMD": [
+       0.2262,
+       0.0074
+      ],
+      "SAMD": [
+       0.2932,
+       0.0115
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0193,
+       0.0069
+      ],
+      "APD": [
+       0.5274,
+       0.0119
+      ],
+      "AMD": [
+       0.2126,
+       0.0084
+      ],
+      "SAMD": [
+       0.2816,
+       0.0175
+      ]
+     },
+     "floor_n": 55
+    },
+    {
+     "from": "1985-1989",
+     "to": "1990-1994",
+     "kind": "consecutive",
+     "n": 149,
+     "metrics": {
+      "PRT": [
+       0.0206,
+       0.0025
+      ],
+      "APD": [
+       0.5771,
+       0.0109
+      ],
+      "AMD": [
+       0.2008,
+       0.0074
+      ],
+      "SAMD": [
+       0.2807,
+       0.0087
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0068,
+       0.0023
+      ],
+      "APD": [
+       0.5291,
+       0.0007
+      ],
+      "AMD": [
+       0.1764,
+       0.0035
+      ],
+      "SAMD": [
+       0.2335,
+       0.0077
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0094,
+       0.0022
+      ],
+      "APD": [
+       0.6088,
+       0.0013
+      ],
+      "AMD": [
+       0.1954,
+       0.0027
+      ],
+      "SAMD": [
+       0.2636,
+       0.0062
+      ]
+     },
+     "floor_n": 149
+    },
+    {
+     "from": "1990-1994",
+     "to": "1995-1999",
+     "kind": "consecutive",
+     "n": 149,
+     "metrics": {
+      "PRT": [
+       0.066,
+       0.0066
+      ],
+      "APD": [
+       0.6522,
+       0.0112
+      ],
+      "AMD": [
+       0.2199,
+       0.0092
+      ],
+      "SAMD": [
+       0.3168,
+       0.0151
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0098,
+       0.0026
+      ],
+      "APD": [
+       0.6085,
+       0.0016
+      ],
+      "AMD": [
+       0.1972,
+       0.0034
+      ],
+      "SAMD": [
+       0.2646,
+       0.0082
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0111,
+       0.0033
+      ],
+      "APD": [
+       0.6437,
+       0.0013
+      ],
+      "AMD": [
+       0.201,
+       0.0039
+      ],
+      "SAMD": [
+       0.2716,
+       0.0113
+      ]
+     },
+     "floor_n": 149
+    },
+    {
+     "from": "1995-1999",
+     "to": "2000-2004",
+     "kind": "consecutive",
+     "n": 149,
+     "metrics": {
+      "PRT": [
+       0.0342,
+       0.0079
+      ],
+      "APD": [
+       0.6461,
+       0.0096
+      ],
+      "AMD": [
+       0.1982,
+       0.0072
+      ],
+      "SAMD": [
+       0.3033,
+       0.0133
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0131,
+       0.0041
+      ],
+      "APD": [
+       0.6444,
+       0.0012
+      ],
+      "AMD": [
+       0.2003,
+       0.0034
+      ],
+      "SAMD": [
+       0.2779,
+       0.0128
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0121,
+       0.0065
+      ],
+      "APD": [
+       0.6326,
+       0.0014
+      ],
+      "AMD": [
+       0.1739,
+       0.0037
+      ],
+      "SAMD": [
+       0.2493,
+       0.0132
+      ]
+     },
+     "floor_n": 149
+    },
+    {
+     "from": "2000-2004",
+     "to": "2005-2009",
+     "kind": "consecutive",
+     "n": 149,
+     "metrics": {
+      "PRT": [
+       0.1126,
+       0.0284
+      ],
+      "APD": [
+       0.6554,
+       0.0075
+      ],
+      "AMD": [
+       0.1905,
+       0.0052
+      ],
+      "SAMD": [
+       0.3682,
+       0.0223
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0121,
+       0.0054
+      ],
+      "APD": [
+       0.6327,
+       0.0016
+      ],
+      "AMD": [
+       0.1732,
+       0.0045
+      ],
+      "SAMD": [
+       0.2476,
+       0.0123
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0075,
+       0.0022
+      ],
+      "APD": [
+       0.5948,
+       0.0005
+      ],
+      "AMD": [
+       0.1788,
+       0.0034
+      ],
+      "SAMD": [
+       0.2413,
+       0.0072
+      ]
+     },
+     "floor_n": 149
+    },
+    {
+     "from": "2005-2009",
+     "to": "2010-2014",
+     "kind": "consecutive",
+     "n": 149,
+     "metrics": {
+      "PRT": [
+       0.0152,
+       0.006
+      ],
+      "APD": [
+       0.6147,
+       0.0113
+      ],
+      "AMD": [
+       0.1874,
+       0.0048
+      ],
+      "SAMD": [
+       0.2609,
+       0.0165
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0092,
+       0.0043
+      ],
+      "APD": [
+       0.5952,
+       0.001
+      ],
+      "AMD": [
+       0.1779,
+       0.0033
+      ],
+      "SAMD": [
+       0.2448,
+       0.012
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0092,
+       0.0031
+      ],
+      "APD": [
+       0.6351,
+       0.0011
+      ],
+      "AMD": [
+       0.1912,
+       0.0043
+      ],
+      "SAMD": [
+       0.2539,
+       0.01
+      ]
+     },
+     "floor_n": 149
+    },
+    {
+     "from": "2010-2014",
+     "to": "2015-2019",
+     "kind": "consecutive",
+     "n": 149,
+     "metrics": {
+      "PRT": [
+       0.0204,
+       0.0068
+      ],
+      "APD": [
+       0.6082,
+       0.011
+      ],
+      "AMD": [
+       0.1878,
+       0.0066
+      ],
+      "SAMD": [
+       0.2759,
+       0.0151
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0103,
+       0.0045
+      ],
+      "APD": [
+       0.635,
+       0.0011
+      ],
+      "AMD": [
+       0.1926,
+       0.004
+      ],
+      "SAMD": [
+       0.2584,
+       0.013
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0089,
+       0.0036
+      ],
+      "APD": [
+       0.5681,
+       0.0014
+      ],
+      "AMD": [
+       0.1798,
+       0.0039
+      ],
+      "SAMD": [
+       0.2434,
+       0.011
+      ]
+     },
+     "floor_n": 149
+    },
+    {
+     "from": "2015-2019",
+     "to": "2020-2024",
+     "kind": "consecutive",
+     "n": 149,
+     "metrics": {
+      "PRT": [
+       0.0105,
+       0.0017
+      ],
+      "APD": [
+       0.5683,
+       0.0106
+      ],
+      "AMD": [
+       0.1782,
+       0.0057
+      ],
+      "SAMD": [
+       0.245,
+       0.0098
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0089,
+       0.0037
+      ],
+      "APD": [
+       0.5682,
+       0.0015
+      ],
+      "AMD": [
+       0.1792,
+       0.0039
+      ],
+      "SAMD": [
+       0.2444,
+       0.0113
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0078,
+       0.0021
+      ],
+      "APD": [
+       0.5703,
+       0.0012
+      ],
+      "AMD": [
+       0.1772,
+       0.0038
+      ],
+      "SAMD": [
+       0.2401,
+       0.0092
+      ]
+     },
+     "floor_n": 149
+    },
+    {
+     "from": "1965-1969",
+     "to": "1970-1974",
+     "kind": "origin",
+     "n": 13,
+     "metrics": {
+      "PRT": [
+       0.2223,
+       0.0453
+      ],
+      "APD": [
+       0.6551,
+       0.0267
+      ],
+      "AMD": [
+       0.343,
+       0.0379
+      ],
+      "SAMD": [
+       0.4626,
+       0.0501
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1347,
+       0.0367
+      ],
+      "APD": [
+       0.6535,
+       0.0082
+      ],
+      "AMD": [
+       0.3811,
+       0.0266
+      ],
+      "SAMD": [
+       0.4579,
+       0.0418
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.094,
+       0.0372
+      ],
+      "APD": [
+       0.5856,
+       0.0127
+      ],
+      "AMD": [
+       0.2597,
+       0.0311
+      ],
+      "SAMD": [
+       0.357,
+       0.0485
+      ]
+     },
+     "floor_n": 13
+    },
+    {
+     "from": "1965-1969",
+     "to": "1975-1979",
+     "kind": "origin",
+     "n": 13,
+     "metrics": {
+      "PRT": [
+       0.2257,
+       0.0542
+      ],
+      "APD": [
+       0.6547,
+       0.0309
+      ],
+      "AMD": [
+       0.3681,
+       0.0242
+      ],
+      "SAMD": [
+       0.4848,
+       0.0455
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1377,
+       0.0523
+      ],
+      "APD": [
+       0.6556,
+       0.0109
+      ],
+      "AMD": [
+       0.3834,
+       0.0327
+      ],
+      "SAMD": [
+       0.4547,
+       0.053
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0937,
+       0.0298
+      ],
+      "APD": [
+       0.5663,
+       0.0358
+      ],
+      "AMD": [
+       0.3136,
+       0.032
+      ],
+      "SAMD": [
+       0.3993,
+       0.0473
+      ]
+     },
+     "floor_n": 13
+    },
+    {
+     "from": "1965-1969",
+     "to": "1980-1984",
+     "kind": "origin",
+     "n": 13,
+     "metrics": {
+      "PRT": [
+       0.2073,
+       0.0382
+      ],
+      "APD": [
+       0.6508,
+       0.0318
+      ],
+      "AMD": [
+       0.3689,
+       0.0365
+      ],
+      "SAMD": [
+       0.4767,
+       0.0468
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1342,
+       0.0394
+      ],
+      "APD": [
+       0.6551,
+       0.0095
+      ],
+      "AMD": [
+       0.3815,
+       0.0289
+      ],
+      "SAMD": [
+       0.4485,
+       0.0419
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0994,
+       0.0278
+      ],
+      "APD": [
+       0.5862,
+       0.0429
+      ],
+      "AMD": [
+       0.3154,
+       0.0394
+      ],
+      "SAMD": [
+       0.4108,
+       0.0453
+      ]
+     },
+     "floor_n": 13
+    },
+    {
+     "from": "1965-1969",
+     "to": "1985-1989",
+     "kind": "origin",
+     "n": 13,
+     "metrics": {
+      "PRT": [
+       0.195,
+       0.0459
+      ],
+      "APD": [
+       0.645,
+       0.038
+      ],
+      "AMD": [
+       0.3484,
+       0.0353
+      ],
+      "SAMD": [
+       0.4667,
+       0.039
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1346,
+       0.0413
+      ],
+      "APD": [
+       0.6544,
+       0.0103
+      ],
+      "AMD": [
+       0.3776,
+       0.0279
+      ],
+      "SAMD": [
+       0.4582,
+       0.0474
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0882,
+       0.0298
+      ],
+      "APD": [
+       0.5516,
+       0.0548
+      ],
+      "AMD": [
+       0.2933,
+       0.049
+      ],
+      "SAMD": [
+       0.3828,
+       0.0556
+      ]
+     },
+     "floor_n": 13
+    },
+    {
+     "from": "1965-1969",
+     "to": "1990-1994",
+     "kind": "origin",
+     "n": 13,
+     "metrics": {
+      "PRT": [
+       0.2435,
+       0.0532
+      ],
+      "APD": [
+       0.6679,
+       0.0316
+      ],
+      "AMD": [
+       0.3985,
+       0.0306
+      ],
+      "SAMD": [
+       0.511,
+       0.0443
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1411,
+       0.0395
+      ],
+      "APD": [
+       0.6543,
+       0.0113
+      ],
+      "AMD": [
+       0.3873,
+       0.0265
+      ],
+      "SAMD": [
+       0.4752,
+       0.0424
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0996,
+       0.0251
+      ],
+      "APD": [
+       0.6159,
+       0.0387
+      ],
+      "AMD": [
+       0.333,
+       0.0318
+      ],
+      "SAMD": [
+       0.4116,
+       0.0377
+      ]
+     },
+     "floor_n": 13
+    },
+    {
+     "from": "1965-1969",
+     "to": "1995-1999",
+     "kind": "origin",
+     "n": 13,
+     "metrics": {
+      "PRT": [
+       0.3424,
+       0.0729
+      ],
+      "APD": [
+       0.7229,
+       0.0441
+      ],
+      "AMD": [
+       0.4556,
+       0.0511
+      ],
+      "SAMD": [
+       0.5709,
+       0.0562
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.125,
+       0.0255
+      ],
+      "APD": [
+       0.6508,
+       0.0077
+      ],
+      "AMD": [
+       0.38,
+       0.0258
+      ],
+      "SAMD": [
+       0.4559,
+       0.0354
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1223,
+       0.0336
+      ],
+      "APD": [
+       0.6322,
+       0.0477
+      ],
+      "AMD": [
+       0.3244,
+       0.0589
+      ],
+      "SAMD": [
+       0.4312,
+       0.0541
+      ]
+     },
+     "floor_n": 13
+    },
+    {
+     "from": "1965-1969",
+     "to": "2000-2004",
+     "kind": "origin",
+     "n": 13,
+     "metrics": {
+      "PRT": [
+       0.3826,
+       0.0534
+      ],
+      "APD": [
+       0.7494,
+       0.0273
+      ],
+      "AMD": [
+       0.4861,
+       0.0435
+      ],
+      "SAMD": [
+       0.5873,
+       0.0439
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1237,
+       0.0362
+      ],
+      "APD": [
+       0.6516,
+       0.0076
+      ],
+      "AMD": [
+       0.3757,
+       0.0286
+      ],
+      "SAMD": [
+       0.4515,
+       0.0431
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0946,
+       0.0473
+      ],
+      "APD": [
+       0.6122,
+       0.0393
+      ],
+      "AMD": [
+       0.2637,
+       0.0435
+      ],
+      "SAMD": [
+       0.3612,
+       0.0611
+      ]
+     },
+     "floor_n": 13
+    },
+    {
+     "from": "1965-1969",
+     "to": "2005-2009",
+     "kind": "origin",
+     "n": 13,
+     "metrics": {
+      "PRT": [
+       0.5475,
+       0.0765
+      ],
+      "APD": [
+       0.8082,
+       0.0288
+      ],
+      "AMD": [
+       0.5692,
+       0.0418
+      ],
+      "SAMD": [
+       0.6745,
+       0.0437
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1384,
+       0.0415
+      ],
+      "APD": [
+       0.6534,
+       0.0095
+      ],
+      "AMD": [
+       0.3847,
+       0.0303
+      ],
+      "SAMD": [
+       0.467,
+       0.0436
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0851,
+       0.027
+      ],
+      "APD": [
+       0.5938,
+       0.0336
+      ],
+      "AMD": [
+       0.2792,
+       0.0188
+      ],
+      "SAMD": [
+       0.3752,
+       0.034
+      ]
+     },
+     "floor_n": 13
+    },
+    {
+     "from": "1965-1969",
+     "to": "2010-2014",
+     "kind": "origin",
+     "n": 13,
+     "metrics": {
+      "PRT": [
+       0.4993,
+       0.0722
+      ],
+      "APD": [
+       0.7977,
+       0.0213
+      ],
+      "AMD": [
+       0.5441,
+       0.0382
+      ],
+      "SAMD": [
+       0.6533,
+       0.043
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1315,
+       0.0364
+      ],
+      "APD": [
+       0.6517,
+       0.0101
+      ],
+      "AMD": [
+       0.3847,
+       0.0312
+      ],
+      "SAMD": [
+       0.4531,
+       0.0375
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1207,
+       0.052
+      ],
+      "APD": [
+       0.6418,
+       0.0481
+      ],
+      "AMD": [
+       0.3106,
+       0.0442
+      ],
+      "SAMD": [
+       0.4135,
+       0.0521
+      ]
+     },
+     "floor_n": 13
+    },
+    {
+     "from": "1965-1969",
+     "to": "2015-2019",
+     "kind": "origin",
+     "n": 13,
+     "metrics": {
+      "PRT": [
+       0.5971,
+       0.0946
+      ],
+      "APD": [
+       0.8189,
+       0.0359
+      ],
+      "AMD": [
+       0.6106,
+       0.0576
+      ],
+      "SAMD": [
+       0.7204,
+       0.0624
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1344,
+       0.0363
+      ],
+      "APD": [
+       0.6524,
+       0.0087
+      ],
+      "AMD": [
+       0.3818,
+       0.0265
+      ],
+      "SAMD": [
+       0.4536,
+       0.0437
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0986,
+       0.0333
+      ],
+      "APD": [
+       0.5942,
+       0.0419
+      ],
+      "AMD": [
+       0.2938,
+       0.034
+      ],
+      "SAMD": [
+       0.3924,
+       0.0501
+      ]
+     },
+     "floor_n": 13
+    },
+    {
+     "from": "1965-1969",
+     "to": "2020-2024",
+     "kind": "origin",
+     "n": 13,
+     "metrics": {
+      "PRT": [
+       0.5742,
+       0.0812
+      ],
+      "APD": [
+       0.8083,
+       0.0279
+      ],
+      "AMD": [
+       0.5901,
+       0.0417
+      ],
+      "SAMD": [
+       0.6959,
+       0.0446
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1148,
+       0.0215
+      ],
+      "APD": [
+       0.6495,
+       0.0061
+      ],
+      "AMD": [
+       0.3684,
+       0.0132
+      ],
+      "SAMD": [
+       0.438,
+       0.0273
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1049,
+       0.0777
+      ],
+      "APD": [
+       0.5927,
+       0.0572
+      ],
+      "AMD": [
+       0.282,
+       0.0383
+      ],
+      "SAMD": [
+       0.3843,
+       0.0712
+      ]
+     },
+     "floor_n": 13
+    }
+   ],
+   "is_control": true
+  },
+  "significant": {
+   "periods": [
+    "1965-1969",
+    "1970-1974",
+    "1975-1979",
+    "1980-1984",
+    "1985-1989",
+    "1990-1994",
+    "1995-1999",
+    "2000-2004",
+    "2005-2009",
+    "2010-2014",
+    "2015-2019",
+    "2020-2024"
+   ],
+   "n": {
+    "1965-1969": 17,
+    "1970-1974": 19,
+    "1975-1979": 30,
+    "1980-1984": 89,
+    "1985-1989": 215,
+    "1990-1994": 299,
+    "1995-1999": 299,
+    "2000-2004": 300,
+    "2005-2009": 300,
+    "2010-2014": 300,
+    "2015-2019": 300,
+    "2020-2024": 300
+   },
+   "pairs": [
+    {
+     "from": "1965-1969",
+     "to": "1970-1974",
+     "kind": "consecutive",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.2379,
+       0.0304
+      ],
+      "APD": [
+       0.6637,
+       0.0271
+      ],
+      "AMD": [
+       0.4652,
+       0.03
+      ],
+      "SAMD": [
+       0.522,
+       0.0351
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2054,
+       0.0297
+      ],
+      "APD": [
+       0.6836,
+       0.0077
+      ],
+      "AMD": [
+       0.4947,
+       0.0258
+      ],
+      "SAMD": [
+       0.5448,
+       0.0289
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1544,
+       0.031
+      ],
+      "APD": [
+       0.5949,
+       0.0171
+      ],
+      "AMD": [
+       0.4204,
+       0.031
+      ],
+      "SAMD": [
+       0.4893,
+       0.0236
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1970-1974",
+     "to": "1975-1979",
+     "kind": "consecutive",
+     "n": 9,
+     "metrics": {
+      "PRT": [
+       0.1582,
+       0.0248
+      ],
+      "APD": [
+       0.606,
+       0.0232
+      ],
+      "AMD": [
+       0.4169,
+       0.0361
+      ],
+      "SAMD": [
+       0.4733,
+       0.0377
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1322,
+       0.0232
+      ],
+      "APD": [
+       0.5909,
+       0.0121
+      ],
+      "AMD": [
+       0.4034,
+       0.0252
+      ],
+      "SAMD": [
+       0.4746,
+       0.0212
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1412,
+       0.0323
+      ],
+      "APD": [
+       0.59,
+       0.0235
+      ],
+      "AMD": [
+       0.3961,
+       0.0369
+      ],
+      "SAMD": [
+       0.4603,
+       0.0412
+      ]
+     },
+     "floor_n": 9
+    },
+    {
+     "from": "1975-1979",
+     "to": "1980-1984",
+     "kind": "consecutive",
+     "n": 15,
+     "metrics": {
+      "PRT": [
+       0.0877,
+       0.015
+      ],
+      "APD": [
+       0.59,
+       0.0116
+      ],
+      "AMD": [
+       0.3573,
+       0.0254
+      ],
+      "SAMD": [
+       0.4241,
+       0.0259
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0835,
+       0.0153
+      ],
+      "APD": [
+       0.5883,
+       0.0036
+      ],
+      "AMD": [
+       0.3495,
+       0.0161
+      ],
+      "SAMD": [
+       0.4191,
+       0.02
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0894,
+       0.0223
+      ],
+      "APD": [
+       0.6009,
+       0.0171
+      ],
+      "AMD": [
+       0.3496,
+       0.0364
+      ],
+      "SAMD": [
+       0.4219,
+       0.04
+      ]
+     },
+     "floor_n": 15
+    },
+    {
+     "from": "1980-1984",
+     "to": "1985-1989",
+     "kind": "consecutive",
+     "n": 44,
+     "metrics": {
+      "PRT": [
+       0.0372,
+       0.0056
+      ],
+      "APD": [
+       0.5953,
+       0.0112
+      ],
+      "AMD": [
+       0.2969,
+       0.0156
+      ],
+      "SAMD": [
+       0.3679,
+       0.0168
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0328,
+       0.0064
+      ],
+      "APD": [
+       0.6069,
+       0.0014
+      ],
+      "AMD": [
+       0.2938,
+       0.0097
+      ],
+      "SAMD": [
+       0.3686,
+       0.0142
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0338,
+       0.0089
+      ],
+      "APD": [
+       0.5737,
+       0.0092
+      ],
+      "AMD": [
+       0.2883,
+       0.0165
+      ],
+      "SAMD": [
+       0.3549,
+       0.0219
+      ]
+     },
+     "floor_n": 44
+    },
+    {
+     "from": "1985-1989",
+     "to": "1990-1994",
+     "kind": "consecutive",
+     "n": 107,
+     "metrics": {
+      "PRT": [
+       0.0453,
+       0.0053
+      ],
+      "APD": [
+       0.6169,
+       0.006
+      ],
+      "AMD": [
+       0.2729,
+       0.0065
+      ],
+      "SAMD": [
+       0.3381,
+       0.0079
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0127,
+       0.0024
+      ],
+      "APD": [
+       0.5741,
+       0.0007
+      ],
+      "AMD": [
+       0.2437,
+       0.0032
+      ],
+      "SAMD": [
+       0.3051,
+       0.0067
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0158,
+       0.0021
+      ],
+      "APD": [
+       0.6315,
+       0.0056
+      ],
+      "AMD": [
+       0.2688,
+       0.0066
+      ],
+      "SAMD": [
+       0.3414,
+       0.0091
+      ]
+     },
+     "floor_n": 107
+    },
+    {
+     "from": "1990-1994",
+     "to": "1995-1999",
+     "kind": "consecutive",
+     "n": 149,
+     "metrics": {
+      "PRT": [
+       0.0413,
+       0.0033
+      ],
+      "APD": [
+       0.6448,
+       0.0031
+      ],
+      "AMD": [
+       0.2676,
+       0.0069
+      ],
+      "SAMD": [
+       0.3371,
+       0.0082
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0115,
+       0.0025
+      ],
+      "APD": [
+       0.6329,
+       0.0008
+      ],
+      "AMD": [
+       0.2533,
+       0.0041
+      ],
+      "SAMD": [
+       0.3209,
+       0.0065
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0108,
+       0.0025
+      ],
+      "APD": [
+       0.6378,
+       0.0007
+      ],
+      "AMD": [
+       0.2538,
+       0.0027
+      ],
+      "SAMD": [
+       0.3227,
+       0.0071
+      ]
+     },
+     "floor_n": 149
+    },
+    {
+     "from": "1995-1999",
+     "to": "2000-2004",
+     "kind": "consecutive",
+     "n": 149,
+     "metrics": {
+      "PRT": [
+       0.0154,
+       0.0011
+      ],
+      "APD": [
+       0.6389,
+       0.0056
+      ],
+      "AMD": [
+       0.254,
+       0.0058
+      ],
+      "SAMD": [
+       0.3194,
+       0.0072
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0122,
+       0.0022
+      ],
+      "APD": [
+       0.638,
+       0.0004
+      ],
+      "AMD": [
+       0.2559,
+       0.0033
+      ],
+      "SAMD": [
+       0.3251,
+       0.0069
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0127,
+       0.0037
+      ],
+      "APD": [
+       0.6387,
+       0.0011
+      ],
+      "AMD": [
+       0.253,
+       0.0042
+      ],
+      "SAMD": [
+       0.3236,
+       0.0109
+      ]
+     },
+     "floor_n": 149
+    },
+    {
+     "from": "2000-2004",
+     "to": "2005-2009",
+     "kind": "consecutive",
+     "n": 150,
+     "metrics": {
+      "PRT": [
+       0.0259,
+       0.0032
+      ],
+      "APD": [
+       0.6511,
+       0.0068
+      ],
+      "AMD": [
+       0.2636,
+       0.0057
+      ],
+      "SAMD": [
+       0.3305,
+       0.0095
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0128,
+       0.0028
+      ],
+      "APD": [
+       0.6385,
+       0.0005
+      ],
+      "AMD": [
+       0.251,
+       0.0035
+      ],
+      "SAMD": [
+       0.3221,
+       0.0083
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.012,
+       0.0024
+      ],
+      "APD": [
+       0.65,
+       0.0004
+      ],
+      "AMD": [
+       0.2655,
+       0.0031
+      ],
+      "SAMD": [
+       0.3332,
+       0.0062
+      ]
+     },
+     "floor_n": 150
+    },
+    {
+     "from": "2005-2009",
+     "to": "2010-2014",
+     "kind": "consecutive",
+     "n": 150,
+     "metrics": {
+      "PRT": [
+       0.0147,
+       0.0024
+      ],
+      "APD": [
+       0.6496,
+       0.0054
+      ],
+      "AMD": [
+       0.2649,
+       0.0065
+      ],
+      "SAMD": [
+       0.3343,
+       0.0077
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0118,
+       0.0024
+      ],
+      "APD": [
+       0.6499,
+       0.0005
+      ],
+      "AMD": [
+       0.2643,
+       0.0029
+      ],
+      "SAMD": [
+       0.3333,
+       0.0051
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0111,
+       0.0022
+      ],
+      "APD": [
+       0.6465,
+       0.0004
+      ],
+      "AMD": [
+       0.2642,
+       0.0027
+      ],
+      "SAMD": [
+       0.3355,
+       0.0066
+      ]
+     },
+     "floor_n": 150
+    },
+    {
+     "from": "2010-2014",
+     "to": "2015-2019",
+     "kind": "consecutive",
+     "n": 150,
+     "metrics": {
+      "PRT": [
+       0.0169,
+       0.0031
+      ],
+      "APD": [
+       0.6362,
+       0.0057
+      ],
+      "AMD": [
+       0.257,
+       0.0059
+      ],
+      "SAMD": [
+       0.3276,
+       0.0081
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.012,
+       0.0029
+      ],
+      "APD": [
+       0.6466,
+       0.0006
+      ],
+      "AMD": [
+       0.2638,
+       0.0023
+      ],
+      "SAMD": [
+       0.3344,
+       0.0066
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.011,
+       0.0027
+      ],
+      "APD": [
+       0.6226,
+       0.0005
+      ],
+      "AMD": [
+       0.2481,
+       0.0034
+      ],
+      "SAMD": [
+       0.3171,
+       0.0091
+      ]
+     },
+     "floor_n": 150
+    },
+    {
+     "from": "2015-2019",
+     "to": "2020-2024",
+     "kind": "consecutive",
+     "n": 150,
+     "metrics": {
+      "PRT": [
+       0.0139,
+       0.002
+      ],
+      "APD": [
+       0.6245,
+       0.0056
+      ],
+      "AMD": [
+       0.2469,
+       0.0052
+      ],
+      "SAMD": [
+       0.3158,
+       0.0083
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0114,
+       0.0024
+      ],
+      "APD": [
+       0.6226,
+       0.0004
+      ],
+      "AMD": [
+       0.2485,
+       0.0041
+      ],
+      "SAMD": [
+       0.3168,
+       0.006
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0098,
+       0.0027
+      ],
+      "APD": [
+       0.6231,
+       0.0006
+      ],
+      "AMD": [
+       0.2412,
+       0.0035
+      ],
+      "SAMD": [
+       0.3094,
+       0.0083
+      ]
+     },
+     "floor_n": 150
+    },
+    {
+     "from": "1965-1969",
+     "to": "1970-1974",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.2374,
+       0.0336
+      ],
+      "APD": [
+       0.6702,
+       0.019
+      ],
+      "AMD": [
+       0.4716,
+       0.028
+      ],
+      "SAMD": [
+       0.5243,
+       0.0361
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2098,
+       0.0466
+      ],
+      "APD": [
+       0.6868,
+       0.0124
+      ],
+      "AMD": [
+       0.4898,
+       0.0312
+      ],
+      "SAMD": [
+       0.5353,
+       0.0392
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.142,
+       0.0309
+      ],
+      "APD": [
+       0.5842,
+       0.0171
+      ],
+      "AMD": [
+       0.4042,
+       0.0209
+      ],
+      "SAMD": [
+       0.4738,
+       0.028
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1965-1969",
+     "to": "1975-1979",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.2415,
+       0.0403
+      ],
+      "APD": [
+       0.6677,
+       0.0196
+      ],
+      "AMD": [
+       0.4772,
+       0.0381
+      ],
+      "SAMD": [
+       0.5305,
+       0.0447
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1916,
+       0.0346
+      ],
+      "APD": [
+       0.6827,
+       0.0088
+      ],
+      "AMD": [
+       0.4865,
+       0.023
+      ],
+      "SAMD": [
+       0.537,
+       0.0339
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1432,
+       0.0253
+      ],
+      "APD": [
+       0.5799,
+       0.0223
+      ],
+      "AMD": [
+       0.3928,
+       0.0398
+      ],
+      "SAMD": [
+       0.451,
+       0.041
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1965-1969",
+     "to": "1980-1984",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.2665,
+       0.0465
+      ],
+      "APD": [
+       0.686,
+       0.0235
+      ],
+      "AMD": [
+       0.5192,
+       0.0408
+      ],
+      "SAMD": [
+       0.577,
+       0.0422
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2108,
+       0.0368
+      ],
+      "APD": [
+       0.6855,
+       0.0104
+      ],
+      "AMD": [
+       0.5016,
+       0.0206
+      ],
+      "SAMD": [
+       0.5435,
+       0.0249
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.157,
+       0.031
+      ],
+      "APD": [
+       0.606,
+       0.0228
+      ],
+      "AMD": [
+       0.4121,
+       0.0493
+      ],
+      "SAMD": [
+       0.466,
+       0.0465
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1965-1969",
+     "to": "1985-1989",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.248,
+       0.0414
+      ],
+      "APD": [
+       0.6664,
+       0.028
+      ],
+      "AMD": [
+       0.4736,
+       0.0435
+      ],
+      "SAMD": [
+       0.5335,
+       0.0452
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1982,
+       0.0424
+      ],
+      "APD": [
+       0.6828,
+       0.0116
+      ],
+      "AMD": [
+       0.4901,
+       0.0283
+      ],
+      "SAMD": [
+       0.5348,
+       0.0368
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1381,
+       0.0305
+      ],
+      "APD": [
+       0.5695,
+       0.0262
+      ],
+      "AMD": [
+       0.3919,
+       0.0347
+      ],
+      "SAMD": [
+       0.4462,
+       0.038
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1965-1969",
+     "to": "1990-1994",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.2657,
+       0.0532
+      ],
+      "APD": [
+       0.6864,
+       0.0256
+      ],
+      "AMD": [
+       0.4816,
+       0.0514
+      ],
+      "SAMD": [
+       0.5498,
+       0.0447
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2213,
+       0.0523
+      ],
+      "APD": [
+       0.6889,
+       0.0119
+      ],
+      "AMD": [
+       0.4992,
+       0.0356
+      ],
+      "SAMD": [
+       0.5521,
+       0.0497
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1696,
+       0.0356
+      ],
+      "APD": [
+       0.6367,
+       0.0366
+      ],
+      "AMD": [
+       0.4425,
+       0.0488
+      ],
+      "SAMD": [
+       0.5005,
+       0.0441
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1965-1969",
+     "to": "1995-1999",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.3106,
+       0.0451
+      ],
+      "APD": [
+       0.7093,
+       0.0246
+      ],
+      "AMD": [
+       0.5179,
+       0.0509
+      ],
+      "SAMD": [
+       0.5783,
+       0.0482
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2345,
+       0.0576
+      ],
+      "APD": [
+       0.6917,
+       0.0147
+      ],
+      "AMD": [
+       0.508,
+       0.031
+      ],
+      "SAMD": [
+       0.5602,
+       0.0474
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1852,
+       0.048
+      ],
+      "APD": [
+       0.6303,
+       0.0476
+      ],
+      "AMD": [
+       0.4416,
+       0.0546
+      ],
+      "SAMD": [
+       0.499,
+       0.0557
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1965-1969",
+     "to": "2000-2004",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.3283,
+       0.043
+      ],
+      "APD": [
+       0.7193,
+       0.0266
+      ],
+      "AMD": [
+       0.526,
+       0.0489
+      ],
+      "SAMD": [
+       0.5884,
+       0.0394
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2074,
+       0.0359
+      ],
+      "APD": [
+       0.6863,
+       0.0093
+      ],
+      "AMD": [
+       0.4929,
+       0.028
+      ],
+      "SAMD": [
+       0.5382,
+       0.0388
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1864,
+       0.0498
+      ],
+      "APD": [
+       0.6417,
+       0.0466
+      ],
+      "AMD": [
+       0.4282,
+       0.0535
+      ],
+      "SAMD": [
+       0.4926,
+       0.0534
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1965-1969",
+     "to": "2005-2009",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.3553,
+       0.0368
+      ],
+      "APD": [
+       0.7318,
+       0.024
+      ],
+      "AMD": [
+       0.5374,
+       0.0479
+      ],
+      "SAMD": [
+       0.5961,
+       0.0454
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2217,
+       0.0578
+      ],
+      "APD": [
+       0.6884,
+       0.0148
+      ],
+      "AMD": [
+       0.493,
+       0.0365
+      ],
+      "SAMD": [
+       0.5429,
+       0.0516
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1846,
+       0.0463
+      ],
+      "APD": [
+       0.6411,
+       0.0345
+      ],
+      "AMD": [
+       0.4492,
+       0.0418
+      ],
+      "SAMD": [
+       0.513,
+       0.0434
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1965-1969",
+     "to": "2010-2014",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.3637,
+       0.0355
+      ],
+      "APD": [
+       0.74,
+       0.0205
+      ],
+      "AMD": [
+       0.5639,
+       0.0366
+      ],
+      "SAMD": [
+       0.629,
+       0.0369
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.217,
+       0.0464
+      ],
+      "APD": [
+       0.6873,
+       0.0111
+      ],
+      "AMD": [
+       0.5033,
+       0.0315
+      ],
+      "SAMD": [
+       0.5561,
+       0.0379
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1723,
+       0.0483
+      ],
+      "APD": [
+       0.6435,
+       0.0454
+      ],
+      "AMD": [
+       0.4444,
+       0.0527
+      ],
+      "SAMD": [
+       0.5004,
+       0.0494
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1965-1969",
+     "to": "2015-2019",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.3677,
+       0.0379
+      ],
+      "APD": [
+       0.7286,
+       0.0292
+      ],
+      "AMD": [
+       0.5484,
+       0.0403
+      ],
+      "SAMD": [
+       0.6065,
+       0.047
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2138,
+       0.0414
+      ],
+      "APD": [
+       0.6871,
+       0.01
+      ],
+      "AMD": [
+       0.4995,
+       0.0266
+      ],
+      "SAMD": [
+       0.5466,
+       0.0417
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.185,
+       0.0454
+      ],
+      "APD": [
+       0.6293,
+       0.0419
+      ],
+      "AMD": [
+       0.4216,
+       0.0483
+      ],
+      "SAMD": [
+       0.4927,
+       0.0515
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1965-1969",
+     "to": "2020-2024",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.3897,
+       0.043
+      ],
+      "APD": [
+       0.745,
+       0.02
+      ],
+      "AMD": [
+       0.5583,
+       0.0305
+      ],
+      "SAMD": [
+       0.6179,
+       0.0369
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2247,
+       0.0493
+      ],
+      "APD": [
+       0.6919,
+       0.0114
+      ],
+      "AMD": [
+       0.5023,
+       0.0284
+      ],
+      "SAMD": [
+       0.5581,
+       0.0441
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1644,
+       0.0329
+      ],
+      "APD": [
+       0.612,
+       0.0295
+      ],
+      "AMD": [
+       0.4165,
+       0.033
+      ],
+      "SAMD": [
+       0.4851,
+       0.0371
+      ]
+     },
+     "floor_n": 8
+    }
+   ],
+   "is_control": true
+  },
+  "measure": {
+   "periods": [
+    "1980-1984",
+    "1985-1989",
+    "1990-1994",
+    "1995-1999",
+    "2000-2004",
+    "2005-2009",
+    "2010-2014",
+    "2015-2019",
+    "2020-2024"
+   ],
+   "n": {
+    "1980-1984": 17,
+    "1985-1989": 33,
+    "1990-1994": 95,
+    "1995-1999": 203,
+    "2000-2004": 300,
+    "2005-2009": 300,
+    "2010-2014": 300,
+    "2015-2019": 299,
+    "2020-2024": 300
+   },
+   "pairs": [
+    {
+     "from": "1980-1984",
+     "to": "1985-1989",
+     "kind": "consecutive",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.2027,
+       0.0384
+      ],
+      "APD": [
+       0.6595,
+       0.0216
+      ],
+      "AMD": [
+       0.443,
+       0.0367
+      ],
+      "SAMD": [
+       0.532,
+       0.0402
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2002,
+       0.0529
+      ],
+      "APD": [
+       0.6708,
+       0.0151
+      ],
+      "AMD": [
+       0.4459,
+       0.0284
+      ],
+      "SAMD": [
+       0.5261,
+       0.0481
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.195,
+       0.0585
+      ],
+      "APD": [
+       0.6385,
+       0.0282
+      ],
+      "AMD": [
+       0.4231,
+       0.0396
+      ],
+      "SAMD": [
+       0.5107,
+       0.0593
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1985-1989",
+     "to": "1990-1994",
+     "kind": "consecutive",
+     "n": 16,
+     "metrics": {
+      "PRT": [
+       0.1373,
+       0.0307
+      ],
+      "APD": [
+       0.6578,
+       0.0204
+      ],
+      "AMD": [
+       0.3873,
+       0.022
+      ],
+      "SAMD": [
+       0.4877,
+       0.0283
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1057,
+       0.0402
+      ],
+      "APD": [
+       0.6277,
+       0.0089
+      ],
+      "AMD": [
+       0.3722,
+       0.0124
+      ],
+      "SAMD": [
+       0.462,
+       0.0317
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1175,
+       0.0323
+      ],
+      "APD": [
+       0.6465,
+       0.0279
+      ],
+      "AMD": [
+       0.3681,
+       0.0193
+      ],
+      "SAMD": [
+       0.4702,
+       0.0296
+      ]
+     },
+     "floor_n": 16
+    },
+    {
+     "from": "1990-1994",
+     "to": "1995-1999",
+     "kind": "consecutive",
+     "n": 47,
+     "metrics": {
+      "PRT": [
+       0.0488,
+       0.0045
+      ],
+      "APD": [
+       0.6531,
+       0.0153
+      ],
+      "AMD": [
+       0.3098,
+       0.0099
+      ],
+      "SAMD": [
+       0.3842,
+       0.011
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.04,
+       0.0213
+      ],
+      "APD": [
+       0.6518,
+       0.0045
+      ],
+      "AMD": [
+       0.3061,
+       0.0083
+      ],
+      "SAMD": [
+       0.3862,
+       0.0256
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0351,
+       0.0102
+      ],
+      "APD": [
+       0.6534,
+       0.0126
+      ],
+      "AMD": [
+       0.3111,
+       0.0116
+      ],
+      "SAMD": [
+       0.3904,
+       0.0181
+      ]
+     },
+     "floor_n": 47
+    },
+    {
+     "from": "1995-1999",
+     "to": "2000-2004",
+     "kind": "consecutive",
+     "n": 101,
+     "metrics": {
+      "PRT": [
+       0.0168,
+       0.0026
+      ],
+      "APD": [
+       0.6468,
+       0.0076
+      ],
+      "AMD": [
+       0.2642,
+       0.0063
+      ],
+      "SAMD": [
+       0.3304,
+       0.0088
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0182,
+       0.0054
+      ],
+      "APD": [
+       0.6462,
+       0.0013
+      ],
+      "AMD": [
+       0.2696,
+       0.0041
+      ],
+      "SAMD": [
+       0.3468,
+       0.0123
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0165,
+       0.004
+      ],
+      "APD": [
+       0.6489,
+       0.0079
+      ],
+      "AMD": [
+       0.2572,
+       0.0062
+      ],
+      "SAMD": [
+       0.3311,
+       0.0122
+      ]
+     },
+     "floor_n": 101
+    },
+    {
+     "from": "2000-2004",
+     "to": "2005-2009",
+     "kind": "consecutive",
+     "n": 150,
+     "metrics": {
+      "PRT": [
+       0.0264,
+       0.0031
+      ],
+      "APD": [
+       0.6711,
+       0.0058
+      ],
+      "AMD": [
+       0.2525,
+       0.0062
+      ],
+      "SAMD": [
+       0.3347,
+       0.011
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0116,
+       0.0029
+      ],
+      "APD": [
+       0.6494,
+       0.0005
+      ],
+      "AMD": [
+       0.241,
+       0.0028
+      ],
+      "SAMD": [
+       0.3134,
+       0.0074
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0144,
+       0.0042
+      ],
+      "APD": [
+       0.6805,
+       0.0007
+      ],
+      "AMD": [
+       0.2551,
+       0.0043
+      ],
+      "SAMD": [
+       0.3307,
+       0.0108
+      ]
+     },
+     "floor_n": 150
+    },
+    {
+     "from": "2005-2009",
+     "to": "2010-2014",
+     "kind": "consecutive",
+     "n": 150,
+     "metrics": {
+      "PRT": [
+       0.0171,
+       0.0032
+      ],
+      "APD": [
+       0.6802,
+       0.0055
+      ],
+      "AMD": [
+       0.2578,
+       0.0044
+      ],
+      "SAMD": [
+       0.3364,
+       0.009
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0144,
+       0.0041
+      ],
+      "APD": [
+       0.6805,
+       0.0007
+      ],
+      "AMD": [
+       0.2542,
+       0.0036
+      ],
+      "SAMD": [
+       0.3299,
+       0.0117
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0149,
+       0.0044
+      ],
+      "APD": [
+       0.6775,
+       0.0007
+      ],
+      "AMD": [
+       0.2508,
+       0.0041
+      ],
+      "SAMD": [
+       0.3258,
+       0.0111
+      ]
+     },
+     "floor_n": 150
+    },
+    {
+     "from": "2010-2014",
+     "to": "2015-2019",
+     "kind": "consecutive",
+     "n": 149,
+     "metrics": {
+      "PRT": [
+       0.0192,
+       0.004
+      ],
+      "APD": [
+       0.6689,
+       0.0076
+      ],
+      "AMD": [
+       0.2639,
+       0.0072
+      ],
+      "SAMD": [
+       0.3418,
+       0.0097
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0135,
+       0.0036
+      ],
+      "APD": [
+       0.6772,
+       0.0007
+      ],
+      "AMD": [
+       0.2501,
+       0.0045
+      ],
+      "SAMD": [
+       0.3222,
+       0.0107
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0125,
+       0.0028
+      ],
+      "APD": [
+       0.6597,
+       0.0007
+      ],
+      "AMD": [
+       0.2607,
+       0.0031
+      ],
+      "SAMD": [
+       0.3319,
+       0.009
+      ]
+     },
+     "floor_n": 149
+    },
+    {
+     "from": "2015-2019",
+     "to": "2020-2024",
+     "kind": "consecutive",
+     "n": 149,
+     "metrics": {
+      "PRT": [
+       0.0169,
+       0.005
+      ],
+      "APD": [
+       0.6681,
+       0.0039
+      ],
+      "AMD": [
+       0.2639,
+       0.0052
+      ],
+      "SAMD": [
+       0.3368,
+       0.0103
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.0132,
+       0.0037
+      ],
+      "APD": [
+       0.6596,
+       0.0007
+      ],
+      "AMD": [
+       0.26,
+       0.0027
+      ],
+      "SAMD": [
+       0.3348,
+       0.009
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.0133,
+       0.0039
+      ],
+      "APD": [
+       0.6699,
+       0.001
+      ],
+      "AMD": [
+       0.2646,
+       0.0026
+      ],
+      "SAMD": [
+       0.338,
+       0.0103
+      ]
+     },
+     "floor_n": 149
+    },
+    {
+     "from": "1980-1984",
+     "to": "1985-1989",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.1778,
+       0.0335
+      ],
+      "APD": [
+       0.6528,
+       0.0221
+      ],
+      "AMD": [
+       0.436,
+       0.0386
+      ],
+      "SAMD": [
+       0.5082,
+       0.046
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2064,
+       0.0542
+      ],
+      "APD": [
+       0.6718,
+       0.0148
+      ],
+      "AMD": [
+       0.4459,
+       0.0303
+      ],
+      "SAMD": [
+       0.5244,
+       0.0428
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1679,
+       0.0449
+      ],
+      "APD": [
+       0.6154,
+       0.0307
+      ],
+      "AMD": [
+       0.4008,
+       0.0403
+      ],
+      "SAMD": [
+       0.4804,
+       0.0546
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1980-1984",
+     "to": "1990-1994",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.1983,
+       0.0431
+      ],
+      "APD": [
+       0.6647,
+       0.038
+      ],
+      "AMD": [
+       0.4511,
+       0.0449
+      ],
+      "SAMD": [
+       0.5273,
+       0.0411
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1967,
+       0.0411
+      ],
+      "APD": [
+       0.6716,
+       0.0112
+      ],
+      "AMD": [
+       0.4547,
+       0.0278
+      ],
+      "SAMD": [
+       0.5276,
+       0.0386
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1829,
+       0.0425
+      ],
+      "APD": [
+       0.6509,
+       0.048
+      ],
+      "AMD": [
+       0.4216,
+       0.0584
+      ],
+      "SAMD": [
+       0.5032,
+       0.0652
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1980-1984",
+     "to": "1995-1999",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.2267,
+       0.0445
+      ],
+      "APD": [
+       0.6721,
+       0.0296
+      ],
+      "AMD": [
+       0.4406,
+       0.0434
+      ],
+      "SAMD": [
+       0.5271,
+       0.0418
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2065,
+       0.042
+      ],
+      "APD": [
+       0.6751,
+       0.0119
+      ],
+      "AMD": [
+       0.4539,
+       0.0267
+      ],
+      "SAMD": [
+       0.5319,
+       0.0422
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1886,
+       0.0634
+      ],
+      "APD": [
+       0.6391,
+       0.0551
+      ],
+      "AMD": [
+       0.4133,
+       0.053
+      ],
+      "SAMD": [
+       0.5074,
+       0.0606
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1980-1984",
+     "to": "2000-2004",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.2569,
+       0.0642
+      ],
+      "APD": [
+       0.6825,
+       0.0458
+      ],
+      "AMD": [
+       0.4624,
+       0.0683
+      ],
+      "SAMD": [
+       0.5425,
+       0.0715
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1702,
+       0.0278
+      ],
+      "APD": [
+       0.6655,
+       0.0097
+      ],
+      "AMD": [
+       0.434,
+       0.0221
+      ],
+      "SAMD": [
+       0.5085,
+       0.0308
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.1919,
+       0.0602
+      ],
+      "APD": [
+       0.6563,
+       0.0412
+      ],
+      "AMD": [
+       0.4278,
+       0.0613
+      ],
+      "SAMD": [
+       0.5097,
+       0.0714
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1980-1984",
+     "to": "2005-2009",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.2995,
+       0.0655
+      ],
+      "APD": [
+       0.7143,
+       0.0315
+      ],
+      "AMD": [
+       0.5155,
+       0.0607
+      ],
+      "SAMD": [
+       0.586,
+       0.0566
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2248,
+       0.0698
+      ],
+      "APD": [
+       0.6781,
+       0.0209
+      ],
+      "AMD": [
+       0.4541,
+       0.0311
+      ],
+      "SAMD": [
+       0.5443,
+       0.054
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.2109,
+       0.0758
+      ],
+      "APD": [
+       0.6634,
+       0.0395
+      ],
+      "AMD": [
+       0.4071,
+       0.0645
+      ],
+      "SAMD": [
+       0.5145,
+       0.073
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1980-1984",
+     "to": "2010-2014",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.2981,
+       0.0492
+      ],
+      "APD": [
+       0.7201,
+       0.0341
+      ],
+      "AMD": [
+       0.5029,
+       0.0574
+      ],
+      "SAMD": [
+       0.5873,
+       0.0541
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.1882,
+       0.0242
+      ],
+      "APD": [
+       0.6687,
+       0.0071
+      ],
+      "AMD": [
+       0.441,
+       0.0168
+      ],
+      "SAMD": [
+       0.5218,
+       0.0274
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.2045,
+       0.0575
+      ],
+      "APD": [
+       0.6801,
+       0.0362
+      ],
+      "AMD": [
+       0.421,
+       0.0486
+      ],
+      "SAMD": [
+       0.5179,
+       0.0651
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1980-1984",
+     "to": "2015-2019",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.2731,
+       0.0554
+      ],
+      "APD": [
+       0.7015,
+       0.0309
+      ],
+      "AMD": [
+       0.4826,
+       0.0536
+      ],
+      "SAMD": [
+       0.5579,
+       0.0483
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2075,
+       0.0436
+      ],
+      "APD": [
+       0.6763,
+       0.0114
+      ],
+      "AMD": [
+       0.4544,
+       0.0197
+      ],
+      "SAMD": [
+       0.5312,
+       0.038
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.2257,
+       0.0701
+      ],
+      "APD": [
+       0.6727,
+       0.0419
+      ],
+      "AMD": [
+       0.4297,
+       0.0607
+      ],
+      "SAMD": [
+       0.5268,
+       0.066
+      ]
+     },
+     "floor_n": 8
+    },
+    {
+     "from": "1980-1984",
+     "to": "2020-2024",
+     "kind": "origin",
+     "n": 8,
+     "metrics": {
+      "PRT": [
+       0.2927,
+       0.0483
+      ],
+      "APD": [
+       0.7011,
+       0.03
+      ],
+      "AMD": [
+       0.4838,
+       0.0434
+      ],
+      "SAMD": [
+       0.5701,
+       0.0387
+      ]
+     },
+     "floor_from": {
+      "PRT": [
+       0.2201,
+       0.0385
+      ],
+      "APD": [
+       0.6778,
+       0.0121
+      ],
+      "AMD": [
+       0.453,
+       0.0268
+      ],
+      "SAMD": [
+       0.5405,
+       0.0384
+      ]
+     },
+     "floor_to": {
+      "PRT": [
+       0.2053,
+       0.0605
+      ],
+      "APD": [
+       0.6698,
+       0.0321
+      ],
+      "AMD": [
+       0.415,
+       0.0467
+      ],
+      "SAMD": [
+       0.5,
+       0.0574
+      ]
+     },
+     "floor_n": 8
+    }
+   ],
+   "is_control": true
+  }
+ }
+}
