@@ -21,3 +21,6 @@ results/**/*.npz
 
 # API keys (popular-stratum retrieval)
 .secrets/
+
+# Review packets hold abstracts (licensed text)
+results/**/source_review_packet.jsonl
