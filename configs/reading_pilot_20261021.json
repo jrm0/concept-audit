@@ -1,0 +1,19 @@
+{
+  "version": "2026-10-21-pilot-v1",
+  "sampling": "Purposive development only; eight ego-family and four trauma documents. Not a prevalence sample or a K1 inference sample.",
+  "assignments_locked_before_extraction": true,
+  "documents": [
+    {"pilot_id":"E01","case":"ego","doi":"10.1177/0956797620904990","arm":"independent","reason":"Laboratory performance study; named-operation positive; modified depletion paradigm."},
+    {"pilot_id":"E02","case":"ego","doi":"10.1177/1948550619887702","arm":"assisted","reason":"Multilab replication; multiple sites and a named-operation positive."},
+    {"pilot_id":"E03","case":"ego","doi":"10.1177/17456916221146158","arm":"assisted","reason":"Conceptual account of willpower; tests non-empirical and quoted-position handling."},
+    {"pilot_id":"E04","case":"ego","doi":"10.1177/0146167207306756","arm":"assisted","reason":"Earlier experimental depletion work; monitoring as a candidate boundary condition."},
+    {"pilot_id":"E05","case":"ego","doi":"10.3389/fpsyg.2016.00501","arm":"assisted","reason":"Existing development-packet positive; exercise intervention and constrained participant population.","download":"PMC4834755.json","format":"bioc"},
+    {"pilot_id":"E06","case":"ego","doi":"10.2147/prbm.s413932","arm":"independent","reason":"Workplace application; name-negative abstract; multiple studies and mediation claims.","download":"PMC10315152.json","format":"bioc"},
+    {"pilot_id":"E07","case":"ego","doi":"10.1108/omj-06-2020-0964","arm":"assisted","reason":"Workplace dyadic design; name-negative abstract; scope and inference limits.","download":"hindrance_stressors_pages.json","format":"pdf_pages","original":"hindrance_stressors.pdf"},
+    {"pilot_id":"E08","case":"ego","doi":"10.1006/jesp.1999.1382","arm":"assisted","reason":"Neighboring self-regulation account; contrasts motivation and vitality. Outside the K1 time window."},
+    {"pilot_id":"T01","case":"trauma","doi":"10.1037/a0021080","arm":"independent","reason":"Prospective PTSD prediction and trauma-related priming; name-negative abstract."},
+    {"pilot_id":"T02","case":"trauma","doi":"10.1037/a0034957","arm":"assisted","reason":"Daily-life assessment of re-experiencing; observation and measurement scope."},
+    {"pilot_id":"T03","case":"trauma","doi":"10.1037/rev0000418","arm":"assisted","reason":"Explicit complex-PTSD theory; proposed mechanisms versus tests and findings."},
+    {"pilot_id":"T04","case":"trauma","doi":"10.2105/ajph.2010.300095","arm":"independent","reason":"Existing development-packet positive; measurement commentary and cross-cultural applicability.","download":"PMC3052354.html","format":"pmc_html"}
+  ]
+}
