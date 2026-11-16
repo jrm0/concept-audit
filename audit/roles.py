@@ -274,6 +274,18 @@ def derive(records):
                       "recorded_or_computed", "unchecked", tool="study_roles_summary")
 
 
+def call_info(rec):
+    """What one model call cost, for the result. A replayed call reports the time and cost
+    measured when the reply was first obtained, so that comparisons between systems stay fair."""
+    first = rec.get("replayed_from") or {}
+    return {"seq": rec["seq"], "model_returned": rec["model_returned"],
+            "seconds": first.get("seconds", rec["seconds"]) if first else rec["seconds"],
+            "tokens_in": (rec["usage"] or {}).get("input_tokens"),
+            "tokens_out": (rec["usage"] or {}).get("output_tokens"),
+            "cost_usd": first.get("cost_usd") if first else rec["cost_usd"],
+            "replayed": bool(first)}
+
+
 # --------------------------------------------------------------------------
 # What the model may have left out
 # --------------------------------------------------------------------------
@@ -356,10 +368,7 @@ def extract_roles(run, provider, model, source, keep=None, prices=None, ceiling=
     except RuntimeError as exc:
         result["problem"] = "the model call failed: %s" % exc
         return result
-    result["call"] = {"seq": rec["seq"], "model_returned": rec["model_returned"], "seconds": rec["seconds"],
-                      "tokens_in": (rec["usage"] or {}).get("input_tokens"),
-                      "tokens_out": (rec["usage"] or {}).get("output_tokens"), "cost_usd": rec["cost_usd"],
-                      "replayed": bool(rec.get("replayed_from"))}
+    result["call"] = call_info(rec)
     data, problem = parse_reply(rec["output_text"])
     if problem:
         result["problem"] = "the reply could not be read: " + problem

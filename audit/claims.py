@@ -204,7 +204,10 @@ def validate(data, source, sent, full_text=True):
 
 
 _MARKED = re.compile(r"\b(Hypothes[ie]s\s+\d+[a-z]?\s*[:.]|H\d+[a-z]?\s*[:.]|[Ww]e\s+(?:hypothesi[sz]ed?|propose[d]?|"
-                     r"argue[d]?|predict(?:ed)?|expect(?:ed)?|suggest(?:ed)?)\s+that)")
+                     r"argue[d]?|predict(?:ed)?|expect(?:ed)?|suggest(?:ed)?)\s+that|"
+                     r"[Aa]ccording\s+to\s+(?:the\s+)?[\w' -]{3,60}?(?:model|theory|account|hypothesis|view)|"
+                     r"(?:model|theory|account|hypothesis|view)\s+(?:suggests|posits|proposes|holds|assumes|predicts|"
+                     r"states|claims)\s+that)")
 
 
 def unrecorded_marked_statements(source, sent, records):
@@ -252,10 +255,7 @@ def extract_claims(run, provider, model, source, concept, neighbors, keep=None, 
     except RuntimeError as exc:
         result["problem"] = "the model call failed: %s" % exc
         return result
-    result["call"] = {"seq": rec["seq"], "model_returned": rec["model_returned"], "seconds": rec["seconds"],
-                      "tokens_in": (rec["usage"] or {}).get("input_tokens"),
-                      "tokens_out": (rec["usage"] or {}).get("output_tokens"), "cost_usd": rec["cost_usd"],
-                      "replayed": bool(rec.get("replayed_from"))}
+    result["call"] = roles_task.call_info(rec)
     data, problem = roles_task.parse_reply(rec["output_text"])
     if problem:
         result["problem"] = "the reply could not be read: " + problem

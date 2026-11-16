@@ -158,6 +158,23 @@ def load_abstract_sources(packets=None):
     return sources
 
 
+def constructed_source(source_id, passages, level="full_text"):
+    """Build a small invented document from (section label, text) pairs.
+
+    Used by the constructed tests of step 4. The text is written for the
+    test, so the right answer follows from how the passage was written.
+    """
+    blocks = [{"passage_id": "P%04d" % i, "section": section, "text": text, "text_sha256": rp.digest(text),
+               "locator": {"kind": "constructed", "index": i}}
+              for i, (section, text) in enumerate(passages, 1)]
+    raw = "\n\n".join(b["text"] for b in blocks)
+    return {"source_id": source_id, "level": level, "case": "constructed", "doi": None, "title": "Constructed test document",
+            "year": None, "journal": None, "format": "constructed", "text_sha256": rp.digest(raw),
+            "source_version": rp.digest(raw)[:12], "n_passages": len(blocks), "n_chars": len(raw), "path": None,
+            "provenance": {"kind": "constructed"}, "coverage_warning": "Invented text written for a test.",
+            "blocks": blocks, "raw_text": raw}
+
+
 def registry_entry(source):
     """The registry record for a source: identifiers and hashes, no text."""
     entry = {k: v for k, v in source.items() if k not in ("blocks", "raw_text")}

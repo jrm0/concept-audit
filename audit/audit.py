@@ -39,10 +39,22 @@ Run from the Conceptual Coherence folder:
       test, the reported result, the authors' interpretation, and what
       stays unresolved. Checked the same way as the roles.
 
-Steps 4 and 5 (the constructed tests and three-way comparison, the report)
-are not implemented.
+  python3 code/audit/audit.py tests --provider local --model qwen3.6:35b
+      Step 4a. Runs the constructed tests: short invented documents whose
+      right answers follow from how they were written, graded by rule.
+      Add --workflow full to test the reading plus its second pass.
+
+  python3 code/audit/audit.py compare --docs E02,E06
+      Step 4b. Runs three systems on the same documents - a plain reading
+      by a model from another family, a reading of keyword-retrieved
+      passages, and the full workflow with a second pass that challenges
+      the first - and lays their records side by side with the cost of
+      each. Models come from config.json or from --plain, --retrieval, --full.
+
+Step 5 (the report and the review cards) is not implemented.
 """
 import argparse
+import os
 import hashlib
 import io
 import json
@@ -57,11 +69,25 @@ import foundations as fd  # noqa: E402
 import providers  # noqa: E402
 import roles as roles_task  # noqa: E402
 import claims as claims_task  # noqa: E402
+import testsuite  # noqa: E402
+import workflow  # noqa: E402
+import compare as compare_task  # noqa: E402
 from runlog import Run, ROOT, sha256_file  # noqa: E402
 
 
+def _shown(path):
+    """A path as it should be printed: relative to the project folder when it is inside it."""
+    try:
+        return Path(path).relative_to(ROOT)
+    except ValueError:
+        return Path(path)
+
+
 def load_config():
-    return json.loads((AUDIT_DIR / "config.json").read_text(encoding="utf-8"))
+    config = json.loads((AUDIT_DIR / "config.json").read_text(encoding="utf-8"))
+    if os.environ.get("AUDIT_RUNS_DIR"):  # for trial runs that should not leave a folder among the real ones
+        config["runs_dir"] = os.environ["AUDIT_RUNS_DIR"]
+    return config
 
 
 def run_unit_tests():
@@ -235,7 +261,7 @@ def cmd_foundations(args):
             "",
         ] + ["- %s: %d of %d as expected" % (k, v["as_expected"], v["cases"]) for k, v in sorted(self_full["by_test"].items())] + [
             "",
-            "Study roles and claim records are built (the `roles` and `claims` commands). The constructed tests, the three-way comparison and the report: not implemented.",
+            "Study roles, claim records, the constructed tests and the three-way comparison are built (the `roles`, `claims`, `tests` and `compare` commands). The report and the review cards: not implemented.",
             "Accuracy of the study boundaries: not assessed. They are pattern matches on headings.",
             "",
             "Files in this folder: `manifest.json` (the run record), `events.jsonl`, `source_registry.json`, "
@@ -245,7 +271,7 @@ def cmd_foundations(args):
         ok = tests["passed"] and n_fail == 0 and record_ok
         run.finish("completed" if ok else "completed_with_failures")
         print("\n".join(summary))
-        print("\nRun folder: %s" % run.dir.relative_to(ROOT))
+        print("\nRun folder: %s" % _shown(run.dir))
         return 0 if ok else 1
     except Exception:
         run.finish("failed")
@@ -280,7 +306,7 @@ def cmd_check_quotes(args):
         for r in summary["mismatches"]:
             print("  MISMATCH %s %s %s: %s | %s" % (r.get("id", ""), r["source_id"], r.get("cited_passage"), r["outcome"],
                                                    (r.get("quote") or "")[:70]))
-        print("Run folder: %s" % run.dir.relative_to(ROOT))
+        print("Run folder: %s" % _shown(run.dir))
         return 0 if not summary["mismatches"] else 1
     except Exception:
         run.finish("failed")
@@ -334,7 +360,7 @@ def cmd_check_models(args):
             print("%-10s key on file, but: %s" % (name, entry["problem"]))
     run.write_output("model_access.json", report)
     run.finish("completed" if ok else "completed_with_failures")
-    print("Run folder: %s" % run.dir.relative_to(ROOT))
+    print("Run folder: %s" % _shown(run.dir))
     return 0 if ok else 1
 
 
@@ -477,7 +503,7 @@ def cmd_roles(args):
         print("\n%d of %d documents read. %d records, %d usable. Quotations located: %d of %d (%d near misses)."
               % (totals["read"], totals["documents"], totals["records"], totals["usable"], totals["located"],
                  totals["quotations"], totals["near_misses"]))
-        print("Read the tables in: %s/ROLES_SUMMARY.md" % run.dir.relative_to(ROOT))
+        print("Read the tables in: %s/ROLES_SUMMARY.md" % _shown(run.dir))
         return 0 if ok else 1
     except Exception:
         run.finish("failed")
@@ -619,8 +645,213 @@ def cmd_claims(args):
         print("\n%d of %d documents read. %d propositions, %d usable. Quotations located: %d of %d (%d near misses)."
               % (totals["read"], totals["documents"], totals["records"], totals["usable"], totals["quotations_located"],
                  totals["quotations"], totals["near_misses"]))
-        print("Read the records in: %s/CLAIMS_SUMMARY.md" % run.dir.relative_to(ROOT))
+        print("Read the records in: %s/CLAIMS_SUMMARY.md" % _shown(run.dir))
         return 0 if ok else 1
+    except Exception:
+        run.finish("failed")
+        raise
+
+
+def _arm_provider(spec, thinking):
+    """'local:qwen3.6:35b' -> (provider object, 'qwen3.6:35b')."""
+    name, _, model = spec.partition(":")
+    if name not in providers.CHECKED_PROVIDERS or not model:
+        raise providers.ProviderError("Expected provider:model, for example local:qwen3.6:35b; got %r" % spec)
+    if name == "local":
+        return providers.LocalProvider(think=THINKING[thinking]), model
+    return providers.PROVIDERS[name](), model
+
+
+def cmd_tests(args):
+    """Step 4a. Run the constructed tests against one system and grade the answers by rule."""
+    config, run, prices, sources = _start_model_run("tests", args)
+    try:
+        provider = _make_provider(args)
+    except providers.ProviderError as exc:
+        run.finish("failed")
+        print("Could not start: %s" % exc)
+        return 1
+    cases = testsuite.build_cases(args.variants, args.task, args.family, args.only)
+    if not cases:
+        run.finish("failed")
+        print("No test cases match.")
+        return 1
+    try:
+        (run.dir / "tests").mkdir()
+        graded, seconds, quotes, located = [], 0.0, 0, 0
+        print("%d constructed cases, suite %s, system: %s / %s, workflow: %s"
+              % (len(cases), testsuite.SUITE_VERSION, args.provider, args.model, args.workflow), flush=True)
+        for case in cases:
+            result = workflow.run_arm(run, args.workflow, provider, args.model, case["task"], case["source"],
+                                      concept=testsuite.CONCEPT, neighbors=testsuite.NEIGHBORS, keep=case["keep"],
+                                      prices=prices, ceiling=config.get("spend_ceiling_usd_per_run"), fresh=args.fresh)
+            g = testsuite.grade(case, result)
+            graded.append(g)
+            run.write_output("tests/%s.json" % case["id"], {"case": {k: case[k] for k in ("id", "task", "family", "rule", "note")},
+                                                           "document": [(b["passage_id"], b["section"], b["text"])
+                                                                        for b in case["source"]["blocks"]],
+                                                           "graded": g, "result": result})
+            call = result.get("call") or {}
+            seconds += call.get("seconds") or 0
+            if not result.get("problem"):
+                quotes += result["counts"]["quotations"]; located += result["counts"]["quotations_located"]
+            unmet = [e["expect"] for e in g["expectations"] if not e["met"]]
+            print("  %-10s %-8s %s%s" % (case["id"], g["outcome"].upper().replace("_", " "), case["rule"],
+                                         "" if not unmet else "  <- not met: " + "; ".join(unmet)), flush=True)
+        summary = testsuite.summarize(graded)
+        summary.update({"system": "%s / %s" % (args.provider, args.model), "workflow": args.workflow,
+                        "thinking": args.thinking, "seconds": round(seconds, 1), "quotations": quotes,
+                        "quotations_located": located})
+        t = summary["total"]
+        md = ["# Constructed tests - run %s" % run.run_id, "",
+              "System: %s / %s (thinking: %s), workflow: %s. Suite version %s. Prompts: %s, %s." % (
+                  args.provider, args.model, args.thinking, args.workflow, testsuite.SUITE_VERSION,
+                  roles_task.PROMPT_ID, claims_task.PROMPT_ID), "",
+              "Each case is a short invented document whose right answer follows from how it was written. The "
+              "grading is done by rule, not by a model. Passing shows a capability on constructed cases. It does not "
+              "show accuracy on real papers.", "",
+              "**%d of %d passed, %d failed, %d gave no usable reply.** Quotations located: %d of %d. Model time: %.0f s."
+              % (t["pass"], t["cases"], t["fail"], t["no_reply"], located, quotes, seconds), "",
+              "| Task / family | Cases | Passed | Failed | No reply |", "|---|---|---|---|---|"]
+        md += ["| %s | %d | %d | %d | %d |" % (k, v["cases"], v["pass"], v["fail"], v["no_reply"])
+               for k, v in sorted(summary["by_family"].items())]
+        md += ["", "| Rule tested | Cases | Passed |", "|---|---|---|"]
+        md += ["| %s | %d | %d |" % (k, v["cases"], v["pass"]) for k, v in sorted(summary["by_rule"].items())]
+        md += ["", "## Cases not passed", ""]
+        for g in graded:
+            if g["outcome"] == "pass":
+                continue
+            md += ["**%s** (%s; %s). %s" % (g["id"], g["task"], g["family"], g["rule"]) +
+                   ("." if not g.get("note") else ": " + g["note"] + "."), ""]
+            if g["outcome"] == "no_reply":
+                md += ["- no usable reply: %s" % g["problem"], ""]
+                continue
+            md += ["- %s: %s" % ("met" if e["met"] else "NOT MET", e["expect"]) for e in g["expectations"]] + [""]
+        if all(g["outcome"] == "pass" for g in graded):
+            md += ["None.", ""]
+        run.write_output("tests_summary.json", fd.labeled(summary, "recorded_or_computed", "constructed_tests",
+                                                          tool="constructed_tests"))
+        run.write_output("TESTS.md", "\n".join(md) + "\n")
+        run.finish("completed" if t["no_reply"] == 0 else "completed_with_failures")
+        print("\n%d of %d passed, %d failed, %d no usable reply. Model time %.0f s."
+              % (t["pass"], t["cases"], t["fail"], t["no_reply"], seconds))
+        print("Read the detail in: %s/TESTS.md" % _shown(run.dir))
+        return 0
+    except Exception:
+        run.finish("failed")
+        raise
+
+
+def cmd_compare(args):
+    """Step 4b. Run the three systems on the same documents and lay their records side by side."""
+    config, run, prices, sources = _start_model_run("compare", args)
+    defaults = config["comparison"]
+    specs = {arm: getattr(args, arm) or "%s:%s" % (defaults[arm]["provider"], defaults[arm]["model"])
+             for arm in workflow.ARMS}
+    try:
+        arms = {arm: _arm_provider(spec, args.thinking) for arm, spec in specs.items()}
+    except providers.ProviderError as exc:
+        run.finish("failed")
+        print("Could not start: %s" % exc)
+        return 1
+    wanted = [d.strip() for d in args.docs.split(",")] if args.docs else config["sample"]["report"]
+    unknown = [d for d in wanted if d not in sources]
+    if unknown:
+        run.finish("failed")
+        print("Unknown document(s): %s" % ", ".join(unknown))
+        return 1
+    tasks = [args.task] if args.task else ["roles", "claims"]
+    try:
+        results = {task: {arm: {} for arm in workflow.ARMS} for task in tasks}
+        for doc in wanted:
+            concept = config["concepts"][sources[doc]["case"]]
+            for task in tasks:
+                for arm in workflow.ARMS:
+                    provider, model = arms[arm]
+                    print("%s  %-6s  %-9s (%s) ..." % (doc, task, arm, specs[arm]), flush=True)
+                    result = workflow.run_arm(run, arm, provider, model, task, sources[doc], concept=concept["name"],
+                                              neighbors=concept["neighbors"], prices=prices,
+                                              ceiling=config.get("spend_ceiling_usd_per_run"), fresh=args.fresh)
+                    (run.dir / "arms" / arm / task).mkdir(parents=True, exist_ok=True)
+                    run.write_output("arms/%s/%s/%s.json" % (arm, task, doc), result)
+                    results[task][arm][doc] = result
+                    if result.get("problem"):
+                        print("      %s" % result["problem"])
+                    else:
+                        c, call = result["counts"], result["call"]
+                        print("      %d records, %d usable, %d of %d quotations located, %.0f s%s%s" % (
+                            c["records"], c["usable"], c["quotations_located"], c["quotations"], call.get("seconds") or 0,
+                            " (saved reply)" if call.get("replayed") else "",
+                            "; second pass: " + result["second_pass_problem"] if result.get("second_pass_problem") else ""))
+        same_model = specs["plain"] == specs["full"]
+        md = ["# Three-way comparison - run %s" % run.run_id, "",
+              "Documents: %s. Definitions: %s." % (", ".join(wanted), config["definitions"]["file"]), "",
+              "| Arm | What it does | Model |", "|---|---|---|",
+              "| plain | reads the whole document once | %s |" % specs["plain"],
+              "| retrieval | reads only passages picked by keyword search (about 40%% of the text) | %s |" % specs["retrieval"],
+              "| full | reads the whole document, then a second pass tries to prove the first reading wrong | %s |" % specs["full"],
+              "",
+              "**Agreement between systems tells us where to look. It is not evidence that a reading is correct.** "
+              "Systems that share a model or a prompt agree on the same mistakes. All three arms here use the same "
+              "task instructions.%s" % (" The plain arm and the full arm use the same model in this run, so their "
+                                        "agreement is not agreement between model families." if same_model else ""),
+              ""]
+        out = {"arms": specs, "documents": wanted, "tasks": {}}
+        for task in tasks:
+            md += ["## %s" % ("Study roles" if task == "roles" else "Claim records"), "",
+                   "| Arm | Documents read | Records | Usable | Quotations located | Model calls | Model time | Tokens in | Tokens out | Cost |",
+                   "|---|---|---|---|---|---|---|---|---|---|"]
+            out["tasks"][task] = {"totals": {}, "by_document": {}}
+            for arm in workflow.ARMS:
+                t = compare_task.arm_totals(list(results[task][arm].values()))
+                out["tasks"][task]["totals"][arm] = t
+                cost = "no charge (local model)" if arms[arm][0].name == "local" else (
+                    "$%.2f" % t["cost_usd"] if t["cost_complete"] else "not recorded (no price entered)")
+                md.append("| %s | %d of %d | %d | %d | %d of %d | %d | %.0f s | %d | %d | %s |" % (
+                    arm, t["read"], t["documents"], t["records"], t["usable"], t["quotations_located"], t["quotations"],
+                    t["calls"], t["seconds"], t["tokens_in"], t["tokens_out"], cost))
+            md += ["", "Time and tokens are as measured when each reply was first obtained, including replies reused "
+                       "from earlier runs.", ""]
+            for doc in wanted:
+                by_arm = {arm: results[task][arm].get(doc) for arm in workflow.ARMS}
+                agreement = (compare_task.compare_roles if task == "roles" else compare_task.compare_claims)(by_arm)
+                out["tasks"][task]["by_document"][doc] = agreement
+                md += ["### %s" % doc, ""]
+                missing = [a for a in workflow.ARMS if a not in agreement["arms"]]
+                if missing:
+                    md += ["No usable output from: %s." % ", ".join(missing), ""]
+                if task == "roles":
+                    md += ["%d operations across the arms. %d role statements in all; %d made by every arm (%d of "
+                           "those are agreements to withhold)." % (agreement["operations"], agreement["role_statements"],
+                                                                 agreement["made_by_every_arm"], agreement["of_which_withheld"]), ""]
+                    if agreement["disagreements"]:
+                        md += ["Where the arms differ:", "", "| Operation | Whose | Role | Said by | Not said by |",
+                               "|---|---|---|---|---|"]
+                        md += ["| %s | %s | %s | %s | %s |" % (_cell(d["operation"]), d["whose"] or "-", d["role"],
+                                                                ", ".join(d["arms_with"]) or "-", ", ".join(d["arms_without"]) or "-")
+                               for d in agreement["disagreements"]] + [""]
+                else:
+                    f = agreement["fields"]
+                    md += ["%d propositions across the arms; %d recorded by every arm. On those: %s." % (
+                        agreement["propositions"], agreement["recorded_by_every_arm"],
+                        "; ".join("%s the same in %d of %d" % (k, f[k]["same"], f[k]["compared"]) for k in compare_task.CLAIM_FIELDS)), ""]
+                    if agreement["disagreements"]:
+                        md += ["Where the arms differ:", "", "| Stated in | Proposition | Recorded by | Differences |",
+                               "|---|---|---|---|"]
+                        for d in agreement["disagreements"]:
+                            diffs = "; ".join("%s: %s" % (k, ", ".join("%s=%s" % (a, v) for a, v in vals.items()))
+                                              for k, vals in d["differences"].items()) or (
+                                "not recorded by " + ", ".join(d["arms_without"]))
+                            md.append("| %s | %s | %s | %s |" % (d["stated_in"], _cell((d["proposition"] or "")[:110]),
+                                                                 ", ".join(d["arms_with"]), _cell(diffs)))
+                        md.append("")
+                md += ["Matching rule: %s." % agreement["matching_rule"], ""]
+        run.write_output("comparison.json", out)
+        run.write_output("COMPARISON.md", "\n".join(md) + "\n")
+        failed = sum(1 for task in tasks for arm in workflow.ARMS for r in results[task][arm].values() if r.get("problem"))
+        run.finish("completed" if not failed else "completed_with_failures")
+        print("\nRead the comparison in: %s/COMPARISON.md" % _shown(run.dir))
+        return 0
     except Exception:
         run.finish("failed")
         raise
@@ -708,7 +939,7 @@ def cmd_try_model(args):
                 print("    near miss - the source has %r where the model wrote %r" % (d["source_has"], d["quote_has"]))
             if "copied_the_final_sentence" in r:
                 print("  copied the paper's final sentence: %s" % ("yes" if r["copied_the_final_sentence"] else "no"))
-        print("\nRun folder: %s" % run.dir.relative_to(ROOT))
+        print("\nRun folder: %s" % _shown(run.dir))
         return 0 if ok else 1
     except providers.ProviderError as exc:
         run.note("Could not start: %s" % exc)
@@ -749,8 +980,25 @@ def main(argv=None):
     cl.add_argument("--fresh", action="store_true", help="ask the model again even if a saved reply exists")
     cl.add_argument("--thinking", choices=sorted(THINKING), default="default",
                     help="local models only: let the model think first (on), not (off), or as it chooses (default)")
-    for name in ("compare", "report"):
-        sub.add_parser(name)
+    te = sub.add_parser("tests")
+    te.add_argument("--provider", required=True, choices=sorted(providers.CHECKED_PROVIDERS))
+    te.add_argument("--model", required=True)
+    te.add_argument("--workflow", choices=("plain", "full"), default="plain",
+                    help="plain: one reading. full: a reading plus the second pass that challenges it")
+    te.add_argument("--variants", type=int, default=1, help="1 or 2 sets of invented task names")
+    te.add_argument("--task", choices=("roles", "claims"))
+    te.add_argument("--family", choices=("invariance", "directional", "withholding"))
+    te.add_argument("--only", help="comma-separated case identifiers, for example R-LOC-1,C-FLG-1")
+    te.add_argument("--fresh", action="store_true")
+    te.add_argument("--thinking", choices=sorted(THINKING), default="default")
+    co = sub.add_parser("compare")
+    co.add_argument("--docs", help="comma-separated document identifiers; default: the eight report documents")
+    co.add_argument("--task", choices=("roles", "claims"))
+    for arm in workflow.ARMS:
+        co.add_argument("--" + arm, help="provider:model for the %s arm, for example local:qwen3.6:35b" % arm)
+    co.add_argument("--fresh", action="store_true")
+    co.add_argument("--thinking", choices=sorted(THINKING), default="default")
+    sub.add_parser("report")
     args = ap.parse_args(argv)
     if args.command == "foundations":
         return cmd_foundations(args)
@@ -766,6 +1014,10 @@ def main(argv=None):
         return cmd_roles(args)
     if args.command == "claims":
         return cmd_claims(args)
+    if args.command == "tests":
+        return cmd_tests(args)
+    if args.command == "compare":
+        return cmd_compare(args)
     print("'%s' is not implemented." % args.command)
     return 2
 

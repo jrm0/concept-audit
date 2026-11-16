@@ -65,5 +65,20 @@
         "complex PTSD"
       ]
     }
+  },
+  "comparison": {
+    "_about": "Which model runs each arm of the three-way comparison. While debugging, all three are open-weights models on this computer; qwen (Alibaba) and llama (Meta) are different model families. For the report, set the plain arm to a hosted model from a family other than the one used for the other two arms.",
+    "plain": {
+      "provider": "local",
+      "model": "llama3.1:8b"
+    },
+    "retrieval": {
+      "provider": "local",
+      "model": "qwen3.6:35b"
+    },
+    "full": {
+      "provider": "local",
+      "model": "qwen3.6:35b"
+    }
   }
 }

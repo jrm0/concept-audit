@@ -21,6 +21,9 @@ import foundations as fd  # noqa: E402
 import providers  # noqa: E402
 import roles  # noqa: E402
 import claims  # noqa: E402
+import testsuite  # noqa: E402
+import workflow  # noqa: E402
+import compare  # noqa: E402
 from runlog import Run, PROMPT_DIR  # noqa: E402
 
 
@@ -838,7 +841,10 @@ class ClaimRecords(unittest.TestCase):
     def test_marked_statements_that_no_record_cites_are_listed(self):
         out = claims.unrecorded_marked_statements(CLAIM_SRC, ["P%04d" % i for i in range(1, 8)],
                                                   self._validate([claim()])["records"])
-        self.assertEqual([e["passage_id"] for e in out["in_no_record"]], ["P0007"])
+        self.assertEqual([e["passage_id"] for e in out["in_no_record"]], ["P0001", "P0007"])   # a theory, an argument
+        both = claims.unrecorded_marked_statements(CLAIM_SRC, ["P%04d" % i for i in range(1, 8)],
+                                                   self._validate([claim(), THEORY])["records"])
+        self.assertEqual([e["passage_id"] for e in both["in_no_record"]], ["P0007"])
         self.assertEqual(out["labels"]["basis"], "recorded_or_computed")
 
     def test_one_document_end_to_end_with_a_stand_in(self):
@@ -864,6 +870,222 @@ class ClaimRecords(unittest.TestCase):
             self.assertIn(word, text)
         for slot in ("{{concept}}", "{{neighbors}}", "{{coverage}}", "{{document}}"):
             self.assertIn(slot, text)
+
+
+def case_by_id(cid):
+    return next(c for c in testsuite.build_cases(1) if c["id"] == cid)
+
+
+def find_passage(case, words):
+    return next(b["passage_id"] for b in case["source"]["blocks"] if words in b["text"])
+
+
+def checked_roles(case, operations, own="one"):
+    _, sent, _ = roles.render_document(case["source"], case["keep"])
+    out = roles.validate({"own_studies": own, "studies": [], "operations": operations}, case["source"], sent)
+    out["own_studies"] = own
+    return out
+
+
+class ConstructedTests(unittest.TestCase):
+    """The grader must pass a right answer and fail a wrong one."""
+
+    def test_the_suite_builds_with_unique_cases_in_three_families(self):
+        cases = testsuite.build_cases(1)
+        self.assertEqual(len(cases), 29)
+        self.assertEqual(len({c["id"] for c in cases}), 29)
+        self.assertEqual({c["family"] for c in cases}, {"invariance", "directional", "withholding"})
+        self.assertTrue(all(c["expects"] for c in cases))
+        self.assertEqual(len(testsuite.build_cases(2)), 58)
+        self.assertEqual({c["task"] for c in testsuite.build_cases(1, task="claims")}, {"claims"})
+        self.assertEqual([c["id"] for c in testsuite.build_cases(1, only="R-LOC-2")], ["R-LOC-2"])
+
+    def test_location_case_passes_a_right_reading_and_fails_one_that_drops_the_outcome(self):
+        for cid in ("R-LOC-1", "R-LOC-2", "R-LOC-3"):
+            case = case_by_id(cid)
+            m, c, o = (find_passage(case, w) for w in ("randomly assigned", "to confirm that", "dependent variable"))
+            right = [op("letter-cancelling task", "own", [role("manipulated", [(m, "randomly assigned to complete either a hard or an easy version")])],
+                        (m, "letter-cancelling task")),
+                     op("Brief Effort Scale", "own", [role("manipulation_check", [(c, "which we used to confirm that the hard version was more demanding")])],
+                        (c, "Brief Effort Scale")),
+                     op("anagram task", "own", [role("outcome", [(o, "Time spent before giving up was the dependent variable.")])],
+                        (o, "anagram task"))]
+            self.assertEqual(testsuite.grade(case, checked_roles(case, right))["outcome"], "pass", cid)
+            graded = testsuite.grade(case, checked_roles(case, right[:2]))
+            self.assertEqual(graded["outcome"], "fail", cid)
+            self.assertEqual([e["met"] for e in graded["expectations"]], [True, False, True])
+            self.assertEqual(graded["labels"], {"basis": "recorded_or_computed", "checked": "constructed_tests",
+                                                "tool": "constructed_tests"})
+
+    def test_earlier_work_by_the_same_authors_must_be_read_as_cited(self):
+        case = case_by_id("R-WHO-3")
+        p = find_passage(case, "we recently showed")
+        evidence = [role("manipulated", [(p, "payment made contingent on effort in the letter-cancelling task")])]
+        wrong = checked_roles(case, [op("letter-cancelling task", "own", evidence, (p, "letter-cancelling task"))], own="one")
+        right = checked_roles(case, [op("letter-cancelling task", "cited", evidence, (p, "letter-cancelling task"),
+                                        cited_work="the authors' earlier study")], own="none")
+        self.assertEqual(testsuite.grade(case, wrong)["outcome"], "fail")
+        self.assertEqual(testsuite.grade(case, right)["outcome"], "pass")
+
+    def test_withholding_cases_fail_a_guess(self):
+        case = case_by_id("R-WH-1")
+        a = find_passage(case, "Undergraduates (N = 120)")
+        kept = [op("letter-cancelling task", "own", [role("manipulated", [(a, "randomly assigned to a hard or an easy version")])],
+                   (a, "letter-cancelling task"))]
+        withheld = op("Brief Effort Scale", "own", [role("insufficient_evidence", [], strength=None, reason="text_missing")],
+                      (a, "Brief Effort Scale"))
+        guessed = op("Brief Effort Scale", "own", [role("manipulation_check", [(a, "They also completed the Brief Effort Scale")])],
+                     (a, "Brief Effort Scale"))
+        self.assertEqual(testsuite.grade(case, checked_roles(case, kept + [withheld]))["outcome"], "pass")
+        self.assertEqual(testsuite.grade(case, checked_roles(case, kept + [guessed]))["outcome"], "fail")
+        self.assertEqual(testsuite.grade(case, checked_roles(case, [withheld]))["outcome"], "fail")   # dropped what was supported
+        nothing = case_by_id("R-WH-2")
+        self.assertEqual(testsuite.grade(nothing, checked_roles(nothing, [], own="none"))["outcome"], "pass")
+
+    def test_claim_cases_tell_a_hypothesis_from_a_finding_and_want_the_clash_flagged(self):
+        case = case_by_id("C-HYP-1")
+        _, sent, _ = roles.render_document(case["source"])
+        base = {"proposition": "Prior exertion shortens later persistence.",
+                "statement_evidence": ev("P0001", "We hypothesize that prior exertion shortens later persistence."),
+                "holder": "authors", "holder_name": None, "stance": "assert", "whose_evidence": None,
+                "test": {"status": "none_in_document", "whose": None, "studies": [], "description": None, "evidence": []},
+                "results": {"status": "none_in_document", "items": []},
+                "interpretation": {"status": "none_stated", "items": []},
+                "unresolved": {"status": "present", "items": [{"summary": "Open.", "evidence": [ev("P0003", "remains open")]}]},
+                "flag": None}
+        right = claims.validate({"propositions": [base]}, case["source"], sent)
+        self.assertEqual(testsuite.grade(case, right)["outcome"], "pass")
+        invented = dict(base, test={"status": "present", "whose": "own", "studies": ["0"], "description": "A study.",
+                                    "evidence": [ev("P0002", "describe how it could be tested")]})
+        self.assertEqual(testsuite.grade(case, claims.validate({"propositions": [invented]}, case["source"], sent))["outcome"], "fail")
+        clash = case_by_id("C-FLG-1")
+        _, sent, _ = roles.render_document(clash["source"])
+        h, res = find_passage(clash, "We hypothesized"), find_passage(clash, "did not differ")
+        rec = claim(statement_evidence=ev(h, "We hypothesized that participants who completed the hard version"),
+                    test={"status": "present", "whose": "own", "studies": ["0"], "description": "Two conditions.",
+                          "evidence": [ev(res, "did not differ between the hard condition")]},
+                    results={"status": "present", "items": [{"study": "0", "summary": "No difference.",
+                                                             "evidence": [ev(res, "t(118) = 0.21, p = .83")]}]},
+                    interpretation={"status": "none_stated", "items": []}, unresolved={"status": "none_stated", "items": []})
+        self.assertEqual(testsuite.grade(clash, claims.validate({"propositions": [rec]}, clash["source"], sent))["outcome"], "fail")
+        flagged = dict(rec, flag="The Discussion says the hypothesis was supported; the Results say it was not.")
+        self.assertEqual(testsuite.grade(clash, claims.validate({"propositions": [flagged]}, clash["source"], sent))["outcome"], "pass")
+
+    def test_no_reply_is_its_own_outcome_and_the_summary_counts_it(self):
+        case = case_by_id("R-LOC-1")
+        graded = [testsuite.grade(case, {"problem": "the reply could not be read: no JSON object in the reply"}),
+                  testsuite.grade(case_by_id("R-WH-2"), checked_roles(case_by_id("R-WH-2"), [], own="none"))]
+        self.assertEqual(graded[0]["outcome"], "no_reply")
+        total = testsuite.summarize(graded)["total"]
+        self.assertEqual((total["cases"], total["pass"], total["no_reply"]), (2, 1, 1))
+
+
+LONG_SRC = make_source("X12", [("Abstract", "We tested whether exertion lowers persistence.")] +
+                       [("Introduction", "General remarks about everyday life and nothing else. " * 12) for _ in range(6)] +
+                       [("Method", "Participants were randomly assigned to conditions and completed the Stroop task; "
+                                   "persistence was the dependent variable measured by a scale. " * 3),
+                        ("Results", "We hypothesized an effect and found a significant result supporting the prediction. " * 3),
+                        ("References", "Smith (2001). A task.")])
+
+
+class ThreeSystems(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.run = Run("test", runs_dir=Path(self.tmp.name) / "runs", argv=["test"])
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_retrieval_is_repeatable_keeps_the_abstract_and_prefers_passages_about_the_task(self):
+        picked = workflow.retrieve(LONG_SRC, "roles", share=0.3, floor_chars=300)
+        self.assertEqual(picked, workflow.retrieve(LONG_SRC, "roles", share=0.3, floor_chars=300))
+        self.assertIn("P0001", picked)
+        self.assertIn("P0008", picked)            # the Method passage
+        self.assertNotIn("P0010", picked)         # the reference list
+        self.assertLess(len(picked), 9)
+        self.assertIn("P0009", workflow.retrieve(LONG_SRC, "claims", share=0.3, floor_chars=300))
+
+    def test_retrieval_arm_shows_the_model_only_what_was_retrieved_and_says_so(self):
+        empty = json.dumps({"own_studies": "one", "studies": [], "operations": []})
+        result = workflow.run_arm(self.run, "retrieval", providers.StandInProvider(replies=[empty]), "stand-in", "roles", LONG_SRC)
+        sent = json.loads((self.run.dir / "model_calls/0001.json").read_text())["prompt_as_sent"]
+        self.assertIn("Part of this document", sent)
+        self.assertIn("[P0008 | archive label: Method]", sent)
+        self.assertEqual(result["workflow"], "retrieval")
+        self.assertEqual(result["retrieved_passages"], workflow.retrieve(LONG_SRC, "roles"))
+
+    def test_full_workflow_asks_twice_and_the_second_reading_replaces_the_first(self):
+        first = role_reply([op("unsolvable puzzles", "own", [role("measured", [("P0003", "was the dependent variable")], position="not_stated")],
+                               ("P0003", "unsolvable puzzles"))])
+        second = json.loads(role_reply([
+            op("unsolvable puzzles", "own", [role("outcome", [("P0003", "was the dependent variable")])], ("P0003", "unsolvable puzzles")),
+            op("Stroop task", "cited", [role("outcome", [("P0001", "was the outcome measure")])], ("P0001", "the Stroop task"),
+               cited_work="Smith (2001)")]))
+        second["changes"] = [{"record": "unsolvable puzzles", "change": "measured to outcome", "why": "P0003 calls it the dependent variable"}]
+        stand_in = providers.StandInProvider(replies=[first, json.dumps(second)])
+        result = workflow.run_arm(self.run, "full", stand_in, "stand-in", "roles", ROLE_SRC)
+        self.assertEqual(result["call"]["calls"], 2)
+        self.assertEqual(result["first_pass"]["counts"]["records"], 1)
+        self.assertEqual(result["counts"]["records"], 2)
+        self.assertEqual(result["records"][0]["roles"][0]["role"], "outcome")
+        self.assertEqual(result["changes"]["labels"]["basis"], "model_reading")
+        asked = json.loads((self.run.dir / "model_calls/0002.json").read_text())["prompt_as_sent"]
+        self.assertIn("SECOND PASS", asked)
+        self.assertIn("FIRST READING", asked)
+        self.assertIn('"role": "measured"', asked)                    # the first reading is shown to be challenged
+        self.assertIn("[P0003 | archive label: DISCUSS]", asked)
+
+    def test_if_the_second_pass_fails_the_first_reading_stands_and_the_record_says_so(self):
+        first = role_reply([op("unsolvable puzzles", "own", [role("outcome", [("P0003", "was the dependent variable")])],
+                               ("P0003", "unsolvable puzzles"))])
+        result = workflow.run_arm(self.run, "full", providers.StandInProvider(replies=[first, "I am not sure."]),
+                                  "stand-in", "roles", ROLE_SRC)
+        self.assertIn("first reading stands", result["second_pass_problem"])
+        self.assertEqual(result["counts"]["records"], 1)
+
+    def _roles_result(self, operations):
+        _, sent, _ = roles.render_document(ROLE_SRC)
+        return roles.validate(json.loads(role_reply(operations)), ROLE_SRC, sent)
+
+    def test_role_agreement_matches_operations_by_name_and_lists_what_differs(self):
+        a = self._roles_result([op("Stroop task", "cited", [role("outcome", [("P0001", "was the outcome measure")])],
+                                   ("P0001", "the Stroop task"), cited_work="Smith (2001)"),
+                                op("unsolvable puzzles", "own", [role("outcome", [("P0003", "was the dependent variable")])],
+                                   ("P0003", "unsolvable puzzles"))])
+        b = self._roles_result([op("the color-word Stroop task", "cited", [role("outcome", [("P0001", "was the outcome measure")])],
+                                   ("P0001", "the Stroop task"), cited_work="Smith (2001)"),
+                                op("puzzles", "own", [role("measured", [("P0003", "was the dependent variable")], position="not_stated")],
+                                   ("P0003", "unsolvable puzzles")),
+                                op("mood scale", "own", [role("covariate", [("P0004", "completed a mood scale")])], ("P0004", "a mood scale"))])
+        out = compare.compare_roles({"plain": a, "full": b, "retrieval": {"problem": "the model call failed"}})
+        self.assertEqual(out["arms"], ["plain", "full"])
+        self.assertEqual((out["operations"], out["role_statements"], out["made_by_every_arm"]), (3, 4, 1))
+        differ = {(d["operation"], d["role"]): d["arms_with"] for d in out["disagreements"]}
+        self.assertEqual(differ[("unsolvable puzzles", "outcome")], ["plain"])
+        self.assertEqual(differ[("unsolvable puzzles", "measured")], ["full"])
+        self.assertEqual(differ[("mood scale", "covariate")], ["full"])
+        self.assertEqual(out["labels"]["basis"], "recorded_or_computed")
+
+    def test_claim_agreement_matches_by_the_passage_that_states_the_proposition(self):
+        _, sent, _ = roles.render_document(CLAIM_SRC)
+        a = claims.validate({"propositions": [claim(), THEORY]}, CLAIM_SRC, sent)
+        b = claims.validate({"propositions": [claim(stance="test_without_asserting", flag="Mismatch.")]}, CLAIM_SRC, sent)
+        out = compare.compare_claims({"plain": a, "full": b})
+        self.assertEqual((out["propositions"], out["recorded_by_every_arm"]), (2, 1))
+        self.assertEqual(out["fields"]["holder"], {"compared": 1, "same": 1})
+        self.assertEqual(out["fields"]["stance"], {"compared": 1, "same": 0})
+        self.assertEqual(out["fields"]["flagged"], {"compared": 1, "same": 0})
+        missing = [d for d in out["disagreements"] if d["arms_without"]]
+        self.assertEqual((missing[0]["stated_in"], missing[0]["arms_without"]), ("P0001", ["full"]))
+
+    def test_totals_use_the_time_first_measured_for_a_saved_reply(self):
+        rec = {"seq": 1, "model_returned": "m", "seconds": 0.01, "usage": {"input_tokens": 100, "output_tokens": 20},
+               "cost_usd": 0.0, "replayed_from": {"seconds": 120.0, "cost_usd": 0.05, "run_id": "r", "seq": 3}}
+        info = roles.call_info(rec)
+        self.assertEqual((info["seconds"], info["cost_usd"], info["replayed"]), (120.0, 0.05, True))
+        totals = compare.arm_totals([{"problem": None, "call": info, "counts": {"records": 2, "usable": 2, "quotations": 4,
+                                                                               "quotations_located": 4}}])
+        self.assertEqual((totals["seconds"], totals["cost_usd"], totals["tokens_in"], totals["replayed_calls"]), (120.0, 0.05, 100, 1))
 
 
 @unittest.skipUnless((fd.PILOT_DIR / "source_lock.json").exists(), "Prepared pilot documents required")

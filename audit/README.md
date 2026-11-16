@@ -1,6 +1,6 @@
 # Concept Audit prototype — code/audit
 
-*Started 12 November 2026. Steps 1, 2 and 3 of five are built. Steps 4 and 5 are not implemented. The task definitions the code follows are in `Concept_Audit_Task_Definitions_v1.md`, approved 12 November 2026.*
+*Started 12 November 2026. Steps 1 to 4 of five are built. Step 5, the report and the review cards, is not implemented. The task definitions the code follows are in `Concept_Audit_Task_Definitions_v1.md`, approved 12 November 2026.*
 
 This folder holds the prototype described in `Prototype_Kickoff_Prompt_v1.md`. It builds on `code/reading_pilot.py`, which it imports and never edits. It reads the twelve prepared documents from `revision_work/2026-10-21/reading_pilot/packets/` and the 120 abstracts from the two `source_review_packet.jsonl` files. It refuses to open the reserved evaluation pool or the identity catalog.
 
@@ -45,6 +45,16 @@ Step 3. A model records each proposition the document makes about the concept, i
 
 Both commands also print a short list of what the model may have left out: named tasks that appear in no role record, and sentences marked as hypotheses or arguments that no claim record cites. These lists are word matches. They over-collect on purpose and only say where to look.
 
+```
+python3 code/audit/audit.py tests --provider local --model qwen3.6:35b
+```
+Step 4a. Runs 29 constructed tests against one system. Each test is a short invented document whose right answer follows from how it was written: a sentence that calls something "the dependent variable" makes it an outcome wherever the sentence sits. The answers are graded by rule, not by a model. There are three families. Invariance: something irrelevant changes (a passage moves to another section) and the answer must not. Directional: something relevant changes ("Smith measured" becomes "we measured") and the answer must follow. Withholding: evidence is removed and the system must say so. Add `--workflow full` to test the reading together with its second pass, `--only R-LOC-1,C-FLG-1` to run named cases, `--variants 2` for a second set of invented names. Read the result in `TESTS.md`. Passing shows a capability on constructed cases; it does not show accuracy on real papers.
+
+```
+python3 code/audit/audit.py compare --docs E02,E06
+```
+Step 4b. Runs three systems on the same documents and lays their records side by side, with the time, tokens and cost of each. Plain: a model from a different family reads the whole document once. Retrieval: a model reads only the passages a keyword search picked (about 40% of the text). Full: a model reads the whole document, and a second pass then tries to prove the first reading wrong, rechecking who did what, looking for passages that contradict each record, and working through the lists of what may have been left out. The models for each arm are set in `config.json` under "comparison", or with `--plain`, `--retrieval` and `--full` (for example `--plain local:llama3.1:8b`). Read the result in `COMPARISON.md`. Agreement between the systems shows where to look. It is not evidence that a reading is correct.
+
 Some open models "think" before they answer, which takes time and uses up part of the reply allowance. For a local model, add `--thinking off` to skip that, or `--thinking on` to require it; the default leaves the choice to the model. The run record says which was used.
 
 A reply is saved the first time it is received. Asking the same model the same thing again reuses the saved reply, so reruns while debugging cost nothing and take no time. Add `--fresh` to ask again. Saved replies live in `revision_work/2026-11-12/concept_audit/reply_cache/`.
@@ -63,8 +73,11 @@ Runs the step 1 tests.
 | `providers.py` | The ways of reaching a model: Anthropic, OpenAI, Google, an open-weights model running on this computer through Ollama, and a stand-in that is not a model and is used to test the record-keeping. None of the real ones has yet been run against a live service. |
 | `roles.py` | Step 2. Shows a document to a model passage by passage, reads the reply, checks each record against the approved definitions and each quotation against the source, and works out which operations are cited only and which hold more than one role. |
 | `claims.py` | Step 3. The same for claim records: asks for the six stages of each proposition, checks them against the definitions and the source, and marks tests reported second-hand. |
+| `testsuite.py` | Step 4a. The constructed test documents, what each must and must not produce, and the grader. |
+| `workflow.py` | Step 4b. The three systems: plain reading, reading of retrieved passages, and the full workflow with its second pass. |
+| `compare.py` | Step 4b. Matches the three systems' records and counts where they agree and differ. |
 | `audit.py` | The commands above. |
-| `test_foundations.py` | Constructed cases with known answers for the machinery of steps 1 to 3. These test the code. The tests of whether a model reads papers correctly belong to step 4 and are not written yet. |
+| `test_foundations.py` | Tests of the code itself, for steps 1 to 4, including checks that the step 4 grader passes a right answer and fails a wrong one. These are separate from the constructed tests in `testsuite.py`, which test a model's reading. |
 | `config.json` | Where runs are written; which models to use (not set); prices (not set); a spending ceiling (not set). |
 | `prompts/` | One file per prompt. A run records a fingerprint of the exact wording it used. |
 
@@ -103,4 +116,4 @@ Only the first four count as located. Each is counted separately, so the stricte
 
 ## Not built
 
-The constructed test suite for roles and claims, the three-way comparison, and the report. The `roles` command has read two papers with a local model. No live model reply has yet been through the `claims` command; it has been tested with prepared replies only. Model access is not yet confirmed: run `check-models` once the keys are in place.
+The report and the review cards. The `roles` and `claims` commands have read real papers with a local model. The `tests` and `compare` commands have been tested with prepared replies only; no live model has yet been through them. Model access is not yet confirmed: run `check-models` once the keys are in place.
